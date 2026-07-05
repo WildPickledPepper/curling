@@ -132,10 +132,15 @@ Socket smoke test with adaptive search:
   `log/ranked_socket_server.out.log`
 - Default dual-model smoke logs: `log/default_dual_socket_robot.out.log`,
   `log/default_dual_socket_server.out.log`
+- Default Player1 smoke logs: `log/default_player1_socket_robot.out.log`,
+  `log/default_player1_socket_server.out.log`
+- Default Player2 smoke logs: `log/default_player2_socket_robot.out.log`,
+  `log/default_player2_socket_server.out.log`
 - Robot/server exit code: `0`
 - Robot/server stderr: empty
 - Observed `normal` search on early shots and `late` search on the final two
-  own shots.
+  own shots. In the Player2 smoke, the robot logs `玩家2，首局后手` and reaches
+  `budget=hammer` on the final own shot.
 
 ## Why This Strategy
 
@@ -168,6 +173,11 @@ Files added:
 - `fast_curling_env.py`
   - In-process version of the local mock server physics.
   - Removes socket/process overhead.
+
+- `local_curling_server.py`
+  - Socket-compatible local mock server.
+  - Supports both `--connect-name Player1` and `--connect-name Player2` so the
+    default robot can be smoke-tested through both side-specific protocol paths.
 
 - `train_search_distill.py`
   - Generates expert decisions with root Monte Carlo search.

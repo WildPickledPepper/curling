@@ -55,6 +55,7 @@ class LocalCurlingServer:
         key: str,
         rounds: int,
         seed: Optional[int],
+        connect_name: str,
         show_messages: bool,
     ) -> None:
         self.host = host
@@ -62,6 +63,10 @@ class LocalCurlingServer:
         self.key = key
         self.rounds = rounds
         self.random = random.Random(seed)
+        if connect_name not in {"Player1", "Player2"}:
+            raise ValueError("connect_name must be Player1 or Player2")
+        self.connect_name = connect_name
+        self.client_is_blue = connect_name == "Player1"
         self.show_messages = show_messages
         self.blue_total = 0
         self.red_total = 0
@@ -130,6 +135,12 @@ class LocalCurlingServer:
 
     def setstate_payload(self, shot_num: int, round_num: int, next_team: int) -> str:
         return f"SETSTATE {shot_num} {round_num} {self.rounds} {next_team}"
+
+    def is_client_turn(self, shot_num: int) -> bool:
+        return (shot_num % 2 == 0) == self.client_is_blue
+
+    def score_for_client(self, blue_score: int) -> int:
+        return blue_score if self.client_is_blue else -blue_score
 
     def reset_stones(self) -> None:
         self.stones = [Stone() for _ in range(16)]
@@ -263,7 +274,7 @@ class LocalCurlingServer:
         else:
             raise RuntimeError(f"Unexpected connect key message: {code} {args}")
 
-        self.send_msg("CONNECTNAME Player1")
+        self.send_msg(f"CONNECTNAME {self.connect_name}")
 
         self.send_msg("ISREADY")
         ready = False
@@ -307,7 +318,7 @@ class LocalCurlingServer:
             self.send_msg(self.setstate_payload(shot_num, round_num, next_team))
             self.send_msg(self.position_payload())
 
-            if next_team == 0:
+            if self.is_client_turn(shot_num):
                 self.send_msg("GO")
                 active_shot_num, v0, h0, w0 = self.receive_bestshot(shot_num)
                 final_x, final_y = self.landing_point(v0, h0, w0)
@@ -333,12 +344,14 @@ class LocalCurlingServer:
             self.blue_total += score
         elif score < 0:
             self.red_total += abs(score)
-        self.send_msg(f"SCORE {score}")
+        self.send_msg(f"SCORE {self.score_for_client(score)}")
 
     def game_result(self) -> str:
-        if self.blue_total > self.red_total:
+        client_total = self.blue_total if self.client_is_blue else self.red_total
+        opponent_total = self.red_total if self.client_is_blue else self.blue_total
+        if client_total > opponent_total:
             return "WIN"
-        if self.blue_total < self.red_total:
+        if client_total < opponent_total:
             return "LOSE"
         return "DRAW"
 
@@ -378,6 +391,7 @@ def main() -> None:
     parser.add_argument("--key", default="local-test:0")
     parser.add_argument("--rounds", type=int, default=1)
     parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--connect-name", choices=["Player1", "Player2"], default="Player1")
     parser.add_argument("--show-messages", action="store_true")
     args = parser.parse_args()
 
@@ -387,6 +401,7 @@ def main() -> None:
         key=args.key,
         rounds=args.rounds,
         seed=args.seed,
+        connect_name=args.connect_name,
         show_messages=args.show_messages,
     )
     server.serve()

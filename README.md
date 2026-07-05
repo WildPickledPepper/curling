@@ -55,12 +55,20 @@ Evaluate the dual-model robot locally:
 D:\anaconda3\python.exe evaluate_search_distill.py --games 1 --search-games 1 --refined-games 80 --adaptive-refined --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --refined-top-k 3 --refined-candidates 24 --refined-rollouts 2 --late-refined-top-k 4 --late-refined-candidates 32 --late-refined-rollouts 3 --hammer-refined-candidates 48 --hammer-refined-rollouts 4 --trace-games 3 --report-file log/search_distill_eval_dual_models_80.json
 ```
 
-Socket smoke test for the default robot:
+Socket smoke tests for the default robot:
 
 ```powershell
-D:\anaconda3\python.exe local_curling_server.py --host 127.0.0.1 --port 7791 --key local-test:0 --rounds 1
-D:\anaconda3\python.exe search_distill_robot.py --key local-test:0 -H 127.0.0.1 -p 7791 --shot-search local
+# Player1 / first-player path
+D:\anaconda3\python.exe local_curling_server.py --host 127.0.0.1 --port 7792 --key local-test:0 --rounds 1 --connect-name Player1
+D:\anaconda3\python.exe search_distill_robot.py --key local-test:0 -H 127.0.0.1 -p 7792 --shot-search local
+
+# Player2 / second-player path
+D:\anaconda3\python.exe local_curling_server.py --host 127.0.0.1 --port 7793 --key local-test:0 --rounds 1 --connect-name Player2
+D:\anaconda3\python.exe search_distill_robot.py --key local-test:0 -H 127.0.0.1 -p 7793 --shot-search local
 ```
+
+The Player2 smoke should show `玩家2，首局后手` and a final-shot
+`budget=hammer` line in the robot log.
 
 ## Important Caveat
 
