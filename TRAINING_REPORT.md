@@ -16,6 +16,8 @@ Evaluation report:
 - `log/search_distill_eval_adaptive_sideaware.json`
 - `log/search_distill_eval_adaptive_ranked_candidates.json`
 - `log/search_distill_eval_dual_models_80.json`
+- `log/head_to_head_dual_vs_shared_symmetric_20.json`
+- `log/head_to_head_dual_vs_scripted_symmetric_20.json`
 - `STRATEGY_MODE_ANALYSIS.md` with detailed first-player/second-player,
   phase, score-bucket, and sweep-pattern analysis.
 
@@ -125,6 +127,42 @@ The independent second-player model improves the two-sided average score from
 course and NFSP-paper warning that first-player and second-player positions
 should not be treated as one shared policy.
 
+## Current Opponents And Head-To-Head Checks
+
+The original training data was generated against the local mock opponent, not
+through full self-play:
+
+- Our controlled turns used Monte Carlo tactic search.
+- Opponent turns used `FastCurlingEnv.choose_opponent_shot()`, a simple random
+  draw/overshoot policy.
+- First-player and second-player models were trained separately after we found
+  that the two sides should not share one policy.
+
+To avoid relying only on this weak opponent, `evaluate_head_to_head.py` now runs
+direct policy-vs-policy games in the same local simulator. It supports
+`random`, `rollout`, `scripted`, `shared_refined`, and `dual_refined` policies.
+Use `--swap-sides` so both policies play once as first player and once as second
+player; otherwise the local hammer advantage dominates the result.
+
+Low-budget symmetric checks:
+
+| Policy A | Policy B | Games per side assignment | A avg score | A win rate | Notes |
+| --- | --- | ---: | ---: | ---: | --- |
+| dual_refined | shared_refined | 20 | 0.25 | 50.00% | Small edge, not decisive at this sample size |
+| dual_refined | scripted | 20 | 7.05 | 97.50% | Scripted policy is exploitable in local physics |
+
+Commands:
+
+```powershell
+D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy shared_refined --swap-sides --games 20 --report-file log/head_to_head_dual_vs_shared_symmetric_20.json
+D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy scripted --swap-sides --games 20 --report-file log/head_to_head_dual_vs_scripted_symmetric_20.json
+```
+
+This is still a local-simulator check, but it is a better regression test than
+only playing against the built-in random opponent. The next training upgrade
+should use an opponent pool: random, scripted, shared model, dual model, and
+older checkpoints.
+
 Socket smoke test with adaptive search:
 
 - Logs: `log/adaptive_socket_robot.out.log`, `log/adaptive_socket_server.out.log`
@@ -201,6 +239,10 @@ Files added:
   - Independent evaluation script.
   - Reports refined continuous search metrics and saves replay traces.
   - Reports first-player and second-player refined-search metrics separately.
+
+- `evaluate_head_to_head.py`
+  - Runs direct policy-vs-policy local games.
+  - Supports side-swapped symmetric evaluation to reduce hammer bias.
 
 Training command used:
 

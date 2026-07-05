@@ -34,6 +34,8 @@ Main reports:
 - `STRATEGY_MODE_ANALYSIS.md`
 - `model/MODELS.md`
 - `log/search_distill_eval_dual_models_80.json`
+- `log/head_to_head_dual_vs_shared_symmetric_20.json`
+- `log/head_to_head_dual_vs_scripted_symmetric_20.json`
 
 ## Training
 
@@ -54,6 +56,21 @@ Evaluate the dual-model robot locally:
 ```powershell
 D:\anaconda3\python.exe evaluate_search_distill.py --games 1 --search-games 1 --refined-games 80 --adaptive-refined --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --refined-top-k 3 --refined-candidates 24 --refined-rollouts 2 --late-refined-top-k 4 --late-refined-candidates 32 --late-refined-rollouts 3 --hammer-refined-candidates 48 --hammer-refined-rollouts 4 --trace-games 3 --report-file log/search_distill_eval_dual_models_80.json
 ```
+
+Run symmetric head-to-head checks. These swap sides so hammer advantage does not
+dominate the conclusion:
+
+```powershell
+D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy shared_refined --swap-sides --games 20 --report-file log/head_to_head_dual_vs_shared_symmetric_20.json
+D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy scripted --swap-sides --games 20 --report-file log/head_to_head_dual_vs_scripted_symmetric_20.json
+```
+
+Current symmetric low-budget head-to-head results:
+
+| Policy A | Policy B | Games per side assignment | A avg score | A win rate |
+| --- | --- | ---: | ---: | ---: |
+| dual_refined | shared_refined | 20 | 0.25 | 50.00% |
+| dual_refined | scripted | 20 | 7.05 | 97.50% |
 
 Socket smoke tests for the default robot:
 
