@@ -5,6 +5,8 @@
 Trained model:
 
 - `model/search_distill_tactic_policy.pt`
+- `model/search_distill_tactic_policy_first.pt`
+- `model/search_distill_tactic_policy_second.pt`
 
 Evaluation report:
 
@@ -13,6 +15,7 @@ Evaluation report:
 - `log/search_distill_eval_fixed_sideaware.json`
 - `log/search_distill_eval_adaptive_sideaware.json`
 - `log/search_distill_eval_adaptive_ranked_candidates.json`
+- `log/search_distill_eval_dual_models_80.json`
 - `STRATEGY_MODE_ANALYSIS.md` with detailed first-player/second-player,
   phase, score-bucket, and sweep-pattern analysis.
 
@@ -31,10 +34,12 @@ to run at match time.
 ## Current Strongest Local Version
 
 After the paper review, the robot was upgraded from pure tactic selection to
-small-budget continuous shot refinement. The newest version adds side-aware
-search and adaptive late-shot budgets:
+small-budget continuous shot refinement. The newest version uses separate
+first-player and second-player models, side-aware search, and adaptive late-shot
+budgets:
 
-- Base model chooses likely tactics.
+- The first-player model chooses likely tactics when we are first player.
+- The second-player model chooses likely tactics when we are second player.
 - Local root search refines `(v0, h0, w0, sweep_distance)`.
 - Search now evaluates from the correct first-player/second-player perspective.
 - A scripted fallback candidate is always included with the model top-k tactics.
@@ -51,13 +56,13 @@ search and adaptive late-shot budgets:
 Current strongest local command:
 
 ```powershell
-D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --model-file model/search_distill_tactic_policy.pt --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
+D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
 ```
 
 Use this conservative fallback if the official server time budget is tight:
 
 ```powershell
-D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --model-file model/search_distill_tactic_policy.pt --shot-search local --fixed-search --search-top-k 3 --search-candidates 16 --search-rollouts 1
+D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --shot-search local --fixed-search --search-top-k 3 --search-candidates 16 --search-rollouts 1
 ```
 
 Medium local evaluation with continuous refinement:
@@ -100,6 +105,20 @@ to `3.2500` while guaranteeing the base tactic shot remains in the local search
 set. A more exploratory `55%` core-candidate variant was also tested in
 `log/search_distill_eval_adaptive_balanced_candidates.json`; it underperformed
 and was not kept.
+
+Independent first/second model evaluation:
+
+| Policy | Games | Avg score | Win rate | Loss rate |
+| --- | ---: | ---: | ---: | ---: |
+| Shared first-player model, first player | 80 | 2.9375 | 93.75% | 6.25% |
+| Shared first-player model, second player | 80 | 3.5625 | 95.00% | 5.00% |
+| First model + second model, first player | 80 | 2.9375 | 93.75% | 6.25% |
+| First model + second model, second player | 80 | 3.7375 | 97.50% | 2.50% |
+
+The independent second-player model improves the two-sided average score from
+`3.2500` to `3.3375` in the same local evaluation setup. This confirms the
+course and NFSP-paper warning that first-player and second-player positions
+should not be treated as one shared policy.
 
 Socket smoke test with adaptive search:
 
@@ -150,7 +169,7 @@ Files added:
   - Distills expert policy/value targets into a PyTorch network.
 
 - `search_distill_robot.py`
-  - Socket-compatible robot that loads `search_distill_tactic_policy.pt`.
+  - Socket-compatible robot that loads first-player and second-player models.
   - Supports local continuous shot refinement and planned sweeping.
 
 - `continuous_shot_search.py`
@@ -170,6 +189,12 @@ Training command used:
 
 ```powershell
 D:\anaconda3\python.exe train_search_distill.py --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 3000 --model-file model/search_distill_tactic_policy.pt --report-file log/search_distill_report.json
+```
+
+Second-player model training command used:
+
+```powershell
+D:\anaconda3\python.exe train_search_distill.py --player second --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second.pt --report-file log/search_distill_report_second.json
 ```
 
 The long built-in evaluation was stopped after the model had been saved, then a
