@@ -52,18 +52,20 @@ D:\anaconda3\python.exe train_search_distill.py --player second --games 1500 --r
 ```
 
 Opponent-pool training is now available. The default remains `random`, matching
-the original local mock opponent. For a stronger next experiment, train each
-side independently against a mixed opponent pool:
+the original local mock opponent. `balanced-mix` keeps half of the original
+random-opponent distribution and mixes in model, scripted, and rollout
+opponents; this is the safer next experiment than replacing the whole data
+distribution with hard opponents:
 
 ```powershell
-D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_pool.pt --report-file log/search_distill_report_first_pool.json
-D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_pool.pt --report-file log/search_distill_report_second_pool.json
+D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy balanced-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_balanced.pt --report-file log/search_distill_report_first_balanced.json
+D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy balanced-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_balanced.pt --report-file log/search_distill_report_second_balanced.json
 ```
 
-`model-mix` uses the opponent side's available side-specific model plus
-scripted, rollout, and random opponents. For example, when training the
-second-player model, the pool can load `search_distill_tactic_policy_first.pt`
-as the first-player opponent.
+`model-mix` is the harder pool: it gives more weight to the opponent side's
+available side-specific model plus scripted and rollout opponents. For example,
+when training the second-player model, both pools can load
+`search_distill_tactic_policy_first.pt` as the first-player opponent.
 
 Evaluate the dual-model robot locally:
 

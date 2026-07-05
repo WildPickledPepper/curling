@@ -172,6 +172,7 @@ Opponent-pool training modes in `train_search_distill.py`:
 | `rollout` | Cheap score-aware rollout policy |
 | `model` | Opponent side's side-specific model, falling back only if explicitly unavailable is an error |
 | `model-mix` | Mixture of opponent model, scripted, rollout, and random; if no model exists it mixes scripted/rollout/random |
+| `balanced-mix` | Random-heavy mixture: random 50%, opponent model 20%, scripted 15%, rollout 15%; if no model exists it keeps random as the majority |
 
 The search teacher and the actual training games use the same opponent context.
 That matters: if the training game contains a stronger opponent but the root
@@ -184,12 +185,13 @@ Small smoke checks completed:
 | --- | --- |
 | `--opponent-policy scripted`, second player | Completed, saved smoke model and JSON report locally |
 | `--opponent-policy model-mix`, second player | Completed, loaded the first-player model as opponent pool member |
+| `--opponent-policy balanced-mix`, first player | Completed, loaded the second-player model as opponent pool member |
 
 Recommended next experiment:
 
 ```powershell
-D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_pool.pt --report-file log/search_distill_report_first_pool.json
-D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_pool.pt --report-file log/search_distill_report_second_pool.json
+D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy balanced-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_balanced.pt --report-file log/search_distill_report_first_balanced.json
+D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy balanced-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_balanced.pt --report-file log/search_distill_report_second_balanced.json
 ```
 
 Medium candidate check after implementing opponent pools:
@@ -206,11 +208,10 @@ Reports:
 - `log/compare_first_pool_candidate.json`
 - `log/compare_second_pool_candidate.json`
 
-Conclusion: the opponent-pool mechanism is valid, but small pool training is not
-stronger than the existing large side-specific models. The next serious run
-should either use the full 1500-game scale above or use opponent-pool data as
-fine-tuning mixed with the original random-opponent dataset, rather than
-replacing the data distribution with only a small hard-opponent sample.
+Conclusion: the opponent-pool mechanism is valid, but small hard-pool training
+is not stronger than the existing large side-specific models. The next serious
+run should use `balanced-mix` at full scale so the original random-opponent
+distribution remains represented while stronger counterplay is introduced.
 
 Socket smoke test with adaptive search:
 

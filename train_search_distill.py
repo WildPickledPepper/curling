@@ -224,11 +224,15 @@ def _model_for_player(context: OpponentContext, player_is_init: bool) -> Optiona
 
 
 def _effective_opponent_policy(context: OpponentContext, rng: random.Random, opponent_is_init: bool) -> str:
-    if context.policy != "model-mix":
+    if context.policy not in {"model-mix", "balanced-mix"}:
         return context.policy
 
     model = _model_for_player(context, opponent_is_init)
-    if model is not None:
+    if context.policy == "balanced-mix" and model is not None:
+        choices = [("random", 0.50), ("model", 0.20), ("scripted", 0.15), ("rollout", 0.15)]
+    elif context.policy == "balanced-mix":
+        choices = [("random", 0.55), ("scripted", 0.25), ("rollout", 0.20)]
+    elif model is not None:
         choices = [("model", 0.35), ("scripted", 0.25), ("rollout", 0.25), ("random", 0.15)]
     else:
         choices = [("scripted", 0.35), ("rollout", 0.35), ("random", 0.30)]
@@ -571,9 +575,9 @@ def build_opponent_context(
         first_model_file=str(first_model_file) if first_model_file else None,
         second_model_file=str(second_model_file) if second_model_file else None,
     )
-    if policy not in {"random", "scripted", "rollout", "model", "model-mix"}:
+    if policy not in {"random", "scripted", "rollout", "model", "model-mix", "balanced-mix"}:
         raise ValueError(f"unknown opponent policy: {policy}")
-    if policy not in {"model", "model-mix"}:
+    if policy not in {"model", "model-mix", "balanced-mix"}:
         return context
 
     opponent_is_init = not controlled_player_is_init
@@ -685,7 +689,11 @@ def main() -> None:
     parser.add_argument("--search-eval-games", type=int, default=None)
     parser.add_argument("--seed", type=int, default=20260705)
     parser.add_argument("--player", choices=["first", "second"], default="first")
-    parser.add_argument("--opponent-policy", choices=["random", "scripted", "rollout", "model", "model-mix"], default="random")
+    parser.add_argument(
+        "--opponent-policy",
+        choices=["random", "scripted", "rollout", "model", "model-mix", "balanced-mix"],
+        default="random",
+    )
     parser.add_argument("--opponent-first-model-file", default="model/search_distill_tactic_policy_first.pt")
     parser.add_argument("--opponent-second-model-file", default="model/search_distill_tactic_policy_second.pt")
     parser.add_argument("--model-file", default="model/search_distill_tactic_policy.pt")
