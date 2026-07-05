@@ -192,6 +192,26 @@ D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy
 D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_pool.pt --report-file log/search_distill_report_second_pool.json
 ```
 
+Medium candidate check after implementing opponent pools:
+
+| Candidate | Training config | Same-opponent comparison | Decision |
+| --- | --- | --- | --- |
+| First-player pool candidate | `model-mix`, 60 games, 2 rollouts, 8 epochs | Baseline first model `1.0917`; pool candidate `1.1083` avg score over 120 games | Too small and noisy; do not replace |
+| Second-player pool candidate | `model-mix`, 60 games, 2 rollouts, 8 epochs | Baseline second model `2.4000`; pool candidate `2.1000` avg score over 120 games | Worse; do not replace |
+
+Reports:
+
+- `log/search_distill_report_first_pool_candidate.json`
+- `log/search_distill_report_second_pool_candidate.json`
+- `log/compare_first_pool_candidate.json`
+- `log/compare_second_pool_candidate.json`
+
+Conclusion: the opponent-pool mechanism is valid, but small pool training is not
+stronger than the existing large side-specific models. The next serious run
+should either use the full 1500-game scale above or use opponent-pool data as
+fine-tuning mixed with the original random-opponent dataset, rather than
+replacing the data distribution with only a small hard-opponent sample.
+
 Socket smoke test with adaptive search:
 
 - Logs: `log/adaptive_socket_robot.out.log`, `log/adaptive_socket_server.out.log`

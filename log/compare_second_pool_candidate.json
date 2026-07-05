@@ -1,0 +1,20 @@
+{
+  "baseline_second_model_vs_model_mix": {
+    "games": 120,
+    "player_is_init": false,
+    "avg_score": 2.4,
+    "win_rate": 0.9416666666666667,
+    "loss_rate": 0.058333333333333334,
+    "min_score": -2.0,
+    "max_score": 8.0
+  },
+  "pool_candidate_second_model_vs_model_mix": {
+    "games": 120,
+    "player_is_init": false,
+    "avg_score": 2.1,
+    "win_rate": 0.8833333333333333,
+    "loss_rate": 0.11666666666666667,
+    "min_score": -4.0,
+    "max_score": 6.0
+  }
+}

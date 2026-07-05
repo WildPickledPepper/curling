@@ -1,0 +1,70 @@
+{
+  "config": {
+    "games": 60,
+    "rollouts": 2,
+    "epochs": 8,
+    "batch_size": 256,
+    "lr": 0.001,
+    "eval_games": 120,
+    "search_eval_games": 24,
+    "seed": 20260705,
+    "player": "second",
+    "opponent_policy": "model-mix",
+    "opponent_first_model_file": "model/search_distill_tactic_policy_first.pt",
+    "opponent_second_model_file": "model/search_distill_tactic_policy_second.pt",
+    "model_file": "model/search_distill_tactic_policy_second_pool_candidate.pt",
+    "report_file": "log/search_distill_report_second_pool_candidate.json"
+  },
+  "player_is_init": false,
+  "opponent": {
+    "policy": "model-mix",
+    "first_model_loaded": true,
+    "second_model_loaded": false,
+    "first_model_file": "model\\search_distill_tactic_policy_first.pt",
+    "second_model_file": "model\\search_distill_tactic_policy_second.pt"
+  },
+  "samples": 480,
+  "training_metrics": {
+    "loss": 2.8472145716349284,
+    "action_acc": 0.25
+  },
+  "evaluation": {
+    "random": {
+      "games": 120,
+      "player_is_init": false,
+      "avg_score": -0.31666666666666665,
+      "win_rate": 0.4583333333333333,
+      "loss_rate": 0.5416666666666666,
+      "min_score": -7.0,
+      "max_score": 4.0
+    },
+    "scripted": {
+      "games": 120,
+      "player_is_init": false,
+      "avg_score": -8.0,
+      "win_rate": 0.0,
+      "loss_rate": 1.0,
+      "min_score": -8.0,
+      "max_score": -8.0
+    },
+    "model": {
+      "games": 120,
+      "player_is_init": false,
+      "avg_score": 2.125,
+      "win_rate": 0.8916666666666667,
+      "loss_rate": 0.10833333333333334,
+      "min_score": -4.0,
+      "max_score": 7.0
+    },
+    "search_rollouts4": {
+      "games": 24,
+      "player_is_init": false,
+      "avg_score": 3.25,
+      "win_rate": 1.0,
+      "loss_rate": 0.0,
+      "min_score": 1.0,
+      "max_score": 7.0
+    }
+  },
+  "elapsed_sec": 310.29646348953247
+}

@@ -14,3 +14,5 @@ log/*_smoke.json
 
 model/*_smoke.pt
 model/*_smoke.pth
+model/*_candidate.pt
+model/*_candidate.pth
