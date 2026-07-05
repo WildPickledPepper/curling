@@ -1,0 +1,487 @@
+                        Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)
+
+
+
+
+                             Action Selection for Hammer Shots in Curling
+
+                            Zaheen Farraz Ahmad, Robert C. Holte, Michael Bowling
+                                        Department of Computing Science
+                                              University of Alberta
+                                    {zfahmad, rholte, mbowling}@ualberta.ca
+
+
+                          Abstract
+     Curling is an adversarial two-player game with a
+     continuous state and action space, and stochastic
+     transitions. This paper focuses on one aspect of
+     the full game, namely, finding the optimal “ham-
+     mer shot”, which is the last action taken before a
+     score is tallied. We survey existing methods for
+     finding an optimal action in a continuous, low-
+     dimensional space with stochastic outcomes, and
+     adapt a method based on Delaunay triangulation
+     to our application. Experiments using our curl-
+     ing physics simulator show that the adapted De-
+     launay triangulation’s shot selection outperforms
+     other algorithms, and with some caveats, exceeds
+     Olympic-level human performance.
+
+1   Introduction
+Curling is an Olympic sport played between two teams. The                    Figure 1: Heatmap showing the highly non-convex scoring
+game is played in a number of rounds (usually 8 or 10) called                function for a counterclockwise turn in the state in Figure 2.
+“ends”. In each end, teams alternate sliding granite rocks
+down a sheet of ice towards a target. When each team has
+thrown 8 rocks, the score for that end is determined and added               a deterministic heatmap: it shows the exact score if shot (✓, v)
+to the teams’ scores from the previous ends. The rocks are                   is executed without error. Finding an optimal shot means
+then removed from the playing surface and the next end be-                   finding the darkest parts of this heatmap. As can be seen they
+gins. The team with the highest score after the final end is the             constitute a very small portion of the action space and are
+winner.                                                                      often surrounded by less desirable outcomes (light regions).
+   The last shot of an end, called the “hammer shot”, is of the              Because action execution is stochastic, the expected value of
+utmost importance as it heavily influences the score for the                 shot (✓, v) is the average noise-free values of shots, (✓0 , v 0 ),
+end. In this paper, we focus exclusively on the problem of                   weighted by p((✓0 , v 0 )|(✓, v)), the probability that (✓0 , v 0 ) is
+selecting the hammer shot. This focus removes the need to                    executed given that (✓, v) is the intended shot. This essen-
+reason about the opponent, while still leaving the substantial               tially blurs the deterministic heat map, making the darkest
+challenge of efficiently identifying a near-optimal action in a              regions even smaller (only the central region of the rectangle
+continuous state and action space with stochastic action out-                where ✓ ⇡ 0.04 and v ⇡ 2000 is optimal in expected value
+comes and a highly non-convex scoring function. This work                    in the situation shown in Figure 1).
+is part of a larger research project that uses search methods to                This paper makes two main contributions. The first is to
+select all the shots in an end [Yee et al., 2016] and, ultimately,           adapt Surovik and Scheeres [2015]’s non-convex optimiza-
+to plan an entire game.                                                      tion method to our problem. They use Delaunay triangulation
+   To illustrate the difficult nature of even this restricted op-            on a set of sampled points to discretize the continuous action
+timization problem, Figure 1 shows a heatmap for a typical                   space and focus subsequent sampling in regions that appear
+hammer shot. The shading represents the score — a darker                     promising. Our contribution is to add a final step, in which
+shade is a higher score for the team throwing the hammer shot                a shot is selected by treating the most promising regions as
+— as a function of the two main continuous action parame-                    “arms” in a multi-armed bandit problem. We call our method
+ters, angle (✓, the x-axis) and velocity (v, the y-axis). This is            Delaunay Sampling (DS). The second contribution is to eval-
+
+
+
+                                                                       561
+                                                                                  ditionally, the skip may incorrectly judge the rock’s path
+                                                                                  or the sweepers its speed, resulting in sweeping being
+                                                                                  misapplied to achieve the desired outcome.
+                                                                             • Variability in the ice and rocks. Although care is taken
+                                                                               to make the ice conditions identical along all paths, there
+                                                                               are differences, and the ice conditions can change as a
+                                                                               game goes on. Similarly, every rock is slightly different
+                                                                               in how it interacts with the surface of the ice.
+
+                                                                           2.1     Modelling the Hammer Shot
+          Figure 2: Curling state with 4 rocks in play.                    We model the hammer shot using the continuous (x, y) coor-
+                                                                           dinates for each of the previously thrown 15 rocks still in play,
+                                                                           as well as the score differential and number of ends remain-
+uate the effectiveness, for hammer shot selection, of DS and a             ing. Our action space is based on two simplifying assump-
+representative set of existing algorithms for non-convex func-             tions. First, we treat the angular velocity of the hammer shot
+tion optimization. For this we use a curling simulator we have             as a binary variable (clockwise or counterclockwise). Sec-
+developed and actual hammer shot situations from the 2010                  ond, we do not have any parameters related to sweeping in
+Olympic Winter Games. DS is shown to be computationally                    our action space. Instead we integrate the effects of sweeping
+cheaper while achieving superior results to these established              into the execution model of our curling simulator (see next).
+algorithms. We also compare DS’s average expected value                    Our action space therefore has two continuous dimensions
+on the Olympic hammer shot situations with the average out-                and one binary dimension (“turn”).
+come achieved by Olympic-level curling teams themselves,                      The result of an intended shot is determined by two main
+showing a statistically significant improvement over these hu-             components: a physics based simulation and an execution
+man experts, with some caveats.                                            model. Surprisingly, the physics of a curling stone is not
+                                                                           fully understood and is an active area of research [Nyberg
+2     The Hammer Shot in Curling                                           et al., 2013; 2012; Jensen and Shegelski, 2004; Denny, 1998;
+                                                                           Lozowski et al., 2015]. So, a simulation based on first princi-
+In this section we do not give a complete description of the               ples is not possible. The curling simulator used in this paper
+sport of curling, we just elaborate on the aspects pertinent to            is implemented using the Chipmunk 2D rigid body physics
+understanding the final shot of the end. The state for this shot           library with an artificial lateral force that visually recreates
+is determined by the score differential, the number of ends left           empirically observed stone trajectories and modified collision
+to play, and the (x, y) positions of the rocks in play. Figure 2           resolution to visually match empirically observed elasticity
+is a typical state. Although 15 rocks have been thrown, only               and energy conservation when rocks collide. A rock’s trajec-
+4 remain in play (3 for the dark team, 1 for the light team).              tory is modeled by a deterministic simulation given an initial
+   The shot is played from the far end of the ice sheet (to the            linear velocity, angle, and turn.
+left of the figure). The rock is thrown with an initial linear and            The execution model in our curling simulator represents
+angular velocity at some angle relative to the center line. The            the variability in outcomes in the execution of an intended
+angular velocity causes the rock to travel in an arc (“curl”),             shot. The execution model treats this variability as a stochas-
+deviating from the straight line path that the rock was ini-               tic transformation. If (✓, v) is the intended shot, the outcome
+tially on. The direction of the curl (toward the bottom or top             is the deterministic simulation of a perturbed shot (✓0 , v 0 )
+of the figure) is determined by the sign of the angular veloc-             sampled from a predetermined conditional probability distri-
+ity (clockwise or counterclockwise, respectively), but is little           bution whose mode is the intended shot. The primary pur-
+affected by the magnitude of the angular velocity.                         pose of sweeping is to correct for human error and variability
+   Two of the team’s players accompany the rock as it travels              in the ice conditions.1 This is implicitly incorporated into
+down the ice, and one or both may choose to sweep the rock                 the execution model as a reduction in the execution noise,
+at any time. Sweeping affects the deceleration of the rock (it             i.e., an increase in the likelihood the rock’s actual trajectory
+travels further if swept) and the amount it curls.                         is close to the planned trajectory. At present, we do not
+   When the rock, and any rocks it hits, have come to rest,                model ice or rock variability: we assume all shots are sub-
+points are scored and added to the teams’ running totals. The              ject to the same execution error. The execution model used
+team with the rock in the scoring area (the rings in Figure 2;             in the experiments in this paper come from perturbing the
+called the “house”) that is closest to the center scores. The              intended shot parameters with independent samples from a
+number of points is equal to the number of rocks in the scor-
+ing area that are closer to the center than any rock of the op-               1
+                                                                                Sweeping does have effects beyond reducing execution error.
+posing team.                                                               Sweeping the rock near the the end of its trajectory can allow it to
+   The intended outcome of a shot, though, is not always re-               reach a location on the ice not possible without sweeping. Further-
+alized. There are two main reasons.                                        more, a shot far from an intended shot can be swept to achieve an
+                                                                           entirely different purpose, such as rolling under a different guard if
+    • Human error. The player throwing the stone might not                 the executed angle is off. The primary effect of sweeping, though, is
+      perfectly deliver it at the required angle or velocity. Ad-          to compensate for execution error.
+
+
+
+
+                                                                     562
+heavy-tailed, zero-mean, Student-t distribution whose param-            unknown function f and one is given N observed data points,
+eters have been tuned to match Olympic-level human ability.             {xn , yn }Nn=1 , where yn ⇠ N (f (xn ), ⌫) with ⌫ being a noise
+                                                                        term. The posterior distribution on the unknown function f
+3     Related Work                                                      is also a Gaussian process with a mean and covariance ker-
+                                                                        nel function computable in closed form from the data. GPO
+We describe the four existing approaches to non-convex opti-            seeks to find a maximum of an unknown function f through
+mization we explored in this work, as well as work on curling           carefully choosing new points xn+1 to sample a value based
+and the similar game of billiards.                                      on the posterior belief from previous samples. The optimal
+3.1    Continuous Bandits                                               selection mechanism for a non-trivial sampling horizon and
+                                                                        prior is intractable. However, good performance can often be
+In the general bandit problem, an agent is presented with a set         had by instead choosing a point that maximizes some acqui-
+of arms. Each round, the agent selects an arm and receives a            sition function as a proxy objective, e.g., choosing the point
+reward. The reward received from an arm is an i.i.d. sample             with the maximum probability of improving on the largest
+from the unknown distribution associated with that arm. The             previously attained value.
+objective of the agent is to select arms to maximize its cu-                GPO has several drawbacks. As is common with Bayesian
+mulative reward. Upper Confidence Bounds (UCB) [Auer et                 methods, the choice of prior can have a significant impact on
+al., 2002] is an arm selection policy that associate with each          its performance. While a parameterized prior can be used and
+arm an upper bound on the estimated expected value given                fit to the data, this shifts the problem to selecting hyperparam-
+the entire history of interaction using the following equation:         eters. The second drawback is computation. Even with work
+                                  r                                     on efficiently approximating the kernel matrix inverse at the
+                                     log N
+                     vi = r̄i + C          ,                (1)         heart of Gaussian processes [Snelson and Ghahramani, 2005;
+                                       ni                               Snoek et al., 2012], computation to identify a new sample
+where r̄i is the average reward observed by the arm i, N is             point is still growing with the number of previous samples,
+the total number of samples, ni is the number of times arm              which can become intractable when allowing a large number
+i was selected, and C is a tunable constant. On each round,             of samples.
+the agent chooses an arm i that maximizes vi . The two terms
+in the upper bound balance between exploiting an action with            3.3   Particle Swarm Optimization
+high estimated value and exploring an action with high un-
+                                                                        Particle Swarm Optimization (PSO) [Eberhart and Shi, 2011;
+certainty in its estimate.
+                                                                        Shi and Eberhart, 1998] is a population-based, stochastic ap-
+   The continuous bandit problem generalizes this framework
+                                                                        proach to optimization. Each particle in the population keeps
+to continuously parameterized action spaces [Bubeck et al.,
+                                                                        track of its own best score and the global best score evalu-
+2009; Kleinberg, 2004]. The agent is presented with a set of
+                                                                        ated at each time step. The particles (samples) are initially
+arms X , which form a topological space (or simply thought
+                                                                        evaluated at uniform random points in the action space. At
+of as a compact subset of Rn where n is the size of the action
+                                                                        each iteration of the algorithm, the particles take a step toward
+parameterization). On each round, the agent selects a point
+                                                                        the current global best. The step size depends on weight and
+x 2 X and receives a reward determined by a randomly sam-
+                                                                        velocity parameters, which are decided by the practitioner,
+pled function from an unknown distribution, which is then
+                                                                        and on the particle’s own best score. Unlike HOO and GPO,
+evaluated at x. With some continuity assumptions on the
+                                                                        which make a global convergence guarantee under smooth-
+mean function of the unknown distribution, one can devise
+                                                                        ness assumptions, PSO is only expected to converge to a lo-
+algorithms that can achieve a similar exploration-exploitation
+                                                                        cal optimum, and so results depend on the quality of the initial
+tradeoff as in the finite arm setting.
+                                                                        sampling of points.
+   One such algorithm is Hierarchical Optimistic Optimiza-
+tion (HOO) [Bubeck et al., 2009]. HOO creates a cover
+tree spanning the action space which successively divides
+                                                                        3.4   Covariance Matrix Adaptation - Evolution
+the space into smaller sets at each depth. The nodes of the                   Strategy
+cover tree are treated as arms of a sequential bandit problem.          The final optimization method we explore is Covariance Ma-
+Exploitation is done by traversing down previously-explored,            trix Adaption Evolution Strategy (CMA-ES) Evolution strate-
+promising nodes to create a finer granularity of estimates. Ex-         gies [Bäck et al., 1991] are iterative algorithms that attempt
+ploration is performed by sampling nodes higher up in the               to optimize a function by introducing stochastic variations
+tree covering regions that have not been sampled adequately.            at each iteration. CMA-ES [Hansen and Ostermeier, 1996;
+Under certain smoothness assumptions, the average reward of             Hansen, 2016] proceeds by drawing a set of samples from
+HOO’s sampled actions converges to the optimal action.                  an (initially uninformed) multivariate Gaussian. A new mul-
+                                                                        tivariate Gaussian is then constructed. The mean is the
+3.2    Gaussian Process Optimization                                    weighted mean of the sampled points, where higher weights
+Gaussian Process Optimization (GPO) [Rasmussen, 2006;                   are given to samples with larger reward values. The covari-
+Snelson and Ghahramani, 2005; Snoek et al., 2012; Lizotte               ance matrix is modified from the previous covariance so as
+et al., 2007] is based on Gaussian processes, which are priors          to encourage high variance in the direction that the mean is
+over functions, parameterized by a mean function, m(x), and             observed to be changing. This procedure is then repeated us-
+a covariance kernel function, k(x, x0 ). Suppose there is an            ing the new multivariate Gaussian to sample points. As with
+
+
+
+                                                                  563
+PSO, successive generations produced will lead to conver-                  the high-value regions are used in the selection stage of the
+gence to a local optimum of the function, with no guarantee                algorithm.
+with respect to the global optimum.                                           In Step 1 triangulations are done separately for each value
+                                                                           of any discrete action parameters (specifically, the binary
+3.5     Curling and Billiards                                              ”turn” parameter in curling). The other steps use the union
+Previous work has been done on developing strategies for                   of regions from all triangulations. This allows the algorithm
+curling in [Yamamoto et al., 2015]. Work in billiards, a                   to allocate more samples to the most promising discrete pa-
+game which is similar to curling with continuous actions and               rameter values.
+states along with stochastic outcomes, has received some at-
+tention in the literature [Archibald et al., 2009; Smith, 2007;            4.2     Selection of the Final Action
+2006]. However, in all of this work, the authors use do-                   This stage chooses the action that will actually be executed
+main knowledge to create a finite set of discrete actions. This            using the following procedure.
+makes it possible for search to be employed without address-
+ing the challenges of optimization in continuous settings. Our                 1. Assign new weights to the regions,
+work seeks to forego domain knowledge as much as possible,                                                  1 X
+in favor of a more domain-independent approach.                                                   ŵi =            vij .                (4)
+                                                                                                          |vij | j
+4     Delaunay Sampling
+                                                                               2. Select the k regions with the highest weights.
+Our Delaunay Sampling (DS) algorithm consists of a
+sampling stage, based on the work of Surovik and                               3. Run T̂ iterations of UCB using the chosen regions as
+Scheeres [2015], and a selection stage.                                           the arms of a bandit. When UCB samples a region, the
+                                                                                  sample is taken at the region’s incenter, and its value
+4.1     Sampling with Delaunay Triangulation                                      is a (stochastic) sample of the objective function at that
+DS’s first stage proceeds as follows:                                             point.
+    1. Sample the (stochastic) objective function at points dis-               4. Return the incenter of the region that was sampled most
+       tributed uniformly over the range of values of the action                  by UCB.
+       parameters.                                                         Different weighting functions are used in the two stages be-
+    2. Apply Delaunay triangulation [Lee and Schachter, 1980]              cause of the different purposes they serve. The first stage
+       to the sampled points to partition the continuous action            is exploratory, trying to find promising regions that are rel-
+       space into a set of disjoint regions.                               atively small. For this purpose it makes sense to use an op-
+                                                                           timistic score for a region. The aim of the second stage is
+    3. Assign each region a weight, which we discuss below.                to identify the region with the largest expected value. For
+    4. Sample the set of regions with replacement, with the                this purpose it is appropriate to repeatedly sample the point
+       probability of a region proportional to its weight.                 within a region that would actually be returned. In prelimi-
+    5. Each time a region is selected in the previous step, uni-           nary tests, Delaunay triangulation and UCB performed poorly
+       form randomly sample a point within it and add it to the            when used by themselves for the entire process. But as we
+       set of sampled points, with its value sampled from the              will see, together they seem to address each others’ weak-
+       (stochastic) objective function at that point.                      nesses.
+    6. Repeat from step 2 for a fixed number (T ) of iterations.
+                                                                           5     Experimental Setup
+What remains is to specify the weight wi used for region i
+in step 3 above. Let t  T be the current iteration of the                 As noted in the introduction, we are interested in exploring
+algorithm, ai refer to the area of region i, and vij refer to the          all of these methods for the problem of selecting a hammer
+observed reward of vertex j of region i. We define the weight              shot in curling.
+for region i as,
+                                                                           5.1     Objective Function
+                            1 t/T      t/T
+                     w i = ai     ⇥ si                        (2)          What objective function do we wish to optimize? The answer
+                                                                           that usually springs to mind is points, i.e. find a shot with the
+where                                                                      maximum expected point (EP) differential. To see why this
+                        si = emaxj (vij ) ,                    (3)         is not ideal, consider choosing the very last shot of a game in
+and is a tunable parameter that controls the rate of explo-                which the team with the hammer is losing by two points. Sup-
+ration. We call si the score of the region since it will be large          pose shot A is 100% guaranteed to score one point and shot
+if one of the vertices has been observed to result in high re-             B has a 20% chance of scoring 3 points and an 80% chance
+ward. Note that if ai is large then wi can be large, encourag-             of giving up one point. Shot A has a much higher EP than
+ing the algorithm to refine large regions; if si is large then wi          B (1.0 compared to 0.2) but it has no hope of winning the
+can be large, encouraging the algorithm to focus on regions                game, whereas B will win 20% of the time. B is obviously
+with higher observed rewards. As t increases, more weight is               the better choice in this situation. For this reason, we focus
+put on refining the high-valued regions, since ultimately only             on optimizing win percentage (WP), not EP.
+
+
+
+                                                                     564
+   The only remaining game state variables after the hammer                     250 trials over the test states using the same sampling bud-
+shot is thrown is n, the number of ends left to play, and                       gets as DS. The parameters for HOO described by Bubeck
+the number of points by which the team with the hammer is                       et al. [2009] were set by a parameter sweep to ⇢ = p12 ,
+leading ( is negative if the team with the hammer is losing).                          p
+                                                                                ⌫ = 2 2 and UCB constant C = 0.01.
+We call a pair (n, ) the resulting game state, or g. For ex-                       PSO was tested slightly differently. Since the particles
+ample, if g = (1, 2), WP(g) is the probability of the team                      move in a continuous space, having a discrete parameter
+with hammer winning if it enters the final end down by two                      (“turn”) required us to run PSO on each turn separately. For
+points. We then fit this WP function to data using 28,000                       each test state, PSO was run using one turn value and then the
+curling games played between 2011 and 2013.2 For the final                      other with each run being provided the full sampling budget.
+end of a game, g = (1, ), we estimated WP(g) using simple                       The best shots found with each turn were compared and the
+frequency statistics for the final ends from the dataset. For                   one with the higher average W P was evaluated one final time
+the second last end of a game we used the same data to es-                      to compute its expected W P . This was performed 250 times
+timate the transition probabilities from g = (2, ) to a game                    for each test state. PSO’s parameters were set to c1 = 1.5,
+state g 0 = (1, 0 ) for the final end. This tells how frequently                c2 = 1.5, w = 0.7 and 50 particles.
+it happened that the hammer team having a lead of when
+                                                                                   We used the BIPOP-CMA-ES [Auger and Hansen, 2009]
+there were two ends to play was followed by the hammer
+                                                                                version of CMA-ES for our tests. The experimental setup
+team in the final end having a lead of 0 . With these transition
+                                                                                was the same as for PSO. The parameters for the number of
+probabilities and the already-computed values of WP((1, 0 ))
+                                                                                offspring and parents were, respectively, = 4 + 3 log 2 and
+for all 0 , it is easy to compute WP((2, )) for all . The
+                                                                                µ = /2 with 4 restarts. We set the initial standard deviation
+same process can then be applied to compute WP((3, )),
+                                                                                to 0 = 0.25 and normalized the action parameters ✓ and v to
+WP((4, )), etc. With WP(n, ) defined for all values of n
+                                                                                range between 0 and 1. The parameters for step-size control
+and , the “score” we return when a hammer shot with x ends
+                                                                                and the covariance matrix adaptation were set in accordance
+remaining results in a lead of for the team with the hammer
+                                                                                to the values recommended by Hansen [2016].
+in the next end is WP(x 1, ). This is the objective function
+                                                                                   GPO was tested in a manner similar to PSO. However,
+our methods aim to maximize in expectation in selecting the
+                                                                                since GPO is considerably slower we implemented it with
+hammer shot.
+                                                                                only a budget size of 250, 500 and 1000 samples per turn
+5.2    Experimental Design                                                      with 50 restarts. We chose the squared-exponential function
+                                                                                as our GP kernel and set the noise variance, n = 0.01.
+The data used for our experiments was drawn from the ham-                          To determine if DS’s average WP on the test states was
+mer shot states captured by hand from the 2010 Winter                           statistically significantly different than the average WP of the
+Olympics men’s and women’s curling competition.3 A set of                       humans or other systems tested, we ran a Wilcoxon signed-
+397 hammer shot states from these logs were used in the pa-                     rank test (WSRT) with one pair of values for each of the 515
+rameter sweeps mentioned below. The parameter sweep for                         test states (one of the values was DS’s WP on the state, the
+Delaunay Sampling (DS) chose a value of 14 for . A sep-                         other was the WP of the system DS was being compared
+arate set of 515 hammer shot states (the “test states”) from                    to). Unless otherwise noted, WSRT produced p-values suf-
+these logs were used to evaluate the systems (including the                     ficiently small to conclude with greater than 99% confidence
+humans).                                                                        that DS’s superior average WP (for any specific sample bud-
+   For each of the test states, we gave DS a budget of between                  get) is not due to chance.
+500 and 3000 samples. This budget includes 100 samples for
+initializing the triangulation over each turn, 100 samples per
+iteration of the first stage, and 100 samples for the final UCB                 6   Results and Evaluation
+stage. After DS selected a shot, 10 outcomes were sampled                       Table 1 shows the performance (WP) on the test states of the
+from the simulator, with the outcome’s sample mean used as                      optimization methods in our study. For any given sample bud-
+the resulting estimate of WP. This procedure was repeated                       get, DS’s WP was significantly better than that of any other
+250 times for each test state. The values we report in Table 1                  systems tested. HOO performed worse than DS for smaller
+are the average over the 2500 evaluations for each test state.                  sample budgets because it was slower to build its cover tree
+   HOO selected a sample by choosing a turn using UCB and                       deep enough in the more promising parts of the action space
+then expanding the cover tree for that turn. We ran HOO for                     to accurately locate the best shots. Its peformance grows
+                                                                                closer to DS’s as the sample budget increases. PSO’s WP
+    2
+      Forfeits were treated as transitions to win/loss states. For rare         changed very little as its sample budget increased. We con-
+states, the outcomes used in estimating the transition probabilities            jecture this is because good shots are quite rare, so PSO’s
+came from states with a similar score differential (when near the end           initial, random sample of a noisy fucntion may not contain
+of the game) or similar number of ends remaining (when far from the
+                                                                                a strong signal to draw the particles towards a global opti-
+end of the game). The data used came from http://curlingzone.com,
+and included both women’s and men’s tournaments, although almost                mum. PSO also tends to converge to suboptimal local optima.
+no difference was observed when restricting to data only from one               CMA-ES also suffers from convergence to suboptimal local
+gender or when including only championship level events.                        optima. GPO tended to take many samples in the large re-
+    3
+      The logs do not contain the actual shot played by the humans              gions where the function has a minimum value (the lightest
+they only contained the states before and after the hammer shots                regions in Figure 1). We believe that given a more generous
+were taken.                                                                     sampling budget, it would eventually find better shots, but its
+
+
+
+                                                                          565
+  DS Budget       DS      HOO       PSO      CMA        GPO              lights one of the limitations of this comparison–we were not
+     500        0.4956    0.4273   0.4853    0.4932    0.4857            able to repeatedly sample human execution of a shot to obtain
+    1000        0.5203    0.4787   0.4856    0.4958    0.4868            its expected value. This works both ways, of course: just as
+    1500        0.5277    0.4968   0.4858    0.4954       -
+    2000        0.5310    0.5115   0.4849    0.4933    0.4867
+                                                                         the curlers may have been unlucky and mis-executed a shot
+    2500        0.5331    0.5176   0.4858    0.4954       -              they would make 80% of the time, there may have been shots
+    3000        0.5343    0.5212   0.4854    0.4948       -              where they got lucky and perfectly executed a shot they would
+                                                                         make only 20% of the time.
+      Table 1: Average WP for different sample budgets.                     A related limitation is that our execution model may have
+                                                                         been miscalibrated, making DS more (or less) accurate at shot
+                                                                         execution than the Olympic teams. The model was calibrated
+                                                                         to Olympic-level curlers to the best of our ability. Likewise,
+                                                                         our physics simulation is not a perfect replica of the true
+                                                                         physics of curling. So even if our execution model was per-
+                                                                         fect and exactly the same shot was executed by DS and by
+                                                                         the curlers, the distribution of outcomes might be different
+                                                                         because of the difference in the physics.
+                                                                            A final limitation of this comparison to Olympic perfor-
+                                                                         mance is that the data from the Olympics was logged by hand,
+                                                                         so the positions of the rocks, as recorded in the logs and used
+                                                                         by DS in our study, might not be exactly the positions faced
+                                                                         by the curlers during the Olympic games. Small differences
+                                                                         in rock positions can substantially affect the distribution of
+Figure 3: Two shots that score one point for the dark team.              a shot’s outcomes. As with all the limitations we have dis-
+                                                                         cussed, this could work in favour of DS but it could equally
+                                                                         well work against it.
+running time would be prohibitive.
+
+6.1    Comparison to Human Olympic Teams                                 7   Conclusion
+The hammer shots actually taken by the Olympic teams on                  Selecting a hammer shot in curling is a challenging low-
+the test states had an average WP of 0.4893. With a sample               dimensional non-convex optimization problem. We have em-
+budget of 500, DS is not significantly better than the curlers           pirically tested several existing methods for non-convex opti-
+(WSRT p-value = 0.1509) but for all larger sample budgets                mization on hammer shot states from the 2010 Olympics and
+DS is significantly better (p < 0.01). Nevertheless, on ap-              all of them were significantly inferior, in terms of average
+proximately 20% of the test states the Olympic teams chose               win percentage (WP), to the Delaunay Sampling (DS) method
+a shot that was superior to the shot chosen by DS.                       we introduced in this paper. DS also achieved, with some
+   Figure 3 is an example in which DS chose a more robust                caveats, a significantly higher WP than the Olympic curlers
+shot than the Olympic curlers. In this state the team with the           themselves, although there were still a substantial number of
+dark rocks has the hammer. There are three light rocks in                states in which the curlers made a superior shot selection.
+the scoring area (the bulls-eye, called the “house”). To avoid
+giving up three points, the hammer shot must end with a dark             Acknowledgements
+rock closer to the button (the centre of the house) than those
+                                                                         This research was funded by NSERC and Alberta Innovates
+light rocks. Two shots that accomplish this are shown in the
+                                                                         Technology Futures (AITF) through Amii, the Alberta Ma-
+figure. The “Draw” shot has the thrown rock pass in between
+                                                                         chine Intelligence Institute. Computing resources were pro-
+rocks A and B and come to rest near the button. The gap
+                                                                         vided by Compute Canada and Calcul Québec. We would
+between A and B is fairly narrow, so considerable precision is
+                                                                         also like to thank Timothy Yee and Viliam Lisy for their sup-
+required for this shot to succeed. The worst possible outcome
+                                                                         port on this research.
+is for the thrown rock to collide with B and knock it into the
+house, giving a score of 4 to the light team. This is, in fact,
+what happened when the Olympic curlers threw the shot.                   References
+   The alternative shot is DS’s choice, the “Raise”. Here the            [Archibald et al., 2009] Christopher Archibald, Alon Alt-
+thrown rock intentionally collides with rock C. Depending                  man, and Yoav Shoham. Analysis of a winning compu-
+on the angle of contact, either C or the thrown rock itself will           tational billiards player. In IJCAI, volume 9, pages 1377–
+deflect into the house. In this particular state, the Raise is             1382. Citeseer, 2009.
+a more robust shot than the Draw because less precision is
+                                                                         [Auer et al., 2002] Peter Auer, Nicolo Cesa-Bianchi, and
+required for the Raise to score a point for the dark team and
+there is no risk of knocking a fourth light rock into the house.           Paul Fischer. Finite-time analysis of the multiarmed bandit
+   There were a substantial number of test states in which                 problem. Machine learning, 47(2-3):235–256, 2002.
+the curlers and DS chose the same shot but the curlers mis-              [Auger and Hansen, 2009] Anne Auger and Nikolaus
+executed the shot and DS, on average, did not. This high-                  Hansen.       Benchmarking the (1+1)-CMA-ES on the
+
+
+
+                                                                   566
+   BBOB-2009 function testbed. In Genetic and Evo-                        15th Nordic Symposium on Tribology, 12-15 June 2012,
+   lutionary Computation Conference, GECCO 2009,                          Trondheim, Norway, 2012.
+   Proceedings, Montreal, Québec, Canada, July 8-12, 2009,            [Nyberg et al., 2013] Harald Nyberg, Sara Alfredson, Sture
+   Companion Material, pages 2459–2466, 2009.                             Hogmark, and Staffan Jacobson. The asymmetrical fric-
+[Bäck et al., 1991] Thomas Bäck, Frank Hoffmeister, and                 tion mechanism that puts the curl in the curling stone.
+   Hans-Paul Schwefel. A survey of evolution strategies. In               Wear, 301(1):583–589, 2013.
+   Proceedings of the 4th International Conference on Ge-              [Rasmussen, 2006] Carl Edward Rasmussen. Gaussian pro-
+   netic Algorithms, San Diego, CA, USA, July 1991, pages                 cesses for machine learning. 2006.
+   2–9, 1991.
+                                                                       [Shi and Eberhart, 1998] Yuhui Shi and Russell Eberhart. A
+[Bubeck et al., 2009] Sébastien Bubeck, Gilles Stoltz, Csaba             modified particle swarm optimizer. In Evolutionary Com-
+   Szepesvári, and Rémi Munos. Online optimization in x-                putation Proceedings, 1998. IEEE World Congress on
+   armed bandits. In D. Koller, D. Schuurmans, Y. Ben-                    Computational Intelligence., The 1998 IEEE International
+   gio, and L. Bottou, editors, Advances in Neural Informa-               Conference on, pages 69–73. IEEE, 1998.
+   tion Processing Systems 21, pages 201–208. Curran Asso-
+                                                                       [Smith, 2006] Michael Smith. Running the table: An ai
+   ciates, Inc., 2009.
+                                                                          for computer billiards. In PROCEEDINGS OF THE
+[Denny, 1998] Mark Denny. Curling rock dynamics. Cana-                    NATIONAL CONFERENCE ON ARTIFICIAL INTELLI-
+   dian journal of physics, 76(4):295–304, 1998.                          GENCE, volume 21, page 994. Menlo Park, CA; Cam-
+[Eberhart and Shi, 2011] Russell C Eberhart and Yuhui Shi.                bridge, MA; London; AAAI Press; MIT Press; 1999,
+   Computational intelligence: concepts to implementations.               2006.
+   Elsevier, 2011.                                                     [Smith, 2007] Michael Smith. Pickpocket: A computer bil-
+[Hansen and Ostermeier, 1996] Nikolaus Hansen and An-                     liards shark. Artificial Intelligence, 171(16):1069–1091,
+   dreas Ostermeier. Adapting arbitrary normal mutation dis-              2007.
+   tributions in evolution strategies: The covariance matrix           [Snelson and Ghahramani, 2005] Edward Snelson and
+   adaptation. In Evolutionary Computation, 1996., Proceed-               Zoubin Ghahramani. Sparse gaussian processes using
+   ings of IEEE International Conference on, pages 312–317.               pseudo-inputs.     In Advances in neural information
+   IEEE, 1996.                                                            processing systems, pages 1257–1264, 2005.
+[Hansen, 2016] Nikolaus Hansen. The CMA evolution strat-               [Snoek et al., 2012] Jasper Snoek, Hugo Larochelle, and
+   egy: A tutorial. arXiv:1604.00772, 2016.                               Ryan P Adams. Practical bayesian optimization of ma-
+[Jensen and Shegelski, 2004] ET Jensen and Mark RA                        chine learning algorithms. In Advances in neural informa-
+                                                                          tion processing systems, pages 2951–2959, 2012.
+   Shegelski. The motion of curling rocks: experimen-
+   tal investigation and semi-phenomenological description.            [Surovik and Scheeres, 2015] David Allen Surovik and
+   Canadian journal of physics, 82(10):791–809, 2004.                     Daniel J Scheeres. Heuristic search and receding-horizon
+                                                                          planning in complex spacecraft orbit domains. In Eighth
+[Kleinberg, 2004] Robert D Kleinberg. Nearly tight bounds
+                                                                          Annual Symposium on Combinatorial Search, 2015.
+   for the continuum-armed bandit problem. In Advances in
+   Neural Information Processing Systems, pages 697–704,               [Yamamoto et al., 2015] Masahito Yamamoto, Shu Kato,
+   2004.                                                                  and Hiroyuki Iizuka. Digital curling strategy based on
+                                                                          game tree search. In Computational Intelligence and
+[Lee and Schachter, 1980] Der-Tsai Lee and Bruce J                        Games (CIG), 2015 IEEE Conference on, pages 474–480.
+   Schachter. Two algorithms for constructing a delaunay                  IEEE, 2015.
+   triangulation.    International Journal of Computer &
+   Information Sciences, 9(3):219–242, 1980.                           [Yee et al., 2016] Timothy Yee, Viliam Lisy, and Michael
+                                                                          Bowling. Monte carlo tree search in continuous action
+[Lizotte et al., 2007] Daniel J Lizotte, Tao Wang, Michael H              spaces with execution uncertainty. In IJCAI, 2016.
+   Bowling, and Dale Schuurmans. Automatic gait optimiza-
+   tion with gaussian process regression. In IJCAI, volume 7,
+   pages 944–949, 2007.
+[Lozowski et al., 2015] Edward P Lozowski, Krzysztof
+   Szilder, Sean Maw, Alexis Morris, Louis Poirier, Berni
+   Kleiner, et al. Towards a first principles model of curling
+   ice friction and curling stone dynamics. In The Twenty-
+   fifth International Offshore and Polar Engineering Con-
+   ference. International Society of Offshore and Polar Engi-
+   neers, 2015.
+[Nyberg et al., 2012] Harald Nyberg, Sture Hogmark, and
+   Staffan Jacobson. Calculated trajectories of curling stones
+   sliding under asymmetrical friction. In Nordtrib 2012,
+
+
+
+                                                                 567
+

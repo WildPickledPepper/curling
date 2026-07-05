@@ -1,0 +1,510 @@
+                                                    Elastic Monte Carlo Tree Search
+                                            with State Abstraction for Strategy Game Playing
+                                            Linjie Xu, Jorge Hurtado-Grueso, Dominic Jeurissen and Diego Perez Liebana                      Alexander Dockhorn
+                                                                              Department of EECS                                              Faculty of EECS
+                                                                      Queen Mary University of London                                    Leibniz University Hannover
+                                                                                  London, UK                                                 Hannover, Germany
+                                                                      {linjie.xu,diego.perez}@qmul.ac.uk                                dockhorn@tnt.uni-hannover.de
+
+
+
+
+arXiv:2205.15126v1 [cs.AI] 30 May 2022
+                                            Abstract—Strategy video games challenge AI agents with their  playing trajectories and store this knowledge in a data structure
+                                         combinatorial search space caused by complex game elements.      such as a tree [3]. However, the size of the search space in
+                                         State abstraction is a popular technique that reduces the state  strategy games increases combinatorially with the number of
+                                         space complexity. However, current state abstraction methods for
+                                         games depend on domain knowledge, making their application       units under the control of the player, making existing search-
+                                         to new games expensive. State abstraction methods that require   based methods unable to find good solutions in a reduced
+                                         no domain knowledge are studied extensively in the planning      time frame. Improving sampling efficiency is one of the main
+                                         domain. However, no evidence shows they scale well with the      challenges for search-based methods in most domains (and, in
+                                         complexity of strategy games. In this paper, we propose Elastic  particular in strategy games).
+                                         MCTS, an algorithm that uses state abstraction to play strategy
+                                         games. In Elastic MCTS, the nodes of the tree are clustered         Game state and action abstraction [4] are efficient techniques
+                                         dynamically, first grouped together progressively by state ab-   that reduce the search space for search-based methods. Current
+                                         straction, and then separated when an iteration threshold is     works on state abstraction [5], [6] and action abstraction [2],
+                                         reached. The elastic changes benefit from efficient searching    [7], [8] have shown their improved performance over non-
+                                         brought by state abstraction but avoid the negative influence    abstracting algorithms in playing StarCraft. Although these
+                                         of using state abstraction for the whole search. To evaluate our
+                                         method, we make use of the general strategy games platform       methods gain performance by utilizing abstraction techniques
+                                         Stratega to generate scenarios of varying complexity. Results    to reduce the search space, domain knowledge is indispensable
+                                         show that Elastic MCTS outperforms MCTS baselines with a         for them. In the planning domain, methods that require no
+                                         large margin, while reducing the tree size by a factor of 10.    domain knowledge for abstraction are studied extensively [9]–
+                                         Code can be found at https://github.com/egg-west/Stratega        [15]. However, those have been limited to applications of lesser
+                                            Index Terms—State Abstraction, Monte Carlo Tree Search,
+                                         Game Artificial Intelligence, Strategy Games                     complexity, e.g. Othello [9]. In our study, we aim to test if
+                                                                                                          similar concepts can be scaled up to strategy games.
+                                                                                                             In this paper, we propose an algorithm that employs state
+                                                                I. I NTRODUCTION
+                                                                                                          abstraction by approximate homomorphism [16] for Markov
+                                            The design of artificial intelligence (AI) for strategy game Decision Process (MDP). The generated state abstraction
+                                         playing is a challenging problem. Human players can handle is used to merge tree nodes in Monte Carlo Tree Search
+                                         strategy games without much training when they possess (MCTS), which reduces the size of the tree. This paper
+                                         knowledge about the game rules, opponent behavior, etc. AI shows the challenges derived from implementing this approach
+                                         solutions have different ways to gain knowledge about the game. and the solutions proposed to address them. One of these
+                                         Given domain knowledge, heuristics or scripts can be created. challenges is that, in order to obtain a good approximate
+                                         Heuristics can be used to guide the search of search-based AI homomorphism, a high number of samples is required. In
+                                         agents [1]. In combination with scripts, agents are able to deal fact, this number increases with large state and action spaces,
+                                         with more complex strategy games [2]. However, those scripts which is problematic for strategy games where the state space
+                                         are rigid and limited by the programmer’s ability to capture and action space increases exponentially with the number of
+                                         the complexity of decision-making in strategy games (as most units and other elements of the game.
+                                         rule-based systems are). These scripts, once implemented, are       We alleviate this problem in two ways. First, we implement
+                                         static and they cannot adapt to new features introduced in the a modification in MCTS (which we call MCTSu ) so that, for
+                                         game, which is something typical during the game development each node, the algorithm only considers the actions available for
+                                         cycle. In this case, these scripts need to be repeatedly updated one unit (rather than for all of them). Secondly, we introduce
+                                         to introduce new design updates.                                 an iteration threshold αABS ∈ N that indicates a stopping
+                                            An approach to get knowledge about the game is using a iteration for the use of abstractions. When the MCTS iteration
+                                         forward model. A forward model is a simulator that returns number Nmcts ∈ N reaches αABS , the state abstraction is
+                                         the next state given a state and an action. By simulating future abandoned and the tree is “expanded” again (abstract nodes
+                                         states with the forward model, agents can sample different are eliminated) to continue the search as in normal MCTS.
+Given the fact that the size of the tree changes during search,     (selecting known high-value nodes). The tree policy selects
+we call our algorithm Elastic MCTS.                                 action with the highest UCB1 value, descending the tree until
+   Our contributions can be summarized as follows:                  a non-fully-expanded node is reached.
+   • Automatic state abstraction for strategy games with               In the expansion phase, a child node is generated that
+     no domain knowledge: Our method applies a state                represents the next state retrieved from applying a previously
+     abstraction that requires no domain knowledge for com-         unexplored action. After expansion, it enters the simulation
+     plex environments such as strategy games, in contrast to       phase, where a roll-out policy will be used to continuously
+     existing methods which require domain knowledge. While         sample actions for a fixed amount of turns or until the end
+     this work focuses on strategy games, the method proposed       of the game. A classic roll-out policy is the random policy
+     in this paper may be applicable to other genres, as it         that chooses available actions uniformly. This final state is
+     does not require game-specific knowledge. We assume            then evaluated by a state evaluation function and a score R is
+     the multi-unit setting in this paper while our method can      backpropagated along the path taken during the selection and
+     be used for both single-unit and multi-unit settings.          expansion phases. This value R is normally the game outcome
+   • An analysis on the effects of state abstraction on             in terminal states, and a value returned by an heuristic function
+     the recommendation policy: Previous works keep the             for non-terminal states.
+     generated abstraction within the tree of MCTS during all       B. State Abstraction and approximate MDP Homomorphism
+     iterations. This approach is based on the assumption that
+     the policy resulting from the abstraction is better than the      A Markov Decision Process (MDP) is defined as
+     policy from the original state space, neglecting the risk      < S, A, R, T, γ >, with state space S, action space A, reward
+     of using a bad-quality state abstraction. Our algorithm        function R : S×A 7→ R, transition function T : S×A×S 7→ R,
+     sets up an iteration threshold for using the abstractions,     and discount factor γ ∈ R, 0 < γ < 1 for discounting future
+     which we tune to analyze the impact of turning back to         rewards. State Abstraction for MDPs can be formalized as a
+     the original tree at different times during the search.        mapping φ(s) = sφ , s ∈ S, sφ ∈ Sφ . The Sφ is an abstract state
+                                                                    space. Usually, we wish the size |Sφ | < |S| to reach a better
+   The rest of the paper is structured as follows: In Section II,   sample efficiency or a shorter searching time. The approximate
+background knowledge about MCTS, state abstractions and             MDP homomorphism [16] defines the similarity between two
+approximate MDP homomorphism is introduced. The Stratega            states s1 , s2 by defining two approximation errors:
+framework is introduced in Section III. Section IV summarizes
+related works on state abstraction for strategy games and                     R (s1 , s2 ) = max |R(s1 , a) − R(s2 , a)| ≤ ηR         (2)
+abstractions used in the context of planning. Section V describes                          X a
+Elastic MCTS, and in Section VI we evaluate Elastic MCTS                  T (s1 , s2 ) =     |T (s0 |s1 , a) − T (s0 |s2 , a)| ≤ ηT   (3)
+                                                                                          s0
+empirically and compare it with other algorithms. Section VII
+concludes our work and gives ideas for future directions.          R is the reward approximation error, while T is the transition
+                                                                   approximation error. ηR and ηT are the respective approxima-
+                       II. BACKGROUND                              tion thresholds. Two states are consider similar if they hold that
+A. Monte Carlo Tree Search (MCTS)                                  R (s1 , s2 ) ≤ ηR and T (s1 , s2 ) ≤ ηT . In MCTS, similar states
+   MCTS [3] generates a search tree to estimate the state-action from the same depth are considered candidates to construct a
+values of the current state. In this tree, each node represents a local approximate homomorphism. For each depth of the tree,
+state and each branch represents an action, with the current state two or more similar original (or ground) states can be grouped
+located at the root node. Each node stores the cumulative reward into the same abstract state or node. The      P reward and visiting
+                                                                                                                  Xi
+                                                                                                                                P
+
+X and the visit count N . Each MCTS iterations consists of 4       count   of   the abstract node   are X̂ =     m   and N̂ = mNi ,
+phases: selection, expansion, simulation, and backpropagation. where m is number of original nodes in this abstract node.
+   During the selection phase, a tree policy is used to traverse When a new ground node is added to an abstract node, the
+the tree from the root until we reached a node on which we statistics of this abstract node will be updated accordingly.
+have not yet expanded all possible child nodes. A popular                                    III. S TRATEGA
+choice for the tree policy is Upper Confidence Bounds (UCB)
+                                                                      The Stratega [18] framework (see screenshot in Figure 1)
+applied to Trees (UCT) [17]. For a node representing state s,
+                                                                   is developed for studying AI agents in general strategy game
+connected with its parent who has an edge representing action
+                                                                   playing. Stratega uses an isometric view for the battlefield,
+a, its UCB value is:
+                                           s                       where    there are different tiles for game elements: landforms,
+                            X(s, a)          ln Nparent            buildings, resources, and army units. It allows developers
+           U CB1(s, a) =              +C                ,      (1) to create their own turn-based and real-time strategy games
+                            N (s, a)          N (s, a)
+                                                                   through the YAML markup language, by setting up game
+where the X(s, a) is the cumulative reward, N (s, a) is the elements and their parameters. One of the important features
+visit count of this node, and Nparent is the visit count of the of Stratega is that it provides a forward model that can be
+parent node. A constant C ∈ R controls the trade-off between used by statistical forward planning methods, such as MCTS
+exploration (selecting nodes of low visit count) and exploitation or Rolling Horizon Evolution [19].
+                                                                                           IV. R ELATED W ORK
+
+                                                                         State abstraction is a popular technique that shows its
+                                                                      application in strategy games in the following works. [20]
+                                                                      proposed a Monte Carlo planning algorithm to play Capture The
+                                                                      Flag game. To reduce the planning complexity, a handcrafted
+                                                                      game state abstraction that divides the game map into tiles
+                                                                      is used. [21] proposed a method that presents the map of
+                                                                      StarCraft with regions connected by checkpoints, largely
+                                                                      simplifying the state space. [5] combines the state abstraction
+                                                                      in [21] and action abstraction in playing Starcraft combats.
+            Fig. 1. A classic scene of Stratega framework.            Combat-irrelevant units such as workers and buildings are
+                                                                      removed from high-level game state representation. With the
+                                                                      search space reduced by their abstraction, their search-based
+                                                                      method shows a performance close to a script-based agent.
+   We use the game Kill The King from Stratega for the                [22] proposes to encode the game state with vectors that
+evaluation of the search methods presented in this paper. Kill        contain information about entities. This representation enables
+The King is a turn-based, two-player strategy game where each         eliminating superfluous information and grouping nodes with
+player commands their units to defeat the opponent’s king for         the same vector.
+a win. We limited the maximum number of turns to 100. If                 While the works mentioned above show that state abstraction
+after 100 turns and no king dies, the game ends and returns a         is a powerful tool in complex searching space, [6] investigates
+draw. In this game, we designed 4 different unit types: King,         the effect of different state abstractions. In their work, 4
+Warrior, Archer, Healer. King, Warrior and Archer share the           different state abstractions are created and they show different
+same action types: [Move, Attack, Do-nothing]. The action             performance with MCTS in StarCraft. Among these works,
+types for Healer are: [Move, Heal, Do-nothing]. The action            different kinds of state abstraction methods are proposed.
+space of a unit depends on their action types and unit attributes.    However, most of them require domain knowledge to construct
+For example, the Move Range of King is set to 2, resulting            the state abstraction. [22] utilizes a parameter optimizer to
+in 12 surrounding tiles for its Move action. Its Attack Range         pick up entity information used for state abstraction, avoiding
+is 2, enabling it to choose any opponent unit to attack within        the use of human knowledge. However, this method shows no
+2 tiles. In this case, the maximum size of its action space is        clear performance improvement in their evaluation.
+(12 + 1) × (12 + 1) = 169, as units can first move (+1 for
+                                                                         Most existing state abstraction applications in strategy games
+not moving) and then attack (+1 for not attacking). A player,
+                                                                      depend on domain knowledge. In the planning domain, state
+at the beginning of their turn, can act with n units, providing
+                                                                      abstraction that requires no domain knowledge is more common.
+a combinatorial space bounded at 169n for a turn. In this
+                                                                      [9] proposed approximate MDP homomorphism to construct
+paper, we experiment with a number of units between 4 and
+                                                                      state abstraction for MCTS. According to the state abstraction,
+11, which constitutes an action space bounded between 105
+                                                                      states in each depth of MCTS that have a similar transition
+and 1014 actions. The game is also complex from a strategic
+                                                                      function and reward function are grouped. The similarity
+point of view: different unit types have distinct attribute values,
+                                                                      definition for this approach is shown in Eqs. 2 and 3. The
+which makes their behavior different and forces units to use
+                                                                      approximate homomorphism is generated from the samples
+different strategies. The attribute set for this game consists
+                                                                      collected by MCTS in a batch manner. Although their approach
+of: Health Points, Move Range, Attack Range, Attack Damage,
+                                                                      is shown to improve the performance in the planning domain,
+Heal Strength. The maps for Stratega are grid-like 1, where
+                                                                      it requires extra action abstraction and pruning when applied
+tiles such as mountains or water block the way, requiring an
+                                                                      to a board game such as Othello. [11] applies the approximate
+aspect of coordination between units for effective movement.
+                                                                      homomorphism to state-action abstraction, where the state-
+   Kill The King is chosen to evaluate our proposed algorithm         action pairs are grouped in MCTS.
+because of the following characteristics. Firstly, although it           Progressive Abstraction Refinement for Sparse Sampling
+is not as complex as battles in Starcraft, these two games            (PARSS) [12], [14] is a method that starts with a coarse
+share challenges such as combinatorial state and action space,        state abstraction where all the states are clustered in the
+which is common in most strategy games. Second, the search            same group and refining it progressively. [13] proposed On-
+space can be controlled by the number of units. Therefore, by         The-Go abstraction that abandons the batch style of updating
+increasing the number of units, we can test how the performance       the abstraction [9], [11]. In their approach, the maintained
+of our method scales with the increasing complexity of the            abstraction is updated more frequently. In their work, a variable
+search space and the size of the tree. Furthermore, varieties         recent counts for counting the number of visits is stored in
+of the game can be created by changing the unit composition.          each tree node. When it reaches a pre-defined threshold αotg ,
+These varieties are used to evaluate the methods by searching         the abstraction for this state is updated and its recent counts is
+strategies for different environments.                                reset. [15] proposed Abstraction Refining that rejects adding a
+                  (a) Tree growth              (b) Node grouping              (c) More tree growth                      (d) Split groups
+
+
+
+
+Fig. 2. Overview of dynamic changes of tree nodes in Elastic MCTS. Ground nodes are black while abstract nodes are yellow. At first, the tree grows as in
+normal MCTS (a). After a number of B iterations, ground nodes are grouped by using Approximate MDP Homomorphism (b). Search then continues adding
+more ground node (c), repeating state aggregation after every B iterations. When the abstraction iteration threshold is reached, abstract nodes are split (d) and
+the search continues to explore the original game without using the state abstraction until the thinking budget expires.
+
+
+
+state that is similar to a known state in the tree. Their approach                tests (not included in this paper) showed that this indeed does
+improves the performance of MCTS in stochastic environments.                      not provide good abstractions for MCTS.
+In conclusion, these methods are general and can be applied                          We alleviate these two issues by implementing a variant of
+to different tasks. However, they are designed for planning                       MCTS called MCTSu . In MCTSu , each node corresponds to
+domains and did not show if they can be applied to complex                        a state where a single unit can move. The node’s edges are
+search spaces such as those from strategy games.                                  actions available to said unit only. Consequently, the action
+                                                                                  space for states candidate for merging is much smaller than
+                          V. E LASTIC MCTS
+                                                                                  the original combinatorial action space. Moreover, candidate
+   We propose Elastic MCTS, which combines approximate                            states have a large proportion of common actions in their action
+MDP homomorphism with MCTS, for strategy games. Our                               space because they represent states where the same units act.
+method is described in detail in Section V-C and depicted                            A consideration for MCTSu is to decide the units’ move
+in Figure 2. Before this, we focus on two modifications that                      order. In our implementation, the move order (by the sole
+are needed to adapt the principles of MDP homomorphism to                         purpose of the agent’s search process) is set randomly at the
+the large combinatorial search spaces present in this domain:                     beginning of the game and kept fixed during the whole game.
+unit ordering to reduce the action space (Section V-A) and                        While, theoretically, this ordering removes the guarantee of
+introducing an iteration threshold to revert to the original                      optimal convergence, empirically the advantage obtained by
+(ground) state space.                                                             reducing the action space creates stronger players. This is
+A. Approximate Homomorphism in Strategy Games                                     shown in the results discussed in Section VI and is in line with
+                                                                                  previous results in the literature [23].
+   Our method is based on state abstraction in the planning
+domain [9], where a local approximate homomorphism (see
+                                                                                  B. Elastic State Grouping and Un-grouping
+II-B for details) is constructed and constantly updated from
+trajectories sampled by MCTS. However, two issues occur                              We apply the constructed state abstraction to MCTS for
+when this method is applied to complex search spaces such as                      grouping tree nodes. As [9], the state abstraction in our method
+those from strategy games. The first issue is that the number                     is also constructed in a batch manner: for every B iterations
+of samples required to generate a good-quality approximate                        of MCTS, the sampled trajectories are used to construct an
+homomorphism depends on the sizes of the state and action                         approximate homomorphism, which aggregates similar nodes
+spaces. In strategy games, where the state space is combinatorial                 into groups according to the states they represent. Each MCTS
+and the action space changes according to different game states,                  node stores statistics including cumulative reward and visit
+the small number of samples collected within a limited decision                   count. For a node group, it stores these as the average of
+budget results in a bad-quality state abstraction.                                the statistics of all its ground nodes. The following MCTS
+   The second issue is that the reward and transition approxima-                  iterations will be guided by these group statistics in two ways.
+tion errors R and T (Eqs. 2 and 3) are calculated executing                     First, the UCT value of one node for the selection is calculated
+all possible actions available in two states. For two states that                 based on the statistics of the group it belongs to. Second, when
+have different action spaces, the original definitions of R and                  updating a node’s statistic during back-propagation, their group
+T conflict with the fact that most actions are likely not legal                  nodes also update their statistics.
+in both states s1 and s2 at the same time. It is quite common                        Existing methods keep using the generated state abstraction
+in strategy games to observe different states with different sets                 until the search is finished. However, abstractions are known
+of available actions. While it would be possible to resolve the                   to introduce imperfections in the search space [13]. With an
+approximation errors by only using the (small) set of common                      erroneous abstraction, the policy obtained from abstraction
+actions, the resulting values would not represent the true futures                performs worse than the policy derived from the ground search
+of both states in terms of rewards and transitions. Our initial                   space. MCTSu reduces the size of action space and helps
+Algorithm 1 Elastic MCTS. Nf m ∈ N: maximum forward                Algorithm 2 MCTSIteration(φ)
+model calls. αABS ∈ N: MCTS iteration threshold. Nmcts ∈ N:         1: while Select a child K with maximum UCT
+current MCTS iteration number. B ∈ N: batch size. φ(s) = ŝ:
+                                                                         p with φ: Vuct = X(φ(s), a)/N (φ(s), a) +
+                                                                       value
+state abstraction that maps an MCTS node representing s to             C ln Nparent /N (φ(s), a). do
+a node group ŝ. ηR ∈ R and ηT ∈ R are the reward function          2:   if Node K is not fully-expanded then
+error threshold and transition error threshold, respectively.       3:      Expand this node by generating a new child node P .
+Require: Nf m , αABS , ηR , ηT                                      4:      Rollout for P and obtain reward R from state
+  1: φ := s → ŝ, ŝ = {s}         # Initialize the abstraction             evaluation function.
+  2: while U SED F M CALL < Nf m do                                 5:      Break the while loop.
+  3:   M CT SIteration(φ)                                           6:   else if Node K represents the end of game then
+  4:   if Nmcts > αABS then                                         7:      Obtain reward R from sate evaluation function.
+  5:      φ := s → ŝ, ŝ = {s}                      # Fig.2 (d)    8:      Break the while loop.
+  6:   else if Nmcts %B == 0 then                                   9: Backpropagate R, updating X(s, a) and N (s, a) for node
+  7:      φ = ConstructAbstraction(φ, ηR , ηT ) # Fig.2 (b)            group φ(s) in selection path.
+  8:   Nmcts = Nmcts + 1
+                                                                  Algorithm 3 ConstructAbstraction(φ, ηR , ηT ), l is the tree
+                                                                  depth and L is the maximum depth of the current tree.
+construct a better abstraction, but these imperfections remain.     1: for l = L to 1 do
+Another issue is that states in the same abstract node share        2:    for all state s1 in depth l that is not grouped do
+their statistics while grouped, forcing the action selection for    3:       for all abstract state ŝ in φ do
+the recommendation policy of MCTS to choose effectively at          4:         s1 in ŝ = true
+random among actions that lead to the same group node.              5:         for all state s2 in ŝ do
+   We propose a novel approach to solve both problems men-          6:            R = Pmaxa |R(s1 , a) − R(s2 , a)|
+tioned above. We set up an iteration threshold for abstraction      7:            T = s0 |T (s0 |s1 , a) − T (s0 |s2 , a)|
+αABS . After αABS iterations, MCTS assigns the node group           8:            if R > ηR or T > ηT then
+statistics to each node in this group and abandons the state        9:               s1 in ŝ = false, break
+abstraction (breaking the node groups into ground tree nodes). 10:             if s1 in ŝ == true then
+The remaining MCTS iterations follow the normal MCTS 11:                          Add s1 in abstraction node
+algorithm. At this point, MCTS does not search in an imperfect 12:             else
+space and nodes split from the same group might be now 13:                        Create a new abstract node
+independently visited. The action-state values can become
+different and MCTS’s recommendation policy can distinguish
+better among the available actions to suggest.                    by computing the values of two errors R and T from samples.
+                                                                  The samples from MCTS are triplets that consist of a state, an
+C. Elastic MCTS
+                                                                  action and a return: < s, a, R >. For computing the R error
+   Algorithm 1 shows the pseudocode of Elastic MCTS, which between two states s1 and s2 , we calculate |R(s1 , a)−R(s2 , a)|
+runs MCTS iterations (line 3) until the budget is exhausted for each action a present in either action space of s1 and s2 ,
+(given in forward model calls, line 2). The set of abstract with R(si , a) = 0 if a is invalid for any si . R the takes
+nodes is initialized to set of the ground states (line 1), and is the value of the maximum difference found (line 5). T is
+updated after every batch of B iterations (line 7). When the also calculated for all actions (line 6), with |T (s0 |s1 , a) −
+number of iterations surpasses αABS (line 4), we abandon state T (s0 |s2 , a)| = 0 only when the s1 and s2 both have action
+abstraction to return to the original ground search space (line a available and this action leads to the same next state s0 .
+5), by splitting all the nodes from state groups and assigning Because we only consider two state representing the same unit
+statistics of the state group to the ground nodes. This procedure for state abstraction, their next state s01 and s02 are recognized
+is also depicted in Figure 2.                                     the same when the unit-related attributes have the same values.
+   Algorithm 2 shows the MCTS iteration step. This only              If an abstract node is found where R ≤ ηR and T ≤ ηT ,
+differs from normal MCTS in that it uses the statistics we add the ground node to this node (lines 7 − 8). If no group
+(cumulative reward and visit count) of the node group rather fulfills this condition, we create a new group including only
+than the original tree nodes, for the selection (line 1) and the ground node in it (line 10).
+backpropagation (line 9) steps. Note that new nodes added in
+the expansion phase are added as ground nodes to the tree,                                VI. E XPERIMENTS
+merging into states after B iterations as shown in Algorithm 1.      Four agents are used for the experiments in this paper:
+   Algorithm 3 updates the state abstraction: from leaf nodes        1) Combat Agent: This agent is based on a rule-based
+to the root (line 1), for every ground tree node that is not part        agent [18] built-in Stratega. Its strategy is to concentrate
+of an abstract node (line 2), a similarity check is performed            attacks to a single isolated enemy unit and assign healers
+against all sibling abstract nodes. This similarity is determined        to heal the strongest ally units. The isolation score for a
+       unit depends on the number of nearby ally and enemy                                       TABLE I
+       units. Once a target is chosen, the agent searches available   W IN RATES WITH STANDARD DEVIATION FOR GAMES WITH 1 K ING , 1
+                                                                                    WARRIOR , 1 ARCHER AND 1 HEALER .
+       action for each agent to i) get close to the target, ii-a)
+       attack the target or ii-b) heal the target.                           Agent 1         Agent 2     Agent 1       Agent 2
+   2) MCTS: the default MCTS algorithm with no abstraction
+                                                                                MCTS   Combat Agent    54.6 ± 4.7%   45.4 ± 4.7%
+       nor unit ordering.                                                      MCTSu   Combat Agent    67.2 ± 2.9%   32.6 ± 2.9%
+   3) MCTSu : MCTS with unit ordering, no state abstraction.           Elastic MCTSu   Combat Agent    71.3 ± 3.1%   28.7 ± 3.1%
+   4) Elastic MCTSu : Elastic MCTS with fixed unit ordering.                   MCTSu         MCTS      66.0 ± 5.7%   25.8 ± 5.0%
+                                                                       Elastic MCTSu         MCTS      65.8 ± 4.0%   30.4 ± 4.4%
+   The same state evaluation function is used by MCTS,                 Elastic MCTSu       MCTSu       51.6 ± 6.4%   40.8 ± 8.6%
+MCTSu and Elastic MCTSu . This function gives an utility
+value 0.0 ≤ R ≤ 1.0 to a state after normalization. The
+                                                                                                 TABLE II
+utility values for win, loss and draw are 1, −1, 0, respectively.     W IN RATES WITH STANDARD DEVIATION FOR GAMES WITH 1 K ING , 2
+If the given state is not terminal, the value of the state is                      WARRIORS , 2 ARCHERS AND 2 HEALERS
+            dh
+R = 1 − DH     , where d is the distance between player’s units
+and opponent’s king, h the health point of opponent’s king, and              Agent 1         Agent 2     Agent 1       Agent 2
+D and H are the maximum values of d and h. In conclusion,                       MCTS   Combat Agent    55.8 ± 3.2%   44.2 ± 3.2%
+                                                                               MCTSu   Combat Agent    74.4 ± 2.4%   25.6 ± 2.4%
+our state evaluation function encourages the agent to get close        Elastic MCTSu   Combat Agent    77.4 ± 2.1%   22.4 ± 1.7%
+to opponent’s king and attack it.                                              MCTSu         MCTS      72.0 ± 2.8%   21.8 ± 2.4%
+                                                                       Elastic MCTSu         MCTS      69.0 ± 4.5%   27.0 ± 3.0%
+A. Parameter Optimization for Agents with NTBEA                        Elastic MCTSu       MCTSu       54.4 ± 3.2%   37.0 ± 3.4%
+   All our agents are pitched against each other in 1vs1 games.
+We use the optimiser N-Tuple Bandit Evolutionary Algorithm
+(NTBEA) [24] to tune the parameters of each agent. NTBEA Win Rates for both players are reported (draw rates can be
+utilizes a combinatorial multi-armed bandit to navigate the inferred). Each win rate is shown with its standard deviation,
+parameter space, while building a landscape model for a noisy obtained by running each pairing 5 times with 5 different seeds
+evaluation function.                                            on the same setting (game map, starting unit positions, etc.).
+   For NTBEA, we set the exploration factor for the multi-        In the experiment for different unit numbers, we have 3
+armed bandit to 2, we use 50 neighbors, and a limit of 50 army compositions: (1 King, 1 Warrior, 1 Archer, 1 Healer),
+iterations. When tuning the agent parameters, the fitness is (1 King, 2 Warriors, 2 Archers, 2 Healers) and (1 King, 3
+set as the win rate of the agent playing against CombatAgent. Warriors, 3 Archers, 3 Healers). For each army composition,
+In these and all the following experiments, the computational 50 game levels based on the map “lak110d” [25] are generated
+budget for each action decision by all search agents is set by randomly choosing initial positions for each unit. In total,
+to 30, 000 forward model calls. As an opponent model, all there are 500 games played for each army composition (5
+search agents simply pick valid actions uniformly at random. seeds, 50 game levels, ×2 from switching starting sides).
+Additionally, for Elastic MCTSu , we empirically determined       Tables I, II and III show the experimental results. As can
+the error approximation thresholds for ηR = 0.1 and ηT = 0.3. be seen in Table I, all three MCTS, MCTSu and Elastic
+   The following describes the parameter space explored by MCTSu clearly outperform the Combat Agent. When playing
+NTBEA: MCTS and MCTSu have the same parameter spaces: against MCTS, MCTSu and Elastic MCTSu both outperform
+we evaluate the exploration factor C ∈ {0.1, 1, 10, 100} and MCTS by a large margin. The win rate of MCTSu is slightly
+rollout length L ∈ {20, 40, 60, 80, 100}. Elastic MCTSu adds higher than the win rate of Elastic MCTSu , but the difference
+to these two parameters (C and L) the batch size B ∈ is at a scale of the standard deviation. In the results of games
+{20, 40, 60} and the iteration threshold to stop using ab- played between Elastic MCTSu and MCTSu , we can see a
+stractions αABS ∈ {4 × B, 8 × B, 12 × B, 16 × B}. The higher winning rate for Elastic MCTSu , with a difference larger
+parameters found are {C = 0.1, L = 20}, {C = 10, L = 100} than 10.0%. This consistently shows the improvement obtained
+and {C = 0.1, L = 40, B = 20, αABS = 12} for MCTS, by introducing state abstraction to the algorithm, with Elastic
+MCTSu and Elastic MCTSu .                                       MCTSu showing good performance against all other agents.
+                                                                  When the search complexity increases from 4 units to 7
+B. Algorithmic Performance                                      units (Table II) and 10 units (Table III), the results mentioned
+   Using the parameter values as tuned by NTBEA, agents are above remain consistent. It is worth noting that the Elastic
+evaluated by playing against each other in different variants MCTSu performs better when the number of units goes up
+of KillT heKing. We designed two groups of experiments to (see results when playing against Combat Agent and MCTSu ),
+evaluate the performance of the proposed method. The first which indicates that our method for state abstraction is able to
+group evaluates the presented agents across scenarios with scale appropriately when using more units.
+different amount of units, to observe how this performance        To evaluate the performance of the proposed method in differ-
+changes as the action space becomes larger. The second group ent maps, we choose 27 maps from [25]. 5 army compositions
+investigates the performance in maps with different layouts. from 4 to 11 units are tested in each map (see Table IV).
+                             TABLE III                                                         TABLE V
+  W IN RATES WITH STANDARD DEVIATION FOR GAMES WITH 1 K ING , 3     W IN RATES WITH STANDARD DEVIATION OF E LASTIC MCTSu VS MCTSu .
+               WARRIORS , 3 ARCHERS AND 3 HEALERS                   T HE PROPORTION COLUMN INDICATES AT WHICH % OF THE SEARCH STATE
+                                                                                       ABSTRACTION IS ABANDONED .
+         Agent 1           Agent 2     Agent 1          Agent 2
+                                                                      Army Composition   Proportion   Elastic MCTSu        MCTSu
+            MCTS   Combat Agent      59.6 ± 2.6%      40.4 ± 2.6%
+           MCTSu   Combat Agent      84.8 ± 2.5%      15.2 ± 2.5%                              0%       47.4 ± 2.4%    46.0 ± 3.8%
+   Elastic MCTSu   Combat Agent      82.6 ± 2.3%      17.4 ± 2.3%                             25%       50.0 ± 2.7%    40.4 ± 3.1%
+           MCTSu         MCTS        77.6 ± 3.1%      15.2 ± 3.1%          KWAH               50%       51.6 ± 4.6%    39.4 ± 3.8%
+   Elastic MCTSu         MCTS        75.8 ± 2.5%      20.8 ± 2.3%                             75%      51.8 ± 4.4%    38.2 ± 6.0%
+   Elastic MCTSu       MCTSu         49.1 ± 1.9%      38.8 ± 2.7%                            100%       39.0 ± 2.8%    45.0 ± 1.8%
+                                                                                               0%       49.0 ± 3.6%    42.6 ± 4.0%
+                                                                                              25%       49.8 ± 3.9%    42.6 ± 4.8%
+                           TABLE IV                                      K2W2A2H              50%      52.8 ± 4.8%    37.6 ± 4.1%
+ W IN RATES WITH STANDARD DEVIATION FOR GAMES WHERE E LASTIC                                  75%       52.8 ± 3.6%    39.2 ± 6.4%
+MCTSu PLAYED AGAINST MCTSu IN 27 DIFFERENT LAYOUTS . T HE ARMY                               100%       38.8 ± 3.3%    47.2 ± 1.5%
+ COMPOSITION COLUMN INDICATES THE NUMBER OF WARRIORS (XW),
+           ARCHERS (XA), HEALERS (XH) AND 1 KING (K).                                          0%       49.0 ± 3.8%    38.8 ± 3.5%
+                                                                                              25%       47.8 ± 4.3%    39.0 ± 3.8%
+                                                                         K3W3A3H              50%      55.3 ± 3.9%    33.8 ± 3.3%
+        Army Composition     Elastic MCTSu         MCTSu                                      75%       49.2 ± 3.3%    40.2 ± 3.1%
+                   K3H         61.1 ± 8.3%       33.3 ± 7.4%                                 100%       40.0 ± 2.3%    44.4 ± 1.4%
+               K3W3A3H         51.1 ± 6.8%       30.0 ± 4.1%
+                  K10A         59.3 ± 5.5%       25.2 ± 3.8%
+                  K10W         54.8 ± 4.9%       35.2 ± 6.1%
+                 K5W5A         53.0 ± 4.5%       30.7 ± 5.7%        the win rate is the lowest one for all army compositions. In
+                                                                    all these, MCTSu obtains a consistently higher winning rate
+                                                                    against Elastic MCTSu . Our interpretation of this phenomenon
+We evaluate the performance of Elastic MCTSu playing                is that nodes sharing the same statistics in abstracted nodes
+against MCTSu . Table IV shows the average win rate with            until the end of the decision process makes the recommendation
+its corresponding standard deviation for both agents in each        policy of Elastic MCTSu behave suboptimally, as there is not
+army composition. In all games, Elastic MCTSu outperforms           enough information to discern between the different available
+MCTSu by large margins (between 19.6% and 34.1%). These             actions at the root node. However, abandoning the abstraction at
+results show that the proposed method improves the perfor-          an intermediate point during the search lands better results than
+mance of the algorithm and its improvements are consistent in       MCTSu also in all army compositions, showing the usefulness
+different army compositions and game maps.                          of Elastic MCTS and these abstractions.
+                                                                    D. Compression Rate
+C. Influence of Abstraction Threshold
+                                                                      To show the difference between the ground and the abstracted
+   To investigate the influence of different iteration thresholds, state space, we define a compression rate as Ntree /Nabs tree ,
+we pitch Elastic MCTSu against MCTSu , with the map settings where Ntree is the number of nodes generated by MCTS
+and army compositions used for the experiments whose results and Nabs tree is the number of node groups generated by the
+are shown in Tables I, II and III. The values used for the agents’ abstraction. Note that with the same tree from MCTS, fewer
+parameters are those obtained by NTBEA, as mentioned in groups mean more nodes are grouped together and the size of
+Section VI-A, with the exception of the iteration threshold the tree is reduced more. We evaluate this compression rate in
+αABS . The values of this parameter are explored in this 20 instances of the map “lak110d” with the army composition
+experiment to observe the effect of using state abstraction (1 King, 1 Warrior, 1 Archer, 1 Healer). Figure 3 visualizes the
+during different proportions of MCTS iterations. We try with achieved compression rate against MCTS iterations, showing
+proportions αABS ∈ {0%, 25%, 50%, 75%, 100%}. When it is a moderate increase of compression rate over time. In our
+set to 0%, the algorithm behaves like (normal) MCTS. When previous experiments, the state abstraction was abandoned in
+it is 100%, the state abstraction is used during all MCTS the 240th iteration (αABS × B = 12 × 20), corresponding to
+iterations and the recommendation policy picks an action based a compression rate of 10 states per group node.
+on statistics from the group nodes.                                   The state abstraction does not influence the computing time
+   As Table V shows, the performance of the Elastic significantly. The average decision times are 667 ± 13 and
+MCTSu agent differs when the abstraction threshold changes. 685 ± 13 ms for MCTSu and Elastic MCTSu , respectively.
+Note these two agents use different hyper-parameters (tuned by
+NTBEA) thus their win rates differ with proportion set to 0%.                 VII. C ONCLUSION AND F UTURE W ORK
+There seems to be a sweet spot on the value of this threshold:        In this paper, we propose a variant of MCTS that generates
+performance is best when using the state abstraction during clusters of nodes by using state abstraction. Our work is inspired
+the first 50% and 75% iterations of Elastic MCTSu , obtaining by methods that use state abstraction in planning domains, but
+lower winning rates when closer to 0% and 100%. This result it is adapted to target complex search and action spaces, while
+is especially noticeable for a threshold value of 100%, where still requiring no domain knowledge. Our experiments show
+                                                                                 [3] Guillaume Chaslot, Sander Bakkes, Istvan Szita, and Pieter Spronck.
+                                                                                     Monte-carlo tree search: A new framework for game ai. In Proceedings
+                                                                                     of the AAAI Conference on Artificial Intelligence and Interactive Digital
+                                                                                     Entertainment, volume 4, pages 216–217, 2008.
+                                                                                 [4] George Konidaris. On the necessity of abstraction. Current opinion in
+                                                                                     behavioral sciences, 29:1–7, 2019.
+                                                                                 [5] Alberto Uriarte and Santiago Ontanón. Game-tree search over high-level
+                                                                                     game states in rts games. In Tenth Artificial Intelligence and Interactive
+                                                                                     Digital Entertainment Conference, 2014.
+                                                                                 [6] Alberto Uriarte and Santiago Ontanón. High-level representations for
+                                                                                     game-tree search in rts games. In Tenth Artificial Intelligence and
+                                                                                     Interactive Digital Entertainment Conference, 2014.
+                                                                                 [7] Nicolas Arturo Barriga, Marius Stanescu, and Michael Buro. Puppet
+                                                                                     search: Enhancing scripted behavior by look-ahead search with applica-
+                                                                                     tions to real-time strategy games. In Eleventh Artificial Intelligence and
+ Fig. 3. Compression Rates with standard deviation from 40 game plays.
+                                                                                     Interactive Digital Entertainment Conference, 2015.
+                                                                                 [8] Nicolas A Barriga, Marius Stanescu, and Michael Buro. Combining
+                                                                                     strategic learning with tactical search in real-time strategy games. In
+that the proposed method outperforms MCTS and a baseline                             Thirteenth Artificial Intelligence and Interactive Digital Entertainment
+rule-based agent in multiple variants of a turn-based strategy                       Conference, 2017.
+                                                                                 [9] Nan Jiang, Satinder Singh, and Richard Lewis. Improving uct planning via
+game, Kill the King. We also observe a reduction of the tree                         approximate homomorphisms. In Proceedings of the 2014 international
+size by a factor of 10 and a considerable improvement in the                         conference on Autonomous agents and multi-agent systems, pages 1289–
+agent’s performance when using the state abstraction during a                        1296, 2014.
+                                                                                [10] Jesse Hostetler, Alan Fern, and Tom Dietterich. State aggregation in
+proportion of the search < 100%.                                                     monte carlo tree search. In Twenty-Eighth AAAI Conference on Artificial
+   The results shown in this paper have been obtained in a turn-                     Intelligence, 2014.
+based game, but we hypothesize that the gains in performance                    [11] Ankit Anand, Aditya Grover, Parag Singla, et al. Asap-uct: Abstraction of
+                                                                                     state-action pairs in uct. In Twenty-Fourth International Joint Conference
+may also benefit other real-time or more complex turn-based                          on Artificial Intelligence, 2015.
+strategy games. Due to the increased number of units controlled                 [12] Jesse Hostetler, Alan Fern, and Thomas G Dietterich. Progressive
+in games like Starcraft and the restricted time to return an                         abstraction refinement for sparse sampling. In UAI, pages 365–374,
+                                                                                     2015.
+action, we believe that the observed efficiency improvements                    [13] Ankit Anand, Ritesh Noothigattu, Parag Singla, et al. Oga-uct: On-the-go
+may transfer well to RTS games. This is an immediate case                            abstractions in uct. In Proceedings of the International Conference on
+for future work, where we’ll investigate the applicability and                       Automated Planning and Scheduling, volume 26, 2016.
+                                                                                [14] Jesse Hostetler, Alan Fern, and Thomas Dietterich. Sample-based tree
+scalability of Elastic MCTS to more complex games.                                   search with fixed and adaptive state abstractions. Journal of Artificial
+   Besides aiming to improve the performance of the game                             Intelligence Research, 60:717–777, 2017.
+playing agent, other aspects can also be investigated. For                      [15] Samuel Sokota, Caleb Y Ho, Zaheen Ahmad, and J Zico Kolter. Monte
+                                                                                     carlo tree search with iteratively refining state abstractions. Advances in
+example, it is interesting to observe if different gameplay styles                   Neural Information Processing Systems, 34:18698–18709, 2021.
+can be obtained when using these abstractions or if, on the                     [16] Balaraman Ravindran and Andrew G Barto. Approximate homomor-
+contrary, the simplifications made in the tree prevent us from                       phisms: A framework for non-exact minimization in markov decision
+                                                                                     processes. 2004.
+that goal. Recent works on quality-diversity methods applied to                 [17] Levente Kocsis and Csaba Szepesvári. Bandit based monte-carlo planning.
+strategy games could be explored in conjunction with Elastic                         In European Conf. on machine learning, pages 282–293. Springer, 2006.
+MCTS [26]. Additionally, one of the most widespread methods                     [18] Alexander Dockhorn, Jorge Hurtado Grueso, Dominik Jeurissen, and
+                                                                                     Diego Perez Liebana. Stratega: A general strategy games framework. In
+for strategy games and large action spaces is the use of portfolio                   AIIDE Workshops, 2020.
+methods [2], and it will be interesting to see the potential                    [19] Alexander Dockhorn, Diego Perez-Liebana, et al. Portfolio search and
+synergies of state abstraction with these algorithms. Finally, it                    optimization for general strategy game-playing. In 2021 IEEE Congress
+                                                                                     on Evolutionary Computation (CEC), pages 2085–2092. IEEE, 2021.
+is also possible to try different mechanisms for state abstraction              [20] Michael Chung, Michael Buro, and Jonathan Schaeffer. Monte carlo
+(e.g. [12]), which could be an alternative to Approximante MDP                       planning in rts games. In CIG. Citeseer, 2005.
+Homomorphism. In fact, considering the complexity of strategy                   [21] Gabriel Synnaeve and Pierre Bessiere. A bayesian tactician. In Computer
+                                                                                     Games Workshop at ECAI 2012, pages pp–114, 2012.
+games, it’s possible that different abstractions can be applicable              [22] Alexander Dockhorn, Diego Perez-Liebana, et al. Game state and action
+to different moments of the game, which lies an interesting                          abstracting monte carlo tree search for general strategy game-playing.
+line of research ahead to discover which abstraction methods                         In 2021 IEEE Conference on Games (CoG), pages 1–8. IEEE, 2021.
+                                                                                [23] Naoyuki Sato and Kokolo Ikeda. Three types of forward pruning
+can be applied to which game situations.                                             techniques to apply the alpha beta algorithm to turn-based strategy
+                                                                                     games. In 2016 IEEE Conference on Computational Intelligence and
+                        ACKNOWLEDGMENTS                                              Games (CIG), pages 1–8, 2016.
+                                                                                [24] Simon M Lucas, Jialin Liu, and Diego Perez-Liebana. The n-tuple
+  Work supported by UK EPSRC grant EP/T008962/1.                                     bandit evolutionary algorithm for game agent optimisation. In 2018
+                                                                                     IEEE Congress on Evolutionary Computation (CEC), pages 1–9, 2018.
+                             R EFERENCES                                        [25] Nathan R Sturtevant. Benchmarks for grid-based pathfinding. IEEE
+ [1] David Churchill and Michael Buro. Build order optimization in starcraft.        Trans. on Computational Intelligence and AI in Games, 4(2):144–148,
+     In Seventh Artificial Intelligence and Interactive Digital Entertainment        2012.
+     Conference, 2011.                                                          [26] Diego Perez-Liebana, Cristina Guerrero-Romero, et al. Generating diverse
+ [2] David Churchill and Michael Buro. Portfolio greedy search and                   and competitive play-styles for strategy games. In 2021 IEEE Conference
+     simulation for large-scale combat in starcraft. In 2013 IEEE Conference         on Games (CoG), pages 1–8. IEEE, 2021.
+     on Computational Inteligence in Games (CIG), pages 1–8. IEEE, 2013.
+

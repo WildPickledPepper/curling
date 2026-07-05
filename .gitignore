@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+log/*.pid
+log/*.out.log
+log/*.err.log
+
+model/*_smoke.pt
+model/*_smoke.pth
+

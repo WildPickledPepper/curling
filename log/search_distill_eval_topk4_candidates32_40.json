@@ -1,0 +1,102 @@
+{
+  "model_file": "model\\search_distill_tactic_policy.pt",
+  "games": 1,
+  "search_games": 1,
+  "evaluation": {
+    "random": {
+      "games": 1,
+      "avg_score": 1.0,
+      "win_rate": 1.0,
+      "loss_rate": 0.0,
+      "min_score": 1.0,
+      "max_score": 1.0
+    },
+    "scripted": {
+      "games": 1,
+      "avg_score": -4.0,
+      "win_rate": 0.0,
+      "loss_rate": 1.0,
+      "min_score": -4.0,
+      "max_score": -4.0
+    },
+    "model": {
+      "games": 1,
+      "avg_score": 2.0,
+      "win_rate": 1.0,
+      "loss_rate": 0.0,
+      "min_score": 2.0,
+      "max_score": 2.0
+    },
+    "search_rollouts4": {
+      "games": 1,
+      "avg_score": -1.0,
+      "win_rate": 0.0,
+      "loss_rate": 1.0,
+      "min_score": -1.0,
+      "max_score": -1.0
+    },
+    "model_refined_continuous": {
+      "games": 40,
+      "avg_score": 3.225,
+      "win_rate": 0.925,
+      "loss_rate": 0.075,
+      "draw_rate": 0.0,
+      "min_score": -1.0,
+      "max_score": 6.0,
+      "top_k": 4,
+      "candidates": 32,
+      "rollouts": 2,
+      "player_is_init": true,
+      "adaptive": true,
+      "strategy_gate_strength": 0.0,
+      "sweep_rate": 0.478125,
+      "tactic_counts": {
+        "curl_right": 63,
+        "curl_left": 61,
+        "draw_center": 61,
+        "occupy": 45,
+        "guard_left": 36,
+        "defense": 27,
+        "guard_right": 18,
+        "freeze": 5,
+        "take_out": 1,
+        "clear": 1,
+        "push_in": 1,
+        "hit_roll": 1
+      },
+      "traces": []
+    },
+    "model_refined_continuous_second": {
+      "games": 40,
+      "avg_score": 3.975,
+      "win_rate": 0.975,
+      "loss_rate": 0.025,
+      "draw_rate": 0.0,
+      "min_score": -1.0,
+      "max_score": 8.0,
+      "top_k": 4,
+      "candidates": 32,
+      "rollouts": 2,
+      "player_is_init": false,
+      "adaptive": true,
+      "strategy_gate_strength": 0.0,
+      "sweep_rate": 0.5125,
+      "tactic_counts": {
+        "draw_center": 96,
+        "curl_right": 63,
+        "occupy": 52,
+        "curl_left": 35,
+        "guard_left": 29,
+        "freeze": 15,
+        "defense": 12,
+        "take_out": 8,
+        "defense_push_in": 4,
+        "push_in": 3,
+        "guard_right": 2,
+        "middle_in_center": 1
+      },
+      "traces": []
+    }
+  },
+  "elapsed_sec": 35.965123653411865
+}

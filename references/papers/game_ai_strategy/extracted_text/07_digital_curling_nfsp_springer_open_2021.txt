@@ -1,0 +1,439 @@
+Complex & Intelligent Systems (2022) 8:1857–1863
+https://doi.org/10.1007/s40747-021-00345-6
+
+    ORIGINAL ARTICLE
+
+
+
+A game strategy model in the digital curling system based on NFSP
+Yuntao Han1 · Qibin Zhou1 · Fuqing Duan1
+
+Received: 29 November 2020 / Accepted: 17 March 2021 / Published online: 31 March 2021
+© The Author(s) 2021
+
+
+Abstract
+The digital curling game is a two-player zero-sum extensive game in a continuous action space. There are some challenging
+problems that are still not solved well, such as the uncertainty of strategy, the large game tree searching, and the use of large
+amounts of supervised data, etc. In this work, we combine NFSP and KR-UCT for digital curling games, where NFSP uses
+two adversary learning networks and can automatically produce supervised data, and KR-UCT can be used for large game
+tree searching in continuous action space. We propose two reward mechanisms to make reinforcement learning converge
+quickly. Experimental results validate the proposed method, and show the strategy model can reach the Nash equilibrium.
+
+Keywords Game strategy · Digital curling · NFSP · Deep reinforcement learning
+
+
+Introduction                                                              neural fictitious self-play (NFSP) method which combines
+                                                                          deep neural network and fictitious self-play (FSP) [5]. This
+For a long time, machine games and artificial intelligence                method can effectively solve the problem of large amounts
+have been closely related, and machine games are also an                  of supervised data. NFSP Players use deep Q learning to
+important form of artificial intelligence. From the game the-             approximate their own best response estimates, supervise
+ory of von Neumann [1], the father of computers, to the                   historical optimal strategies, and constantly update the aver-
+well-known AlphaGo [2], today, machine games have always                  age strategy. Without any prior knowledge, the system can
+been in the public eyes. Game theory is an important guar-                approximately converge to the Nash equilibrium [6]. How-
+antee for the study of machine games, and it has been widely              ever, when NFSP is in a relatively large search space and for
+used in the machine games.                                                a large extensive form game, the performance is not good.
+   Curling is a zero-sum Olympic sport played by two teams                   Monte Carlo tree search (MCTS) methods, such as Upper
+of players, with a corresponding strategy for each shot. The              Confidence Bounds Applied to Trees (UCT) [7] and the ran-
+digital curling system simulates matches between two teams                dom discrete action set [8] are used to solve the continuous
+or AI programs to play curling through a 2D physics sim-                  action space problem, and accurate evaluation is carried out
+ulator, each team shoots eight balls in turn, and the team                through deeper exploration and better selection. However,
+with the highest cumulative score wins the simulated match.               random uncertain choices may omit good strategies. To solve
+Digital curling game has many action strategies, large search             the problem of uncertainty and incompleteness in the choice
+space and strong uncertainty, and it is a typical extensive form          of continuous action space strategies, Timothy Yee [9] pro-
+game [3]. The extensive form game is a tree-based form that               posed KR-UCT (Kernel Regression UCT), the algorithm can
+expands in the form of multi-player interaction. For exten-               be applied to the whole continuous action space, consider-
+sive form games, some challenging problems are still not                  ing the action quality information and the unexplored space
+solved well, such as the uncertainty of strategy, the large               part. For digital curling games, some researchers used Monte
+game tree searching, and the use of large amounts of super-               Carlo search and KR-UCT algorithms to improve the game
+vised data, etc. To better solve decision-making problem in               performance. However, these solutions still need a lot of
+extensive form games, Heinrich and Silver [4] proposed the                supervised data and prior knowledge. The prior knowledge
+                                                                          usually limits the scalability of the game, and it is also diffi-
+B Fuqing Duan                                                             cult to acquire a large amount of supervised data for machine
+     fqduan@bnu.edu.cn
+                                                                          games.
+1    College of Artificial Intelligence, Beijing Normal University,
+     Beijing 100875, People’s Republic of China
+
+
+                                                                                                                                123
+1858                                                                                 Complex & Intelligent Systems (2022) 8:1857–1863
+
+
+    In this work, we combine NFSP and KR-UCT for digi-            Carlo tree based action decision method and a Delaunay
+tal curling games, where NFSP can avoid manual labeling of        triangulation-based method respectively for the continuous
+supervised data, and KR-UCT can be used for large game tree       action state space, both of which can select better strategy
+searching in continuous action space. We also propose two         and achieve higher scores in curling competitions. To deal
+reward mechanisms for the deep reinforcement learning, i.e.       with the uncertainty of the sample actions, Yee et al. [9] pro-
+situation evaluation reward in each round and a future reward,    posed an improved algorithm (KR-UCT) combining Monte
+and we analyze pros and cons of the two reward mechanisms         Carlo trees and kernel regression, which improved the cor-
+in the experiment. Moreover, we use the exploitability metric     rect selectivity of action strategies by 12% compared to other
+to validate whether the method can converge to Nash equi-         algorithms in the international digital curling competition.
+librium, which has not been used in previous digital curling      Also for the uncertainty of random action decision, Ahmad
+systems.                                                          and Zaheen [19]studied last shot. They used Delaunay sam-
+    The remainder of the paper is organized as follows.           pling to enable an 80% reduction in computational time
+“Related works” introduces related work. “Methods” pro-           for the correct strategy under the same conditions, greatly
+vides the details of the proposed method. “Experiments”           improving computational efficiency.
+presents experimental results. Finally, we give some con-             To reduce the computation cost for large-scale game tree
+clusions.                                                         searching, Lee et al. [20] proposed a deep reinforcement
+                                                                  learning framework in the continuous action state space,
+                                                                  which contains a value network for evaluating curling posi-
+Related works                                                     tions and a strategy network for selecting actions, improving
+                                                                  the win rate by 13% in the international digital curling com-
+Digital curling games                                             petition. However, their method requires a lot of supervised
+                                                                  data and prior knowledge, which limits the scalability of the
+Early research mainly focuses on the motion model of the          game.
+curling sport, which can provide a guidance for the game
+play. Maeno et al. [10] proposed a numerical model based on       NFSP
+the evaluation index of friction amplification coefficient, and
+they established a dynamic model by studying the friction         NFSP [4] uses two neural networks to fit the optimal strategy
+relationship between the bottom of the curling stone and the      and the average strategy. One network is a deep reinforcement
+ice surface. Lozowski et al. [11] further validated the influ-    learning network that approximates the optimal response; the
+ence of thermodynamic friction, velocity of motion, angular       other network is a supervised network that uses supervised
+velocity, etc. on the trajectory and numerical model of curl-     learning to train its past average strategy. At the beginning,
+ing stone motion through an IMU-based instrument curling          the circular buffer and the reservoir were established to store
+handle experiment.                                                the optimal strategies and the average strategies. These two
+   Some researchers [12,13] have developed digital curling        data sets are used to train the deep reinforcement learning
+systems (ITO) for curling competition. To obtain a better         network and the supervised network respectively. During the
+game state assessment and try to overcome the influence of        game, the agent chooses actions from the mixed strategy,
+uncertainty conditions on the results, Yamamoto et al. [12]       and chooses the best response action and the average strat-
+proposed an evaluating function based on probability distri-      egy action with probability. When the agent performs each
+butions. This method can quickly find an optimal strategy         action and strategy, it will get the next reward value and state
+under the same conditions. Yamamoto et al. [14] proposed          information. The agent records the current state, action and
+a static evaluation function based on a deep neural network       the next reward state. If the action selected by the agent is
+model and developed a new digital curling system called           the best response, the observed state and action are stored,
+Jiritsu-nn, which improved the inflexibility of the system. To    and optimize the model by updating network parameters.
+facilitate computer programs to process curling competition          In NFSP, two techniques are adopted, i.e. reservoir sam-
+strategies, it is necessary to record curling stone move-         pling and anticipatory dynamics. Reservoir sampling is used
+ment images. Hong et al. [15] conducted an in-depth study         to store the state, action, and reward of the best response in
+on changing the camera attitude to obtain curling images.         each game. Each action is selected in a mixed strategy, which
+Won et al. [16] developed a curling robot based on curling        may not be the best strategy, and only the best response strat-
+strategies, which defeated the top-ranked amateur team in         egy is stored. Reservoir sampling can avoid window artifacts
+Korea.                                                            caused by memory sampling. and helps agents achieve syn-
+   In the digital curling system, all actions and state spaces    chronous self-learning. Anticipatory dynamics enables the
+are continuous, and each curling shot is very random. Kat-        agent to predict the approximate value of the opponent’s
+suki Ohto et al. [17] and Ahmad et al. [18] proposed a Monte      average strategy in a short time. The agent will generate
+
+
+123
+Complex & Intelligent Systems (2022) 8:1857–1863                                                                                 1859
+
+
+supervised data for the supervised network. In a fictitious        a 7-layer convolutional layer network. The final output is the
+game, the agent makes the best response to the opponent’s          probability distribution of 960-dimensional actions.
+strategy in a short continuous dynamic time, which makes
+the model more stable. NFSP is not fit for a large extensive       Strategy network uses deep reinforcement learning
+form game with a continuous action space.
+                                                                   The curling game is an extensive game. The sente and gote
+                                                                   game strategies are completely different. Two deep reinforce-
+Methods                                                            ment learning networks are used to learn the sente and gote
+                                                                   game strategies separately.
+Curling is an extensive-game. The core of the extensive form          The value of the strategy value function Q π (st , at ) is fit-
+game is a game tree with a root node. This tree is composed        ted by the neural network, the parameters θ in the network
+of root nodes and leaf nodes. From one node to another is          need to be learned iteratively. The reward is obtained through
+the action strategy selected by the player according to the        the agent interacting with the environment. Since the curl-
+state. Each non-terminal node (non-leaf nodes) has a corre-        ing game is an extensive game, the final reward cannot be
+sponding player to make a corresponding action or strategy.        obtained immediately after the action is made. Each time the
+Each terminal node (leaf node) has the final profit for the        decision maker can only evaluate the value of the current state
+player. Multiple players take turns to make action strategies      when making a decision, that is, the game state becomes st 
+until the end state is reached, and the game tree is constructed   after the decision maker selects action at in the state st . In
+successfully.                                                      the st  state, the decision maker cannot choose an action. At
+   The extensive form game is composed of elements. A              this time, the opponent needs to choose an action. Therefore,
+series of states of the player are represented by s, which also    the general reinforcement learning strategy value, which is
+includes the initial state of the game φ. The terminal state       as Eq. (1), cannot be used to update the network parameters.
+of the game is represented by z, which is the leaf node in
+the game tree. Rsatt express the action at taken in state st . R   Q π (st , at ) = R + γ ∗ argmaxa Q π (st  , at ),             (1)
+and Q represent the utility values, which represent the reward
+values obtained after taking strategies.                              where γ is reinforcement learning attenuation factor.
+                                                                      The opponent’s average strategy is crucial for the decision
+Overview                                                           maker’s strategy evaluation. After the decision maker per-
+                                                                   forms action at to reach the state st  , the opponent chooses the
+To avoid manual labeling of the large quantity of supervised       average strategy a opp to move to the state st+1 . The decision
+data in digital curling games, we use NFSP for adversary           maker selects the next action in the state st+1 . The network
+training of the strategy model. NFSP includes two networks.        update method of deep reinforcement learning is that after
+The first network is a deep reinforcement learning strategy        the decision maker takes action at in state st , the opponent
+network βi that fits the extensive game, and the other network                        opp
+                                                                   takes action at , and the reward obtained at this time is
+is a supervised learning network πi . The following describes        at at opp
+                                                                   Rst         . The return for the current environment is V (s), then
+in detail how to use deep reinforcement learning to perform
+                                                                   the strategy value function is
+fictitious self-game training in the extensive game and how
+to generate supervised data.                                                                   opp
+    Deep reinforcement learning and supervised learning use        Q π (st , at ) = Rsatt at         + γ V (st+1 )                (2)
+the same convolutional neural network architecture as shown
+in Fig. 1. The information in the curling house can be dis-        Supervised network
+cretized into 32*32 position points as the state input S to
+the deep reinforcement learning and supervised learning            The supervised network is to train the average strategy,
+network. The input information also includes own curling           where supervised data is generated during the reinforcement
+position information, opponent curling position information,       learning sampling process. If the reward obtained after each
+and the number of throwing curling, and a total of 29 dimen-       selected action is greater than a certain threshold ε , the action
+sions are abstracted. The network output is the value of the       is considered to be the best response B R S (a) in the current
+probability distribution obtained by the KR-UCT discretiza-        state s. This state and action pair (s, a) is stored as a piece
+tion sampling with 32*10*3 (32*10 refers to the angle and          of supervised learning data and used to train the average
+strength of the hitting ball, while 3 refers to the left-turn,     strategy of the supervised network. As the number of train-
+right-turn or non-spin ball during hitting). In the network        ing increases, the exploitability of the strategy will become
+design, the pooling layer is not used to extract key informa-      lower and lower, and the average strategy will get closer and
+tion, but all the information is retained for processing, using    closer to the Nash equilibrium strategy.
+
+
+                                                                                                                          123
+1860                                                                                                         Complex & Intelligent Systems (2022) 8:1857–1863
+
+Fig. 1 Network architecture
+
+
+
+
+                                                                                                           opp
+   At the beginning of the supervised network model train-                                the value of Rsatt at is 0. This reward method is biased toward
+ing, the opponent’s strategy is relatively poor, and the                                  learning to choose higher reward actions when the game is
+attenuated learning rate cannot be used directly for learning.                            not over.
+As the number of training increases, the opponent strategy
+gets better and better, and then the dynamic attenuated learn-                            Adversarial training by fictitious self-game
+ing rate is set to reduce the loss of the network. The supervised
+learning network can be regarded as a function SL(S), the                                 For training strategy model, the deep reinforcement network
+sampling stochastic gradient descent method is used to train                              and supervised network are trained in adversarial way to learn
+the network, and its loss function is                                                     the best response strategy and average strategy of the sente
+                                                                                          and gote respectively. In each round of shots, the decision
+Loss S L = S L(S; θ ) − B R S (a) + c|θ |2 ,                                      (3)   maker selects action at according to the best strategy in the
+                                                                                          current state st . and then simulates the opponent’s average
+                                                                                                                       opp
+where c is the regularization parameter.                                                  strategy selecting action at to reach the state st+1 , and
+                                                                                          obtain the reward for environmental feedback. Afterwards,
+Reward                                                                                    the decision maker continues to choose the best strategy
+                                                                                          action in the st+1 state until the end of the game. The spe-
+There is no immediate reward after choosing an action in                                  cific algorithm flow is described as Algorithm 1. The agent
+an extensive game. The factual regret value can effectively                               uses the better strategy in deep reinforcement learning as the
+solve this problem. The factual value of the middle node of                               supervised data to train the supervised network, and grad-
+the game tree is estimated when the game leaf node is not                                 ually finds the Nash equilibrium strategy in the process of
+reached. We use two reward functions for strategy evaluation.                             continuous gaming.
+   The first reward is to perform cumulative evaluation (SER
+situation evaluation reward) in each round according to the
+stone distribution of the decision maker and the opponent                                 Experiments
+in the house. The flaw of this evaluation is that each turn is
+evaluated as an independent game, but in fact they are related.                           Experimental parameter settings
+For example, the 8th round of curling is more effective than
+the 1st round. We introduce the weight of the attenuation                                 During the training process, the (s, a) label whose reward
+coefficient w(t) = ln(c−t)1
+                              , where c is a constant and t is                            obtained by taking action a in state s is greater than the
+the current round number. The deep reinforcement learning                                 threshold ε is stored. After 512 pieces of data are accumu-
+network is RL(S), then its loss function is                                               lated, they are used as training data for supervised network
+                                                                                        learning. The batch size is 512. According to the decision
+LossRL =  Q estimate (st , at ) − Q t arg et (st , at )                                 makers strategies and the opponents average strategy, we
+Q estimate (st , at ) = argmaxat R L(S)                                                   sample 100 actions to estimate the reward for taking action
+                                 opp
+Q target (st , at ) = Rsatt at         + γ ∗ argmaxat+1 Q constant (st+1 , at+1 )         a in the current state. The learning rates of reinforcement
+                                                                                    (4)   learning and supervised learning are set to 0.00025 and 0.001
+                                                                                          respectively. All the optimization methods of the model adopt
+  The second reward function is future reward (FR). The                                   stochastic gradient descent. Reinforcement learning attenu-
+decision maker chooses the last action. After the game is                                 ation factor γ = 0.99, action reward range [− 1, 1], optimal
+                  opp
+over, the Rsatt at value is the score of the decision maker’s                             response action screening threshold ε = 0.4. The regulariza-
+win or lose. If the game is not over after the action is selected,                        tion parameter c is 2e−5 .
+
+
+
+
+123
+Complex & Intelligent Systems (2022) 8:1857–1863                                                                                    1861
+
+
+Algorithm 1 Our Method in each iteration
+1: R L sente ⇐ the policy-value network of sente player
+2: S L sente ⇐ the average strategy network of sente player
+3: R L gote ⇐ the policy-value network of gote player
+4: S L gote ⇐ the average strategy network of gote player
+5: stsente ⇐ the current state(need sente player to take action)
+6: sittsente = S E R(stsente )
+7: br s sente ⇐ best response actions for sente in specific state
+8: br s gote ⇐ best response actions for gote in specific state
+9: while stsente is not end do
+10:     atsente = R L sente (stsente )
+          gote
+11:     st      = take Action(stsente , atsente )
+            gote               gote
+12:     sitt      = S E R(st )
+          gote                 gote
+13:     at      = SL    gote (st )
+                                       gote gote
+14:     st+1 = take Action(st , at )
+          sente
+
+15:     sitt+1 = S E R(st+1 )
+            sente               sente
+
+16:       sente = R L sente (s sente )
+        at+1                     t+1
+          gote
+17:     st+1 = take Action(st+1       sente , a sente )
+                                               t+1
+            gote               gote                                        Fig. 2 Win rate against AI-simple based on SER
+18:     sitt+1 = S E R(st+1 )
+19:     Rewar dtsente = sitt+1    sente − sit sente
+                                                 t
+                    gote         gote         gote
+20:     Rewar dt          = sitt+1 − sitt
+21:     UPDATERL(R L sente ,stsente ,atsente ,st+1      sente ,a sente )
+                                                                t+1
+                               gote   gote gote gote gote
+22:     UPDATERL(R L                ,st ,at ,st+1 ,at+1 )
+23:     if Rewar dtsente >  then
+24:         br s sente .Add( pair (stsente , atsente ))
+25:     end if
+                       gote
+26:     if Rewar dt          >  then
+                                        gote gote
+27:         br s gote .Add( pair (st , at ))
+28:     end if
+29: end while
+30: if br s sente is not empty then
+31:     UPDATESL(S L sente ,br s sente )
+32: end if
+33: if br s gote is not empty then
+34:     UPDATESL(S L gote ,br s gote )
+35: end if
+
+
+
+Results and discussion                                                     Fig. 3 Win rate against AI-simple based on FR
+
+We used two different reward functions SER and future
+reward to train two classic reinforcement learning models                  DQN model and PPO model at the same number of train-
+for experimental comparison, i.e. DQN (Deep Q-learning)                    ing iterations. The convergence speed of our method is faster
+model based on strategy value [21] and PPO (Proximal Pol-                  than the other two models. It is because our method adopts
+icy Optimization) model [22]. DQN and PPO models are                       adversary learning to learn higher reward actions. The super-
+widely used in Atari games and machine games, and have                     vised data in the supervised network become better and better
+achieved good results. DQN learns control strategies from                  along with the adversary learning. DQN and PPO agents need
+raw data through end-to-end convolutional neural networks.                 to explore all actions, and evaluate the reward of each action
+PPO optimizes an objective function by using multiple                      and the probability distribution of all actions.
+epochs stochastic gradient ascent. These models and our                       From Figs. 2 and 3, we can see that the method based on
+method are tested against AI-simple in the international digi-             the SER reward function converges faster than future reward
+tal curling competition. Each adversarial test consists of two             during the training process. At about 500,000 iterations of
+rounds of games. The sente and gote players take turns in                  training, our method’s (SER) win rate against AI-simple
+one round. The scores of the two rounds are added together,                is basically stable at 64.4%, while the future reward-based
+and the highest scorer wins.                                               method requires about 1.5 million iterations of training to
+    Figures 2 and 3 show the variation of the winning rate of              achieve 65.1%. The reason is that in each round of curling,
+the three models by the game number. We can see that our                   there is a lot of action choices, and most of the choices have
+method has a higher winning rate against AI-simple than the                very poor reward. SER makes the selected action immedi-
+
+
+                                                                                                                              123
+1862                                                                                        Complex & Intelligent Systems (2022) 8:1857–1863
+
+
+Table 1 Winning percentages that our method beats existing programs   lower and lower. When the training iteration is 10,000,000
+Program                                        Winning percentage     rounds, the exploitability of the gote strategy of this method
+                                                                      is − 1.03 points, and the exploitability of the sente strategy
+KR-DL-UCT                                      61.4%                  is 1.97 points. The reason is that the gote has superiority
+KR-UCT                                         83.2%                  over the sente, and it is reasonable that the exploitability of
+                                                                      the gote strategy is negative. The experimental results show
+                                                                      that our method can learn the Nash equilibrium strategy of
+                                                                      curling game as the number of training increases.
+
+
+
+                                                                      Conclusion
+
+                                                                      In this work, we consider the digital curling game as a two-
+                                                                      player zero-sum extensive game in a continuous action space.
+                                                                      We combine KR-UCT and NFSP for digital curling games,
+                                                                      which can avoid manual labeling of supervised data. The
+                                                                      agent uses two adversary learning networks to effectively
+                                                                      solve the Nash equilibrium strategy of the curling games,
+                                                                      where a deep reinforcement learning network generates the
+                                                                      supervised data to train a supervised network to learn average
+                                                                      strategy. To make reinforcement learning converge quickly,
+                                                                      we propose two reward functions for the reinforcement learn-
+Fig. 4 Exploitability
+                                                                      ing. The trained model competes with the AI-simple program
+                                                                      to achieve a higher winning rate in the international dig-
+ately obtain a higher reward, similar to the greedy learning          ital curling competition. We use the factual regret value
+strategy. The future reward of actions selected in each round         to determine the exploitability of the strategy, and use the
+will be biased toward the maximum future benefits and learn           exploitability metric to validate that the model can reach the
+to find the best overall strategy. However, although the SER-         Nash equilibrium.
+based (SER-RL) converges faster, the final strategy win rate          Acknowledgements This work is supported by National Key Research
+is 69.2%. On the contrary, the Future reward-based reinforce-         and Development Project Grant, grant/award number: 2018AAA01008-
+ment learning (FR-RL) has a slow convergence rate, but it             02.
+can eventually learn the overall situation. The strategy have
+                                                                      Author Contributions YH presents the idea. QZ does experimental
+a winning rate of 79.1%.                                              design. Prof FD contributes the overall article structure and method
+    We also compared the performance of our method with               optimization.
+existing programs, KR-UCT [9] and KR-DL-UCT [20].
+Table 1 shows the winning percentages that our method beats           Funding This work is supported by National Key Research and Devel-
+                                                                      opment Project Grant, grant/award number: 2018AAA0100802.
+existing programs. There are 1000 games in each match (500
+sente games and 500 gote games, considering the gote game             Availability of data and material No data and material are needed in
+has a certain advantage). From the table, we can see that the         this work.
+program trained by our method has better performance than
+KR-DL-UCT and the vanilla KR-UCT.
+                                                                      Declarations
+    To validate the strategy learned by our method can con-
+verge to Nash equilibrium. we determine the exploitability of         Conflict of interest No conflict.
+strategies using the factual regret value, that is, the lower the
+reward of the opponent is when the decision maker choose              Code availability Code will be available after paper publication.
+the action, the lower the exploitability of the strategy learned      Open Access This article is licensed under a Creative Commons
+by the decision maker, and the closer the strategy is to the          Attribution 4.0 International License, which permits use, sharing, adap-
+Nash equilibrium strategy. Figure 4 shows the variation of            tation, distribution and reproduction in any medium or format, as
+the exploitability by the training iterations. It can be seen         long as you give appropriate credit to the original author(s) and the
+                                                                      source, provide a link to the Creative Commons licence, and indi-
+that the exploitability of AI-simple’s sente and gote hits are        cate if changes were made. The images or other third party material
+4 and 3 points respectively. With the increase of the number of       in this article are included in the article’s Creative Commons licence,
+training iterations, the exploitability of our method becomes         unless indicated otherwise in a credit line to the material. If material
+
+
+123
+Complex & Intelligent Systems (2022) 8:1857–1863                                                                                                 1863
+
+
+is not included in the article’s Creative Commons licence and your          13. Ito T, Kitasei Y (2015) Proposal and implementation of digital
+intended use is not permitted by statutory regulation or exceeds the            curling. In: Proceedings of the IEEE conference on computational
+permitted use, you will need to obtain permission directly from the copy-       intelligence and games, CIG, 469C473
+right holder. To view a copy of this licence, visit http://creativecomm     14. Yamamoto M, Kato S, Iizuka H (2018) Learning of expected scores
+ons.org/licenses/by/4.0/.                                                       distribution for positions of digital curling. In: Proceedings of
+                                                                                workshop on curling informatics (WCI2018). pp 8–9
+                                                                            15. Myungpyo H, Yoon KK, Sanghoon S (2018) Camera pose estima-
+                                                                                tion based on concentric circles and parallel lines of a curling sheet,
+References                                                                      WCI2018, 12–15
+                                                                            16. Won D-O et al. (2018) Curly: an AI-based curling robot success-
+ 1. Roughgarden T (2010) Algorithmic game theory. Commun ACM                    fully competing in the olympic discipline of curling. In: IJCAI
+    53(7):78–86                                                             17. Ohto K, Tanaka T (2017) A curling agent based on the Monte-Carlo
+ 2. Wang FY, Zhang JJ, Zheng X et al (2016) Where does AlphaGo                  tree search considering the similarity of the best action among
+    go: from church-turing thesis to AlphaGo thesis and beyond. IEEE            similar states advances in computer games. Springer, Cham, pp
+    CAA J Autom Sin 3(2):113–120                                                151–164
+ 3. Zinkevich M, Johanson M, Bowling M et al (2007) Regret min-             18. Ahmad ZF, Holte RC, Bowling M (2016) Action selection for ham-
+    imization in games with incomplete information. Adv Neural Inf              mer shots in curling. In: IJCAI. pp 561–567
+    Process Syst 20:1729–1736                                               19. Ahmad ZF (2017) Action selection for hammer shots in curl-
+ 4. Heinrich J, Silver D (2016) Deep reinforcement learning                     ing: optimization of non-convex continuous actions with stochastic
+    from self-play in imperfect-information games. arXiv preprint               action outcomes
+    arXiv:1603.01121                                                        20. Lee K, Kim SA, Choi J et al (2018) Deep reinforcement learning
+ 5. Heinrich J, Lanctot M, Silver D (2015) Fictitious self-play in              in continuous action spaces: a case study in the game of simulated
+    extensive-form games. In: International conference on machine               curling. In: International conference on machine learning, pp 2937–
+    learning. pp 805–813                                                        2946
+ 6. Maskin E (1999) Nash equilibrium and welfare optimality. Rev            21. Mnih V, Kavukcuoglu K, Silver D et al. (2013) Playing atari with
+    Econ Stud 66(1):23–38                                                       deep reinforcement learning. arXiv preprint arXiv:1312.5602
+ 7. Kocsis L, Szepesvri C (2006) Bandit based monte-carlo planning          22. Schulman J, Wolski F, Dhariwal P et al. (2017) Proximal policy
+    European conference on machine learning. Springer, Berlin, pp               optimization algorithms. arXiv preprint arXiv:1707.06347
+    282–293
+ 8. Dulac-Arnold G, Evans R, van Hasselt H et al (2015) Deep rein-
+    forcement learning in large discrete action spaces. arXiv preprint
+                                                                            Publisher’s Note Springer Nature remains neutral with regard to juris-
+    arXiv:1512.07679
+                                                                            dictional claims in published maps and institutional affiliations.
+ 9. Yee T, Lisy V, Bowling MH, Kambhampati S (2016) Monte Carlo
+    tree search in continuous action spaces with execution uncertainty.
+    In: IJCAI. pp 690–697
+10. Maeno N (2014) Dynamics and curl ratio of a curling stone. Sports
+    Eng 17(1):33–41
+11. Lozowski E et al (2016) Comparison of IMU measurements of
+    curling stone dynamics with a numerical model. Procedia Eng
+    147:596–601
+12. Yamamoto M, Kato S, Iizuka H (2015) Digital curling strategy
+    based on game tree search. In: 2015 IEEE conference on compu-
+    tational intelligence and games (CIG). IEEE, pp 474–480
+
+
+
+
+                                                                                                                                          123
+

@@ -1,0 +1,848 @@
+{
+  "model_file": "model\\search_distill_tactic_policy.pt",
+  "games": 20,
+  "search_games": 5,
+  "evaluation": {
+    "random": {
+      "games": 20,
+      "avg_score": -0.6,
+      "win_rate": 0.3,
+      "loss_rate": 0.7,
+      "min_score": -3.0,
+      "max_score": 5.0
+    },
+    "scripted": {
+      "games": 20,
+      "avg_score": -2.25,
+      "win_rate": 0.2,
+      "loss_rate": 0.8,
+      "min_score": -5.0,
+      "max_score": 1.0
+    },
+    "model": {
+      "games": 20,
+      "avg_score": 1.0,
+      "win_rate": 0.8,
+      "loss_rate": 0.2,
+      "min_score": -4.0,
+      "max_score": 3.0
+    },
+    "search_rollouts4": {
+      "games": 5,
+      "avg_score": 0.4,
+      "win_rate": 0.4,
+      "loss_rate": 0.6,
+      "min_score": -2.0,
+      "max_score": 4.0
+    },
+    "model_refined_continuous": {
+      "games": 5,
+      "avg_score": 0.6,
+      "win_rate": 0.4,
+      "loss_rate": 0.6,
+      "draw_rate": 0.0,
+      "min_score": -1.0,
+      "max_score": 5.0,
+      "top_k": 3,
+      "candidates": 8,
+      "rollouts": 1,
+      "sweep_rate": 0.625,
+      "tactic_counts": {
+        "draw_center": 13,
+        "occupy": 9,
+        "curl_left": 7,
+        "curl_right": 5,
+        "defense": 4,
+        "guard_left": 1,
+        "freeze": 1
+      },
+      "traces": [
+        {
+          "game": 0,
+          "shots": [
+            {
+              "shot_num": 0,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                -0.09,
+                0.0
+              ],
+              "sweep": 1.333,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 3.333,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 2,
+              "action": "occupy",
+              "shot": [
+                2.54,
+                0.09,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 5.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.54,
+                    0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 5.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.62,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 4,
+              "action": "occupy",
+              "shot": [
+                2.54,
+                0.0,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.54,
+                    0.0,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    0.0,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 6,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.14
+              ],
+              "sweep": 4.822,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 4.822,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 0.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 4.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 8,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                0.045,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 1.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 10,
+              "action": "guard_left",
+              "shot": [
+                2.64,
+                -0.7,
+                0.0
+              ],
+              "sweep": 2.0,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.64,
+                    -0.7,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.72,
+                    -0.79,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.64,
+                    -0.745,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 12,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                0.045,
+                0.0
+              ],
+              "sweep": 1.333,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 14,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.59
+              ],
+              "sweep": 6.822,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 6.822,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            }
+          ],
+          "score": -1,
+          "final_position": [
+            2.755,
+            5.441,
+            3.217,
+            4.658,
+            2.095,
+            6.057,
+            2.654,
+            6.004,
+            2.266,
+            5.814,
+            1.496,
+            4.991,
+            2.374,
+            4.264,
+            1.718,
+            4.654,
+            2.573,
+            5.718,
+            3.064,
+            5.532,
+            1.784,
+            5.283,
+            2.251,
+            4.535,
+            2.813,
+            5.373,
+            2.063,
+            5.955,
+            2.101,
+            5.66,
+            2.027,
+            3.497
+          ]
+        },
+        {
+          "game": 1,
+          "shots": [
+            {
+              "shot_num": 0,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                -0.045,
+                0.0
+              ],
+              "sweep": 1.333,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 3.333,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -2.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 2,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.14
+              ],
+              "sweep": 2.822,
+              "search_mean": 6.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 2.822,
+                  "mean": 6.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 4.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 4,
+              "action": "defense",
+              "shot": [
+                2.54,
+                0.129,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.54,
+                    0.129,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    0.174,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    0.174,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 6,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.59
+              ],
+              "sweep": 4.822,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 4.822,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 0.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 4.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 8,
+              "action": "curl_right",
+              "shot": [
+                2.84,
+                0.46,
+                -3.59
+              ],
+              "sweep": 0.0,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.59
+                  ],
+                  "sweep": 0.0,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.14
+                  ],
+                  "sweep": 6.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.14
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 10,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                0.0,
+                0.0
+              ],
+              "sweep": 1.333,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.0,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 3.333,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 12,
+              "action": "occupy",
+              "shot": [
+                2.54,
+                -0.09,
+                0.0
+              ],
+              "sweep": 2.0,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.54,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.54,
+                    0.0,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.62,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 2.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 14,
+              "action": "curl_right",
+              "shot": [
+                2.84,
+                0.46,
+                -2.69
+              ],
+              "sweep": 4.822,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -2.69
+                  ],
+                  "sweep": 4.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.59
+                  ],
+                  "sweep": 2.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.59
+                  ],
+                  "sweep": 4.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            }
+          ],
+          "score": -1,
+          "final_position": [
+            3.111,
+            5.335,
+            1.712,
+            4.148,
+            3.09,
+            4.962,
+            2.027,
+            4.293,
+            2.761,
+            6.027,
+            2.205,
+            5.919,
+            1.961,
+            6.322,
+            2.952,
+            5.083,
+            2.605,
+            5.774,
+            2.798,
+            4.909,
+            1.741,
+            5.15,
+            1.572,
+            5.076,
+            2.071,
+            6.046,
+            2.008,
+            4.133,
+            2.034,
+            5.101,
+            2.057,
+            4.725
+          ]
+        }
+      ]
+    }
+  },
+  "elapsed_sec": 6.957447290420532
+}

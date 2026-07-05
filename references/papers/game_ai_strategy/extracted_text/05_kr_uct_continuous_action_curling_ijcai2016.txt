@@ -1,0 +1,469 @@
+                        Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16)
+
+
+
+
+                                  Monte Carlo Tree Search in Continuous
+                                 Action Spaces with Execution Uncertainty
+                                   Timothy Yee, Viliam Lisý, Michael Bowling
+                               Department of Computing Science University of Alberta
+                                         Edmonton, AB, Canada T6G 2E8
+                                        {tayee, lisy, bowling}@ualberta.ca
+
+                          Abstract                                           and thus the original candidates. This approach reveals a
+                                                                             tension between exploring a larger set of candidate actions
+     Real world applications of artificial intelligence of-                  to increase the probability that a good action is considered,
+     ten require agents to sequentially choose actions                       and more accurately evaluating promising candidates through
+     from continuous action spaces with execution un-                        deeper search or more execution outcomes, increasing the
+     certainty. When good actions are sparse, domain                         probability the best candidate is selected. Monte Carlo tree
+     knowledge is often used to identify a discrete set                      search (MCTS) methods, such as UCT [Kocsis and Szepes-
+     of promising actions. These actions and their un-                       vari, 2006], are well suited for balancing this sort of tradeoff,
+     certain effects are typically evaluated using a re-                     however, many of the successful variants and enhancements
+     cursive search procedure. The reduction of the                          are designed for finite, discrete action spaces. A number
+     problem to a discrete search problem causes severe                      of recent advances have sought to address this shortcoming.
+     limitations, notably, not exploiting all of the sam-                    The classical approach of progressive widening (or unprun-
+     pled outcomes when evaluating actions, and not us-                      ing) [Coulom, 2007; Chaslot et al., 2008] can handle contin-
+     ing outcomes to help find new actions outside the                       uous action spaces by considering a slowly growing discrete
+     original set. We propose a new Monte Carlo tree                         set of sampled actions. cRAVE [Couëtoux et al., 2011] com-
+     search (MCTS) algorithm specifically designed for                       bines this with a modification of the RAVE heuristic [Gelly
+     exploiting an execution model in this setting. Us-                      and Silver, 2011] to do generalization from similar (but not
+     ing kernel regression, it generalizes the information                   exactly the same) actions. HOOT [Mansley et al., 2011] re-
+     about action quality between actions and to unex-                       places the UCB algorithm in UCT with HOO [Bubeck et al.,
+     plored parts of the action space. In a high fidelity                    2011], an algorithm with theoretical guarantees in continuous
+     simulator of the Olympic sport of curling, we show                      action spaces. However, none of these methods make use of
+     that this approach significantly outperforms exist-                     one critical insight: samples of execution uncertainty from a
+     ing MCTS methods.                                                       particular action provide information about any action that
+                                                                             could have generated that execution outcome.
+1   Introduction                                                                We use this insight to propose a novel variant of Monte
+Many real world problems involve selecting sequences of ac-                  Carlo tree search, KR-UCT (Kernel Regression UCT), de-
+tions from a continuous space of actions. Examples include                   signed specifically for reasoning about continuous actions
+choosing target motor velocities in robot navigation; choos-                 with execution uncertainty. Instead of evaluating only a dis-
+ing the angle, offset, and speed to hit a billiard ball; or choos-           crete set of candidate actions, the algorithm considers the en-
+ing the angle, velocity, and rotation to throw a curling stone.              tire continuous space of actions, with candidates acting only
+Execution of these actions is often fundamentally uncertain                  as initialization. The core of our approach is in the use of ker-
+due to limited human or robot skill and the stochastic nature                nel regression to generalize action value estimates over the
+of physical reality. In this paper, we focus on algorithms for               entire parameter space, with the execution uncertainty model
+choosing good actions in continuous action, continuous state,                as its generalization kernel. KR-UCT distinguishes itself in a
+stochastic planning problems when a model of the execution                   number of key ways. First, it allows information sharing be-
+uncertainty is known.                                                        tween all actions under consideration. Second, it can identify
+   One often-used approach [Smith, 2007; Archibald et al.,                   actions outside of the initial candidates for further exploration
+2009; Yamamoto et al., 2015] for such challenging planning                   by combining kernel regression and kernel density estimation
+problems is to address the continuous action space by us-                    to optimize an exploration-exploitation balance akin to the
+ing domain knowledge to identify a small, discrete set of                    popular UCB formula [Auer et al., 2002]. Third, it can ulti-
+candidate actions. Then, the continuous space of stochas-                    mately select actions outside of the candidate set allowing it
+tic outcomes is sampled for each action. Finally, for each                   to improve on less-than-perfect domain knowledge.
+sampled outcome, a heuristic function (possibly preceded                        We evaluate KR-UCT in a high fidelity simulation of the
+by a very shallow search) is used to evaluate the outcomes                   Olympic sport of curling. Curling is an example of a chal-
+
+
+
+                                                                       690
+lenging action selection problem with continuous actions,                 the selection function (e.g., UCT) as an additional term with
+continuous stochastic outcomes, sequential decisions, execu-              relative weight decreasing with more simulations.
+tion uncertainty, and the added challenge of an adversary. We
+show that the proposed algorithm significantly outperforms                2.2   Progressive Widening
+existing MCTS techniques. The improvement is apparent not
+                                                                          Most selection functions in MCTS, including UCT, require
+only at short horizons, which allows exploring a large number
+                                                                          trying every action once. So, obviously, they are not directly
+of different shots, but also at long horizons when evaluating
+                                                                          applicable in continuous action spaces. Even if the action
+only tens of samples of execution outcomes. Furthermore,
+                                                                          space is finite, but very large, having too many options can
+we show that existing MCTS improvements, such as RAVE
+                                                                          result in a very shallow lookahead. The same solution to this
+and progressive widening do not improve standard UCT as
+                                                                          problem was independently introduced in [Coulom, 2007] as
+significantly as KR-UCT in this domain.
+                                                                          progressive widening and [Chaslot et al., 2008] as progressive
+                                                                          unpruning. It artificially limits the number of actions evalu-
+2     Background                                                          ated in a node by MCTS based on the number of visits to the
+We begin by describing the core algorithms that KR-UCT will               node. Only after the quality of the best available action is
+build upon, along with the main building blocks of the com-               estimated sufficiently well, additional actions are taken into
+petitors used our evaluation.                                             consideration. The order of adding the actions could be done
+                                                                          randomly or by exploiting domain knowledge.
+2.1    Monte Carlo Tree Search                                               If a domain includes stochastic outcomes, such as being
+Monte Carlo Tree Search (MCTS) is a simulation-based                      the result of execution uncertainty, the outcomes are com-
+search approach to planning in finite-horizon sequential                  monly represented by chance nodes in the search tree. If the
+decision-making settings. The core of the approach is to it-              set of outcomes is finite and small, then the next state can
+eratively simulate executions from the current state to a ter-            be sampled from the known probability distribution over the
+minal state, incrementally growing a tree of simulated states             outcomes. If the possible outcomes are large or even con-
+(nodes) and actions (edges). Each simulation starts by visit-             tinuous then one can simply sample a small number of out-
+ing nodes in the tree, selecting which actions to take based on           comes [Kearns et al., 2002] or slowly grow the number of
+a selection function and information maintained in the node.              sampled outcomes as the node is repeatedly visited, in the
+Consequently, it transitions to a successor state. When a node            same way that progressive widening grows the number of ac-
+is visited whose immediate children are not all in the tree, the          tions [Couëtoux et al., 2011].
+node is expanded by adding a new leaf to the tree. Then, a                   UCT assures that the tree grows deeper more quickly in the
+rollout policy (e.g., random action selection) is applied from            promising parts of the search tree. The progressive widening
+the new leaf to a terminal state. The value of the terminal               strategies add that it also grows wider in the same parts of the
+state is then returned as the value for that new leaf and the             search tree.
+information stored in the tree is updated. In the simplest case,
+a tree with height 1, MCTS starts with an empty tree and adds             2.3   Kernel Regression
+a single leaf each iteration.
+   The most common selection function for MCTS is Up-                     Kernel regression is a nonparametric method for estimating
+per Confidence Bounds Applied to Trees (UCT) [Kocsis and                  the conditional expectation of a real-valued random vari-
+Szepesvari, 2006]. Each node maintains the mean of the re-                able from data. In its simplest form [Nadaraya, 1964;
+wards received for each action, v̄a , and the number of times             Watson, 1964], it estimates the expected value of a point as
+each action has been used, na . It first uses each of the actions         an average of the values of all points in the data set, weighted
+once and then decides what action to use based on the size                based on a typically non-linear function of the distance from
+of the one-sided confidence interval on the reward computed               the point. The function defining the weight given a pair of
+based on the Chernoff-Hoeffding bound as:                                 points is called the kernel and further denoted K. For a data
+                                  s                                       set (xi , yi )ni=0 , the estimated expected values is:
+                                          P
+                                     log b nb                                                             Pn
+                 argmax v̄a + C                               (1)                                                K(x, xi )yi
+                     a                    na                                                    E(y|x) = Pi=0 n              .         (2)
+                                                                                                              i=0 K(x, xi )
+The constant C controls the exploration-exploitation tradeoff
+and is typically tuned for the specific domain.                           The kernel is typically a smooth symmetric function, such as
+   The success of MCTS across a wide range of domains                     the Gaussian probability density function. However, asym-
+has inspired many modifications and improvements. One                     metric kernel functions can also be used in well-motivated
+of the most notable is Rapid Action Value Estimation                      cases (e.g., [Michels, 1992]). An important quantity related
+(RAVE) [Gelly and Silver, 2011]. It allows learning about                 to kernel regression is kernel density, which quantifies the
+multiple actions from a single simulation, based on the intu-             amount of relevant data available for a specific point in the
+ition that in many domains, such as Go, an action that is good            domain. For any x, the kernel density is defined to be the
+when taken later in the sequence is likely to be good right               denominator in Equation 2:
+now as well. RAVE maintains additional statistics about the                                            n
+                                                                                                       X
+quality of actions regardless of where they have been used in                                W (x) =         K(x, xi ).               (3)
+a subtree. These statistics are then added to action values in                                         i=0
+
+
+
+
+                                                                    691
+Algorithm 1 Kernel Regression UCT                                         come into our kernel regression and kernel density estimates
+ 1: procedure KR-UCT(state)                                               by effectively counting each sample as its own data point.
+                                                                                                       P
+ 2:    if state is terminal then                                                                             K(a,b)v̄ n
+ 3:        return utility(state), false                                                  E(v|a)    = Pb2A K(a,b)nb b b                 (4)
+                                                                                                    P b2A
+ 4:    expanded       false                                                               W (a)    = b2A K(a, b)nb .                   (5)
+ 5:    A     actions considered in state     q         P
+                                                 log       W (b)          These estimates are then plugged into their respective roles of
+ 6:     action    argmaxa2A E(v|a) + C             b2A
+                                                   W (a)                  the UCB formula, E(v|a) for v̄a and W (a) for na . The UCB
+           pP
+ 7:     if      a2A na < |A| then
+                                                                          formula is then used to select the action to refine further. As
+ 8:         newState child of state by taking action                      usual, the UCB exploration bias is considered infinite if the
+ 9:         rv, expanded       KR-UCT(newState)                           denominator in the term is 0 (i.e., W (a) = 0). The scaling
+10:     if not expanded then                                              constant C serves the same role as in vanilla UCT, control-
+11:         newAction ⇡ argminK(action,a)>⌧ W (a)                         ling the tradeoff between exploring less visited actions and
+12:         add newAction to state                                        refining the value of more promising actions. It should be
+13:         newState child of state by taking newAction                   experimentally tuned for each specific domain.
+14:         add initial actions to newState
+15:         rv    ROLLOUT(newState)                                       Expansion. After selecting the action with the highest UCB
+16:     Update v̄action , naction , and KR with rv                        value, the algorithm continues by either improving the esti-
+17:     return rv, true                                                   mated value of the action by recursing on its outcome (lines
+                                                                          8-9), or improving the estimated value of the action by adding
+                                                                          a new outcome as a new child node (lines 11-15). This deci-
+3     Kernel Regression UCT                                               sion is based on keeping the number of outcomes in a node
+The main idea behind KR-UCT is to increase the number of                  bounded by some sublinear function of the number of visits to
+children (i.e., actions) of a node as it is repeatedly visited,           the node (line 7), just as in progressive widening. In the event
+while enabling information sharing between similar actions                of reaching a terminal node within the tree, a new outcome
+through kernel regression. All evaluated actions, both ini-               is always added at the leaf’s parent (line 10). When adding
+tially provided candidates and progressively added actions,               a new outcome, we want to choose an outcome b that will
+together with their estimated values, form a single dataset at            be heavily weighted by the kernel (i.e., K(a, b) is large), yet
+each node for kernel regression. For the kernel function we               is not well represented by the current set of outcomes (i.e.,
+use the probability density function of the known model of                W (b) is small). We achieve this balance by finding an out-
+execution uncertainty, i.e., K(x, x0 ) is the model’s probability         come that minimizes the kernel density estimate within the set
+that action x0 is executed when x is the intended action. Equa-           of all outcomes whose kernel weight is at least a threshold ⌧
+tion 2 then can be viewed as a simple Monte Carlo estimate of             (line 11). For computational efficiency, we approximate this
+the integral corresponding to that evaluated action’s expected            optimization by choosing k outcome samples from the exe-
+value. This particular kernel regressor is then used to esti-             cution uncertainty given the chosen action, and select from
+mate the two key quantities required by UCT. For the average              these outcomes the one with minimal kernel density. After
+of the action, v̄a , we use the kernel regression estimate. For           identifying a new outcome, this state is added as a child of
+the number of visits, na , we use the kernel density estimate             the current node with some generated set of initial actions,
+of data coverage. Note that if we had a discrete action space             possibly determined using domain-specific knowledge (lines
+and used a Dirac delta as the kernel (so K(x, x0 ) = 1x=x0 ),             12-14).
+then this approach is identical to vanilla UCT.
+   The pseudocode for KR-UCT is presented as Algorithm 1.                 Simulation and Backpropagation. When a new outcome
+The structure of the algorithm follows the standard four steps            is added to the tree, a complete simulation is executed to reach
+of MCTS (selection, expansion, simulation, and backpro-                   a terminal state using some rollout policy (line 15). As in
+pogation). The main recursive procedure, KR-UCT, is called                vanilla MCTS, the rollout policy can involve random action
+on the root of the search tree a fixed number of times deter-             selection, a fast decision policy learned from data [Silver et
+mined by a per-decision computation budget. It returns the                al., 2016] or based on hand-coded rules [Gelly et al., 2006],
+value of the terminal node reached and a boolean flag indi-               or even a static heuristic evaluation. The value of the result-
+cating if the expansion step has already occurred. We explore             ing terminal state is then used to update v̄b and nb of the out-
+some algorithmic details of each step below.                              comes along the selected path through the tree. Finally, for
+                                                                          the sake of efficiency, the kernel density and value estimates
+Selection. At each decision node, our algorithm uses an                   at actions can be updated incrementally during the backprop-
+adaptation of the UCB formula to select amongst already ex-               agation step.
+plored outcomes to be further refined (line 6). Each node
+maintains the number of visits, nb , and the mean utility, v̄b ,          Final Selection. After the computational budget is ex-
+for each outcome (child node) b. As outcomes are revisited                hausted, we still need to use the results of the search to select
+throughout the iterations their mean and visit counts are up-             an action to execute. It is common to use the most sampled
+dated. We incorporate such multiple samples of the same out-              action or the action with the highest sampled mean at the root.
+
+
+
+                                                                    692
+Instead, we select the action at the root with the greatest lower
+confidence bound (LCB) using our kernel regression and ker-
+nel density estimates:
+                                   s      P
+                                      log b2A Wb
+            argmax E(v|a) C                          .         (6)
+              a2A                          Wa
+The constant C acts as a tradeoff between choosing actions
+that have been sampled the most (i.e., are the most certain)               Figure 1: Sample curling game state. The yellow player
+and actions that have high estimated value. This constant does             scores 1 point if this is the end of an end. The dashed line
+not have to be the same as the constant used in the upper                  indicates a typical rock trajectory.
+confidence bound calculation.
+
+                                                                           ers have to carefully consider possible negative consequences
+Computational Complexity. Maintaining the value esti-
+                                                                           of execution errors.
+mates E(v|a) and kernel densities W (a) for the set of actions
+A tracked by a node can be done incrementally in time
+                                                    P linear               4.2      Curling Simulator
+in |A| in each iteration. If we store also the sum b2A Wb
+in the nodes, selection can be performed in a single pass over             The physics of a curling stone is not fully understood and is a
+the set A. The most expensive operation is expansion, namely               surprisingly active area of research [Denny, 2002; Jensen and
+finding the minimal kernel density close to an action. With a              Shegelski, 2004; Nyberg et al., 2012; 2013]; so, a simulation
+naı̈ve implementation, evaluating each point in the parame-                based on first principles is not possible. The curling simula-
+ter space takes O(|A|) operations; hence if the optimization               tor used in this paper is implemented using the Chipmunk 2D
+evaluates k points, it takes O(k|A|) operations. This com-                 rigid body physics library with a heuristic lateral force that
+plexity can be in practice substantially reduced by storing the            recreates empirically observed stone trajectories and modi-
+actions in a spatial index, such as R-trees [Guttman, 1984],               fied collision resolution to match empirically observed elas-
+but if all A actions are close to the selected shot, the worst             ticity and energy conservation when rocks collide. A rock’s
+case complexity stays the same.                                            trajectory is simulated from its initial linear velocity and an-
+                                                                           gular velocity (which due to the trajectory’s insensitivity to
+4     Experimental Evaluation                                              the speed of rotation is determined only by its sign).
+                                                                              The curling simulation also needs a model of the execu-
+We validate our algorithm using the Olympic sport of curling.              tion uncertainty. We model it based on Olympic-level play-
+                                                                           ers. Their executed shot is usually quite close to the intended
+4.1    Curling                                                             shot, with decreasing probability of being increasingly dif-
+Curling is a two team game, where the goal is to slide (throw)             ferent. However, the stone can move over debris drastically
+stones, also known as rocks, down a sheet of ice towards the               altering the shot’s trajectory from that which was intended.
+scoring area or house, a circular area centered on the button.             Therefore, we use the heavy-tailed Student-t distribution as
+Games are divided into rounds called ends, where teams alter-              the basis of our execution model. The amount of execution
+nate in throwing a total of eight stones each. When each end               noise added to a shot depends on the weight (speed) of the
+finishes, the team with the stone closest to the button scores             shot. The faster shots tend to be more precise, since the ice
+points equal to the number of their stones in the house closer             conditions have smaller effect on their trajectory. The noise
+than any opponent stone. If the state in Figure 1 is the end               added to a specific shot is defined by three parameters: the
+of an end, yellow would score one point. If the yellow rock                variance of the Student-t distribution that is added to the in-
+closest to the button were missing, then red would instead                 tended weight, the variance of the Student-t distribution that
+score two points. After an end, all stones are removed, and                is added to the aim, and the number of degrees of freedom of
+the next end begins. The winner is the team with the high-                 the distributions. We have fit these parameters to match the
+est score after all ends are played. A key aspect of curling,              curling percentage statistics of men from the 2010 and 2014
+is that rocks do not follow a straight trajectory. Instead, due            Olympic games. The number of degrees of freedom for the
+to the friction with the ice stones curl left or right, depending          Student-t distribution was fit to 5, the weight variance is ap-
+on the stone’s rotation as demonstrated by the dashed line in              proximately 9.5 mm/s, and the aim variance varies with the
+Figure 1. This fact allows teams to place stones behind other              weight and is between 1.16 ⇥ 10 3 and 3.65 ⇥ 10 3 radians.
+stones and make them harder to remove from the house.                         The simulator does not explicitly model sweeping, where
+   An important strategic consideration in the game is exe-                the non-throwing members of a team can vigorously brush
+cution uncertainty. A team may intend to deliver a stone at                the ice in front of a travelling rock to reduce friction and keep
+particular angle and velocity, but inevitably human precision              a rock’s trajectory straighter. While sweeping is critical to
+has its limitations. In addition, the ice and stones create ad-            the game of curling, we model its effect as a reduction in the
+ditional unpredictability as different parts of the ice or even            execution uncertainty, i.e., an increase in the likelihood the
+different stones might see different amounts of friction and               actual rock’s trajectory is close to the planned trajectory.1
+lateral forces. Debris on the ice can also cause drastic trajec-
+                                                                              1
+tory changes. When deciding what shot to attempt, the play-                       Sweeping does have other effects beyond reducing execution
+
+
+
+
+                                                                     693
+                                                                                               KR-UCT        PW RAVE+PW RAVE UCT
+                                                                                KR-UCT                     0.086    0.084 0.105 0.110
+                                                                                PW               -0.086             0.010 0.014 0.037
+                                                                                RAVE + PW        -0.084   -0.010           0.015 0.033
+                                                                                RAVE             -0.105   -0.014   -0.015        0.006
+                                                                                UCT              -0.110   -0.037   -0.033 -0.006
+
+                                                                               Table 1: The average point differences by the algorithms in
+                                                                               the rows against the one in the column over one-end games.
+                                                                               Bold values denote statistical significance (p=0.95; upper-
+                                                                               tailed t-test).
+
+                                                                               rollout full ends. Instead, rollouts would be restricted to at
+                                                                               most five simulated shots, after which the end was scored
+                                                                               as if it were complete. Many shots in the middle of an end
+                                                                               can result in a back-and-forth of placing and removing one’s
+                                                                               own/opponent stones, which this approach dispenses with.
+
+                                                                               4.4   Algorithms
+Figure 2: The game state of the final shot of the fifth end in
+the 2014 Olympics men’s gold medal match. The scores of                        We compare our proposed KR-UCT algorithm with four other
+different shot parameters with an out-turn (counter-clockwise                  variants of MCTS. (1) UCT: available actions are limited to
+spin), the shots generated by the domain knowledge and the                     generated shots, but the number of random outcomes sampled
+shots evaluated by the analyzed algorithms after 300 samples.                  for each action is kept below the square root of the number of
+                                                                               its visits. (2) RAVE: like UCT but with RAVE using the gen-
+                                                                               erator’s action descriptions to identify actions. (3) PW: like
+4.3    Domain Knowledge                                                        UCT but with progressive widening on the generated actions;
+All evaluated algorithms use the same domain knowledge: a                      adding random actions when the number of actions is below
+curling-specific shot generator that creates a list of potential               the square root of the number of visits. (4) RAVE+PW: com-
+shots to take from a particular state. The generator works                     bination of RAVE and PW; added action has the highest value
+using a list of hand-defined types of shots, such as drawing                   (UCT + RAVE).
+to the button, removing an opponent’s rock, or guarding its                       All algorithms used 1600 samples and evaluated the fi-
+own rock, and generates the needed weight, aim, and rotation                   nal shot selection with a lower confidence bound estimate
+to make the shot, if it is possible. It also stores the purpose                (CLCB = 0.001). For each algorithm, we ran a round robin
+of this shot such as (“takeout yellow 3”), which can be used                   tournament to identify a good UCB constant from the set
+with RAVE to learn quickly about shots in a particular state.                  {0.01, 0.1, 1.0, 10, 100}. For all algorithms, CU CB = 1.0
+The generator typically generates between 7 and 30 different                   was the best constant. For the weighting in RAVE, we did
+candidate shots. Figure 2 shows a game state in which red                      a similar round robin tournament to select the parameter
+throws the last shot of the end. The grayscale heatmap shows                   from the set {0.01, 0.1, 1.0, 10.0, 100.0}, and found = 1.0
+the resulting score of executing a shot as the aim (x-axis) and                to be the best for RAVE and RAVE+PW. For KR-UCT, we
+weight vary (y-axis) when using a counter-clockwise rota-                      defined ⌧ = 0.02 and k = 10. We found that these values
+tion. Note that execution uncertainty makes achieving the                      were a good trade off of runtime and exploration.
+exact values shown in the heatmap impossible in expectation.
+Overlaid on this heatmap are blue points showing the candi-                    4.5   One-End Games
+dates shots from the generator. The shot generator does not                    We first present results of head-to-head performance in a sin-
+always produce the best shot in expectation, as seen by the                    gle end of curling. Each algorithm played against each other
+fact that there is no generated shot in the center of large light              in 16000 one-end games. Because having the last shot (the
+area with weight 2000 mm/sec and aim -0.035 radians.                           hammer) is advantageous, algorithms played an equal num-
+   The other domain knowledge in use is a hand-coded roll-                     ber of games with and without the hammer against each oppo-
+out policy. The policy involves a hand-coded set of rules to                   nent. The algorithms aimed to optimize the score differential
+select an action from any state. Even though the rules are de-                 in the game (as opposed to the probability of being ahead) and
+terministic, the shots are executed with execution uncertainty                 so our results are presented as average (differences in) points.
+and therefore the rollout policy outcomes vary. Because the                       Table 1 shows the results of every pair of algorithms. KR-
+physical simulator is computationally expensive, we did not                    UCT had a positive expected point differential against every
+                                                                               other algorithm by statisticially significant margins. Not sur-
+error. Sweeping focused on the end of a rock’s trajectory can allow
+it to reach a location on the ice not possible without sweeping. Fur-          prisingly, UCT appears to be its weakest opponent. Addition-
+thermore, a shot far from an intended shot can be swept to achieve             ally, we can see that while RAVE does not significantly out-
+an entirely different purpose, such as rolling under a different guard         perform UCT, which can be attributed to the limited number
+if the executed angle is off. The primary effect of sweeping, though,          of samples. With 1600 samples, the algorithm rarely searches
+is to compensate for execution error.                                          past a depth of 3, so the RAVE statistics are underutilized.
+
+
+
+                                                                         694
+                KR-UCT      PW RAVE+PW RAVE UCT                            mer states under consideration. Also, notice that preexisting
+  KR-UCT         1.424     1.302 1.301 1.303 1.302                         variants of UCT have nearly identical performance. RAVE
+  PW             1.452     1.297 1.297 1.297 1.297
+                                                                           learns from actions in a subtree, which are not present in this
+  RAVE+PW        1.443     1.284 1.284 1.284 1.284
+  RAVE           1.446     1.274 1.274 1.274 1.274                         case; PW will always explore all options removing the need
+  UCT            1.431     1.264 1.264 1.265 1.265                         to consider a smaller subset.
+                                                                              This performance difference highlights the main disadvan-
+Table 2: Average number of points gained by algorithms in                  tage of other algorithms: they can choose only from the gen-
+the columns in all hammer shot states reached by algorithms                erated shots, which is a severe limitation in the hammer shot,
+in the rows. The standard error on these values is 0.007. Bold             when available samples are sufficient to explore far more op-
+values denote a statistically significant maximum within the               tions. It can be seen quite dramatically in the bottom part of
+row (p = 0.99; paired t-test).                                             Figure 2. The two heatmaps are overlaid with the shots eval-
+                                                                           uated by vanilla UCT and KR-UCT in the first 300 samples
+             KR-UCT RAVE+PW       KR-UCT PW                                from this hammer state. Notice the generated candidate shot
+KR-UCT        1.392   1.272 KR-UCT 1.414 1.281                             at weight 2000 mm/s and aim -0.03 radians, which is on the
+RAVE+PW       1.405   1.248 PW     1.416 1.265                             edge of a high-value region. In UCT, approximately half of
+                                                                           the noisy samples of this shot receive 1 point, but the other
+             KR-UCT RAVE                        KR-UCT UCT                 half receives -1 point and the shot is not selected. The algo-
+   KR-UCT     1.428 1.311            KR-UCT      1.461 1.344               rithm uses more samples in the smaller region left of this shot.
+   RAVE       1.400 1.242            UCT         1.423 1.255               However, KR-UCT is not restricted to choose only from the
+                                                                           generated shots. As soon as it generates a noisy shot in the
+Table 3: Average number of points gained by algorithms in                  good region, the next sample will be near this shot and the
+the columns in the hammer shot states reached by algorithms                sampling will gradually move all over the high-value region.
+in the rows in mutual matches of the algorithms mentioned in               The final shot is selected close to the center of this region.
+each table. Standard error  0.011 for each entry.                            Additionally, we can compare a table’s rows to evaluate an
+                                                                           algorithm’s ability to reach a good state through lookahead
+                                                                           and planning, even when a different algorithm is choosing the
+However, the algorithms with Progressive Widening result in                final hammer shot. Looking at the rows in the subtables of Ta-
+an improvement, although the gain achieved by KR-UCT is                    ble 3, we see a general trend that KR-UCT generally reaches
+much higher with a higher statistical confidence. KR-UCT’s                 states that result in equal or greater value regardless of which
+gain of 0.110 points per end, in expectation, against UCT, is              algorithm is selecting the final shot. On the whole this sug-
+a considerable result. If we extended the result to a standard             gests KR-UCT is an improvement over UCT when the search
+10-end game, KR-UCT might expect to see a full point im-                   space is shallow as well as when it is deep. This story is only
+provement per game. In the 2014 Olympics, 29% of curling                   contradicted in the case where KR-UCT is the algorithm se-
+games were decided by a single point.                                      lecting the hammer shot. This discrepancy is most clear in the
+                                                                           full results of Table 2 where the preexisting enhancements to
+4.6   Hammer Shot Analysis                                                 UCT seem to result in more valuable states for KR-UCT than
+The hammer shot is an interesting case to analyze [Ahmad                   KR-UCT does for itself (viz., compare the different rows in
+et al., 2016]. Being the last shot of the end, it is by far the            the KR-UCT column). We would like to explore this curious
+most important. Furthermore, the search does not have to re-               effect further in future work.
+cursively evaluate long term consequences of actions, so al-
+gorithms can evaluate substantially more actions in the same               5   Conclusion
+computational budget.
+                                                                           While a number of planning approaches have been proposed
+   For each game in the round robin tournament, we took the                for sequential decision-making in continuous action spaces,
+state right before the hammer shot and let other algorithms                none fully exploit the situation which arises from execution
+choose a shot from that state. We then found the expected                  uncertainty. We present a new approach, KR-UCT, based on
+value of that shot by simulating it under our execution model              the insight that samples of execution uncertainty from a par-
+100,000 times. Table 2 shows the expected points earned by                 ticular action provide information about any other action that
+averaging over the reached hammer states. Each row rep-                    could have generated that execution outcome. KR-UCT uses
+resents the set of hammer states reached by a particular al-               kernel regression to both share information between actions
+gorithm, and the columns represent the algorithms evaluated                with similar distributions of outcomes and, more importantly,
+from these states. The subtables in Table 3 show the same                  guide the exploration of actions outside of the initially pro-
+analysis, except the set of states considered is limited to states         vided candidate set. We show that the algorithm makes a sig-
+from the matches between the two algorithms in the subtable.               nificant improvement over both vanilla UCT and some of its
+These tables allow us to analyze two effects: an algorithm’s               standard enhancements.
+ability to choose a good hammer shot and an algorithm’s abil-
+ity to reach a good state for the hammer shot.
+   A clear picture emerges when comparing the columns of                   Acknowledgements
+Table 2. KR-UCT outperforms all other algorithms by over                   This research was funded by NSERC and Alberta Innovates
+0.12 points in its shot selection, regardless of the set of ham-           Technology Futures (AITF) through Amii, the Alberta Ma-
+
+
+
+                                                                     695
+chine Intelligence Institute. The computational resources              [Kearns et al., 2002] Michael Kearns, Yishay Mansour, and
+were made possible by Compute Canada and Calcul Québec.                  Andrew Y. Ng. A sparse sampling algorithm for near-
+Additionally, we thank all others who have contributed in the             optimal planning in large Markov decision processes. Ma-
+development of the Computer Curling Research Group.                       chine Learning, 49(2-3):193–208, 2002.
+                                                                       [Kocsis and Szepesvari, 2006] Levente Kocsis and Csaba
+References                                                                Szepesvari. Bandit based Monte-Carlo planning. In Ma-
+                                                                          chine Learning: ECML 2006, pages 282–293. Springer
+[Ahmad et al., 2016] Zaheen Farraz Ahmad, Robert C.
+                                                                          Berlin / Heidelberg, 2006.
+  Holte, and Michael Bowling. Action selection for hammer
+  shots in curling. In Proceedings of the Twenty-Fifth In-             [Mansley et al., 2011] Christopher R. Mansley, Ari Wein-
+  ternational Joint Conference on Artificial Intelligence (IJ-            stein, and Michael L. Littman. Sample-based planning
+  CAI), 2016.                                                             for continuous action Markov decision processes. In Pro-
+                                                                          ceedings of the 21st International Conference on Auto-
+[Archibald et al., 2009] Christopher Archibald, Alon Alt-                 mated Planning and Scheduling, ICAPS 2011, Freiburg,
+  man, and Yoav Shoham. Analysis of a winning compu-                      Germany June 11-16, 2011, 2011.
+  tational billiards player. In Proceedings of the 21st in-
+  ternational jont conference on Artifical intelligence, pages         [Michels, 1992] Paul Michels. Asymmetric kernel functions
+  1377–1382. Morgan Kaufmann Publishers Inc., 2009.                       in non-parametric regression analysis and prediction. The
+                                                                          Statistician, pages 439–454, 1992.
+[Auer et al., 2002] Peter Auer, Nicolo Cesa-Bianchi, and
+                                                                       [Nadaraya, 1964] Elizbar A Nadaraya. On estimating regres-
+  Paul Fischer. Finite-time analysis of the multiarmed bandit
+  problem. Machine learning, 47(2-3):235–256, 2002.                       sion. Theory of Probability & Its Applications, 9(1):141–
+                                                                          142, 1964.
+[Bubeck et al., 2011] Sébastien Bubeck, Rémi Munos,                  [Nyberg et al., 2012] Harald Nyberg, Sture Hogmark, and
+  Gilles Stoltz, and Csaba Szepesvári. q-armed bandits.                  Staffan Jacobson. Calculated trajectories of curling stones
+  Journal of Machine Learning Research, 12:1655–1695,                     sliding under asymmetrical friction. In Nordtrib 2012,
+  2011.                                                                   15th Nordic Symposium on Tribology, 12-15 June 2012,
+[Chaslot et al., 2008] G.M.J.B. Chaslot, M.H.M. Winands,                  Trondheim, Norway, 2012.
+  J.W.H.M. Uiterwijk, H.J. van den Herik, and B. Bouzy.                [Nyberg et al., 2013] Harald Nyberg, Sara Alfredson, Sture
+  Progressive strategies for Monte-Carlo tree search. New                 Hogmark, and Staffan Jacobson. The asymmetrical fric-
+  Mathematics and Natural Computation, 4(3):343, 2008.                    tion mechanism that puts the curl in the curling stone.
+[Couëtoux et al., 2011] Adrien Couëtoux, Jean-Baptiste                  Wear, 301(1):583–589, 2013.
+  Hoock, Nataliya Sokolovska, Olivier Teytaud, and Nico-               [Silver et al., 2016] David Silver, Aja Huang, Chris J. Mad-
+  las Bonnard. Continuous upper confidence trees. In                      dison, Arthur Guez, Laurent Sifre, George van den Driess-
+  Learning and Intelligent Optimization, pages 433–445.                   che, Julian Schrittwieser, Ioannis Antonoglou, Veda Pan-
+  Springer, 2011.                                                         neershelvam, Marc Lanctot, Sander Dieleman, Dominik
+[Coulom, 2007] Rémi Coulom. Computing “ELO ratings”                      Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever,
+  of move patterns in the game of go. ICGA Journal,                       Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu,
+  30(4):198–208, 2007.                                                    Thore Graepel, and Demis Hassabis. Mastering the game
+                                                                          of go with deep neural networks and tree search. Nature,
+[Denny, 2002] Mark Denny. Curling rock dynamics: To-                      529(7587):484–489, 01 2016.
+  wards a realistic model. Canadian journal of physics,
+                                                                       [Smith, 2007] Michael Smith. Pickpocket: A computer bil-
+  80(9):1005–1014, 2002.
+                                                                          liards shark. Artificial Intelligence, 171(1617):1069 –
+[Gelly and Silver, 2011] Sylvain Gelly and David Silver.                  1091, 2007.
+  Monte-Carlo tree search and rapid action value estima-               [Watson, 1964] Geoffrey S. Watson. Smooth regression
+  tion in computer go. Artificial Intelligence, 175(11):1856–
+                                                                          analysis. Sankhya: The Indian Journal of Statistics, Se-
+  1875, 2011.
+                                                                          ries A, pages 359–372, 1964.
+[Gelly et al., 2006] Sylvain Gelly, Yizao Wang, Rémi                  [Yamamoto et al., 2015] Masahito Yamamoto, Shu Kato,
+  Munos, and Olivier Teytaud. Modification of UCT with                    and Hiroyuki Iizuka. Digital curling strategy based on
+  patterns in Monte-Carlo go. Research Report RR-6062,                    game tree search. In Computational Intelligence and
+  INRIA, 2006.                                                            Games (CIG), 2015 IEEE Conference on, pages 474–480.
+[Guttman, 1984] Antonin Guttman. R-trees: A dynamic in-                   IEEE, 2015.
+  dex structure for spatial searching, volume 14. ACM,
+  1984.
+[Jensen and Shegelski, 2004] E.T. Jensen and Mark R.A.
+   Shegelski. The motion of curling rocks: Experimen-
+   tal investigation and semi-phenomenological description.
+   Canadian journal of physics, 82(10):791–809, 2004.
+
+
+
+                                                                 696
+

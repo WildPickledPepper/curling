@@ -1,0 +1,456 @@
+{
+  "model_file": "model\\search_distill_tactic_policy.pt",
+  "games": 20,
+  "search_games": 5,
+  "evaluation": {
+    "random": {
+      "games": 20,
+      "avg_score": -0.6,
+      "win_rate": 0.3,
+      "loss_rate": 0.7,
+      "min_score": -3.0,
+      "max_score": 5.0
+    },
+    "scripted": {
+      "games": 20,
+      "avg_score": -2.25,
+      "win_rate": 0.2,
+      "loss_rate": 0.8,
+      "min_score": -5.0,
+      "max_score": 1.0
+    },
+    "model": {
+      "games": 20,
+      "avg_score": 1.0,
+      "win_rate": 0.8,
+      "loss_rate": 0.2,
+      "min_score": -4.0,
+      "max_score": 3.0
+    },
+    "search_rollouts4": {
+      "games": 5,
+      "avg_score": 0.4,
+      "win_rate": 0.4,
+      "loss_rate": 0.6,
+      "min_score": -2.0,
+      "max_score": 4.0
+    },
+    "model_refined_continuous": {
+      "games": 5,
+      "avg_score": 1.0,
+      "win_rate": 0.6,
+      "loss_rate": 0.4,
+      "draw_rate": 0.0,
+      "min_score": -1.0,
+      "max_score": 5.0,
+      "top_k": 3,
+      "candidates": 8,
+      "rollouts": 1,
+      "sweep_rate": 0.65,
+      "tactic_counts": {
+        "draw_center": 18,
+        "curl_right": 8,
+        "curl_left": 7,
+        "occupy": 4,
+        "defense": 1,
+        "guard_left": 1,
+        "freeze": 1
+      },
+      "traces": [
+        {
+          "game": 0,
+          "shots": [
+            {
+              "shot_num": 0,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                -0.09,
+                0.0
+              ],
+              "sweep": 1.333,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 3.333,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 2,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.59
+              ],
+              "sweep": 0.0,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 0.0,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 6.822,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 4.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 4,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.14
+              ],
+              "sweep": 4.822,
+              "search_mean": 2.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 4.822,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 2.822,
+                  "mean": -1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 6.822,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 6,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                3.14
+              ],
+              "sweep": 2.822,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 2.822,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 2.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.59
+                  ],
+                  "sweep": 2.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 8,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                0.045,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 1.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": -1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 10,
+              "action": "curl_left",
+              "shot": [
+                2.84,
+                -0.64,
+                2.69
+              ],
+              "sweep": 6.822,
+              "search_mean": 6.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 6.822,
+                  "mean": 6.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    3.14
+                  ],
+                  "sweep": 0.0,
+                  "mean": 2.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.64,
+                    2.69
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 12,
+              "action": "draw_center",
+              "shot": [
+                2.84,
+                0.045,
+                0.0
+              ],
+              "sweep": 0.0,
+              "search_mean": 3.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.045,
+                    0.0
+                  ],
+                  "sweep": 0.0,
+                  "mean": 3.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.045,
+                    0.0
+                  ],
+                  "sweep": 3.333,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    -0.09,
+                    0.0
+                  ],
+                  "sweep": 1.333,
+                  "mean": -1.0,
+                  "std": 0.0
+                }
+              ]
+            },
+            {
+              "shot_num": 14,
+              "action": "curl_right",
+              "shot": [
+                2.84,
+                0.46,
+                -3.14
+              ],
+              "sweep": 6.822,
+              "search_mean": 4.0,
+              "search_std": 0.0,
+              "top_candidates": [
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.14
+                  ],
+                  "sweep": 6.822,
+                  "mean": 4.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.59
+                  ],
+                  "sweep": 6.822,
+                  "mean": 1.0,
+                  "std": 0.0
+                },
+                {
+                  "shot": [
+                    2.84,
+                    0.46,
+                    -3.14
+                  ],
+                  "sweep": 0.0,
+                  "mean": 1.0,
+                  "std": 0.0
+                }
+              ]
+            }
+          ],
+          "score": 1,
+          "final_position": [
+            2.755,
+            5.441,
+            3.217,
+            4.658,
+            1.96,
+            6.04,
+            2.654,
+            6.004,
+            2.04,
+            5.753,
+            1.496,
+            4.991,
+            2.534,
+            5.57,
+            1.718,
+            4.654,
+            2.573,
+            5.718,
+            3.124,
+            5.354,
+            2.324,
+            5.359,
+            1.986,
+            4.317,
+            2.841,
+            5.265,
+            2.047,
+            4.608,
+            2.482,
+            4.986,
+            2.027,
+            3.497
+          ]
+        }
+      ]
+    }
+  },
+  "elapsed_sec": 5.809749364852905
+}

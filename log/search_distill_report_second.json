@@ -1,0 +1,59 @@
+{
+  "config": {
+    "games": 1500,
+    "rollouts": 8,
+    "epochs": 30,
+    "batch_size": 512,
+    "lr": 0.001,
+    "eval_games": 1000,
+    "seed": 20260705,
+    "player": "second",
+    "model_file": "model/search_distill_tactic_policy_second.pt",
+    "report_file": "log/search_distill_report_second.json"
+  },
+  "player_is_init": false,
+  "samples": 12000,
+  "training_metrics": {
+    "loss": 2.846990315755208,
+    "action_acc": 0.28675
+  },
+  "evaluation": {
+    "random": {
+      "games": 1000,
+      "player_is_init": false,
+      "avg_score": -0.003,
+      "win_rate": 0.524,
+      "loss_rate": 0.476,
+      "min_score": -6.0,
+      "max_score": 6.0
+    },
+    "scripted": {
+      "games": 1000,
+      "player_is_init": false,
+      "avg_score": -7.963,
+      "win_rate": 0.0,
+      "loss_rate": 1.0,
+      "min_score": -8.0,
+      "max_score": -3.0
+    },
+    "model": {
+      "games": 1000,
+      "player_is_init": false,
+      "avg_score": 2.053,
+      "win_rate": 0.933,
+      "loss_rate": 0.067,
+      "min_score": -5.0,
+      "max_score": 8.0
+    },
+    "search_rollouts4": {
+      "games": 200,
+      "player_is_init": false,
+      "avg_score": 2.385,
+      "win_rate": 0.925,
+      "loss_rate": 0.075,
+      "min_score": -2.0,
+      "max_score": 8.0
+    }
+  },
+  "elapsed_sec": 476.46565532684326
+}

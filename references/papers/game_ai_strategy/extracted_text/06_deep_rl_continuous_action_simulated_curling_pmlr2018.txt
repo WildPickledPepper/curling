@@ -1,0 +1,666 @@
+                Deep Reinforcement Learning in Continuous Action Spaces:
+                     a Case Study in the Game of Simulated Curling
+
+
+                            Kyowoon Lee * 1 Sol-A Kim * 1 Jaesik Choi 1 Seong-Whan Lee 2
+
+
+                         Abstract                                  1992), and othello (Buro, 1999). Recently, deep convolu-
+      Many real-world applications of reinforcement                tional neural networks (CNNs) (LeCun & Bengio, 1998)
+      learning require an agent to select optimal actions          have achieved super-human performance in deterministic
+      from continuous spaces. Recently, deep neural                games with perfect information, such as Atari games (Mnih
+      networks have successfully been applied to games             et al., 2015) and Go (Silver et al., 2016; 2017). In the latter
+      with discrete actions spaces. However, deep neu-             game, board positions are passed through the convolutional
+      ral networks for discrete actions are not suitable           layers as a 19-by-19-square image. These CNNs effectively
+      for devising strategies for games where a very               reduce the depth and breadth of the search tree by evaluat-
+      small change in an action can dramatically affect            ing the positions using a value network and by sampling
+      the outcome. In this paper, we present a new self-           actions using a policy network. However, in a continuous
+      play reinforcement learning framework which                  action space, the space needs to be discretized. Determin-
+      equips a continuous search algorithm which en-               istic discretization would cause a strong bias in the policy
+      ables to search in continuous action spaces with             evaluation and the policy improvement. Thus, such deep
+      a kernel regression method. Without any hand-                CNNs for large, non-convex continuous action spaces are
+      crafted features, our network is trained by super-           not directly applicable.
+      vised learning followed by self-play reinforce-              To solve this issue, we conduct a policy search with an ef-
+      ment learning with a high-fidelity simulator for             ficient stochastic continuous action search on top of policy
+      the Olympic sport of curling. The program trained            samples generated from a deep CNN. Our deep CNN still
+      under our framework outperforms existing pro-                discretizes the state space and the action space. However, in
+      grams equipped with several hand-crafted features            the stochastic continuous action search, we lift the restric-
+      and won an international digital curling competi-            tion of the deterministic discretization and conduct a local
+      tion.                                                        search procedure in a physical simulator with continuous
+                                                                   action samples. In this way, the benefits of both deep neural
+                                                                   networks (i.e., learning the global structure) and physical
+1. Introduction                                                    simulators (i.e., finding precise continuous actions) can be
+                                                                   realized.
+Learning good strategies from large continuous action
+spaces is important for many real-world problems includ-           More specifically, we design a deep CNN called the policy-
+ing learning robotic manipulations and playing games with          value network, which gives the probability distribution of
+physical objects. In particular, when an autonomous agent          actions and expected reward given an input state. The policy-
+interacts with physical objects, it is often necessary to han-     value network is jointly trained to find an optimal policy
+dle large continuous action spaces.                                and to estimate the reward given an input instance. During
+                                                                   the supervised training, the policy subnetwork is directly
+Reinforcement learning methods have been extensively ap-
+                                                                   learned from the moves of a reference program in each sim-
+plied to build intelligent agents that can play games such
+                                                                   ulated run of games. The value subnetwork is learned using
+as chess (Campbell et al., 2002), checkers (Schaeffer et al.,
+                                                                   d-depth simulation and the bootstrapping of the prediction
+  *
+   Equal contribution 1 Department of Computer Science and         to handle a high variance of a reward obtained from a se-
+Engineering, Ulsan National Institute of Science and Technology,   quence of stochastic moves. The network is then trained
+Ulsan, Republic of Korea 2 Department of Brain and Cognitive       further from the games of self-play using kernel regression
+Engineering, Korea University, Seoul, Republic of Korea. Corre-    to precisely handle continuous spaces and actions. This
+spondence to: Jaesik Choi <jaesik@unist.ac.kr>.
+                                                                   process allows actions in the continuous domain to be ex-
+Proceedings of the 35 th International Conference on Machine       plored and adjusts the policy and the value in consideration
+Learning, Stockholm, Sweden, PMLR 80, 2018. Copyright 2018         of uncertainty of the execution.
+by the author(s).
+                                        Deep Reinforcement Learning in Continuous Action Spaces
+
+
+
+
+Figure 1. The architecture of our policy-value network. As input, a feature map (Table 2 in the supplementary material) is provided from
+the state information. During the convolutional operations, the layers’ width and height are fixed at 32x32 (the discretized position of
+the stones) without pooling. The details of the layer information are provided described in Figure 2. We train the policy and the value
+functions in a unified network. The output of the policy head is the probability distribution of each action. The output of the value head is
+the probability distribution of the final scores [-8,8].
+
+
+We verify our framework with the sport of curling. Curling,              for the policy and value networks to train the networks
+often called chess on ice, has been viewed as the most                   faster.
+intellectually challenging Olympic sport due to its large
+                                                                         In the domain of curling, several algorithms have been pro-
+action space and complicated strategies. Typically, curling
+                                                                         posed. As a way of dealing with continuous action space,
+players put a stone in a large area of about 5m by 30m,
+                                                                         game tree search methods (Yamamoto et al., 2015) have dis-
+with precise interactions which are typically less than 10 cm
+                                                                         cretized continuous action space. The evaluation functions
+among stones. When discretized, the play area is divided
+                                                                         are designed based on the domain knowledge and rules of
+into a 50x300 grid. Asymmetric uncertainty is added to the
+                                                                         the game. With considering given execution uncertainty, the
+final location to which a stone is delivered.
+                                                                         action value is calculated as the average of the neighboring
+The program trained under our framework outperforms state-               values.
+of-the-art digital curling programs, AyumuGAT’17 (Ohto &
+                                                                         A MCTS method called KR-UCT has been successfully
+Tanaka, 2017) and Jiritsukun’17 (Yamamoto et al., 2015).
+                                                                         applied to continuous action space (Yee et al., 2016). KR-
+Our program also won in the Game AI Tournaments (GAT-
+                                                                         UCT exhibits effective selection and expansion of nodes
+2018) (Ito).
+                                                                         using neighborhood information by estimating rewards with
+                                                                         kernel regression (KR) and kernel density estimation (KDE)
+2. Related Work                                                          in continuous action spaces. Given an action, the upper
+                                                                         confidence bound (Lai & Robbins, 1985) of the reward is
+In the game of go, AlphaGo Lee, the successor version of
+                                                                         estimated based on the values nearby. KR-UCT can be
+AlphaGo Fan (Silver et al., 2016), defeated Lee Sedol, the
+                                                                         regarded as a specialized exploration of pseudo-count based
+winner of 18 international titles. Although Go has a finite,
+                                                                         approaches (Bellemare et al., 2016).
+discrete action space, its depth of the play creates complex
+branches. Based on the moves of human experts, two neural                To handle continuous action space in the bandit problem,
+networks in AlphaGo Lee are trained for the policy and                   several algorithms have been proposed. For example, hierar-
+value functions. AlphaGo Lee uses a Monte Carlo tree                     chical optimistic optimization (HOO) (Bubeck et al., 2008)
+search (MCTS) for policy improvement.                                    starts by creating a cover tree and recursively divides the
+                                                                         action space into smaller candidate ranges at each depth. A
+AlphaGo Zero (Silver et al., 2017), which is trained via self-
+                                                                         node in the cover tree is considered as arms of the sequential
+play without any hand-crafted knowledge, has demonstrated
+                                                                         bandit problem. The most promising node is exploited to
+a significant improvement in performance. AlphaGo Zero
+                                                                         create estimates of finer granularity, and regions which have
+is expected to win more than 99.999% of games against
+                                                                         not been sampled sufficiently are explored further.
+AlphaGo Lee.1 AlphaGo Zero uses a unified neural network
+   1
+                                                                         An analysis of the dynamics of curling is important to build
+       Their difference in elo rating is greater than 2,000.
+                                                                         an accurate digital curling program. For example, the fric-
+                                    Deep Reinforcement Learning in Continuous Action Spaces
+
+tion coefficients between the curling stones and the ice curl-   P OLICY E VALUATION : L EARNING VALUE F UNCTIONS
+ing sheet have been analyzed (Lozowski et al., 2015), while
+                                                                 The value function predicts the outcome from state s of
+pebbles, the small frozen droplets of water across the play
+                                                                 games played using policy p for both players,
+sheet, have also been taken into account (Maeno, 2014).
+Unfortunately, modeling the changes in friction on the ice                     v(s) = E[r(s)|st = s, at ∼ p].               (3)
+surface is not yet possible. Thus, in general, digital Curling
+simulators assume a fixed friction coefficient with noise        The value function is approximated by the value estimator
+generated from a predefined function (Ito & Kitasei, 2015;       vθ (s) with parameters θ. The value estimator is trained
+Yee et al., 2016; Ahmad et al., 2016).                           by state-reward pairs (s, r(s)) using stochastic gradient de-
+The physical behavior of the stones has been modeled using       scent to minimize the mean squared error (MSE) between
+physics simulation engines such as Box2D (Parberry, 2013),       the predicted regression value vθ (s) and the corresponding
+Unity3D (Jackson, 2015) and Chipmunk 2D. Important pa-           outcome r(s),
+rameters including friction coefficients and noise generation
+                                                                                        ∂vθ (s)
+functions are trained from games between professional play-                     ∆θ ∝            (r(s) − vθ (s)).            (4)
+ers (Yee et al., 2016; Ito & Kitasei, 2015; Heo & Kim, 2013).                             ∂θ
+In this paper, we use the same parameters used in a digital
+curling competition (Ito & Kitasei, 2015).                       3.2. Monte Carlo Tree Search
+                                                                 A Monte Carlo tree search (MCTS) (Browne et al., 2012;
+3. Background                                                    Coulom, 2007a; Kocsis & Szepesvári, 2006) is a tree search
+                                                                 algorithm for decision processes for finite-horizon tasks. It
+In this section, we briefly overview the models and algo-        iteratively analyzes and expands nodes (states) of the search
+rithms used in this paper.                                       tree based on random sampling (actions) of the search space.
+                                                                 From a root to a leaf node, it selects an action towards most
+3.1. Policy Iteration                                            promising moves based on a selection function. At the leaf
+                                                                 node, the node is expanded by adding a new leaf to the
+Policy iteration is an algorithm that generates a sequence of
+                                                                 tree. Then, a rollout policy plays a playout until reaching a
+improving policies, by alternating between policy evaluation
+                                                                 terminal state to obtain reward. Then, the obtained reward
+and policy improvement. In large action spaces, approxima-
+                                                                 is used to update information of the selected nodes from the
+tion is necessary to evaluate each policy and to determine
+                                                                 root to the leaf.
+its improvement.
+                                                                 Upper confidence bounds applied to trees (UCT) (Kocsis
+P OLICY I MPROVEMENT: L EARNING ACTION P OLICY                   & Szepesvári, 2006) is a commonly used MCTS algorithm
+                                                                 using an upper confidence bound (UCB) selection function.
+Action policy pσ (a|s) can be trained using supervised learn-
+                                                                 It is computed by the Chernoff-Hoeffding bound:
+ing. This action policy outputs a probability distribution
+over all eligible moves a. The policy is trained on randomly                                    s    P
+sampled state-action pairs (s, a) using stochastic gradient                                       log b nb
+                                                                                arg max v̄a + C            ,           (5)
+ascent to maximize the likelihood of the expert action a                             a               na
+being selected in state s,
+                                                                 which is one-sided confidence interval on the expected value
+                                                                 v̄a with the number of visits na for each action a. The
+                            ∂ log pσ (a|s)
+                   ∆σ ∝                    .              (1)    exploration-exploitation tradeoff is controlled by the con-
+                                 ∂σ                              stant C.
+The action policy is trained further by using policy gradient
+                                                                 3.3. Kernel Regression
+reinforcement learning (RL) (Sutton et al., 1999). The action
+policy is then updated at each time step t by stochastic         Kernel regression is a non-parametric estimator which uses
+gradient ascent in the direction that maximizes the expected     a kernel function as a weight to estimate the conditional
+outcome:                                                         expectation of a random variable. Given the choice of kernel
+                        ∂ log pρ (at |st )                       K and data set (xi , yi )ni=0 , kernel regression is defined as
+                ∆ρ ∝                       r(st ),        (2)    follows:
+                              ∂ρ                                                             Pn
+                                                                                                     K(x, xi )yi
+                                                                                E[y|x] = Pi=0     n              .           (6)
+where r(st ) is the return, which is the discounted sum of                                        i=0 K(x, xi )
+
+rewards for one whole episode from the perspective of the        Here, kernel K is a function which defines the weight given
+current player at time step t.                                   a pair of two points. The denominator of kernel regression
+                                      Deep Reinforcement Learning in Continuous Action Spaces
+
+is related to kernel density estimation which is also a non-
+parametric method for estimating the probability density
+function of aPrandom variable. The kernel density is defined
+                n
+by W (x) = i=0 K(x, xi ).
+One typical kernel function is the Gaussian probability den-
+sity which is defined as follows:
+
+                  exp − 12 (x − x0 )T Σ−1 (x − x0 )
+                                                   
+            0
+     K(x, x ) =              p                       .   (7)
+                                (2π)k |Σ|
+
+4. Deep Reinforcement Learning in
+   Continuous Action Spaces
+4.1. The Policy-Value Network
+Recently, deep CNNs have produced remarkable perfor-
+mances in playing Atari games (Mnih et al., 2015) and Go
+(Silver et al., 2016). We employ a similar architecture for
+curling. We pass the position of the stones on the ice sheet
+as a 32x32 image and use convolutional layers to construct a
+representation of the position. We use these neural networks       Figure 2. A detail description of our policy-value network. The
+to reduce the effective depth and breadth of the search tree       shared network is composed of one convolutional layer and nine
+evaluating the position using a value network and sampling         residual blocks. Each residual block (explained in b) has two
+actions using a policy network as shown in Figure 1.               convolutional layer with batch normalization (Ioffe & Szegedy,
+                                                                   2015) followed by the addition of the input and the residual block.
+T HE S HARED L AYERS                                               Each layer in the shared network uses 3x3 filters. The policy head
+                                                                   has two more convolutional layers, while the value head has two
+Our policy-value network takes the following inputs; the           fully connected layers on top of a convolutional layer. For the
+stones’ location, the order to tee2 , the number of shots, and     activation function of each convolutional layer, ReLU (Nair &
+flags to indicate whether each grid cell inside of the house3      Hinton) is used.
+is occupied by any stone. After the first convolutional block,
+the nine residual blocks (He et al., 2016) follow, which are
+shared during training procedure.
+                                                                   spectively the maximum and minimum scores. The value
+                                                                   head has two fully connected layers on top of a convolu-
+T HE P OLICY H EAD
+                                                                   tional layer (a total of 20 convolutional layers and 2 fully
+The policy head pθ outputs p which is the probability distri-      connected layers). The last layer of the value head out-
+bution of actions for selecting the best shot out of 32x32x2       puts a vector v, the probability distribution of 17 different
+discretized actions (clockwise or counter-clockwise spin).         outcomes [−8, 8] using the softmax activation function.
+In supervised training, the network is trained to follow ac-
+tions of the reference program AyumuGAT’16 (Section 6.2).          4.2. Continuous Action Search
+In reinforcement learning (self-play) the network is trained
+                                                                   When the action space is not discretized, it is difficult to
+to follow the actions generated by Algorithm 1. The policy
+                                                                   specify or select an action from the huge continuous space.
+head has two more convolutional layers (to make a total 21
+                                                                   When the action space is discretized, it could lead to a signif-
+convolutional layers) where ReLU activation is used. The
+                                                                   icant loss of information. Our search algorithm starts from
+best policy is trained and selected in the last layer using the
+                                                                   actions initialized by the policy network in the discretized
+softmax activation function.
+                                                                   space. It then explores and evaluates actions with the value
+                                                                   network using an Upper Confidence Bound (UCB) in the
+T HE VALUE H EAD
+                                                                   continuous space.
+The value head vθ outputs the probability distribution of
+                                                                   The search procedure of our algorithm follows the MCTS
+each score at the conclusion of each end, in which both
+                                                                   algorithm (selection, expansion, simulation, and backprop-
+teams throw eight stones in turn. Thus, +8 and -8 are re-
+                                                                   agation), specifically UCT (Kocsis & Szepesvári, 2006),
+   2                                                               which uses the UCB as the selection function. For infor-
+       The center point of the house.
+   3
+       The three concentric circles where points are scored.       mation sharing between actions, we used kernel regression
+                                  Deep Reinforcement Learning in Continuous Action Spaces
+
+Algorithm 1 KR-DL-UCT                                             Expansion Before expanding a node, we used progressive
+ 1: pθ ← the policy network                                       widening (Coulom, 2007b; Yee et al., 2016) (line 9) to over-
+ 2: vθ ← the value network                                        come the problem of vanilla UCT in a large action space
+ 3: st ← the current state                                        (e.g. continuous space), in which exploring all possible
+ 4: At ← a set of visited actions in st                           actions results in a shallow search. With this approach, a
+ 5: expanded ← false                                              new node is expanded only when existing nodes are visited
+ 6: if st is terminal then                                        a sufficient number of times.
+ 7:    return Score(st ), false       q                           From the selected action at , actions are sampled that satisfy
+                                          log Σb∈At W (b)
+ 8: at ← arg maxa∈At E[v̄a |a] + C             W (a)              the inequality ‘K(at , a) > γ’ and an action which mini-
+                                                                  mizes W (a) is selected from among these (line 13). In our
+      qP
+ 9: if     a∈At na < |At | then
+                                                                  implementation, we generate samples from the Gaussian
+10:    st+1 ← TakeAction(st , at )                                kernel by setting the mean to at with a specified variance, in-
+11:       ward, expanded ← KR-DL-UCT(st )
+       re ~                                                       stead of setting the hard bound γ. This sampling allows our
+12: if not expanded then                                          algorithm to explore and search for actions in the continuous
+13:    a0t ← arg minK(at ,a)>γ W (a)                              space.
+14:    At ← At ∪ a0t
+15:    st+1 ← TakeAction(st , a0t )                               TakeAction(st , at ) requests the curling simulator to gener-
+16:
+                        (i)        (i)
+      At+1 ← ∪ki=1 {ainit } s.t. ainit ∼πa|st+1 // Policy net     ate the next state by delivering a stone at given the current
+17:     ward ← vθ (st+1 |st , a0t ) // Value net
+      re ~                                                        state st , and then the simulator returns the position of all
+    vat ← na 1+1 (nat ~vat + re ~
+18: ~                          ward)                              remaining stones (line 10, 15).
+            t
+19: nat ← nat + 1                                                 For all expanded states, including the root, our algorithm
+20: return re ~
+             ward, true                                           initializes the k actions (line 16) for each state with the
+                                                                  policy πa ,
+                                                                                               p(a|st+1 )1/τ
+based UCT (KR-UCT) (Yee et al., 2016). In KR-UCT, the                             πa|st+1 =                   .           (10)
+                                                                                             Σb p(b|st+1 )1/τ
+expected value and the number of visits is estimated by
+kernel density estimation and kernel regression respectively.     With the temperature parameter τ , the k initial actions are
+             P                                                    sampled using the unbiased distribution πa|st+1 .
+                 K(a, b)v̄b nb
+            b∈At
+                                        X                         Simulation To evaluate the initialized or expanded states,
+ E(v̄a |a)= P                  , W (a)=      K(a, b)nb (8)
+                   K(a, b)nb                                      our value network vθ is used instead of a simulation for sev-
+                                         b∈At
+             b∈At                                                 eral depth following a default policy (e.g. random policy).
+For the selection, this information sharing enables our model     Without any domain knowledge (i.e., rule-based strategies),
+to make decisions by considering the result of similar ac-        this makes the search procedure faster (i.e., it does not need
+tions. By sampling actions within the execution uncertainty       to simulate for a certain depth) than using hand-crafted func-
+of the selected action at and choosing less explored space,       tions. For the given new state st+1 , a vector of probabilities
+an action can be selected to lead an effective expansion.         is returned with a score ranging between [-8,8] (line 17). At
+The details of Algorithm 1 with respect to the steps for an       the terminal state, the score is measured and returned as an
+MCTS is described below.4                                         one-hot vector (line 6-7).
+Selection As a selection function, our algorithm uses a vari-     Backpropagation With the new value vector reward, our
+ation of the UCB formula (line 8). The scores and the             algorithm updates vat and nat along the selected path (lines
+number of visits for each node are estimated using the infor-     18-19).
+mation from already visited sibling nodes b which are in At .
+They are denoted by E(v̄a |a) and W (a) respectively. The         5. Learning Pipeline
+expected probability distribution of values v̄a is weighted by
+the winning percentage, which is described in Section 5.3.        5.1. Supervised Learning
+For an one-end game, which is used for self-play games, the
+                                                                  During supervised training, we jointly train our policy-value
+expected value of the distribution would be v̄a . For the final
+                                                                  network using 0.4 million state-action pairs (s, a) from the
+selection, the algorithm chooses the most visited node and
+                                                                  reference program (Section 6.2). The policy subnetwork
+selects the corresponding action.
+                                                                  is directly learned from a move a at state s in the training
+                    a∗ = arg max W (a).                     (9)   data. Instead of the final game outcome (win or lose), the
+                              a∈At
+                                                                  value subnetwork is learned by d-depth simulations and
+  4
+    Source codes are available at https://github.com/             bootstrapping of the prediction to handle the high variance
+leekwoon/KR-DL-UCT                                                in rewards resulting from a sequence of stochastic moves.
+                                       Deep Reinforcement Learning in Continuous Action Spaces
+
+Thus, our framework does not use any hand-crafted rollout                regression, while π t represents the probability distribution
+policy.                                                                  of actions and is proportional to the estimated visit counts
+                                                                         based on kernel density estimation, πa ∝ W (a)1/τ , where
+We sample m state-action pairs (s, a) from the training
+                                                                         τ is a temperature parameter.
+data. For each state-action pair (st , at ), we generate d-depth
+state st+d randomly by considering execution uncertainty on              The parameters θ of the policy-value network are initialized
+at+d−1 only. Using the value subnetwork, st+d is evaluated               by supervised learning (Section 5.1) and continually updated
+and prediction zt is used for learning the value.                        by data (s, π, z) sampled uniformly (with a fixed size) at
+                                                                         random from the most recent history of the self-play. Here,
+The policy-value network fθ (s) is adjusted to maximize the
+                                                                         we use the same loss function as in supervised learning.
+similarity of two pairs of vectors (p, v) and (π, z), where π
+and z are the policy and the value of the reference program.
+To maximize the similarity of the neural network pair (p, v)             5.3. Learning Long Term Strategies
+to the pair (π, z), we use stochastic gradient descent on the            The game of curling differs from typical turn-based two
+multi-task loss function l, which sums the cross-entropy                 player games like Go and chess, because curling usually
+losses with a batch size of 256 examples, a momentum of                  consists of eight or ten rounds called ends. The winner
+0.9, and a L2 regularization parameter c of 0.0001.                      is decided based on the accumulated scores after finishing
+                                                                         all ends. Thus, a strategy optimized for one-end games
+                           (p, v)=fθ (s),                        (11)
+                                                                         (8 turns per team) would not be the best strategy to win a
+                       T           T                 2                   multi-end game (Ahmad et al., 2016). Both the position and
+                l=−z log v−π log p + c||θ|| .                    (12)
+                                                                         other features, such as the number of remaining ends and
+Here, we set πa = 1 for the action a selected by the refer-
+                                                                         the difference between the accumulated scores, should be
+ence program. We find that eliminating a part of the action
+                                                                         considered.
+space beyond the backline5 was very effective in learning
+strong shots, like takeout6 shots. Combining the policy and              To select the best strategy in multi-end games, we construct
+value networks in the policy-value network (a multi-task                 a winning percentage table, WP table, which is updated
+learning scheme) was also effective in improving perfor-                 using data from self-play games. The table is consist of two
+mance. The network was trained for roughly 100 epochs.                   entries; the number of remaining ends n, and the difference
+The learning rate was initialized at 0.01 and reduced twice              between the accumulated scores until the current end δ. For
+prior to termination.                                                    example, Pwin (n=1, δ= − 1) is the winning probability
+                                                                         (for the team who shoots first of the end) when one end
+5.2. Self-Play Reinforcement Learning                                    remains and the difference of the accumulated scores is
+                                                                         -1 (i.e., the team is down by one point). Using an one-
+Policy improvement starts with a sample policy followed by               end score distribution and Pwin (n, δ), Pwin (n+1, δ) can
+executions of the MCTS using the proposed KR-DL-UCT                      be computed iteratively.
+algorithm. The searched policy is then projected back into
+the function space of the policy subnetwork.                             The expected winning percentage of multi-end games is
+                                                                         efficiently computed from the WP table and the probability
+The outcomes of self-play games are also projected back                  distribution of the one-end score [−8, 8].
+into the function space of the value subnetwork. These
+projection steps are achieved by training the policy-value
+network parameters to match the search probabilities and                 6. Experimental Results
+self-play game outcomes.                                                 6.1. Simulated Curling
+Classification based modified policy iteration (CBMPI)                   Curling is a two-team, zero-sum game. The goal is to throw
+(Scherrer et al., 2015) is severely limited in evaluating pol-           a stone down a sheet of ice toward the house (the scoring
+icy in continuous action spaces because CBMPI cannot be                  area). Games are divided into rounds called ends, in which
+used unless the action set is discretized. We handle this                each team alternates throwing a total of eight stones each.
+problem by exploring actions using a physics simulator in                When each end finishes, the team with the stone closest to
+the continuous action space.                                             the center of the house, called the tee, scores points. The
+For each time-step t in self-play games, with root state                 number of points they receive is calculated by the number
+st , our KR-DL-UCT returns two vectors, zt and π t . zt                  of stones in the house those are closer to the tee than any
+represents the estimated probability distribution of the game            opponent stone.
+score obtained from similar actions computed by kernel                   When curling is played on an actual ice sheet, deciding the
+   5
+       A line beyond the house area.                                     best strategy given the game situation is difficult because
+   6
+       An action to make a stone that hits another stone to remove it.   the ice conditions continuously change and each player has
+                                      Deep Reinforcement Learning in Continuous Action Spaces
+
+                                              F IRST PLAY                    S ECOND PLAY                  T OTAL
+            P ROGRAM                   W IN      D RAW L OSE             W IN D RAW L OSE           W INNING P ERCENTAGE
+            GCCSGAT’17                  53        25        22           73      19        8             74.0 ± 6.22%
+            AYUMU GAT’16                56         8        36           69       8       23             66.5 ± 6.69%
+            AYUMU GAT’17                43        15        42           65      17       17             62.3 ± 6.87%
+            J IRITSUKUN GAT’16          80         4        16           87       7        6             86.3 ± 4.88%
+            J IRITSUKUN GAT’17          38        12        50           58      18       24             55.5 ± 7.04%
+
+
+Table 1. The 8-end game results for KR-DRL-MES against other programs alternating the opening player each game. The matches are
+held by following the rules of the latest GAT competition.
+
+
+different characteristics.                                                in the policy-value networks in the supplementary material.
+In this paper, we use simulated curling software (Ito & Kita-
+sei, 2015) which assumes a stationary curling sheet. Thus,                6.4. Settings
+ice conditions are assumed to remain unchanged, the sweep-                Our first algorithm, kernel regression-deep learning (KR-
+ing7 is not considered, and asymmetric Gaussian noise is                  DL), is trained as described in Section 5.1. Our second
+added to the every shot. The simulator is implemented using               algorithm, kernel regression-deep reinforcement learning
+the Box2D physics library, which deals with the trajectory                (KR-DRL), follows the learning pipeline in Section 5.2.
+of the stones and their collisions.                                       During self-play, each shot is selected after 400 simulations.
+                                                                          For a continuous search, we set C = 0.1 and k = 20. For
+6.2. Dataset                                                              the first three shots during which the FGZ rule is applied,
+                                                                          we set τ = 1 to allow for more stones to be in playground
+We use data from the public program AyumuGAT’16 (Ohto
+                                                                          during an end. Otherwise, we set τ = 0.33 to follow the
+& Tanaka, 2017), which is based on a high-performance
+                                                                          promising actions with high probability.
+MCTS algorithm and a champion program of the Game AI
+Tournaments digital curling championship in 2016 (GAT-                    During a week of data collection, using 5 GPUs, 5 million
+2016) (Ito).                                                              game positions were generated and KR-DRL, initialized
+                                                                          by KR-DL, was continually updated using data (s, π, z)
+6.3. Domain Knowledge                                                     sampled uniformly at random from the most recent one
+                                                                          million positions during self-play. Finally, the WP table
+The following is the only domain knowledge we used.                       (Section 5.3) generated from KR-DRL self-play is used for
+  • In a game of curling, there is an official rule called the            our third algorithm, kernel regression-deep reinforcement
+    free-guard zone8 (FGZ) rule.9 To handle this rule, we                 learning-multi ends strategy (KR-DRL-MES).
+    encode the number of turns for each end.                              We compare our proposed algorithms with vanilla KR-UCT
+  • The input features describing the position of the stones              and programs which received first, second prize and third
+    are represented as a 32x32 image. To overcome the                     prize in the 2016 and 2017 GAT (Ito). For the vanilla KR-
+    loss of information from the discretization, we add                   UCT, we used the same hyperparameter with 1,600 simu-
+    additional features for each stone: whether the stone is              lation as in (Yee et al., 2016). Unfortunately, the generator
+    in the house and their order in terms of their distance               that creates list of promising shot from particular state is
+    to the center of the house.                                           not publicly available, we used different generator based on
+  • The strategy in game of curling is invariant under re-                handmade simple policy function (Ohto & Tanaka, 2017),
+    flection; thus, we utilize this knowledge to augment                  such as drawing shot to the center of house, or hitting the
+    the data.                                                             opponent stone for the rollout policy and initialization of
+Any form of domain knowledge beyond the information                       candidate actions. All the matches held with the rules of the
+listed above is not used. We summarize input features used                last GAT competition: all programs are allowed about 3.4
+                                                                          seconds computation time per move and play 8-end game
+    7
+      An activity, brushing the ice surface after throwing a stone, to    with known Gaussian execution uncertainty.
+adjust stone’s trajectory close to the intended one.
+    8
+      Area between the tee line and the hog line which the stone
+must completely cross to be considered in play, excluding the             6.5. Results
+house.
+    9
+      The rule states that an opponent’s rock resting in the free-
+                                                                          First, to demonstrate the significance of our work, we com-
+guard zone cannot be removed from play until the first four rocks         pare the performance of a program trained by our proposed
+of an end have been played.                                               algorithm (KR-DL-UCT) with a baseline program trained
+                                                              Deep Reinforcement Learning in Continuous Action Spaces
+
+                                                                                                                      1300
+                           67.5                                                        KR-DL-UCT
+                                                                                       DL-UCT                         1200
+                           65.0
+                                                                                                                      1100
+
+
+
+
+  Winning Percentage (%)
+                           62.5                                                                                       1000
+
+
+                                                                                                         Elo rating
+                           60.0                                                                                       900
+
+                           57.5                                                                                       800
+
+                           55.0                                                                                       700
+
+                           52.5                                                                                       600
+
+                                                                                                                      500
+                           50.0
+                                                                                                                                  CT   AT         -D
+                                                                                                                                                      L     6
+                                                                                                                                                            '1
+                                                                                                                                                                       7
+                                                                                                                                                                      '1
+                                                                                                                                                                                7
+                                                                                                                                                                                '1    -D       AT             ES
+                                                                                                                              -U          '1              AT        AT        AT        RL        '1      -M
+                                                                                                                                             6   KR                                                  7
+                           47.5                                                                                              KR
+                                                                                                                                  uk                   uG        SG        uG        KR
+                                                                                                                                                                                          uk             RL
+                                                                                                                                     un                        CC                            un      -D
+                                  0   1              2             3               4               5                                    G         Ay                  Ay                        G   KR
+                                                                                                                              its                    um     G            um           its
+                                          The number of generated data (million)                                             jir                                                     jir
+
+
+
+
+Figure 3. Learning curve for KR-DL-UCT and DL-UCT. The plot                                            Figure 4. Elo rating and winning percentages of our models and
+shows the winning percentages of 2,000 two-end games against                                           GAT rankers. Each match has 200 games (each program plays 100
+DL-UCT with supervised learning only, 1,000 games as the first                                         pre-ordered games), because the player which has the last shot (the
+player and 1,000 games as the second player respectively. We                                           hammer shot) in each end would have an advantage. Programs
+compute the winning percentages by increasing the number of                                            colored blue are our proposed programs.
+training shots.
+
+
+
+by UCT only (DL-UCT).
+We initialize both models with the supervised learning and
+then train further from shots of self-play games with two
+                                                                                                       features. Our first model, KR-DL, trained using supervised
+different algorithms. For the case of DL-UCT, each shot is
+                                                                                                       learning from the shots of AyumuGAT’16 does not perform
+selected with a constant (Silver et al., 2016) determining
+                                                                                                       better than the reference program. KR-DRL, trained fur-
+the level of exploration (Cpuct = 1.0). We evaluate the
+                                                                                                       ther from self-play reinforcement learning, outperforms the
+programs with the winning percentages of two-end games
+                                                                                                       reference program and other recently successful programs.
+against DL-UCT with supervised learning only. We also
+                                                                                                       KR-DRL-MES, equipped with long-term strategy, achieves
+compared programs by increasing the number of training
+                                                                                                       the state-of-the-art performance.
+shots generated by self-play games.
+                                                                                                       We play games between our KR-DRL-MES and notable
+Figure 3 shows the performance of KR-DL-UCT compared
+                                                                                                       programs. Table 1 presents details of the match results. Our
+to DL-UCT. We could observe that KR-DL-UCT outper-
+                                                                                                       KR-DRL-MES wins against AyumuGAT’16 and Ayumu-
+forms DL-UCT even without the self-play RL. With the
+                                                                                                       GAT’17 by a significant margin. Only JiritsukunGAT’17
+supervised training only, KR-DL-UCT wins 53.23% against
+                                                                                                       which uses a deep neural network and hand-crafted features,
+DL-UCT. KR-DL-UCT expedites the training procedure by
+                                                                                                       shows a similar level of performance but KR-DRL-MES is
+improving the overall performance compared to DL-UCT
+                                                                                                       still the victor.
+under the self-play RL framework. After gathering 5 mil-
+lion shots from self-play, KR-DL-UCT wins 66.05% which                                                 In the supplementary material, we provide a video of a game
+is significantly higher than the winning percentage of DL-                                             played between KR-DRL-MES and JiritsukunGAT’17.
+UCT.
+Second, to evaluate our algorithm, we run an internal match                                            7. Conclusion
+among our proposed algorithm and other programs follow-
+                                                                                                       We present a new framework which incorporates a deep
+ing GAT-2017 rules. Each algorithm played an equal num-
+                                                                                                       neural network for learning game strategy with a kernel-
+ber of games with and without the hammer shot against each
+                                                                                                       based Monte Carlo tree search from a continuous space.
+opponent in the first end.
+                                                                                                       Without the use of any hand-crafted feature, our policy-
+Figure 4 presents the Elo ratings of the programs trained                                              value network is successfully trained using supervised learn-
+by our framework (KR-DL, KR-DRL and KR-DRL-MES)                                                        ing followed by reinforcement learning with a high-fidelity
+and existing programs (KR-UCT, JiritsukunGAT’16, Ayu-                                                  simulator for the Olympic sport of curling. The program
+muGAT’16, GCCSGAT’17, AyumuGAT’17 and Jiritsukun-                                                      trained under our framework outperforms existing programs
+GAT’17). The vanilla KR-UCT does not perform well com-                                                 equipped with several hand-crafted features and won an
+pared to other programs optimized with many hand-crafted                                               international digital curling competition.
+                                 Deep Reinforcement Learning in Continuous Action Spaces
+
+Acknowledgements                                                 Ioffe, S. and Szegedy, C. Batch normalization: Accelerat-
+                                                                   ing deep network training by reducing internal covariate
+We wish to thank Viliam Lisy and other authors of the KR-          shift. In Proceedings of the International Conference on
+UCT paper sharing the part of their source code.                   Machine Learning, ICML, pp. 448–456, 2015.
+This work was supported by Institute for Information and
+communications Technology Promotion (IITP) grant funded          Ito, T. The 4th uec-cup digital curling tournament
+by the Korea government (MSIT) (No.2017-0-01779, A                  in game artificial intelligence tournaments. URL
+machine learning and statistical inference framework for            http://minerva.cs.uec.ac.jp/curling/
+explainable artificial intelligence, and No.2017-0-00521,           wiki.cgi?page=GAT_2018.
+AI curling robot which can establish game strategies and
+perform games).                                                  Ito, T. and Kitasei, Y. Proposal and implementation of
+                                                                    digital curling. In Proceedings of the IEEE Conference
+References                                                          on Computational Intelligence and Games, CIG, pp. 469–
+                                                                    473, 2015.
+Ahmad, Z., Holte, R., and Bowling, M. Action selection for
+  hammer shots in curling. In Proceedings of the Interna-        Jackson, S. Unity 3D UI Essentials. 2015.
+  tional Joint Conference on Artificial Intelligence, IJCAI,
+  pp. 561–567, 2016.                                             Kocsis, L. and Szepesvári, c. Bandit based monte-carlo
+                                                                   planning. In Proceeding of European Conference on
+Bellemare, M., Srinivasan, S., Ostrovski, G., Schaul, T., Sax-     Machine Learning, ECML, pp. 282–293, 2006.
+  ton, D., and Munos, R. Unifying count-based exploration
+  and intrinsic motivation. In Proceedings of the Neural         Lai, T. and Robbins, H. Asymptotically efficient adaptive
+  Information Processing Systems, NIPS, pp. 1471–1479,             allocation rules. Advances in Applied Mathematics, pp.
+  2016.                                                            4–22, 1985.
+
+Browne, C., Powley, E., Whitehouse, D., Lucas, S., Cowl-         LeCun, Y. and Bengio, Y. The handbook of brain theory
+  ing, P., Rohlfshagen, P., Tavener, S., Perez, D., Samoth-        and neural networks. pp. 255–258, 1998.
+  rakis, S., and Colton, S. A survey of monte carlo tree
+  search methods. IEEE Transactions on Computational             Lozowski, E., Szilder, K., Maw, S., Morris, A., Poirier, L.,
+  Intelligence and AI in Games, pp. 1–43, 2012.                    and Kleiner, B. Towards a first principles model of curling
+                                                                   ice friction and curling stone dynamics. pp. 1730–1738,
+Bubeck, S., Stoltz, G., Szepesvári, C., and Munos, R. Online      2015.
+  optimization in x-armed bandits. In Proceedings of the
+  Neural Information Processing Systems, NIPS, pp. 201–          Maeno, N. Dynamics and curl ratio of a curling stone.
+  208, 2008.                                                      Sports Engineering, pp. 33–41, 2014.
+
+Buro, M. From simple features to sophisticated evaluation        Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A., Veness,
+  functions. In Computers and Games, pp. 126–145, 1999.           J., Bellemare, M., Graves, A., Riedmiller, M., Fidjeland,
+                                                                  A., Ostrovski, G., Petersen, S., Beattie, C., Sadik, A.,
+Campbell, M., Hoane Jr., A., and Hsu, F.-H. Deep blue.            Antonoglou, I., King, H., Kumaran, D., Wierstra, D.,
+  Artificial Intelligence, pp. 57–83, 2002.                       Legg, S., and Hassabis, D. Human-level control through
+Coulom, R. Efficient selectivity and backup operators in          deep reinforcement learning. Nature, pp. 529–533, 2015.
+  monte-carlo tree search. In Computers and Games, pp.
+                                                                 Nair, V. and Hinton, G. Rectified linear units improve
+  72–83, 2007a.
+                                                                   restricted boltzmann machines.
+Coulom, R. Computing Elo ratings of move patterns in the
+  game of go. International Computer Games Association,          Ohto, K. and Tanaka, T. A curling agent based on the monte-
+  ICGA, pp. 198–208, 2007b.                                        carlo tree search considering the similarity of the best
+                                                                   action among similar states. In Proceedings of Advances
+He, K., Zhang, X., Ren, S., and Sun, J. Deep residual learn-       in Computer Games, ACG, pp. 151–164, 2017.
+  ing for image recognition. In Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition,         Parberry, I. Introduction to Game Physics with Box2D.
+  CVPR, pp. 770–778, 2016.                                         2013.
+
+Heo, M.-H. and Kim, D. The development of a curling sim-         Schaeffer, J., Culberson, J., Treloar, N., Knight, B., Lu, P.,
+  ulation for performance improvement based on a physics           and Szafron, D. A world championship caliber checkers
+  engine. Procedia Engineering, pp. 385–390, 2013.                 program. Artificial Intelligence, pp. 273–289, 1992.
+                                   Deep Reinforcement Learning in Continuous Action Spaces
+
+Scherrer, B., Ghavamzadeh, M., Gabillon, V., Lesner, B.,
+  and Geist, M. Approximate modified policy iteration and
+  its application to the game of tetris. Journal of Machine
+  Learning Research, pp. 1629–1676, 2015.
+Silver, D., Huang, A., Maddison, C., Guez, A., Sifre, L.,
+  Van Den Driessche, G., Schrittwieser, J., Antonoglou, I.,
+   Panneershelvam, V., Lanctot, M., Dieleman, S., Grewe,
+   D., Nham, J., Kalchbrenner, N., Sutskever, I., Lillicrap, T.,
+   Leach, M., Kavukcuoglu, K., Graepel, T., and Hassabis,
+   D. Mastering the game of go with deep neural networks
+   and tree search. Nature, pp. 484–489, 2016.
+Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou,
+   I., Huang, A., Guez, A., Hubert, T., Baker, L., Lai, M.,
+   Bolton, A., Chen, Y., Lillicrap, T., Hui, F., Sifre, L.,
+  van den Driessche, G., Graepel, T., and Hassabis, D.
+   Mastering the game of go without human knowledge.
+  Nature, pp. 354–359, 2017.
+
+Sutton, R., McAllester, D., Singh, S., and Mansour, Y. Pol-
+  icy gradient methods for reinforcement learning with
+  function approximation. In Proceedings of the Neural
+  Information Processing Systems, NIPS, pp. 1057–1063,
+  1999.
+
+Yamamoto, M., Kato, S., and Iizuka, H. Digital curling
+  strategy based on game tree search. In Proceedings of
+  the IEEE Conference on Computational Intelligence and
+  Games, CIG, pp. 474–480, 2015.
+Yee, T., Lisý, V., and Bowling, M. Monte carlo tree search
+  in continuous action spaces with execution uncertainty.
+  In Proceedings of the International Joint Conference on
+  Artificial Intelligence, IJCAI, pp. 690–697, 2016.
+

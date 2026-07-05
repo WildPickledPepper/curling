@@ -1,0 +1,2648 @@
+{
+  "config": {
+    "model_file": "model/search_distill_tactic_policy.pt",
+    "games_per_side": 30,
+    "top_k": 3,
+    "candidates": 24,
+    "rollouts": 2,
+    "late_top_k": 4,
+    "late_candidates": 32,
+    "late_rollouts": 3,
+    "hammer_candidates": 48,
+    "hammer_rollouts": 4,
+    "seed": 20260707,
+    "report_file": "log/strategy_modes_analysis_30.json",
+    "markdown_file": "STRATEGY_MODE_ANALYSIS_30.md"
+  },
+  "first_player": {
+    "player_is_init": true,
+    "summary": {
+      "shots": 240,
+      "games": 30,
+      "avg_score": 2.433333333333333,
+      "win_rate": 0.8333333333333334,
+      "loss_rate": 0.16666666666666666,
+      "action_counts": {
+        "draw_center": 62,
+        "guard_left": 40,
+        "curl_left": 38,
+        "curl_right": 35,
+        "defense": 25,
+        "occupy": 23,
+        "guard_right": 12,
+        "freeze": 3,
+        "push_in_14": 1,
+        "push_in": 1
+      },
+      "group_counts": {
+        "draw": 85,
+        "guard": 77,
+        "curl_draw": 73,
+        "freeze": 3,
+        "raise_push": 2
+      },
+      "group_rates": {
+        "draw": 0.3541666666666667,
+        "guard": 0.32083333333333336,
+        "curl_draw": 0.30416666666666664,
+        "freeze": 0.0125,
+        "raise_push": 0.008333333333333333
+      },
+      "phase_action_counts": {
+        "early": {
+          "draw_center": 20,
+          "occupy": 16,
+          "curl_left": 11,
+          "defense": 7,
+          "guard_left": 6
+        },
+        "middle": {
+          "draw_center": 25,
+          "curl_right": 18,
+          "curl_left": 13,
+          "guard_left": 12,
+          "defense": 12,
+          "guard_right": 7,
+          "freeze": 1,
+          "push_in_14": 1,
+          "occupy": 1
+        },
+        "late_setup": {
+          "guard_left": 15,
+          "draw_center": 11,
+          "curl_left": 10,
+          "curl_right": 8,
+          "defense": 6,
+          "guard_right": 4,
+          "occupy": 3,
+          "freeze": 2,
+          "push_in": 1
+        },
+        "final_without_hammer": {
+          "curl_right": 9,
+          "guard_left": 7,
+          "draw_center": 6,
+          "curl_left": 4,
+          "occupy": 3,
+          "guard_right": 1
+        }
+      },
+      "phase_group_rates": {
+        "early": {
+          "draw": 0.6,
+          "guard": 0.21666666666666667,
+          "curl_draw": 0.18333333333333332
+        },
+        "middle": {
+          "guard": 0.34444444444444444,
+          "curl_draw": 0.34444444444444444,
+          "draw": 0.28888888888888886,
+          "freeze": 0.011111111111111112,
+          "raise_push": 0.011111111111111112
+        },
+        "late_setup": {
+          "guard": 0.4166666666666667,
+          "curl_draw": 0.3,
+          "draw": 0.23333333333333334,
+          "freeze": 0.03333333333333333,
+          "raise_push": 0.016666666666666666
+        },
+        "final_without_hammer": {
+          "curl_draw": 0.43333333333333335,
+          "draw": 0.3,
+          "guard": 0.26666666666666666
+        }
+      },
+      "score_bucket_group_rates": {
+        "tied": {
+          "draw": 0.8,
+          "curl_draw": 0.2
+        },
+        "leading_1": {
+          "curl_draw": 0.38961038961038963,
+          "guard": 0.36363636363636365,
+          "draw": 0.19480519480519481,
+          "freeze": 0.025974025974025976,
+          "raise_push": 0.025974025974025976
+        },
+        "leading_2plus": {
+          "guard": 0.5764705882352941,
+          "curl_draw": 0.24705882352941178,
+          "draw": 0.17647058823529413
+        },
+        "trailing_2plus": {
+          "draw": 0.7272727272727273,
+          "curl_draw": 0.2727272727272727
+        },
+        "trailing_1": {
+          "draw": 0.6216216216216216,
+          "curl_draw": 0.35135135135135137,
+          "freeze": 0.02702702702702703
+        }
+      },
+      "phase_sweep_rate": {
+        "early": 0.4,
+        "final_without_hammer": 0.5,
+        "late_setup": 0.43333333333333335,
+        "middle": 0.4888888888888889
+      },
+      "phase_search_mean": {
+        "early": 2.225,
+        "final_without_hammer": 3.944444444444444,
+        "late_setup": 3.652777777777778,
+        "middle": 3.022222222222222
+      },
+      "phase_budget_counts": {
+        "early": {
+          "normal": 60
+        },
+        "middle": {
+          "normal": 90
+        },
+        "late_setup": {
+          "normal": 30,
+          "late": 30
+        },
+        "final_without_hammer": {
+          "late": 30
+        }
+      }
+    },
+    "sample_records": [
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0147,
+          0.1522,
+          0.0848
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 1.5,
+        "search_std": 0.5,
+        "shot": [
+          2.9596,
+          0.2664,
+          -0.1043
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.65,
+          -0.645,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.16,
+          0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.69,
+          -0.0511,
+          0.0193
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          2.6926,
+          0.1654,
+          0.2126
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": -3,
+        "score_bucket": "trailing_2plus",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 1.3333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.08,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 1.3333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          2.65,
+          -0.755,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.5903,
+          -0.019,
+          0.1291
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 2.5,
+        "shot": [
+          3.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.0056,
+          -0.6251,
+          -0.0136
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          2.92,
+          0.55,
+          -2.69
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 5.0,
+        "search_std": 2.0,
+        "shot": [
+          2.92,
+          -0.55,
+          2.69
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 2.822,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          0.595,
+          -2.69
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 2.5,
+        "shot": [
+          2.7,
+          -0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          2.55,
+          -0.0881,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.85,
+          0.224,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_right",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.7629,
+          0.5983,
+          -0.093
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          3.153,
+          -0.6435,
+          0.2291
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 1.0,
+        "shot": [
+          2.8165,
+          -0.1305,
+          0.275
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.6666666666666665,
+        "search_std": 1.247219128924647,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 2.822,
+        "search_mean": 3.3333333333333335,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.08,
+          -0.64,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          2.92,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.4784,
+          -0.552,
+          0.0191
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.7,
+          -0.0824,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "freeze",
+        "group": "freeze",
+        "sweep": 3.035,
+        "search_mean": 4.0,
+        "search_std": 0.0,
+        "shot": [
+          2.8875,
+          0.035,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 1.5,
+        "shot": [
+          2.92,
+          0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 5.0,
+        "search_std": 2.0,
+        "shot": [
+          2.8,
+          -0.755,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 6.822,
+        "search_mean": 4.333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          2.92,
+          -0.595,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.6666666666666665,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.8569,
+          -0.2478,
+          -0.0047
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 2.0,
+        "shot": [
+          2.84,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 1.5,
+        "search_std": 0.5,
+        "shot": [
+          2.55,
+          0.0239,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.16,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 4.5,
+        "search_std": 3.5,
+        "shot": [
+          3.08,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 5.333333333333333,
+        "search_std": 2.357022603955158,
+        "shot": [
+          2.7405,
+          -0.71,
+          -0.2515
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 6.333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          0.55,
+          -2.69
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.8909,
+          -0.103,
+          0.1876
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 1.5,
+        "search_std": 0.5,
+        "shot": [
+          2.85,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 1.0,
+        "search_std": 0.0,
+        "shot": [
+          3.16,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 1.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          3.08,
+          0.505,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          3.08,
+          0.595,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 6.822,
+        "search_mean": 2.6666666666666665,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          -0.64,
+          3.59
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 1.3333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          3.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.7,
+          0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.92,
+          0.55,
+          -2.69
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 1.0,
+        "shot": [
+          2.9789,
+          -0.8962,
+          0.1435
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 5.0,
+        "search_std": 1.0,
+        "shot": [
+          3.08,
+          0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.6371,
+          0.0367,
+          -0.1511
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.6666666666666665,
+        "search_std": 1.699673171197595,
+        "shot": [
+          3.0,
+          -0.595,
+          3.59
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.3333333333333335,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.16,
+          -0.55,
+          3.59
+        ]
+      },
+      {
+        "shot_num": 0,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": 0,
+        "score_bucket": "tied",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 1.0,
+        "search_std": 2.0,
+        "shot": [
+          3.0,
+          -0.505,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 2,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          2.7928,
+          -0.6739,
+          0.0076
+        ]
+      },
+      {
+        "shot_num": 4,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.84,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 6,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 4.0,
+        "search_std": 1.0,
+        "shot": [
+          2.92,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 8,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          0.55,
+          -3.59
+        ]
+      },
+      {
+        "shot_num": 10,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          2.92,
+          -0.595,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 12,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.3333333333333335,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          -0.55,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 14,
+        "own_idx": 8,
+        "phase": "final_without_hammer",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.3333333333333335,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          2.55,
+          -0.055,
+          0.0
+        ]
+      }
+    ]
+  },
+  "second_player": {
+    "player_is_init": false,
+    "summary": {
+      "shots": 240,
+      "games": 30,
+      "avg_score": 3.1333333333333333,
+      "win_rate": 0.9333333333333333,
+      "loss_rate": 0.06666666666666667,
+      "action_counts": {
+        "draw_center": 66,
+        "curl_right": 49,
+        "occupy": 34,
+        "guard_left": 30,
+        "curl_left": 22,
+        "defense": 13,
+        "freeze": 11,
+        "take_out": 9,
+        "guard_right": 2,
+        "defense_push_in": 2,
+        "push_in": 1,
+        "hit_roll": 1
+      },
+      "group_counts": {
+        "draw": 100,
+        "curl_draw": 71,
+        "guard": 45,
+        "freeze": 11,
+        "takeout": 10,
+        "raise_push": 3
+      },
+      "group_rates": {
+        "draw": 0.4166666666666667,
+        "curl_draw": 0.29583333333333334,
+        "guard": 0.1875,
+        "freeze": 0.04583333333333333,
+        "takeout": 0.041666666666666664,
+        "raise_push": 0.0125
+      },
+      "phase_action_counts": {
+        "early": {
+          "occupy": 17,
+          "curl_right": 14,
+          "draw_center": 11,
+          "take_out": 7,
+          "freeze": 5,
+          "guard_left": 3,
+          "defense": 2,
+          "defense_push_in": 1
+        },
+        "middle": {
+          "draw_center": 32,
+          "guard_left": 14,
+          "curl_right": 13,
+          "curl_left": 13,
+          "defense": 7,
+          "freeze": 5,
+          "take_out": 2,
+          "guard_right": 2,
+          "hit_roll": 1,
+          "defense_push_in": 1
+        },
+        "late_setup": {
+          "draw_center": 17,
+          "curl_right": 13,
+          "guard_left": 10,
+          "occupy": 8,
+          "curl_left": 6,
+          "defense": 4,
+          "push_in": 1,
+          "freeze": 1
+        },
+        "hammer": {
+          "occupy": 9,
+          "curl_right": 9,
+          "draw_center": 6,
+          "curl_left": 3,
+          "guard_left": 3
+        }
+      },
+      "phase_group_rates": {
+        "early": {
+          "draw": 0.4666666666666667,
+          "curl_draw": 0.23333333333333334,
+          "takeout": 0.11666666666666667,
+          "guard": 0.08333333333333333,
+          "freeze": 0.08333333333333333,
+          "raise_push": 0.016666666666666666
+        },
+        "middle": {
+          "draw": 0.35555555555555557,
+          "curl_draw": 0.28888888888888886,
+          "guard": 0.25555555555555554,
+          "freeze": 0.05555555555555555,
+          "takeout": 0.03333333333333333,
+          "raise_push": 0.011111111111111112
+        },
+        "late_setup": {
+          "draw": 0.4166666666666667,
+          "curl_draw": 0.31666666666666665,
+          "guard": 0.23333333333333334,
+          "raise_push": 0.016666666666666666,
+          "freeze": 0.016666666666666666
+        },
+        "hammer": {
+          "draw": 0.5,
+          "curl_draw": 0.4,
+          "guard": 0.1
+        }
+      },
+      "score_bucket_group_rates": {
+        "trailing_1": {
+          "curl_draw": 0.4444444444444444,
+          "draw": 0.3472222222222222,
+          "takeout": 0.1111111111111111,
+          "freeze": 0.05555555555555555,
+          "raise_push": 0.027777777777777776,
+          "guard": 0.013888888888888888
+        },
+        "trailing_2plus": {
+          "draw": 0.6129032258064516,
+          "curl_draw": 0.16129032258064516,
+          "freeze": 0.0967741935483871,
+          "takeout": 0.06451612903225806,
+          "guard": 0.03225806451612903,
+          "raise_push": 0.03225806451612903
+        },
+        "leading_1": {
+          "draw": 0.44594594594594594,
+          "guard": 0.32432432432432434,
+          "curl_draw": 0.17567567567567569,
+          "freeze": 0.05405405405405406
+        },
+        "leading_2plus": {
+          "draw": 0.36507936507936506,
+          "curl_draw": 0.3333333333333333,
+          "guard": 0.30158730158730157
+        }
+      },
+      "phase_sweep_rate": {
+        "early": 0.35,
+        "hammer": 0.5,
+        "late_setup": 0.48333333333333334,
+        "middle": 0.5444444444444444
+      },
+      "phase_search_mean": {
+        "early": 2.575,
+        "hammer": 3.4916666666666667,
+        "late_setup": 3.233333333333334,
+        "middle": 2.7777777777777777
+      },
+      "phase_budget_counts": {
+        "early": {
+          "normal": 60
+        },
+        "middle": {
+          "normal": 90
+        },
+        "late_setup": {
+          "normal": 30,
+          "late": 30
+        },
+        "hammer": {
+          "hammer": 30
+        }
+      }
+    },
+    "sample_records": [
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "take_out",
+        "group": "takeout",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          6.0,
+          0.7693,
+          0.2517
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.9857,
+          -0.073,
+          0.0313
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          2.8169,
+          -0.8494,
+          0.0529
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.84,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.84,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.6165,
+          -0.1414,
+          -0.0756
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "late",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.3333333333333335,
+        "search_std": 1.247219128924647,
+        "shot": [
+          3.08,
+          0.64,
+          -3.59
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "hammer",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 0.0,
+        "shot": [
+          2.85,
+          -0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          2.5602,
+          0.0467,
+          0.1022
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          2.85,
+          0.1948,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.92,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          -0.595,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          -0.595,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "late",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 1.3333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "hammer",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.84,
+          -0.55,
+          2.69
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          0.46,
+          -3.59
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          2.8353,
+          -0.7053,
+          0.0034
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 1.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.5639,
+          -0.8167,
+          -0.013
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 0.0,
+        "shot": [
+          2.8794,
+          -0.6249,
+          -0.018
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 4,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 0.0,
+        "shot": [
+          2.55,
+          -0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "hammer",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          2.6526,
+          -0.1691,
+          -0.1984
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          0.64,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 6.822,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.84,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.9423,
+          0.3692,
+          0.1662
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          -0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          3.2338,
+          -0.551,
+          0.2821
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "hammer",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 5.0,
+        "search_std": 0.0,
+        "shot": [
+          2.4806,
+          -0.0914,
+          -0.037
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          3.16,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          2.85,
+          -0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          -0.55,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "take_out",
+        "group": "takeout",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          6.0,
+          -0.297,
+          0.1629
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": -4,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 1.5,
+        "search_std": 0.5,
+        "shot": [
+          3.08,
+          0.55,
+          -3.59
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.84,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 6.822,
+        "search_mean": 2.3333333333333335,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          3.08,
+          -0.595,
+          3.59
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "hammer",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.84,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.16,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          2.9064,
+          0.0269,
+          0.0049
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          2.95,
+          -0.7,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "curl_left",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 3.5,
+        "search_std": 1.5,
+        "shot": [
+          3.08,
+          -0.595,
+          3.14
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "freeze",
+        "group": "freeze",
+        "sweep": 0.0,
+        "search_mean": 4.5,
+        "search_std": 0.5,
+        "shot": [
+          2.968,
+          0.5766,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 0.0,
+        "shot": [
+          2.84,
+          0.64,
+          -2.69
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "late",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 6.822,
+        "search_mean": 0.6666666666666666,
+        "search_std": 2.0548046676563256,
+        "shot": [
+          3.08,
+          0.64,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "hammer",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": -1.0,
+        "search_std": 0.0,
+        "shot": [
+          3.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          -0.09,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          2.8,
+          -0.645,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 1.0,
+        "shot": [
+          3.0367,
+          -0.7464,
+          -0.1138
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 1.333,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          2.92,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "defense",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.5,
+        "search_std": 2.5,
+        "shot": [
+          2.5952,
+          0.0787,
+          0.1119
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.333333333333333,
+        "search_std": 0.4714045207910317,
+        "shot": [
+          2.5847,
+          -0.7056,
+          -0.0869
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 4,
+        "score_bucket": "leading_2plus",
+        "budget": "hammer",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 5.0,
+        "search_std": 0.0,
+        "shot": [
+          2.84,
+          0.505,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 1,
+        "own_idx": 1,
+        "phase": "early",
+        "score_before": -1,
+        "score_bucket": "trailing_1",
+        "budget": "normal",
+        "action": "take_out",
+        "group": "takeout",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 1.5,
+        "shot": [
+          6.0,
+          0.2159,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 3,
+        "own_idx": 2,
+        "phase": "early",
+        "score_before": -2,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "take_out",
+        "group": "takeout",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 2.0,
+        "shot": [
+          5.85,
+          0.4354,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 5,
+        "own_idx": 3,
+        "phase": "middle",
+        "score_before": -3,
+        "score_bucket": "trailing_2plus",
+        "budget": "normal",
+        "action": "draw_center",
+        "group": "draw",
+        "sweep": 3.333,
+        "search_mean": 2.0,
+        "search_std": 1.0,
+        "shot": [
+          3.08,
+          0.045,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 7,
+        "own_idx": 4,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "freeze",
+        "group": "freeze",
+        "sweep": 0.0,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          3.0398,
+          0.4254,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 9,
+        "own_idx": 5,
+        "phase": "middle",
+        "score_before": 1,
+        "score_bucket": "leading_1",
+        "budget": "normal",
+        "action": "curl_right",
+        "group": "curl_draw",
+        "sweep": 4.822,
+        "search_mean": 2.5,
+        "search_std": 0.5,
+        "shot": [
+          2.84,
+          0.55,
+          -3.14
+        ]
+      },
+      {
+        "shot_num": 11,
+        "own_idx": 6,
+        "phase": "late_setup",
+        "score_before": 2,
+        "score_bucket": "leading_2plus",
+        "budget": "normal",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 3.0,
+        "search_std": 0.0,
+        "shot": [
+          2.55,
+          -0.055,
+          0.0
+        ]
+      },
+      {
+        "shot_num": 13,
+        "own_idx": 7,
+        "phase": "late_setup",
+        "score_before": 3,
+        "score_bucket": "leading_2plus",
+        "budget": "late",
+        "action": "guard_left",
+        "group": "guard",
+        "sweep": 0.0,
+        "search_mean": 4.0,
+        "search_std": 0.816496580927726,
+        "shot": [
+          2.9494,
+          -0.5011,
+          -0.0679
+        ]
+      },
+      {
+        "shot_num": 15,
+        "own_idx": 8,
+        "phase": "hammer",
+        "score_before": 4,
+        "score_bucket": "leading_2plus",
+        "budget": "hammer",
+        "action": "occupy",
+        "group": "draw",
+        "sweep": 0.0,
+        "search_mean": 5.0,
+        "search_std": 0.0,
+        "shot": [
+          2.7,
+          0.055,
+          0.0
+        ]
+      }
+    ]
+  },
+  "elapsed_sec": 16.274968147277832
+}
