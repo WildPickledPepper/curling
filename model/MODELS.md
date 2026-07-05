@@ -14,12 +14,11 @@
   - Trained with `train_search_distill.py --player second`.
   - Checkpoint metadata includes `player=second`.
 
-The robot should load both files and choose by current side:
+The robot loads both files by default and chooses by current side:
 
 ```powershell
-D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
+D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
 ```
 
 `search_distill_tactic_policy.pt` is kept as a backward-compatible alias for
 the original first-player model.
-

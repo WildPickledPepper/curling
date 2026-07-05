@@ -56,13 +56,18 @@ budgets:
 Current strongest local command:
 
 ```powershell
-D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
+D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --shot-search local --search-top-k 3 --search-candidates 24 --search-rollouts 2 --late-search-top-k 4 --late-search-candidates 32 --late-search-rollouts 3 --hammer-search-candidates 48 --hammer-search-rollouts 4
 ```
+
+`search_distill_robot.py` now defaults to
+`model/search_distill_tactic_policy_first.pt` for first-player turns and
+`model/search_distill_tactic_policy_second.pt` for second-player turns. Pass
+`--first-model-file` or `--second-model-file` only when testing alternatives.
 
 Use this conservative fallback if the official server time budget is tight:
 
 ```powershell
-D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --shot-search local --fixed-search --search-top-k 3 --search-candidates 16 --search-rollouts 1
+D:\anaconda3\python.exe search_distill_robot.py --key <connect-key> -H <host> -p <port> --shot-search local --fixed-search --search-top-k 3 --search-candidates 16 --search-rollouts 1
 ```
 
 Medium local evaluation with continuous refinement:
@@ -125,6 +130,8 @@ Socket smoke test with adaptive search:
 - Logs: `log/adaptive_socket_robot.out.log`, `log/adaptive_socket_server.out.log`
 - Ranked-candidate smoke logs: `log/ranked_socket_robot.out.log`,
   `log/ranked_socket_server.out.log`
+- Default dual-model smoke logs: `log/default_dual_socket_robot.out.log`,
+  `log/default_dual_socket_server.out.log`
 - Robot/server exit code: `0`
 - Robot/server stderr: empty
 - Observed `normal` search on early shots and `late` search on the final two

@@ -28,8 +28,8 @@ class SearchDistillRobot(AIRobot):
         host: str,
         port: int,
         model_file: str = "model/search_distill_tactic_policy.pt",
-        first_model_file: Optional[str] = None,
-        second_model_file: Optional[str] = None,
+        first_model_file: Optional[str] = "model/search_distill_tactic_policy_first.pt",
+        second_model_file: Optional[str] = "model/search_distill_tactic_policy_second.pt",
         sweep_mode: str = "heuristic",
         shot_search: str = "local",
         search_top_k: int = 3,
@@ -197,9 +197,9 @@ def main() -> None:
     parser.add_argument("-H", "--host", default="127.0.0.1")
     parser.add_argument("-p", "--port", type=int, default=7788)
     parser.add_argument("--name", default="SearchDistill")
-    parser.add_argument("--model-file", default="model/search_distill_tactic_policy.pt")
-    parser.add_argument("--first-model-file", default=None)
-    parser.add_argument("--second-model-file", default=None)
+    parser.add_argument("--model-file", default="model/search_distill_tactic_policy.pt", help="fallback model used when a side-specific model path is empty")
+    parser.add_argument("--first-model-file", default="model/search_distill_tactic_policy_first.pt")
+    parser.add_argument("--second-model-file", default="model/search_distill_tactic_policy_second.pt")
     parser.add_argument("--sweep-mode", choices=["heuristic", "off"], default="heuristic")
     parser.add_argument("--shot-search", choices=["local", "off"], default="local")
     parser.add_argument("--search-top-k", type=int, default=3)
