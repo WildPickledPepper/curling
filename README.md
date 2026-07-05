@@ -51,6 +51,20 @@ Second-player model:
 D:\anaconda3\python.exe train_search_distill.py --player second --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second.pt --report-file log/search_distill_report_second.json
 ```
 
+Opponent-pool training is now available. The default remains `random`, matching
+the original local mock opponent. For a stronger next experiment, train each
+side independently against a mixed opponent pool:
+
+```powershell
+D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_pool.pt --report-file log/search_distill_report_first_pool.json
+D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_pool.pt --report-file log/search_distill_report_second_pool.json
+```
+
+`model-mix` uses the opponent side's available side-specific model plus
+scripted, rollout, and random opponents. For example, when training the
+second-player model, the pool can load `search_distill_tactic_policy_first.pt`
+as the first-player opponent.
+
 Evaluate the dual-model robot locally:
 
 ```powershell

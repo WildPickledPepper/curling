@@ -159,9 +159,38 @@ D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --re
 ```
 
 This is still a local-simulator check, but it is a better regression test than
-only playing against the built-in random opponent. The next training upgrade
-should use an opponent pool: random, scripted, shared model, dual model, and
-older checkpoints.
+only playing against the built-in random opponent. The training script now also
+supports opponent-pool data generation so the search teacher is no longer
+limited to weak random counterplay.
+
+Opponent-pool training modes in `train_search_distill.py`:
+
+| Mode | Opponent turns during data generation |
+| --- | --- |
+| `random` | Original `FastCurlingEnv.choose_opponent_shot()` behavior |
+| `scripted` | Side-aware hand-written tactic priority |
+| `rollout` | Cheap score-aware rollout policy |
+| `model` | Opponent side's side-specific model, falling back only if explicitly unavailable is an error |
+| `model-mix` | Mixture of opponent model, scripted, rollout, and random; if no model exists it mixes scripted/rollout/random |
+
+The search teacher and the actual training games use the same opponent context.
+That matters: if the training game contains a stronger opponent but the root
+search still evaluates actions against random replies, the distilled target is
+misaligned.
+
+Small smoke checks completed:
+
+| Check | Result |
+| --- | --- |
+| `--opponent-policy scripted`, second player | Completed, saved smoke model and JSON report locally |
+| `--opponent-policy model-mix`, second player | Completed, loaded the first-player model as opponent pool member |
+
+Recommended next experiment:
+
+```powershell
+D:\anaconda3\python.exe train_search_distill.py --player first --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_first_pool.pt --report-file log/search_distill_report_first_pool.json
+D:\anaconda3\python.exe train_search_distill.py --player second --opponent-policy model-mix --games 1500 --rollouts 8 --epochs 30 --batch-size 512 --eval-games 1000 --model-file model/search_distill_tactic_policy_second_pool.pt --report-file log/search_distill_report_second_pool.json
+```
 
 Socket smoke test with adaptive search:
 
@@ -222,6 +251,8 @@ Files added:
   - Keeps full tactic-library candidates at the root.
   - Uses cheap rollout actions inside simulations for speed.
   - Distills expert policy/value targets into a PyTorch network.
+  - Supports side-aware opponent-pool training via `--opponent-policy`.
+  - Keeps first-player and second-player training independent.
 
 - `search_distill_robot.py`
   - Socket-compatible robot that loads first-player and second-player models.

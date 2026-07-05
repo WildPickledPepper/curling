@@ -10,7 +10,7 @@ __pycache__/
 log/*.pid
 log/*.out.log
 log/*.err.log
+log/*_smoke.json
 
 model/*_smoke.pt
 model/*_smoke.pth
-

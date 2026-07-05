@@ -124,6 +124,24 @@ def play_uncontrolled_shot(env: FastCurlingEnv) -> None:
     env.shot_num += 1
 
 
+@dataclass
+class OpponentContext:
+    policy: str = "random"
+    first_model: Optional["PolicyValueNet"] = None
+    second_model: Optional["PolicyValueNet"] = None
+    first_model_file: Optional[str] = None
+    second_model_file: Optional[str] = None
+
+    def report(self) -> Dict[str, object]:
+        return {
+            "policy": self.policy,
+            "first_model_loaded": self.first_model is not None,
+            "second_model_loaded": self.second_model is not None,
+            "first_model_file": self.first_model_file,
+            "second_model_file": self.second_model_file,
+        }
+
+
 def scripted_index_for_player(
     env: FastCurlingEnv,
     options: Sequence[Optional[Shot]],
@@ -201,6 +219,72 @@ def rollout_shot_for_player(env: FastCurlingEnv, rng: random.Random, player_is_i
     return rng.choice(choices)[1]
 
 
+def _model_for_player(context: OpponentContext, player_is_init: bool) -> Optional["PolicyValueNet"]:
+    return context.first_model if player_is_init else context.second_model
+
+
+def _effective_opponent_policy(context: OpponentContext, rng: random.Random, opponent_is_init: bool) -> str:
+    if context.policy != "model-mix":
+        return context.policy
+
+    model = _model_for_player(context, opponent_is_init)
+    if model is not None:
+        choices = [("model", 0.35), ("scripted", 0.25), ("rollout", 0.25), ("random", 0.15)]
+    else:
+        choices = [("scripted", 0.35), ("rollout", 0.35), ("random", 0.30)]
+    threshold = rng.random()
+    cumulative = 0.0
+    for name, weight in choices:
+        cumulative += weight
+        if threshold <= cumulative:
+            return name
+    return choices[-1][0]
+
+
+def opponent_pool_shot(
+    env: FastCurlingEnv,
+    rng: random.Random,
+    controlled_player_is_init: bool,
+    context: Optional[OpponentContext] = None,
+) -> Optional[Shot]:
+    context = context or OpponentContext()
+    opponent_is_init = not controlled_player_is_init
+    policy = _effective_opponent_policy(context, rng, opponent_is_init)
+    if policy == "random":
+        return None
+    if policy == "rollout":
+        return rollout_shot_for_player(env, rng, opponent_is_init)
+
+    options = legal_options_for_player(env, opponent_is_init)
+    valid = valid_indices(options)
+    if not valid:
+        return (3.0, 0.0, 0.0)
+    if policy == "scripted":
+        idx = scripted_index_for_player(env, options, opponent_is_init)
+    elif policy == "model":
+        model = _model_for_player(context, opponent_is_init)
+        if model is None:
+            idx = scripted_index_for_player(env, options, opponent_is_init)
+        else:
+            idx = choose_model_action_for_player(model, env, opponent_is_init)
+    else:
+        raise ValueError(f"unknown opponent policy: {policy}")
+    return options[idx] or (3.0, 0.0, 0.0)
+
+
+def play_opponent_pool_shot(
+    env: FastCurlingEnv,
+    rng: random.Random,
+    controlled_player_is_init: bool,
+    context: Optional[OpponentContext] = None,
+) -> None:
+    shot = opponent_pool_shot(env, rng, controlled_player_is_init, context)
+    if shot is None:
+        play_uncontrolled_shot(env)
+    else:
+        play_controlled_shot(env, shot)
+
+
 def finish_rollout(env: FastCurlingEnv, rng: random.Random) -> int:
     while env.shot_num < 16:
         if env.shot_num % 2 == 1:
@@ -210,12 +294,17 @@ def finish_rollout(env: FastCurlingEnv, rng: random.Random) -> int:
     return env.end_score()
 
 
-def finish_rollout_for_player(env: FastCurlingEnv, rng: random.Random, player_is_init: bool) -> int:
+def finish_rollout_for_player(
+    env: FastCurlingEnv,
+    rng: random.Random,
+    player_is_init: bool,
+    opponent_context: Optional[OpponentContext] = None,
+) -> int:
     while env.shot_num < 16:
         if is_our_turn(env.shot_num, player_is_init):
             play_controlled_shot(env, rollout_shot_for_player(env, rng, player_is_init))
         else:
-            play_uncontrolled_shot(env)
+            play_opponent_pool_shot(env, rng, player_is_init, opponent_context)
     return score_for_player(env, player_is_init)
 
 
@@ -257,6 +346,7 @@ def search_action_for_player(
     rollouts_per_action: int,
     rng: random.Random,
     player_is_init: bool,
+    opponent_context: Optional[OpponentContext] = None,
 ) -> Tuple[int, np.ndarray, np.ndarray]:
     options = legal_options_for_player(env, player_is_init)
     valid = valid_indices(options)
@@ -274,7 +364,7 @@ def search_action_for_player(
         for _ in range(rollouts_per_action):
             sim = env.clone(seed=rng.randint(1, 2_000_000_000))
             play_controlled_shot(sim, shot)
-            scores.append(finish_rollout_for_player(sim, rng, player_is_init))
+            scores.append(finish_rollout_for_player(sim, rng, player_is_init, opponent_context))
         values[idx] = float(np.mean(scores))
 
     valid_values = [values[idx] for idx in valid]
@@ -300,6 +390,7 @@ def generate_dataset(
     rollouts_per_action: int,
     seed: int,
     player_is_init: bool = True,
+    opponent_context: Optional[OpponentContext] = None,
     progress_every: int = 25,
 ) -> List[Sample]:
     rng = random.Random(seed)
@@ -310,7 +401,7 @@ def generate_dataset(
         game_samples: List[Sample] = []
         while env.shot_num < 16:
             if not is_our_turn(env.shot_num, player_is_init):
-                play_uncontrolled_shot(env)
+                play_opponent_pool_shot(env, rng, player_is_init, opponent_context)
                 continue
 
             options = legal_options_for_player(env, player_is_init)
@@ -318,7 +409,13 @@ def generate_dataset(
             state = make_state_vector(env.position(), env.shot_num, 0, 1, player_is_init, 0)
             mask = np.zeros(len(ACTIONS), dtype=np.float32)
             mask[valid] = 1.0
-            action, probs, _ = search_action_for_player(env, rollouts_per_action, rng, player_is_init)
+            action, probs, _ = search_action_for_player(
+                env,
+                rollouts_per_action,
+                rng,
+                player_is_init,
+                opponent_context=opponent_context,
+            )
             game_samples.append(Sample(state=state, mask=mask, policy=probs, action=action))
             play_controlled_shot(env, options[action] or (3.0, 0.0, 0.0))
 
@@ -463,6 +560,35 @@ def load_model(model_file: Path) -> PolicyValueNet:
     return model
 
 
+def build_opponent_context(
+    policy: str,
+    controlled_player_is_init: bool,
+    first_model_file: Optional[Path],
+    second_model_file: Optional[Path],
+) -> OpponentContext:
+    context = OpponentContext(
+        policy=policy,
+        first_model_file=str(first_model_file) if first_model_file else None,
+        second_model_file=str(second_model_file) if second_model_file else None,
+    )
+    if policy not in {"random", "scripted", "rollout", "model", "model-mix"}:
+        raise ValueError(f"unknown opponent policy: {policy}")
+    if policy not in {"model", "model-mix"}:
+        return context
+
+    opponent_is_init = not controlled_player_is_init
+    model_file = first_model_file if opponent_is_init else second_model_file
+    if model_file and model_file.exists():
+        if opponent_is_init:
+            context.first_model = load_model(model_file)
+        else:
+            context.second_model = load_model(model_file)
+    elif policy == "model":
+        side = "first" if opponent_is_init else "second"
+        raise FileNotFoundError(f"opponent {side} model not found: {model_file}")
+    return context
+
+
 def evaluate_policy(policy: str, games: int, seed: int, model_file: Optional[Path] = None) -> Dict[str, float]:
     rng = random.Random(seed)
     model = load_model(model_file) if policy == "model" and model_file else None
@@ -504,6 +630,7 @@ def evaluate_policy_for_player(
     seed: int,
     player_is_init: bool,
     model_file: Optional[Path] = None,
+    opponent_context: Optional[OpponentContext] = None,
 ) -> Dict[str, float]:
     rng = random.Random(seed)
     model = load_model(model_file) if policy == "model" and model_file else None
@@ -512,7 +639,7 @@ def evaluate_policy_for_player(
         env = FastCurlingEnv(seed=rng.randint(1, 2_000_000_000))
         while env.shot_num < 16:
             if not is_our_turn(env.shot_num, player_is_init):
-                play_uncontrolled_shot(env)
+                play_opponent_pool_shot(env, rng, player_is_init, opponent_context)
                 continue
 
             options = legal_options_for_player(env, player_is_init)
@@ -525,7 +652,13 @@ def evaluate_policy_for_player(
                 assert model is not None
                 idx = choose_model_action_for_player(model, env, player_is_init)
             elif policy == "search":
-                idx, _, _ = search_action_for_player(env, rollouts_per_action=4, rng=rng, player_is_init=player_is_init)
+                idx, _, _ = search_action_for_player(
+                    env,
+                    rollouts_per_action=4,
+                    rng=rng,
+                    player_is_init=player_is_init,
+                    opponent_context=opponent_context,
+                )
             else:
                 raise ValueError(policy)
             play_controlled_shot(env, options[idx] or (3.0, 0.0, 0.0))
@@ -549,32 +682,72 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--eval-games", type=int, default=2000)
+    parser.add_argument("--search-eval-games", type=int, default=None)
     parser.add_argument("--seed", type=int, default=20260705)
     parser.add_argument("--player", choices=["first", "second"], default="first")
+    parser.add_argument("--opponent-policy", choices=["random", "scripted", "rollout", "model", "model-mix"], default="random")
+    parser.add_argument("--opponent-first-model-file", default="model/search_distill_tactic_policy_first.pt")
+    parser.add_argument("--opponent-second-model-file", default="model/search_distill_tactic_policy_second.pt")
     parser.add_argument("--model-file", default="model/search_distill_tactic_policy.pt")
     parser.add_argument("--report-file", default="log/search_distill_report.json")
     args = parser.parse_args()
 
     started = time.time()
     player_is_init = args.player == "first"
-    samples = generate_dataset(args.games, args.rollouts, args.seed, player_is_init=player_is_init)
+    opponent_context = build_opponent_context(
+        args.opponent_policy,
+        player_is_init,
+        Path(args.opponent_first_model_file) if args.opponent_first_model_file else None,
+        Path(args.opponent_second_model_file) if args.opponent_second_model_file else None,
+    )
+    samples = generate_dataset(
+        args.games,
+        args.rollouts,
+        args.seed,
+        player_is_init=player_is_init,
+        opponent_context=opponent_context,
+    )
     model_file = Path(args.model_file)
     metrics = train_model(samples, model_file, args.epochs, args.batch_size, args.lr, args.seed, player=args.player)
+    search_eval_games = args.search_eval_games
+    if search_eval_games is None:
+        search_eval_games = max(200, args.eval_games // 5)
 
     report = {
         "config": vars(args),
         "player_is_init": player_is_init,
+        "opponent": opponent_context.report(),
         "samples": len(samples),
         "training_metrics": metrics,
         "evaluation": {
-            "random": evaluate_policy_for_player("random", args.eval_games, args.seed + 1, player_is_init),
-            "scripted": evaluate_policy_for_player("scripted", args.eval_games, args.seed + 2, player_is_init),
-            "model": evaluate_policy_for_player("model", args.eval_games, args.seed + 3, player_is_init, model_file),
+            "random": evaluate_policy_for_player(
+                "random",
+                args.eval_games,
+                args.seed + 1,
+                player_is_init,
+                opponent_context=opponent_context,
+            ),
+            "scripted": evaluate_policy_for_player(
+                "scripted",
+                args.eval_games,
+                args.seed + 2,
+                player_is_init,
+                opponent_context=opponent_context,
+            ),
+            "model": evaluate_policy_for_player(
+                "model",
+                args.eval_games,
+                args.seed + 3,
+                player_is_init,
+                model_file,
+                opponent_context=opponent_context,
+            ),
             "search_rollouts4": evaluate_policy_for_player(
                 "search",
-                max(200, args.eval_games // 5),
+                search_eval_games,
                 args.seed + 4,
                 player_is_init,
+                opponent_context=opponent_context,
             ),
         },
         "elapsed_sec": time.time() - started,
