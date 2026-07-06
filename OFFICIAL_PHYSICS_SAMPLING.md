@@ -4,6 +4,60 @@ Use this workflow to collect official-server throw data before calibrating the
 local simulator. The goal is not to win; it is to record controlled
 `BESTSHOT -> MOTIONINFO -> POSITION` samples.
 
+## Recommended Dual-Player Collector
+
+`dual_calibration_collector.py` opens two socket connections from one process,
+so the server assigns them to `Player1` and `Player2`. It uses conservative
+defaults around the known stable center draw region:
+
+- `v0`: `2.75` to `3.25`
+- `h0`: `-0.45` to `0.45`
+- `w0`: `-1.5` to `1.5`
+
+For clean no-collision single-stone samples, use debug reset mode. Pass the
+plain key; the script automatically appends `:0` when `--use-reset` is enabled.
+
+```bash
+python dual_calibration_collector.py \
+  --key "$CONNECT_KEY" \
+  -H "$HOST" \
+  -p "$PORT" \
+  --use-reset \
+  --output-file "log/server_calibration/dual_calibration_samples.jsonl" \
+  --show-msg
+```
+
+Short test:
+
+```bash
+python dual_calibration_collector.py \
+  --key "$CONNECT_KEY" \
+  -H "$HOST" \
+  -p "$PORT" \
+  --use-reset \
+  --random-samples 20 \
+  --show-msg
+```
+
+If stones still go out of play, narrow the range further:
+
+```bash
+python dual_calibration_collector.py \
+  --key "$CONNECT_KEY" \
+  -H "$HOST" \
+  -p "$PORT" \
+  --use-reset \
+  --random-samples 20 \
+  --v-min 2.85 --v-max 3.10 \
+  --h-min -0.25 --h-max 0.25 \
+  --w-min -0.8 --w-max 0.8 \
+  --show-msg
+```
+
+The old broad random range (`v0` up to `4.5`, `h0` up to `1.0`, `w0` up to
+`4.0`) is too aggressive for first-pass official physics calibration and will
+often throw stones out of play.
+
 ## Server Setup
 
 Use a normal two-player room, preferably with infinite rounds enabled. Do not

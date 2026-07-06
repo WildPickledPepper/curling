@@ -11,6 +11,8 @@ log/*.pid
 log/*.out.log
 log/*.err.log
 log/*_smoke.json
+log/official_physics_samples_*.jsonl
+log/server_calibration/*.jsonl
 
 model/*_smoke.pt
 model/*_smoke.pth
