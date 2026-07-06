@@ -30,6 +30,7 @@ Local fast-simulator refined-search evaluation:
 
 Main reports:
 
+- `CURRENT_MODEL_STRATEGY.md`
 - `TRAINING_REPORT.md`
 - `STRATEGY_MODE_ANALYSIS.md`
 - `model/MODELS.md`
