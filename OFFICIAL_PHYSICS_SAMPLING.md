@@ -148,3 +148,23 @@ python official_physics_sampler.py \
 ```
 
 Once that works, remove `--max-samples`.
+
+## Fit Calibration
+
+After collecting JSONL samples, fit the no-sweep landing model:
+
+```bash
+python fit_physics_calibration.py \
+  log/server_calibration/dual_calibration_samples.jsonl \
+  --output config/physics_calibration.json
+```
+
+For the first 200-sample run, 190 samples were usable after filtering out
+out-of-play throws. The local mock landing model had about `1.09m` total RMSE on
+these samples, mostly from `y`. The fitted quadratic calibration reduced
+validation total RMSE to about `0.038m`.
+
+When `config/physics_calibration.json` exists, `fast_curling_env.py` uses it for
+throws inside the sampled support region. Throws outside that region, such as
+high-speed takeout shots, fall back to the original mock model to avoid unsafe
+extrapolation.

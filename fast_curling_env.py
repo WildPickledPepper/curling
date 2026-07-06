@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import math
 import random
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List, Optional, Sequence, Tuple
 
 
@@ -16,6 +18,10 @@ STONE_R = 0.145
 SHEET_WIDTH = 4.75
 SHEET_LENGTH = 44.5
 START_Y = 32.0
+ROOT = Path(__file__).resolve().parent
+CALIBRATION_FILE = ROOT / "config" / "physics_calibration.json"
+_CALIBRATION_CACHE: Optional[dict] = None
+_CALIBRATION_LOADED = False
 
 Shot = Tuple[float, float, float]
 SweepShot = Tuple[float, float, float, float]
@@ -40,6 +46,74 @@ def split_shot(shot: Sequence[float]) -> SweepShot:
         clamp(float(h0), -2.23, 2.23),
         clamp(float(w0), -15.7, 15.7),
         clamp(float(sweep), 0.0, 12.0),
+    )
+
+
+def load_physics_calibration() -> Optional[dict]:
+    global _CALIBRATION_CACHE, _CALIBRATION_LOADED
+    if _CALIBRATION_LOADED:
+        return _CALIBRATION_CACHE
+    _CALIBRATION_LOADED = True
+    if not CALIBRATION_FILE.exists():
+        return None
+    try:
+        payload = json.loads(CALIBRATION_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not payload.get("enabled", True):
+        return None
+    if payload.get("schema") != "official_no_sweep_landing_v1":
+        return None
+    _CALIBRATION_CACHE = payload
+    return _CALIBRATION_CACHE
+
+
+def calibration_features(v0: float, h0: float, w0: float) -> List[float]:
+    return [
+        1.0,
+        v0,
+        h0,
+        w0,
+        abs(w0),
+        math.tanh(w0),
+        v0 * v0,
+        h0 * h0,
+        w0 * w0,
+        v0 * h0,
+        v0 * w0,
+        h0 * w0,
+    ]
+
+
+def within_calibration_support(payload: dict, v0: float, h0: float, w0: float) -> bool:
+    ranges = payload.get("input_ranges", {})
+    margin = float(payload.get("support_margin", 0.0))
+    for name, value in [("v0", v0), ("h0", h0), ("w0", w0)]:
+        bounds = ranges.get(name)
+        if not bounds or len(bounds) != 2:
+            return False
+        low, high = float(bounds[0]) - margin, float(bounds[1]) + margin
+        if value < low or value > high:
+            return False
+    return True
+
+
+def calibrated_landing_point(v0: float, h0: float, w0: float) -> Optional[Tuple[float, float, float, float]]:
+    payload = load_physics_calibration()
+    if payload is None or not within_calibration_support(payload, v0, h0, w0):
+        return None
+    features = calibration_features(v0, h0, w0)
+    coef_x = payload.get("coef_x", [])
+    coef_y = payload.get("coef_y", [])
+    if len(coef_x) != len(features) or len(coef_y) != len(features):
+        return None
+    x = sum(float(coef) * feature for coef, feature in zip(coef_x, features))
+    y = sum(float(coef) * feature for coef, feature in zip(coef_y, features))
+    return (
+        x,
+        y,
+        float(payload.get("residual_std_x", 0.0)),
+        float(payload.get("residual_std_y", 0.0)),
     )
 
 
@@ -91,10 +165,16 @@ class FastCurlingEnv:
 
     def landing_point(self, v0: float, h0: float, w0: float) -> Tuple[float, float]:
         speed_term = clamp(v0, 0.0, 6.0)
-        x = HOUSE_X + h0 * 0.88 + math.tanh(w0 / 5.0) * 0.55
-        y = 8.0 - speed_term * 1.02 + abs(w0) * 0.05
-        x += self.random.gauss(0.0, 0.035)
-        y += self.random.gauss(0.0, 0.05)
+        calibrated = calibrated_landing_point(speed_term, h0, w0)
+        if calibrated is None:
+            x = HOUSE_X + h0 * 0.88 + math.tanh(w0 / 5.0) * 0.55
+            y = 8.0 - speed_term * 1.02 + abs(w0) * 0.05
+            x += self.random.gauss(0.0, 0.035)
+            y += self.random.gauss(0.0, 0.05)
+        else:
+            x, y, std_x, std_y = calibrated
+            x += self.random.gauss(0.0, std_x)
+            y += self.random.gauss(0.0, std_y)
         return (
             clamp(x, STONE_R, SHEET_WIDTH - STONE_R),
             clamp(y, STONE_R, START_Y),
