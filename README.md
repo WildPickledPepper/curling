@@ -37,6 +37,12 @@ Main reports:
 - `log/head_to_head_dual_vs_shared_symmetric_20.json`
 - `log/head_to_head_dual_vs_scripted_symmetric_20.json`
 
+## Official Physics Calibration
+
+Before trusting local continuous search on the official server, collect
+official-server shot samples and calibrate the local simulator. See
+`OFFICIAL_PHYSICS_SAMPLING.md`.
+
 ## Training
 
 First-player model:
