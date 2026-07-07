@@ -74,11 +74,12 @@ def normalize_row(row: Dict[str, Any]) -> Dict[str, Any] | None:
         }
 
     if "requested_v0" in row:
+        sweep = row.get("requested_sweep_distance", row.get("requested_sweep", 0.0))
         return {
             "v0": float(row["requested_v0"]),
             "h0": float(row["requested_h0"]),
             "w0": float(row["requested_w0"]),
-            "sweep": float(row.get("requested_sweep", 0.0)),
+            "sweep": float(sweep or 0.0),
             "final_x": float(row.get("final_x", 0.0) or 0.0),
             "final_y": float(row.get("final_y", 0.0) or 0.0),
             "collision_free": True,

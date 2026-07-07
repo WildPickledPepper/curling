@@ -108,10 +108,13 @@ def calibration_features(v0: float, h0: float, w0: float, sweep: float = 0.0, sc
     ]
 
 
-def within_calibration_support(payload: dict, v0: float, h0: float, w0: float) -> bool:
+def within_calibration_support(payload: dict, v0: float, h0: float, w0: float, sweep: float = 0.0) -> bool:
     ranges = payload.get("input_ranges", {})
     margin = float(payload.get("support_margin", 0.0))
-    for name, value in [("v0", v0), ("h0", h0), ("w0", w0)]:
+    names_and_values = [("v0", v0), ("h0", h0), ("w0", w0)]
+    if payload.get("schema") == "unity_landing_v2":
+        names_and_values.append(("sweep", sweep))
+    for name, value in names_and_values:
         bounds = ranges.get(name)
         if not bounds or len(bounds) != 2:
             return False
@@ -123,7 +126,7 @@ def within_calibration_support(payload: dict, v0: float, h0: float, w0: float) -
 
 def calibrated_landing_point(v0: float, h0: float, w0: float, sweep: float = 0.0) -> Optional[Tuple[float, float, float, float]]:
     payload = load_physics_calibration()
-    if payload is None or not within_calibration_support(payload, v0, h0, w0):
+    if payload is None or not within_calibration_support(payload, v0, h0, w0, sweep=sweep):
         return None
     schema = str(payload.get("schema", "official_no_sweep_landing_v1"))
     features = calibration_features(v0, h0, w0, sweep=sweep, schema=schema)
