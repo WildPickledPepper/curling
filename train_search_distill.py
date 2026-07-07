@@ -17,7 +17,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from fast_curling_env import FastCurlingEnv
+from fast_curling_env import HOUSE_R, HOUSE_X, HOUSE_Y, STONE_R, FastCurlingEnv, distance
 from tactic_dqn_robot import ACTIONS, STATE_DIM, Shot, make_state_vector
 
 
@@ -32,6 +32,25 @@ ROLLOUT_SHOTS: List[Tuple[str, Shot]] = [
     ("fast_left", (4.4, -0.45, 0.0)),
     ("fast_right", (4.4, 0.45, 0.0)),
 ]
+
+TACTIC_GROUPS: Dict[str, str] = {
+    "draw_center": "draw",
+    "occupy": "draw",
+    "middle_in_center": "draw",
+    "curl_left": "curl_draw",
+    "curl_right": "curl_draw",
+    "guard_left": "guard",
+    "guard_right": "guard",
+    "defense": "guard",
+    "freeze": "freeze",
+    "take_out": "takeout",
+    "hit_roll": "takeout",
+    "clear": "takeout",
+    "double_hit_gote": "takeout",
+    "push_in": "raise_push",
+    "push_in_14": "raise_push",
+    "defense_push_in": "raise_push",
+}
 
 
 def softmax_np(values: Sequence[float], temperature: float = 0.7) -> np.ndarray:
@@ -58,52 +77,70 @@ def valid_indices(options: Sequence[Optional[Shot]]) -> List[int]:
 
 
 def scripted_index(env: FastCurlingEnv, options: Sequence[Optional[Shot]]) -> int:
-    score = env.end_score()
-    if score < 0:
-        priorities = [
-            "take_out",
-            "hit_roll",
-            "push_in",
-            "push_in_14",
-            "double_hit_gote",
-            "clear",
-            "draw_center",
-            "curl_left",
-            "curl_right",
-        ]
-    elif score > 0:
-        priorities = [
-            "guard_left",
-            "guard_right",
-            "defense",
-            "freeze",
-            "occupy",
-            "draw_center",
-            "curl_left",
-            "curl_right",
-        ]
-    else:
-        priorities = [
-            "draw_center",
-            "occupy",
-            "curl_left",
-            "curl_right",
-            "guard_left",
-            "guard_right",
-            "take_out",
-        ]
-    name_to_idx = {action.name: idx for idx, action in enumerate(ACTIONS)}
-    for name in priorities:
-        idx = name_to_idx[name]
-        if options[idx] is not None:
-            return idx
-    valid = valid_indices(options)
-    return valid[0] if valid else 0
+    return scripted_index_for_player(env, options, True)
 
 
 def score_for_player(env: FastCurlingEnv, player_is_init: bool) -> int:
     score = env.end_score()
     return score if player_is_init else -score
+
+
+def own_shot_index(shot_num: int) -> int:
+    return max(1, min(8, shot_num // 2 + 1))
+
+
+def strategy_phase(shot_num: int, player_is_init: bool) -> str:
+    own_idx = own_shot_index(shot_num)
+    if own_idx <= 2:
+        return "early"
+    if own_idx <= 5:
+        return "middle"
+    if own_idx <= 7:
+        return "late_setup"
+    return "hammer" if not player_is_init else "final_without_hammer"
+
+
+def stone_is_ours(index: int, player_is_init: bool) -> bool:
+    return (index % 2 == 0) == player_is_init
+
+
+def board_context(env: FastCurlingEnv, player_is_init: bool) -> Dict[str, float]:
+    own_best = float("inf")
+    enemy_best = float("inf")
+    enemy_button = 0
+    center_guards = 0
+    for idx, stone in enumerate(env.stones):
+        if not stone.in_play:
+            continue
+        d = distance(stone.x, stone.y, HOUSE_X, HOUSE_Y)
+        if stone_is_ours(idx, player_is_init):
+            own_best = min(own_best, d)
+        else:
+            enemy_best = min(enemy_best, d)
+            if d <= 0.75:
+                enemy_button += 1
+            if HOUSE_Y + HOUSE_R < stone.y < 10.61 and abs(stone.x - HOUSE_X) <= 0.55:
+                center_guards += 1
+    enemy_shot = enemy_best <= HOUSE_R + STONE_R and enemy_best < own_best
+    return {
+        "own_best": own_best,
+        "enemy_best": enemy_best,
+        "enemy_shot": 1.0 if enemy_shot else 0.0,
+        "enemy_button": float(enemy_button),
+        "center_guards": float(center_guards),
+    }
+
+
+def needs_offense(env: FastCurlingEnv, player_is_init: bool) -> bool:
+    ctx = board_context(env, player_is_init)
+    score = score_for_player(env, player_is_init)
+    phase = strategy_phase(env.shot_num, player_is_init)
+    return bool(
+        ctx["enemy_shot"]
+        or ctx["enemy_button"] > 0
+        or score < 0
+        or (phase in {"late_setup", "hammer", "final_without_hammer"} and score <= 0)
+    )
 
 
 def is_our_turn(shot_num: int, player_is_init: bool) -> bool:
@@ -148,14 +185,16 @@ def scripted_index_for_player(
     player_is_init: bool,
 ) -> int:
     score = score_for_player(env, player_is_init)
-    if score < 0:
+    ctx = board_context(env, player_is_init)
+    if needs_offense(env, player_is_init):
         priorities = [
             "take_out",
             "hit_roll",
-            "push_in",
-            "push_in_14",
             "double_hit_gote",
             "clear",
+            "push_in",
+            "push_in_14",
+            "freeze" if ctx["enemy_shot"] else "draw_center",
             "draw_center",
             "curl_left",
             "curl_right",
@@ -196,7 +235,7 @@ def rollout_shot(env: FastCurlingEnv, rng: random.Random) -> Shot:
     score = env.end_score()
     if rng.random() < 0.15:
         return rng.choice(ROLLOUT_SHOTS)[1]
-    if score < 0:
+    if needs_offense(env, True):
         choices = [("fast_center", (4.4, 0.0, 0.0)), ("fast_left", (4.4, -0.45, 0.0)), ("fast_right", (4.4, 0.45, 0.0))]
     elif score > 0:
         choices = [("guard_left", (2.8, -0.7, 0.0)), ("guard_right", (2.8, 0.7, 0.0)), ("draw_center", (3.0, 0.0, 0.0))]
@@ -210,13 +249,30 @@ def rollout_shot_for_player(env: FastCurlingEnv, rng: random.Random, player_is_i
     score = score_for_player(env, player_is_init)
     if rng.random() < 0.15:
         return rng.choice(ROLLOUT_SHOTS)[1]
-    if score < 0:
+    if needs_offense(env, player_is_init):
         choices = [("fast_center", (4.4, 0.0, 0.0)), ("fast_left", (4.4, -0.45, 0.0)), ("fast_right", (4.4, 0.45, 0.0))]
     elif score > 0:
         choices = [("guard_left", (2.8, -0.7, 0.0)), ("guard_right", (2.8, 0.7, 0.0)), ("draw_center", (3.0, 0.0, 0.0))]
     else:
         choices = [("draw_center", (3.0, 0.0, 0.0)), ("curl_left", (3.0, -0.55, 3.14)), ("curl_right", (3.0, 0.55, -3.14))]
     return rng.choice(choices)[1]
+
+
+def tactic_group(action_name: str) -> str:
+    return TACTIC_GROUPS.get(action_name, "other")
+
+
+def search_label_bias(env: FastCurlingEnv, action_name: str, player_is_init: bool) -> float:
+    if not needs_offense(env, player_is_init):
+        return 0.0
+    return {
+        "takeout": 0.36,
+        "raise_push": 0.22,
+        "freeze": 0.14,
+        "curl_draw": 0.02,
+        "draw": -0.10,
+        "guard": -0.16,
+    }.get(tactic_group(action_name), 0.0)
 
 
 def _model_for_player(context: OpponentContext, player_is_init: bool) -> Optional["PolicyValueNet"]:
@@ -337,6 +393,10 @@ def search_action(
         values[idx] = float(np.mean(scores))
 
     valid_values = [values[idx] for idx in valid]
+    valid_values = [
+        value + search_label_bias(env, ACTIONS[idx].name, True)
+        for idx, value in zip(valid, valid_values)
+    ]
     valid_probs = softmax_np(valid_values, temperature=0.55)
     probs = np.zeros(len(ACTIONS), dtype=np.float32)
     for idx, prob in zip(valid, valid_probs):
@@ -372,6 +432,10 @@ def search_action_for_player(
         values[idx] = float(np.mean(scores))
 
     valid_values = [values[idx] for idx in valid]
+    valid_values = [
+        value + search_label_bias(env, ACTIONS[idx].name, player_is_init)
+        for idx, value in zip(valid, valid_values)
+    ]
     valid_probs = softmax_np(valid_values, temperature=0.55)
     probs = np.zeros(len(ACTIONS), dtype=np.float32)
     for idx, prob in zip(valid, valid_probs):

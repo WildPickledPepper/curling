@@ -163,7 +163,7 @@ class SearchDistillRobot(AIRobot):
                     f"gate={self.strategy_gate_strength:.2f} "
                     f"action={plan.action_name} "
                     f"mean={plan.mean_score:.3f} std={plan.std_score:.3f} "
-                    f"sweep={plan.sweep:.2f}",
+                    f"sweep={plan.sweep:.2f} explain={plan.explanation}",
                     flush=True,
                 )
         v0, h0, w0 = shot

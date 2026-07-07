@@ -20,6 +20,7 @@ SHEET_LENGTH = 44.5
 START_Y = 32.0
 ROOT = Path(__file__).resolve().parent
 CALIBRATION_FILE = ROOT / "config" / "physics_calibration.json"
+UNITY_CALIBRATION_FILE = ROOT / "config" / "unity_physics_calibration.json"
 _CALIBRATION_CACHE: Optional[dict] = None
 _CALIBRATION_LOADED = False
 
@@ -54,21 +55,43 @@ def load_physics_calibration() -> Optional[dict]:
     if _CALIBRATION_LOADED:
         return _CALIBRATION_CACHE
     _CALIBRATION_LOADED = True
-    if not CALIBRATION_FILE.exists():
-        return None
-    try:
-        payload = json.loads(CALIBRATION_FILE.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return None
-    if not payload.get("enabled", True):
-        return None
-    if payload.get("schema") != "official_no_sweep_landing_v1":
-        return None
-    _CALIBRATION_CACHE = payload
+    for path in (UNITY_CALIBRATION_FILE, CALIBRATION_FILE):
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not payload.get("enabled", True):
+            continue
+        if payload.get("schema") not in {"official_no_sweep_landing_v1", "unity_landing_v2"}:
+            continue
+        _CALIBRATION_CACHE = payload
+        break
     return _CALIBRATION_CACHE
 
 
-def calibration_features(v0: float, h0: float, w0: float) -> List[float]:
+def calibration_features(v0: float, h0: float, w0: float, sweep: float = 0.0, schema: str = "official_no_sweep_landing_v1") -> List[float]:
+    if schema == "unity_landing_v2":
+        return [
+            1.0,
+            v0,
+            h0,
+            w0,
+            sweep,
+            abs(w0),
+            math.tanh(w0),
+            v0 * v0,
+            h0 * h0,
+            w0 * w0,
+            sweep * sweep,
+            v0 * h0,
+            v0 * w0,
+            h0 * w0,
+            v0 * sweep,
+            h0 * sweep,
+            w0 * sweep,
+        ]
     return [
         1.0,
         v0,
@@ -98,11 +121,12 @@ def within_calibration_support(payload: dict, v0: float, h0: float, w0: float) -
     return True
 
 
-def calibrated_landing_point(v0: float, h0: float, w0: float) -> Optional[Tuple[float, float, float, float]]:
+def calibrated_landing_point(v0: float, h0: float, w0: float, sweep: float = 0.0) -> Optional[Tuple[float, float, float, float]]:
     payload = load_physics_calibration()
     if payload is None or not within_calibration_support(payload, v0, h0, w0):
         return None
-    features = calibration_features(v0, h0, w0)
+    schema = str(payload.get("schema", "official_no_sweep_landing_v1"))
+    features = calibration_features(v0, h0, w0, sweep=sweep, schema=schema)
     coef_x = payload.get("coef_x", [])
     coef_y = payload.get("coef_y", [])
     if len(coef_x) != len(features) or len(coef_y) != len(features):
@@ -163,9 +187,9 @@ class FastCurlingEnv:
             values.append([pos[n * 4 + 2], pos[n * 4 + 3]])
         return values
 
-    def landing_point(self, v0: float, h0: float, w0: float) -> Tuple[float, float]:
+    def landing_point(self, v0: float, h0: float, w0: float, sweep: float = 0.0) -> Tuple[float, float]:
         speed_term = clamp(v0, 0.0, 6.0)
-        calibrated = calibrated_landing_point(speed_term, h0, w0)
+        calibrated = calibrated_landing_point(speed_term, h0, w0, sweep=sweep)
         if calibrated is None:
             x = HOUSE_X + h0 * 0.88 + math.tanh(w0 / 5.0) * 0.55
             y = 8.0 - speed_term * 1.02 + abs(w0) * 0.05
@@ -180,9 +204,59 @@ class FastCurlingEnv:
             clamp(y, STONE_R, START_Y),
         )
 
-    def apply_simple_collision(self, stone_index: int, x: float, y: float) -> Tuple[float, float]:
+    def apply_simple_collision(
+        self,
+        stone_index: int,
+        x: float,
+        y: float,
+        v0: float = 3.0,
+        h0: float = 0.0,
+    ) -> Tuple[float, float]:
         nearest_idx = None
         nearest_dist = float("inf")
+        if v0 >= 4.0:
+            release_x = clamp(HOUSE_X + h0, STONE_R, SHEET_WIDTH - STONE_R)
+            release_y = START_Y
+            path_dx = x - release_x
+            path_dy = y - release_y
+            path_len2 = path_dx * path_dx + path_dy * path_dy
+            for idx, stone in enumerate(self.stones):
+                if idx == stone_index or not stone.in_play:
+                    continue
+                if path_len2 <= 1e-9:
+                    d = distance(x, y, stone.x, stone.y)
+                    t = 1.0
+                else:
+                    t = ((stone.x - release_x) * path_dx + (stone.y - release_y) * path_dy) / path_len2
+                    if t < 0.0 or t > 1.05:
+                        continue
+                    closest_x = release_x + clamp(t, 0.0, 1.0) * path_dx
+                    closest_y = release_y + clamp(t, 0.0, 1.0) * path_dy
+                    d = distance(closest_x, closest_y, stone.x, stone.y)
+                if d < nearest_dist:
+                    nearest_dist = d
+                    nearest_idx = idx
+            if nearest_idx is None or nearest_dist > STONE_R * 2.4:
+                return x, y
+
+            target = self.stones[nearest_idx]
+            dx = x - release_x
+            dy = y - START_Y
+            mag = math.hypot(dx, dy) or 1.0
+            ux, uy = dx / mag, dy / mag
+            power = clamp((v0 - 3.5) / 2.5, 0.25, 1.0)
+            travel = 1.2 + 5.0 * power
+            new_x = target.x + ux * travel
+            new_y = target.y + uy * travel
+            target.x = clamp(new_x, STONE_R, SHEET_WIDTH - STONE_R)
+            target.y = clamp(new_y, STONE_R, START_Y)
+            target.in_play = STONE_R < new_x < SHEET_WIDTH - STONE_R and STONE_R < new_y < START_Y
+            roll = 0.25 + 0.55 * (1.0 - power)
+            return (
+                clamp(target.x - ux * (STONE_R * 2.05 + roll), STONE_R, SHEET_WIDTH - STONE_R),
+                clamp(target.y - uy * (STONE_R * 2.05 + roll), STONE_R, START_Y),
+            )
+
         for idx, stone in enumerate(self.stones):
             if idx == stone_index or not stone.in_play:
                 continue
@@ -194,6 +268,7 @@ class FastCurlingEnv:
             return x, y
 
         target = self.stones[nearest_idx]
+
         dx = target.x - x
         dy = target.y - y
         mag = math.hypot(dx, dy) or 1.0
@@ -207,9 +282,11 @@ class FastCurlingEnv:
 
     def place_stone(self, stone_index: int, shot: Sequence[float]) -> None:
         v0, h0, w0, sweep = split_shot(shot)
-        x, y = self.landing_point(v0, h0, w0)
-        y = clamp(y - sweep * 0.045, STONE_R, START_Y)
-        x, y = self.apply_simple_collision(stone_index, x, y)
+        x, y = self.landing_point(v0, h0, w0, sweep=sweep)
+        payload = load_physics_calibration()
+        if payload is None or payload.get("schema") != "unity_landing_v2":
+            y = clamp(y - sweep * 0.045, STONE_R, START_Y)
+        x, y = self.apply_simple_collision(stone_index, x, y, v0=v0, h0=h0)
         self.stones[stone_index] = Stone(x=x, y=y, in_play=(y < SHEET_LENGTH and 0.0 < x < SHEET_WIDTH))
 
     def choose_opponent_shot(self) -> Shot:

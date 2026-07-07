@@ -19,3 +19,16 @@ model/*_smoke.pt
 model/*_smoke.pth
 model/*_candidate.pt
 model/*_candidate.pth
+model/self_play/
+model/backups/
+log/self_play_runs/
+
+# Official standalone server is a local binary dependency (~170 MB).
+数字冰壶单机版_win/
+数字冰壶单机版_win.rar
+
+# Local arena runtime state and generated captures.
+log/local_arena/
+log/local_arena_processes.json
+log/unity_sampling/
+data/calibration/*.jsonl

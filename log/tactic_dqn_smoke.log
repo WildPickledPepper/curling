@@ -1,9 +1,0 @@
-round=1 score=1 result=score epsilon=0.4487 reward=5.0000 loss=NA
-round=1 score=1 result=score epsilon=0.4474 reward=5.0000 loss=NA
-round=1 score=3 result=score epsilon=0.4462 reward=15.0000 loss=NA
-round=1 score=1 result=score epsilon=0.4449 reward=5.0000 loss=NA
-round=1 score=-2 result=score epsilon=0.4436 reward=-10.0000 loss=NA
-round=1 score=-1 result=score epsilon=0.4423 reward=-5.0000 loss=NA
-round=1 score=2 result=score epsilon=0.4410 reward=10.0000 loss=NA
-round=1 score=2 result=score epsilon=0.4398 reward=10.0000 loss=10.099671363830566
-round=1 score=-2 result=score epsilon=0.4385 reward=-10.0000 loss=9.373130798339844

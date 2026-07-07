@@ -12,7 +12,19 @@ import numpy as np
 import torch
 
 from curling_sweep import NO_SWEEP_ACTIONS, estimate_sweep_distance
-from fast_curling_env import FastCurlingEnv, Shot, Stone, SweepShot, clamp, split_shot
+from fast_curling_env import (
+    HOUSE_R,
+    HOUSE_X,
+    HOUSE_Y,
+    STONE_R,
+    FastCurlingEnv,
+    Shot,
+    Stone,
+    SweepShot,
+    clamp,
+    distance,
+    split_shot,
+)
 from tactic_dqn_robot import ACTIONS, make_state_vector
 from train_search_distill import PolicyValueNet, rollout_shot, valid_indices
 
@@ -53,6 +65,7 @@ class ShotPlan:
     sweep: float
     mean_score: float
     std_score: float
+    explanation: str = ""
     candidates: List[CandidateStats] = field(default_factory=list)
 
     def swept_shot(self) -> SweepShot:
@@ -90,6 +103,76 @@ def strategy_phase(shot_num: int, player_is_init: bool) -> str:
 
 def tactic_group(action_name: str) -> str:
     return TACTIC_GROUPS.get(action_name, "other")
+
+
+def _stone_is_ours(index: int, player_is_init: bool) -> bool:
+    return (index % 2 == 0) == player_is_init
+
+
+def board_context(env: FastCurlingEnv, player_is_init: bool) -> Dict[str, float]:
+    own_best = float("inf")
+    enemy_best = float("inf")
+    enemy_button = 0
+    enemy_guards = 0
+    center_guards = 0
+    for idx, stone in enumerate(env.stones):
+        if not stone.in_play:
+            continue
+        d = distance(stone.x, stone.y, HOUSE_X, HOUSE_Y)
+        if _stone_is_ours(idx, player_is_init):
+            own_best = min(own_best, d)
+            continue
+        enemy_best = min(enemy_best, d)
+        if d <= 0.75:
+            enemy_button += 1
+        if HOUSE_Y + HOUSE_R < stone.y < 10.61:
+            enemy_guards += 1
+            if abs(stone.x - HOUSE_X) <= 0.55:
+                center_guards += 1
+    enemy_shot = enemy_best <= HOUSE_R + STONE_R and enemy_best < own_best
+    return {
+        "own_best": own_best,
+        "enemy_best": enemy_best,
+        "enemy_shot": 1.0 if enemy_shot else 0.0,
+        "enemy_button": float(enemy_button),
+        "enemy_guards": float(enemy_guards),
+        "center_guards": float(center_guards),
+    }
+
+
+def needs_offense(env: FastCurlingEnv, player_is_init: bool) -> bool:
+    ctx = board_context(env, player_is_init)
+    score = score_for_player(env, player_is_init)
+    phase = strategy_phase(env.shot_num, player_is_init)
+    return bool(
+        ctx["enemy_shot"]
+        or ctx["enemy_button"] > 0
+        or score < 0
+        or (phase in {"late_setup", "hammer", "final_without_hammer"} and score <= 0)
+    )
+
+
+def explain_tactic(env: FastCurlingEnv, action_name: str, player_is_init: bool) -> str:
+    ctx = board_context(env, player_is_init)
+    score = score_for_player(env, player_is_init)
+    phase = strategy_phase(env.shot_num, player_is_init)
+    group = tactic_group(action_name)
+    reasons = [f"phase={phase}", f"score={score}"]
+    if ctx["enemy_shot"]:
+        reasons.append(f"enemy_shot={ctx['enemy_best']:.2f}m")
+    if ctx["enemy_button"] > 0:
+        reasons.append("enemy_button")
+    if ctx["center_guards"] > 0:
+        reasons.append(f"center_guards={int(ctx['center_guards'])}")
+    if group == "takeout":
+        reasons.append("intent=remove_or_roll")
+    elif group == "raise_push":
+        reasons.append("intent=raise_scoring_stone")
+    elif group == "guard":
+        reasons.append("intent=protect")
+    else:
+        reasons.append(f"intent={group}")
+    return ";".join(reasons)
 
 
 def strategy_prior_bonus(env: FastCurlingEnv, action_name: str, player_is_init: bool) -> float:
@@ -134,7 +217,28 @@ def strategy_prior_bonus(env: FastCurlingEnv, action_name: str, player_is_init: 
     else:
         bonus += {"guard": 0.22, "takeout": 0.08, "curl_draw": 0.04, "draw": -0.04, "raise_push": -0.04}.get(group, 0.0)
 
+    ctx = board_context(env, player_is_init)
+    if ctx["enemy_shot"] or ctx["enemy_button"] > 0:
+        bonus += {"takeout": 0.42, "freeze": 0.16, "raise_push": 0.10, "guard": -0.24, "draw": -0.08}.get(group, 0.0)
+    if ctx["center_guards"] > 0 and phase != "early":
+        bonus += {"takeout": 0.18, "raise_push": 0.12, "guard": -0.08}.get(group, 0.0)
+
     return bonus
+
+
+def plan_selection_score(plan: ShotPlan, env: FastCurlingEnv, player_is_init: bool) -> float:
+    score = plan.mean_score - 0.04 * plan.std_score
+    group = tactic_group(plan.action_name)
+    if needs_offense(env, player_is_init):
+        score += {
+            "takeout": 0.42,
+            "raise_push": 0.24,
+            "freeze": 0.16,
+            "curl_draw": 0.02,
+            "draw": -0.12,
+            "guard": -0.18,
+        }.get(group, 0.0)
+    return score
 
 
 def play_controlled_shot(env: FastCurlingEnv, shot: Sequence[float]) -> None:
@@ -323,6 +427,7 @@ def refine_shot(
         sweep=sweep,
         mean_score=best.mean_score,
         std_score=best.std_score,
+        explanation=explain_tactic(env, action_name, player_is_init),
         candidates=sorted(stats, key=lambda item: item.mean_score - 0.04 * item.std_score, reverse=True)[:8],
     )
 
@@ -333,14 +438,16 @@ def scripted_index_for_player(
     player_is_init: bool = True,
 ) -> int:
     score = score_for_player(env, player_is_init)
-    if score < 0:
+    ctx = board_context(env, player_is_init)
+    if needs_offense(env, player_is_init):
         priorities = [
             "take_out",
             "hit_roll",
-            "push_in",
-            "push_in_14",
             "double_hit_gote",
             "clear",
+            "push_in",
+            "push_in_14",
+            "freeze" if ctx["enemy_shot"] else "draw_center",
             "draw_center",
             "curl_left",
             "curl_right",
@@ -447,7 +554,9 @@ def choose_refined_plan(
     if model is not None:
         scripted = scripted_index_for_player(env, options, player_is_init)
         if scripted in valid and scripted not in selected_order:
-            if len(selected_order) >= max(1, top_k):
+            if needs_offense(env, player_is_init):
+                selected_order = [scripted] + selected_order[:-1]
+            elif len(selected_order) >= max(1, top_k):
                 selected_order[-1] = scripted
             else:
                 selected_order.append(scripted)
@@ -478,4 +587,4 @@ def choose_refined_plan(
             rollouts=rollouts,
             player_is_init=player_is_init,
         )
-    return max(plans, key=lambda plan: plan.mean_score - 0.04 * plan.std_score)
+    return max(plans, key=lambda plan: plan_selection_score(plan, env, player_is_init))

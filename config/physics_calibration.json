@@ -2,7 +2,7 @@
   "schema": "official_no_sweep_landing_v1",
   "enabled": true,
   "created_at": "2026-07-06 15:34:46",
-  "source_file": "dual_calibration_samples.jsonl",
+  "source_file": "data/calibration/no_sweep_200.jsonl",
   "n_total": 200,
   "n_used": 190,
   "n_filtered": 10,

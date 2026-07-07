@@ -24,6 +24,36 @@ from tactic_dqn_robot import ACTIONS
 from train_search_distill import load_model, rollout_shot, valid_indices
 
 
+ACTION_FAMILIES = {
+    "takeout": {"take_out", "hit_roll", "clear", "double_hit_gote"},
+    "draw": {"draw_center", "curl_left", "curl_right", "occupy", "middle_in_center"},
+    "guard": {"guard_left", "guard_right", "defense"},
+    "freeze": {"freeze"},
+    "raise": {"push_in", "push_in_14", "defense_push_in"},
+}
+
+
+def action_family_stats(actions: Counter[str]) -> Dict[str, Any]:
+    total = sum(actions.values())
+    family_counts: Dict[str, int] = {}
+    assigned = 0
+    for family, names in ACTION_FAMILIES.items():
+        count = sum(actions[name] for name in names)
+        family_counts[family] = count
+        assigned += count
+    family_counts["other"] = max(0, total - assigned)
+    family_rates = {
+        family: (count / total if total else 0.0)
+        for family, count in family_counts.items()
+    }
+    return {
+        "total_actions": total,
+        "family_counts": family_counts,
+        "family_rates": family_rates,
+        "offense_rate": family_rates["takeout"],
+    }
+
+
 class Policy:
     def __init__(
         self,
@@ -106,8 +136,8 @@ class Policy:
 
 def make_policy(
     name: str,
-    first_model_file: Path,
-    second_model_file: Path,
+    first_model_file: Optional[Path],
+    second_model_file: Optional[Path],
     args: argparse.Namespace,
 ) -> Policy:
     needs_first = name in {"shared_refined", "dual_refined"}
@@ -219,6 +249,10 @@ def main() -> None:
     parser.add_argument("--swap-sides", action="store_true", help="also run red policy as blue and report policy-level symmetric results")
     parser.add_argument("--first-model-file", default="model/search_distill_tactic_policy_first.pt")
     parser.add_argument("--second-model-file", default="model/search_distill_tactic_policy_second.pt")
+    parser.add_argument("--blue-first-model-file", default=None)
+    parser.add_argument("--blue-second-model-file", default=None)
+    parser.add_argument("--red-first-model-file", default=None)
+    parser.add_argument("--red-second-model-file", default=None)
     parser.add_argument("--games", type=int, default=40)
     parser.add_argument("--top-k", type=int, default=3)
     parser.add_argument("--candidates", type=int, default=16)
@@ -236,8 +270,12 @@ def main() -> None:
     started = time.time()
     first_model_file = Path(args.first_model_file)
     second_model_file = Path(args.second_model_file)
-    blue = make_policy(args.blue_policy, first_model_file, second_model_file, args)
-    red = make_policy(args.red_policy, first_model_file, second_model_file, args)
+    blue_first_model_file = Path(args.blue_first_model_file) if args.blue_first_model_file else first_model_file
+    blue_second_model_file = Path(args.blue_second_model_file) if args.blue_second_model_file else second_model_file
+    red_first_model_file = Path(args.red_first_model_file) if args.red_first_model_file else first_model_file
+    red_second_model_file = Path(args.red_second_model_file) if args.red_second_model_file else second_model_file
+    blue = make_policy(args.blue_policy, blue_first_model_file, blue_second_model_file, args)
+    red = make_policy(args.red_policy, red_first_model_file, red_second_model_file, args)
     rng = random.Random(args.seed)
     scores, blue_actions, red_actions, budgets, traces = run_series(blue, red, args.games, rng, args.trace_games)
 
@@ -246,6 +284,8 @@ def main() -> None:
         "summary": summarize(scores),
         "blue_action_counts": dict(blue_actions.most_common()),
         "red_action_counts": dict(red_actions.most_common()),
+        "blue_action_families": action_family_stats(blue_actions),
+        "red_action_families": action_family_stats(red_actions),
         "budget_counts": dict(budgets.most_common()),
         "traces": traces,
         "elapsed_sec": time.time() - started,
@@ -265,9 +305,13 @@ def main() -> None:
             "summary": summarize(swapped_scores),
             "blue_action_counts": dict(swapped_blue_actions.most_common()),
             "red_action_counts": dict(swapped_red_actions.most_common()),
+            "blue_action_families": action_family_stats(swapped_blue_actions),
+            "red_action_families": action_family_stats(swapped_red_actions),
             "budget_counts": dict(swapped_budgets.most_common()),
             "traces": swapped_traces,
         }
+        policy_a_actions = blue_actions + swapped_red_actions
+        policy_b_actions = red_actions + swapped_blue_actions
         report["symmetric_summary"] = {
             "policy_a": args.blue_policy,
             "policy_b": args.red_policy,
@@ -276,6 +320,8 @@ def main() -> None:
             "policy_a_win_rate": float(np.mean([score > 0 for score in policy_a_scores])) if policy_a_scores else 0.0,
             "policy_b_win_rate": float(np.mean([score < 0 for score in policy_a_scores])) if policy_a_scores else 0.0,
             "draw_rate": float(np.mean([score == 0 for score in policy_a_scores])) if policy_a_scores else 0.0,
+            "policy_a_action_families": action_family_stats(policy_a_actions),
+            "policy_b_action_families": action_family_stats(policy_b_actions),
         }
         report["elapsed_sec"] = time.time() - started
     path = Path(args.report_file)

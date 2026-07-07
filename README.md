@@ -3,6 +3,39 @@
 Digital curling course workspace plus a local search-distilled competition
 robot.
 
+## Official Standalone Arena
+
+The downloaded standalone server is now the authoritative local physics and
+match environment. Start the server, open its Unity UI, and connect both of our
+robots with one command:
+
+```powershell
+D:\anaconda3\python.exe local_arena.py start --robots --show-msg
+```
+
+In the opened page, select the two-player/infinite-round mode and start the
+match. Runtime status and shutdown:
+
+```powershell
+D:\anaconda3\python.exe local_arena.py status
+D:\anaconda3\python.exe local_arena.py stop
+```
+
+The standalone binary directory is intentionally excluded from Git. The
+in-process `fast_curling_env.py` remains a high-speed training surrogate; it
+must be calibrated and evaluated against the standalone arena. The legacy
+`archive/legacy/mock_curling_server.py` is only a lightweight socket smoke-test
+double.
+
+## Project Layout
+
+- Root: current robot, training, evaluation, search, and fast simulator code.
+- `docs/`: reports and strategy notes.
+- `tools/calibration/`: official-server sampling and physics fitting tools.
+- `tools/eval/` and `tools/analysis/`: older evaluation and analysis utilities.
+- `archive/legacy/`: obsolete DQN/mock-server experiments kept for reference.
+- `notebooks/` and `images/`: original course notebooks and assets.
+
 ## Current Strongest Local Robot
 
 Use separate first-player and second-player models. The side difference is large
@@ -30,9 +63,10 @@ Local fast-simulator refined-search evaluation:
 
 Main reports:
 
-- `CURRENT_MODEL_STRATEGY.md`
-- `TRAINING_REPORT.md`
-- `STRATEGY_MODE_ANALYSIS.md`
+- `docs/CURRENT_MODEL_STRATEGY.md`
+- `docs/TRAINING_REPORT.md`
+- `docs/SELF_PLAY_TRAINING.md`
+- `docs/STRATEGY_MODE_ANALYSIS.md`
 - `model/MODELS.md`
 - `log/search_distill_eval_dual_models_80.json`
 - `log/head_to_head_dual_vs_shared_symmetric_20.json`
@@ -42,7 +76,25 @@ Main reports:
 
 Before trusting local continuous search on the official server, collect
 official-server shot samples and calibrate the local simulator. See
-`OFFICIAL_PHYSICS_SAMPLING.md`.
+`docs/OFFICIAL_PHYSICS_SAMPLING.md`.
+
+The experimental paper-inspired ODE simulator is kept separate from the
+competition default. Keep evaluation and deployment fitting separate:
+
+```powershell
+# Honest 151/39 train/validation report
+D:\anaconda3\python.exe tools/calibration/fit_paper_physics.py data/calibration/no_sweep_200.jsonl --dt 0.0125 --output config/paper_physics_evaluation.json
+
+# Deployment refit: all 200 middle states and all 190 observable landings
+D:\anaconda3\python.exe tools/calibration/fit_paper_physics.py data/calibration/no_sweep_200.jsonl --dt 0.0125 --fit-all --initial-config config/paper_physics_evaluation.json --output config/paper_physics_calibration.json
+
+D:\anaconda3\python.exe -m unittest discover -s tests -p "test_*.py" -v
+```
+
+See `docs/CURLING_PHYSICS_MODEL_ANALYSIS.md` for the equations, limitations and
+validation comparison. The fitted configuration is
+`config/paper_physics_calibration.json`; the held-out evidence remains in
+`config/paper_physics_evaluation.json`.
 
 ## Training
 
@@ -77,7 +129,7 @@ when training the second-player model, both pools can load
 Evaluate the dual-model robot locally:
 
 ```powershell
-D:\anaconda3\python.exe evaluate_search_distill.py --games 1 --search-games 1 --refined-games 80 --adaptive-refined --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --refined-top-k 3 --refined-candidates 24 --refined-rollouts 2 --late-refined-top-k 4 --late-refined-candidates 32 --late-refined-rollouts 3 --hammer-refined-candidates 48 --hammer-refined-rollouts 4 --trace-games 3 --report-file log/search_distill_eval_dual_models_80.json
+D:\anaconda3\python.exe tools/eval/evaluate_search_distill.py --games 1 --search-games 1 --refined-games 80 --adaptive-refined --first-model-file model/search_distill_tactic_policy_first.pt --second-model-file model/search_distill_tactic_policy_second.pt --refined-top-k 3 --refined-candidates 24 --refined-rollouts 2 --late-refined-top-k 4 --late-refined-candidates 32 --late-refined-rollouts 3 --hammer-refined-candidates 48 --hammer-refined-rollouts 4 --trace-games 3 --report-file log/search_distill_eval_dual_models_80.json
 ```
 
 Run symmetric head-to-head checks. These swap sides so hammer advantage does not
@@ -87,6 +139,16 @@ dominate the conclusion:
 D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy shared_refined --swap-sides --games 20 --report-file log/head_to_head_dual_vs_shared_symmetric_20.json
 D:\anaconda3\python.exe evaluate_head_to_head.py --blue-policy dual_refined --red-policy scripted --swap-sides --games 20 --report-file log/head_to_head_dual_vs_scripted_symmetric_20.json
 ```
+
+Run iterative self-play candidate training:
+
+```powershell
+D:\anaconda3\python.exe self_play_trainer.py --cycles 3 --games 250 --rollouts 4 --epochs 10 --batch-size 256 --eval-games 250 --search-eval-games 80 --head-to-head-games 30 --opponent-policy balanced-mix
+```
+
+Use `--promote` only when the promotion gate should overwrite the current
+first/second champion models. See `docs/SELF_PLAY_TRAINING.md` for the gate and
+offensive-action checks.
 
 Current symmetric low-budget head-to-head results:
 
@@ -99,11 +161,11 @@ Socket smoke tests for the default robot:
 
 ```powershell
 # Player1 / first-player path
-D:\anaconda3\python.exe local_curling_server.py --host 127.0.0.1 --port 7792 --key local-test:0 --rounds 1 --connect-name Player1
+D:\anaconda3\python.exe archive/legacy/mock_curling_server.py --host 127.0.0.1 --port 7792 --key local-test:0 --rounds 1 --connect-name Player1
 D:\anaconda3\python.exe search_distill_robot.py --key local-test:0 -H 127.0.0.1 -p 7792 --shot-search local
 
 # Player2 / second-player path
-D:\anaconda3\python.exe local_curling_server.py --host 127.0.0.1 --port 7793 --key local-test:0 --rounds 1 --connect-name Player2
+D:\anaconda3\python.exe archive/legacy/mock_curling_server.py --host 127.0.0.1 --port 7793 --key local-test:0 --rounds 1 --connect-name Player2
 D:\anaconda3\python.exe search_distill_robot.py --key local-test:0 -H 127.0.0.1 -p 7793 --shot-search local
 ```
 

@@ -1,0 +1,181 @@
+{
+  "config": {
+    "first_model_file": "D:\\Desktop\\冰壶\\DCCourse\\model\\search_distill_tactic_policy_first.pt",
+    "second_model_file": "D:\\Desktop\\冰壶\\DCCourse\\model\\search_distill_tactic_policy_second.pt",
+    "top_k": 4,
+    "candidates": 16,
+    "rollouts": 1,
+    "strategy_gate_strength": 0.7,
+    "seed": 20260710,
+    "report_file": "log\\offense_probe_path_collision.json",
+    "scenarios": [
+      "enemy_button",
+      "enemy_top_four",
+      "center_guard_blocks"
+    ]
+  },
+  "probes": [
+    {
+      "player": "first",
+      "scenario": "enemy_button",
+      "action": "take_out",
+      "tactic_group": "takeout",
+      "shot": [
+        6.0,
+        0.0075,
+        0.0643,
+        0.0
+      ],
+      "mean_score": 3.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=-1;enemy_shot=0.00m;enemy_button;intent=remove_or_roll",
+      "target_before": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 4.88,
+        "house_distance": 0.0
+      },
+      "target_after": {
+        "in_play": false,
+        "x": 0.0,
+        "y": 0.0,
+        "house_distance": null
+      }
+    },
+    {
+      "player": "first",
+      "scenario": "enemy_top_four",
+      "action": "take_out",
+      "tactic_group": "takeout",
+      "shot": [
+        6.0,
+        -0.3016,
+        -0.0913,
+        0.0
+      ],
+      "mean_score": 3.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=-1;enemy_shot=0.68m;enemy_button;intent=remove_or_roll",
+      "target_before": {
+        "in_play": true,
+        "x": 2.175,
+        "y": 5.53,
+        "house_distance": 0.6801
+      },
+      "target_after": {
+        "in_play": false,
+        "x": 0.0,
+        "y": 0.0,
+        "house_distance": null
+      }
+    },
+    {
+      "player": "first",
+      "scenario": "center_guard_blocks",
+      "action": "curl_right",
+      "tactic_group": "curl_draw",
+      "shot": [
+        3.0,
+        0.55,
+        -3.14,
+        4.822
+      ],
+      "mean_score": 5.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=1;center_guards=1;intent=curl_draw",
+      "target_before": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 7.13,
+        "house_distance": 2.25
+      },
+      "target_after": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 7.13,
+        "house_distance": 2.25
+      }
+    },
+    {
+      "player": "second",
+      "scenario": "enemy_button",
+      "action": "freeze",
+      "tactic_group": "freeze",
+      "shot": [
+        2.906,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_score": 4.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=-1;enemy_shot=0.00m;enemy_button;intent=freeze",
+      "target_before": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 4.88,
+        "house_distance": 0.0
+      },
+      "target_after": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 4.88,
+        "house_distance": 0.0
+      }
+    },
+    {
+      "player": "second",
+      "scenario": "enemy_top_four",
+      "action": "curl_right",
+      "tactic_group": "curl_draw",
+      "shot": [
+        2.92,
+        0.55,
+        -3.14,
+        4.822
+      ],
+      "mean_score": 3.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=-1;enemy_shot=0.68m;enemy_button;intent=curl_draw",
+      "target_before": {
+        "in_play": true,
+        "x": 2.175,
+        "y": 5.53,
+        "house_distance": 0.6801
+      },
+      "target_after": {
+        "in_play": true,
+        "x": 2.175,
+        "y": 5.53,
+        "house_distance": 0.6801
+      }
+    },
+    {
+      "player": "second",
+      "scenario": "center_guard_blocks",
+      "action": "draw_center",
+      "tactic_group": "draw",
+      "shot": [
+        2.84,
+        0.045,
+        0.0,
+        3.333
+      ],
+      "mean_score": 4.0,
+      "std_score": 0.0,
+      "explanation": "phase=middle;score=1;center_guards=1;intent=draw",
+      "target_before": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 7.13,
+        "house_distance": 2.25
+      },
+      "target_after": {
+        "in_play": true,
+        "x": 2.375,
+        "y": 7.13,
+        "house_distance": 2.25
+      }
+    }
+  ]
+}

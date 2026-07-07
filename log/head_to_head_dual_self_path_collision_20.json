@@ -1,0 +1,326 @@
+{
+  "config": {
+    "blue_policy": "dual_refined",
+    "red_policy": "dual_refined",
+    "swap_sides": false,
+    "first_model_file": "model/search_distill_tactic_policy_first.pt",
+    "second_model_file": "model/search_distill_tactic_policy_second.pt",
+    "blue_first_model_file": null,
+    "blue_second_model_file": null,
+    "red_first_model_file": null,
+    "red_second_model_file": null,
+    "games": 20,
+    "top_k": 3,
+    "candidates": 16,
+    "rollouts": 1,
+    "late_top_k": 4,
+    "late_candidates": 24,
+    "late_rollouts": 2,
+    "hammer_candidates": 32,
+    "hammer_rollouts": 2,
+    "seed": 20260708,
+    "trace_games": 1,
+    "report_file": "log/head_to_head_dual_self_path_collision_20.json"
+  },
+  "summary": {
+    "games": 20,
+    "avg_score_blue": -1.55,
+    "blue_win_rate": 0.0,
+    "red_win_rate": 1.0,
+    "draw_rate": 0.0,
+    "min_score_blue": -4.0,
+    "max_score_blue": -1.0
+  },
+  "blue_action_counts": {
+    "curl_right": 56,
+    "draw_center": 35,
+    "occupy": 26,
+    "curl_left": 10,
+    "take_out": 9,
+    "middle_in_center": 7,
+    "clear": 7,
+    "guard_left": 6,
+    "guard_right": 1,
+    "hit_roll": 1,
+    "defense_push_in": 1,
+    "freeze": 1
+  },
+  "red_action_counts": {
+    "curl_right": 45,
+    "take_out": 35,
+    "draw_center": 33,
+    "clear": 18,
+    "occupy": 15,
+    "curl_left": 10,
+    "hit_roll": 3,
+    "double_hit_gote": 1
+  },
+  "blue_action_families": {
+    "total_actions": 160,
+    "family_counts": {
+      "takeout": 17,
+      "draw": 134,
+      "guard": 7,
+      "freeze": 1,
+      "raise": 1,
+      "other": 0
+    },
+    "family_rates": {
+      "takeout": 0.10625,
+      "draw": 0.8375,
+      "guard": 0.04375,
+      "freeze": 0.00625,
+      "raise": 0.00625,
+      "other": 0.0
+    },
+    "offense_rate": 0.10625
+  },
+  "red_action_families": {
+    "total_actions": 160,
+    "family_counts": {
+      "takeout": 57,
+      "draw": 103,
+      "guard": 0,
+      "freeze": 0,
+      "raise": 0,
+      "other": 0
+    },
+    "family_rates": {
+      "takeout": 0.35625,
+      "draw": 0.64375,
+      "guard": 0.0,
+      "freeze": 0.0,
+      "raise": 0.0,
+      "other": 0.0
+    },
+    "offense_rate": 0.35625
+  },
+  "budget_counts": {
+    "blue:normal": 120,
+    "red:normal": 120,
+    "blue:late": 40,
+    "red:late": 20,
+    "red:hammer": 20
+  },
+  "traces": [
+    {
+      "game": 0,
+      "score_blue": -1,
+      "blue_actions": {
+        "draw_center": 3,
+        "middle_in_center": 2,
+        "guard_left": 1,
+        "curl_right": 1,
+        "occupy": 1
+      },
+      "red_actions": {
+        "take_out": 3,
+        "draw_center": 2,
+        "clear": 2,
+        "curl_right": 1
+      },
+      "budget_counts": {
+        "blue:normal": 6,
+        "red:normal": 6,
+        "blue:late": 2,
+        "red:late": 1,
+        "red:hammer": 1
+      },
+      "trace": [
+        {
+          "shot_num": 0,
+          "side": "blue",
+          "action": "draw_center",
+          "budget": "normal",
+          "shot": [
+            3.0,
+            -0.045,
+            0.0,
+            1.333
+          ]
+        },
+        {
+          "shot_num": 1,
+          "side": "red",
+          "action": "draw_center",
+          "budget": "normal",
+          "shot": [
+            2.84,
+            -0.09,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 2,
+          "side": "blue",
+          "action": "draw_center",
+          "budget": "normal",
+          "shot": [
+            3.0,
+            0.045,
+            0.0,
+            1.333
+          ]
+        },
+        {
+          "shot_num": 3,
+          "side": "red",
+          "action": "clear",
+          "budget": "normal",
+          "shot": [
+            5.85,
+            -0.0709,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 4,
+          "side": "blue",
+          "action": "guard_left",
+          "budget": "normal",
+          "shot": [
+            2.8,
+            -0.645,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 5,
+          "side": "red",
+          "action": "take_out",
+          "budget": "normal",
+          "shot": [
+            5.7213,
+            -0.2031,
+            0.0265,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 6,
+          "side": "blue",
+          "action": "curl_right",
+          "budget": "normal",
+          "shot": [
+            2.92,
+            0.505,
+            -3.14,
+            4.822
+          ]
+        },
+        {
+          "shot_num": 7,
+          "side": "red",
+          "action": "take_out",
+          "budget": "normal",
+          "shot": [
+            5.9455,
+            0.1977,
+            -0.0603,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 8,
+          "side": "blue",
+          "action": "occupy",
+          "budget": "normal",
+          "shot": [
+            2.85,
+            -0.055,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 9,
+          "side": "red",
+          "action": "draw_center",
+          "budget": "normal",
+          "shot": [
+            3.08,
+            0.045,
+            0.0,
+            1.333
+          ]
+        },
+        {
+          "shot_num": 10,
+          "side": "blue",
+          "action": "middle_in_center",
+          "budget": "normal",
+          "shot": [
+            3.0685,
+            0.0301,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 11,
+          "side": "red",
+          "action": "take_out",
+          "budget": "normal",
+          "shot": [
+            6.0,
+            -0.5151,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 12,
+          "side": "blue",
+          "action": "draw_center",
+          "budget": "late",
+          "shot": [
+            3.0,
+            -0.045,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 13,
+          "side": "red",
+          "action": "clear",
+          "budget": "late",
+          "shot": [
+            6.0,
+            -0.021,
+            -0.0646,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 14,
+          "side": "blue",
+          "action": "middle_in_center",
+          "budget": "late",
+          "shot": [
+            3.3885,
+            -0.0599,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "shot_num": 15,
+          "side": "red",
+          "action": "curl_right",
+          "budget": "hammer",
+          "shot": [
+            3.0,
+            0.55,
+            -3.14,
+            4.822
+          ]
+        }
+      ]
+    }
+  ],
+  "elapsed_sec": 9.406761407852173
+}
