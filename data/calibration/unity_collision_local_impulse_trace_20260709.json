@@ -1,0 +1,3637 @@
+{
+  "probe": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_step_snapshots_20260709.json",
+  "impulse": "data\\calibration\\unity_collision_impulse_residual_refresh_20260709.json",
+  "summary": {
+    "row_count": 8,
+    "ok_count": 7,
+    "main_interval_counts": {
+      "0.00-0.01": 7
+    },
+    "local_target_impulse_norm_mean_Ns": 19.30596863139187,
+    "local_target_impulse_norm_rmse_Ns": 19.806812691665453,
+    "unity_required_impulse_norm_mean_Ns": 0.6989902870954573,
+    "unity_required_impulse_norm_rmse_Ns": 0.8808675465823778,
+    "residual_fraction_mean": 0.03497432693855882,
+    "residual_fraction_rmse": 0.042026419014378556,
+    "unity_implied_normal_scale_mean": 0.983056478333034,
+    "unity_implied_normal_scale_rmse_from_1": 0.033296414231767726,
+    "unity_implied_tangent_scale_mean": 0.78870375165655,
+    "unity_implied_tangent_sign_flip_count": 1,
+    "same_dominant_axis_count": 3
+  },
+  "rows": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "target_error_m": 0.014113702652814822,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.04430509731173515,
+          -0.7916496396064758
+        ],
+        "target_delta_v_norm_mps": 0.7928884496175141,
+        "target_impulse_Ns": [
+          0.8462273586541414,
+          -15.12050811648369
+        ],
+        "target_impulse_norm_Ns": 15.144169387694522,
+        "target_impulse_normal_Ns": 15.13963676349372,
+        "target_impulse_tangent_Ns": -0.37049306694362105,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.04430509789381176,
+          0.7916496396064758
+        ],
+        "active_delta_v_norm_mps": 0.7928884496500396,
+        "active_impulse_norm_Ns": 15.144169388315756,
+        "pair_delta_v_sum_norm_mps": 5.820766091346741e-10,
+        "pair_impulse_sum_norm_Ns": 1.1117663234472275e-08,
+        "contact_normal": [
+          0.0802875523363226,
+          -0.9967717436503917
+        ],
+        "contact_tangent": [
+          0.9967717436503917,
+          0.0802875523363226
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.04430509731173515,
+            -0.7916496396064758
+          ],
+          "target_delta_v_norm_mps": 0.7928884496175141,
+          "target_impulse_Ns": [
+            0.8462273586541414,
+            -15.12050811648369
+          ],
+          "target_impulse_norm_Ns": 15.144169387694522,
+          "target_impulse_normal_Ns": 15.13963676349372,
+          "target_impulse_tangent_Ns": -0.37049306694362105,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.04430509789381176,
+            0.7916496396064758
+          ],
+          "active_delta_v_norm_mps": 0.7928884496500396,
+          "active_impulse_norm_Ns": 15.144169388315756,
+          "pair_delta_v_sum_norm_mps": 5.820766091346741e-10,
+          "pair_impulse_sum_norm_Ns": 1.1117663234472275e-08,
+          "contact_normal": [
+            0.0802875523363226,
+            -0.9967717436503917
+          ],
+          "contact_tangent": [
+            0.9967717436503917,
+            0.0802875523363226
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08111403589133775,
+            -0.9967048275098394
+          ],
+          "contact_tangent": [
+            0.9967048275098394,
+            0.08111403589133775
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08189609019574035,
+            -0.9966408733393645
+          ],
+          "contact_tangent": [
+            0.9966408733393645,
+            0.08189609019574035
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08263859183598748,
+            -0.9965795819398292
+          ],
+          "contact_tangent": [
+            0.9965795819398292,
+            0.08263859183598748
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.00035853683948516846,
+            0.006406307220458984
+          ],
+          "target_delta_v_norm_mps": 0.00641633235331314,
+          "target_impulse_Ns": [
+            -0.006848053634166718,
+            0.12236046791076662
+          ],
+          "target_impulse_norm_Ns": 0.12255194794828099,
+          "target_impulse_normal_Ns": -0.12250549844580234,
+          "target_impulse_tangent_Ns": 0.00337384001750081,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006484188139438629,
+            -0.0009972653351724148
+          ],
+          "active_delta_v_norm_mps": 0.006560429404876875,
+          "active_impulse_norm_Ns": 0.12530420163314832,
+          "pair_delta_v_sum_norm_mps": 0.008171984946474512,
+          "pair_impulse_sum_norm_Ns": 0.15608491247766318,
+          "contact_normal": [
+            0.08334446623819136,
+            -0.9965207975488876
+          ],
+          "contact_tangent": [
+            0.9965207975488876,
+            0.08334446623819136
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.00037103891372680664,
+            0.006629765033721924
+          ],
+          "target_delta_v_norm_mps": 0.006640139627888967,
+          "target_impulse_Ns": [
+            -0.007086843252182008,
+            0.12662851214408877
+          ],
+          "target_impulse_norm_Ns": 0.12682666689267927,
+          "target_impulse_normal_Ns": -0.12677688236920504,
+          "target_impulse_tangent_Ns": 0.0035532424419652832,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006603579968214035,
+            0.0006630027201026678
+          ],
+          "active_delta_v_norm_mps": 0.0066367794150070415,
+          "active_impulse_norm_Ns": 0.1267624868266345,
+          "pair_delta_v_sum_norm_mps": 0.009593176194936303,
+          "pair_impulse_sum_norm_Ns": 0.1832296653232834,
+          "contact_normal": [
+            0.08382899652487556,
+            -0.9964801550164623
+          ],
+          "contact_tangent": [
+            0.9964801550164623,
+            0.08382899652487556
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.00017945468425750732,
+            0.0032065510749816895
+          ],
+          "target_delta_v_norm_mps": 0.003211568741311353,
+          "target_impulse_Ns": [
+            -0.00342758446931839,
+            0.06124512553215027
+          ],
+          "target_impulse_norm_Ns": 0.06134096295904685,
+          "target_impulse_normal_Ns": -0.06131641143933027,
+          "target_impulse_tangent_Ns": 0.0017353457712876096,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.003198223188519478,
+            0.00029492564499378204
+          ],
+          "active_delta_v_norm_mps": 0.0032117927547802164,
+          "active_impulse_norm_Ns": 0.061345241616302136,
+          "pair_delta_v_sum_norm_mps": 0.004623126918315594,
+          "pair_impulse_sum_norm_Ns": 0.08830172413982784,
+          "contact_normal": [
+            0.08410117572268065,
+            -0.9964572204776594
+          ],
+          "contact_tangent": [
+            0.9964572204776594,
+            0.08410117572268065
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.00014108791947364807,
+            0.0025209784507751465
+          ],
+          "target_delta_v_norm_mps": 0.002524923394935787,
+          "target_impulse_Ns": [
+            -0.0026947792619466783,
+            0.048150688409805305
+          ],
+          "target_impulse_norm_Ns": 0.048226036843273534,
+          "target_impulse_normal_Ns": -0.048206501882332574,
+          "target_impulse_tangent_Ns": 0.001372518079094847,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0025163684040308,
+            0.00023204926401376724
+          ],
+          "active_delta_v_norm_mps": 0.0025270450739418647,
+          "active_impulse_norm_Ns": 0.04826656091228962,
+          "pair_delta_v_sum_norm_mps": 0.003636085667130785,
+          "pair_impulse_sum_norm_Ns": 0.069449236242198,
+          "contact_normal": [
+            0.08427110345866816,
+            -0.9964428639524989
+          ],
+          "contact_tangent": [
+            0.9964428639524989,
+            0.08427110345866816
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.00013345852494239807,
+            0.002384662628173828
+          ],
+          "target_delta_v_norm_mps": 0.0023883942363204427,
+          "target_impulse_Ns": [
+            -0.002549057826399803,
+            0.04554705619812012
+          ],
+          "target_impulse_norm_Ns": 0.04561832991372046,
+          "target_impulse_normal_Ns": -0.045599729239264274,
+          "target_impulse_tangent_Ns": 0.0013025810619038153,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023781880736351013,
+            0.00021930783987045288
+          ],
+          "active_delta_v_norm_mps": 0.0023882785520556176,
+          "active_impulse_norm_Ns": 0.045616120344262295,
+          "pair_delta_v_sum_norm_mps": 0.0034379460358215192,
+          "pair_impulse_sum_norm_Ns": 0.06566476928419102,
+          "contact_normal": [
+            0.08436442952034282,
+            -0.9964349667849414
+          ],
+          "contact_tangent": [
+            0.9964349667849414,
+            0.08436442952034282
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.00013192743062973022,
+            0.002357304096221924
+          ],
+          "target_delta_v_norm_mps": 0.0023609928947409442,
+          "target_impulse_Ns": [
+            -0.0025198139250278474,
+            0.045024508237838747
+          ],
+          "target_impulse_norm_Ns": 0.045094964289552036,
+          "target_impulse_normal_Ns": -0.04507654380140981,
+          "target_impulse_tangent_Ns": 0.0012887991292505597,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002350740134716034,
+            0.0002167781349271536
+          ],
+          "active_delta_v_norm_mps": 0.0023607142861319015,
+          "active_impulse_norm_Ns": 0.04508964286511932,
+          "pair_delta_v_sum_norm_mps": 0.003398386256524144,
+          "pair_impulse_sum_norm_Ns": 0.06490917749961116,
+          "contact_normal": [
+            0.08439013545334303,
+            -0.9964327900255824
+          ],
+          "contact_tangent": [
+            0.9964327900255824,
+            0.08439013545334303
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.0006533041596412659,
+            0.011754989624023438
+          ],
+          "target_delta_v_norm_mps": 0.01177312988911204,
+          "target_impulse_Ns": [
+            -0.01247810944914818,
+            0.22452030181884766
+          ],
+          "target_impulse_norm_Ns": 0.22486678088203996,
+          "target_impulse_normal_Ns": -0.22477266758410666,
+          "target_impulse_tangent_Ns": 0.006505155753405044,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011701966635882854,
+            0.0013416623696684837
+          ],
+          "active_delta_v_norm_mps": 0.01177862814853665,
+          "active_impulse_norm_Ns": 0.22497179763705002,
+          "pair_delta_v_sum_norm_mps": 0.01713462097502549,
+          "pair_impulse_sum_norm_Ns": 0.3272712606229869,
+          "contact_normal": [
+            0.0843522525057104,
+            -0.9964359976923821
+          ],
+          "contact_tangent": [
+            0.9964359976923821,
+            0.0843522525057104
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.00018723681569099426,
+            0.011780261993408203
+          ],
+          "target_delta_v_norm_mps": 0.011781749881001885,
+          "target_impulse_Ns": [
+            -0.0035762231796979908,
+            0.2250030040740967
+          ],
+          "target_impulse_norm_Ns": 0.22503142272713603,
+          "target_impulse_normal_Ns": -0.22451823219812977,
+          "target_impulse_tangent_Ns": 0.015188963928644564,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.008790768799372017,
+            0.0006279954977799207
+          ],
+          "active_delta_v_norm_mps": 0.008813171644149702,
+          "active_impulse_norm_Ns": 0.16833157840325932,
+          "pair_delta_v_sum_norm_mps": 0.015099192579798713,
+          "pair_impulse_sum_norm_Ns": 0.28839457827415543,
+          "contact_normal": [
+            0.08334441931162025,
+            -0.9965208014736113
+          ],
+          "contact_tangent": [
+            0.9965208014736113,
+            0.08334441931162025
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 0.16250172903676507,
+      "unity_required_impulse_normal_Ns": 0.12011908384552855,
+      "unity_required_impulse_tangent_Ns": -0.10944504390811445,
+      "unity_required_dominant_axis": "mixed",
+      "residual_fraction_of_local_target_impulse": 0.010730316392842698,
+      "normal_fraction_of_local_target_impulse": 0.00793407964285988,
+      "tangent_fraction_of_local_target_impulse": 0.29540375697440246,
+      "unity_implied_target_impulse_norm_Ns": 15.267301304115678,
+      "unity_implied_target_impulse_normal_Ns": 15.259755847339248,
+      "unity_implied_target_impulse_tangent_Ns": -0.4799381108517355,
+      "unity_implied_normal_scale_vs_local": 1.00793407964286,
+      "unity_implied_tangent_scale_vs_local": 1.2954037569744024,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 14.981667658657756,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": false
+    },
+    {
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "target_error_m": null,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.07434900850057602,
+          -1.1849437952041626
+        ],
+        "target_delta_v_norm_mps": 1.1872740091730565,
+        "target_impulse_Ns": [
+          1.420066062361002,
+          -22.632426488399506
+        ],
+        "target_impulse_norm_Ns": 22.676933575205382,
+        "target_impulse_normal_Ns": 22.671931814787502,
+        "target_impulse_tangent_Ns": -0.47626060083037886,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.07434900711086811,
+          1.1849437952041626
+        ],
+        "active_delta_v_norm_mps": 1.187274009086031,
+        "active_impulse_norm_Ns": 22.67693357354319,
+        "pair_delta_v_sum_norm_mps": 1.3897079043090343e-09,
+        "pair_impulse_sum_norm_Ns": 2.654342097230256e-08,
+        "contact_normal": [
+          0.08356856104412477,
+          -0.9965020299051147
+        ],
+        "contact_tangent": [
+          0.9965020299051147,
+          0.08356856104412477
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.07434900850057602,
+            -1.1849437952041626
+          ],
+          "target_delta_v_norm_mps": 1.1872740091730565,
+          "target_impulse_Ns": [
+            1.420066062361002,
+            -22.632426488399506
+          ],
+          "target_impulse_norm_Ns": 22.676933575205382,
+          "target_impulse_normal_Ns": 22.671931814787502,
+          "target_impulse_tangent_Ns": -0.47626060083037886,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.07434900711086811,
+            1.1849437952041626
+          ],
+          "active_delta_v_norm_mps": 1.187274009086031,
+          "active_impulse_norm_Ns": 22.67693357354319,
+          "pair_delta_v_sum_norm_mps": 1.3897079043090343e-09,
+          "pair_impulse_sum_norm_Ns": 2.654342097230256e-08,
+          "contact_normal": [
+            0.08356856104412477,
+            -0.9965020299051147
+          ],
+          "contact_tangent": [
+            0.9965020299051147,
+            0.08356856104412477
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08525396003791508,
+            -0.9963592536318684
+          ],
+          "contact_tangent": [
+            0.9963592536318684,
+            0.08525396003791508
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08680335346993007,
+            -0.9962254653573027
+          ],
+          "contact_tangent": [
+            0.9962254653573027,
+            0.08680335346993007
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08823651121357144,
+            -0.9960995522982917
+          ],
+          "contact_tangent": [
+            0.9960995522982917,
+            0.08823651121357144
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.0004017651081085205,
+            0.006403088569641113
+          ],
+          "target_delta_v_norm_mps": 0.006415680667923094,
+          "target_impulse_Ns": [
+            -0.007673713564872742,
+            0.12229899168014527
+          ],
+          "target_impulse_norm_Ns": 0.12253950075733111,
+          "target_impulse_normal_Ns": -0.12249476220287205,
+          "target_impulse_tangent_Ns": 0.0033109634123295196,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006399869918823242,
+            0.00045212404802441597
+          ],
+          "active_delta_v_norm_mps": 0.006415820378771572,
+          "active_impulse_norm_Ns": 0.12254216923453704,
+          "pair_delta_v_sum_norm_mps": 0.009108852910971818,
+          "pair_impulse_sum_norm_Ns": 0.17397909059956174,
+          "contact_normal": [
+            0.08956603238730358,
+            -0.9959808862836658
+          ],
+          "contact_tangent": [
+            0.9959808862836658,
+            0.08956603238730358
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.0004158616065979004,
+            0.006627798080444336
+          ],
+          "target_delta_v_norm_mps": 0.006640831896003979,
+          "target_impulse_Ns": [
+            -0.007942956686019898,
+            0.12659094333648682
+          ],
+          "target_impulse_norm_Ns": 0.126839889213676,
+          "target_impulse_normal_Ns": -0.12678987535251834,
+          "target_impulse_tangent_Ns": 0.003561601301446693,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006669871509075165,
+            -0.0001374981366097927
+          ],
+          "active_delta_v_norm_mps": 0.006671288607543806,
+          "active_impulse_norm_Ns": 0.1274216124040867,
+          "pair_delta_v_sum_norm_mps": 0.00901313670268139,
+          "pair_impulse_sum_norm_Ns": 0.17215091102121458,
+          "contact_normal": [
+            0.09062161610194056,
+            -0.9958853963660038
+          ],
+          "contact_tangent": [
+            0.9958853963660038,
+            0.09062161610194056
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.00020112842321395874,
+            0.003205418586730957
+          ],
+          "target_delta_v_norm_mps": 0.003211722428664224,
+          "target_impulse_Ns": [
+            -0.0038415528833866124,
+            0.06122349500656128
+          ],
+          "target_impulse_norm_Ns": 0.06134389838748668,
+          "target_impulse_normal_Ns": -0.06131830368717698,
+          "target_impulse_tangent_Ns": 0.0017718640753258035,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0031869225203990936,
+            0.0003813318908214569
+          ],
+          "active_delta_v_norm_mps": 0.003209655614234085,
+          "active_impulse_norm_Ns": 0.06130442223187103,
+          "pair_delta_v_sum_norm_mps": 0.004666877476322693,
+          "pair_impulse_sum_norm_Ns": 0.08913735979776344,
+          "contact_normal": [
+            0.09142451879613793,
+            -0.9958120090473377
+          ],
+          "contact_tangent": [
+            0.9958120090473377,
+            0.09142451879613793
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.00015801191329956055,
+            0.002518296241760254
+          ],
+          "target_delta_v_norm_mps": 0.0025232486453000244,
+          "target_impulse_Ns": [
+            -0.003018027544021607,
+            0.04809945821762086
+          ],
+          "target_impulse_norm_Ns": 0.04819404912523047,
+          "target_impulse_normal_Ns": -0.04817299840738622,
+          "target_impulse_tangent_Ns": 0.0014242877262310187,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0025067515671253204,
+            0.000338550191372633
+          ],
+          "active_delta_v_norm_mps": 0.002529509765026357,
+          "active_impulse_norm_Ns": 0.048313636512003426,
+          "pair_delta_v_sum_norm_mps": 0.0036983982349062475,
+          "pair_impulse_sum_norm_Ns": 0.07063940628670934,
+          "contact_normal": [
+            0.0920902402136171,
+            -0.9957506654064552
+          ],
+          "contact_tangent": [
+            0.9957506654064552,
+            0.0920902402136171
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.0001495853066444397,
+            0.0023840665817260742
+          ],
+          "target_delta_v_norm_mps": 0.0023887547446456198,
+          "target_impulse_Ns": [
+            -0.0028570793569087983,
+            0.04553567171096802
+          ],
+          "target_impulse_norm_Ns": 0.04562521562273134,
+          "target_impulse_normal_Ns": -0.045604520183306185,
+          "target_impulse_tangent_Ns": 0.0013740594860288651,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002372872084379196,
+            0.00029907282441854477
+          ],
+          "active_delta_v_norm_mps": 0.0023916451415566978,
+          "active_impulse_norm_Ns": 0.04568042220373293,
+          "pair_delta_v_sum_norm_mps": 0.0034845718774128187,
+          "pair_impulse_sum_norm_Ns": 0.06655532285858484,
+          "contact_normal": [
+            0.09264934091652544,
+            -0.9956987996516484
+          ],
+          "contact_tangent": [
+            0.9956987996516484,
+            0.09264934091652544
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.0001478642225265503,
+            0.0023566484451293945
+          ],
+          "target_delta_v_norm_mps": 0.0023612826434449086,
+          "target_impulse_Ns": [
+            -0.002824206650257111,
+            0.04501198530197144
+          ],
+          "target_impulse_norm_Ns": 0.04510049848979776,
+          "target_impulse_normal_Ns": -0.04507939943996271,
+          "target_impulse_tangent_Ns": 0.0013793876034453028,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002346988767385483,
+            0.00027401489205658436
+          ],
+          "active_delta_v_norm_mps": 0.0023629304761889226,
+          "active_impulse_norm_Ns": 0.045131972095208424,
+          "pair_delta_v_sum_norm_mps": 0.003428780885010805,
+          "pair_impulse_sum_norm_Ns": 0.06548971490370638,
+          "contact_normal": [
+            0.09311573068057491,
+            -0.9956552921065716
+          ],
+          "contact_tangent": [
+            0.9956552921065716,
+            0.09311573068057491
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.000737316906452179,
+            0.011750936508178711
+          ],
+          "target_delta_v_norm_mps": 0.011774045398238769,
+          "target_impulse_Ns": [
+            -0.014082752913236619,
+            0.2244428873062134
+          ],
+          "target_impulse_norm_Ns": 0.2248842671063605,
+          "target_impulse_normal_Ns": -0.22477641980129973,
+          "target_impulse_tangent_Ns": 0.006963813127500436,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011699322611093521,
+            0.0015338226221501827
+          ],
+          "active_delta_v_norm_mps": 0.011799439028812505,
+          "active_impulse_norm_Ns": 0.22536928545031884,
+          "pair_delta_v_sum_norm_mps": 0.01722354186047243,
+          "pair_impulse_sum_norm_Ns": 0.32896964953502345,
+          "contact_normal": [
+            0.09349762352983268,
+            -0.995619502819362
+          ],
+          "contact_tangent": [
+            0.995619502819362,
+            0.09349762352983268
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.0007371902465820312,
+            0.011748790740966797
+          ],
+          "target_delta_v_norm_mps": 0.011771895910798854,
+          "target_impulse_Ns": [
+            -0.014080333709716798,
+            0.22440190315246583
+          ],
+          "target_impulse_norm_Ns": 0.22484321189625814,
+          "target_impulse_normal_Ns": -0.22472920257360451,
+          "target_impulse_tangent_Ns": 0.007159290918622304,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011728443205356598,
+            0.0012135987635701895
+          ],
+          "active_delta_v_norm_mps": 0.011791064497330785,
+          "active_impulse_norm_Ns": 0.225209331899018,
+          "pair_delta_v_sum_norm_mps": 0.016995034076785525,
+          "pair_impulse_sum_norm_Ns": 0.3246051508666036,
+          "contact_normal": [
+            0.09436990794230533,
+            -0.9955372019542819
+          ],
+          "contact_tangent": [
+            0.9955372019542819,
+            0.09436990794230533
+          ]
+        }
+      ],
+      "status": "no_unity_residual"
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "target_error_m": 0.02847197249155637,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.05346119776368141,
+          -0.8933961391448975
+        ],
+        "target_delta_v_norm_mps": 0.8949942799288364,
+        "target_impulse_Ns": [
+          1.021108877286315,
+          -17.06386625766754
+        ],
+        "target_impulse_norm_Ns": 17.094390746640777,
+        "target_impulse_normal_Ns": 17.090531263015908,
+        "target_impulse_tangent_Ns": -0.36323015666910413,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.053461199582670815,
+          0.8933961391448975
+        ],
+        "active_delta_v_norm_mps": 0.894994280037491,
+        "active_impulse_norm_Ns": 17.09439074871608,
+        "pair_delta_v_sum_norm_mps": 1.8189894035458565e-09,
+        "pair_impulse_sum_norm_Ns": 3.474269760772586e-08,
+        "contact_normal": [
+          0.08093063474179668,
+          -0.9967197361145661
+        ],
+        "contact_tangent": [
+          0.9967197361145661,
+          0.08093063474179668
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.05346119776368141,
+            -0.8933961391448975
+          ],
+          "target_delta_v_norm_mps": 0.8949942799288364,
+          "target_impulse_Ns": [
+            1.021108877286315,
+            -17.06386625766754
+          ],
+          "target_impulse_norm_Ns": 17.094390746640777,
+          "target_impulse_normal_Ns": 17.090531263015908,
+          "target_impulse_tangent_Ns": -0.36323015666910413,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.053461199582670815,
+            0.8933961391448975
+          ],
+          "active_delta_v_norm_mps": 0.894994280037491,
+          "active_impulse_norm_Ns": 17.09439074871608,
+          "pair_delta_v_sum_norm_mps": 1.8189894035458565e-09,
+          "pair_impulse_sum_norm_Ns": 3.474269760772586e-08,
+          "contact_normal": [
+            0.08093063474179668,
+            -0.9967197361145661
+          ],
+          "contact_tangent": [
+            0.9967197361145661,
+            0.08093063474179668
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08207968033597338,
+            -0.9966257703250224
+          ],
+          "contact_tangent": [
+            0.9966257703250224,
+            0.08207968033597338
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08315882403388092,
+            -0.9965363064059944
+          ],
+          "contact_tangent": [
+            0.9965363064059944,
+            0.08315882403388092
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08417697274273087,
+            -0.9964508202916336
+          ],
+          "contact_tangent": [
+            0.9964508202916336,
+            0.08417697274273087
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.00038328394293785095,
+            0.006405055522918701
+          ],
+          "target_delta_v_norm_mps": 0.006416513292480998,
+          "target_impulse_Ns": [
+            -0.007320723310112954,
+            0.1223365604877472
+          ],
+          "target_impulse_norm_Ns": 0.12255540388638707,
+          "target_impulse_normal_Ns": -0.12251564524288334,
+          "target_impulse_tangent_Ns": 0.003121488823529875,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006530236452817917,
+            -0.001550216693431139
+          ],
+          "active_delta_v_norm_mps": 0.0067117181053963,
+          "active_impulse_norm_Ns": 0.12819381581306935,
+          "pair_delta_v_sum_norm_mps": 0.007832910392633188,
+          "pair_impulse_sum_norm_Ns": 0.1496085884992939,
+          "contact_normal": [
+            0.08513915269479823,
+            -0.9963690705147425
+          ],
+          "contact_tangent": [
+            0.9963690705147425,
+            0.08513915269479823
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.00039664655923843384,
+            0.00662839412689209
+          ],
+          "target_delta_v_norm_mps": 0.006640251290002001,
+          "target_impulse_Ns": [
+            -0.007575949281454087,
+            0.12660232782363892
+          ],
+          "target_impulse_norm_Ns": 0.12682879963903823,
+          "target_impulse_normal_Ns": -0.12678526495987502,
+          "target_impulse_tangent_Ns": 0.0033228010674121364,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.00667751207947731,
+            -3.646640107035637e-05
+          ],
+          "active_delta_v_norm_mps": 0.006677611651629078,
+          "active_impulse_norm_Ns": 0.12754238254611538,
+          "pair_delta_v_sum_norm_mps": 0.009105096530283623,
+          "pair_impulse_sum_norm_Ns": 0.1739073437284172,
+          "contact_normal": [
+            0.08586548587474384,
+            -0.9963067390796343
+          ],
+          "contact_tangent": [
+            0.9963067390796343,
+            0.08586548587474384
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.00019183382391929626,
+            0.003205716609954834
+          ],
+          "target_delta_v_norm_mps": 0.003211451260620316,
+          "target_impulse_Ns": [
+            -0.003664026036858559,
+            0.06122918725013733
+          ],
+          "target_impulse_norm_Ns": 0.06133871907784804,
+          "target_impulse_normal_Ns": -0.061316847212588725,
+          "target_impulse_tangent_Ns": 0.0016378968280109712,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0032247789204120636,
+            9.37553122639656e-05
+          ],
+          "active_delta_v_norm_mps": 0.0032261415257411924,
+          "active_impulse_norm_Ns": 0.06161930314165678,
+          "pair_delta_v_sum_norm_mps": 0.004481659394002376,
+          "pair_impulse_sum_norm_Ns": 0.08559969442544538,
+          "contact_normal": [
+            0.08636782232627617,
+            -0.9962633182380132
+          ],
+          "contact_tangent": [
+            0.9962633182380132,
+            0.08636782232627617
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.0001508072018623352,
+            0.002520143985748291
+          ],
+          "target_delta_v_norm_mps": 0.0025246521584243696,
+          "target_impulse_Ns": [
+            -0.0028804175555706027,
+            0.048134750127792364
+          ],
+          "target_impulse_norm_Ns": 0.04822085622590546,
+          "target_impulse_normal_Ns": -0.048203155455426944,
+          "target_impulse_tangent_Ns": 0.0013064376370077269,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002519901841878891,
+            0.00021718256175518036
+          ],
+          "active_delta_v_norm_mps": 0.0025292436730839454,
+          "active_impulse_norm_Ns": 0.04830855415590336,
+          "pair_delta_v_sum_norm_mps": 0.003620161051807288,
+          "pair_impulse_sum_norm_Ns": 0.0691450760895192,
+          "contact_normal": [
+            0.08675634010164777,
+            -0.9962295606195228
+          ],
+          "contact_tangent": [
+            0.9962295606195228,
+            0.08675634010164777
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.00014266371726989746,
+            0.0023840665817260742
+          ],
+          "target_delta_v_norm_mps": 0.0023883313007889654,
+          "target_impulse_Ns": [
+            -0.002724876999855042,
+            0.04553567171096802
+          ],
+          "target_impulse_norm_Ns": 0.045617127845069244,
+          "target_impulse_normal_Ns": -0.045600005985513836,
+          "target_impulse_tangent_Ns": 0.0012497227510512928,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002372466027736664,
+            0.0002835029736161232
+          ],
+          "active_delta_v_norm_mps": 0.002389344886954114,
+          "active_impulse_norm_Ns": 0.04563648734082358,
+          "pair_delta_v_sum_norm_mps": 0.0034767723072343256,
+          "pair_impulse_sum_norm_Ns": 0.06640635106817562,
+          "contact_normal": [
+            0.08705820867275912,
+            -0.9962032264064851
+          ],
+          "contact_tangent": [
+            0.9962032264064851,
+            0.08705820867275912
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.00014103949069976807,
+            0.0023569464683532715
+          ],
+          "target_delta_v_norm_mps": 0.002361162593431424,
+          "target_impulse_Ns": [
+            -0.00269385427236557,
+            0.04501767754554749
+          ],
+          "target_impulse_norm_Ns": 0.045098205534540206,
+          "target_impulse_normal_Ns": -0.045080997634795235,
+          "target_impulse_tangent_Ns": 0.0012457105150150928,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023401565849781036,
+            0.00031600939109921455
+          ],
+          "active_delta_v_norm_mps": 0.0023613967852691075,
+          "active_impulse_norm_Ns": 0.04510267859863996,
+          "pair_delta_v_sum_norm_mps": 0.0034613305275469674,
+          "pair_impulse_sum_norm_Ns": 0.06611141307614708,
+          "contact_normal": [
+            0.08728313026775587,
+            -0.9961835449206446
+          ],
+          "contact_tangent": [
+            0.9961835449206446,
+            0.08728313026775587
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.0006740950047969818,
+            0.011753320693969727
+          ],
+          "target_delta_v_norm_mps": 0.01177263570364722,
+          "target_impulse_Ns": [
+            -0.012875214591622353,
+            0.2244884252548218
+          ],
+          "target_impulse_norm_Ns": 0.22485734193966192,
+          "target_impulse_normal_Ns": -0.22475441362910997,
+          "target_impulse_tangent_Ns": 0.006802777256751012,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011653000488877296,
+            0.0016813506372272968
+          ],
+          "active_delta_v_norm_mps": 0.01177367233954976,
+          "active_impulse_norm_Ns": 0.22487714168540043,
+          "pair_delta_v_sum_norm_mps": 0.01735012274900832,
+          "pair_impulse_sum_norm_Ns": 0.33138734450605895,
+          "contact_normal": [
+            0.08743738116324118,
+            -0.9961700178058532
+          ],
+          "contact_tangent": [
+            0.9961700178058532,
+            0.08743738116324118
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.000356525182723999,
+            0.011771798133850098
+          ],
+          "target_delta_v_norm_mps": 0.011777195825409079,
+          "target_impulse_Ns": [
+            -0.006809630990028382,
+            0.22484134435653688
+          ],
+          "target_impulse_norm_Ns": 0.2249444402653134,
+          "target_impulse_normal_Ns": -0.22457727541025388,
+          "target_impulse_tangent_Ns": 0.012847123241494477,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011654932051897049,
+            0.002416718634776771
+          ],
+          "active_delta_v_norm_mps": 0.011902855543692633,
+          "active_impulse_norm_Ns": 0.2273445408845293,
+          "pair_delta_v_sum_norm_mps": 0.018137475179169305,
+          "pair_impulse_sum_norm_Ns": 0.34642577592213375,
+          "contact_normal": [
+            0.08730934248423797,
+            -0.9961812479237753
+          ],
+          "contact_tangent": [
+            0.9961812479237753,
+            0.08730934248423797
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 0.28993910341932605,
+      "unity_required_impulse_normal_Ns": -0.013652047597679904,
+      "unity_required_impulse_tangent_Ns": -0.28961751550621617,
+      "unity_required_dominant_axis": "tangent",
+      "residual_fraction_of_local_target_impulse": 0.016961066803524546,
+      "normal_fraction_of_local_target_impulse": -0.0007988076782155438,
+      "tangent_fraction_of_local_target_impulse": 0.7973388502817851,
+      "unity_implied_target_impulse_norm_Ns": 17.08935381519874,
+      "unity_implied_target_impulse_normal_Ns": 17.076879215418227,
+      "unity_implied_target_impulse_tangent_Ns": -0.6528476721753202,
+      "unity_implied_normal_scale_vs_local": 0.9992011923217844,
+      "unity_implied_tangent_scale_vs_local": 1.7973388502817849,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 16.80445164322145,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": false
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "target_error_m": 0.24572499750997046,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.07903332263231277,
+          -1.2685649394989014
+        ],
+        "target_delta_v_norm_mps": 1.2710244969362923,
+        "target_impulse_Ns": [
+          1.509536462277174,
+          -24.229590344429017
+        ],
+        "target_impulse_norm_Ns": 24.276567891483182,
+        "target_impulse_normal_Ns": 24.272153181480586,
+        "target_impulse_tangent_Ns": -0.4629562879300426,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.07903332195564872,
+          1.2685649394989014
+        ],
+        "active_delta_v_norm_mps": 1.2710244968942166,
+        "active_impulse_norm_Ns": 24.276567890679537,
+        "pair_delta_v_sum_norm_mps": 6.766640581190586e-10,
+        "pair_impulse_sum_norm_Ns": 1.292428351007402e-08,
+        "contact_normal": [
+          0.08120268000198011,
+          -0.9966976094887036
+        ],
+        "contact_tangent": [
+          0.9966976094887036,
+          0.08120268000198011
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.07903332263231277,
+            -1.2685649394989014
+          ],
+          "target_delta_v_norm_mps": 1.2710244969362923,
+          "target_impulse_Ns": [
+            1.509536462277174,
+            -24.229590344429017
+          ],
+          "target_impulse_norm_Ns": 24.276567891483182,
+          "target_impulse_normal_Ns": 24.272153181480586,
+          "target_impulse_tangent_Ns": -0.4629562879300426,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.07903332195564872,
+            1.2685649394989014
+          ],
+          "active_delta_v_norm_mps": 1.2710244968942166,
+          "active_impulse_norm_Ns": 24.276567890679537,
+          "pair_delta_v_sum_norm_mps": 6.766640581190586e-10,
+          "pair_impulse_sum_norm_Ns": 1.292428351007402e-08,
+          "contact_normal": [
+            0.08120268000198011,
+            -0.9966976094887036
+          ],
+          "contact_tangent": [
+            0.9966976094887036,
+            0.08120268000198011
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08300996121001368,
+            -0.9965487174944896
+          ],
+          "contact_tangent": [
+            0.9965487174944896,
+            0.08300996121001368
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08466853364736518,
+            -0.9964091726845978
+          ],
+          "contact_tangent": [
+            0.9964091726845978,
+            0.08466853364736518
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08619855367334421,
+            -0.9962779779482349
+          ],
+          "contact_tangent": [
+            0.9962779779482349,
+            0.08619855367334421
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.0003989860415458679,
+            0.00640416145324707
+          ],
+          "target_delta_v_norm_mps": 0.0064165780428982605,
+          "target_impulse_Ns": [
+            -0.007620633393526078,
+            0.12231948375701905
+          ],
+          "target_impulse_norm_Ns": 0.12255664061935678,
+          "target_impulse_normal_Ns": -0.12251677704900985,
+          "target_impulse_tangent_Ns": 0.0031256201665248915,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006420545279979706,
+            0.00011635804548859596
+          ],
+          "active_delta_v_norm_mps": 0.006421599558289166,
+          "active_impulse_norm_Ns": 0.12265255156332308,
+          "pair_delta_v_sum_norm_mps": 0.008875604215790605,
+          "pair_impulse_sum_norm_Ns": 0.16952404052160056,
+          "contact_normal": [
+            0.08761439971737886,
+            -0.9961544644090913
+          ],
+          "contact_tangent": [
+            0.9961544644090913,
+            0.08761439971737886
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.0004128962755203247,
+            0.006627440452575684
+          ],
+          "target_delta_v_norm_mps": 0.0066402899249035155,
+          "target_impulse_Ns": [
+            -0.007886318862438202,
+            0.12658411264419556
+          ],
+          "target_impulse_norm_Ns": 0.12682953756565715,
+          "target_impulse_normal_Ns": -0.12678450363971455,
+          "target_impulse_tangent_Ns": 0.003379531912802038,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006622254848480225,
+            0.000502249225974083
+          ],
+          "active_delta_v_norm_mps": 0.006641273489565945,
+          "active_impulse_norm_Ns": 0.12684832365070955,
+          "pair_delta_v_sum_norm_mps": 0.009454554923422344,
+          "pair_impulse_sum_norm_Ns": 0.1805819990373668,
+          "contact_normal": [
+            0.08875307051199174,
+            -0.9960536594354208
+          ],
+          "contact_tangent": [
+            0.9960536594354208,
+            0.08875307051199174
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.0001997053623199463,
+            0.003205418586730957
+          ],
+          "target_delta_v_norm_mps": 0.0032116336260382544,
+          "target_impulse_Ns": [
+            -0.0038143724203109743,
+            0.06122349500656128
+          ],
+          "target_impulse_norm_Ns": 0.06134220225733066,
+          "target_impulse_normal_Ns": -0.061318948067544184,
+          "target_impulse_tangent_Ns": 0.0016889007280131432,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0031883418560028076,
+            0.000428883358836174
+          ],
+          "active_delta_v_norm_mps": 0.0032170583964587942,
+          "active_impulse_norm_Ns": 0.061445815372362975,
+          "pair_delta_v_sum_norm_mps": 0.004705326632968855,
+          "pair_impulse_sum_norm_Ns": 0.08987173868970515,
+          "contact_normal": [
+            0.08963745441870982,
+            -0.9959744609001446
+          ],
+          "contact_tangent": [
+            0.9959744609001446,
+            0.08963745441870982
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.00015694648027420044,
+            0.0025191307067871094
+          ],
+          "target_delta_v_norm_mps": 0.002524014999073536,
+          "target_impulse_Ns": [
+            -0.002997677773237229,
+            0.04811539649963379
+          ],
+          "target_impulse_norm_Ns": 0.04820868648230454,
+          "target_impulse_normal_Ns": -0.0481894060569805,
+          "target_impulse_tangent_Ns": 0.0013633034235203084,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0025100745260715485,
+            0.0003180159255862236
+          ],
+          "active_delta_v_norm_mps": 0.0025301399675432524,
+          "active_impulse_norm_Ns": 0.04832567338007612,
+          "pair_delta_v_sum_norm_mps": 0.003686002253594725,
+          "pair_impulse_sum_norm_Ns": 0.07040264304365926,
+          "contact_normal": [
+            0.09038089328829599,
+            -0.9959072718523594
+          ],
+          "contact_tangent": [
+            0.9959072718523594,
+            0.09038089328829599
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.00014849752187728882,
+            0.0023834705352783203
+          ],
+          "target_delta_v_norm_mps": 0.0023880919803356856,
+          "target_impulse_Ns": [
+            -0.0028363026678562167,
+            0.04552428722381592
+          ],
+          "target_impulse_norm_Ns": 0.0456125568244116,
+          "target_impulse_normal_Ns": -0.045593486098452644,
+          "target_impulse_tangent_Ns": 0.001318850048482622,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023765116930007935,
+            0.00026297266595065594
+          ],
+          "active_delta_v_norm_mps": 0.002391017032563067,
+          "active_impulse_norm_Ns": 0.04566842532195458,
+          "pair_delta_v_sum_norm_mps": 0.003459437636966192,
+          "pair_impulse_sum_norm_Ns": 0.06607525886605427,
+          "contact_normal": [
+            0.09101473138477788,
+            -0.9958495462021142
+          ],
+          "contact_tangent": [
+            0.9958495462021142,
+            0.09101473138477788
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.00014682114124298096,
+            0.0023566484451293945
+          ],
+          "target_delta_v_norm_mps": 0.0023612175548743245,
+          "target_impulse_Ns": [
+            -0.0028042837977409365,
+            0.04501198530197144
+          ],
+          "target_impulse_norm_Ns": 0.045099255298099605,
+          "target_impulse_normal_Ns": -0.04507968612325076,
+          "target_impulse_tangent_Ns": 0.0013284304544679982,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023505501449108124,
+            0.00023597339168190956
+          ],
+          "active_delta_v_norm_mps": 0.0023623652184457224,
+          "active_impulse_norm_Ns": 0.0451211756723133,
+          "pair_delta_v_sum_norm_mps": 0.0034026621210924883,
+          "pair_impulse_sum_norm_Ns": 0.06499084651286653,
+          "contact_normal": [
+            0.09155199590168182,
+            -0.9958002972717062
+          ],
+          "contact_tangent": [
+            0.9958002972717062,
+            0.09155199590168182
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.0007321089506149292,
+            0.011751174926757812
+          ],
+          "target_delta_v_norm_mps": 0.011773958368995195,
+          "target_impulse_Ns": [
+            -0.013983280956745149,
+            0.22444744110107423
+          ],
+          "target_impulse_norm_Ns": 0.22488260484780823,
+          "target_impulse_normal_Ns": -0.22478201291319377,
+          "target_impulse_tangent_Ns": 0.006725521082282425,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011712327599525452,
+            0.0014017054345458746
+          ],
+          "active_delta_v_norm_mps": 0.011795905896701663,
+          "active_impulse_norm_Ns": 0.22530180262700178,
+          "pair_delta_v_sum_norm_mps": 0.017133693804216612,
+          "pair_impulse_sum_norm_Ns": 0.3272535516605373,
+          "contact_normal": [
+            0.09200148162409105,
+            -0.9957588700980634
+          ],
+          "contact_tangent": [
+            0.9957588700980634,
+            0.09200148162409105
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.0007319971919059753,
+            0.011749267578125
+          ],
+          "target_delta_v_norm_mps": 0.011772047762022439,
+          "target_impulse_Ns": [
+            -0.01398114636540413,
+            0.22441101074218753
+          ],
+          "target_impulse_norm_Ns": 0.2248461122546286,
+          "target_impulse_normal_Ns": -0.22473737865699506,
+          "target_impulse_tangent_Ns": 0.00699176876072632,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011733867228031158,
+            0.0011274439748376608
+          ],
+          "active_delta_v_norm_mps": 0.01178790778897856,
+          "active_impulse_norm_Ns": 0.22514903876949052,
+          "pair_delta_v_sum_norm_mps": 0.016936671594796632,
+          "pair_impulse_sum_norm_Ns": 0.3234904274606157,
+          "contact_normal": [
+            0.09318650844875653,
+            -0.9956486702864268
+          ],
+          "contact_tangent": [
+            0.9956486702864268,
+            0.09318650844875653
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 1.7552071361977108,
+      "unity_required_impulse_normal_Ns": -0.8502984937048291,
+      "unity_required_impulse_tangent_Ns": 1.535494891740988,
+      "unity_required_dominant_axis": "tangent",
+      "residual_fraction_of_local_target_impulse": 0.07230046454851144,
+      "normal_fraction_of_local_target_impulse": -0.035031852648062495,
+      "tangent_fraction_of_local_target_impulse": -3.3167167868190117,
+      "unity_implied_target_impulse_norm_Ns": 23.446398786848864,
+      "unity_implied_target_impulse_normal_Ns": 23.421854687775756,
+      "unity_implied_target_impulse_tangent_Ns": 1.0725386038109455,
+      "unity_implied_normal_scale_vs_local": 0.9649681473519375,
+      "unity_implied_tangent_scale_vs_local": -2.3167167868190117,
+      "unity_implied_tangent_sign_flip": true,
+      "local_minus_required_impulse_norm_Ns": 22.52136075528547,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": false
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "target_error_m": 0.1335143633427367,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.06608836352825165,
+          -1.054384708404541
+        ],
+        "target_delta_v_norm_mps": 1.0564538726850177,
+        "target_impulse_Ns": [
+          1.2622877433896065,
+          -20.138747930526733
+        ],
+        "target_impulse_norm_Ns": 20.178268968283838,
+        "target_impulse_normal_Ns": 20.17421407781962,
+        "target_impulse_tangent_Ns": -0.40450574620297436,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.06608836312807398,
+          1.054384708404541
+        ],
+        "active_delta_v_norm_mps": 1.0564538726599837,
+        "active_impulse_norm_Ns": 20.17826896780569,
+        "pair_delta_v_sum_norm_mps": 4.001776687800884e-10,
+        "pair_impulse_sum_norm_Ns": 7.643393473699689e-09,
+        "contact_normal": [
+          0.08255155924057252,
+          -0.996586795049458
+        ],
+        "contact_tangent": [
+          0.996586795049458,
+          0.08255155924057252
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.06608836352825165,
+            -1.054384708404541
+          ],
+          "target_delta_v_norm_mps": 1.0564538726850177,
+          "target_impulse_Ns": [
+            1.2622877433896065,
+            -20.138747930526733
+          ],
+          "target_impulse_norm_Ns": 20.178268968283838,
+          "target_impulse_normal_Ns": 20.17421407781962,
+          "target_impulse_tangent_Ns": -0.40450574620297436,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.06608836312807398,
+            1.054384708404541
+          ],
+          "active_delta_v_norm_mps": 1.0564538726599837,
+          "active_impulse_norm_Ns": 20.17826896780569,
+          "pair_delta_v_sum_norm_mps": 4.001776687800884e-10,
+          "pair_impulse_sum_norm_Ns": 7.643393473699689e-09,
+          "contact_normal": [
+            0.08255155924057252,
+            -0.996586795049458
+          ],
+          "contact_tangent": [
+            0.996586795049458,
+            0.08255155924057252
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.084064804457596,
+            -0.9964602895507206
+          ],
+          "contact_tangent": [
+            0.9964602895507206,
+            0.084064804457596
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08547074359573027,
+            -0.9963406806856744
+          ],
+          "contact_tangent": [
+            0.9963406806856744,
+            0.08547074359573027
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.0867830635178506,
+            -0.9962272330580292
+          ],
+          "contact_tangent": [
+            0.9962272330580292,
+            0.0867830635178506
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.00040140748023986816,
+            0.00640416145324707
+          ],
+          "target_delta_v_norm_mps": 0.006416729064285647,
+          "target_impulse_Ns": [
+            -0.007666882872581483,
+            0.12231948375701905
+          ],
+          "target_impulse_norm_Ns": 0.12255952512785585,
+          "target_impulse_normal_Ns": -0.12251959397668806,
+          "target_impulse_tangent_Ns": 0.0031283048689400776,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006398458033800125,
+            0.0004462716169655323
+          ],
+          "active_delta_v_norm_mps": 0.006414002148924678,
+          "active_impulse_norm_Ns": 0.12250744104446136,
+          "pair_delta_v_sum_norm_mps": 0.009104561965927844,
+          "pair_impulse_sum_norm_Ns": 0.17389713354922182,
+          "contact_normal": [
+            0.08801080763042052,
+            -0.9961195198068559
+          ],
+          "contact_tangent": [
+            0.9961195198068559,
+            0.08801080763042052
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.00041537731885910034,
+            0.0066269636154174805
+          ],
+          "target_delta_v_norm_mps": 0.006639968755731437,
+          "target_impulse_Ns": [
+            -0.007933706790208817,
+            0.1265750050544739
+          ],
+          "target_impulse_norm_Ns": 0.12682340323447044,
+          "target_impulse_normal_Ns": -0.1267788791627202,
+          "target_impulse_tangent_Ns": 0.0033602687716130764,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0066122375428676605,
+            0.0006567130330950022
+          ],
+          "active_delta_v_norm_mps": 0.006644769170644335,
+          "active_impulse_norm_Ns": 0.1269150911593068,
+          "pair_delta_v_sum_norm_mps": 0.009563107348345801,
+          "pair_impulse_sum_norm_Ns": 0.18265535035340483,
+          "contact_normal": [
+            0.08897891481054304,
+            -0.9960335098374642
+          ],
+          "contact_tangent": [
+            0.9960335098374642,
+            0.08897891481054304
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.00020091980695724487,
+            0.003205537796020508
+          ],
+          "target_delta_v_norm_mps": 0.003211828346992372,
+          "target_impulse_Ns": [
+            -0.003837568312883377,
+            0.061225771903991706
+          ],
+          "target_impulse_norm_Ns": 0.06134592142755431,
+          "target_impulse_normal_Ns": -0.06132318246179785,
+          "target_impulse_tangent_Ns": 0.001670140279352312,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.003183208405971527,
+            0.0005198442377150059
+          ],
+          "active_delta_v_norm_mps": 0.003225376534194618,
+          "active_impulse_norm_Ns": 0.06160469180311721,
+          "pair_delta_v_sum_norm_mps": 0.004772055802805529,
+          "pair_impulse_sum_norm_Ns": 0.09114626583358562,
+          "contact_normal": [
+            0.08970466063032347,
+            -0.995968410071925
+          ],
+          "contact_tangent": [
+            0.995968410071925,
+            0.08970466063032347
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.0001578405499458313,
+            0.002518177032470703
+          ],
+          "target_delta_v_norm_mps": 0.0025231189440987835,
+          "target_impulse_Ns": [
+            -0.0030147545039653782,
+            0.04809718132019043
+          ],
+          "target_impulse_norm_Ns": 0.04819157183228677,
+          "target_impulse_normal_Ns": -0.048172916131823396,
+          "target_impulse_tangent_Ns": 0.0013408008885603755,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002509504556655884,
+            0.0003480070736259222
+          ],
+          "active_delta_v_norm_mps": 0.0025335196946482024,
+          "active_impulse_norm_Ns": 0.048390226167780666,
+          "pair_delta_v_sum_norm_mps": 0.0037074701523406076,
+          "pair_impulse_sum_norm_Ns": 0.0708126799097056,
+          "contact_normal": [
+            0.0903013121787937,
+            -0.9959144908167508
+          ],
+          "contact_tangent": [
+            0.9959144908167508,
+            0.0903013121787937
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.000149458646774292,
+            0.0023844242095947266
+          ],
+          "target_delta_v_norm_mps": 0.0023891037437493243,
+          "target_impulse_Ns": [
+            -0.002854660153388977,
+            0.04554250240325928
+          ],
+          "target_impulse_norm_Ns": 0.0456318815056121,
+          "target_impulse_normal_Ns": -0.04561357780698595,
+          "target_impulse_tangent_Ns": 0.0012923348591839705,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002377096563577652,
+            0.000273639801889658
+          ],
+          "active_delta_v_norm_mps": 0.0023927947705039174,
+          "active_impulse_norm_Ns": 0.04570238011662482,
+          "pair_delta_v_sum_norm_mps": 0.0034680938536216796,
+          "pair_impulse_sum_norm_Ns": 0.06624059260417409,
+          "contact_normal": [
+            0.09079876897953047,
+            -0.9958692602705446
+          ],
+          "contact_tangent": [
+            0.9958692602705446,
+            0.09079876897953047
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.0001476779580116272,
+            0.0023560523986816406
+          ],
+          "target_delta_v_norm_mps": 0.002360676107520046,
+          "target_impulse_Ns": [
+            -0.0028206489980220797,
+            0.04500060081481934
+          ],
+          "target_impulse_norm_Ns": 0.045088913653632885,
+          "target_impulse_normal_Ns": -0.04507029812258775,
+          "target_impulse_tangent_Ns": 0.001295515961238911,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002351708710193634,
+            0.00023274892009794712
+          ],
+          "active_delta_v_norm_mps": 0.002363198239125818,
+          "active_impulse_norm_Ns": 0.045137086367303125,
+          "pair_delta_v_sum_norm_mps": 0.0033999476208728444,
+          "pair_impulse_sum_norm_Ns": 0.06493899955867133,
+          "contact_normal": [
+            0.09120785219783996,
+            -0.9958318772249947
+          ],
+          "contact_tangent": [
+            0.9958318772249947,
+            0.09120785219783996
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.0007365420460700989,
+            0.011750936508178711
+          ],
+          "target_delta_v_norm_mps": 0.011773996900155716,
+          "target_impulse_Ns": [
+            -0.01406795307993889,
+            0.2244428873062134
+          ],
+          "target_impulse_norm_Ns": 0.22488334079297417,
+          "target_impulse_normal_Ns": -0.22478834377241635,
+          "target_impulse_tangent_Ns": 0.006535860330740214,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011732019484043121,
+            0.001249042572453618
+          ],
+          "active_delta_v_norm_mps": 0.011798321428142607,
+          "active_impulse_norm_Ns": 0.2253479392775238,
+          "pair_delta_v_sum_norm_mps": 0.017026449429809257,
+          "pair_impulse_sum_norm_Ns": 0.32520518410935684,
+          "contact_normal": [
+            0.09153665893002955,
+            -0.9958017072047666
+          ],
+          "contact_tangent": [
+            0.9958017072047666,
+            0.09153665893002955
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.0007364228367805481,
+            0.011748909950256348
+          ],
+          "target_delta_v_norm_mps": 0.011771966854088763,
+          "target_impulse_Ns": [
+            -0.01406567618250847,
+            0.22440418004989626
+          ],
+          "target_impulse_norm_Ns": 0.2248445669130954,
+          "target_impulse_normal_Ns": -0.22474532953484888,
+          "target_impulse_tangent_Ns": 0.006679530118925159,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011757392436265945,
+            0.0009066021157195792
+          ],
+          "active_delta_v_norm_mps": 0.011792294276203884,
+          "active_impulse_norm_Ns": 0.22523282067549422,
+          "pair_delta_v_sum_norm_mps": 0.01678164939941374,
+          "pair_impulse_sum_norm_Ns": 0.3205295035288025,
+          "contact_normal": [
+            0.09217885869202044,
+            -0.9957424657059859
+          ],
+          "contact_tangent": [
+            0.9957424657059859,
+            0.09217885869202044
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 1.1495566785310485,
+      "unity_required_impulse_normal_Ns": -1.1486905282727384,
+      "unity_required_impulse_tangent_Ns": 0.044616447772476836,
+      "unity_required_dominant_axis": "normal",
+      "residual_fraction_of_local_target_impulse": 0.05697003446320987,
+      "normal_fraction_of_local_target_impulse": -0.05693855155109399,
+      "tangent_fraction_of_local_target_impulse": -0.11029867484277722,
+      "unity_implied_target_impulse_norm_Ns": 19.02892710169146,
+      "unity_implied_target_impulse_normal_Ns": 19.025523549546882,
+      "unity_implied_target_impulse_tangent_Ns": -0.35988929843049755,
+      "unity_implied_normal_scale_vs_local": 0.943061448448906,
+      "unity_implied_tangent_scale_vs_local": 0.8897013251572229,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 19.02871228975279,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": true
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "target_error_m": 0.0744778632985414,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.08843953907489777,
+          -1.4155863523483276
+        ],
+        "target_delta_v_norm_mps": 1.4183463163228591,
+        "target_impulse_Ns": [
+          1.6891951963305474,
+          -27.03769932985306
+        ],
+        "target_impulse_norm_Ns": 27.09041464176661,
+        "target_impulse_normal_Ns": 27.085549665026903,
+        "target_impulse_tangent_Ns": -0.5133856310844336,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.08843953727046028,
+          1.4155863523483276
+        ],
+        "active_delta_v_norm_mps": 1.4183463162103453,
+        "active_impulse_norm_Ns": 27.0904146396176,
+        "pair_delta_v_sum_norm_mps": 1.8044374883174896e-09,
+        "pair_impulse_sum_norm_Ns": 3.446475602686405e-08,
+        "contact_normal": [
+          0.08125672889670492,
+          -0.996693204556451
+        ],
+        "contact_tangent": [
+          0.996693204556451,
+          0.08125672889670492
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.08843953907489777,
+            -1.4155863523483276
+          ],
+          "target_delta_v_norm_mps": 1.4183463163228591,
+          "target_impulse_Ns": [
+            1.6891951963305474,
+            -27.03769932985306
+          ],
+          "target_impulse_norm_Ns": 27.09041464176661,
+          "target_impulse_normal_Ns": 27.085549665026903,
+          "target_impulse_tangent_Ns": -0.5133856310844336,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.08843953727046028,
+            1.4155863523483276
+          ],
+          "active_delta_v_norm_mps": 1.4183463162103453,
+          "active_impulse_norm_Ns": 27.0904146396176,
+          "pair_delta_v_sum_norm_mps": 1.8044374883174896e-09,
+          "pair_impulse_sum_norm_Ns": 3.446475602686405e-08,
+          "contact_normal": [
+            0.08125672889670492,
+            -0.996693204556451
+          ],
+          "contact_tangent": [
+            0.996693204556451,
+            0.08125672889670492
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08327029190585097,
+            -0.9965269983728059
+          ],
+          "contact_tangent": [
+            0.9965269983728059,
+            0.08327029190585097
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08510058783280092,
+            -0.9963723651078004
+          ],
+          "contact_tangent": [
+            0.9963723651078004,
+            0.08510058783280092
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.08677522616439445,
+            -0.9962279157522731
+          ],
+          "contact_tangent": [
+            0.9962279157522731,
+            0.08677522616439445
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.0004001334309577942,
+            0.0064046382904052734
+          ],
+          "target_delta_v_norm_mps": 0.006417125399545768,
+          "target_impulse_Ns": [
+            -0.00764254853129387,
+            0.12232859134674073
+          ],
+          "target_impulse_norm_Ns": 0.12256709513132417,
+          "target_impulse_normal_Ns": -0.12252556148625138,
+          "target_impulse_tangent_Ns": 0.0031905471960000393,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006398625671863556,
+            0.0004390985704958439
+          ],
+          "active_delta_v_norm_mps": 0.006413674301306767,
+          "active_impulse_norm_Ns": 0.12250117915495926,
+          "pair_delta_v_sum_norm_mps": 0.009100474898897492,
+          "pair_impulse_sum_norm_Ns": 0.1738190705689421,
+          "contact_normal": [
+            0.08831324123901098,
+            -0.9960927524191008
+          ],
+          "contact_tangent": [
+            0.9960927524191008,
+            0.08831324123901098
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.0004140213131904602,
+            0.00662684440612793
+          ],
+          "target_delta_v_norm_mps": 0.006639765088525721,
+          "target_impulse_Ns": [
+            -0.007907807081937791,
+            0.12657272815704346
+          ],
+          "target_impulse_norm_Ns": 0.12681951319084128,
+          "target_impulse_normal_Ns": -0.12677230945060153,
+          "target_impulse_tangent_Ns": 0.003459838511100335,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.006629951298236847,
+            0.00042330846190452576
+          ],
+          "active_delta_v_norm_mps": 0.006643451231920983,
+          "active_impulse_norm_Ns": 0.12688991852969078,
+          "pair_delta_v_sum_norm_mps": 0.009399065966447146,
+          "pair_impulse_sum_norm_Ns": 0.1795221599591405,
+          "contact_normal": [
+            0.08956010977864544,
+            -0.9959814188710736
+          ],
+          "contact_tangent": [
+            0.9959814188710736,
+            0.08956010977864544
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.00020024925470352173,
+            0.0032052993774414062
+          ],
+          "target_delta_v_norm_mps": 0.003211548514818915,
+          "target_impulse_Ns": [
+            -0.003824760764837265,
+            0.061221218109130865
+          ],
+          "target_impulse_norm_Ns": 0.06134057663304129,
+          "target_impulse_normal_Ns": -0.06131606174862889,
+          "target_impulse_tangent_Ns": 0.0017340453605199351,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0031835734844207764,
+            0.000485024880617857
+          ],
+          "active_delta_v_norm_mps": 0.003220308877347856,
+          "active_impulse_norm_Ns": 0.06150789955734406,
+          "pair_delta_v_sum_norm_mps": 0.004745388981868473,
+          "pair_impulse_sum_norm_Ns": 0.09063692955368785,
+          "contact_normal": [
+            0.09054207987691083,
+            -0.9958926306442694
+          ],
+          "contact_tangent": [
+            0.9958926306442694,
+            0.09054207987691083
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.00015735626220703125,
+            0.002518773078918457
+          ],
+          "target_delta_v_norm_mps": 0.0025236835808674853,
+          "target_impulse_Ns": [
+            -0.0030055046081542973,
+            0.04810856580734253
+          ],
+          "target_impulse_norm_Ns": 0.04820235639456897,
+          "target_impulse_normal_Ns": -0.048181935316075196,
+          "target_impulse_tangent_Ns": 0.001402950885308729,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0025084763765335083,
+            0.00034613674506545067
+          ],
+          "active_delta_v_norm_mps": 0.0025322449284994495,
+          "active_impulse_norm_Ns": 0.04836587813433949,
+          "pair_delta_v_sum_norm_mps": 0.003706140052878473,
+          "pair_impulse_sum_norm_Ns": 0.07078727500997883,
+          "contact_normal": [
+            0.09137421310953817,
+            -0.9958166262814717
+          ],
+          "contact_tangent": [
+            0.9958166262814717,
+            0.09137421310953817
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.00014893710613250732,
+            0.0023839473724365234
+          ],
+          "target_delta_v_norm_mps": 0.0023885952641940263,
+          "target_impulse_Ns": [
+            -0.00284469872713089,
+            0.0455333948135376
+          ],
+          "target_impulse_norm_Ns": 0.04562216954610591,
+          "target_impulse_normal_Ns": -0.04560188031612186,
+          "target_impulse_tangent_Ns": 0.0013604652614935383,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023754313588142395,
+            0.0002850620076060295
+          ],
+          "active_delta_v_norm_mps": 0.002392474553389951,
+          "active_impulse_norm_Ns": 0.04569626396974807,
+          "pair_delta_v_sum_norm_mps": 0.003475757144562882,
+          "pair_impulse_sum_norm_Ns": 0.06638696146115106,
+          "contact_normal": [
+            0.09208793972657679,
+            -0.9957508781602527
+          ],
+          "contact_tangent": [
+            0.9957508781602527,
+            0.09208793972657679
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.00014723092317581177,
+            0.0023565292358398438
+          ],
+          "target_delta_v_norm_mps": 0.002361124093330785,
+          "target_impulse_Ns": [
+            -0.002812110632658005,
+            0.04500970840454102
+          ],
+          "target_impulse_norm_Ns": 0.045097470182618,
+          "target_impulse_normal_Ns": -0.045076584900909614,
+          "target_impulse_tangent_Ns": 0.0013723376199779311,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.002342790365219116,
+            0.0003747816663235426
+          ],
+          "active_delta_v_norm_mps": 0.002372578342810996,
+          "active_impulse_norm_Ns": 0.04531624634769003,
+          "pair_delta_v_sum_norm_mps": 0.0035043602137654283,
+          "pair_impulse_sum_norm_Ns": 0.06693328008291968,
+          "contact_normal": [
+            0.09269866522924182,
+            -0.9956942088134877
+          ],
+          "contact_tangent": [
+            0.9956942088134877,
+            0.09269866522924182
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.0007341504096984863,
+            0.01175081729888916
+          ],
+          "target_delta_v_norm_mps": 0.011773728551989519,
+          "target_impulse_Ns": [
+            -0.01402227282524109,
+            0.22444061040878296
+          ],
+          "target_impulse_norm_Ns": 0.22487821534299984,
+          "target_impulse_normal_Ns": -0.22477046770407413,
+          "target_impulse_tangent_Ns": 0.006960501702058496,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.01171867921948433,
+            0.00136284320615232
+          ],
+          "active_delta_v_norm_mps": 0.011797660117740695,
+          "active_impulse_norm_Ns": 0.2253353082488473,
+          "pair_delta_v_sum_norm_mps": 0.017106372058811884,
+          "pair_impulse_sum_norm_Ns": 0.326731706323307,
+          "contact_normal": [
+            0.09321717094221445,
+            -0.9956457999919097
+          ],
+          "contact_tangent": [
+            0.9956457999919097,
+            0.09321717094221445
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.0007340312004089355,
+            0.01174914836883545
+          ],
+          "target_delta_v_norm_mps": 0.011772055436332368,
+          "target_impulse_Ns": [
+            -0.01401999592781067,
+            0.2244087338447571
+          ],
+          "target_impulse_norm_Ns": 0.22484625883394824,
+          "target_impulse_normal_Ns": -0.22472791625124186,
+          "target_impulse_tangent_Ns": 0.007294091375743865,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.011736385524272919,
+            0.00112937914673239
+          ],
+          "active_delta_v_norm_mps": 0.01179059974858942,
+          "active_impulse_norm_Ns": 0.22520045519805795,
+          "pair_delta_v_sum_norm_mps": 0.016938366852713,
+          "pair_impulse_sum_norm_Ns": 0.32352280688681834,
+          "contact_normal": [
+            0.09469810550701874,
+            -0.9955060365529592
+          ],
+          "contact_tangent": [
+            0.9955060365529592,
+            0.09469810550701874
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 0.4762915938832761,
+      "unity_required_impulse_normal_Ns": 0.10976485446321076,
+      "unity_required_impulse_tangent_Ns": -0.4634709906008592,
+      "unity_required_dominant_axis": "tangent",
+      "residual_fraction_of_local_target_impulse": 0.017581554220619206,
+      "normal_fraction_of_local_target_impulse": 0.0040525245313718,
+      "tangent_fraction_of_local_target_impulse": 0.9027735926731358,
+      "unity_implied_target_impulse_norm_Ns": 27.212853225513125,
+      "unity_implied_target_impulse_normal_Ns": 27.195314519490115,
+      "unity_implied_target_impulse_tangent_Ns": -0.9768566216852927,
+      "unity_implied_normal_scale_vs_local": 1.0040525245313718,
+      "unity_implied_tangent_scale_vs_local": 1.9027735926731357,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 26.614123047883336,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": false
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "target_error_m": 0.02645618997061297,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          -0.393447607755661,
+          -0.7870090007781982
+        ],
+        "target_delta_v_norm_mps": 0.8798773706344258,
+        "target_impulse_Ns": [
+          -7.514849308133126,
+          -15.031871914863588
+        ],
+        "target_impulse_norm_Ns": 16.805657779117535,
+        "target_impulse_normal_Ns": 16.68464524947327,
+        "target_impulse_tangent_Ns": 2.0131433848691724,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          0.3934476056674612,
+          0.7870090007781982
+        ],
+        "active_delta_v_norm_mps": 0.8798773697006623,
+        "active_impulse_norm_Ns": 16.805657761282653,
+        "pair_delta_v_sum_norm_mps": 2.0881998352706432e-09,
+        "pair_impulse_sum_norm_Ns": 3.988461685366929e-08,
+        "contact_normal": [
+          -0.5510881804626301,
+          -0.8344470129099795
+        ],
+        "contact_tangent": [
+          0.8344470129099795,
+          -0.5510881804626301
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            -0.393447607755661,
+            -0.7870090007781982
+          ],
+          "target_delta_v_norm_mps": 0.8798773706344258,
+          "target_impulse_Ns": [
+            -7.514849308133126,
+            -15.031871914863588
+          ],
+          "target_impulse_norm_Ns": 16.805657779117535,
+          "target_impulse_normal_Ns": 16.68464524947327,
+          "target_impulse_tangent_Ns": 2.0131433848691724,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.3934476056674612,
+            0.7870090007781982
+          ],
+          "active_delta_v_norm_mps": 0.8798773697006623,
+          "active_impulse_norm_Ns": 16.805657761282653,
+          "pair_delta_v_sum_norm_mps": 2.0881998352706432e-09,
+          "pair_impulse_sum_norm_Ns": 3.988461685366929e-08,
+          "contact_normal": [
+            -0.5510881804626301,
+            -0.8344470129099795
+          ],
+          "contact_tangent": [
+            0.8344470129099795,
+            -0.5510881804626301
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": -0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            -0.5612531828033142,
+            -0.827644165564616
+          ],
+          "contact_tangent": [
+            0.827644165564616,
+            -0.5612531828033142
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": -0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            -0.5707544270491247,
+            -0.8211208096278071
+          ],
+          "contact_tangent": [
+            0.8211208096278071,
+            -0.5707544270491247
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": -0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            -0.5796398209314522,
+            -0.81487279865667
+          ],
+          "contact_tangent": [
+            0.81487279865667,
+            -0.5796398209314522
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            0.00286903977394104,
+            0.00573885440826416
+          ],
+          "target_delta_v_norm_mps": 0.0064160610302356575,
+          "target_impulse_Ns": [
+            0.05479865968227387,
+            0.10961211919784547
+          ],
+          "target_impulse_norm_Ns": 0.12254676567750107,
+          "target_impulse_normal_Ns": -0.12088347301683272,
+          "target_impulse_tangent_Ns": -0.020122021006972076,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.00544092059135437,
+            0.003401830792427063
+          ],
+          "active_delta_v_norm_mps": 0.0064168582360629505,
+          "active_impulse_norm_Ns": 0.12256199230880237,
+          "pair_delta_v_sum_norm_mps": 0.009495614612920755,
+          "pair_impulse_sum_norm_Ns": 0.18136623910678643,
+          "contact_normal": [
+            -0.5879637970567333,
+            -0.8088872439040118
+          ],
+          "contact_tangent": [
+            0.8088872439040118,
+            -0.5879637970567333
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            0.002969205379486084,
+            0.0059392452239990234
+          ],
+          "target_delta_v_norm_mps": 0.0066400914463856835,
+          "target_impulse_Ns": [
+            0.05671182274818421,
+            0.11343958377838136
+          ],
+          "target_impulse_norm_Ns": 0.12682574662596657,
+          "target_impulse_normal_Ns": -0.12490018112904751,
+          "target_impulse_tangent_Ns": -0.022016238578944275,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.0056279003620147705,
+            0.0035187453031539917
+          ],
+          "active_delta_v_norm_mps": 0.006637381335529416,
+          "active_impulse_norm_Ns": 0.12677398350861185,
+          "pair_delta_v_sum_norm_mps": 0.009824573467679877,
+          "pair_impulse_sum_norm_Ns": 0.18764935323268567,
+          "contact_normal": [
+            -0.5956460595867271,
+            -0.8032470178586443
+          ],
+          "contact_tangent": [
+            0.8032470178586443,
+            -0.5956460595867271
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            0.0014362335205078125,
+            0.0028728842735290527
+          ],
+          "target_delta_v_norm_mps": 0.003211888972944242,
+          "target_impulse_Ns": [
+            0.02743206024169922,
+            0.05487208962440491
+          ],
+          "target_impulse_norm_Ns": 0.061347079383235026,
+          "target_impulse_normal_Ns": -0.060318861496261186,
+          "target_impulse_tangent_Ns": -0.01118477074632295,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.0027226805686950684,
+            0.00170232355594635
+          ],
+          "active_delta_v_norm_mps": 0.003211058231841884,
+          "active_impulse_norm_Ns": 0.061331212228179985,
+          "pair_delta_v_sum_norm_mps": 0.0047526279773071585,
+          "pair_impulse_sum_norm_Ns": 0.09077519436656674,
+          "contact_normal": [
+            -0.6027431896191136,
+            -0.7979352400839166
+          ],
+          "contact_tangent": [
+            0.7979352400839166,
+            -0.6027431896191136
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            0.0011285245418548584,
+            0.0022573471069335938
+          ],
+          "target_delta_v_norm_mps": 0.0025237241534585716,
+          "target_impulse_Ns": [
+            0.021554818749427797,
+            0.043115329742431645
+          ],
+          "target_impulse_norm_Ns": 0.04820313133105872,
+          "target_impulse_normal_Ns": -0.04732038591391259,
+          "target_impulse_tangent_Ns": -0.00918275269609699,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.002141892910003662,
+            0.0013391822576522827
+          ],
+          "active_delta_v_norm_mps": 0.0025260867675387997,
+          "active_impulse_norm_Ns": 0.04824825725999108,
+          "pair_delta_v_sum_norm_mps": 0.003736567799450862,
+          "pair_impulse_sum_norm_Ns": 0.07136844496951147,
+          "contact_normal": [
+            -0.6093713094527073,
+            -0.792884989904521
+          ],
+          "contact_tangent": [
+            0.792884989904521,
+            -0.6093713094527073
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            0.001068115234375,
+            0.002136528491973877
+          ],
+          "target_delta_v_norm_mps": 0.0023886448356589414,
+          "target_impulse_Ns": [
+            0.0204010009765625,
+            0.04080769419670105
+          ],
+          "target_impulse_norm_Ns": 0.045623116361085785,
+          "target_impulse_normal_Ns": -0.044717904132047785,
+          "target_impulse_tangent_Ns": -0.009043107681220892,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.0020254850387573242,
+            0.001266390085220337
+          ],
+          "active_delta_v_norm_mps": 0.0023887933125689488,
+          "active_impulse_norm_Ns": 0.045625952270066925,
+          "pair_delta_v_sum_norm_mps": 0.0035350264193293583,
+          "pair_impulse_sum_norm_Ns": 0.06751900460919075,
+          "contact_normal": [
+            -0.6155837702906274,
+            -0.7880714572643626
+          ],
+          "contact_tangent": [
+            0.7880714572643626,
+            -0.6155837702906274
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            0.0010558366775512695,
+            0.002111971378326416
+          ],
+          "target_delta_v_norm_mps": 0.0023611891479787227,
+          "target_impulse_Ns": [
+            0.02016648054122925,
+            0.04033865332603455
+          ],
+          "target_impulse_norm_Ns": 0.045098712726393604,
+          "target_impulse_normal_Ns": -0.04413632876296445,
+          "target_impulse_tangent_Ns": -0.00926705848181034,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.002002239227294922,
+            0.0012518614530563354
+          ],
+          "active_delta_v_norm_mps": 0.002361380744599838,
+          "active_impulse_norm_Ns": 0.04510237222185691,
+          "pair_delta_v_sum_norm_mps": 0.0034944311559465275,
+          "pair_impulse_sum_norm_Ns": 0.06674363507857868,
+          "contact_normal": [
+            -0.6214164274183603,
+            -0.7834804552345909
+          ],
+          "contact_tangent": [
+            0.7834804552345909,
+            -0.6214164274183603
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            0.005264878273010254,
+            0.010531127452850342
+          ],
+          "target_delta_v_norm_mps": 0.011773851904019922,
+          "target_impulse_Ns": [
+            0.10055917501449586,
+            0.20114453434944154
+          ],
+          "target_impulse_norm_Ns": 0.22488057136678052,
+          "target_impulse_normal_Ns": -0.21975216074085446,
+          "target_impulse_tangent_Ns": -0.04775205993436658,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.009983450174331665,
+            0.006241977214813232
+          ],
+          "active_delta_v_norm_mps": 0.011774190287812174,
+          "active_impulse_norm_Ns": 0.22488703449721253,
+          "pair_delta_v_sum_norm_mps": 0.01742417748360988,
+          "pair_impulse_sum_norm_Ns": 0.33280178993694876,
+          "contact_normal": [
+            -0.6269006292990548,
+            -0.7790992240943699
+          ],
+          "contact_tangent": [
+            0.7790992240943699,
+            -0.6269006292990548
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            0.005264014005661011,
+            0.010529518127441406
+          ],
+          "target_delta_v_norm_mps": 0.011772025970405962,
+          "target_impulse_Ns": [
+            0.10054266750812531,
+            0.20111379623413086
+          ],
+          "target_impulse_norm_Ns": 0.2248456960347539,
+          "target_impulse_normal_Ns": -0.21818840854262347,
+          "target_impulse_tangent_Ns": -0.05430842847100439,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.009981483221054077,
+            0.006240785121917725
+          ],
+          "active_delta_v_norm_mps": 0.011771890512153676,
+          "active_impulse_norm_Ns": 0.22484310878213523,
+          "pair_delta_v_sum_norm_mps": 0.017421182131923386,
+          "pair_impulse_sum_norm_Ns": 0.33274457871973667,
+          "contact_normal": [
+            -0.6499661217475902,
+            -0.7599631837006297
+          ],
+          "contact_tangent": [
+            0.7599631837006297,
+            -0.6499661217475902
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 0.27404862303690786,
+      "unity_required_impulse_normal_Ns": 0.2739031552038024,
+      "unity_required_impulse_tangent_Ns": -0.00892800973492726,
+      "unity_required_dominant_axis": "normal",
+      "residual_fraction_of_local_target_impulse": 0.016306926312484874,
+      "normal_fraction_of_local_target_impulse": 0.01641648060886697,
+      "tangent_fraction_of_local_target_impulse": -0.004434860329388541,
+      "unity_implied_target_impulse_norm_Ns": 17.07657000874882,
+      "unity_implied_target_impulse_normal_Ns": 16.95854840467707,
+      "unity_implied_target_impulse_tangent_Ns": 2.0042153751342453,
+      "unity_implied_normal_scale_vs_local": 1.016416480608867,
+      "unity_implied_tangent_scale_vs_local": 0.9955651396706116,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 16.531609156080627,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": true
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "target_error_m": 0.06548322059025638,
+      "main_local_interval": {
+        "t0": 0.0,
+        "t1": 0.01,
+        "target_delta_v_mps": [
+          0.43480807542800903,
+          -0.6256478428840637
+        ],
+        "target_delta_v_norm_mps": 0.7619010997254769,
+        "target_impulse_Ns": [
+          8.304834240674973,
+          -11.949873799085617
+        ],
+        "target_impulse_norm_Ns": 14.55231100475661,
+        "target_impulse_normal_Ns": 14.355307003632849,
+        "target_impulse_tangent_Ns": -2.3864023991376624,
+        "target_dominant_axis": "normal",
+        "active_delta_v_mps": [
+          -0.4348080765630584,
+          0.6256478428840637
+        ],
+        "active_delta_v_norm_mps": 0.7619011003732364,
+        "active_impulse_norm_Ns": 14.552311017128817,
+        "pair_delta_v_sum_norm_mps": 1.1350493878126144e-09,
+        "pair_impulse_sum_norm_Ns": 2.167944330722094e-08,
+        "contact_normal": [
+          0.697623946529406,
+          -0.7164641157997631
+        ],
+        "contact_tangent": [
+          0.7164641157997631,
+          0.697623946529406
+        ]
+      },
+      "intervals": [
+        {
+          "t0": 0.0,
+          "t1": 0.01,
+          "target_delta_v_mps": [
+            0.43480807542800903,
+            -0.6256478428840637
+          ],
+          "target_delta_v_norm_mps": 0.7619010997254769,
+          "target_impulse_Ns": [
+            8.304834240674973,
+            -11.949873799085617
+          ],
+          "target_impulse_norm_Ns": 14.55231100475661,
+          "target_impulse_normal_Ns": 14.355307003632849,
+          "target_impulse_tangent_Ns": -2.3864023991376624,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            -0.4348080765630584,
+            0.6256478428840637
+          ],
+          "active_delta_v_norm_mps": 0.7619011003732364,
+          "active_impulse_norm_Ns": 14.552311017128817,
+          "pair_delta_v_sum_norm_mps": 1.1350493878126144e-09,
+          "pair_impulse_sum_norm_Ns": 2.167944330722094e-08,
+          "contact_normal": [
+            0.697623946529406,
+            -0.7164641157997631
+          ],
+          "contact_tangent": [
+            0.7164641157997631,
+            0.697623946529406
+          ]
+        },
+        {
+          "t0": 0.01,
+          "t1": 0.02,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.708762133100047,
+            -0.705447544955308
+          ],
+          "contact_tangent": [
+            0.705447544955308,
+            0.708762133100047
+          ]
+        },
+        {
+          "t0": 0.02,
+          "t1": 0.03,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.7191972469795029,
+            -0.6948059584784115
+          ],
+          "contact_tangent": [
+            0.6948059584784115,
+            0.7191972469795029
+          ]
+        },
+        {
+          "t0": 0.03,
+          "t1": 0.04,
+          "target_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "target_delta_v_norm_mps": 0.0,
+          "target_impulse_Ns": [
+            0.0,
+            0.0
+          ],
+          "target_impulse_norm_Ns": 0.0,
+          "target_impulse_normal_Ns": 0.0,
+          "target_impulse_tangent_Ns": 0.0,
+          "target_dominant_axis": "none",
+          "active_delta_v_mps": [
+            0.0,
+            0.0
+          ],
+          "active_delta_v_norm_mps": 0.0,
+          "active_impulse_norm_Ns": 0.0,
+          "pair_delta_v_sum_norm_mps": 0.0,
+          "pair_impulse_sum_norm_Ns": 0.0,
+          "contact_normal": [
+            0.7289688909722223,
+            -0.6845468252754725
+          ],
+          "contact_tangent": [
+            0.6845468252754725,
+            0.7289688909722223
+          ]
+        },
+        {
+          "t0": 0.04,
+          "t1": 0.05,
+          "target_delta_v_mps": [
+            -0.0036621689796447754,
+            0.005269467830657959
+          ],
+          "target_delta_v_norm_mps": 0.0064170688677784625,
+          "target_impulse_Ns": [
+            -0.06994742751121522,
+            0.10064683556556703
+          ],
+          "target_impulse_norm_Ns": 0.12256601537456864,
+          "target_impulse_normal_Ns": -0.1195325350631747,
+          "target_impulse_tangent_Ns": 0.027099837382720687,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.004688769578933716,
+            0.004379779100418091
+          ],
+          "active_delta_v_norm_mps": 0.006416153453027239,
+          "active_impulse_norm_Ns": 0.12254853095282027,
+          "pair_delta_v_sum_norm_mps": 0.00970370419619956,
+          "pair_impulse_sum_norm_Ns": 0.1853407501474116,
+          "contact_normal": [
+            0.7381300889814619,
+            -0.67465841115354
+          ],
+          "contact_tangent": [
+            0.67465841115354,
+            0.7381300889814619
+          ]
+        },
+        {
+          "t0": 0.05,
+          "t1": 0.06,
+          "target_delta_v_mps": [
+            -0.003788858652114868,
+            0.005451798439025879
+          ],
+          "target_delta_v_norm_mps": 0.0066390930182872645,
+          "target_impulse_Ns": [
+            -0.07236720025539399,
+            0.10412935018539429
+          ],
+          "target_impulse_norm_Ns": 0.12680667664928677,
+          "target_impulse_normal_Ns": -0.12330243513894318,
+          "target_impulse_tangent_Ns": 0.029604775487131862,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.004852384328842163,
+            0.00453263521194458
+          ],
+          "active_delta_v_norm_mps": 0.0066400614183419185,
+          "active_impulse_norm_Ns": 0.12682517309033065,
+          "pair_delta_v_sum_norm_mps": 0.010040916402186083,
+          "pair_impulse_sum_norm_Ns": 0.1917815032817542,
+          "contact_normal": [
+            0.7466310878426967,
+            -0.6652383171968008
+          ],
+          "contact_tangent": [
+            0.6652383171968008,
+            0.7466310878426967
+          ]
+        },
+        {
+          "t0": 0.06,
+          "t1": 0.07,
+          "target_delta_v_mps": [
+            -0.0018327534198760986,
+            0.002637147903442383
+          ],
+          "target_delta_v_norm_mps": 0.003211469159543353,
+          "target_impulse_Ns": [
+            -0.03500559031963349,
+            0.05036952495574951
+          ],
+          "target_impulse_norm_Ns": 0.06133906094727805,
+          "target_impulse_normal_Ns": -0.05946860954660588,
+          "target_impulse_tangent_Ns": 0.015032128142323237,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0023469626903533936,
+            0.0021923184394836426
+          ],
+          "active_delta_v_norm_mps": 0.00321161859659749,
+          "active_impulse_norm_Ns": 0.061341915195012066,
+          "pair_delta_v_sum_norm_mps": 0.004856763977310413,
+          "pair_impulse_sum_norm_Ns": 0.0927641919666289,
+          "contact_normal": [
+            0.7545275020857577,
+            -0.6562684272431722
+          ],
+          "contact_tangent": [
+            0.6562684272431722,
+            0.7545275020857577
+          ]
+        },
+        {
+          "t0": 0.07,
+          "t1": 0.08,
+          "target_delta_v_mps": [
+            -0.0014411509037017822,
+            0.00207364559173584
+          ],
+          "target_delta_v_norm_mps": 0.002525256812161081,
+          "target_impulse_Ns": [
+            -0.027525982260704043,
+            0.03960663080215454
+          ],
+          "target_impulse_norm_Ns": 0.04823240511227665,
+          "target_impulse_normal_Ns": -0.04662465620486963,
+          "target_impulse_tangent_Ns": 0.012349345597742518,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.001845329999923706,
+            0.0017237365245819092
+          ],
+          "active_delta_v_norm_mps": 0.002525175323575799,
+          "active_impulse_norm_Ns": 0.04823084868029777,
+          "pair_delta_v_sum_norm_mps": 0.003818831192806594,
+          "pair_impulse_sum_norm_Ns": 0.07293967578260595,
+          "contact_normal": [
+            0.761920638126823,
+            -0.6476703954917308
+          ],
+          "contact_tangent": [
+            0.6476703954917308,
+            0.761920638126823
+          ]
+        },
+        {
+          "t0": 0.08,
+          "t1": 0.09,
+          "target_delta_v_mps": [
+            -0.0013628602027893066,
+            0.0019609928131103516
+          ],
+          "target_delta_v_norm_mps": 0.002388070506793583,
+          "target_impulse_Ns": [
+            -0.02603062987327576,
+            0.037454962730407715
+          ],
+          "target_impulse_norm_Ns": 0.045612146679757444,
+          "target_impulse_normal_Ns": -0.04396324771547405,
+          "target_impulse_tangent_Ns": 0.012153220768322032,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.0017453432083129883,
+            0.001630336046218872
+          ],
+          "active_delta_v_norm_mps": 0.002388350589508345,
+          "active_impulse_norm_Ns": 0.04561749625960939,
+          "pair_delta_v_sum_norm_mps": 0.003611638994330049,
+          "pair_impulse_sum_norm_Ns": 0.06898230479170395,
+          "contact_normal": [
+            0.7688604285710215,
+            -0.6394166414612505
+          ],
+          "contact_tangent": [
+            0.6394166414612505,
+            0.7688604285710215
+          ]
+        },
+        {
+          "t0": 0.09,
+          "t1": 0.1,
+          "target_delta_v_mps": [
+            -0.0013474822044372559,
+            0.0019388794898986816
+          ],
+          "target_delta_v_norm_mps": 0.002361135736806518,
+          "target_impulse_Ns": [
+            -0.025736910104751588,
+            0.03703259825706482
+          ],
+          "target_impulse_norm_Ns": 0.0450976925730045,
+          "target_impulse_normal_Ns": -0.0433416939442845,
+          "target_impulse_tangent_Ns": 0.01246191965345619,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.001725316047668457,
+            0.0016116201877593994
+          ],
+          "active_delta_v_norm_mps": 0.002360939451560744,
+          "active_impulse_norm_Ns": 0.045093943524810214,
+          "pair_delta_v_sum_norm_mps": 0.0035705470693075864,
+          "pair_impulse_sum_norm_Ns": 0.0681974490237749,
+          "contact_normal": [
+            0.7753845465171789,
+            -0.6314893546389747
+          ],
+          "contact_tangent": [
+            0.6314893546389747,
+            0.7753845465171789
+          ]
+        },
+        {
+          "t0": 0.1,
+          "t1": 0.15,
+          "target_delta_v_mps": [
+            -0.00671917200088501,
+            0.009668111801147461
+          ],
+          "target_delta_v_norm_mps": 0.0117736849871637,
+          "target_impulse_Ns": [
+            -0.1283361852169037,
+            0.18466093540191653
+          ],
+          "target_impulse_norm_Ns": 0.22487738325482667,
+          "target_impulse_normal_Ns": -0.21550297775697572,
+          "target_impulse_tangent_Ns": 0.06425187995237668,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.00860363245010376,
+            0.008036673069000244
+          ],
+          "active_delta_v_norm_mps": 0.011773300529353364,
+          "active_impulse_norm_Ns": 0.22487004011064926,
+          "pair_delta_v_sum_norm_mps": 0.017804791447329025,
+          "pair_impulse_sum_norm_Ns": 0.3400715166439844,
+          "contact_normal": [
+            0.7815259901104478,
+            -0.6238726847537759
+          ],
+          "contact_tangent": [
+            0.6238726847537759,
+            0.7815259901104478
+          ]
+        },
+        {
+          "t0": 0.15,
+          "t1": 0.2,
+          "target_delta_v_mps": [
+            -0.006718188524246216,
+            0.009666681289672852
+          ],
+          "target_delta_v_norm_mps": 0.0117719490401303,
+          "target_impulse_Ns": [
+            -0.12831740081310272,
+            0.18463361263275146
+          ],
+          "target_impulse_norm_Ns": 0.22484422666648876,
+          "target_impulse_normal_Ns": -0.21253514100186874,
+          "target_impulse_tangent_Ns": 0.07337397429993264,
+          "target_dominant_axis": "normal",
+          "active_delta_v_mps": [
+            0.008602648973464966,
+            0.008035719394683838
+          ],
+          "active_delta_v_norm_mps": 0.011771930833586979,
+          "active_impulse_norm_Ns": 0.2248438789215113,
+          "pair_delta_v_sum_norm_mps": 0.017802420654904824,
+          "pair_impulse_sum_norm_Ns": 0.3400262345086822,
+          "contact_normal": [
+            0.8074239611952947,
+            -0.589971649223672
+          ],
+          "contact_tangent": [
+            0.589971649223672,
+            0.8074239611952947
+          ]
+        }
+      ],
+      "status": "ok",
+      "unity_required_impulse_norm_Ns": 0.7853871455631669,
+      "unity_required_impulse_normal_Ns": -0.7786106716908684,
+      "unity_required_impulse_tangent_Ns": 0.102948483937132,
+      "unity_required_dominant_axis": "normal",
+      "residual_fraction_of_local_target_impulse": 0.053969925828719095,
+      "normal_fraction_of_local_target_impulse": -0.054238524574488585,
+      "tangent_fraction_of_local_target_impulse": -0.04313961634229538,
+      "unity_implied_target_impulse_norm_Ns": 13.767383377846766,
+      "unity_implied_target_impulse_normal_Ns": 13.57669633194198,
+      "unity_implied_target_impulse_tangent_Ns": -2.28345391520053,
+      "unity_implied_normal_scale_vs_local": 0.9457614754255114,
+      "unity_implied_tangent_scale_vs_local": 0.9568603836577045,
+      "unity_implied_tangent_sign_flip": false,
+      "local_minus_required_impulse_norm_Ns": 13.766923859193444,
+      "local_impulse_dominant_axis": "normal",
+      "same_dominant_axis": true
+    }
+  ],
+  "interpretation": [
+    "The local target impulse is estimated from consecutive snapshot velocity differences, so it includes solver output plus support/friction integration effects.",
+    "A residual_fraction around a few percent means the endpoint gap is a small row/manifold perturbation of the local collision impulse, not a wholly different collision event.",
+    "Dominant-axis disagreement points at friction tangent basis/contact point/cache differences; dominant normal residuals point at normal row magnitude, normal, restitution, or separation bias."
+  ]
+}

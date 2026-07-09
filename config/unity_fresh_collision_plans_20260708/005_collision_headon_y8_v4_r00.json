@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 10015,
+    "label": "collision_headon_y8_v4_fresh_r00",
+    "category": "collision_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 8.0
+      }
+    ],
+    "notes": "fresh-page collision calibration; source_sample_id=83; reload Unity before running this one-shot plan",
+    "source_sample_id": 83,
+    "fresh_repeat_index": 0
+  }
+]

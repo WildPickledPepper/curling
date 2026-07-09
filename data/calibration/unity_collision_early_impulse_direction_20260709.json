@@ -1,0 +1,2442 @@
+{
+  "generated_at": "2026-07-09T00:41:47",
+  "snapshot_time_s": 0.02,
+  "inputs": [
+    {
+      "label": "unique_role_current_best",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_current_best_20260708.json"
+    },
+    {
+      "label": "unique_role_formal_solid_inertia",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_rebuilt_unityflags_handoff292_20260708.json"
+    },
+    {
+      "label": "unique_role_formal_cooked_inertia",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_cooked_inertia_20260709.json"
+    }
+  ],
+  "results": [
+    {
+      "label": "unique_role_current_best",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_current_best_20260708.json",
+      "probe_summary": {
+        "sample_count": 8,
+        "active_error_count": 8,
+        "target_in_play_error_count": 7,
+        "target_cleared_count": 1,
+        "active_rmse_m": 0.037766793771995454,
+        "target_in_play_rmse_m": 0.10796148501441558,
+        "combined_rmse_m": 0.07874025714129404,
+        "active_mean_m": 0.027085394156134764,
+        "target_in_play_mean_m": 0.09279868530483147
+      },
+      "config_excerpt": {
+        "radius": 0.146,
+        "height": 0.23,
+        "center_height": 0.1276,
+        "inertia_model": "solid-cylinder",
+        "inertia_radial": null,
+        "inertia_vertical": null,
+        "contact_offset": 0.01,
+        "handoff_extra": 0.0
+      },
+      "early_direction_summary": {
+        "row_count": 8,
+        "ok_count": 7,
+        "skipped_count": 1,
+        "target_endpoint_rmse_m": 0.10796148501441558,
+        "target_cross_track_rmse_m": 0.0830394123146937,
+        "target_along_track_rmse_m": 0.0689937551445649,
+        "target_cross_track_mean_abs_m": 0.05713903090666087,
+        "target_along_track_mean_abs_m": 0.05916604019971155,
+        "early_velocity_to_unity_disp_abs_deg_mean": 0.9155592167194129,
+        "early_velocity_to_unity_disp_abs_deg_median": 0.5988811530751683,
+        "sim_final_disp_to_unity_disp_abs_deg_mean": 1.21570829711538,
+        "sim_final_disp_to_unity_disp_abs_deg_median": 1.118877679824203,
+        "early_velocity_to_sim_final_disp_abs_deg_mean": 0.9195100277141505,
+        "early_velocity_to_sim_final_disp_abs_deg_median": 1.0468209753109607,
+        "sim_to_unity_distance_ratio_mean": 0.9922430611963043,
+        "sim_to_unity_distance_ratio_median": 0.987890948057273
+      },
+      "snapshot_drift_summary": {
+        "0.020000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9170728222064003,
+          "position_disp_to_unity_abs_deg_median": 0.5935220684201242,
+          "velocity_to_unity_abs_deg_mean": 0.9155592167194129,
+          "velocity_to_unity_abs_deg_median": 0.5988811530751683,
+          "displacement_fraction_of_unity_mean": 0.00982175199476922,
+          "target_speed_mps_mean": 1.0003804927679931
+        },
+        "0.050000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9185996053387794,
+          "position_disp_to_unity_abs_deg_median": 0.5965298630729112,
+          "velocity_to_unity_abs_deg_mean": 0.9316369435985424,
+          "velocity_to_unity_abs_deg_median": 0.5988809754725528,
+          "displacement_fraction_of_unity_mean": 0.02451931230642784,
+          "target_speed_mps_mean": 0.9939302779019351
+        },
+        "0.100000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.931012437430871,
+          "position_disp_to_unity_abs_deg_median": 0.5620985468446992,
+          "velocity_to_unity_abs_deg_mean": 0.9460536823807493,
+          "velocity_to_unity_abs_deg_median": 0.5989483670121765,
+          "displacement_fraction_of_unity_mean": 0.048571972634021895,
+          "target_speed_mps_mean": 0.9768319026650308
+        },
+        "0.200000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.941619633185684,
+          "position_disp_to_unity_abs_deg_median": 0.5980435574479797,
+          "velocity_to_unity_abs_deg_mean": 0.9558916288582289,
+          "velocity_to_unity_abs_deg_median": 0.5989594230163159,
+          "displacement_fraction_of_unity_mean": 0.09570944793297402,
+          "target_speed_mps_mean": 0.9532860230447382
+        },
+        "0.500000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9590955518652505,
+          "position_disp_to_unity_abs_deg_median": 0.5894383041254649,
+          "velocity_to_unity_abs_deg_mean": 0.9862166249792115,
+          "velocity_to_unity_abs_deg_median": 0.5989711731724936,
+          "displacement_fraction_of_unity_mean": 0.2294952569597645,
+          "target_speed_mps_mean": 0.8826545638750406
+        },
+        "1.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9621910769602044,
+          "position_disp_to_unity_abs_deg_median": 0.4587593511055173,
+          "velocity_to_unity_abs_deg_mean": 0.9646837893350477,
+          "velocity_to_unity_abs_deg_median": 0.7888375428561554,
+          "displacement_fraction_of_unity_mean": 0.42705119148883597,
+          "target_speed_mps_mean": 0.7649356839398804
+        },
+        "2.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9612095177404498,
+          "position_disp_to_unity_abs_deg_median": 0.7290446271491918,
+          "velocity_to_unity_abs_deg_mean": 1.741346251218399,
+          "velocity_to_unity_abs_deg_median": 1.9781689590086007,
+          "displacement_fraction_of_unity_mean": 0.7268211129714615,
+          "target_speed_mps_mean": 0.5294980262188383
+        }
+      },
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            5.199999809265137
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ],
+          "sim_target": [
+            2.4896321296691895,
+            3.8871958255767822
+          ],
+          "unity_displacement_m": 1.3418618741466521,
+          "sim_displacement_m": 1.317799235369526,
+          "sim_to_unity_distance_ratio": 0.9820677230341397,
+          "target_endpoint_error_m": 0.035402347434248214,
+          "target_endpoint_error_along_unity_m": -0.024313899965751087,
+          "target_endpoint_error_cross_unity_m": 0.025732478938312,
+          "early_target_speed_mps": 0.7889037371443783,
+          "early_velocity": [
+            0.05415567010641098,
+            -0.7870427370071411
+          ],
+          "early_position": [
+            2.376081705093384,
+            5.184258937835693
+          ],
+          "early_velocity_to_unity_disp_deg": -0.06481520186733322,
+          "sim_final_disp_to_unity_disp_deg": -1.118877679824203,
+          "early_velocity_to_sim_final_disp_deg": 1.0540624779568695,
+          "early_position_disp_to_unity_disp_deg": -0.05970901158492891,
+          "abs_early_velocity_to_unity_disp_deg": 0.06481520186733322,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.118877679824203,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.0540624779568695,
+          "abs_early_position_disp_to_unity_disp_deg": 0.05970901158492891,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12000,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.05970901158492891,
+              "velocity_to_unity_disp_deg": -0.06481520186733322,
+              "displacement_fraction_of_unity": 0.011758285322552067,
+              "target_speed_mps": 0.7889037371443783
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.06291377663436229,
+              "velocity_to_unity_disp_deg": -0.06481494953642958,
+              "displacement_fraction_of_unity": 0.02934720581817382,
+              "target_speed_mps": 0.7824500190527359
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.06441057618940199,
+              "velocity_to_unity_disp_deg": -0.07436903415061105,
+              "displacement_fraction_of_unity": 0.058050872828848826,
+              "target_speed_mps": 0.7653536509526406
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.09388331516027805,
+              "velocity_to_unity_disp_deg": -0.14910091398764383,
+              "displacement_fraction_of_unity": 0.1141225062095517,
+              "target_speed_mps": 0.7418072634432669
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.18762214214115794,
+              "velocity_to_unity_disp_deg": -0.35923102587266775,
+              "displacement_fraction_of_unity": 0.27180904612193557,
+              "target_speed_mps": 0.6711758037193644
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.3600086165404087,
+              "velocity_to_unity_disp_deg": -0.7888375428561554,
+              "displacement_fraction_of_unity": 0.49952654304661226,
+              "target_speed_mps": 0.553457159262044
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.7290446271491918,
+              "velocity_to_unity_disp_deg": -1.9781689590086007,
+              "displacement_fraction_of_unity": 0.8233426065662155,
+              "target_speed_mps": 0.31802015687102503
+            }
+          ]
+        },
+        {
+          "sample_id": 12001,
+          "status": "unity_target_cleared"
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "sim_target": [
+            2.5282320976257324,
+            4.524882793426514
+          ],
+          "unity_displacement_m": 1.6960717214339973,
+          "sim_displacement_m": 1.6821109037441246,
+          "sim_to_unity_distance_ratio": 0.9917687338846325,
+          "target_endpoint_error_m": 0.051089795127476086,
+          "target_endpoint_error_along_unity_m": -0.014672834376748276,
+          "target_endpoint_error_cross_unity_m": 0.04893746108575713,
+          "early_target_speed_mps": 0.891176197925042,
+          "early_velocity": [
+            0.06462216377258301,
+            -0.8888301253318787
+          ],
+          "early_position": [
+            2.376290798187256,
+            6.182222843170166
+          ],
+          "early_velocity_to_unity_disp_deg": -0.5988811530751683,
+          "sim_final_disp_to_unity_disp_deg": -1.6671348251549043,
+          "early_velocity_to_sim_final_disp_deg": 1.0682536720797366,
+          "early_position_disp_to_unity_disp_deg": -0.5935220684201242,
+          "abs_early_velocity_to_unity_disp_deg": 0.5988811530751683,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.6671348251549043,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.0682536720797366,
+          "abs_early_position_disp_to_unity_disp_deg": 0.5935220684201242,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12002,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.5935220684201242,
+              "velocity_to_unity_disp_deg": -0.5988811530751683,
+              "displacement_fraction_of_unity": 0.01050885239789352,
+              "target_speed_mps": 0.891176197925042
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.5965298630729112,
+              "velocity_to_unity_disp_deg": -0.5988809754725528,
+              "displacement_fraction_of_unity": 0.026233754099830576,
+              "target_speed_mps": 0.884718438598224
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.5988104614180753,
+              "velocity_to_unity_disp_deg": -0.6125646719438926,
+              "displacement_fraction_of_unity": 0.051958013455881795,
+              "target_speed_mps": 0.8676252299141507
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.6254104720485502,
+              "velocity_to_unity_disp_deg": -0.6723715863394656,
+              "displacement_fraction_of_unity": 0.10234939786056933,
+              "target_speed_mps": 0.8440788488257931
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.7083293346996121,
+              "velocity_to_unity_disp_deg": -0.8596691109745531,
+              "displacement_fraction_of_unity": 0.24519423889979813,
+              "target_speed_mps": 0.7734476779441221
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.859596116846458,
+              "velocity_to_unity_disp_deg": -1.2202154583702434,
+              "displacement_fraction_of_unity": 0.4555049002726563,
+              "target_speed_mps": 0.6557288486877643
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -1.1837385143160044,
+              "velocity_to_unity_disp_deg": -2.219656537012842,
+              "displacement_fraction_of_unity": 0.7719982028341431,
+              "target_speed_mps": 0.42029053781181896
+            }
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "sim_target": [
+            2.691636323928833,
+            2.8164846897125244
+          ],
+          "unity_displacement_m": 3.307775634986671,
+          "sim_displacement_m": 3.398298563380253,
+          "sim_to_unity_distance_ratio": 1.0273667075348496,
+          "target_endpoint_error_m": 0.19527685089492122,
+          "target_endpoint_error_along_unity_m": 0.08599743282885523,
+          "target_endpoint_error_cross_unity_m": -0.17532110552436014,
+          "early_target_speed_mps": 1.2662351064338846,
+          "early_velocity": [
+            0.09492892026901245,
+            -1.262671709060669
+          ],
+          "early_position": [
+            2.376896619796753,
+            6.174746036529541
+          ],
+          "early_velocity_to_unity_disp_deg": 4.004071676850509,
+          "sim_final_disp_to_unity_disp_deg": 2.9572507015395466,
+          "early_velocity_to_sim_final_disp_deg": 1.0468209753109607,
+          "early_position_disp_to_unity_disp_deg": 4.008547843430057,
+          "abs_early_velocity_to_unity_disp_deg": 4.004071676850509,
+          "abs_sim_final_disp_to_unity_disp_deg": 2.9572507015395466,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.0468209753109607,
+          "abs_early_position_disp_to_unity_disp_deg": 4.008547843430057,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12003,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 4.008547843430057,
+              "velocity_to_unity_disp_deg": 4.004071676850509,
+              "displacement_fraction_of_unity": 0.0076561701174542385,
+              "target_speed_mps": 1.2662351064338846
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 4.005531922270686,
+              "velocity_to_unity_disp_deg": 4.0040720030166606,
+              "displacement_fraction_of_unity": 0.019120768139000432,
+              "target_speed_mps": 1.2597609883602507
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 4.005031902391944,
+              "velocity_to_unity_disp_deg": 4.003575985354843,
+              "displacement_fraction_of_unity": 0.037980335871123316,
+              "target_speed_mps": 1.2426797909996201
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 3.990573024928302,
+              "velocity_to_unity_disp_deg": 3.956213520703823,
+              "displacement_fraction_of_unity": 0.07515731704231061,
+              "target_speed_mps": 1.2191342120381714
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 3.9305680741748903,
+              "velocity_to_unity_disp_deg": 3.827664252342587,
+              "displacement_fraction_of_unity": 0.18241740734696413,
+              "target_speed_mps": 1.1485027071929423
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 3.826655853724976,
+              "velocity_to_unity_disp_deg": 3.5980892113693126,
+              "displacement_fraction_of_unity": 0.3469479627304539,
+              "target_speed_mps": 1.0307835800007592
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 3.6142931161183633,
+              "velocity_to_unity_disp_deg": 3.0589059317517813,
+              "displacement_fraction_of_unity": 0.6226216088575313,
+              "target_speed_mps": 0.7953456270908524
+            }
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "sim_target": [
+            2.5849878787994385,
+            5.662623405456543
+          ],
+          "unity_displacement_m": 2.231224652517088,
+          "sim_displacement_m": 2.346790202374779,
+          "sim_to_unity_distance_ratio": 1.0517946723685216,
+          "target_endpoint_error_m": 0.11664039001615524,
+          "target_endpoint_error_along_unity_m": 0.11550961997431285,
+          "target_endpoint_error_cross_unity_m": 0.016202107162669795,
+          "early_target_speed_mps": 1.0524315483857802,
+          "early_velocity": [
+            0.07979103177785873,
+            -1.0494024753570557
+          ],
+          "early_position": [
+            2.376594066619873,
+            7.9790120124816895
+          ],
+          "early_velocity_to_unity_disp_deg": 0.38994862871724933,
+          "sim_final_disp_to_unity_disp_deg": -0.39556997188732523,
+          "early_velocity_to_sim_final_disp_deg": 0.785518600604575,
+          "early_position_disp_to_unity_disp_deg": 0.3946966855607112,
+          "abs_early_velocity_to_unity_disp_deg": 0.38994862871724933,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.39556997188732523,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.785518600604575,
+          "abs_early_position_disp_to_unity_disp_deg": 0.3946966855607112,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12004,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.3946966855607112,
+              "velocity_to_unity_disp_deg": 0.38994862871724933,
+              "displacement_fraction_of_unity": 0.009433579995439494,
+              "target_speed_mps": 1.0524315483857802
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.4308456229750751,
+              "velocity_to_unity_disp_deg": 0.599776000447974,
+              "displacement_fraction_of_unity": 0.023555284976384407,
+              "target_speed_mps": 1.0459701060199693
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.5531383814793119,
+              "velocity_to_unity_disp_deg": 0.6747435288218676,
+              "displacement_fraction_of_unity": 0.046723182586474954,
+              "target_speed_mps": 1.0288858389278617
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.5991102754470019,
+              "velocity_to_unity_disp_deg": 0.6279559136337386,
+              "displacement_fraction_of_unity": 0.09225578323551147,
+              "target_speed_mps": 1.0053402527501007
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.5674181361377159,
+              "velocity_to_unity_disp_deg": 0.4652270442619384,
+              "displacement_fraction_of_unity": 0.22252211036606717,
+              "target_speed_mps": 0.9347084317906473
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.4485267417368675,
+              "velocity_to_unity_disp_deg": 0.16077733917401416,
+              "displacement_fraction_of_unity": 0.4185278585840373,
+              "target_speed_mps": 0.8169892633923314
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 0.18588709876168577,
+              "velocity_to_unity_disp_deg": -0.5764311710593495,
+              "displacement_fraction_of_unity": 0.7313893759097875,
+              "target_speed_mps": 0.581551339193887
+            }
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "sim_target": [
+            2.765028476715088,
+            3.786233901977539
+          ],
+          "unity_displacement_m": 4.283649154634399,
+          "sim_displacement_m": 4.231778224516512,
+          "sim_to_unity_distance_ratio": 0.987890948057273,
+          "target_endpoint_error_m": 0.13004120983484946,
+          "target_endpoint_error_along_unity_m": -0.053530744256566544,
+          "target_endpoint_error_cross_unity_m": 0.11851234397584672,
+          "early_target_speed_mps": 1.4128947647906156,
+          "early_velocity": [
+            0.10602723807096481,
+            -1.408910870552063
+          ],
+          "early_position": [
+            2.3771181106567383,
+            7.9718217849731445
+          ],
+          "early_velocity_to_unity_disp_deg": -0.6202041449401994,
+          "sim_final_disp_to_unity_disp_deg": -1.6047970099541848,
+          "early_velocity_to_sim_final_disp_deg": 0.984592865013986,
+          "early_position_disp_to_unity_disp_deg": -0.6152829949094085,
+          "abs_early_velocity_to_unity_disp_deg": 0.6202041449401994,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.6047970099541848,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.984592865013986,
+          "abs_early_position_disp_to_unity_disp_deg": 0.6152829949094085,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12005,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.6152829949094085,
+              "velocity_to_unity_disp_deg": -0.6202041449401994,
+              "displacement_fraction_of_unity": 0.006596644435869638,
+              "target_speed_mps": 1.4128947647906156
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.5966959249785437,
+              "velocity_to_unity_disp_deg": -0.522921497052942,
+              "displacement_fraction_of_unity": 0.016476586686091095,
+              "target_speed_mps": 1.406417232209408
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.5620985468446992,
+              "velocity_to_unity_disp_deg": -0.526128354811095,
+              "displacement_fraction_of_unity": 0.032751328823399616,
+              "target_speed_mps": 1.3893403811988394
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.5504115675501503,
+              "velocity_to_unity_disp_deg": -0.5546004882891743,
+              "displacement_fraction_of_unity": 0.0648825096232434,
+              "target_speed_mps": 1.3657936205342769
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.5894383041254649,
+              "velocity_to_unity_disp_deg": -0.6719683761214073,
+              "displacement_fraction_of_unity": 0.15797845557095472,
+              "target_speed_mps": 1.2951620341107373
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.6802551388175477,
+              "velocity_to_unity_disp_deg": -0.886418858024346,
+              "displacement_fraction_of_unity": 0.30214520906414316,
+              "target_speed_mps": 1.1774433071773387
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.876483310849855,
+              "velocity_to_unity_disp_deg": -1.3738325075437088,
+              "displacement_fraction_of_unity": 0.5492540041841667,
+              "target_speed_mps": 0.9420040893315345
+            }
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "sim_target": [
+            1.468359112739563,
+            4.735141754150391
+          ],
+          "unity_displacement_m": 1.6661407899399114,
+          "sim_displacement_m": 1.6351807250748067,
+          "sim_to_unity_distance_ratio": 0.981418098007059,
+          "target_endpoint_error_m": 0.03107380951717546,
+          "target_endpoint_error_along_unity_m": -0.030962182339660492,
+          "target_endpoint_error_cross_unity_m": 0.0026315209813566574,
+          "early_target_speed_mps": 0.8785558767621567,
+          "early_velocity": [
+            -0.3934897482395172,
+            -0.7855101823806763
+          ],
+          "early_position": [
+            2.18713116645813,
+            6.18428897857666
+          ],
+          "early_velocity_to_unity_disp_deg": 0.13205007918818087,
+          "sim_final_disp_to_unity_disp_deg": -0.09220700116004625,
+          "early_velocity_to_sim_final_disp_deg": 0.22425708034822592,
+          "early_position_disp_to_unity_disp_deg": 0.12813673012031973,
+          "abs_early_velocity_to_unity_disp_deg": 0.13205007918818087,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.09220700116004625,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.22425708034822592,
+          "abs_early_position_disp_to_unity_disp_deg": 0.12813673012031973,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12006,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.12813673012031973,
+              "velocity_to_unity_disp_deg": 0.13205007918818087,
+              "displacement_fraction_of_unity": 0.010546058178881356,
+              "target_speed_mps": 0.8785558767621567
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.1320917226167765,
+              "velocity_to_unity_disp_deg": 0.13204849138904579,
+              "displacement_fraction_of_unity": 0.026327645894940337,
+              "target_speed_mps": 0.8722799579272562
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.1333617872300492,
+              "velocity_to_unity_disp_deg": 0.13204583457075947,
+              "displacement_fraction_of_unity": 0.05213732014973448,
+              "target_speed_mps": 0.8550470441502118
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.1339052197175258,
+              "velocity_to_unity_disp_deg": 0.13203955603744108,
+              "displacement_fraction_of_unity": 0.10267912696520168,
+              "target_speed_mps": 0.8315017327623441
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.13283960269472833,
+              "velocity_to_unity_disp_deg": 0.12078539210883325,
+              "displacement_fraction_of_unity": 0.24582659822180045,
+              "target_speed_mps": 0.7608708863296941
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.1015357199496562,
+              "velocity_to_unity_disp_deg": 0.020578212138903266,
+              "displacement_fraction_of_unity": 0.456143191262333,
+              "target_speed_mps": 0.6431511989898031
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 0.020987062489959525,
+              "velocity_to_unity_disp_deg": -0.2602472648640908,
+              "displacement_fraction_of_unity": 0.7707932570826227,
+              "target_speed_mps": 0.4077128835571097
+            }
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "sim_target": [
+            3.1953136920928955,
+            5.337728500366211
+          ],
+          "unity_displacement_m": 1.1631186180194506,
+          "sim_displacement_m": 1.0740173876342995,
+          "sim_to_unity_distance_ratio": 0.9233945454876546,
+          "target_endpoint_error_m": 0.09006639430899464,
+          "target_endpoint_error_along_unity_m": -0.08917556765608635,
+          "target_endpoint_error_cross_unity_m": 0.012636198678323655,
+          "early_target_speed_mps": 0.7124662179340941,
+          "early_velocity": [
+            0.4119488596916199,
+            -0.5812970399856567
+          ],
+          "early_position": [
+            2.5632359981536865,
+            6.188369274139404
+          ],
+          "early_velocity_to_unity_disp_deg": 0.5989436323972505,
+          "sim_final_disp_to_unity_disp_deg": -0.6741208902874496,
+          "early_velocity_to_sim_final_disp_deg": 1.2730645226846995,
+          "early_position_disp_to_unity_disp_deg": 0.6196144214192525,
+          "abs_early_velocity_to_unity_disp_deg": 0.5989436323972505,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.6741208902874496,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.2730645226846995,
+          "abs_early_position_disp_to_unity_disp_deg": 0.6196144214192525,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12007,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.6196144214192525,
+              "velocity_to_unity_disp_deg": 0.5989436323972505,
+              "displacement_fraction_of_unity": 0.012252673515294236,
+              "target_speed_mps": 0.7124662179340941
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.6055884048231007,
+              "velocity_to_unity_disp_deg": 0.5989446882741923,
+              "displacement_fraction_of_unity": 0.030573940530574203,
+              "target_speed_mps": 0.705915203145702
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.6002354064626152,
+              "velocity_to_unity_disp_deg": 0.5989483670121765,
+              "displacement_fraction_of_unity": 0.060402754722690286,
+              "target_speed_mps": 0.6888913825118921
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.5980435574479797,
+              "velocity_to_unity_disp_deg": 0.5989594230163159,
+              "displacement_fraction_of_unity": 0.11851949459443002,
+              "target_speed_mps": 0.665346230959215
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.5974532690831836,
+              "velocity_to_unity_disp_deg": 0.5989711731724936,
+              "displacement_fraction_of_unity": 0.2807189421908312,
+              "target_speed_mps": 0.5947144060377765
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.4587593511055173,
+              "velocity_to_unity_disp_deg": -0.07786990341235932,
+              "displacement_fraction_of_unity": 0.510562675461616,
+              "target_speed_mps": 0.4769964300691228
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.1180328944980888,
+              "velocity_to_unity_disp_deg": -2.72218138728842,
+              "displacement_fraction_of_unity": 0.8183487353657632,
+              "target_speed_mps": 0.24156154967564092
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "unique_role_formal_solid_inertia",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_rebuilt_unityflags_handoff292_20260708.json",
+      "probe_summary": {
+        "sample_count": 8,
+        "active_error_count": 8,
+        "target_in_play_error_count": 7,
+        "target_cleared_count": 1,
+        "active_rmse_m": 0.03195771372968484,
+        "target_in_play_rmse_m": 0.12082229014999328,
+        "combined_rmse_m": 0.0857735562646406,
+        "active_mean_m": 0.02251141037152321,
+        "target_in_play_mean_m": 0.09978907428363096
+      },
+      "config_excerpt": {
+        "radius": 0.140875,
+        "height": 0.23,
+        "center_height": 0.115,
+        "inertia_model": "solid-cylinder",
+        "inertia_radial": null,
+        "inertia_vertical": null,
+        "contact_offset": 0.01,
+        "handoff_extra": 0.01025
+      },
+      "early_direction_summary": {
+        "row_count": 8,
+        "ok_count": 7,
+        "skipped_count": 1,
+        "target_endpoint_rmse_m": 0.12082229014999328,
+        "target_cross_track_rmse_m": 0.08423171389493864,
+        "target_along_track_rmse_m": 0.08662011412720699,
+        "target_cross_track_mean_abs_m": 0.05803418811627991,
+        "target_along_track_mean_abs_m": 0.06795775398668481,
+        "early_velocity_to_unity_disp_abs_deg_mean": 0.8255869060092152,
+        "early_velocity_to_unity_disp_abs_deg_median": 0.286422424679704,
+        "sim_final_disp_to_unity_disp_abs_deg_mean": 1.2998022387928698,
+        "sim_final_disp_to_unity_disp_abs_deg_median": 1.395435121662456,
+        "early_velocity_to_sim_final_disp_abs_deg_mean": 0.9388364131994065,
+        "early_velocity_to_sim_final_disp_abs_deg_median": 0.9942425869486989,
+        "sim_to_unity_distance_ratio_mean": 0.985236209436845,
+        "sim_to_unity_distance_ratio_median": 0.9810207959451397
+      },
+      "snapshot_drift_summary": {
+        "0.020000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8963569112869817,
+          "position_disp_to_unity_abs_deg_median": 0.49377469949927927,
+          "velocity_to_unity_abs_deg_mean": 0.8255869060092152,
+          "velocity_to_unity_abs_deg_median": 0.286422424679704,
+          "displacement_fraction_of_unity_mean": 0.007356228477422395,
+          "target_speed_mps_mean": 0.9919633006970793
+        },
+        "0.050000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.7863104895668649,
+          "position_disp_to_unity_abs_deg_median": 0.17912875509985207,
+          "velocity_to_unity_abs_deg_mean": 0.8255864507376744,
+          "velocity_to_unity_abs_deg_median": 0.2864220065181125,
+          "displacement_fraction_of_unity_mean": 0.021927928323885567,
+          "target_speed_mps_mean": 0.9849002444718977
+        },
+        "0.100000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8078885975668314,
+          "position_disp_to_unity_abs_deg_median": 0.17724333567055342,
+          "velocity_to_unity_abs_deg_mean": 0.8255860221292483,
+          "velocity_to_unity_abs_deg_median": 0.2864215438799637,
+          "displacement_fraction_of_unity_mean": 0.0459601292199814,
+          "target_speed_mps_mean": 0.973127839126355
+        },
+        "0.200000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8177020210392142,
+          "position_disp_to_unity_abs_deg_median": 0.24494006156055417,
+          "velocity_to_unity_abs_deg_mean": 0.8275649964675909,
+          "velocity_to_unity_abs_deg_median": 0.3519775185042244,
+          "displacement_fraction_of_unity_mean": 0.09307130319711268,
+          "target_speed_mps_mean": 0.9495838986397328
+        },
+        "0.500000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8216933547579309,
+          "position_disp_to_unity_abs_deg_median": 0.3708902546598459,
+          "velocity_to_unity_abs_deg_mean": 0.8666437432597609,
+          "velocity_to_unity_abs_deg_median": 0.49207621865906037,
+          "displacement_fraction_of_unity_mean": 0.22677899799553622,
+          "target_speed_mps_mean": 0.8789522075953492
+        },
+        "1.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.868413581422617,
+          "position_disp_to_unity_abs_deg_median": 0.47346431659505367,
+          "velocity_to_unity_abs_deg_mean": 1.0160987123690917,
+          "velocity_to_unity_abs_deg_median": 0.6484753338625532,
+          "displacement_fraction_of_unity_mean": 0.42420537769929745,
+          "target_speed_mps_mean": 0.7612333733152082
+        },
+        "2.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 1.0204293264837982,
+          "position_disp_to_unity_abs_deg_median": 0.7096846570378904,
+          "velocity_to_unity_abs_deg_mean": 1.799769265049248,
+          "velocity_to_unity_abs_deg_median": 1.8090644721943536,
+          "displacement_fraction_of_unity_mean": 0.7237169605102202,
+          "target_speed_mps_mean": 0.5257960068728398
+        }
+      },
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            5.199999809265137
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ],
+          "sim_target": [
+            2.4859821796417236,
+            3.888292074203491
+          ],
+          "unity_displacement_m": 1.3418618741466521,
+          "sim_displacement_m": 1.3163944038237856,
+          "sim_to_unity_distance_ratio": 0.9810207959451397,
+          "target_endpoint_error_m": 0.03390300475761648,
+          "target_endpoint_error_along_unity_m": -0.025654084793624823,
+          "target_endpoint_error_cross_unity_m": 0.02216487457660145,
+          "early_target_speed_mps": 0.7862214123511418,
+          "early_velocity": [
+            0.05156514793634415,
+            -0.7845286130905151
+          ],
+          "early_position": [
+            2.375516653060913,
+            5.192155838012695
+          ],
+          "early_velocity_to_unity_disp_deg": 0.1109464807823523,
+          "sim_final_disp_to_unity_disp_deg": -0.9647669244950823,
+          "early_velocity_to_sim_final_disp_deg": 1.075713405277435,
+          "early_position_disp_to_unity_disp_deg": 0.10303347388813117,
+          "abs_early_velocity_to_unity_disp_deg": 0.1109464807823523,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.9647669244950823,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.075713405277435,
+          "abs_early_position_disp_to_unity_disp_deg": 0.10303347388813117,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12000,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.10303347388813117,
+              "velocity_to_unity_disp_deg": 0.1109464807823523,
+              "displacement_fraction_of_unity": 0.0058582541111570794,
+              "target_speed_mps": 0.7862214123511418
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.1091557374509681,
+              "velocity_to_unity_disp_deg": 0.11094647571324558,
+              "displacement_fraction_of_unity": 0.023330288415506575,
+              "target_speed_mps": 0.7791585522396406
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.11028742606849402,
+              "velocity_to_unity_disp_deg": 0.11094710077559397,
+              "displacement_fraction_of_unity": 0.052099922183417066,
+              "target_speed_mps": 0.7673859035864068
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.09675810102186148,
+              "velocity_to_unity_disp_deg": 0.05925302553459683,
+              "displacement_fraction_of_unity": 0.10832328380224499,
+              "target_speed_mps": 0.7438420728700127
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.002626231802669261,
+              "velocity_to_unity_disp_deg": -0.17357501696667985,
+              "displacement_fraction_of_unity": 0.2664645631848927,
+              "target_speed_mps": 0.6732110199887488
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.1740732463304449,
+              "velocity_to_unity_disp_deg": -0.6070459390480649,
+              "displacement_fraction_of_unity": 0.4949398447075294,
+              "target_speed_mps": 0.555492429363068
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.5510404541826868,
+              "velocity_to_unity_disp_deg": -1.8090644721943536,
+              "displacement_fraction_of_unity": 0.8202730779127007,
+              "target_speed_mps": 0.3200551096074359
+            }
+          ]
+        },
+        {
+          "sample_id": 12001,
+          "status": "unity_target_cleared"
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "sim_target": [
+            2.506824254989624,
+            4.683056831359863
+          ],
+          "unity_displacement_m": 1.6960717214339973,
+          "sim_displacement_m": 1.5226600514953061,
+          "sim_to_unity_distance_ratio": 0.8977568768188207,
+          "target_endpoint_error_m": 0.17784589182403385,
+          "target_endpoint_error_along_unity_m": -0.17387083506363163,
+          "target_endpoint_error_cross_unity_m": 0.03739109456757524,
+          "early_target_speed_mps": 0.845562845493835,
+          "early_velocity": [
+            0.05671461671590805,
+            -0.8436586856842041
+          ],
+          "early_position": [
+            2.375430107116699,
+            6.191153049468994
+          ],
+          "early_velocity_to_unity_disp_deg": -0.286422424679704,
+          "sim_final_disp_to_unity_disp_deg": -1.4071212279593488,
+          "early_velocity_to_sim_final_disp_deg": 1.1206988032796446,
+          "early_position_disp_to_unity_disp_deg": 0.7760924639034374,
+          "abs_early_velocity_to_unity_disp_deg": 0.286422424679704,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.4071212279593488,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.1206988032796446,
+          "abs_early_position_disp_to_unity_disp_deg": 0.7760924639034374,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12002,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.7760924639034374,
+              "velocity_to_unity_disp_deg": -0.286422424679704,
+              "displacement_fraction_of_unity": 0.005222190119741281,
+              "target_speed_mps": 0.845562845493835
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.010456937510681899,
+              "velocity_to_unity_disp_deg": -0.2864220065181125,
+              "displacement_fraction_of_unity": 0.020094545188818945,
+              "target_speed_mps": 0.8384999422767652
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.16206485180175495,
+              "velocity_to_unity_disp_deg": -0.2864215438799637,
+              "displacement_fraction_of_unity": 0.04460503817811369,
+              "target_speed_mps": 0.8267271428088812
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.24494006156055417,
+              "velocity_to_unity_disp_deg": -0.3519775185042244,
+              "displacement_fraction_of_unity": 0.09258506801861763,
+              "target_speed_mps": 0.8031835714954633
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.3708902546598459,
+              "velocity_to_unity_disp_deg": -0.5554402977492688,
+              "displacement_fraction_of_unity": 0.2281960067069072,
+              "target_speed_mps": 0.7325517194275087
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.5513968131567416,
+              "velocity_to_unity_disp_deg": -0.9702068595852975,
+              "displacement_fraction_of_unity": 0.42645026319658114,
+              "target_speed_mps": 0.6148330540393927
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.9168893921141131,
+              "velocity_to_unity_disp_deg": -2.09782569086179,
+              "displacement_fraction_of_unity": 0.7188284056217068,
+              "target_speed_mps": 0.3793960497859464
+            }
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "sim_target": [
+            2.673534631729126,
+            2.858869791030884
+          ],
+          "unity_displacement_m": 3.307775634986671,
+          "sim_displacement_m": 3.3544407469931055,
+          "sim_to_unity_distance_ratio": 1.0141077017173876,
+          "target_endpoint_error_m": 0.1916463892694551,
+          "target_endpoint_error_along_unity_m": 0.04144246245971184,
+          "target_endpoint_error_cross_unity_m": -0.18711189386379182,
+          "early_target_speed_mps": 1.2533929160599908,
+          "early_velocity": [
+            0.09095416963100433,
+            -1.2500884532928467
+          ],
+          "early_position": [
+            2.376821279525757,
+            6.1749773025512695
+          ],
+          "early_velocity_to_unity_disp_deg": 4.142133091265428,
+          "sim_final_disp_to_unity_disp_deg": 3.1976385684953286,
+          "early_velocity_to_sim_final_disp_deg": 0.9444945227701004,
+          "early_position_disp_to_unity_disp_deg": 4.140567624059607,
+          "abs_early_velocity_to_unity_disp_deg": 4.142133091265428,
+          "abs_sim_final_disp_to_unity_disp_deg": 3.1976385684953286,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.9444945227701004,
+          "abs_early_position_disp_to_unity_disp_deg": 4.140567624059607,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12003,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 4.140567624059607,
+              "velocity_to_unity_disp_deg": 4.142133091265428,
+              "displacement_fraction_of_unity": 0.007584764941607035,
+              "target_speed_mps": 1.2533929160599908
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 4.141459437054372,
+              "velocity_to_unity_disp_deg": 4.142132808166296,
+              "displacement_fraction_of_unity": 0.01890985732953296,
+              "target_speed_mps": 1.2463299803453654
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 4.141740424415133,
+              "velocity_to_unity_disp_deg": 4.142132833693382,
+              "displacement_fraction_of_unity": 0.03764249809898667,
+              "target_speed_mps": 1.2345575435176739
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 4.141968929804994,
+              "velocity_to_unity_disp_deg": 4.142133699445049,
+              "displacement_fraction_of_unity": 0.07457399423918133,
+              "target_speed_mps": 1.2110136248069583
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 4.142061858364472,
+              "velocity_to_unity_disp_deg": 4.142133151039627,
+              "displacement_fraction_of_unity": 0.18109741003754792,
+              "target_speed_mps": 1.1403818735407654
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 4.09136057832828,
+              "velocity_to_unity_disp_deg": 3.911597895529691,
+              "displacement_fraction_of_unity": 0.34440071262725447,
+              "target_speed_mps": 1.022663248819695
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 3.8864702698009364,
+              "velocity_to_unity_disp_deg": 3.3032413232444156,
+              "displacement_fraction_of_unity": 0.6176192643340148,
+              "target_speed_mps": 0.7872249636702827
+            }
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "sim_target": [
+            2.583422899246216,
+            5.692668914794922
+          ],
+          "unity_displacement_m": 2.231224652517088,
+          "sim_displacement_m": 2.3167254566918025,
+          "sim_to_unity_distance_ratio": 1.0383201234704267,
+          "target_endpoint_error_m": 0.08713672530949908,
+          "target_endpoint_error_along_unity_m": 0.08543751575083892,
+          "target_endpoint_error_cross_unity_m": 0.017124245968458005,
+          "early_target_speed_mps": 1.041046988320111,
+          "early_velocity": [
+            0.07565217465162277,
+            -1.0382945537567139
+          ],
+          "early_position": [
+            2.3765149116516113,
+            7.979212760925293
+          ],
+          "early_velocity_to_unity_disp_deg": 0.5707327779026785,
+          "sim_final_disp_to_unity_disp_deg": -0.4235098090460205,
+          "early_velocity_to_sim_final_disp_deg": 0.9942425869486989,
+          "early_position_disp_to_unity_disp_deg": 0.5698754324890788,
+          "abs_early_velocity_to_unity_disp_deg": 0.5707327779026785,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.4235098090460205,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.9942425869486989,
+          "abs_early_position_disp_to_unity_disp_deg": 0.5698754324890788,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12004,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.5698754324890788,
+              "velocity_to_unity_disp_deg": 0.5707327779026785,
+              "displacement_fraction_of_unity": 0.009341223018675212,
+              "target_speed_mps": 1.041046988320111
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.5701617299450735,
+              "velocity_to_unity_disp_deg": 0.5707329384857941,
+              "displacement_fraction_of_unity": 0.02327526625805773,
+              "target_speed_mps": 1.033984237913396
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.5704675030310435,
+              "velocity_to_unity_disp_deg": 0.5707331686663603,
+              "displacement_fraction_of_unity": 0.04628781012380312,
+              "target_speed_mps": 1.0222117123540688
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.5706574377390848,
+              "velocity_to_unity_disp_deg": 0.570734210756734,
+              "displacement_fraction_of_unity": 0.09152113826443231,
+              "target_speed_mps": 0.9986676167197308
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.5670745973434165,
+              "velocity_to_unity_disp_deg": 0.5265276789222217,
+              "displacement_fraction_of_unity": 0.2208906912707812,
+              "target_speed_mps": 0.9280361461970662
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.47346431659505367,
+              "velocity_to_unity_disp_deg": 0.20762920544907357,
+              "displacement_fraction_of_unity": 0.41540103674403395,
+              "target_speed_mps": 0.8103177981898584
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 0.19797897180994933,
+              "velocity_to_unity_disp_deg": -0.6239990257809562,
+              "displacement_fraction_of_unity": 0.7252714567365381,
+              "target_speed_mps": 0.5748798999863793
+            }
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "sim_target": [
+            2.7509706020355225,
+            3.8403608798980713
+          ],
+          "unity_displacement_m": 4.283649154634399,
+          "sim_displacement_m": 4.176595683457677,
+          "sim_to_unity_distance_ratio": 0.9750088143747947,
+          "target_endpoint_error_m": 0.1530253001745125,
+          "target_endpoint_error_along_unity_m": -0.10844904494699405,
+          "target_endpoint_error_cross_unity_m": 0.10796085931292186,
+          "early_target_speed_mps": 1.3990131409165463,
+          "early_velocity": [
+            0.10186555236577988,
+            -1.3952996730804443
+          ],
+          "early_position": [
+            2.377039670944214,
+            7.972073078155518
+          ],
+          "early_velocity_to_unity_disp_deg": -0.4920768052454721,
+          "sim_final_disp_to_unity_disp_deg": -1.4812040998571567,
+          "early_velocity_to_sim_final_disp_deg": 0.9891272946116841,
+          "early_position_disp_to_unity_disp_deg": -0.49377469949927927,
+          "abs_early_velocity_to_unity_disp_deg": 0.4920768052454721,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.4812040998571567,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.9891272946116841,
+          "abs_early_position_disp_to_unity_disp_deg": 0.49377469949927927,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12005,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.49377469949927927,
+              "velocity_to_unity_disp_deg": -0.4920768052454721,
+              "displacement_fraction_of_unity": 0.006536788257233969,
+              "target_speed_mps": 1.3990131409165463
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.4926635962782139,
+              "velocity_to_unity_disp_deg": -0.49207690774795115,
+              "displacement_fraction_of_unity": 0.01630159976853118,
+              "target_speed_mps": 1.3919500779321001
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.4923589783830773,
+              "velocity_to_unity_disp_deg": -0.49207571137942435,
+              "displacement_fraction_of_unity": 0.032466462255085655,
+              "target_speed_mps": 1.3801779054610106
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.4922320183783329,
+              "velocity_to_unity_disp_deg": -0.4920760280780888,
+              "displacement_fraction_of_unity": 0.06438378335160566,
+              "target_speed_mps": 1.3566336848366467
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.492158129512949,
+              "velocity_to_unity_disp_deg": -0.49207621865906037,
+              "displacement_fraction_of_unity": 0.15683806179997578,
+              "target_speed_mps": 1.28600138018465
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.5277148495079721,
+              "velocity_to_unity_disp_deg": -0.676798939920311,
+              "displacement_fraction_of_unity": 0.2999360580587101,
+              "target_speed_mps": 1.1682818749586463
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.7096846570378904,
+              "velocity_to_unity_disp_deg": -1.205961978878057,
+              "displacement_fraction_of_unity": 0.5449068060939111,
+              "target_speed_mps": 0.9328437184348976
+            }
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "sim_target": [
+            1.4505070447921753,
+            4.690112590789795
+          ],
+          "unity_displacement_m": 1.6661407899399114,
+          "sim_displacement_m": 1.6834574759906338,
+          "sim_to_unity_distance_ratio": 1.0103932909843392,
+          "target_endpoint_error_m": 0.018564762229591417,
+          "target_endpoint_error_along_unity_m": 0.01730324697608587,
+          "target_endpoint_error_cross_unity_m": 0.0067266663902589416,
+          "early_target_speed_mps": 0.8868196120661201,
+          "early_velocity": [
+            -0.39534881711006165,
+            -0.7938188314437866
+          ],
+          "early_position": [
+            2.187082290649414,
+            6.184101581573486
+          ],
+          "early_velocity_to_unity_disp_deg": -0.0009858919042578978,
+          "sim_final_disp_to_unity_disp_deg": -0.2289399200346961,
+          "early_velocity_to_sim_final_disp_deg": 0.22795402813044124,
+          "early_position_disp_to_unity_disp_deg": -0.0016105608650583718,
+          "abs_early_velocity_to_unity_disp_deg": 0.0009858919042578978,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.2289399200346961,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.22795402813044124,
+          "abs_early_position_disp_to_unity_disp_deg": 0.0016105608650583718,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12006,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.0016105608650583718,
+              "velocity_to_unity_disp_deg": -0.0009858919042578978,
+              "displacement_fraction_of_unity": 0.010659787553222668,
+              "target_speed_mps": 0.8868196120661201
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.0011472336288930619,
+              "velocity_to_unity_disp_deg": -0.000985965384004108,
+              "displacement_fraction_of_unity": 0.026542629408229972,
+              "target_speed_mps": 0.8797568542283424
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.0010576635977630642,
+              "velocity_to_unity_disp_deg": -0.00098617128581032,
+              "displacement_fraction_of_unity": 0.05273168802695787,
+              "target_speed_mps": 0.867984813699457
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.0008740401426954417,
+              "velocity_to_unity_disp_deg": -0.0009883961239906534,
+              "displacement_fraction_of_unity": 0.10405005281465972,
+              "target_speed_mps": 0.8444408526355286
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.0009969280117156465,
+              "velocity_to_unity_disp_deg": -0.0009998179479105529,
+              "displacement_fraction_of_unity": 0.249526236488241,
+              "target_speed_mps": 0.773809076151573
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.018067735547291942,
+              "velocity_to_unity_disp_deg": -0.09093681318864985,
+              "displacement_fraction_of_unity": 0.46372604271818507,
+              "target_speed_mps": 0.6560899274290269
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.09901245518901672,
+              "velocity_to_unity_disp_deg": -0.3744068111901082,
+              "displacement_fraction_of_unity": 0.7861427317460233,
+              "target_speed_mps": 0.4206513061746671
+            }
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "sim_target": [
+            3.2460649013519287,
+            5.293455123901367
+          ],
+          "unity_displacement_m": 1.1631186180194506,
+          "sim_displacement_m": 1.139909589473978,
+          "sim_to_unity_distance_ratio": 0.9800458627470061,
+          "target_endpoint_error_m": 0.03640144642070829,
+          "target_endpoint_error_along_unity_m": -0.023547087915906526,
+          "target_endpoint_error_cross_unity_m": 0.02775968213435206,
+          "early_target_speed_mps": 0.7316861896718098,
+          "early_velocity": [
+            0.43109530210494995,
+            -0.5912034511566162
+          ],
+          "early_position": [
+            2.559312343597412,
+            6.194088935852051
+          ],
+          "early_velocity_to_unity_disp_deg": -0.17581087028461295,
+          "sim_final_disp_to_unity_disp_deg": -1.395435121662456,
+          "early_velocity_to_sim_final_disp_deg": 1.2196242513778413,
+          "early_position_disp_to_unity_disp_deg": -0.1895441243042797,
+          "abs_early_velocity_to_unity_disp_deg": 0.17581087028461295,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.395435121662456,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.2196242513778413,
+          "abs_early_position_disp_to_unity_disp_deg": 0.1895441243042797,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12007,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.1895441243042797,
+              "velocity_to_unity_disp_deg": -0.17581087028461295,
+              "displacement_fraction_of_unity": 0.0062905913403195225,
+              "target_speed_mps": 0.7316861896718098
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.17912875509985207,
+              "velocity_to_unity_disp_deg": -0.1758080531483178,
+              "displacement_fraction_of_unity": 0.025041311898521615,
+              "target_speed_mps": 0.7246220663676745
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.17724333567055342,
+              "velocity_to_unity_disp_deg": -0.17580562522420326,
+              "displacement_fraction_of_unity": 0.05588748567350572,
+              "target_speed_mps": 0.7128498524569873
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.17648355862697626,
+              "velocity_to_unity_disp_deg": -0.17579209683045272,
+              "displacement_fraction_of_unity": 0.11606180188904718,
+              "target_speed_mps": 0.6893058671137889
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.17604548361044814,
+              "velocity_to_unity_disp_deg": -0.17575402153355704,
+              "displacement_fraction_of_unity": 0.2844400164804079,
+              "target_speed_mps": 0.6186742376771325
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.24281753049253502,
+              "velocity_to_unity_disp_deg": -0.6484753338625532,
+              "displacement_fraction_of_unity": 0.5245836858427882,
+              "target_speed_mps": 0.5009552804067708
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.7819290852519952,
+              "velocity_to_unity_disp_deg": -3.1838855531950556,
+              "displacement_fraction_of_unity": 0.8529769811266465,
+              "target_speed_mps": 0.26552100045026944
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "unique_role_formal_cooked_inertia",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_cooked_inertia_20260709.json",
+      "probe_summary": {
+        "sample_count": 8,
+        "active_error_count": 8,
+        "target_in_play_error_count": 7,
+        "target_cleared_count": 1,
+        "active_rmse_m": 0.03326649863514951,
+        "target_in_play_rmse_m": 0.1264634894346983,
+        "combined_rmse_m": 0.08974199261272638,
+        "active_mean_m": 0.024098014006352645,
+        "target_in_play_mean_m": 0.10358793888609785
+      },
+      "config_excerpt": {
+        "radius": 0.14087501,
+        "height": 0.23,
+        "center_height": 0.115,
+        "inertia_model": "custom",
+        "inertia_radial": 0.178810612362,
+        "inertia_vertical": 0.189222883199,
+        "contact_offset": 0.01,
+        "handoff_extra": 0.01025
+      },
+      "early_direction_summary": {
+        "row_count": 8,
+        "ok_count": 7,
+        "skipped_count": 1,
+        "target_endpoint_rmse_m": 0.1264634894346983,
+        "target_cross_track_rmse_m": 0.0858674487234648,
+        "target_along_track_rmse_m": 0.09284285330451228,
+        "target_cross_track_mean_abs_m": 0.05820985398586981,
+        "target_along_track_mean_abs_m": 0.07187797347831673,
+        "early_velocity_to_unity_disp_abs_deg_mean": 0.8805480174305238,
+        "early_velocity_to_unity_disp_abs_deg_median": 0.30766609681627916,
+        "sim_final_disp_to_unity_disp_abs_deg_mean": 1.2695721379081257,
+        "sim_final_disp_to_unity_disp_abs_deg_median": 1.3768085576924733,
+        "early_velocity_to_sim_final_disp_abs_deg_mean": 0.9983692993433186,
+        "early_velocity_to_sim_final_disp_abs_deg_median": 1.101904433018951,
+        "sim_to_unity_distance_ratio_mean": 0.9935580170499873,
+        "sim_to_unity_distance_ratio_median": 0.9935531502465816
+      },
+      "snapshot_drift_summary": {
+        "0.020000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9425322055158564,
+          "position_disp_to_unity_abs_deg_median": 0.30781957180937897,
+          "velocity_to_unity_abs_deg_mean": 0.8805480174305238,
+          "velocity_to_unity_abs_deg_median": 0.30766609681627916,
+          "displacement_fraction_of_unity_mean": 0.00738841945126668,
+          "target_speed_mps_mean": 0.9970075339849417
+        },
+        "0.050000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8417077797851853,
+          "position_disp_to_unity_abs_deg_median": 0.28477858103934484,
+          "velocity_to_unity_abs_deg_mean": 0.8805479817727421,
+          "velocity_to_unity_abs_deg_median": 0.3076658387413784,
+          "displacement_fraction_of_unity_mean": 0.022008737532172275,
+          "target_speed_mps_mean": 0.9899543776729072
+        },
+        "0.100000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8629533948555148,
+          "position_disp_to_unity_abs_deg_median": 0.28602817219898247,
+          "velocity_to_unity_abs_deg_mean": 0.8806036748059393,
+          "velocity_to_unity_abs_deg_median": 0.30671325572227076,
+          "displacement_fraction_of_unity_mean": 0.046121570039206986,
+          "target_speed_mps_mean": 0.9781822214016572
+        },
+        "0.200000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8706655249416819,
+          "position_disp_to_unity_abs_deg_median": 0.2832575346374722,
+          "velocity_to_unity_abs_deg_mean": 0.8762145653963037,
+          "velocity_to_unity_abs_deg_median": 0.3452082159467964,
+          "displacement_fraction_of_unity_mean": 0.09339395337952885,
+          "target_speed_mps_mean": 0.9546385349039148
+        },
+        "0.500000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8658578860291726,
+          "position_disp_to_unity_abs_deg_median": 0.37291003673897777,
+          "velocity_to_unity_abs_deg_mean": 0.8483631387005991,
+          "velocity_to_unity_abs_deg_median": 0.47165067594641646,
+          "displacement_fraction_of_unity_mean": 0.22758548514700214,
+          "target_speed_mps_mean": 0.8840069050039666
+        },
+        "1.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.8542900543067752,
+          "position_disp_to_unity_abs_deg_median": 0.4730177132676608,
+          "velocity_to_unity_abs_deg_mean": 0.9815273516995509,
+          "velocity_to_unity_abs_deg_median": 0.6148187269200898,
+          "displacement_fraction_of_unity_mean": 0.4258182648966175,
+          "target_speed_mps_mean": 0.7662878491275344
+        },
+        "2.000000": {
+          "count": 7,
+          "position_disp_to_unity_abs_deg_mean": 0.9938005929590499,
+          "position_disp_to_unity_abs_deg_median": 0.6797344754715435,
+          "velocity_to_unity_abs_deg_mean": 1.767468362944715,
+          "velocity_to_unity_abs_deg_median": 1.6224399224586112,
+          "displacement_fraction_of_unity_mean": 0.7269419387035481,
+          "target_speed_mps_mean": 0.530850472058375
+        }
+      },
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            5.199999809265137
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ],
+          "sim_target": [
+            2.481405735015869,
+            3.8861312866210938
+          ],
+          "unity_displacement_m": 1.3418618741466521,
+          "sim_displacement_m": 1.3181701996476431,
+          "sim_to_unity_distance_ratio": 0.9823441779251121,
+          "target_endpoint_error_m": 0.029519320994477453,
+          "target_endpoint_error_along_unity_m": -0.02380722099354123,
+          "target_endpoint_error_cross_unity_m": 0.017452980849691185,
+          "early_target_speed_mps": 0.7866909543802323,
+          "early_velocity": [
+            0.04918393865227699,
+            -0.7851519584655762
+          ],
+          "early_position": [
+            2.375492811203003,
+            5.192149639129639
+          ],
+          "early_velocity_to_unity_disp_deg": 0.286977635685445,
+          "sim_final_disp_to_unity_disp_deg": -0.7586359957851667,
+          "early_velocity_to_sim_final_disp_deg": 1.045613631470612,
+          "early_position_disp_to_unity_disp_deg": 0.27929789338942346,
+          "abs_early_velocity_to_unity_disp_deg": 0.286977635685445,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.7586359957851667,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.045613631470612,
+          "abs_early_position_disp_to_unity_disp_deg": 0.27929789338942346,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12000,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.27929789338942346,
+              "velocity_to_unity_disp_deg": 0.286977635685445,
+              "displacement_fraction_of_unity": 0.005861723709982201,
+              "target_speed_mps": 0.7866909543802323
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.28477858103934484,
+              "velocity_to_unity_disp_deg": 0.28697807213979654,
+              "displacement_fraction_of_unity": 0.02334634740872619,
+              "target_speed_mps": 0.7796902829932355
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.28602817219898247,
+              "velocity_to_unity_disp_deg": 0.2869781634735227,
+              "displacement_fraction_of_unity": 0.05213559462489254,
+              "target_speed_mps": 0.7679171492112691
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.2832575346374722,
+              "velocity_to_unity_disp_deg": 0.26208952672977903,
+              "displacement_fraction_of_unity": 0.10839815800290956,
+              "target_speed_mps": 0.7443732908931012
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.2046211931410868,
+              "velocity_to_unity_disp_deg": 0.03825963253528512,
+              "displacement_fraction_of_unity": 0.26665837248592583,
+              "target_speed_mps": 0.6737424724414837
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.0312089593653701,
+              "velocity_to_unity_disp_deg": -0.39532770176660936,
+              "displacement_fraction_of_unity": 0.4953319222933972,
+              "target_speed_mps": 0.5560228535243915
+            },
+            {
+              "sample_id": 12000,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.34241873002310275,
+              "velocity_to_unity_disp_deg": -1.6224399224586112,
+              "displacement_fraction_of_unity": 0.8210591697153117,
+              "target_speed_mps": 0.3205862222692132
+            }
+          ]
+        },
+        {
+          "sample_id": 12001,
+          "status": "unity_target_cleared"
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "sim_target": [
+            2.5069940090179443,
+            4.682711601257324
+          ],
+          "unity_displacement_m": 1.6960717214339973,
+          "sim_displacement_m": 1.5230186881900656,
+          "sim_to_unity_distance_ratio": 0.8979683281921482,
+          "target_endpoint_error_m": 0.17752997576003895,
+          "target_endpoint_error_along_unity_m": -0.17351573183108457,
+          "target_endpoint_error_cross_unity_m": 0.0375390876351992,
+          "early_target_speed_mps": 0.8456625140177314,
+          "early_velocity": [
+            0.05707520246505737,
+            -0.8437342643737793
+          ],
+          "early_position": [
+            2.3754360675811768,
+            6.191152572631836
+          ],
+          "early_velocity_to_unity_disp_deg": -0.3104545495262445,
+          "sim_final_disp_to_unity_disp_deg": -1.412358982545195,
+          "early_velocity_to_sim_final_disp_deg": 1.101904433018951,
+          "early_position_disp_to_unity_disp_deg": 0.7377338290944452,
+          "abs_early_velocity_to_unity_disp_deg": 0.3104545495262445,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.412358982545195,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.101904433018951,
+          "abs_early_position_disp_to_unity_disp_deg": 0.7377338290944452,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12002,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.7377338290944452,
+              "velocity_to_unity_disp_deg": -0.3104545495262445,
+              "displacement_fraction_of_unity": 0.005222642754249769,
+              "target_speed_mps": 0.8456625140177314
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.03815665513598325,
+              "velocity_to_unity_disp_deg": -0.31045428368152733,
+              "displacement_fraction_of_unity": 0.020096843820281853,
+              "target_speed_mps": 0.8385975592048222
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.1878604287075249,
+              "velocity_to_unity_disp_deg": -0.3104542700630577,
+              "displacement_fraction_of_unity": 0.04461029338535768,
+              "target_speed_mps": 0.8268250245802734
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.2665400067388738,
+              "velocity_to_unity_disp_deg": -0.3736459566642677,
+              "displacement_fraction_of_unity": 0.09259613053004485,
+              "target_speed_mps": 0.803281171030199
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.3933879943881219,
+              "velocity_to_unity_disp_deg": -0.5797855702626621,
+              "displacement_fraction_of_unity": 0.2282247257227522,
+              "target_speed_mps": 0.7326498362819484
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.5713192310107491,
+              "velocity_to_unity_disp_deg": -0.9846344693128399,
+              "displacement_fraction_of_unity": 0.4265066101444142,
+              "target_speed_mps": 0.6149313208898334
+            },
+            {
+              "sample_id": 12002,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.9310857875811251,
+              "velocity_to_unity_disp_deg": -2.084868440496905,
+              "displacement_fraction_of_unity": 0.7189430481354308,
+              "target_speed_mps": 0.37949288578397955
+            }
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "sim_target": [
+            2.677461862564087,
+            2.795478105545044
+          ],
+          "unity_displacement_m": 3.307775634986671,
+          "sim_displacement_m": 3.417930837422972,
+          "sim_to_unity_distance_ratio": 1.0333018966798044,
+          "target_endpoint_error_m": 0.21904364668745252,
+          "target_endpoint_error_along_unity_m": 0.10473676502004932,
+          "target_endpoint_error_cross_unity_m": -0.19238068823889912,
+          "early_target_speed_mps": 1.2652334705968376,
+          "early_velocity": [
+            0.08773937076330185,
+            -1.2621876001358032
+          ],
+          "early_position": [
+            2.376756429672241,
+            6.174732685089111
+          ],
+          "early_velocity_to_unity_disp_deg": 4.327090565168767,
+          "sim_final_disp_to_unity_disp_deg": 3.226639279037008,
+          "early_velocity_to_sim_final_disp_deg": 1.100451286131759,
+          "early_position_disp_to_unity_disp_deg": 4.327050915046061,
+          "abs_early_velocity_to_unity_disp_deg": 4.327090565168767,
+          "abs_sim_final_disp_to_unity_disp_deg": 3.226639279037008,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.100451286131759,
+          "abs_early_position_disp_to_unity_disp_deg": 4.327050915046061,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12003,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 4.327050915046061,
+              "velocity_to_unity_disp_deg": 4.327090565168767,
+              "displacement_fraction_of_unity": 0.0076571394192353195,
+              "target_speed_mps": 1.2652334705968376
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 4.3270787205379655,
+              "velocity_to_unity_disp_deg": 4.327090613082386,
+              "displacement_fraction_of_unity": 0.019089453557817482,
+              "target_speed_mps": 1.2581704831132288
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 4.327171596498652,
+              "velocity_to_unity_disp_deg": 4.328342394536217,
+              "displacement_fraction_of_unity": 0.03800101802159749,
+              "target_speed_mps": 1.246398498262801
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 4.313994731583399,
+              "velocity_to_unity_disp_deg": 4.284602393756419,
+              "displacement_fraction_of_unity": 0.07529040195135035,
+              "target_speed_mps": 1.222855346330436
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 4.255135870297133,
+              "velocity_to_unity_disp_deg": 4.150902748932349,
+              "displacement_fraction_of_unity": 0.18288790794042697,
+              "target_speed_mps": 1.1522230080226277
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 4.147814445072834,
+              "velocity_to_unity_disp_deg": 3.905845997624047,
+              "displacement_fraction_of_unity": 0.34798077331734895,
+              "target_speed_mps": 1.0345035228631752
+            },
+            {
+              "sample_id": 12003,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 3.923459343740614,
+              "velocity_to_unity_disp_deg": 3.3331688295348743,
+              "displacement_fraction_of_unity": 0.6247773371566612,
+              "target_speed_mps": 0.7990659944140277
+            }
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "sim_target": [
+            2.587557554244995,
+            5.648115158081055
+          ],
+          "unity_displacement_m": 2.231224652517088,
+          "sim_displacement_m": 2.3614705214155682,
+          "sim_to_unity_distance_ratio": 1.0583741618090976,
+          "target_endpoint_error_m": 0.13136015392072883,
+          "target_endpoint_error_along_unity_m": 0.13018054520446565,
+          "target_endpoint_error_cross_unity_m": 0.017564614665447564,
+          "early_target_speed_mps": 1.0510929353684262,
+          "early_velocity": [
+            0.07328870892524719,
+            -1.0485347509384155
+          ],
+          "early_position": [
+            2.37646746635437,
+            7.979006290435791
+          ],
+          "early_velocity_to_unity_disp_deg": 0.7397905098458741,
+          "sim_final_disp_to_unity_disp_deg": -0.4261698630821021,
+          "early_velocity_to_sim_final_disp_deg": 1.165960372927977,
+          "early_position_disp_to_unity_disp_deg": 0.739563610908008,
+          "abs_early_velocity_to_unity_disp_deg": 0.7397905098458741,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.4261698630821021,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.165960372927977,
+          "abs_early_position_disp_to_unity_disp_deg": 0.739563610908008,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12004,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.739563610908008,
+              "velocity_to_unity_disp_deg": 0.7397905098458741,
+              "displacement_fraction_of_unity": 0.009432010893506038,
+              "target_speed_mps": 1.0510929353684262
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.7398555286284036,
+              "velocity_to_unity_disp_deg": 0.7397907451433394,
+              "displacement_fraction_of_unity": 0.023501288448894275,
+              "target_speed_mps": 1.044029999214402
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.7391914656106017,
+              "velocity_to_unity_disp_deg": 0.7398844908304641,
+              "displacement_fraction_of_unity": 0.046738894744720635,
+              "target_speed_mps": 1.0322579230767608
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.7202179954256648,
+              "velocity_to_unity_disp_deg": 0.6761052869066172,
+              "displacement_fraction_of_unity": 0.09242248238050109,
+              "target_speed_mps": 1.008714604724814
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.6428520692529606,
+              "velocity_to_unity_disp_deg": 0.5061048613787298,
+              "displacement_fraction_of_unity": 0.2231424305989606,
+              "target_speed_mps": 0.9380826950249187
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": 0.503842988889042,
+              "velocity_to_unity_disp_deg": 0.1896732954954484,
+              "displacement_fraction_of_unity": 0.4199041718261031,
+              "target_speed_mps": 0.8203640417524688
+            },
+            {
+              "sample_id": 12004,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": 0.21637460355911606,
+              "velocity_to_unity_disp_deg": -0.6093595694076149,
+              "displacement_fraction_of_unity": 0.7342759681018848,
+              "target_speed_mps": 0.5849264763971266
+            }
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "sim_target": [
+            2.756683826446533,
+            3.7611162662506104
+          ],
+          "unity_displacement_m": 4.283649154634399,
+          "sim_displacement_m": 4.256033112138113,
+          "sim_to_unity_distance_ratio": 0.9935531502465816,
+          "target_endpoint_error_m": 0.1123778602576155,
+          "target_endpoint_error_along_unity_m": -0.02900109263047844,
+          "target_endpoint_error_cross_unity_m": 0.10857126738837748,
+          "early_target_speed_mps": 1.412287617228012,
+          "early_velocity": [
+            0.0982980877161026,
+            -1.408862590789795
+          ],
+          "early_position": [
+            2.376967668533325,
+            7.971799373626709
+          ],
+          "early_velocity_to_unity_disp_deg": -0.30766609681627916,
+          "sim_final_disp_to_unity_disp_deg": -1.4617720596445958,
+          "early_velocity_to_sim_final_disp_deg": 1.154105962828317,
+          "early_position_disp_to_unity_disp_deg": -0.30781957180937897,
+          "abs_early_velocity_to_unity_disp_deg": 0.30766609681627916,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.4617720596445958,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.154105962828317,
+          "abs_early_position_disp_to_unity_disp_deg": 0.30781957180937897,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12005,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.30781957180937897,
+              "velocity_to_unity_disp_deg": -0.30766609681627916,
+              "displacement_fraction_of_unity": 0.006599324078576299,
+              "target_speed_mps": 1.412287617228012
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.30763843296157967,
+              "velocity_to_unity_disp_deg": -0.3076658387413784,
+              "displacement_fraction_of_unity": 0.01645707543649528,
+              "target_speed_mps": 1.4052247423211428
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.3076166527799633,
+              "velocity_to_unity_disp_deg": -0.30671325572227076,
+              "displacement_fraction_of_unity": 0.03277678732552001,
+              "target_speed_mps": 1.3934529433320764
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.3182048114339423,
+              "velocity_to_unity_disp_deg": -0.3452082159467964,
+              "displacement_fraction_of_unity": 0.06500395891140519,
+              "target_speed_mps": 1.3699093598937402
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.37291003673897777,
+              "velocity_to_unity_disp_deg": -0.47165067594641646,
+              "displacement_fraction_of_unity": 0.15838784274605325,
+              "target_speed_mps": 1.2992776464937934
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.4730177132676608,
+              "velocity_to_unity_disp_deg": -0.6920986113825699,
+              "displacement_fraction_of_unity": 0.3030351481386436,
+              "target_speed_mps": 1.1815582027857428
+            },
+            {
+              "sample_id": 12005,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.6797344754715435,
+              "velocity_to_unity_disp_deg": -1.202982567642957,
+              "displacement_fraction_of_unity": 0.5511038597531486,
+              "target_speed_mps": 0.9461203088388561
+            }
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "sim_target": [
+            1.4504419565200806,
+            4.690267562866211
+          ],
+          "unity_displacement_m": 1.6661407899399114,
+          "sim_displacement_m": 1.68334727151535,
+          "sim_to_unity_distance_ratio": 1.010327147429155,
+          "target_endpoint_error_m": 0.018416540612764473,
+          "target_endpoint_error_along_unity_m": 0.017193545705854078,
+          "target_endpoint_error_cross_unity_m": 0.006599314676715311,
+          "early_target_speed_mps": 0.8867920842451165,
+          "early_velocity": [
+            -0.3954262435436249,
+            -0.7937495112419128
+          ],
+          "early_position": [
+            2.1870806217193604,
+            6.184103488922119
+          ],
+          "early_velocity_to_unity_disp_deg": 0.005488694366932109,
+          "sim_final_disp_to_unity_disp_deg": -0.22462022757033923,
+          "early_velocity_to_sim_final_disp_deg": 0.23010892193726365,
+          "early_position_disp_to_unity_disp_deg": 0.005952219648012228,
+          "abs_early_velocity_to_unity_disp_deg": 0.005488694366932109,
+          "abs_sim_final_disp_to_unity_disp_deg": 0.22462022757033923,
+          "abs_early_velocity_to_sim_final_disp_deg": 0.23010892193726365,
+          "abs_early_position_disp_to_unity_disp_deg": 0.005952219648012228,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12006,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": 0.005952219648012228,
+              "velocity_to_unity_disp_deg": 0.005488694366932109,
+              "displacement_fraction_of_unity": 0.01065920946397758,
+              "target_speed_mps": 0.8867920842451165
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": 0.005204808021359045,
+              "velocity_to_unity_disp_deg": 0.005488493423598187,
+              "displacement_fraction_of_unity": 0.02654185699526134,
+              "target_speed_mps": 0.8797290610608347
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": 0.005197799990962501,
+              "velocity_to_unity_disp_deg": 0.005488131969606051,
+              "displacement_fraction_of_unity": 0.05273007940535157,
+              "target_speed_mps": 0.8679571558338556
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": 0.005395868725258059,
+              "velocity_to_unity_disp_deg": 0.005487365615101008,
+              "displacement_fraction_of_unity": 0.10404677180946356,
+              "target_speed_mps": 0.8444132121000023
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": 0.0054658863972987266,
+              "velocity_to_unity_disp_deg": 0.005471010647859026,
+              "displacement_fraction_of_unity": 0.24951819443410625,
+              "target_speed_mps": 0.7737817543547929
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.012307426174575373,
+              "velocity_to_unity_disp_deg": -0.0882926593952511,
+              "displacement_fraction_of_unity": 0.4637086472117247,
+              "target_speed_mps": 0.6560630301913702
+            },
+            {
+              "sample_id": 12006,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.09111471957266619,
+              "velocity_to_unity_disp_deg": -0.36783506727874776,
+              "displacement_fraction_of_unity": 0.7861083059558228,
+              "target_speed_mps": 0.4206244682733268
+            }
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "sim_target": [
+            3.2450592517852783,
+            5.294163703918457
+          ],
+          "unity_displacement_m": 1.1631186180194506,
+          "sim_displacement_m": 1.1387364614304987,
+          "sim_to_unity_distance_ratio": 0.9790372570680111,
+          "target_endpoint_error_m": 0.03686807396960733,
+          "target_endpoint_error_along_unity_m": -0.024710912962743883,
+          "target_endpoint_error_cross_unity_m": 0.02736102444675882,
+          "early_target_speed_mps": 0.7312931620582361,
+          "early_velocity": [
+            0.4309726059436798,
+            -0.5908064842224121
+          ],
+          "early_position": [
+            2.5593109130859375,
+            6.194093227386475
+          ],
+          "early_velocity_to_unity_disp_deg": -0.18636807060412514,
+          "sim_final_disp_to_unity_disp_deg": -1.3768085576924733,
+          "early_velocity_to_sim_final_disp_deg": 1.190440487088351,
+          "early_position_disp_to_unity_disp_deg": -0.20030739871566547,
+          "abs_early_velocity_to_unity_disp_deg": 0.18636807060412514,
+          "abs_sim_final_disp_to_unity_disp_deg": 1.3768085576924733,
+          "abs_early_velocity_to_sim_final_disp_deg": 1.190440487088351,
+          "abs_early_position_disp_to_unity_disp_deg": 0.20030739871566547,
+          "snapshot_drift_rows": [
+            {
+              "sample_id": 12007,
+              "time_s": 0.02,
+              "position_disp_to_unity_disp_deg": -0.20030739871566547,
+              "velocity_to_unity_disp_deg": -0.18636807060412514,
+              "displacement_fraction_of_unity": 0.0062868858393395535,
+              "target_speed_mps": 0.7312931620582361
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.05,
+              "position_disp_to_unity_disp_deg": -0.18924173217166146,
+              "velocity_to_unity_disp_deg": -0.18636782619716835,
+              "displacement_fraction_of_unity": 0.02502829705772949,
+              "target_speed_mps": 0.7242385158026847
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.1,
+              "position_disp_to_unity_disp_deg": -0.18760764820191733,
+              "velocity_to_unity_disp_deg": -0.18636501704643646,
+              "displacement_fraction_of_unity": 0.05585832276700899,
+              "target_speed_mps": 0.7124668555145648
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.2,
+              "position_disp_to_unity_disp_deg": -0.18704772604716313,
+              "velocity_to_unity_disp_deg": -0.18636321215514562,
+              "displacement_fraction_of_unity": 0.11599977007102742,
+              "target_speed_mps": 0.6889227593551113
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 0.5,
+              "position_disp_to_unity_disp_deg": -0.18663215198862892,
+              "velocity_to_unity_disp_deg": -0.18636747120089175,
+              "displacement_fraction_of_unity": 0.28427892210079,
+              "target_speed_mps": 0.6182909224082016
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 1.0,
+              "position_disp_to_unity_disp_deg": -0.2405196163671953,
+              "velocity_to_unity_disp_deg": -0.6148187269200898,
+              "displacement_fraction_of_unity": 0.5242605813446908,
+              "target_speed_mps": 0.5005719718857593
+            },
+            {
+              "sample_id": 12007,
+              "time_s": 2.0,
+              "position_disp_to_unity_disp_deg": -0.7724164907651815,
+              "velocity_to_unity_disp_deg": -3.1516241437932937,
+              "displacement_fraction_of_unity": 0.852325882106577,
+              "target_speed_mps": 0.265136948432095
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "If early_velocity_to_sim_final_disp is small but early_velocity_to_unity_disp and sim_final_disp_to_unity_disp are larger, the replay's first contact impulse already chooses the wrong target direction. That points to contact geometry, shape wrapper, handoff tick/state, or contact solver state rather than late sliding drift."
+}

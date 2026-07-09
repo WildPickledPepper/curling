@@ -1,0 +1,492 @@
+{
+  "generated_at": "2026-07-09T00:35:05",
+  "formal_stone_mesh": {
+    "path": "D:\\esp\\tmp\\curling_reverse_il2cpp\\stone_extendedcollider_mesh_256.json",
+    "raw_vertices": 512,
+    "unique_vertices": 512,
+    "indices": 3060,
+    "triangles": 1020,
+    "local_bounds": {
+      "min": [
+        -1.25,
+        -1.0,
+        -1.25
+      ],
+      "max": [
+        1.25,
+        1.0,
+        1.25
+      ],
+      "extents": [
+        2.5,
+        2.0,
+        2.5
+      ],
+      "sorted_extents": [
+        2.0,
+        2.5,
+        2.5
+      ]
+    },
+    "world_scale": [
+      0.112700008,
+      0.115,
+      0.112700008
+    ],
+    "world_bounds": {
+      "min": [
+        -0.14087501,
+        -0.115,
+        -0.14087501
+      ],
+      "max": [
+        0.14087501,
+        0.115,
+        0.14087501
+      ],
+      "extents": [
+        0.28175002,
+        0.23,
+        0.28175002
+      ],
+      "sorted_extents": [
+        0.23,
+        0.28175002,
+        0.28175002
+      ]
+    },
+    "support_extreme_vertices": 512
+  },
+  "unity_recovered_convex_desc": {
+    "flags": [
+      "eCOMPUTE_CONVEX"
+    ],
+    "quantize_input": false,
+    "gpu_compatible": false,
+    "plane_shifting": false,
+    "vertex_limit": 255,
+    "quantized_count": 255,
+    "build_gpu_data": false,
+    "expected_physx_path": "createConvexHull -> expandHullOBB -> mCropedConvexHull -> fillConvexMeshDescFromCroppedHull",
+    "forced_crop_by_vertex_count": true,
+    "reason": "512 support-extreme vertices exceed vertexLimit=255"
+  },
+  "waiting_page_hull_identity": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_cooked_hull_identity_20260708_225950.json",
+    "any_extent_match_5pct": false,
+    "best_candidate": {
+      "sha256_16": "0aac2338ce35d813",
+      "first_event_index": 113,
+      "duplicate_count": 4,
+      "unity_source_meshes": [
+        "1_0",
+        "2_0",
+        "3_0",
+        "4_0"
+      ],
+      "counts": {
+        "vertices": 129,
+        "polygons": 254,
+        "indices": 762
+      },
+      "extents": [
+        0.08359604701399803,
+        0.15925615280866623,
+        0.1599772572517395
+      ],
+      "sorted_extents": [
+        0.08359604701399803,
+        0.15925615280866623,
+        0.1599772572517395
+      ],
+      "stone_extent_relative_rmse": 0.5102276769244287,
+      "stone_extent_max_relative_error": 0.6365389260260955,
+      "matches_formal_stone_by_extent": false
+    },
+    "conclusion": "No captured hull matches the formal curling stone collider extents within 5%; the captured waiting-page hulls are real cooked convex meshes but are not proven to be the gameplay stone collision hull."
+  },
+  "pyphysx_control": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_binding_default_refresh_20260708.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_binding_default_refresh_20260708.json",
+      "detailed_variant": "q255_v255_qi1_gpu1",
+      "binding_note": "The installed pyphysx binding does not expose quantize_input/gpu_compatible; requests for false/false fail before cooking. Runs marked qi1/gpu1 are the binding default/control path and are not Unity's recovered wasm flags.",
+      "unique_vertex_count": 64,
+      "triangle_count": 124,
+      "quantize_input": true,
+      "gpu_compatible": true,
+      "binding_flag_support": false,
+      "local_bounds": {
+        "min": [
+          -1.2518082857131958,
+          -1.000138759613037,
+          -1.2518082857131958
+        ],
+        "max": [
+          1.2547639608383179,
+          1.0001388788223267,
+          1.2518082857131958
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -0.14107879996299744,
+          -0.11501596122980118,
+          -0.14107879996299744
+        ],
+        "max": [
+          0.1414119005203247,
+          0.11501597613096237,
+          0.14107879996299744
+        ]
+      },
+      "world_radial_stats_xz": {
+        "min": 0.14123855531215668,
+        "max": 0.14163491129875183,
+        "mean": 0.14143377542495728
+      }
+    },
+    "role": "binding-default qi1/gpu1 control; not Unity flags"
+  },
+  "pyphysx_unity_flags_rebuilt": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_20260708.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_20260708.json",
+      "detailed_variant": "q255_v255_qi0_gpu0",
+      "binding_note": "This pyphysx binding exposes quantize_input/gpu_compatible; runs marked qi0/gpu0 can exercise Unity's recovered convex cooking flags.",
+      "unique_vertex_count": 128,
+      "triangle_count": 252,
+      "quantize_input": false,
+      "gpu_compatible": false,
+      "binding_flag_support": true,
+      "local_bounds": {
+        "min": [
+          -1.25,
+          -1.0,
+          -1.25
+        ],
+        "max": [
+          1.25,
+          1.0,
+          1.25
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -0.14087499678134918,
+          -0.11500000208616257,
+          -0.14087499678134918
+        ],
+        "max": [
+          0.14087499678134918,
+          0.11500000208616257,
+          0.14087499678134918
+        ]
+      },
+      "world_radial_stats_xz": {
+        "min": 0.1408749222755432,
+        "max": 0.14087504148483276,
+        "mean": 0.14087501168251038
+      }
+    },
+    "role": "rebuilt binding, Unity recovered qi0/gpu0 flags"
+  },
+  "pyphysx_unity_flags_rebuilt_raw": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_raw_20260708.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_raw_20260708.json",
+      "detailed_variant": "q255_v255_qi0_gpu0",
+      "binding_note": "This pyphysx binding exposes quantize_input/gpu_compatible; runs marked qi0/gpu0 can exercise Unity's recovered convex cooking flags.",
+      "unique_vertex_count": 128,
+      "triangle_count": 252,
+      "quantize_input": false,
+      "gpu_compatible": false,
+      "binding_flag_support": true,
+      "local_bounds": {
+        "min": [
+          -1.25,
+          -1.0,
+          -1.25
+        ],
+        "max": [
+          1.25,
+          1.0,
+          1.25
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -0.14087499678134918,
+          -0.11500000208616257,
+          -0.14087499678134918
+        ],
+        "max": [
+          0.14087499678134918,
+          0.11500000208616257,
+          0.14087499678134918
+        ]
+      },
+      "world_radial_stats_xz": {
+        "min": 0.1408749222755432,
+        "max": 0.14087504148483276,
+        "mean": 0.14087501168251038
+      },
+      "raw_convex_mesh_data": {
+        "nb_vertices": 128,
+        "nb_polygons": 66,
+        "index_count": 384,
+        "polygon_vertex_count_histogram": {
+          "64": 2,
+          "4": 64
+        },
+        "top_vertex_count": 64,
+        "bottom_vertex_count": 64,
+        "local_radial_min": 1.2499999746815105,
+        "local_radial_max": 1.2500000362904822,
+        "top_angle_step_degrees_min": 5.624997066427737,
+        "top_angle_step_degrees_max": 5.62500223824576,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "scale_rotation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale_is_identity": true,
+        "is_gpu_compatible": false,
+        "local_bounds": {
+          "minimum": [
+            -1.25,
+            -1.0,
+            -1.25
+          ],
+          "maximum": [
+            1.25,
+            1.0,
+            1.25
+          ]
+        },
+        "mass_information": {
+          "unit_density_mass": 9.801713943481445,
+          "local_center_of_mass": [
+            9.228222630497385e-09,
+            2.1022355412014804e-08,
+            6.973805088961171e-09
+          ],
+          "local_inertia_column_major": [
+            [
+              7.0898871421813965,
+              -1.919037845299343e-15,
+              -5.678754517947533e-16
+            ],
+            [
+              -1.919037845299343e-15,
+              7.645298004150391,
+              8.033399012674636e-08
+            ],
+            [
+              -5.678754517947533e-16,
+              8.033399012674636e-08,
+              7.0898871421813965
+            ]
+          ],
+          "local_inertia_rows": [
+            [
+              7.0898871421813965,
+              -1.919037845299343e-15,
+              -5.678754517947533e-16
+            ],
+            [
+              -1.919037845299343e-15,
+              7.645298004150391,
+              8.033399012674636e-08
+            ],
+            [
+              -5.678754517947533e-16,
+              8.033399012674636e-08,
+              7.0898871421813965
+            ]
+          ]
+        }
+      }
+    },
+    "role": "rebuilt binding with PxConvexMesh raw vertices/polygons/index buffer/mass information"
+  },
+  "pyphysx_raw_hull_topology": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_raw_hull_topology_20260708.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_raw_hull_topology_20260708.json",
+      "nb_vertices": 128,
+      "nb_polygons": 66,
+      "nb_edges": 192,
+      "euler_characteristic": 2,
+      "polygon_class_counts": {
+        "top_cap": 1,
+        "side_quad": 64,
+        "bottom_cap": 1,
+        "side_normal_step_min_mdeg": 5625,
+        "side_normal_step_max_mdeg": 5625
+      },
+      "edge_type_counts": {
+        "bottom_ring": 64,
+        "top_ring": 64,
+        "vertical": 64
+      },
+      "vertex_face_valency_histogram": {
+        "3": 128
+      },
+      "faces_by_edges8_complete": true,
+      "faces_by_vertices8_complete": true,
+      "unique_edge_direction_class_count": 33,
+      "world_radius_minus_apothem_m": 0.0001697054833084848,
+      "runtime_extra_buffer_bytes": 4008,
+      "clhl_payload_bytes": 4024,
+      "conclusion": "The offline Unity-flags PxConvexMesh is a manifold 64-sided prism: 128 vertices, 66 polygons, 192 unique edges, and 384 polygon vertex refs. Every vertex has exactly 3 incident faces, so PhysX facesByVertices8 is valid. facesByEdges8 is reconstructable from the raw polygon/index buffer; exact byte ordering should still be verified against Unity's formal-stone CLHL stream if byte-perfect parity is required."
+    },
+    "role": "contact-relevant topology reconstructed from raw PxConvexMesh data"
+  },
+  "pyphysx_bigconvex_data": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_bigconvex_data_20260709.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_bigconvex_data_20260709.json",
+      "big_convex_data_required": true,
+      "gauss_map_vertex_limit": 32,
+      "density_subdiv": 16,
+      "vale_nb_verts": 128,
+      "vale_nb_adjacent_verts": 384,
+      "vale_max_valency_count": 3,
+      "vale_valency_count_histogram": {
+        "3": 128
+      },
+      "gaus_nb_samples": 1536,
+      "gaus_samples_byte_count": 3072,
+      "gaus_unique_all_sample_vertices": 120,
+      "gaus_bruteforce_validation_error_count": 0,
+      "payload_bytes_excluding_chunk_headers": {
+        "SUPM_wrapper": 0,
+        "GAUS": 3080,
+        "VALE": 524,
+        "GAUS_plus_VALE": 3604,
+        "note": "Chunk headers from WriteHeader('SUPM'/'GAUS'/'VALE') are not counted here."
+      },
+      "consistency_checks": {
+        "nb_adjacent_verts_equals_edges_times_two": true,
+        "all_valencies_are_three": true,
+        "gaus_bruteforce_validation_passed": true,
+        "gaus_sample_bytes_match_physx": true
+      },
+      "conclusion": "For the offline Unity-flags 128-vertex hull, BigConvexData is required because 128 > gaussMapLimit=32. VALE reconstructs to 128 vertices, 384 adjacent-vertex entries, and valency 3 for every vertex. GAUS uses density/subdiv=16, nbSamples=1536, and 3072 sample bytes; the reconstructed samples pass brute-force support validation for all generated cube-map directions. Byte-level parity with Unity still requires the formal-stone CVXM/SUPM/GAUS/VALE stream, but the offline algorithmic contents are no longer opaque."
+    },
+    "role": "offline reconstruction of PhysX BigConvexData VALE/GAUS support data"
+  },
+  "pyphysx_scaled_mass_properties": {
+    "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_scaled_mass_properties_20260709.json",
+    "detail": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_scaled_mass_properties_20260709.json",
+      "rigidbody_mass": 19.1,
+      "candidate": "unity_world_lossy_scale_0p112700008_0p115",
+      "scale": [
+        0.112700008,
+        0.115,
+        0.112700008
+      ],
+      "scaled_bounds": {
+        "minimum": [
+          -0.14087501,
+          -0.115,
+          -0.14087501
+        ],
+        "maximum": [
+          0.14087501,
+          0.115,
+          0.14087501
+        ],
+        "extents": [
+          0.28175002,
+          0.23,
+          0.28175002
+        ],
+        "radius_x_m": 0.14087501,
+        "radius_z_m": 0.14087501,
+        "mean_radius_m": 0.14087501,
+        "height_y_m": 0.23
+      },
+      "unit_density_scaled_mass": 0.01431685933128,
+      "density_scale_to_rigidbody_mass_19p1": 1334.091476213,
+      "rigidbody_mass_scaled_inertia_diag_xyz": [
+        0.178810612362,
+        0.189222883199,
+        0.178810612362
+      ],
+      "probe_z_up_custom_args": {
+        "inertia_radial": 0.178810612362,
+        "inertia_vertical": 0.189222883199
+      },
+      "comparison": {
+        "solid_cylinder_diag_xyz_same_radius_height": [
+          0.17896271098,
+          0.189527088626,
+          0.17896271098
+        ],
+        "thin_shell_cylinder_diag_xyz_same_radius_height": [
+          0.273726255293,
+          0.379054177252,
+          0.273726255293
+        ],
+        "ratio_to_solid_cylinder_diag_xyz": [
+          0.99915011,
+          0.998394924,
+          0.99915011
+        ],
+        "ratio_to_thin_shell_cylinder_diag_xyz": [
+          0.653246113,
+          0.499197462,
+          0.653246113
+        ]
+      },
+      "command_fragment": "--radius 0.14087501 --height 0.23 --inertia-model custom --inertia-radial 0.178810612362 --inertia-vertical 0.189222883199",
+      "conclusion": "The cooked hull inertia is now a derived PhysX value, not a fitted parameter. The remaining collision-error suspects are shape wrapper/local pose/contact handoff and solver/contact state, not the convex hull mass-property formula itself."
+    },
+    "role": "PhysX scaleInertia mass-property reconstruction for Unity-scale cooked hull"
+  },
+  "collision_probe_checks": {
+    "current_best_geometry_with_unity_flags": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_current_best_rebuilt_unityflags_20260708.json",
+      "radius": 0.146,
+      "center_height": 0.1276,
+      "handoff_extra": 0.0,
+      "quantize_input": false,
+      "gpu_compatible": false,
+      "active_rmse_m": 0.03855842111554859,
+      "target_in_play_rmse_m": 0.11323278407673086,
+      "combined_rmse_m": 0.08231875381295352
+    },
+    "formal_geometry_with_unity_flags": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_rebuilt_unityflags_handoff292_20260708.json",
+      "radius": 0.140875,
+      "center_height": 0.115,
+      "handoff_extra": 0.01025,
+      "quantize_input": false,
+      "gpu_compatible": false,
+      "active_rmse_m": 0.03195771372968484,
+      "target_in_play_rmse_m": 0.12082229014999328,
+      "combined_rmse_m": 0.0857735562646406
+    },
+    "formal_geometry_with_cooked_hull_inertia": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_cooked_inertia_20260709.json",
+      "radius": 0.14087501,
+      "center_height": 0.115,
+      "handoff_extra": 0.01025,
+      "quantize_input": false,
+      "gpu_compatible": false,
+      "active_rmse_m": 0.03326649863514951,
+      "target_in_play_rmse_m": 0.1264634894346983,
+      "combined_rmse_m": 0.08974199261272638
+    }
+  },
+  "current_blocker": "The C++ toolchain and rebuilt pyphysx binding now run Unity's recovered quantize_input=false/gpu_compatible=false convex cooking path. The offline pyphysx dump for the formal source mesh is 128 vertices / 66 convex polygons / 384 polygon indices / 252 rendered triangles under the recovered Unity flags; the raw polygon histogram is 2 caps with 64 vertices plus 64 side quads. The reconstructed contact topology has 192 unique edges, complete facesByEdges8/facesByVertices8, and BigConvexData VALE/GAUS contents that pass brute-force support validation. The world-scale cooked-hull mass properties now give probe custom inertia radial=0.178810612362 and vertical=0.189222883199 kg*m^2 from PhysX scaleInertia rather than fitting. A targeted replay with that inertia still gives unique-role target RMSE about 12.65cm, so the inertia formula alone is not the missing piece. However, plugging formal radius 0.140875m into the existing collision probe still worsens unique-role target RMSE to the 12cm class, while the older 0.146m compensated geometry stays near 11cm. The remaining blocker is no longer the binding; it is the exact Unity runtime shape scale/local pose/contact handoff and whether Unity's formal-stone runtime cooked stream is byte-level identical to this offline PhysX 4.1 reconstruction."
+}

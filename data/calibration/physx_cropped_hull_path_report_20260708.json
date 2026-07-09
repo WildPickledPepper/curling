@@ -1,0 +1,325 @@
+{
+  "decompile": "D:\\esp\\tmp\\curling_reverse_il2cpp\\build.dcmp",
+  "physx_root": "D:\\esp\\tmp\\curling_physx_41\\physx",
+  "stone_convex_desc_assumption": {
+    "flags": 2,
+    "flags_hex": "0x0002",
+    "vertexLimit": 255,
+    "eCOMPUTE_CONVEX": true,
+    "ePLANE_SHIFTING": false,
+    "eGPU_COMPATIBLE": false,
+    "expected_expand_path": "f_gvcd/expandHullOBB"
+  },
+  "wasm": {
+    "func72908_createConvexHull": {
+      "symbol": "f_evcd",
+      "start_line": 3433418,
+      "line_count": 773,
+      "hits": {
+        "(a[8]:int)[7]:int <= (b = a[1]:int)[19]:ushort": [
+          {
+            "line": 3434123,
+            "text": "if ((a[8]:int)[7]:int <= (b = a[1]:int)[19]:ushort) goto B_na;"
+          }
+        ],
+        "(a[1]:int)[36]:ubyte & 32": [
+          {
+            "line": 3434131,
+            "text": "if ((a[1]:int)[36]:ubyte & 32) {"
+          }
+        ],
+        "f_fvcd(a)": [
+          {
+            "line": 3434125,
+            "text": "f_fvcd(a);"
+          },
+          {
+            "line": 3434132,
+            "text": "i = f_fvcd(a);"
+          }
+        ],
+        "f_gvcd(a)": [
+          {
+            "line": 3434128,
+            "text": "f_gvcd(a);"
+          },
+          {
+            "line": 3434135,
+            "text": "f_gvcd(a);"
+          },
+          {
+            "line": 3434181,
+            "text": "f_gvcd(a);"
+          }
+        ],
+        "if (a[9]:int) goto B_xb": [
+          {
+            "line": 3434140,
+            "text": "if (a[9]:int) goto B_xb;"
+          }
+        ],
+        "(a[1]:int)[36]:ubyte & 128": [
+          {
+            "line": 3434138,
+            "text": "if (eqz((a[1]:int)[36]:ubyte & 128)) goto B_xb;"
+          }
+        ]
+      }
+    },
+    "func72910_expandHullOBB": {
+      "symbol": "f_gvcd",
+      "start_line": 3434546,
+      "line_count": 1714,
+      "hits": {
+        "f_hvcd(n + 112, c)": [
+          {
+            "line": 3434588,
+            "text": "f_hvcd(n + 112, c);"
+          }
+        ],
+        "f_jvcd(a, n + 16)": [
+          {
+            "line": 3434624,
+            "text": "f_jvcd(a, n + 16);"
+          }
+        ],
+        "n[26]:short = (a[1]:int)[18]:ushort": [
+          {
+            "line": 3434625,
+            "text": "n[26]:short = (a[1]:int)[18]:ushort;"
+          }
+        ],
+        "k = select_if(i, 256": [
+          {
+            "line": 3435466,
+            "text": "k = select_if(i, 256, i < 256);"
+          }
+        ],
+        "c = select_if(l, -1, ka > oa)": [
+          {
+            "line": 3435560,
+            "text": "c = select_if(l, -1, ka > oa);"
+          }
+        ],
+        "var h:int = g_a - 7968": [
+          {
+            "line": 3435574,
+            "text": "var h:int = g_a - 7968;"
+          }
+        ],
+        "c[1]:int > (d = a[1]:int)[19]:ushort": [
+          {
+            "line": 3436117,
+            "text": "if (c[1]:int > (d = a[1]:int)[19]:ushort) {"
+          }
+        ],
+        "d[36]:ubyte & 128": [
+          {
+            "line": 3436147,
+            "text": "if (eqz(d[36]:ubyte & 128)) goto B_fh;"
+          }
+        ],
+        "a[9]:int = c": [
+          {
+            "line": 3436248,
+            "text": "a[9]:int = c;"
+          }
+        ]
+      }
+    },
+    "func72915_fillConvexMeshDesc": {
+      "symbol": "f_lvcd",
+      "start_line": 3436579,
+      "line_count": 216,
+      "hits": {
+        "if (a[9]:int)": [
+          {
+            "line": 3436590,
+            "text": "if (a[9]:int) {"
+          }
+        ],
+        "m = e[4]:int": [
+          {
+            "line": 3436592,
+            "text": "m = e[4]:int;"
+          }
+        ],
+        "n = e[7]:int": [
+          {
+            "line": 3436594,
+            "text": "h = c + (d = (n = e[7]:int) * 20) + (f = (k = e[1]:int) * 12) + 12;"
+          }
+        ],
+        "k = e[1]:int": [
+          {
+            "line": 3436594,
+            "text": "h = c + (d = (n = e[7]:int) * 20) + (f = (k = e[1]:int) * 12) + 12;"
+          }
+        ],
+        "b.g = 4": [
+          {
+            "line": 3436653,
+            "text": "b.g = 4;"
+          }
+        ],
+        "b.a = 12": [
+          {
+            "line": 3436656,
+            "text": "b.a = 12;"
+          }
+        ],
+        "b.d = 20": [
+          {
+            "line": 3436657,
+            "text": "b.d = 20;"
+          }
+        ],
+        "f_jvcd(a, b)": [
+          {
+            "line": 3436765,
+            "text": "f_jvcd(a, b);"
+          }
+        ]
+      }
+    },
+    "func72926_cookConvexMeshInternal": {
+      "symbol": "f_wvcd",
+      "start_line": 3438011,
+      "line_count": 81
+    },
+    "func72927_convexMeshBuilderSave": {
+      "symbol": "f_xvcd",
+      "start_line": 3438092,
+      "line_count": 316
+    }
+  },
+  "physx_source": {
+    "Cooking.cpp": {
+      "hullLib->createConvexHull()": [
+        {
+          "line": 226,
+          "text": "PxConvexMeshCookingResult::Enum res = hullLib->createConvexHull();"
+        }
+      ],
+      "hullLib->fillConvexMeshDesc(desc)": [
+        {
+          "line": 232,
+          "text": "hullLib->fillConvexMeshDesc(desc);"
+        }
+      ],
+      "desc.points.count >= 256": [
+        {
+          "line": 245,
+          "text": "if (desc.points.count >= 256)"
+        }
+      ]
+    },
+    "QuickHullConvexHullLib.cpp": {
+      "res = expandHull()": [
+        {
+          "line": 1907,
+          "text": "res = expandHull();"
+        },
+        {
+          "line": 1917,
+          "text": "res = expandHull();"
+        }
+      ],
+      "res = expandHullOBB()": [
+        {
+          "line": 1909,
+          "text": "res = expandHullOBB();"
+        },
+        {
+          "line": 1919,
+          "text": "res = expandHullOBB();"
+        },
+        {
+          "line": 1936,
+          "text": "res = expandHullOBB();"
+        }
+      ],
+      "fillConvexMeshDescFromQuickHull(convexDesc)": [
+        {
+          "line": 2243,
+          "text": "fillConvexMeshDescFromQuickHull(convexDesc);"
+        }
+      ],
+      "computeOBBFromConvex(convexDesc": [
+        {
+          "line": 2245,
+          "text": "computeOBBFromConvex(convexDesc, sides, obbTransform);"
+        }
+      ],
+      "PxU32 maxplanes = PxMin(PxU32(256)": [
+        {
+          "line": 2252,
+          "text": "PxU32 maxplanes = PxMin(PxU32(256), expandPlanes.size());"
+        }
+      ],
+      "c->findCandidatePlane(planeTolerance, epsilon)": [
+        {
+          "line": 2260,
+          "text": "while (maxplanes-- && (k = c->findCandidatePlane(planeTolerance, epsilon)) >= 0)"
+        }
+      ],
+      "c = convexHullCrop(*tmp": [
+        {
+          "line": 2263,
+          "text": "c = convexHullCrop(*tmp, expandPlanes[PxU32(k)], planeTolerance);"
+        }
+      ],
+      "c->getVertices().size() > mConvexMeshDesc.vertexLimit": [
+        {
+          "line": 2277,
+          "text": "if (c->getVertices().size() > mConvexMeshDesc.vertexLimit)"
+        }
+      ],
+      "c->maxNumVertsPerFace() > gpuMaxVertsPerFace": [
+        {
+          "line": 2285,
+          "text": "if ((mConvexMeshDesc.flags & PxConvexFlag::eGPU_COMPATIBLE) && c->maxNumVertsPerFace() > gpuMaxVertsPerFace)"
+        }
+      ],
+      "mCropedConvexHull = c": [
+        {
+          "line": 2297,
+          "text": "mCropedConvexHull = c;"
+        }
+      ],
+      "fillConvexMeshDescFromCroppedHull(desc)": [
+        {
+          "line": 2374,
+          "text": "fillConvexMeshDescFromCroppedHull(desc);"
+        }
+      ]
+    },
+    "ConvexHullUtils.cpp": {
+      "ConvexHull::findCandidatePlane": [
+        {
+          "line": 258,
+          "text": "PxI32 ConvexHull::findCandidatePlane(float planeTestEpsilon, float epsilon) const"
+        }
+      ],
+      "return (md > epsilon) ? p : -1": [
+        {
+          "line": 309,
+          "text": "return (md > epsilon) ? p : -1;"
+        }
+      ],
+      "bool ConvexHull::assertIntact": [
+        {
+          "line": 314,
+          "text": "bool ConvexHull::assertIntact(float epsilon) const"
+        }
+      ],
+      "convexHullCrop(const ConvexHull& convex": [
+        {
+          "line": 401,
+          "text": "ConvexHull* physx::convexHullCrop(const ConvexHull& convex, const PxPlane& slice, float planeTestEpsilon)"
+        }
+      ]
+    }
+  },
+  "evidence_chain_complete": true
+}

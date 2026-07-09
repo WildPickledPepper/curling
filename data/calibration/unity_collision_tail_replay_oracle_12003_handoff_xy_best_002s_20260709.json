@@ -1,0 +1,148 @@
+{
+  "probe": "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_best_contact_20260709.json",
+  "snapshot_time_s": 0.02,
+  "result_index": 0,
+  "summary": {
+    "row_count": 1,
+    "ok_count": 1,
+    "baseline_tail_vs_local_full_rmse_m": 0.01930224678989461,
+    "baseline_tail_vs_unity_rmse_m": 0.030470417744406886,
+    "local_full_vs_unity_rmse_m": 0.02429547285676451,
+    "corrected_tail_vs_unity_rmse_m": 0.03133831338951312,
+    "corrected_tail_vs_unity_mean_m": 0.03133831338951312,
+    "corrected_tail_over_2cm_count": 1,
+    "oracle_linear_tail_vs_unity_rmse_m": 0.0007227115811151775,
+    "oracle_linear_tail_vs_unity_mean_m": 0.0007227115811151775,
+    "oracle_linear_tail_over_2cm_count": 0,
+    "oracle_linear_delta_v_norm_mean_mps": 0.008210544286293723,
+    "oracle_linear_delta_v_norm_rmse_mps": 0.008210544286293723,
+    "oracle_linear_delta_v_normal_rmse_mps": 0.004817347306868766,
+    "oracle_linear_delta_v_tangent_rmse_mps": 0.0066487745037859996,
+    "oracle_linear_delta_v_component_counts": {
+      "normal": 0,
+      "tangent": 1,
+      "mixed": 0
+    },
+    "baseline_tail_vs_local_full_mean_m": 0.01930224678989461
+  },
+  "rows": [
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "status": "ok",
+      "snapshot_key": "0.020000",
+      "unity_target": [
+        2.8527,
+        2.9269
+      ],
+      "local_full_replay_target": [
+        2.8501384258270264,
+        2.9510600566864014
+      ],
+      "baseline_tail_endpoint": [
+        2.831031322479248,
+        2.948322296142578
+      ],
+      "corrected_tail_endpoint": [
+        2.837069272994995,
+        2.899738073348999
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.852010726928711,
+        2.926682710647583
+      ],
+      "baseline_tail_vs_local_full_m": 0.01930224678989461,
+      "baseline_tail_vs_unity_m": 0.030470417744406886,
+      "local_full_vs_unity_m": 0.02429547285676451,
+      "corrected_tail_vs_unity_m": 0.03133831338951312,
+      "oracle_linear_tail_vs_unity_m": 0.0007227115811151775,
+      "corrected_tail_vs_local_full_m": 0.052959878487696656,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        0.007287943732365659,
+        -0.0037813904362102857
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.008210544286293723,
+      "oracle_linear_delta_v_normal_mps": 0.004817347306868766,
+      "oracle_linear_delta_v_tangent_mps": 0.0066487745037859996,
+      "oracle_linear_delta_v_component": "tangent",
+      "oracle_linear_impulse_normal_Ns": 0.09201133356119344,
+      "oracle_linear_impulse_tangent_Ns": 0.1269915930223126,
+      "oracle_linear_velocity_protocol": [
+        0.15329427458010583,
+        -1.2412889721470257
+      ],
+      "required_early_velocity": [
+        0.14672542363660357,
+        -1.2467501106513061
+      ],
+      "delta_v_required_mps": [
+        0.0007190927888633958,
+        -0.009242528940490713
+      ],
+      "tail_distance_scale_required": 1.0074337867023442,
+      "tail_direction_delta_deg_required": -0.016833421303025023,
+      "baseline_tail": {
+        "endpoint": [
+          2.831031322479248,
+          2.948322296142578
+        ],
+        "elapsed_s": 10.25,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.837069272994995,
+          2.899738073348999
+        ],
+        "elapsed_s": 10.290000000000001,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.852010726928711,
+          2.926682710647583
+        ],
+        "error_m": 0.0007227115811151775,
+        "velocity_protocol": [
+          0.15329427458010583,
+          -1.2412889721470257
+        ],
+        "delta_v_from_snapshot_mps": [
+          0.007287943732365659,
+          -0.0037813904362102857
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.008210544286293723,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.030470417744406886,
+            "delta_v_mps": [
+              0.007287943732365649,
+              -0.0037813904362103295
+            ],
+            "jacobian": [
+              [
+                2.7127742767333984,
+                -0.5019664764404297
+              ],
+              [
+                -0.24166107177734375,
+                5.199432373046875
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.0007227115811151775
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    "baseline_tail_vs_local_full checks whether a fresh target-only scene can reproduce the original local full replay from the chosen snapshot.",
+    "corrected_tail_vs_unity checks whether replacing only the target's horizontal velocity by the Unity-implied velocity is enough to land near Unity's endpoint.",
+    "oracle_linear_tail_vs_unity uses finite differences through the actual pyphysx tail replay to find the best local target vx/vy correction.",
+    "If baseline_tail_vs_local_full is small and corrected_tail_vs_unity is around 2cm, the tail physics is not the main mismatch; the missing state is before the chosen snapshot, i.e. contact/solver output."
+  ]
+}

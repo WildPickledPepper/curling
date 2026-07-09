@@ -1,0 +1,24 @@
+[
+  {
+    "sample_id": 73,
+    "label": "boundary_clamp_hi",
+    "category": "boundary",
+    "v0": 6.5,
+    "h0": 3.0,
+    "w0": 20.0,
+    "sweep": 0.0,
+    "stones": [],
+    "notes": "supplement for missing forced/clamp boundary sample"
+  },
+  {
+    "sample_id": 74,
+    "label": "boundary_clamp_lo",
+    "category": "boundary",
+    "v0": 0.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [],
+    "notes": "supplement for missing zero-speed clamp boundary sample"
+  }
+]

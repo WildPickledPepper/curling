@@ -1,0 +1,1857 @@
+{
+  "baseline_source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+  "handoff_sources": [
+    "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_contact_xyoffset_wide_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_ultrafine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_handoff_target_xy_micro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_handoff_vscale_micro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_wide_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_xy_fine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_wide_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_target_xyoffset_wide_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_coarse_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_fine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_micro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro2_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro3_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_target_xy_micro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_vscale_micro_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_vxyoffset_coarse_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_coarse_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_fine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_ultrafine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_subfine_20260709.json"
+  ],
+  "normal_param_12007_source": "data\\calibration\\unity_physx_collision_probe_12007_normal_param_grid_20260709.json",
+  "contact_best_sources": [
+    "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_best_contact_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_best_contact_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_best_contact_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_best_contact_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_bestmax_contact_20260709.json"
+  ],
+  "tail_oracle_after_handoff_best_sources": [
+    "data\\calibration\\unity_collision_tail_replay_oracle_12003_handoff_xy_best_020s_20260709.json",
+    "data\\calibration\\unity_collision_tail_replay_oracle_12004_handoff_xy_best_020s_20260709.json",
+    "data\\calibration\\unity_collision_tail_replay_oracle_12007_handoff_xy_best_020s_20260709.json"
+  ],
+  "baseline_summary": {
+    "sample_count": 8,
+    "in_play_pair_count": 7,
+    "active_rmse_m": 0.03855842111554859,
+    "target_in_play_rmse_m": 0.11323278407673086,
+    "both_endpoints_within_2cm_count": 1,
+    "both_endpoints_within_2cm_sample_ids": [
+      12000
+    ],
+    "all_in_play_pairs_within_2cm": false,
+    "bottlenecks_over_2cm": [
+      {
+        "sample_id": 12002,
+        "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+        "active_error_m": 0.0062849194634827295,
+        "target_error_m": 0.02847197249155637,
+        "max_endpoint_error_m": 0.02847197249155637,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      },
+      {
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "active_error_m": 0.07945947880636535,
+        "target_error_m": 0.24572499750997046,
+        "max_endpoint_error_m": 0.24572499750997046,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      },
+      {
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "active_error_m": 0.010863133849230005,
+        "target_error_m": 0.1335143633427367,
+        "max_endpoint_error_m": 0.1335143633427367,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      },
+      {
+        "sample_id": 12005,
+        "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+        "active_error_m": 0.017246264486427618,
+        "target_error_m": 0.0744778632985414,
+        "max_endpoint_error_m": 0.0744778632985414,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      },
+      {
+        "sample_id": 12006,
+        "label": "collision_glance_left_target_active_a06_target_t14_r00",
+        "active_error_m": 0.00724681288668987,
+        "target_error_m": 0.02645618997061297,
+        "max_endpoint_error_m": 0.02645618997061297,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      },
+      {
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "active_error_m": 0.04372453885425035,
+        "target_error_m": 0.06548322059025638,
+        "max_endpoint_error_m": 0.06548322059025638,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        }
+      }
+    ]
+  },
+  "handoff_xy_oracle_summary": {
+    "sample_count": 8,
+    "in_play_pair_count": 7,
+    "active_rmse_m": 0.01350200975838181,
+    "target_in_play_rmse_m": 0.014829526504669675,
+    "both_endpoints_within_2cm_count": 7,
+    "both_endpoints_within_2cm_sample_ids": [
+      12000,
+      12002,
+      12003,
+      12004,
+      12005,
+      12006,
+      12007
+    ],
+    "all_in_play_pairs_within_2cm": true,
+    "bottlenecks_over_2cm": []
+  },
+  "handoff_xy_active_only_oracle_summary": {
+    "sample_count": 8,
+    "active_rmse_m": 0.006122390009721769,
+    "active_within_2cm_count": 8,
+    "active_within_2cm_sample_ids": [
+      12000,
+      12001,
+      12002,
+      12003,
+      12004,
+      12005,
+      12006,
+      12007
+    ],
+    "active_bottlenecks_over_2cm": []
+  },
+  "baseline_by_sample": {
+    "12000": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010473716049262526,
+      "target_error_m": 0.014113702652814822,
+      "max_endpoint_error_m": 0.014113702652814822,
+      "combined_pair_rmse_m": 0.012427697503010192,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3474576473236084,
+        5.489194393157959
+      ],
+      "sim_target": [
+        2.4740262031555176,
+        3.8725223541259766
+      ],
+      "unity_active": [
+        2.3388,
+        5.4833
+      ],
+      "unity_target": [
+        2.4656,
+        3.8612
+      ]
+    },
+    "12001": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "unity_target_in_play": false,
+      "active_error_m": 0.055237795827458136,
+      "target_error_m": null,
+      "max_endpoint_error_m": 0.055237795827458136,
+      "combined_pair_rmse_m": 0.055237795827458136,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3397793769836426,
+        5.47998046875
+      ],
+      "sim_target": [
+        2.616429328918457,
+        2.2224323749542236
+      ],
+      "unity_active": [
+        2.2847,
+        5.4758
+      ],
+      "unity_target": [
+        0.0,
+        0.0
+      ]
+    },
+    "12002": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.0062849194634827295,
+      "target_error_m": 0.02847197249155637,
+      "max_endpoint_error_m": 0.02847197249155637,
+      "combined_pair_rmse_m": 0.020617388658877325,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3454031944274902,
+        6.48898983001709
+      ],
+      "sim_target": [
+        2.5087316036224365,
+        4.508715629577637
+      ],
+      "unity_active": [
+        2.3435,
+        6.483
+      ],
+      "unity_target": [
+        2.4803,
+        4.5072
+      ]
+    },
+    "12003": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.07945947880636535,
+      "target_error_m": 0.24572499750997046,
+      "max_endpoint_error_m": 0.24572499750997046,
+      "combined_pair_rmse_m": 0.18261240808534096,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3382132053375244,
+        6.488959789276123
+      ],
+      "sim_target": [
+        2.650664806365967,
+        2.787033796310425
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    "12004": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010863133849230005,
+      "target_error_m": 0.1335143633427367,
+      "max_endpoint_error_m": 0.1335143633427367,
+      "combined_pair_rmse_m": 0.09472088707313345,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.342099905014038,
+        8.284964561462402
+      ],
+      "sim_target": [
+        2.5677030086517334,
+        5.643150329589844
+      ],
+      "unity_active": [
+        2.3336,
+        8.2782
+      ],
+      "unity_target": [
+        2.5593,
+        5.7764
+      ]
+    },
+    "12005": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.017246264486427618,
+      "target_error_m": 0.0744778632985414,
+      "max_endpoint_error_m": 0.0744778632985414,
+      "combined_pair_rmse_m": 0.054057311070067275,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3347949981689453,
+        8.290048599243164
+      ],
+      "sim_target": [
+        2.720592498779297,
+        3.749527931213379
+      ],
+      "unity_active": [
+        2.3185,
+        8.2844
+      ],
+      "unity_target": [
+        2.6502,
+        3.7252
+      ]
+    },
+    "12006": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.00724681288668987,
+      "target_error_m": 0.02645618997061297,
+      "max_endpoint_error_m": 0.02645618997061297,
+      "combined_pair_rmse_m": 0.019396472421240114,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.7415170669555664,
+        6.202279090881348
+      ],
+      "sim_target": [
+        1.4674056768417358,
+        4.730249881744385
+      ],
+      "unity_active": [
+        2.7378,
+        6.2085
+      ],
+      "unity_target": [
+        1.4522,
+        4.7086
+      ]
+    },
+    "12007": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.04372453885425035,
+      "target_error_m": 0.06548322059025638,
+      "max_endpoint_error_m": 0.06548322059025638,
+      "combined_pair_rmse_m": 0.055677138382324506,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        1.8032362461090088,
+        5.898848533630371
+      ],
+      "sim_target": [
+        3.2776734828948975,
+        5.206465721130371
+      ],
+      "unity_active": [
+        1.7736,
+        5.8667
+      ],
+      "unity_target": [
+        3.2374,
+        5.2581
+      ]
+    }
+  },
+  "handoff_xy_oracle_by_sample": {
+    "12000": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010473716049262526,
+      "target_error_m": 0.014113702652814822,
+      "max_endpoint_error_m": 0.014113702652814822,
+      "combined_pair_rmse_m": 0.012427697503010192,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3474576473236084,
+        5.489194393157959
+      ],
+      "sim_target": [
+        2.4740262031555176,
+        3.8725223541259766
+      ],
+      "unity_active": [
+        2.3388,
+        5.4833
+      ],
+      "unity_target": [
+        2.4656,
+        3.8612
+      ]
+    },
+    "12001": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "unity_target_in_play": false,
+      "active_error_m": 0.003543414280562846,
+      "target_error_m": null,
+      "max_endpoint_error_m": 0.003543414280562846,
+      "combined_pair_rmse_m": 0.003543414280562846,
+      "config": {
+        "handoff_x_offset": -0.02,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.285714626312256,
+        5.472404956817627
+      ],
+      "sim_target": [
+        2.7945754528045654,
+        2.2934627532958984
+      ],
+      "unity_active": [
+        2.2847,
+        5.4758
+      ],
+      "unity_target": [
+        0.0,
+        0.0
+      ]
+    },
+    "12002": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010549106257453377,
+      "target_error_m": 0.007847748503906439,
+      "max_endpoint_error_m": 0.010549106257453377,
+      "combined_pair_rmse_m": 0.009297064036877658,
+      "config": {
+        "handoff_x_offset": 0.005,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3521552085876465,
+        6.489030838012695
+      ],
+      "sim_target": [
+        2.48787522315979,
+        4.505149841308594
+      ],
+      "unity_active": [
+        2.3435,
+        6.483
+      ],
+      "unity_target": [
+        2.4803,
+        4.5072
+      ]
+    },
+    "12003": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_vscale_micro_20260709.json",
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01981114550499966,
+      "target_error_m": 0.003583691699579325,
+      "max_endpoint_error_m": 0.01981114550499966,
+      "combined_pair_rmse_m": 0.014235946270232653,
+      "config": {
+        "handoff_x_offset": -0.021,
+        "handoff_y_offset": 0.002,
+        "handoff_v_scale": 1.005,
+        "target_x_offset": 0.0,
+        "target_y_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.280669927597046,
+        6.467838764190674
+      ],
+      "sim_target": [
+        2.8529434204101562,
+        2.9233245849609375
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    "12004": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_wide_20260709.json",
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.011207224965846214,
+      "target_error_m": 0.015386833633177168,
+      "max_endpoint_error_m": 0.015386833633177168,
+      "combined_pair_rmse_m": 0.013460247781711872,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.02,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3436050415039062,
+        8.283249855041504
+      ],
+      "sim_target": [
+        2.5462865829467773,
+        5.768189907073975
+      ],
+      "unity_active": [
+        2.3336,
+        8.2782
+      ],
+      "unity_target": [
+        2.5593,
+        5.7764
+      ]
+    },
+    "12005": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_coarse_20260709.json",
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.016243541236005493,
+      "target_error_m": 0.017411647927255264,
+      "max_endpoint_error_m": 0.017411647927255264,
+      "combined_pair_rmse_m": 0.016837727213441,
+      "config": {
+        "handoff_x_offset": 0.008,
+        "handoff_y_offset": -0.006,
+        "handoff_v_scale": 1.0,
+        "handoff_vx_offset": 0.0,
+        "handoff_vy_offset": 0.0,
+        "handoff_w_offset": -0.5,
+        "target_x_offset": -0.002,
+        "target_y_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.334506034851074,
+        8.281632423400879
+      ],
+      "sim_target": [
+        2.6643106937408447,
+        3.735400676727295
+      ],
+      "unity_active": [
+        2.3185,
+        8.2844
+      ],
+      "unity_target": [
+        2.6502,
+        3.7252
+      ]
+    },
+    "12006": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010777582871279244,
+      "target_error_m": 0.01890526844647867,
+      "max_endpoint_error_m": 0.01890526844647867,
+      "combined_pair_rmse_m": 0.015387746221924667,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.008,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.7338154315948486,
+        6.2185139656066895
+      ],
+      "sim_target": [
+        1.4703965187072754,
+        4.713727951049805
+      ],
+      "unity_active": [
+        2.7378,
+        6.2085
+      ],
+      "unity_target": [
+        1.4522,
+        4.7086
+      ]
+    },
+    "12007": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro3_20260709.json",
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01807771231543762,
+      "target_error_m": 0.019195001466200633,
+      "max_endpoint_error_m": 0.019195001466200633,
+      "combined_pair_rmse_m": 0.01864472799274864,
+      "config": {
+        "handoff_x_offset": -0.006,
+        "handoff_y_offset": -0.0005,
+        "handoff_v_scale": 1.0,
+        "target_x_offset": -0.004,
+        "target_y_offset": 0.0085,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        1.7908860445022583,
+        5.871991157531738
+      ],
+      "sim_target": [
+        3.2555007934570312,
+        5.264488220214844
+      ],
+      "unity_active": [
+        1.7736,
+        5.8667
+      ],
+      "unity_target": [
+        3.2374,
+        5.2581
+      ]
+    }
+  },
+  "handoff_xy_active_only_oracle_by_sample": {
+    "12000": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.006151075721602459,
+      "target_error_m": 0.027662826907618315,
+      "max_endpoint_error_m": 0.027662826907618315,
+      "combined_pair_rmse_m": 0.020038309872014395,
+      "config": {
+        "handoff_x_offset": -0.005,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3406379222869873,
+        5.489170074462891
+      ],
+      "sim_target": [
+        2.4892923831939697,
+        3.8754794597625732
+      ],
+      "unity_active": [
+        2.3388,
+        5.4833
+      ],
+      "unity_target": [
+        2.4656,
+        3.8612
+      ]
+    },
+    "12001": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "unity_target_in_play": false,
+      "active_error_m": 0.003543414280562846,
+      "target_error_m": null,
+      "max_endpoint_error_m": 0.003543414280562846,
+      "combined_pair_rmse_m": 0.003543414280562846,
+      "config": {
+        "handoff_x_offset": -0.02,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.285714626312256,
+        5.472404956817627
+      ],
+      "sim_target": [
+        2.7945754528045654,
+        2.2934627532958984
+      ],
+      "unity_active": [
+        2.2847,
+        5.4758
+      ],
+      "unity_target": [
+        0.0,
+        0.0
+      ]
+    },
+    "12002": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.0062849194634827295,
+      "target_error_m": 0.02847197249155637,
+      "max_endpoint_error_m": 0.02847197249155637,
+      "combined_pair_rmse_m": 0.020617388658877325,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3454031944274902,
+        6.48898983001709
+      ],
+      "sim_target": [
+        2.5087316036224365,
+        4.508715629577637
+      ],
+      "unity_active": [
+        2.3435,
+        6.483
+      ],
+      "unity_target": [
+        2.4803,
+        4.5072
+      ]
+    },
+    "12003": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_20260709.json",
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.002567637840019481,
+      "target_error_m": 0.06345950590736905,
+      "max_endpoint_error_m": 0.06345950590736905,
+      "combined_pair_rmse_m": 0.04490936235399534,
+      "config": {
+        "handoff_x_offset": -0.026,
+        "handoff_y_offset": 0.004,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.2630794048309326,
+        6.468693733215332
+      ],
+      "sim_target": [
+        2.9114160537719727,
+        2.9509735107421875
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    "12004": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.008138223085459811,
+      "target_error_m": 0.13058965815880555,
+      "max_endpoint_error_m": 0.13058965815880555,
+      "combined_pair_rmse_m": 0.09251996944720205,
+      "config": {
+        "handoff_x_offset": -0.005,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3271117210388184,
+        8.283112525939941
+      ],
+      "sim_target": [
+        2.6468024253845215,
+        5.67946195602417
+      ],
+      "unity_active": [
+        2.3336,
+        8.2782
+      ],
+      "unity_target": [
+        2.5593,
+        5.7764
+      ]
+    },
+    "12005": {
+      "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.006656470899107066,
+      "target_error_m": 0.23201629127707388,
+      "max_endpoint_error_m": 0.23201629127707388,
+      "combined_pair_rmse_m": 0.1641277978021984,
+      "config": {
+        "handoff_x_offset": -0.005,
+        "handoff_y_offset": 0.0,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3122947216033936,
+        8.286808967590332
+      ],
+      "sim_target": [
+        2.8639914989471436,
+        3.8153374195098877
+      ],
+      "unity_active": [
+        2.3185,
+        8.2844
+      ],
+      "unity_target": [
+        2.6502,
+        3.7252
+      ]
+    },
+    "12006": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.002357625937173264,
+      "target_error_m": 0.02134275229036012,
+      "max_endpoint_error_m": 0.02134275229036012,
+      "combined_pair_rmse_m": 0.01518340336333235,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.004,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.737766742706299,
+        6.210857391357422
+      ],
+      "sim_target": [
+        1.4689600467681885,
+        4.721814155578613
+      ],
+      "unity_active": [
+        2.7378,
+        6.2085
+      ],
+      "unity_target": [
+        1.4522,
+        4.7086
+      ]
+    },
+    "12007": {
+      "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_fine_20260709.json",
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.009342756634611496,
+      "target_error_m": 0.03248416563227674,
+      "max_endpoint_error_m": 0.03248416563227674,
+      "combined_pair_rmse_m": 0.023900921722380983,
+      "config": {
+        "handoff_x_offset": -0.006,
+        "handoff_y_offset": 0.004,
+        "handoff_v_scale": 1.0,
+        "target_x_offset": 0.0,
+        "target_y_offset": 0.012,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        1.782697081565857,
+        5.864571571350098
+      ],
+      "sim_target": [
+        3.2606821060180664,
+        5.280753135681152
+      ],
+      "unity_active": [
+        1.7736,
+        5.8667
+      ],
+      "unity_target": [
+        3.2374,
+        5.2581
+      ]
+    }
+  },
+  "normal_param_12007_best": {
+    "source": "data\\calibration\\unity_physx_collision_probe_12007_normal_param_grid_20260709.json",
+    "sample_id": 12007,
+    "label": "collision_glance_right_target_active_a07_target_t15_r00",
+    "unity_target_in_play": true,
+    "active_error_m": 0.06192327565261535,
+    "target_error_m": 0.05106303786511915,
+    "max_endpoint_error_m": 0.06192327565261535,
+    "combined_pair_rmse_m": 0.0567535280998652,
+    "config": {
+      "handoff_x_offset": 0.0,
+      "handoff_y_offset": 0.0,
+      "handoff_v_scale": 1.0,
+      "radius": 0.146,
+      "contact_offset": 0.002,
+      "stone_restitution": 0.95,
+      "active_yaw": 0.0,
+      "target_yaw": 0.0,
+      "shape_local_yaw": 0.0
+    },
+    "sim_active": [
+      1.8354355096817017,
+      5.863404273986816
+    ],
+    "sim_target": [
+      3.201650857925415,
+      5.294561386108398
+    ],
+    "unity_active": [
+      1.7736,
+      5.8667
+    ],
+    "unity_target": [
+      3.2374,
+      5.2581
+    ]
+  },
+  "contact_best_points": [
+    {
+      "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_best_contact_20260709.json",
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.022094720397581875,
+      "target_error_m": 0.02429547285676451,
+      "max_endpoint_error_m": 0.02429547285676451,
+      "combined_pair_rmse_m": 0.023221182902482613,
+      "config": {
+        "handoff_x_offset": -0.02,
+        "handoff_y_offset": 0.002,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.283022403717041,
+        6.468413829803467
+      ],
+      "sim_target": [
+        2.8501384258270264,
+        2.9510600566864014
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ],
+      "first_contact_time": 0.01,
+      "stone_stone_contact_report_count": 5,
+      "first_contact_count": 1,
+      "first_contact_normal": [
+        0.9987954497337341,
+        -0.04906788840889931,
+        0.0
+      ],
+      "first_contact_impulse": [
+        10.252127647399902,
+        -0.5036569237709045,
+        0.0
+      ],
+      "first_contact_separation": 0.004582941997796297
+    },
+    {
+      "source": "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_best_contact_20260709.json",
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.011207224965846214,
+      "target_error_m": 0.015386833633177168,
+      "max_endpoint_error_m": 0.015386833633177168,
+      "combined_pair_rmse_m": 0.013460247781711872,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.02,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3436050415039062,
+        8.283249855041504
+      ],
+      "sim_target": [
+        2.5462865829467773,
+        5.768189907073975
+      ],
+      "unity_active": [
+        2.3336,
+        8.2782
+      ],
+      "unity_target": [
+        2.5593,
+        5.7764
+      ],
+      "first_contact_time": 0.01,
+      "stone_stone_contact_report_count": 6,
+      "first_contact_count": 1,
+      "first_contact_normal": [
+        1.0,
+        3.149966687487904e-08,
+        0.0
+      ],
+      "first_contact_impulse": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_contact_separation": 0.01478305459022522
+    },
+    {
+      "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_best_contact_20260709.json",
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.05589116571295923,
+      "target_error_m": 0.05637651495372413,
+      "max_endpoint_error_m": 0.05637651495372413,
+      "combined_pair_rmse_m": 0.056134364889437155,
+      "config": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.02,
+        "handoff_v_scale": 1.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        1.8294583559036255,
+        5.864785194396973
+      ],
+      "sim_target": [
+        3.207035541534424,
+        5.305600643157959
+      ],
+      "unity_active": [
+        1.7736,
+        5.8667
+      ],
+      "unity_target": [
+        3.2374,
+        5.2581
+      ],
+      "first_contact_time": 0.01,
+      "stone_stone_contact_report_count": 6,
+      "first_contact_count": 1,
+      "first_contact_normal": [
+        0.7071067690849304,
+        -0.70710688829422,
+        0.0
+      ],
+      "first_contact_impulse": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "first_contact_separation": 0.015291371382772923
+    },
+    {
+      "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_best_contact_20260709.json",
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.017430501868515916,
+      "target_error_m": 0.01936506468193178,
+      "max_endpoint_error_m": 0.01936506468193178,
+      "combined_pair_rmse_m": 0.018423193609194612,
+      "config": {
+        "handoff_x_offset": -0.006,
+        "handoff_y_offset": -0.001,
+        "handoff_v_scale": 1.0,
+        "target_x_offset": -0.004,
+        "target_y_offset": 0.0085,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        1.7906678915023804,
+        5.870236873626709
+      ],
+      "sim_target": [
+        3.2551074028015137,
+        5.265939235687256
+      ],
+      "unity_active": [
+        1.7736,
+        5.8667
+      ],
+      "unity_target": [
+        3.2374,
+        5.2581
+      ],
+      "first_contact_time": 0.01,
+      "stone_stone_contact_report_count": 5,
+      "first_contact_count": 1,
+      "first_contact_normal": [
+        0.7730108499526978,
+        -0.6343927979469299,
+        0.0
+      ],
+      "first_contact_impulse": [
+        4.898068428039551,
+        -4.019735813140869,
+        0.0
+      ],
+      "first_contact_separation": 0.0020263120532035828
+    },
+    {
+      "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_bestmax_contact_20260709.json",
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01768625586319518,
+      "target_error_m": 0.013686706323099785,
+      "max_endpoint_error_m": 0.01768625586319518,
+      "combined_pair_rmse_m": 0.01581343695142181,
+      "config": {
+        "handoff_x_offset": 0.008,
+        "handoff_y_offset": -0.006,
+        "handoff_v_scale": 1.0,
+        "handoff_vx_offset": 0.0,
+        "handoff_vy_offset": 0.0,
+        "handoff_w_offset": -0.44,
+        "target_x_offset": -0.002,
+        "target_y_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "shape_local_yaw": 0.0
+      },
+      "sim_active": [
+        2.3359875679016113,
+        8.281756401062012
+      ],
+      "sim_target": [
+        2.6596481800079346,
+        3.735102415084839
+      ],
+      "unity_active": [
+        2.3185,
+        8.2844
+      ],
+      "unity_target": [
+        2.6502,
+        3.7252
+      ],
+      "first_contact_time": 0.01,
+      "stone_stone_contact_report_count": 3,
+      "first_contact_count": 4,
+      "first_contact_normal": [
+        0.9987955689430237,
+        -0.049067120999097824,
+        0.0
+      ],
+      "first_contact_impulse": [
+        10.624011993408203,
+        -0.5219182968139648,
+        0.0
+      ],
+      "first_contact_separation": -0.006521075963973999
+    }
+  ],
+  "tail_oracle_after_handoff_best": [
+    {
+      "source": "data\\calibration\\unity_collision_tail_replay_oracle_12003_handoff_xy_best_020s_20260709.json",
+      "sample_id": 12003,
+      "summary": {
+        "row_count": 1,
+        "ok_count": 1,
+        "baseline_tail_vs_local_full_rmse_m": 0.021094457545422524,
+        "baseline_tail_vs_unity_rmse_m": 0.03151669860240335,
+        "local_full_vs_unity_rmse_m": 0.02429547285676451,
+        "corrected_tail_vs_unity_rmse_m": 0.03200969338154679,
+        "corrected_tail_vs_unity_mean_m": 0.03200969338154679,
+        "corrected_tail_over_2cm_count": 1,
+        "oracle_linear_tail_vs_unity_rmse_m": 0.00015910917589003265,
+        "oracle_linear_tail_vs_unity_mean_m": 0.00015910917589003265,
+        "oracle_linear_tail_over_2cm_count": 0,
+        "oracle_linear_delta_v_norm_mean_mps": 0.008814674249048937,
+        "oracle_linear_delta_v_norm_rmse_mps": 0.008814674249048937,
+        "oracle_linear_delta_v_normal_rmse_mps": 0.00492843383341828,
+        "oracle_linear_delta_v_tangent_rmse_mps": 0.007308147649470724,
+        "oracle_linear_delta_v_component_counts": {
+          "normal": 0,
+          "tangent": 1,
+          "mixed": 0
+        },
+        "baseline_tail_vs_local_full_mean_m": 0.021094457545422524
+      },
+      "rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.200000",
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "local_full_replay_target": [
+            2.8501384258270264,
+            2.9510600566864014
+          ],
+          "baseline_tail_endpoint": [
+            2.829270124435425,
+            2.94797945022583
+          ],
+          "corrected_tail_endpoint": [
+            2.835883617401123,
+            2.8996634483337402
+          ],
+          "oracle_linear_tail_endpoint": [
+            2.8526079654693604,
+            2.9267702102661133
+          ],
+          "baseline_tail_vs_local_full_m": 0.021094457545422524,
+          "baseline_tail_vs_unity_m": 0.03151669860240335,
+          "local_full_vs_unity_m": 0.02429547285676451,
+          "corrected_tail_vs_unity_m": 0.03200969338154679,
+          "oracle_linear_tail_vs_unity_m": 0.00015910917589003265,
+          "corrected_tail_vs_local_full_m": 0.053336768869289786,
+          "oracle_linear_delta_v_from_snapshot_mps": [
+            0.007956494362221816,
+            -0.0037937685196620663
+          ],
+          "oracle_linear_delta_v_norm_from_snapshot_mps": 0.008814674249048937,
+          "oracle_linear_delta_v_normal_mps": 0.00492843383341828,
+          "oracle_linear_delta_v_tangent_mps": 0.007308147649470724,
+          "oracle_linear_delta_v_component": "tangent",
+          "oracle_linear_impulse_normal_Ns": 0.09413308621828916,
+          "oracle_linear_impulse_tangent_Ns": 0.13958562010489084,
+          "oracle_linear_velocity_protocol": [
+            0.1575381800244914,
+            -1.1933969780152065
+          ],
+          "required_early_velocity": [
+            0.15038126571931298,
+            -1.1991326538239566
+          ],
+          "delta_v_required_mps": [
+            0.000799580057043392,
+            -0.009529444328412184
+          ],
+          "tail_distance_scale_required": 1.0079691790091527,
+          "tail_direction_delta_deg_required": -0.018752675296905205,
+          "baseline_tail": {
+            "endpoint": [
+              2.829270124435425,
+              2.94797945022583
+            ],
+            "elapsed_s": 10.07,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "corrected_tail": {
+            "endpoint": [
+              2.835883617401123,
+              2.8996634483337402
+            ],
+            "elapsed_s": 10.11,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "oracle_linear_tail": {
+            "endpoint": [
+              2.8526079654693604,
+              2.9267702102661133
+            ],
+            "error_m": 0.00015910917589003265,
+            "velocity_protocol": [
+              0.1575381800244914,
+              -1.1933969780152065
+            ],
+            "delta_v_from_snapshot_mps": [
+              0.007956494362221816,
+              -0.0037937685196620663
+            ],
+            "delta_v_norm_from_snapshot_mps": 0.008814674249048937,
+            "iterations": [
+              {
+                "iteration": 0,
+                "error_before_m": 0.03151669860240335,
+                "delta_v_mps": [
+                  0.007956494362221806,
+                  -0.0037937685196620776
+                ],
+                "jacobian": [
+                  [
+                    2.795553207397461,
+                    -0.3129005432128906
+                  ],
+                  [
+                    -0.24309158325195312,
+                    5.046510696411133
+                  ]
+                ],
+                "chosen_damping": 1.0,
+                "error_after_m": 0.00015910917589003265
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "data\\calibration\\unity_collision_tail_replay_oracle_12004_handoff_xy_best_020s_20260709.json",
+      "sample_id": 12004,
+      "summary": {
+        "row_count": 1,
+        "ok_count": 1,
+        "baseline_tail_vs_local_full_rmse_m": 0.018431774045281988,
+        "baseline_tail_vs_unity_rmse_m": 0.03283417629745873,
+        "local_full_vs_unity_rmse_m": 0.015386833633177168,
+        "corrected_tail_vs_unity_rmse_m": 0.01963040263686924,
+        "corrected_tail_vs_unity_mean_m": 0.01963040263686924,
+        "corrected_tail_over_2cm_count": 0,
+        "oracle_linear_tail_vs_unity_rmse_m": 0.0006024576379133873,
+        "oracle_linear_tail_vs_unity_mean_m": 0.0006024576379133873,
+        "oracle_linear_tail_over_2cm_count": 0,
+        "oracle_linear_delta_v_norm_mean_mps": 0.015468015406781476,
+        "oracle_linear_delta_v_norm_rmse_mps": 0.015468015406781476,
+        "oracle_linear_delta_v_normal_rmse_mps": 0.0014986722295106535,
+        "oracle_linear_delta_v_tangent_rmse_mps": 0.015395242192733529,
+        "oracle_linear_delta_v_component_counts": {
+          "normal": 0,
+          "tangent": 1,
+          "mixed": 0
+        },
+        "baseline_tail_vs_local_full_mean_m": 0.018431774045281988
+      },
+      "rows": [
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.200000",
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "local_full_replay_target": [
+            2.5462865829467773,
+            5.768189907073975
+          ],
+          "baseline_tail_endpoint": [
+            2.527909517288208,
+            5.766770839691162
+          ],
+          "corrected_tail_endpoint": [
+            2.5404727458953857,
+            5.781957626342773
+          ],
+          "oracle_linear_tail_endpoint": [
+            2.5598983764648438,
+            5.77632999420166
+          ],
+          "baseline_tail_vs_local_full_m": 0.018431774045281988,
+          "baseline_tail_vs_unity_m": 0.03283417629745873,
+          "local_full_vs_unity_m": 0.015386833633177168,
+          "corrected_tail_vs_unity_m": 0.01963040263686924,
+          "oracle_linear_tail_vs_unity_m": 0.0006024576379133873,
+          "corrected_tail_vs_local_full_m": 0.014944925397090088,
+          "oracle_linear_delta_v_from_snapshot_mps": [
+            0.015233658128519997,
+            0.002682379661383849
+          ],
+          "oracle_linear_delta_v_norm_from_snapshot_mps": 0.015468015406781476,
+          "oracle_linear_delta_v_normal_mps": -0.0014986722295106535,
+          "oracle_linear_delta_v_tangent_mps": 0.015395242192733529,
+          "oracle_linear_delta_v_component": "tangent",
+          "oracle_linear_impulse_normal_Ns": -0.028624639583653484,
+          "oracle_linear_impulse_tangent_Ns": 0.2940491258812104,
+          "oracle_linear_velocity_protocol": [
+            0.07145684199883555,
+            -0.9801690064088676
+          ],
+          "required_early_velocity": [
+            0.06254661931998963,
+            -0.9790480624847463
+          ],
+          "delta_v_required_mps": [
+            0.006323435449674078,
+            0.0038033235855051695
+          ],
+          "tail_distance_scale_required": 0.9965318539044986,
+          "tail_direction_delta_deg_required": 0.38139255506129943,
+          "baseline_tail": {
+            "endpoint": [
+              2.527909517288208,
+              5.766770839691162
+            ],
+            "elapsed_s": 9.16,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "corrected_tail": {
+            "endpoint": [
+              2.5404727458953857,
+              5.781957626342773
+            ],
+            "elapsed_s": 9.15,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "oracle_linear_tail": {
+            "endpoint": [
+              2.5598983764648438,
+              5.77632999420166
+            ],
+            "error_m": 0.0006024576379133873,
+            "velocity_protocol": [
+              0.07145684199883555,
+              -0.9801690064088676
+            ],
+            "delta_v_from_snapshot_mps": [
+              0.015233658128519997,
+              0.002682379661383849
+            ],
+            "delta_v_norm_from_snapshot_mps": 0.015468015406781476,
+            "iterations": [
+              {
+                "iteration": 0,
+                "error_before_m": 0.03283417629745873,
+                "delta_v_mps": [
+                  0.015233658128519994,
+                  0.002682379661383813
+                ],
+                "jacobian": [
+                  [
+                    2.0920276641845703,
+                    -0.1784801483154297
+                  ],
+                  [
+                    -0.09975433349609375,
+                    4.156303405761719
+                  ]
+                ],
+                "chosen_damping": 1.0,
+                "error_after_m": 0.0006024576379133873
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "data\\calibration\\unity_collision_tail_replay_oracle_12007_handoff_xy_best_020s_20260709.json",
+      "sample_id": 12007,
+      "summary": {
+        "row_count": 1,
+        "ok_count": 1,
+        "baseline_tail_vs_local_full_rmse_m": 0.01532411233309799,
+        "baseline_tail_vs_unity_rmse_m": 0.05744731639513457,
+        "local_full_vs_unity_rmse_m": 0.05637651495372413,
+        "corrected_tail_vs_unity_rmse_m": 0.06172878703088309,
+        "corrected_tail_vs_unity_mean_m": 0.06172878703088309,
+        "corrected_tail_over_2cm_count": 1,
+        "oracle_linear_tail_vs_unity_rmse_m": 0.00026219472044639594,
+        "oracle_linear_tail_vs_unity_mean_m": 0.00026219472044639594,
+        "oracle_linear_tail_over_2cm_count": 0,
+        "oracle_linear_delta_v_norm_mean_mps": 0.020822064848114698,
+        "oracle_linear_delta_v_norm_rmse_mps": 0.020822064848114698,
+        "oracle_linear_delta_v_normal_rmse_mps": 0.01997312790043708,
+        "oracle_linear_delta_v_tangent_rmse_mps": 0.005884942345671317,
+        "oracle_linear_delta_v_component_counts": {
+          "normal": 1,
+          "tangent": 0,
+          "mixed": 0
+        },
+        "baseline_tail_vs_local_full_mean_m": 0.01532411233309799
+      },
+      "rows": [
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.200000",
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "local_full_replay_target": [
+            3.207035541534424,
+            5.305600643157959
+          ],
+          "baseline_tail_endpoint": [
+            3.1946911811828613,
+            5.296520709991455
+          ],
+          "corrected_tail_endpoint": [
+            3.2599399089813232,
+            5.200633525848389
+          ],
+          "oracle_linear_tail_endpoint": [
+            3.237619400024414,
+            5.258243560791016
+          ],
+          "baseline_tail_vs_local_full_m": 0.01532411233309799,
+          "baseline_tail_vs_unity_m": 0.05744731639513457,
+          "local_full_vs_unity_m": 0.05637651495372413,
+          "corrected_tail_vs_unity_m": 0.06172878703088309,
+          "oracle_linear_tail_vs_unity_m": 0.00026219472044639594,
+          "corrected_tail_vs_local_full_m": 0.11754559885949642,
+          "oracle_linear_delta_v_from_snapshot_mps": [
+            0.01766659873737586,
+            -0.011020420753838911
+          ],
+          "oracle_linear_delta_v_norm_from_snapshot_mps": 0.020822064848114698,
+          "oracle_linear_delta_v_normal_mps": 0.01997312790043708,
+          "oracle_linear_delta_v_tangent_mps": 0.005884942345671317,
+          "oracle_linear_delta_v_component": "normal",
+          "oracle_linear_impulse_normal_Ns": 0.3814867428983482,
+          "oracle_linear_impulse_tangent_Ns": 0.11240239880232215,
+          "oracle_linear_velocity_protocol": [
+            0.40684910672916663,
+            -0.5696384298442625
+          ],
+          "required_early_velocity": [
+            0.40946445103510587,
+            -0.5921076184919499
+          ],
+          "delta_v_required_mps": [
+            0.020281943043315098,
+            -0.03348960940152634
+          ],
+          "tail_distance_scale_required": 1.057396452625546,
+          "tail_direction_delta_deg_required": -0.19916634651222287,
+          "baseline_tail": {
+            "endpoint": [
+              3.1946911811828613,
+              5.296520709991455
+            ],
+            "elapsed_s": 7.87,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "corrected_tail": {
+            "endpoint": [
+              3.2599399089813232,
+              5.200633525848389
+            ],
+            "elapsed_s": 8.03,
+            "final_linear_speed": 0.0,
+            "final_angular_velocity": 0.0
+          },
+          "oracle_linear_tail": {
+            "endpoint": [
+              3.237619400024414,
+              5.258243560791016
+            ],
+            "error_m": 0.00026219472044639594,
+            "velocity_protocol": [
+              0.40684910672916663,
+              -0.5696384298442625
+            ],
+            "delta_v_from_snapshot_mps": [
+              0.01766659873737586,
+              -0.011020420753838911
+            ],
+            "delta_v_norm_from_snapshot_mps": 0.020822064848114698,
+            "iterations": [
+              {
+                "iteration": 0,
+                "error_before_m": 0.05744731639513457,
+                "delta_v_mps": [
+                  0.018923915175586385,
+                  -0.01046313848672716
+                ],
+                "jacobian": [
+                  [
+                    1.8013954162597656,
+                    -0.8237838745117188
+                  ],
+                  [
+                    -0.7580757141113281,
+                    2.3009300231933594
+                  ]
+                ],
+                "chosen_damping": 1.0,
+                "error_after_m": 0.0021951972931818432
+              },
+              {
+                "iteration": 1,
+                "error_before_m": 0.0021951972931818432,
+                "delta_v_mps": [
+                  -0.0012573164382105348,
+                  -0.0005572822671117122
+                ],
+                "jacobian": [
+                  [
+                    2.006959915161133,
+                    -0.6976127624511719
+                  ],
+                  [
+                    -0.6866455078125,
+                    2.4682044982910156
+                  ]
+                ],
+                "chosen_damping": 1.0,
+                "error_after_m": 0.00026219472044639594
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "Entrance-state perturbations are a real lever: handoff x/y solves 12004/12006, a tiny handoff_v_scale solves 12003, and diagnostic target reset offsets solve 12007.",
+    "The lever is not a global coordinate constant: the all-sample y=0 handoff-x sweep keeps the best target RMSE at the baseline x=0 setting.",
+    "Adding an active handoff angular-velocity offset solves the last in-play pair bottleneck, 12005. The current per-sample entrance-state oracle has every in-play target pair under 2cm.",
+    "If the score is active endpoint only, the same family of perturbations can put all 8 active stones under 2cm. That proves active endpoint drift is mostly entrance reconstruction, but it does not prove pair-contact parity.",
+    "Sample 12005 is specifically sensitive to handoff angular velocity: vx/vy offsets and actor yaw did not improve it, while handoff_w_offset around -0.44rad/s gives active/target errors about 1.77cm/1.37cm.",
+    "The required -0.44rad/s diagnostic offset is much larger than the visible sampled w value, so it should be read as missing angular/tangent native state or contact-row/cache state, not as a new proven managed formula.",
+    "For 12007, target reset offsets bring both endpoints under 2cm, which points at active/target relative entrance geometry rather than a hard PhysX formula mismatch for that sample."
+  ]
+}

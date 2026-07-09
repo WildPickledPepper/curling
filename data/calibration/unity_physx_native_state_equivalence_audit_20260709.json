@@ -1,0 +1,4335 @@
+{
+  "strong_identity_claim": "Unity first-contact native state equals local pyphysx state field-for-field",
+  "strong_identity_proven": false,
+  "conclusion": "Not proven, and the current evidence contradicts the strong identity claim. Existing evidence supports many high-level PhysX settings, but complete native-state identity has not been demonstrated. The current replay is not a field-for-field native-state match: historical probes differed in rink geometry, the triangle-mesh A/B test did not close the gap, per-sample entrance-state perturbations materially change the hard samples, and the most contact-relevant runtime fields have not been captured.",
+  "current_error_evidence": {
+    "unique_role_current_best_active_rmse_m": 0.03855842111554859,
+    "unique_role_current_best_target_rmse_m": 0.11323278407673086,
+    "unique_role_rink_mesh_target_rmse_m": 0.1282948173955916,
+    "unique_role_rink_mesh_active_rmse_m": 0.03861334700975624,
+    "oracle_target_only_rmse_m": 0.02147360390255492,
+    "oracle_pair_floor_rmse_m": 0.02205626784319635,
+    "impulse_residual_summary": {
+      "row_count": 8,
+      "ok_count": 7,
+      "skipped_count": 1,
+      "endpoint_rmse_m": 0.11323278407673086,
+      "delta_v_norm_rmse_mps": 0.04611871971635486,
+      "delta_v_norm_mean_mps": 0.0365963501097098,
+      "delta_v_normal_rmse_mps": 0.03281836832864608,
+      "delta_v_tangent_rmse_mps": 0.03240202167336195,
+      "required_impulse_norm_mean_Ns": 0.6989902870954573,
+      "required_impulse_norm_max_Ns": 1.7552071361977108,
+      "delta_v_fraction_of_early_speed_mean": 0.03497432693855882,
+      "dominant_delta_v_component_counts": {
+        "mixed": 1,
+        "tangent": 3,
+        "normal": 3
+      },
+      "tail_distance_scale_required_mean": 0.983340267253958,
+      "tail_distance_scale_required_median": 0.9997053459513888,
+      "tail_direction_delta_abs_deg_mean": 0.9101164286399401,
+      "tail_direction_delta_abs_deg_median": 0.3995820771499337,
+      "early_velocity_to_contact_abs_deg_mean": 3.180717601093559,
+      "contact_normal_to_unity_abs_deg_mean": 3.103096070705832
+    },
+    "pair_impulse_residual_summary": {
+      "row_count": 8,
+      "ok_count": 7,
+      "classification_counts": {
+        "pair_check_weak": 5,
+        "non_closing_pair": 2
+      },
+      "active_delta_rmse_mps": 0.21919709521677075,
+      "target_delta_rmse_mps": 0.04611871971635486,
+      "pair_delta_sum_mean_mps": 0.1338439905454554,
+      "pair_delta_sum_rmse_mps": 0.19197008345058877,
+      "pair_impulse_closure_fraction_mean": 0.7617616176005244,
+      "opposition_cosine_mean": 0.02240979332044259,
+      "equivalent_unbalanced_pair_impulse_mean_Ns": 2.556420219418199,
+      "normal_residual_rmse_mps": {
+        "active": 0.054359910427326845,
+        "target": 0.03281836832864608
+      },
+      "tangent_residual_rmse_mps": {
+        "active": 0.2123496331284871,
+        "target": 0.03240202167336195
+      }
+    },
+    "impulse_feasibility_summary": {
+      "row_count": 8,
+      "ok_count": 7,
+      "classification_counts": {
+        "mixed_contact_manifold_suspect": 1,
+        "friction_row_or_cache_suspect": 3,
+        "normal_row_plausible": 3
+      },
+      "normal_sign_counts": {
+        "unity_needs_more_normal": 3,
+        "unity_needs_less_normal": 4
+      },
+      "cone_counts_mu_multiply": {
+        "outside_residual_cone": 4,
+        "inside_residual_cone": 3
+      },
+      "cone_counts_mu_raw": {
+        "outside_residual_cone": 4,
+        "inside_residual_cone": 3
+      },
+      "abs_tangent_over_abs_normal_mean": 4.051034655220231,
+      "support_gap_mu_multiply_rmse_Ns": 1.466919887744497,
+      "support_gap_mu_raw_rmse_Ns": 0.8596510842180773,
+      "normal_impulse_rmse_Ns": 0.6268308350771403,
+      "tangent_impulse_rmse_Ns": 0.6188786139612135
+    },
+    "impulse_feasibility_interpretation": [
+      "normal_row_plausible points at normal row magnitude, restitution, separation bias, or contact normal.",
+      "friction_row_or_cache_suspect means tangent residual dominates and exceeds even a generous residual friction cone; this points at friction anchors/cache/tangent basis/contact points rather than restitution alone.",
+      "mixed_contact_manifold_suspect means normal and tangent both matter, so first ContactBuffer plus solver rows are needed.",
+      "The residual impulse is a difference between Unity and local solves, so cone violations are not formal impossibility proofs; they are prioritization evidence."
+    ],
+    "local_impulse_trace_summary": {
+      "row_count": 8,
+      "ok_count": 7,
+      "main_interval_counts": {
+        "0.00-0.01": 7
+      },
+      "local_target_impulse_norm_mean_Ns": 19.30596863139187,
+      "local_target_impulse_norm_rmse_Ns": 19.806812691665453,
+      "unity_required_impulse_norm_mean_Ns": 0.6989902870954573,
+      "unity_required_impulse_norm_rmse_Ns": 0.8808675465823778,
+      "residual_fraction_mean": 0.03497432693855882,
+      "residual_fraction_rmse": 0.042026419014378556,
+      "unity_implied_normal_scale_mean": 0.983056478333034,
+      "unity_implied_normal_scale_rmse_from_1": 0.033296414231767726,
+      "unity_implied_tangent_scale_mean": 0.78870375165655,
+      "unity_implied_tangent_sign_flip_count": 1,
+      "same_dominant_axis_count": 3
+    },
+    "local_impulse_trace_interpretation": [
+      "The local target impulse is estimated from consecutive snapshot velocity differences, so it includes solver output plus support/friction integration effects.",
+      "A residual_fraction around a few percent means the endpoint gap is a small row/manifold perturbation of the local collision impulse, not a wholly different collision event.",
+      "Dominant-axis disagreement points at friction tangent basis/contact point/cache differences; dominant normal residuals point at normal row magnitude, normal, restitution, or separation bias."
+    ],
+    "friction_offset_refresh_summary": {
+      "best_by_target_rmse": {
+        "friction_offset_threshold": 0.005,
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086,
+        "sample_12003_target_error_m": 0.24572499750997046,
+        "sample_12003_sim_target": [
+          2.650664806365967,
+          2.787033796310425
+        ]
+      },
+      "rows": [
+        {
+          "friction_offset_threshold": 0.001,
+          "active_rmse_m": 0.03616222416305672,
+          "target_in_play_rmse_m": 0.1259901811578351,
+          "sample_12003_target_error_m": 0.26520480831379745,
+          "sample_12003_sim_target": [
+            2.6527578830718994,
+            2.7526681423187256
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.005,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.01,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.02,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.04,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.08,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        {
+          "friction_offset_threshold": 0.12,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        }
+      ],
+      "interpretation": "frictionOffsetThreshold is not the current missing lever: thresholds >=0.005 reproduce the current-best endpoint errors exactly, while 0.001 worsens target RMSE.",
+      "baseline_like_thresholds": [
+        0.005,
+        0.01,
+        0.02,
+        0.04,
+        0.08,
+        0.12
+      ]
+    },
+    "tail_replay_oracle_002s_summary": {
+      "row_count": 7,
+      "ok_count": 7,
+      "baseline_tail_vs_local_full_rmse_m": 0.030551273068722542,
+      "baseline_tail_vs_unity_rmse_m": 0.12266015697923287,
+      "local_full_vs_unity_rmse_m": 0.11323278407673086,
+      "corrected_tail_vs_unity_rmse_m": 0.07703944512911823,
+      "corrected_tail_vs_unity_mean_m": 0.06626951118170209,
+      "corrected_tail_over_2cm_count": 7,
+      "oracle_linear_tail_vs_unity_rmse_m": 0.0008986725445721657,
+      "oracle_linear_tail_vs_unity_mean_m": 0.0007092441112307498,
+      "oracle_linear_tail_over_2cm_count": 0,
+      "oracle_linear_delta_v_norm_mean_mps": 0.025568876102530818,
+      "oracle_linear_delta_v_norm_rmse_mps": 0.03976346313932115,
+      "oracle_linear_delta_v_normal_rmse_mps": 0.016646896077198246,
+      "oracle_linear_delta_v_tangent_rmse_mps": 0.036111131965463415,
+      "oracle_linear_delta_v_component_counts": {
+        "normal": 3,
+        "tangent": 3,
+        "mixed": 1
+      },
+      "baseline_tail_vs_local_full_mean_m": 0.02697005416549759
+    },
+    "tail_replay_oracle_020s_summary": {
+      "row_count": 7,
+      "ok_count": 7,
+      "baseline_tail_vs_local_full_rmse_m": 0.02288187281022231,
+      "baseline_tail_vs_unity_rmse_m": 0.11932548948666878,
+      "local_full_vs_unity_rmse_m": 0.11323278407673086,
+      "corrected_tail_vs_unity_rmse_m": 0.07249630691555534,
+      "corrected_tail_vs_unity_mean_m": 0.05971987372077488,
+      "corrected_tail_over_2cm_count": 7,
+      "oracle_linear_tail_vs_unity_rmse_m": 0.0005049179893320433,
+      "oracle_linear_tail_vs_unity_mean_m": 0.0003537220668025413,
+      "oracle_linear_tail_over_2cm_count": 0,
+      "oracle_linear_delta_v_norm_mean_mps": 0.02616202257416589,
+      "oracle_linear_delta_v_norm_rmse_mps": 0.03973315868674914,
+      "oracle_linear_delta_v_normal_rmse_mps": 0.01727998856860031,
+      "oracle_linear_delta_v_tangent_rmse_mps": 0.035778847023002734,
+      "oracle_linear_delta_v_component_counts": {
+        "normal": 3,
+        "tangent": 4,
+        "mixed": 0
+      },
+      "baseline_tail_vs_local_full_mean_m": 0.020132703576503264
+    },
+    "tail_replay_oracle_interpretation": [
+      "baseline_tail_vs_local_full checks whether a fresh target-only scene can reproduce the original local full replay from the chosen snapshot.",
+      "corrected_tail_vs_unity checks whether replacing only the target's horizontal velocity by the Unity-implied velocity is enough to land near Unity's endpoint.",
+      "oracle_linear_tail_vs_unity uses finite differences through the actual pyphysx tail replay to find the best local target vx/vy correction.",
+      "If baseline_tail_vs_local_full is small and corrected_tail_vs_unity is around 2cm, the tail physics is not the main mismatch; the missing state is before the chosen snapshot, i.e. contact/solver output."
+    ],
+    "solver_row_delta_002s_summary": {
+      "row_count": 7,
+      "ok_count": 7,
+      "endpoint_before_rmse_m": 0.11323278407673086,
+      "endpoint_after_tail_oracle_rmse_m": 0.0008986725445721657,
+      "delta_impulse_norm_mean_Ns": 0.4883655335583387,
+      "delta_impulse_norm_rmse_Ns": 0.759482145961034,
+      "delta_fraction_of_local_impulse_mean": 0.023493983266857865,
+      "delta_fraction_of_local_impulse_rmse": 0.03335150835759659,
+      "normal_scale_mean": 0.9916870638508605,
+      "normal_scale_rmse_from_1": 0.016730513647997942,
+      "tangent_scale_mean": 0.30704453763651823,
+      "impulse_angle_delta_abs_mean_deg": 0.9550967037308956,
+      "impulse_angle_delta_abs_rmse_deg": 1.6721461131655133,
+      "classification_counts": {
+        "friction_row_contact_point_or_cache": 2,
+        "mixed_contact_manifold": 1,
+        "tangent_sign_flip_contact_basis_or_cache": 1,
+        "normal_row_magnitude_or_separation_bias": 3
+      },
+      "delta_dominant_axis_counts": {
+        "tangent": 3,
+        "mixed": 1,
+        "normal": 3
+      }
+    },
+    "solver_row_delta_020s_summary": {
+      "row_count": 7,
+      "ok_count": 7,
+      "endpoint_before_rmse_m": 0.11323278407673086,
+      "endpoint_after_tail_oracle_rmse_m": 0.0005049179893320433,
+      "delta_impulse_norm_mean_Ns": 0.4996946311665686,
+      "delta_impulse_norm_rmse_Ns": 0.7589033309169088,
+      "delta_fraction_of_local_impulse_mean": 0.023937555079273896,
+      "delta_fraction_of_local_impulse_rmse": 0.033333993860225196,
+      "normal_scale_mean": 0.9912536132459184,
+      "normal_scale_rmse_from_1": 0.017391224538893725,
+      "tangent_scale_mean": 0.41350805823096426,
+      "impulse_angle_delta_abs_mean_deg": 0.9468011923329472,
+      "impulse_angle_delta_abs_rmse_deg": 1.6443389585893773,
+      "classification_counts": {
+        "friction_row_contact_point_or_cache": 3,
+        "tangent_sign_flip_contact_basis_or_cache": 1,
+        "normal_row_magnitude_or_separation_bias": 3
+      },
+      "delta_dominant_axis_counts": {
+        "tangent": 4,
+        "normal": 3
+      }
+    },
+    "solver_row_delta_interpretation": [
+      "The tail oracle makes the endpoint match by only changing target vx/vy; this report maps that change back into the first contact frame.",
+      "A tangent_sign_flip classification means the local friction/contact-point basis is qualitatively wrong for that sample, not merely slightly scaled.",
+      "normal_row classifications point at contact normal, separation bias, restitution or normal applied-force magnitude.",
+      "friction_row classifications point at tangent basis, friction anchors/cache or contact point angular coupling."
+    ],
+    "row_correction_models_002s_summary": {
+      "best_model": "per_sample_oracle",
+      "oracle": {
+        "model": "per_sample_oracle",
+        "endpoint_rmse_m": 0.0008986725445721657,
+        "endpoint_over_2cm_count": 0,
+        "impulse_residual_rmse_Ns": 0.0
+      },
+      "best_non_oracle": {
+        "model": "global_full_2x2_linear",
+        "endpoint_rmse_m": 0.10238862206574004,
+        "endpoint_over_2cm_count": 7,
+        "impulse_residual_rmse_Ns": 0.6379707604733544
+      },
+      "top_models": [
+        {
+          "model": "per_sample_oracle",
+          "endpoint_rmse_m": 0.0008986725445721657,
+          "endpoint_over_2cm_count": 0,
+          "impulse_residual_rmse_Ns": 0.0
+        },
+        {
+          "model": "global_full_2x2_linear",
+          "endpoint_rmse_m": 0.10238862206574004,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6379707604733544
+        },
+        {
+          "model": "global_nt_scale_plus_rotation_term",
+          "endpoint_rmse_m": 0.10586830593978538,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6587828676721899
+        },
+        {
+          "model": "global_uniform_scale_rotation",
+          "endpoint_rmse_m": 0.10607979647998442,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6621179707460295
+        },
+        {
+          "model": "global_constant_impulse_offset",
+          "endpoint_rmse_m": 0.10651312627774219,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6801537436193893
+        },
+        {
+          "model": "global_rotation_only",
+          "endpoint_rmse_m": 0.11281739017347332,
+          "endpoint_over_2cm_count": 6,
+          "impulse_residual_rmse_Ns": 0.6843494591119068
+        }
+      ],
+      "interpretation": "Only the per-sample oracle reaches 2cm. Even the deliberately generous global 2x2 contact-frame transform remains around 10cm RMSE, so a single global row correction cannot explain the residual."
+    },
+    "row_correction_models_020s_summary": {
+      "best_model": "per_sample_oracle",
+      "oracle": {
+        "model": "per_sample_oracle",
+        "endpoint_rmse_m": 0.0005049179893320433,
+        "endpoint_over_2cm_count": 0,
+        "impulse_residual_rmse_Ns": 0.0
+      },
+      "best_non_oracle": {
+        "model": "global_full_2x2_linear",
+        "endpoint_rmse_m": 0.10221137788024247,
+        "endpoint_over_2cm_count": 5,
+        "impulse_residual_rmse_Ns": 0.6506344245811809
+      },
+      "top_models": [
+        {
+          "model": "per_sample_oracle",
+          "endpoint_rmse_m": 0.0005049179893320433,
+          "endpoint_over_2cm_count": 0,
+          "impulse_residual_rmse_Ns": 0.0
+        },
+        {
+          "model": "global_full_2x2_linear",
+          "endpoint_rmse_m": 0.10221137788024247,
+          "endpoint_over_2cm_count": 5,
+          "impulse_residual_rmse_Ns": 0.6506344245811809
+        },
+        {
+          "model": "global_uniform_scale_rotation",
+          "endpoint_rmse_m": 0.1052016410716301,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6742859731987384
+        },
+        {
+          "model": "global_constant_impulse_offset",
+          "endpoint_rmse_m": 0.10586033022131519,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6891174521313144
+        },
+        {
+          "model": "global_nt_scale_plus_rotation_term",
+          "endpoint_rmse_m": 0.10607199277651959,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.6717872961880902
+        },
+        {
+          "model": "global_nt_scale",
+          "endpoint_rmse_m": 0.1113681392841778,
+          "endpoint_over_2cm_count": 7,
+          "impulse_residual_rmse_Ns": 0.7240495427040383
+        }
+      ],
+      "interpretation": "Only the per-sample oracle reaches 2cm. Even the deliberately generous global 2x2 contact-frame transform remains around 10cm RMSE, so a single global row correction cannot explain the residual."
+    },
+    "contact_frame_quantization_hull_summary": {
+      "side_face_count": 64,
+      "side_normal_step_deg": 5.625,
+      "half_side_step_deg": 2.8125,
+      "world_radius_minus_apothem_m": 0.0001697054833084848,
+      "side_angle_phase_deg": -2.81251099
+    },
+    "contact_frame_quantization_summary": {
+      "row_count": 7,
+      "required_angle_delta_abs_mean_deg": 0.9550967037308956,
+      "required_angle_delta_abs_rmse_deg": 1.6721461131655133,
+      "required_angle_delta_abs_max_deg": 4.252687885289685,
+      "required_angle_delta_abs_mean_side_steps": 0.1697949695521592,
+      "implied_to_side_face_abs_mean_deg": 1.0962025425094626,
+      "feature_switch_like_count": 3,
+      "crosses_toward_center_side_face_cell_count": 0
+    },
+    "contact_frame_quantization_interpretation": [
+      "The formal cooked hull is a 64-sided prism, so adjacent side-face normals are 5.625 degrees apart.",
+      "A required impulse-angle delta of several degrees is the same order as a side-face/edge feature switch, not a small floating-point drift.",
+      "12003 moving from the center-line frame toward the neighboring side-face normal supports a contact feature/tangent-basis/cache explanation."
+    ],
+    "feature_phase_summary": {
+      "best_sample12003_error_across_feature_phase_probes_m": 0.1929186177879362,
+      "reaches_2cm": false,
+      "interpretation": "Static hull phase, actor yaw, simple shape-local offsets, and input stone face count do not explain the hard 12003 residual. The best local static feature probe remains around 19cm, far above the 2cm target. This supports a runtime contact-manifold, friction-anchor/cache, or solver-row instance difference rather than a single static shape phase or topology knob."
+    },
+    "feature_phase_evidence_notes": [
+      "common shape-local yaw +/- half side step improves 12003 only to about 20cm and leaves global target RMSE around 12cm.",
+      "sample12003 fine shape-local yaw does not reveal a hidden phase valley near 2cm.",
+      "sample12003 active/target actor yaw over +/-11.25deg also bottoms around 20cm.",
+      "sample12003 stone-faces sweep changes contact behavior but bottoms around 19cm.",
+      "These are local pyphysx probes only; they rule out static replay knobs, not the need for Unity runtime ContactBuffer/solver-row capture."
+    ],
+    "rotation_reset_summary": {
+      "row_count": 487,
+      "best_target_error_m": 0.017530962407189186,
+      "best_pair_rmse_m": 0.03409371324332975,
+      "best_active_error_m": 0.006648823646249384,
+      "target_within_2cm_count": 1,
+      "pair_within_2cm_count": 0,
+      "both_endpoints_within_2cm_count": 0,
+      "interpretation": "Large vertical yaw is a real contact-feature lever for hard sample 12003: it can bring the target endpoint to about 1.75cm, unlike the small +/-11.25deg yaw grid. However, the same yaw settings leave active around 4-7cm, and no tested yaw pair gets the pair RMSE or both endpoints under 2cm. This makes reset yaw/rotation a plausible missing runtime state, but not a complete collision alignment by itself.",
+      "target_yaw_only_oracle_target_rmse_m": 0.053666473508266026,
+      "target_yaw_only_oracle_pair_rmse_m": 0.04791778756070653,
+      "hard_sample_dual_yaw_best_pair_rmse_m": {
+        "12003": 0.03409371324332975,
+        "12004": 0.04468047372600473,
+        "12007": 0.05566744379648056
+      }
+    },
+    "rotation_reset_best_target": {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 32,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -14.062500000000025,
+      "target_yaw_deg": 104.06250000000006,
+      "active_error_m": 0.0688384750230107,
+      "target_error_m": 0.017530962407189186,
+      "pair_rmse_m": 0.05022982324484105,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3293089866638184,
+        6.478721618652344
+      ],
+      "sim_target": [
+        2.8493502140045166,
+        2.9096920490264893
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    "rotation_reset_best_pair": {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 12,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -19.68750000000002,
+      "target_yaw_deg": 98.43750000000011,
+      "active_error_m": 0.0435423113210377,
+      "target_error_m": 0.020708203453188048,
+      "pair_rmse_m": 0.03409371324332975,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3025400638580322,
+        6.483252048492432
+      ],
+      "sim_target": [
+        2.8362162113189697,
+        2.93943452835083
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    "rotation_reset_target_yaw_only_oracle": {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+      "sample_count": 7,
+      "target_rmse_m": 0.053666473508266026,
+      "active_rmse_m": 0.04137799355469744,
+      "pair_rmse_m": 0.04791778756070653,
+      "target_over_2cm_sample_ids": [
+        12004,
+        12005,
+        12007
+      ],
+      "pair_over_2cm_sample_ids": [
+        12003,
+        12004,
+        12005,
+        12007
+      ],
+      "best_by_sample": {
+        "12000": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 30,
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -11.249999999999996,
+          "active_error_m": 0.009879923804654436,
+          "target_error_m": 0.011712465324113021,
+          "pair_rmse_m": 0.010835006653305002,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.3451895713806152,
+            5.490835666656494
+          ],
+          "sim_target": [
+            2.4655239582061768,
+            3.849487781524658
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        "12002": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 31,
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -5.624999999999998,
+          "active_error_m": 0.006241934273292546,
+          "target_error_m": 0.007238657039248426,
+          "pair_rmse_m": 0.006758694371103228,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.3450117111206055,
+            6.48905611038208
+          ],
+          "sim_target": [
+            2.4756667613983154,
+            4.501638412475586
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        "12003": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 15,
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -95.62500000000014,
+          "active_error_m": 0.07306813687185486,
+          "target_error_m": 0.002667494409298522,
+          "pair_rmse_m": 0.05170139336781822,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.333759069442749,
+            6.4769134521484375
+          ],
+          "sim_target": [
+            2.855367422103882,
+            2.926880359649658
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "12004": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 25,
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -39.374999999999986,
+          "active_error_m": 0.04280868463637605,
+          "target_error_m": 0.1293353078931587,
+          "pair_rmse_m": 0.09633328954238732,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.3680012226104736,
+            8.252721786499023
+          ],
+          "sim_target": [
+            2.596822500228882,
+            5.900172710418701
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "12005": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 63,
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": 174.3749999999999,
+          "active_error_m": 0.01687550245174858,
+          "target_error_m": 0.024021141220844137,
+          "pair_rmse_m": 0.02075810454437868,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.334348440170288,
+            8.290197372436523
+          ],
+          "sim_target": [
+            2.672757387161255,
+            3.733457088470459
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        "12006": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 2,
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -168.74999999999994,
+          "active_error_m": 0.009846307195696952,
+          "target_error_m": 0.014884191050349651,
+          "pair_rmse_m": 0.012619209733880768,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.7473042011260986,
+            6.21107292175293
+          ],
+          "sim_target": [
+            1.4594347476959229,
+            4.695592403411865
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        "12007": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+          "result_index": 37,
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": 28.12499999999999,
+          "active_error_m": 0.06553720593539505,
+          "target_error_m": 0.04937368620000618,
+          "pair_rmse_m": 0.0580210576032317,
+          "unity_target_in_play": true,
+          "sim_active": [
+            1.8360378742218018,
+            5.886615753173828
+          ],
+          "sim_target": [
+            3.194816827774048,
+            5.283088684082031
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      },
+      "interpretation": "Per-sample target-yaw-only oracle reduces several target endpoints, showing hidden/reset yaw is a real state lever. It still leaves hard samples above 2cm and does not close active+target pairs."
+    },
+    "rotation_reset_hard_sample_dual_yaw": {
+      "12003": {
+        "row_count": 487,
+        "best_target_error_m": 0.017530962407189186,
+        "best_pair_rmse_m": 0.03409371324332975,
+        "best_active_error_m": 0.006648823646249384,
+        "target_within_2cm_count": 1,
+        "pair_within_2cm_count": 0,
+        "both_endpoints_within_2cm_count": 0,
+        "probe_files": [
+          "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+          "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+          "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json"
+        ],
+        "best_target": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+          "result_index": 32,
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "active_yaw_deg": -14.062500000000025,
+          "target_yaw_deg": 104.06250000000006,
+          "active_error_m": 0.0688384750230107,
+          "target_error_m": 0.017530962407189186,
+          "pair_rmse_m": 0.05022982324484105,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.3293089866638184,
+            6.478721618652344
+          ],
+          "sim_target": [
+            2.8493502140045166,
+            2.9096920490264893
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "best_pair": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+          "result_index": 12,
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "active_yaw_deg": -19.68750000000002,
+          "target_yaw_deg": 98.43750000000011,
+          "active_error_m": 0.0435423113210377,
+          "target_error_m": 0.020708203453188048,
+          "pair_rmse_m": 0.03409371324332975,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.3025400638580322,
+            6.483252048492432
+          ],
+          "sim_target": [
+            2.8362162113189697,
+            2.93943452835083
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "best_active": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+          "result_index": 29,
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "active_yaw_deg": -14.062500000000025,
+          "target_yaw_deg": 95.62500000000014,
+          "active_error_m": 0.006648823646249384,
+          "target_error_m": 0.1228317383562639,
+          "pair_rmse_m": 0.08698230510713256,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.2547688484191895,
+            6.472519397735596
+          ],
+          "sim_target": [
+            2.890564441680908,
+            2.8100500106811523
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        }
+      },
+      "12004": {
+        "row_count": 289,
+        "best_target_error_m": 0.061096657467716295,
+        "best_pair_rmse_m": 0.04468047372600473,
+        "best_active_error_m": 0.004272207201799096,
+        "target_within_2cm_count": 0,
+        "pair_within_2cm_count": 0,
+        "both_endpoints_within_2cm_count": 0,
+        "probe_files": [
+          "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json"
+        ],
+        "best_target": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+          "result_index": 248,
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "active_yaw_deg": 134.99999999999972,
+          "target_yaw_deg": 44.999999999999986,
+          "active_error_m": 0.016121039390589686,
+          "target_error_m": 0.061096657467716295,
+          "pair_rmse_m": 0.04468047372600473,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.342848300933838,
+            8.264995574951172
+          ],
+          "sim_target": [
+            2.5214149951934814,
+            5.7284674644470215
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "best_pair": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+          "result_index": 248,
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "active_yaw_deg": 134.99999999999972,
+          "target_yaw_deg": 44.999999999999986,
+          "active_error_m": 0.016121039390589686,
+          "target_error_m": 0.061096657467716295,
+          "pair_rmse_m": 0.04468047372600473,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.342848300933838,
+            8.264995574951172
+          ],
+          "sim_target": [
+            2.5214149951934814,
+            5.7284674644470215
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "best_active": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+          "result_index": 154,
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "active_yaw_deg": 22.499999999999993,
+          "target_yaw_deg": -157.50000000000006,
+          "active_error_m": 0.004272207201799096,
+          "target_error_m": 0.11368504748506475,
+          "pair_rmse_m": 0.08044420978559157,
+          "unity_target_in_play": true,
+          "sim_active": [
+            2.336604118347168,
+            8.281237602233887
+          ],
+          "sim_target": [
+            2.6406848430633545,
+            5.697022438049316
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        }
+      },
+      "12007": {
+        "row_count": 289,
+        "best_target_error_m": 0.06546744080300343,
+        "best_pair_rmse_m": 0.05566744379648056,
+        "best_active_error_m": 0.016714685931224424,
+        "target_within_2cm_count": 0,
+        "pair_within_2cm_count": 0,
+        "both_endpoints_within_2cm_count": 0,
+        "probe_files": [
+          "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json"
+        ],
+        "best_target": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+          "result_index": 0,
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "active_yaw_deg": -179.99999999999983,
+          "target_yaw_deg": -179.99999999999983,
+          "active_error_m": 0.04374813365085991,
+          "target_error_m": 0.06546744080300343,
+          "pair_rmse_m": 0.05567712727515788,
+          "unity_target_in_play": true,
+          "sim_active": [
+            1.8031314611434937,
+            5.898976802825928
+          ],
+          "sim_target": [
+            3.277888298034668,
+            5.206654071807861
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        "best_pair": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+          "result_index": 136,
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "active_yaw_deg": 0.0,
+          "target_yaw_deg": -179.99999999999983,
+          "active_error_m": 0.04372186367527444,
+          "target_error_m": 0.06546852094273523,
+          "pair_rmse_m": 0.05566744379648056,
+          "unity_target_in_play": true,
+          "sim_active": [
+            1.803343653678894,
+            5.898745536804199
+          ],
+          "sim_target": [
+            3.2779154777526855,
+            5.206674098968506
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        "best_active": {
+          "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+          "result_index": 122,
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "active_yaw_deg": -22.499999999999993,
+          "target_yaw_deg": -112.49999999999996,
+          "active_error_m": 0.016714685931224424,
+          "target_error_m": 8.422328804234299,
+          "pair_rmse_m": 5.955497538718346,
+          "unity_target_in_play": true,
+          "sim_active": [
+            1.7816025018692017,
+            5.852025508880615
+          ],
+          "sim_target": [
+            6.64051628112793,
+            -2.44608211517334
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      }
+    },
+    "integrated_active_yaw_summary": {
+      "baseline": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086
+      },
+      "best_integrated_by_target_rmse": {
+        "active_yaw_integral_sign": 1.0,
+        "active_rmse_m": 0.04123224623908148,
+        "target_in_play_rmse_m": 0.16295920665205238,
+        "target_delta_vs_baseline_m": 0.04972642257532152,
+        "integrated_yaw_deg_rmse": 6.040898269587641,
+        "rows": [
+          {
+            "sample_id": 12000,
+            "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+            "effective_active_yaw_deg": 14.200426921891763,
+            "integrated_yaw_deg": 14.200426921891763,
+            "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+            "motioninfo_to_handoff_yaw_deg": 12.686091770321994,
+            "active_error_m": 0.03157236879950192,
+            "target_error_m": 0.2968898071452578
+          },
+          {
+            "sample_id": 12002,
+            "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+            "effective_active_yaw_deg": 5.142053501497851,
+            "integrated_yaw_deg": 5.142053501497851,
+            "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+            "motioninfo_to_handoff_yaw_deg": 3.627718349928081,
+            "active_error_m": 0.007303584573279132,
+            "target_error_m": 0.018515716821534415
+          },
+          {
+            "sample_id": 12003,
+            "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+            "effective_active_yaw_deg": 2.2356934010293568,
+            "integrated_yaw_deg": 2.2356934010293568,
+            "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+            "motioninfo_to_handoff_yaw_deg": 0.9479743287669267,
+            "active_error_m": 0.08379051821729175,
+            "target_error_m": 0.2705696979122266
+          },
+          {
+            "sample_id": 12004,
+            "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+            "effective_active_yaw_deg": 2.4401687283555735,
+            "integrated_yaw_deg": 2.4401687283555735,
+            "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+            "motioninfo_to_handoff_yaw_deg": 0.9258335767858036,
+            "active_error_m": 0.014585920127925403,
+            "target_error_m": 0.11215056891945534
+          },
+          {
+            "sample_id": 12005,
+            "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+            "effective_active_yaw_deg": 2.1542967007518614,
+            "integrated_yaw_deg": 2.1542967007518614,
+            "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+            "motioninfo_to_handoff_yaw_deg": 0.8665776284894317,
+            "active_error_m": 0.01719400817012524,
+            "target_error_m": 0.08108103396775256
+          },
+          {
+            "sample_id": 12006,
+            "label": "collision_glance_left_target_active_a06_target_t14_r00",
+            "effective_active_yaw_deg": 2.4246398439871735,
+            "integrated_yaw_deg": 2.4246398439871735,
+            "release_to_motioninfo_yaw_deg": 1.431704972521317,
+            "motioninfo_to_handoff_yaw_deg": 0.9929348714658566,
+            "active_error_m": 0.00727068111232749,
+            "target_error_m": 0.026693531851160933
+          },
+          {
+            "sample_id": 12007,
+            "label": "collision_glance_right_target_active_a07_target_t15_r00",
+            "effective_active_yaw_deg": 2.4252223184943023,
+            "integrated_yaw_deg": 2.4252223184943023,
+            "release_to_motioninfo_yaw_deg": 1.431704972521317,
+            "motioninfo_to_handoff_yaw_deg": 0.9935173459729856,
+            "active_error_m": 0.04411084738471914,
+            "target_error_m": 0.06581140952191125
+          }
+        ]
+      },
+      "interpretation": [
+        "The simple recovered-motion yaw integration gives only about 2deg for most hard samples and about 14deg for 12000.",
+        "Using +integrated yaw worsens target RMSE from about 11.32cm to about 16.30cm; -integrated yaw is much worse.",
+        "This rules out a simple missing active visible-spin phase as the global 10cm source.",
+        "Wide-yaw improvements remain best interpreted as contact-feature/manifold compensation or runtime carryover not captured by this deterministic yaw integral."
+      ]
+    },
+    "support_contact_settle_probes": [
+      {
+        "label": "settle_grid_zpreserve",
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_settle_grid_zpreserve_20260709.json",
+        "status": "ok",
+        "best_by_target_rmse": {
+          "result_index": 0,
+          "center_height": 0.1276,
+          "target_settle_time": 0.0,
+          "active_settle_time": 0.0,
+          "active_settle_backoff": 0.5,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "combined_rmse_m": 0.08231875381295352,
+          "sample_12003_target_error_m": 0.24572499750997046,
+          "sample_12003_sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ]
+        },
+        "best_by_12003": {
+          "result_index": 1,
+          "center_height": 0.1276,
+          "target_settle_time": 0.0,
+          "active_settle_time": 1.0,
+          "active_settle_backoff": 0.5,
+          "active_rmse_m": 0.03944412680001889,
+          "target_in_play_rmse_m": 0.11444965880932131,
+          "combined_rmse_m": 0.08332177943495853,
+          "sample_12003_target_error_m": 0.24310151548923012,
+          "sample_12003_sim_target": [
+            2.6581239700317383,
+            2.781165599822998
+          ]
+        },
+        "rows": [
+          {
+            "result_index": 0,
+            "center_height": 0.1276,
+            "target_settle_time": 0.0,
+            "active_settle_time": 0.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03855842111554859,
+            "target_in_play_rmse_m": 0.11323278407673086,
+            "combined_rmse_m": 0.08231875381295352,
+            "sample_12003_target_error_m": 0.24572499750997046,
+            "sample_12003_sim_target": [
+              2.650664806365967,
+              2.787033796310425
+            ]
+          },
+          {
+            "result_index": 1,
+            "center_height": 0.1276,
+            "target_settle_time": 0.0,
+            "active_settle_time": 1.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03944412680001889,
+            "target_in_play_rmse_m": 0.11444965880932131,
+            "combined_rmse_m": 0.08332177943495853,
+            "sample_12003_target_error_m": 0.24310151548923012,
+            "sample_12003_sim_target": [
+              2.6581239700317383,
+              2.781165599822998
+            ]
+          },
+          {
+            "result_index": 2,
+            "center_height": 0.1276,
+            "target_settle_time": 1.0,
+            "active_settle_time": 0.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.037881806963449366,
+            "target_in_play_rmse_m": 0.11506625506008454,
+            "combined_rmse_m": 0.08333144735148325,
+            "sample_12003_target_error_m": 0.25044022862554033,
+            "sample_12003_sim_target": [
+              2.648613691329956,
+              2.781748056411743
+            ]
+          },
+          {
+            "result_index": 3,
+            "center_height": 0.1276,
+            "target_settle_time": 1.0,
+            "active_settle_time": 1.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03826168584165808,
+            "target_in_play_rmse_m": 0.11509637602397885,
+            "combined_rmse_m": 0.08344334734598392,
+            "sample_12003_target_error_m": 0.24907366060335523,
+            "sample_12003_sim_target": [
+              2.6506359577178955,
+              2.781270980834961
+            ]
+          }
+        ]
+      },
+      {
+        "label": "settle_grid_center115",
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_settle_grid_center115_20260709.json",
+        "status": "ok",
+        "best_by_target_rmse": {
+          "result_index": 0,
+          "center_height": 0.115,
+          "target_settle_time": 0.0,
+          "active_settle_time": 0.0,
+          "active_settle_backoff": 0.5,
+          "active_rmse_m": 0.038951533300064074,
+          "target_in_play_rmse_m": 0.11322073800000527,
+          "combined_rmse_m": 0.08240967749169142,
+          "sample_12003_target_error_m": 0.24527101854248576,
+          "sample_12003_sim_target": [
+            2.6513545513153076,
+            2.7868361473083496
+          ]
+        },
+        "best_by_12003": {
+          "result_index": 0,
+          "center_height": 0.115,
+          "target_settle_time": 0.0,
+          "active_settle_time": 0.0,
+          "active_settle_backoff": 0.5,
+          "active_rmse_m": 0.038951533300064074,
+          "target_in_play_rmse_m": 0.11322073800000527,
+          "combined_rmse_m": 0.08240967749169142,
+          "sample_12003_target_error_m": 0.24527101854248576,
+          "sample_12003_sim_target": [
+            2.6513545513153076,
+            2.7868361473083496
+          ]
+        },
+        "rows": [
+          {
+            "result_index": 0,
+            "center_height": 0.115,
+            "target_settle_time": 0.0,
+            "active_settle_time": 0.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.038951533300064074,
+            "target_in_play_rmse_m": 0.11322073800000527,
+            "combined_rmse_m": 0.08240967749169142,
+            "sample_12003_target_error_m": 0.24527101854248576,
+            "sample_12003_sim_target": [
+              2.6513545513153076,
+              2.7868361473083496
+            ]
+          },
+          {
+            "result_index": 1,
+            "center_height": 0.115,
+            "target_settle_time": 0.0,
+            "active_settle_time": 1.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03866051189603391,
+            "target_in_play_rmse_m": 0.11484600976334493,
+            "combined_rmse_m": 0.08338038264501758,
+            "sample_12003_target_error_m": 0.24830409457738864,
+            "sample_12003_sim_target": [
+              2.6517133712768555,
+              2.7810943126678467
+            ]
+          },
+          {
+            "result_index": 2,
+            "center_height": 0.115,
+            "target_settle_time": 1.0,
+            "active_settle_time": 0.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03866955821335113,
+            "target_in_play_rmse_m": 0.11430657655843442,
+            "combined_rmse_m": 0.08303598897301122,
+            "sample_12003_target_error_m": 0.24740596093480388,
+            "sample_12003_sim_target": [
+              2.6509594917297363,
+              2.7836852073669434
+            ]
+          },
+          {
+            "result_index": 3,
+            "center_height": 0.115,
+            "target_settle_time": 1.0,
+            "active_settle_time": 1.0,
+            "active_settle_backoff": 0.5,
+            "active_rmse_m": 0.03825763544120702,
+            "target_in_play_rmse_m": 0.11516706766570886,
+            "combined_rmse_m": 0.08348786246293295,
+            "sample_12003_target_error_m": 0.2494611476306374,
+            "sample_12003_sim_target": [
+              2.6501874923706055,
+              2.7812306880950928
+            ]
+          }
+        ]
+      }
+    ],
+    "support_contact_interpretation": [
+      "Unity assets show formal stones use gravity, and pyphysx Scene uses z gravity -9.81.",
+      "Disabling gravity removes rink friction/support and makes endpoint errors catastrophic, so gravity/support contact is required.",
+      "Starting at center_height=0.115 removes the 0.02s vertical velocity but does not improve target RMSE, so vertical settling velocity alone is not the 10cm source.",
+      "Pre-settling target and/or active stones on the rink before collision does not improve the global target RMSE; the no-settle baseline remains best in the current diagnostic grids.",
+      "Remaining mismatch is more likely in stone-stone contact manifold/solver rows than in gross rink support state."
+    ],
+    "stone_geometry_input_summary": {
+      "comparisons": {
+        "current_best_scale_ring": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "missing": false,
+          "stone_geometry": "ring",
+          "formal_stone_scale": null,
+          "radius": 0.146,
+          "height": 0.23,
+          "center_height": 0.1276,
+          "handoff_extra": 0.0,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "combined_rmse_m": 0.08231875381295352,
+          "target_cleared_count": 1
+        },
+        "current_best_scale_recovered_mesh": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_currentbest_scale_20260709.json",
+          "missing": false,
+          "stone_geometry": "formal-recovered",
+          "formal_stone_scale": [
+            0.1168,
+            0.115,
+            0.1168
+          ],
+          "radius": 0.146,
+          "height": 0.23,
+          "center_height": 0.1276,
+          "handoff_extra": 0.0,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "combined_rmse_m": 0.08231875381295352,
+          "target_cleared_count": 1
+        },
+        "formal_params_ring": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_ring_formal_params_handoff292_20260709.json",
+          "missing": false,
+          "stone_geometry": "ring",
+          "formal_stone_scale": null,
+          "radius": 0.14087501,
+          "height": 0.23,
+          "center_height": 0.115,
+          "handoff_extra": 0.01024998,
+          "inertia_model": "custom",
+          "inertia_radial": 0.178810612362,
+          "inertia_vertical": 0.189222883199,
+          "active_rmse_m": 0.03326649863514951,
+          "target_in_play_rmse_m": 0.1264634894346983,
+          "combined_rmse_m": 0.08974199261272638,
+          "target_cleared_count": 1
+        },
+        "formal_params_recovered_mesh": {
+          "file": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_handoff292_20260709.json",
+          "missing": false,
+          "stone_geometry": "formal-recovered",
+          "formal_stone_scale": [
+            0.1127,
+            0.115,
+            0.1127
+          ],
+          "radius": 0.14087501,
+          "height": 0.23,
+          "center_height": 0.115,
+          "handoff_extra": 0.01024998,
+          "inertia_model": "custom",
+          "inertia_radial": 0.178810612362,
+          "inertia_vertical": 0.189222883199,
+          "active_rmse_m": 0.03143197990014625,
+          "target_in_play_rmse_m": 0.12075356565889411,
+          "combined_rmse_m": 0.08562465385580781,
+          "target_cleared_count": 1
+        }
+      },
+      "deltas": {
+        "current_best_scale_recovered_minus_ring_target_rmse_m": 0.0,
+        "current_best_scale_recovered_minus_ring_active_rmse_m": 0.0,
+        "formal_recovered_minus_ring_target_rmse_m": -0.0057099237758041765,
+        "formal_recovered_minus_ring_active_rmse_m": -0.00183451873500326,
+        "formal_recovered_minus_current_best_target_rmse_m": 0.007520781582163252
+      },
+      "interpretation": [
+        "At the current-best inflated scale, recovered formal mesh input and generated ring input give identical endpoint RMSE.",
+        "At the formal physical scale with the 0.292m handoff threshold, recovered mesh input improves target RMSE by only about 0.57cm versus ring input.",
+        "The formal recovered-mesh run is still about 12.08cm target RMSE, worse than the current-best 11.32cm and far from the 2cm target.",
+        "Therefore the remaining collision gap is not caused by failing to feed the recovered 512-vertex formal mesh into pyphysx cooking."
+      ]
+    },
+    "stone_prefab_rotation_summary": {
+      "stone_count": 80,
+      "unique_local_rotation_count": 1,
+      "unique_local_rotations": [
+        {
+          "local_rotation_xyzw": [
+            6.7e-08,
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "count": 80
+        }
+      ],
+      "unique_local_yaw_deg": [
+        -0.0
+      ],
+      "max_abs_yaw_deg": 0.0,
+      "interpretation": "Serialized formal stone transforms all have the same near-identity local rotation. Therefore the wide-yaw endpoint improvement is not explained by different prefab initial yaws; if rotation is involved, it must be runtime carryover/contact-state, or the yaw sweep is only compensating for contact feature/manifold differences."
+    },
+    "handoff_threshold_summary": {
+      "baseline": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+        "result_set_count": 1,
+        "handoff_extra": 0.0,
+        "handoff_y_offset": 0.0,
+        "handoff_x_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086,
+        "combined_rmse_m": 0.08231875381295352,
+        "active_mean_m": 0.02881708252789582,
+        "target_in_play_mean_m": 0.08403461569378415
+      },
+      "best_handoff_extra_only": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_refine_20260709.json",
+        "result_set_count": 8,
+        "handoff_extra": 0.005,
+        "handoff_y_offset": 0.0,
+        "handoff_x_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "active_rmse_m": 0.03914510341953566,
+        "target_in_play_rmse_m": 0.1054658484052869,
+        "combined_rmse_m": 0.07751130207169267,
+        "active_mean_m": 0.029943326903191177,
+        "target_in_play_mean_m": 0.07736441826608298
+      },
+      "best_handoff_extra_plus_yoffset": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_yoffset_refine_20260709.json",
+        "result_set_count": 25,
+        "handoff_extra": 0.005,
+        "handoff_y_offset": -0.005,
+        "handoff_x_offset": 0.0,
+        "radius": 0.146,
+        "contact_offset": 0.01,
+        "active_rmse_m": 0.03655228601064242,
+        "target_in_play_rmse_m": 0.10274748340235453,
+        "combined_rmse_m": 0.07509455120910362,
+        "active_mean_m": 0.025768810807472654,
+        "target_in_play_mean_m": 0.07140574944584273
+      },
+      "improvement_vs_baseline_m": 0.010485300674376336,
+      "interpretation": [
+        "Current-best starts the local PhysX pair at center distance about 0.0002m-0.0104m inside 2R, depending on sample.",
+        "Starting about 5mm earlier and shifting protocol y by -5mm is the best tested local refinement.",
+        "That reduces target RMSE from about 11.32cm to about 10.27cm, so entry timing/placement contributes but is not the main source.",
+        "The remaining error still has the row-level normal/tangent split seen in solver-row delta reports, so first ContactBuffer/SolverContact/cache remains the priority."
+      ]
+    },
+    "lock_constraints_summary": {
+      "baseline": {
+        "config": {
+          "lock_upright": false,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "handoff_extra": 0.0,
+          "handoff_y_offset": 0.0,
+          "radius": 0.146,
+          "contact_offset": 0.01
+        },
+        "summary": {
+          "sample_count": 8,
+          "active_error_count": 8,
+          "target_in_play_error_count": 7,
+          "target_cleared_count": 1,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "combined_rmse_m": 0.08231875381295352,
+          "active_mean_m": 0.02881708252789582,
+          "target_in_play_mean_m": 0.08403461569378415
+        },
+        "max_target_horizontal_angular_speed_002s": 0.01504597005143072,
+        "row_errors": {
+          "12000": {
+            "active_error_m": 0.010473716049262526,
+            "target_error_m": 0.014113702652814822
+          },
+          "12001": {
+            "active_error_m": 0.055237795827458136,
+            "target_error_m": null
+          },
+          "12002": {
+            "active_error_m": 0.0062849194634827295,
+            "target_error_m": 0.02847197249155637
+          },
+          "12003": {
+            "active_error_m": 0.07945947880636535,
+            "target_error_m": 0.24572499750997046
+          },
+          "12004": {
+            "active_error_m": 0.010863133849230005,
+            "target_error_m": 0.1335143633427367
+          },
+          "12005": {
+            "active_error_m": 0.017246264486427618,
+            "target_error_m": 0.0744778632985414
+          },
+          "12006": {
+            "active_error_m": 0.00724681288668987,
+            "target_error_m": 0.02645618997061297
+          },
+          "12007": {
+            "active_error_m": 0.04372453885425035,
+            "target_error_m": 0.06548322059025638
+          }
+        }
+      },
+      "lock_upright_best": {
+        "config": {
+          "lock_upright": true,
+          "inertia_model": "custom",
+          "inertia_radial": 0.178810612362,
+          "inertia_vertical": 0.189222883199,
+          "handoff_extra": 0.0,
+          "handoff_y_offset": 0.0,
+          "radius": 0.146,
+          "contact_offset": 0.01
+        },
+        "summary": {
+          "sample_count": 8,
+          "active_error_count": 8,
+          "target_in_play_error_count": 7,
+          "target_cleared_count": 1,
+          "active_rmse_m": 0.037082026812417804,
+          "target_in_play_rmse_m": 0.11365979421567847,
+          "combined_rmse_m": 0.08223156549168031,
+          "active_mean_m": 0.028302075764611967,
+          "target_in_play_mean_m": 0.08368052704691288
+        },
+        "max_target_horizontal_angular_speed_002s": 0.0,
+        "row_errors": {
+          "12000": {
+            "active_error_m": 0.01047422884343126,
+            "target_error_m": 0.013375797951978682
+          },
+          "12001": {
+            "active_error_m": 0.05487567577607447,
+            "target_error_m": null
+          },
+          "12002": {
+            "active_error_m": 0.0065909123545079525,
+            "target_error_m": 0.026891928228203705
+          },
+          "12003": {
+            "active_error_m": 0.07902671683653668,
+            "target_error_m": 0.2487340801327138
+          },
+          "12004": {
+            "active_error_m": 0.010463771679957445,
+            "target_error_m": 0.1335420953912889
+          },
+          "12005": {
+            "active_error_m": 0.016685460595814588,
+            "target_error_m": 0.07005045609797976
+          },
+          "12006": {
+            "active_error_m": 0.01987382645875872,
+            "target_error_m": 0.029580378886718585
+          },
+          "12007": {
+            "active_error_m": 0.02842601357181466,
+            "target_error_m": 0.06358895263950674
+          }
+        }
+      },
+      "delta_vs_baseline_m": {
+        "target_rmse": 0.00042701013894760886,
+        "active_rmse": -0.0014763943031307833
+      },
+      "interpretation": [
+        "The pyphysx lock flags are mapped in the z-up replay as LOCK_ANGULAR_X and LOCK_ANGULAR_Y, leaving z/yaw free.",
+        "The locked replay suppresses target horizontal angular velocity at 0.02s to zero, so the diagnostic is actually exercising the constraint.",
+        "Despite that, best target RMSE is 11.37cm versus the baseline 11.32cm, and the hard 12003 target remains about 24.9cm.",
+        "Therefore the missing 10cm is not explained by free roll/pitch in the local replay; the remaining priority is still first ContactBuffer/SolverContact/cache or runtime shape state."
+      ]
+    },
+    "contact_report_vs_row_delta_summary": {
+      "summary": {
+        "row_count": 8,
+        "ok_count": 8,
+        "all_first_contact_times": [
+          0.01
+        ],
+        "contact_report_angle_delta_abs_mean_deg": 2.7174819258880722,
+        "contact_report_angle_delta_abs_max_deg": 7.090456505506097,
+        "worst_unity_minus_contact_report_sample": {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "first_contact_time": 0.01,
+          "contact_count": 4,
+          "point_count": 4,
+          "active_is_actor0": false,
+          "target_contact_normal_protocol": [
+            0.6715580821037292,
+            -0.7409518957138062
+          ],
+          "target_contact_normal_angle_deg": -47.81256669237457,
+          "target_contact_impulse_protocol_Ns": [
+            9.691565080080181,
+            -10.693019012804143
+          ],
+          "target_contact_impulse_norm_Ns": 14.431461786999282,
+          "target_contact_impulse_angle_deg": -47.81256598416377,
+          "target_contact_impulse_angle_minus_normal_deg": 7.082107913447544e-07,
+          "separation_min_m": -6.580352783203125e-05,
+          "separation_max_m": -6.58002682030201e-05,
+          "internal_face_index_pairs": [
+            [
+              4294967295,
+              4294967295
+            ],
+            [
+              4294967295,
+              4294967295
+            ],
+            [
+              4294967295,
+              4294967295
+            ],
+            [
+              4294967295,
+              4294967295
+            ]
+          ],
+          "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+          "endpoint_error_before_m": 0.06548322059025638,
+          "endpoint_error_after_tail_oracle_m": 0.001226575064250015,
+          "row_delta_contact_normal_angle_deg": -45.76331761025699,
+          "local_row_delta_impulse_angle_deg": -55.20176010092833,
+          "unity_implied_impulse_angle_deg": -54.90302248966988,
+          "unity_minus_contact_report_angle_deg": -7.090456505506097,
+          "local_row_minus_contact_report_angle_deg": -7.389194116764571,
+          "unity_minus_local_row_angle_deg": 0.29873761125844567,
+          "tail_oracle_delta_impulse_normal_Ns": -0.3957349824672964,
+          "tail_oracle_delta_impulse_tangent_Ns": 0.1405182235209639
+        }
+      },
+      "sample_12003": {
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "status": "ok",
+        "first_contact_time": 0.01,
+        "contact_count": 4,
+        "point_count": 4,
+        "active_is_actor0": false,
+        "target_contact_normal_protocol": [
+          0.049067120999097824,
+          -0.9987955689430237
+        ],
+        "target_contact_normal_angle_deg": -87.18753198213447,
+        "target_contact_impulse_protocol_Ns": [
+          1.1910782607737929,
+          -24.245231308043003
+        ],
+        "target_contact_impulse_norm_Ns": 24.274470305318644,
+        "target_contact_impulse_angle_deg": -87.18753200365512,
+        "target_contact_impulse_angle_minus_normal_deg": -2.152063416360761e-08,
+        "separation_min_m": -0.001205096603371203,
+        "separation_max_m": -0.0012050718069076538,
+        "internal_face_index_pairs": [
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ]
+        ],
+        "row_delta_classification": "tangent_sign_flip_contact_basis_or_cache",
+        "endpoint_error_before_m": 0.24572499750997046,
+        "endpoint_error_after_tail_oracle_m": 0.00018576702017670442,
+        "row_delta_contact_normal_angle_deg": -85.34230084054701,
+        "local_row_delta_impulse_angle_deg": -86.43500263936362,
+        "unity_implied_impulse_angle_deg": -82.21202559446705,
+        "unity_minus_contact_report_angle_deg": 4.975506409188085,
+        "local_row_minus_contact_report_angle_deg": 0.7525293642914903,
+        "unity_minus_local_row_angle_deg": 4.222977044896567,
+        "tail_oracle_delta_impulse_normal_Ns": -0.4617239753380273,
+        "tail_oracle_delta_impulse_tangent_Ns": 1.7651017995368796
+      },
+      "worst_unity_minus_contact_report_sample": {
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "status": "ok",
+        "first_contact_time": 0.01,
+        "contact_count": 4,
+        "point_count": 4,
+        "active_is_actor0": false,
+        "target_contact_normal_protocol": [
+          0.6715580821037292,
+          -0.7409518957138062
+        ],
+        "target_contact_normal_angle_deg": -47.81256669237457,
+        "target_contact_impulse_protocol_Ns": [
+          9.691565080080181,
+          -10.693019012804143
+        ],
+        "target_contact_impulse_norm_Ns": 14.431461786999282,
+        "target_contact_impulse_angle_deg": -47.81256598416377,
+        "target_contact_impulse_angle_minus_normal_deg": 7.082107913447544e-07,
+        "separation_min_m": -6.580352783203125e-05,
+        "separation_max_m": -6.58002682030201e-05,
+        "internal_face_index_pairs": [
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ],
+          [
+            4294967295,
+            4294967295
+          ]
+        ],
+        "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+        "endpoint_error_before_m": 0.06548322059025638,
+        "endpoint_error_after_tail_oracle_m": 0.001226575064250015,
+        "row_delta_contact_normal_angle_deg": -45.76331761025699,
+        "local_row_delta_impulse_angle_deg": -55.20176010092833,
+        "unity_implied_impulse_angle_deg": -54.90302248966988,
+        "unity_minus_contact_report_angle_deg": -7.090456505506097,
+        "local_row_minus_contact_report_angle_deg": -7.389194116764571,
+        "unity_minus_local_row_angle_deg": 0.29873761125844567,
+        "tail_oracle_delta_impulse_normal_Ns": -0.3957349824672964,
+        "tail_oracle_delta_impulse_tangent_Ns": 0.1405182235209639
+      },
+      "interpretation": [
+        "pyphysx contact reports now expose the local first stone-stone ContactPairPoint normal, separation and normal impulse.",
+        "For sample 12003, the reported local contact impulse is aligned with the -87.19deg side-face normal, while Unity-implied impulse is about 5deg away, near the adjacent cooked-hull side normal.",
+        "This moves the suspect layer from endpoint/tail replay to first-contact manifold feature selection, friction anchor/cache, or Unity runtime shape rotation/cooked stream.",
+        "PxContactPairPoint internal face indices are 0xffffffff for these convex-convex reports, so they do not directly name the hull polygon."
+      ]
+    },
+    "handoff_offset_summary": {
+      "global_x_y0_baseline": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086,
+        "combined_rmse_m": 0.08231875381295352
+      },
+      "global_x_y0_best_by_target_rmse": {
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": 0.0,
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086,
+        "combined_rmse_m": 0.08231875381295352
+      },
+      "per_sample_best_y0_by_max_endpoint_error": {
+        "12000": {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "handoff_x_offset": 0.0,
+          "active_error_m": 0.010473716049262526,
+          "target_error_m": 0.014113702652814822,
+          "max_endpoint_error_m": 0.014113702652814822
+        },
+        "12002": {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "handoff_x_offset": 0.005,
+          "active_error_m": 0.010549106257453377,
+          "target_error_m": 0.007847748503906439,
+          "max_endpoint_error_m": 0.010549106257453377
+        },
+        "12003": {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "handoff_x_offset": -0.02,
+          "active_error_m": 0.019286485127395663,
+          "target_error_m": 0.03164123698325768,
+          "max_endpoint_error_m": 0.03164123698325768
+        },
+        "12004": {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "handoff_x_offset": -0.005,
+          "active_error_m": 0.008138223085459811,
+          "target_error_m": 0.13058965815880555,
+          "max_endpoint_error_m": 0.13058965815880555
+        },
+        "12005": {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "handoff_x_offset": 0.005,
+          "active_error_m": 0.027233428564397952,
+          "target_error_m": 0.025143376079827306,
+          "max_endpoint_error_m": 0.027233428564397952
+        },
+        "12006": {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "handoff_x_offset": -0.005,
+          "active_error_m": 0.017493939508071675,
+          "target_error_m": 0.02537474005374439,
+          "max_endpoint_error_m": 0.02537474005374439
+        },
+        "12007": {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "handoff_x_offset": -0.005,
+          "active_error_m": 0.019706286373053456,
+          "target_error_m": 0.05318821842898575,
+          "max_endpoint_error_m": 0.05318821842898575
+        }
+      },
+      "sample_12003_xy_best_by_combined_rmse": {
+        "handoff_x_offset": -0.02,
+        "handoff_y_offset": 0.0,
+        "active_error_m": 0.019286485127395663,
+        "target_error_m": 0.03164123698325768,
+        "combined_rmse_m": 0.026202446320906063,
+        "first_contact_time": 0.01,
+        "first_contact_point_count": 1,
+        "first_contact_normal": [
+          0.9951847791671753,
+          -0.09801676869392395,
+          0.0
+        ],
+        "first_contact_impulse": [
+          10.195582389831543,
+          -1.0041733980178833,
+          0.0
+        ]
+      },
+      "interpretation": "A single global handoff-x offset does not explain the collision residual: the y=0 sweep slightly improves active RMSE but leaves target RMSE at about the baseline 11cm level. However, sample 12003 is highly sensitive to a sample-specific x/y handoff perturbation, which points at first-contact native input/manifold differences rather than a global coordinate constant."
+    },
+    "handoff_xy_oracle": {
+      "baseline_source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "handoff_sources": [
+        "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_contact_xyoffset_wide_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_ultrafine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_handoff_target_xy_micro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_handoff_vscale_micro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_wide_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_xy_fine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_wide_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_target_xyoffset_wide_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_coarse_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_fine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_micro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro2_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro3_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_target_xy_micro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_vscale_micro_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_vxyoffset_coarse_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_coarse_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_fine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_ultrafine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_subfine_20260709.json"
+      ],
+      "normal_param_12007_source": "data\\calibration\\unity_physx_collision_probe_12007_normal_param_grid_20260709.json",
+      "contact_best_sources": [
+        "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_best_contact_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_best_contact_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_best_contact_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_best_contact_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_bestmax_contact_20260709.json"
+      ],
+      "tail_oracle_after_handoff_best_sources": [
+        "data\\calibration\\unity_collision_tail_replay_oracle_12003_handoff_xy_best_020s_20260709.json",
+        "data\\calibration\\unity_collision_tail_replay_oracle_12004_handoff_xy_best_020s_20260709.json",
+        "data\\calibration\\unity_collision_tail_replay_oracle_12007_handoff_xy_best_020s_20260709.json"
+      ],
+      "baseline_summary": {
+        "sample_count": 8,
+        "in_play_pair_count": 7,
+        "active_rmse_m": 0.03855842111554859,
+        "target_in_play_rmse_m": 0.11323278407673086,
+        "both_endpoints_within_2cm_count": 1,
+        "both_endpoints_within_2cm_sample_ids": [
+          12000
+        ],
+        "all_in_play_pairs_within_2cm": false,
+        "bottlenecks_over_2cm": [
+          {
+            "sample_id": 12002,
+            "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+            "active_error_m": 0.0062849194634827295,
+            "target_error_m": 0.02847197249155637,
+            "max_endpoint_error_m": 0.02847197249155637,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          },
+          {
+            "sample_id": 12003,
+            "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+            "active_error_m": 0.07945947880636535,
+            "target_error_m": 0.24572499750997046,
+            "max_endpoint_error_m": 0.24572499750997046,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          },
+          {
+            "sample_id": 12004,
+            "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+            "active_error_m": 0.010863133849230005,
+            "target_error_m": 0.1335143633427367,
+            "max_endpoint_error_m": 0.1335143633427367,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          },
+          {
+            "sample_id": 12005,
+            "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+            "active_error_m": 0.017246264486427618,
+            "target_error_m": 0.0744778632985414,
+            "max_endpoint_error_m": 0.0744778632985414,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          },
+          {
+            "sample_id": 12006,
+            "label": "collision_glance_left_target_active_a06_target_t14_r00",
+            "active_error_m": 0.00724681288668987,
+            "target_error_m": 0.02645618997061297,
+            "max_endpoint_error_m": 0.02645618997061297,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          },
+          {
+            "sample_id": 12007,
+            "label": "collision_glance_right_target_active_a07_target_t15_r00",
+            "active_error_m": 0.04372453885425035,
+            "target_error_m": 0.06548322059025638,
+            "max_endpoint_error_m": 0.06548322059025638,
+            "config": {
+              "handoff_x_offset": 0.0,
+              "handoff_y_offset": 0.0,
+              "handoff_v_scale": 1.0,
+              "radius": 0.146,
+              "contact_offset": 0.01,
+              "stone_restitution": 1.0,
+              "active_yaw": 0.0,
+              "target_yaw": 0.0,
+              "shape_local_yaw": 0.0
+            }
+          }
+        ]
+      },
+      "handoff_xy_oracle_summary": {
+        "sample_count": 8,
+        "in_play_pair_count": 7,
+        "active_rmse_m": 0.01350200975838181,
+        "target_in_play_rmse_m": 0.014829526504669675,
+        "both_endpoints_within_2cm_count": 7,
+        "both_endpoints_within_2cm_sample_ids": [
+          12000,
+          12002,
+          12003,
+          12004,
+          12005,
+          12006,
+          12007
+        ],
+        "all_in_play_pairs_within_2cm": true,
+        "bottlenecks_over_2cm": []
+      },
+      "handoff_xy_active_only_oracle_summary": {
+        "sample_count": 8,
+        "active_rmse_m": 0.006122390009721769,
+        "active_within_2cm_count": 8,
+        "active_within_2cm_sample_ids": [
+          12000,
+          12001,
+          12002,
+          12003,
+          12004,
+          12005,
+          12006,
+          12007
+        ],
+        "active_bottlenecks_over_2cm": []
+      },
+      "baseline_by_sample": {
+        "12000": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.010473716049262526,
+          "target_error_m": 0.014113702652814822,
+          "max_endpoint_error_m": 0.014113702652814822,
+          "combined_pair_rmse_m": 0.012427697503010192,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3474576473236084,
+            5.489194393157959
+          ],
+          "sim_target": [
+            2.4740262031555176,
+            3.8725223541259766
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        "12001": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12001,
+          "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+          "unity_target_in_play": false,
+          "active_error_m": 0.055237795827458136,
+          "target_error_m": null,
+          "max_endpoint_error_m": 0.055237795827458136,
+          "combined_pair_rmse_m": 0.055237795827458136,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3397793769836426,
+            5.47998046875
+          ],
+          "sim_target": [
+            2.616429328918457,
+            2.2224323749542236
+          ],
+          "unity_active": [
+            2.2847,
+            5.4758
+          ],
+          "unity_target": [
+            0.0,
+            0.0
+          ]
+        },
+        "12002": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.0062849194634827295,
+          "target_error_m": 0.02847197249155637,
+          "max_endpoint_error_m": 0.02847197249155637,
+          "combined_pair_rmse_m": 0.020617388658877325,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3454031944274902,
+            6.48898983001709
+          ],
+          "sim_target": [
+            2.5087316036224365,
+            4.508715629577637
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        "12003": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.07945947880636535,
+          "target_error_m": 0.24572499750997046,
+          "max_endpoint_error_m": 0.24572499750997046,
+          "combined_pair_rmse_m": 0.18261240808534096,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3382132053375244,
+            6.488959789276123
+          ],
+          "sim_target": [
+            2.650664806365967,
+            2.787033796310425
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "12004": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.010863133849230005,
+          "target_error_m": 0.1335143633427367,
+          "max_endpoint_error_m": 0.1335143633427367,
+          "combined_pair_rmse_m": 0.09472088707313345,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.342099905014038,
+            8.284964561462402
+          ],
+          "sim_target": [
+            2.5677030086517334,
+            5.643150329589844
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "12005": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.017246264486427618,
+          "target_error_m": 0.0744778632985414,
+          "max_endpoint_error_m": 0.0744778632985414,
+          "combined_pair_rmse_m": 0.054057311070067275,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3347949981689453,
+            8.290048599243164
+          ],
+          "sim_target": [
+            2.720592498779297,
+            3.749527931213379
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        "12006": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.00724681288668987,
+          "target_error_m": 0.02645618997061297,
+          "max_endpoint_error_m": 0.02645618997061297,
+          "combined_pair_rmse_m": 0.019396472421240114,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.7415170669555664,
+            6.202279090881348
+          ],
+          "sim_target": [
+            1.4674056768417358,
+            4.730249881744385
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        "12007": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.04372453885425035,
+          "target_error_m": 0.06548322059025638,
+          "max_endpoint_error_m": 0.06548322059025638,
+          "combined_pair_rmse_m": 0.055677138382324506,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            1.8032362461090088,
+            5.898848533630371
+          ],
+          "sim_target": [
+            3.2776734828948975,
+            5.206465721130371
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      },
+      "handoff_xy_oracle_by_sample": {
+        "12000": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.010473716049262526,
+          "target_error_m": 0.014113702652814822,
+          "max_endpoint_error_m": 0.014113702652814822,
+          "combined_pair_rmse_m": 0.012427697503010192,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3474576473236084,
+            5.489194393157959
+          ],
+          "sim_target": [
+            2.4740262031555176,
+            3.8725223541259766
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        "12001": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12001,
+          "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+          "unity_target_in_play": false,
+          "active_error_m": 0.003543414280562846,
+          "target_error_m": null,
+          "max_endpoint_error_m": 0.003543414280562846,
+          "combined_pair_rmse_m": 0.003543414280562846,
+          "config": {
+            "handoff_x_offset": -0.02,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.285714626312256,
+            5.472404956817627
+          ],
+          "sim_target": [
+            2.7945754528045654,
+            2.2934627532958984
+          ],
+          "unity_active": [
+            2.2847,
+            5.4758
+          ],
+          "unity_target": [
+            0.0,
+            0.0
+          ]
+        },
+        "12002": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.010549106257453377,
+          "target_error_m": 0.007847748503906439,
+          "max_endpoint_error_m": 0.010549106257453377,
+          "combined_pair_rmse_m": 0.009297064036877658,
+          "config": {
+            "handoff_x_offset": 0.005,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3521552085876465,
+            6.489030838012695
+          ],
+          "sim_target": [
+            2.48787522315979,
+            4.505149841308594
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        "12003": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_vscale_micro_20260709.json",
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.01981114550499966,
+          "target_error_m": 0.003583691699579325,
+          "max_endpoint_error_m": 0.01981114550499966,
+          "combined_pair_rmse_m": 0.014235946270232653,
+          "config": {
+            "handoff_x_offset": -0.021,
+            "handoff_y_offset": 0.002,
+            "handoff_v_scale": 1.005,
+            "target_x_offset": 0.0,
+            "target_y_offset": 0.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.280669927597046,
+            6.467838764190674
+          ],
+          "sim_target": [
+            2.8529434204101562,
+            2.9233245849609375
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "12004": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_wide_20260709.json",
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.011207224965846214,
+          "target_error_m": 0.015386833633177168,
+          "max_endpoint_error_m": 0.015386833633177168,
+          "combined_pair_rmse_m": 0.013460247781711872,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.02,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3436050415039062,
+            8.283249855041504
+          ],
+          "sim_target": [
+            2.5462865829467773,
+            5.768189907073975
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "12005": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_coarse_20260709.json",
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.016243541236005493,
+          "target_error_m": 0.017411647927255264,
+          "max_endpoint_error_m": 0.017411647927255264,
+          "combined_pair_rmse_m": 0.016837727213441,
+          "config": {
+            "handoff_x_offset": 0.008,
+            "handoff_y_offset": -0.006,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.5,
+            "target_x_offset": -0.002,
+            "target_y_offset": 0.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.334506034851074,
+            8.281632423400879
+          ],
+          "sim_target": [
+            2.6643106937408447,
+            3.735400676727295
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        "12006": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.010777582871279244,
+          "target_error_m": 0.01890526844647867,
+          "max_endpoint_error_m": 0.01890526844647867,
+          "combined_pair_rmse_m": 0.015387746221924667,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.008,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.7338154315948486,
+            6.2185139656066895
+          ],
+          "sim_target": [
+            1.4703965187072754,
+            4.713727951049805
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        "12007": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_tx_ultramicro3_20260709.json",
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.01807771231543762,
+          "target_error_m": 0.019195001466200633,
+          "max_endpoint_error_m": 0.019195001466200633,
+          "combined_pair_rmse_m": 0.01864472799274864,
+          "config": {
+            "handoff_x_offset": -0.006,
+            "handoff_y_offset": -0.0005,
+            "handoff_v_scale": 1.0,
+            "target_x_offset": -0.004,
+            "target_y_offset": 0.0085,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            1.7908860445022583,
+            5.871991157531738
+          ],
+          "sim_target": [
+            3.2555007934570312,
+            5.264488220214844
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      },
+      "handoff_xy_active_only_oracle_by_sample": {
+        "12000": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.006151075721602459,
+          "target_error_m": 0.027662826907618315,
+          "max_endpoint_error_m": 0.027662826907618315,
+          "combined_pair_rmse_m": 0.020038309872014395,
+          "config": {
+            "handoff_x_offset": -0.005,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3406379222869873,
+            5.489170074462891
+          ],
+          "sim_target": [
+            2.4892923831939697,
+            3.8754794597625732
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        "12001": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12001,
+          "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+          "unity_target_in_play": false,
+          "active_error_m": 0.003543414280562846,
+          "target_error_m": null,
+          "max_endpoint_error_m": 0.003543414280562846,
+          "combined_pair_rmse_m": 0.003543414280562846,
+          "config": {
+            "handoff_x_offset": -0.02,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.285714626312256,
+            5.472404956817627
+          ],
+          "sim_target": [
+            2.7945754528045654,
+            2.2934627532958984
+          ],
+          "unity_active": [
+            2.2847,
+            5.4758
+          ],
+          "unity_target": [
+            0.0,
+            0.0
+          ]
+        },
+        "12002": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.0062849194634827295,
+          "target_error_m": 0.02847197249155637,
+          "max_endpoint_error_m": 0.02847197249155637,
+          "combined_pair_rmse_m": 0.020617388658877325,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3454031944274902,
+            6.48898983001709
+          ],
+          "sim_target": [
+            2.5087316036224365,
+            4.508715629577637
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        "12003": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_20260709.json",
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.002567637840019481,
+          "target_error_m": 0.06345950590736905,
+          "max_endpoint_error_m": 0.06345950590736905,
+          "combined_pair_rmse_m": 0.04490936235399534,
+          "config": {
+            "handoff_x_offset": -0.026,
+            "handoff_y_offset": 0.004,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.2630794048309326,
+            6.468693733215332
+          ],
+          "sim_target": [
+            2.9114160537719727,
+            2.9509735107421875
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        "12004": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.008138223085459811,
+          "target_error_m": 0.13058965815880555,
+          "max_endpoint_error_m": 0.13058965815880555,
+          "combined_pair_rmse_m": 0.09251996944720205,
+          "config": {
+            "handoff_x_offset": -0.005,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3271117210388184,
+            8.283112525939941
+          ],
+          "sim_target": [
+            2.6468024253845215,
+            5.67946195602417
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        "12005": {
+          "source": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.006656470899107066,
+          "target_error_m": 0.23201629127707388,
+          "max_endpoint_error_m": 0.23201629127707388,
+          "combined_pair_rmse_m": 0.1641277978021984,
+          "config": {
+            "handoff_x_offset": -0.005,
+            "handoff_y_offset": 0.0,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3122947216033936,
+            8.286808967590332
+          ],
+          "sim_target": [
+            2.8639914989471436,
+            3.8153374195098877
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        "12006": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12006_handoff_xy_fine_20260709.json",
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.002357625937173264,
+          "target_error_m": 0.02134275229036012,
+          "max_endpoint_error_m": 0.02134275229036012,
+          "combined_pair_rmse_m": 0.01518340336333235,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.004,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.737766742706299,
+            6.210857391357422
+          ],
+          "sim_target": [
+            1.4689600467681885,
+            4.721814155578613
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        "12007": {
+          "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_fine_20260709.json",
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.009342756634611496,
+          "target_error_m": 0.03248416563227674,
+          "max_endpoint_error_m": 0.03248416563227674,
+          "combined_pair_rmse_m": 0.023900921722380983,
+          "config": {
+            "handoff_x_offset": -0.006,
+            "handoff_y_offset": 0.004,
+            "handoff_v_scale": 1.0,
+            "target_x_offset": 0.0,
+            "target_y_offset": 0.012,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            1.782697081565857,
+            5.864571571350098
+          ],
+          "sim_target": [
+            3.2606821060180664,
+            5.280753135681152
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      },
+      "normal_param_12007_best": {
+        "source": "data\\calibration\\unity_physx_collision_probe_12007_normal_param_grid_20260709.json",
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "unity_target_in_play": true,
+        "active_error_m": 0.06192327565261535,
+        "target_error_m": 0.05106303786511915,
+        "max_endpoint_error_m": 0.06192327565261535,
+        "combined_pair_rmse_m": 0.0567535280998652,
+        "config": {
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "radius": 0.146,
+          "contact_offset": 0.002,
+          "stone_restitution": 0.95,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "shape_local_yaw": 0.0
+        },
+        "sim_active": [
+          1.8354355096817017,
+          5.863404273986816
+        ],
+        "sim_target": [
+          3.201650857925415,
+          5.294561386108398
+        ],
+        "unity_active": [
+          1.7736,
+          5.8667
+        ],
+        "unity_target": [
+          3.2374,
+          5.2581
+        ]
+      },
+      "contact_best_points": [
+        {
+          "source": "data\\calibration\\unity_physx_collision_probe_12003_handoff_xy_fine_best_contact_20260709.json",
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.022094720397581875,
+          "target_error_m": 0.02429547285676451,
+          "max_endpoint_error_m": 0.02429547285676451,
+          "combined_pair_rmse_m": 0.023221182902482613,
+          "config": {
+            "handoff_x_offset": -0.02,
+            "handoff_y_offset": 0.002,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.283022403717041,
+            6.468413829803467
+          ],
+          "sim_target": [
+            2.8501384258270264,
+            2.9510600566864014
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "first_contact_time": 0.01,
+          "stone_stone_contact_report_count": 5,
+          "first_contact_count": 1,
+          "first_contact_normal": [
+            0.9987954497337341,
+            -0.04906788840889931,
+            0.0
+          ],
+          "first_contact_impulse": [
+            10.252127647399902,
+            -0.5036569237709045,
+            0.0
+          ],
+          "first_contact_separation": 0.004582941997796297
+        },
+        {
+          "source": "data\\calibration\\unity_physx_collision_probe_12004_handoff_xy_best_contact_20260709.json",
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.011207224965846214,
+          "target_error_m": 0.015386833633177168,
+          "max_endpoint_error_m": 0.015386833633177168,
+          "combined_pair_rmse_m": 0.013460247781711872,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.02,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3436050415039062,
+            8.283249855041504
+          ],
+          "sim_target": [
+            2.5462865829467773,
+            5.768189907073975
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "first_contact_time": 0.01,
+          "stone_stone_contact_report_count": 6,
+          "first_contact_count": 1,
+          "first_contact_normal": [
+            1.0,
+            3.149966687487904e-08,
+            0.0
+          ],
+          "first_contact_impulse": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "first_contact_separation": 0.01478305459022522
+        },
+        {
+          "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_xy_best_contact_20260709.json",
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.05589116571295923,
+          "target_error_m": 0.05637651495372413,
+          "max_endpoint_error_m": 0.05637651495372413,
+          "combined_pair_rmse_m": 0.056134364889437155,
+          "config": {
+            "handoff_x_offset": 0.0,
+            "handoff_y_offset": 0.02,
+            "handoff_v_scale": 1.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            1.8294583559036255,
+            5.864785194396973
+          ],
+          "sim_target": [
+            3.207035541534424,
+            5.305600643157959
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "first_contact_time": 0.01,
+          "stone_stone_contact_report_count": 6,
+          "first_contact_count": 1,
+          "first_contact_normal": [
+            0.7071067690849304,
+            -0.70710688829422,
+            0.0
+          ],
+          "first_contact_impulse": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "first_contact_separation": 0.015291371382772923
+        },
+        {
+          "source": "data\\calibration\\unity_physx_collision_probe_12007_handoff_target_xy_best_contact_20260709.json",
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.017430501868515916,
+          "target_error_m": 0.01936506468193178,
+          "max_endpoint_error_m": 0.01936506468193178,
+          "combined_pair_rmse_m": 0.018423193609194612,
+          "config": {
+            "handoff_x_offset": -0.006,
+            "handoff_y_offset": -0.001,
+            "handoff_v_scale": 1.0,
+            "target_x_offset": -0.004,
+            "target_y_offset": 0.0085,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            1.7906678915023804,
+            5.870236873626709
+          ],
+          "sim_target": [
+            3.2551074028015137,
+            5.265939235687256
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "first_contact_time": 0.01,
+          "stone_stone_contact_report_count": 5,
+          "first_contact_count": 1,
+          "first_contact_normal": [
+            0.7730108499526978,
+            -0.6343927979469299,
+            0.0
+          ],
+          "first_contact_impulse": [
+            4.898068428039551,
+            -4.019735813140869,
+            0.0
+          ],
+          "first_contact_separation": 0.0020263120532035828
+        },
+        {
+          "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_bestmax_contact_20260709.json",
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "unity_target_in_play": true,
+          "active_error_m": 0.01768625586319518,
+          "target_error_m": 0.013686706323099785,
+          "max_endpoint_error_m": 0.01768625586319518,
+          "combined_pair_rmse_m": 0.01581343695142181,
+          "config": {
+            "handoff_x_offset": 0.008,
+            "handoff_y_offset": -0.006,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.44,
+            "target_x_offset": -0.002,
+            "target_y_offset": 0.0,
+            "radius": 0.146,
+            "contact_offset": 0.01,
+            "stone_restitution": 1.0,
+            "active_yaw": 0.0,
+            "target_yaw": 0.0,
+            "shape_local_yaw": 0.0
+          },
+          "sim_active": [
+            2.3359875679016113,
+            8.281756401062012
+          ],
+          "sim_target": [
+            2.6596481800079346,
+            3.735102415084839
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "first_contact_time": 0.01,
+          "stone_stone_contact_report_count": 3,
+          "first_contact_count": 4,
+          "first_contact_normal": [
+            0.9987955689430237,
+            -0.049067120999097824,
+            0.0
+          ],
+          "first_contact_impulse": [
+            10.624011993408203,
+            -0.5219182968139648,
+            0.0
+          ],
+          "first_contact_separation": -0.006521075963973999
+        }
+      ],
+      "tail_oracle_after_handoff_best": [
+        {
+          "source": "data\\calibration\\unity_collision_tail_replay_oracle_12003_handoff_xy_best_020s_20260709.json",
+          "sample_id": 12003,
+          "summary": {
+            "row_count": 1,
+            "ok_count": 1,
+            "baseline_tail_vs_local_full_rmse_m": 0.021094457545422524,
+            "baseline_tail_vs_unity_rmse_m": 0.03151669860240335,
+            "local_full_vs_unity_rmse_m": 0.02429547285676451,
+            "corrected_tail_vs_unity_rmse_m": 0.03200969338154679,
+            "corrected_tail_vs_unity_mean_m": 0.03200969338154679,
+            "corrected_tail_over_2cm_count": 1,
+            "oracle_linear_tail_vs_unity_rmse_m": 0.00015910917589003265,
+            "oracle_linear_tail_vs_unity_mean_m": 0.00015910917589003265,
+            "oracle_linear_tail_over_2cm_count": 0,
+            "oracle_linear_delta_v_norm_mean_mps": 0.008814674249048937,
+            "oracle_linear_delta_v_norm_rmse_mps": 0.008814674249048937,
+            "oracle_linear_delta_v_normal_rmse_mps": 0.00492843383341828,
+            "oracle_linear_delta_v_tangent_rmse_mps": 0.007308147649470724,
+            "oracle_linear_delta_v_component_counts": {
+              "normal": 0,
+              "tangent": 1,
+              "mixed": 0
+            },
+            "baseline_tail_vs_local_full_mean_m": 0.021094457545422524
+          },
+          "rows": [
+            {
+              "sample_id": 12003,
+              "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+              "status": "ok",
+              "snapshot_key": "0.200000",
+              "unity_target": [
+                2.8527,
+                2.9269
+              ],
+              "local_full_replay_target": [
+                2.8501384258270264,
+                2.9510600566864014
+              ],
+              "baseline_tail_endpoint": [
+                2.829270124435425,
+                2.94797945022583
+              ],
+              "corrected_tail_endpoint": [
+                2.835883617401123,
+                2.8996634483337402
+              ],
+              "oracle_linear_tail_endpoint": [
+                2.8526079654693604,
+                2.9267702102661133
+              ],
+              "baseline_tail_vs_local_full_m": 0.021094457545422524,
+              "baseline_tail_vs_unity_m": 0.03151669860240335,
+              "local_full_vs_unity_m": 0.02429547285676451,
+              "corrected_tail_vs_unity_m": 0.03200969338154679,
+              "oracle_linear_tail_vs_unity_m": 0.00015910917589003265,
+              "corrected_tail_vs_local_full_m": 0.053336768869289786,
+              "oracle_linear_delta_v_from_snapshot_mps": [
+                0.007956494362221816,
+                -0.0037937685196620663
+              ],
+              "oracle_linear_delta_v_norm_from_snapshot_mps": 0.008814674249048937,
+              "oracle_linear_delta_v_normal_mps": 0.00492843383341828,
+              "oracle_linear_delta_v_tangent_mps": 0.007308147649470724,
+              "oracle_linear_delta_v_component": "tangent",
+              "oracle_linear_impulse_normal_Ns": 0.09413308621828916,
+              "oracle_linear_impulse_tangent_Ns": 0.13958562010489084,
+              "oracle_linear_velocity_protocol": [
+                0.1575381800244914,
+                -1.1933969780152065
+              ],
+              "required_early_velocity": [
+                0.15038126571931298,
+                -1.1991326538239566
+              ],
+              "delta_v_required_mps": [
+                0.000799580057043392,
+                -0.009529444328412184
+              ],
+              "tail_distance_scale_required": 1.0079691790091527,
+              "tail_direction_delta_deg_required": -0.018752675296905205,
+              "baseline_tail": {
+                "endpoint": [
+                  2.829270124435425,
+                  2.94797945022583
+                ],
+                "elapsed_s": 10.07,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "corrected_tail": {
+                "endpoint": [
+                  2.835883617401123,
+                  2.8996634483337402
+                ],
+                "elapsed_s": 10.11,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "oracle_linear_tail": {
+                "endpoint": [
+                  2.8526079654693604,
+                  2.9267702102661133
+                ],
+                "error_m": 0.00015910917589003265,
+                "velocity_protocol": [
+                  0.1575381800244914,
+                  -1.1933969780152065
+                ],
+                "delta_v_from_snapshot_mps": [
+                  0.007956494362221816,
+                  -0.0037937685196620663
+                ],
+                "delta_v_norm_from_snapshot_mps": 0.008814674249048937,
+                "iterations": [
+                  {
+                    "iteration": 0,
+                    "error_before_m": 0.03151669860240335,
+                    "delta_v_mps": [
+                      0.007956494362221806,
+                      -0.0037937685196620776
+                    ],
+                    "jacobian": [
+                      [
+                        2.795553207397461,
+                        -0.3129005432128906
+                      ],
+                      [
+                        -0.24309158325195312,
+                        5.046510696411133
+                      ]
+                    ],
+                    "chosen_damping": 1.0,
+                    "error_after_m": 0.00015910917589003265
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "source": "data\\calibration\\unity_collision_tail_replay_oracle_12004_handoff_xy_best_020s_20260709.json",
+          "sample_id": 12004,
+          "summary": {
+            "row_count": 1,
+            "ok_count": 1,
+            "baseline_tail_vs_local_full_rmse_m": 0.018431774045281988,
+            "baseline_tail_vs_unity_rmse_m": 0.03283417629745873,
+            "local_full_vs_unity_rmse_m": 0.015386833633177168,
+            "corrected_tail_vs_unity_rmse_m": 0.01963040263686924,
+            "corrected_tail_vs_unity_mean_m": 0.01963040263686924,
+            "corrected_tail_over_2cm_count": 0,
+            "oracle_linear_tail_vs_unity_rmse_m": 0.0006024576379133873,
+            "oracle_linear_tail_vs_unity_mean_m": 0.0006024576379133873,
+            "oracle_linear_tail_over_2cm_count": 0,
+            "oracle_linear_delta_v_norm_mean_mps": 0.015468015406781476,
+            "oracle_linear_delta_v_norm_rmse_mps": 0.015468015406781476,
+            "oracle_linear_delta_v_normal_rmse_mps": 0.0014986722295106535,
+            "oracle_linear_delta_v_tangent_rmse_mps": 0.015395242192733529,
+            "oracle_linear_delta_v_component_counts": {
+              "normal": 0,
+              "tangent": 1,
+              "mixed": 0
+            },
+            "baseline_tail_vs_local_full_mean_m": 0.018431774045281988
+          },
+          "rows": [
+            {
+              "sample_id": 12004,
+              "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+              "status": "ok",
+              "snapshot_key": "0.200000",
+              "unity_target": [
+                2.5593,
+                5.7764
+              ],
+              "local_full_replay_target": [
+                2.5462865829467773,
+                5.768189907073975
+              ],
+              "baseline_tail_endpoint": [
+                2.527909517288208,
+                5.766770839691162
+              ],
+              "corrected_tail_endpoint": [
+                2.5404727458953857,
+                5.781957626342773
+              ],
+              "oracle_linear_tail_endpoint": [
+                2.5598983764648438,
+                5.77632999420166
+              ],
+              "baseline_tail_vs_local_full_m": 0.018431774045281988,
+              "baseline_tail_vs_unity_m": 0.03283417629745873,
+              "local_full_vs_unity_m": 0.015386833633177168,
+              "corrected_tail_vs_unity_m": 0.01963040263686924,
+              "oracle_linear_tail_vs_unity_m": 0.0006024576379133873,
+              "corrected_tail_vs_local_full_m": 0.014944925397090088,
+              "oracle_linear_delta_v_from_snapshot_mps": [
+                0.015233658128519997,
+                0.002682379661383849
+              ],
+              "oracle_linear_delta_v_norm_from_snapshot_mps": 0.015468015406781476,
+              "oracle_linear_delta_v_normal_mps": -0.0014986722295106535,
+              "oracle_linear_delta_v_tangent_mps": 0.015395242192733529,
+              "oracle_linear_delta_v_component": "tangent",
+              "oracle_linear_impulse_normal_Ns": -0.028624639583653484,
+              "oracle_linear_impulse_tangent_Ns": 0.2940491258812104,
+              "oracle_linear_velocity_protocol": [
+                0.07145684199883555,
+                -0.9801690064088676
+              ],
+              "required_early_velocity": [
+                0.06254661931998963,
+                -0.9790480624847463
+              ],
+              "delta_v_required_mps": [
+                0.006323435449674078,
+                0.0038033235855051695
+              ],
+              "tail_distance_scale_required": 0.9965318539044986,
+              "tail_direction_delta_deg_required": 0.38139255506129943,
+              "baseline_tail": {
+                "endpoint": [
+                  2.527909517288208,
+                  5.766770839691162
+                ],
+                "elapsed_s": 9.16,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "corrected_tail": {
+                "endpoint": [
+                  2.5404727458953857,
+                  5.781957626342773
+                ],
+                "elapsed_s": 9.15,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "oracle_linear_tail": {
+                "endpoint": [
+                  2.5598983764648438,
+                  5.77632999420166
+                ],
+                "error_m": 0.0006024576379133873,
+                "velocity_protocol": [
+                  0.07145684199883555,
+                  -0.9801690064088676
+                ],
+                "delta_v_from_snapshot_mps": [
+                  0.015233658128519997,
+                  0.002682379661383849
+                ],
+                "delta_v_norm_from_snapshot_mps": 0.015468015406781476,
+                "iterations": [
+                  {
+                    "iteration": 0,
+                    "error_before_m": 0.03283417629745873,
+                    "delta_v_mps": [
+                      0.015233658128519994,
+                      0.002682379661383813
+                    ],
+                    "jacobian": [
+                      [
+                        2.0920276641845703,
+                        -0.1784801483154297
+                      ],
+                      [
+                        -0.09975433349609375,
+                        4.156303405761719
+                      ]
+                    ],
+                    "chosen_damping": 1.0,
+                    "error_after_m": 0.0006024576379133873
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "source": "data\\calibration\\unity_collision_tail_replay_oracle_12007_handoff_xy_best_020s_20260709.json",
+          "sample_id": 12007,
+          "summary": {
+            "row_count": 1,
+            "ok_count": 1,
+            "baseline_tail_vs_local_full_rmse_m": 0.01532411233309799,
+            "baseline_tail_vs_unity_rmse_m": 0.05744731639513457,
+            "local_full_vs_unity_rmse_m": 0.05637651495372413,
+            "corrected_tail_vs_unity_rmse_m": 0.06172878703088309,
+            "corrected_tail_vs_unity_mean_m": 0.06172878703088309,
+            "corrected_tail_over_2cm_count": 1,
+            "oracle_linear_tail_vs_unity_rmse_m": 0.00026219472044639594,
+            "oracle_linear_tail_vs_unity_mean_m": 0.00026219472044639594,
+            "oracle_linear_tail_over_2cm_count": 0,
+            "oracle_linear_delta_v_norm_mean_mps": 0.020822064848114698,
+            "oracle_linear_delta_v_norm_rmse_mps": 0.020822064848114698,
+            "oracle_linear_delta_v_normal_rmse_mps": 0.01997312790043708,
+            "oracle_linear_delta_v_tangent_rmse_mps": 0.005884942345671317,
+            "oracle_linear_delta_v_component_counts": {
+              "normal": 1,
+              "tangent": 0,
+              "mixed": 0
+            },
+            "baseline_tail_vs_local_full_mean_m": 0.01532411233309799
+          },
+          "rows": [
+            {
+              "sample_id": 12007,
+              "label": "collision_glance_right_target_active_a07_target_t15_r00",
+              "status": "ok",
+              "snapshot_key": "0.200000",
+              "unity_target": [
+                3.2374,
+                5.2581
+              ],
+              "local_full_replay_target": [
+                3.207035541534424,
+                5.305600643157959
+              ],
+              "baseline_tail_endpoint": [
+                3.1946911811828613,
+                5.296520709991455
+              ],
+              "corrected_tail_endpoint": [
+                3.2599399089813232,
+                5.200633525848389
+              ],
+              "oracle_linear_tail_endpoint": [
+                3.237619400024414,
+                5.258243560791016
+              ],
+              "baseline_tail_vs_local_full_m": 0.01532411233309799,
+              "baseline_tail_vs_unity_m": 0.05744731639513457,
+              "local_full_vs_unity_m": 0.05637651495372413,
+              "corrected_tail_vs_unity_m": 0.06172878703088309,
+              "oracle_linear_tail_vs_unity_m": 0.00026219472044639594,
+              "corrected_tail_vs_local_full_m": 0.11754559885949642,
+              "oracle_linear_delta_v_from_snapshot_mps": [
+                0.01766659873737586,
+                -0.011020420753838911
+              ],
+              "oracle_linear_delta_v_norm_from_snapshot_mps": 0.020822064848114698,
+              "oracle_linear_delta_v_normal_mps": 0.01997312790043708,
+              "oracle_linear_delta_v_tangent_mps": 0.005884942345671317,
+              "oracle_linear_delta_v_component": "normal",
+              "oracle_linear_impulse_normal_Ns": 0.3814867428983482,
+              "oracle_linear_impulse_tangent_Ns": 0.11240239880232215,
+              "oracle_linear_velocity_protocol": [
+                0.40684910672916663,
+                -0.5696384298442625
+              ],
+              "required_early_velocity": [
+                0.40946445103510587,
+                -0.5921076184919499
+              ],
+              "delta_v_required_mps": [
+                0.020281943043315098,
+                -0.03348960940152634
+              ],
+              "tail_distance_scale_required": 1.057396452625546,
+              "tail_direction_delta_deg_required": -0.19916634651222287,
+              "baseline_tail": {
+                "endpoint": [
+                  3.1946911811828613,
+                  5.296520709991455
+                ],
+                "elapsed_s": 7.87,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "corrected_tail": {
+                "endpoint": [
+                  3.2599399089813232,
+                  5.200633525848389
+                ],
+                "elapsed_s": 8.03,
+                "final_linear_speed": 0.0,
+                "final_angular_velocity": 0.0
+              },
+              "oracle_linear_tail": {
+                "endpoint": [
+                  3.237619400024414,
+                  5.258243560791016
+                ],
+                "error_m": 0.00026219472044639594,
+                "velocity_protocol": [
+                  0.40684910672916663,
+                  -0.5696384298442625
+                ],
+                "delta_v_from_snapshot_mps": [
+                  0.01766659873737586,
+                  -0.011020420753838911
+                ],
+                "delta_v_norm_from_snapshot_mps": 0.020822064848114698,
+                "iterations": [
+                  {
+                    "iteration": 0,
+                    "error_before_m": 0.05744731639513457,
+                    "delta_v_mps": [
+                      0.018923915175586385,
+                      -0.01046313848672716
+                    ],
+                    "jacobian": [
+                      [
+                        1.8013954162597656,
+                        -0.8237838745117188
+                      ],
+                      [
+                        -0.7580757141113281,
+                        2.3009300231933594
+                      ]
+                    ],
+                    "chosen_damping": 1.0,
+                    "error_after_m": 0.0021951972931818432
+                  },
+                  {
+                    "iteration": 1,
+                    "error_before_m": 0.0021951972931818432,
+                    "delta_v_mps": [
+                      -0.0012573164382105348,
+                      -0.0005572822671117122
+                    ],
+                    "jacobian": [
+                      [
+                        2.006959915161133,
+                        -0.6976127624511719
+                      ],
+                      [
+                        -0.6866455078125,
+                        2.4682044982910156
+                      ]
+                    ],
+                    "chosen_damping": 1.0,
+                    "error_after_m": 0.00026219472044639594
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "interpretation": [
+        "Entrance-state perturbations are a real lever: handoff x/y solves 12004/12006, a tiny handoff_v_scale solves 12003, and diagnostic target reset offsets solve 12007.",
+        "The lever is not a global coordinate constant: the all-sample y=0 handoff-x sweep keeps the best target RMSE at the baseline x=0 setting.",
+        "Adding an active handoff angular-velocity offset solves the last in-play pair bottleneck, 12005. The current per-sample entrance-state oracle has every in-play target pair under 2cm.",
+        "If the score is active endpoint only, the same family of perturbations can put all 8 active stones under 2cm. That proves active endpoint drift is mostly entrance reconstruction, but it does not prove pair-contact parity.",
+        "Sample 12005 is specifically sensitive to handoff angular velocity: vx/vy offsets and actor yaw did not improve it, while handoff_w_offset around -0.44rad/s gives active/target errors about 1.77cm/1.37cm.",
+        "The required -0.44rad/s diagnostic offset is much larger than the visible sampled w value, so it should be read as missing angular/tangent native state or contact-row/cache state, not as a new proven managed formula.",
+        "For 12007, target reset offsets bring both endpoints under 2cm, which points at active/target relative entrance geometry rather than a hard PhysX formula mismatch for that sample."
+      ]
+    },
+    "oracle_generalization": {
+      "question": "Can visible pre-collision features predict the per-sample entrance-state oracle well enough to keep collisions under 2cm?",
+      "best_model_by_target_rmse": {
+        "name": "headon_linear",
+        "endpoint_summary": {
+          "sample_count": 7,
+          "in_play_pair_count": 7,
+          "active_rmse_m": 0.05217646376325202,
+          "target_in_play_rmse_m": 0.3097812149770539,
+          "both_endpoints_within_2cm_count": 0,
+          "both_endpoints_within_2cm_sample_ids": [],
+          "bottlenecks_over_2cm": [
+            {
+              "sample_id": 12000,
+              "active_error_m": 0.00966271407420298,
+              "target_error_m": 0.05307321111976104,
+              "max_endpoint_error_m": 0.05307321111976104
+            },
+            {
+              "sample_id": 12002,
+              "active_error_m": 0.007104557718766917,
+              "target_error_m": 0.06120240770583756,
+              "max_endpoint_error_m": 0.06120240770583756
+            },
+            {
+              "sample_id": 12003,
+              "active_error_m": 0.08329700952829928,
+              "target_error_m": 0.26652427046714744,
+              "max_endpoint_error_m": 0.26652427046714744
+            },
+            {
+              "sample_id": 12004,
+              "active_error_m": 0.052343165152451146,
+              "target_error_m": 0.23838323715776383,
+              "max_endpoint_error_m": 0.23838323715776383
+            },
+            {
+              "sample_id": 12005,
+              "active_error_m": 0.08650597281977115,
+              "target_error_m": 0.7314522153882478,
+              "max_endpoint_error_m": 0.7314522153882478
+            },
+            {
+              "sample_id": 12006,
+              "active_error_m": 0.029296508591879565,
+              "target_error_m": 0.02752649127978489,
+              "max_endpoint_error_m": 0.029296508591879565
+            },
+            {
+              "sample_id": 12007,
+              "active_error_m": 0.029884332492179855,
+              "target_error_m": 0.039325589590647074,
+              "max_endpoint_error_m": 0.039325589590647074
+            }
+          ]
+        }
+      },
+      "interpretation": [
+        "This is intentionally a tiny-data leave-one-out audit, not a production correction model.",
+        "If simple visible features cannot predict the oracle corrections, the current 2cm result remains a per-sample native-state proxy rather than a general simulator formula.",
+        "The next trustworthy route would be either runtime contact/solver state capture or a larger controlled sample set for correction-model validation."
+      ]
+    },
+    "angular_handoff_diagnostic": {
+      "question": "Is the 12005 closure caused by a global handoff angular-velocity constant or a sample-specific tangent/angular proxy?",
+      "sample_12005_vxy_offset_best": {
+        "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_vxyoffset_coarse_20260709.json",
+        "config": {
+          "handoff_w_offset": 0.0,
+          "handoff_vx_offset": 0.0,
+          "handoff_vy_offset": 0.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.008,
+          "handoff_y_offset": -0.006,
+          "target_x_offset": -0.002,
+          "target_y_offset": 0.0
+        },
+        "summary": {
+          "sample_count": 1,
+          "active_error_count": 1,
+          "target_in_play_error_count": 1,
+          "target_cleared_count": 0,
+          "active_rmse_m": 0.025147421830752914,
+          "target_in_play_rmse_m": 0.024792071972587832,
+          "combined_rmse_m": 0.0249703790262363,
+          "active_mean_m": 0.025147421830752914,
+          "target_in_play_mean_m": 0.024792071972587832
+        },
+        "sample_id": 12005,
+        "handoff_w": 0.0012341712526270016,
+        "active_error_m": 0.025147421830752914,
+        "target_error_m": 0.024792071972587832,
+        "max_endpoint_error_m": 0.025147421830752914,
+        "sim_active": [
+          2.3435592651367188,
+          8.282296180725098
+        ],
+        "sim_target": [
+          2.6266424655914307,
+          3.7329258918762207
+        ],
+        "unity_active": [
+          2.3185,
+          8.2844
+        ],
+        "unity_target": [
+          2.6502,
+          3.7252
+        ]
+      },
+      "sample_12005_yaw_best": {
+        "source": "data\\calibration\\unity_physx_collision_probe_12005_active_target_yaw_micro_20260709.json",
+        "config": {
+          "handoff_w_offset": 0.0,
+          "handoff_vx_offset": 0.0,
+          "handoff_vy_offset": 0.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.008,
+          "handoff_y_offset": -0.006,
+          "target_x_offset": -0.002,
+          "target_y_offset": 0.0
+        },
+        "summary": {
+          "sample_count": 1,
+          "active_error_count": 1,
+          "target_in_play_error_count": 1,
+          "target_cleared_count": 0,
+          "active_rmse_m": 0.025147421830752914,
+          "target_in_play_rmse_m": 0.024792071972587832,
+          "combined_rmse_m": 0.0249703790262363,
+          "active_mean_m": 0.025147421830752914,
+          "target_in_play_mean_m": 0.024792071972587832
+        },
+        "sample_id": 12005,
+        "handoff_w": 0.0012341712526270016,
+        "active_error_m": 0.025147421830752914,
+        "target_error_m": 0.024792071972587832,
+        "max_endpoint_error_m": 0.025147421830752914,
+        "sim_active": [
+          2.3435592651367188,
+          8.282296180725098
+        ],
+        "sim_target": [
+          2.6266424655914307,
+          3.7329258918762207
+        ],
+        "unity_active": [
+          2.3185,
+          8.2844
+        ],
+        "unity_target": [
+          2.6502,
+          3.7252
+        ]
+      },
+      "sample_12005_woffset_best_by_max_endpoint": {
+        "source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_ultrafine_20260709.json",
+        "config": {
+          "handoff_w_offset": -0.44,
+          "handoff_vx_offset": 0.0,
+          "handoff_vy_offset": 0.0,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.008,
+          "handoff_y_offset": -0.006,
+          "target_x_offset": -0.002,
+          "target_y_offset": 0.0
+        },
+        "summary": {
+          "sample_count": 1,
+          "active_error_count": 1,
+          "target_in_play_error_count": 1,
+          "target_cleared_count": 0,
+          "active_rmse_m": 0.01768625586319518,
+          "target_in_play_rmse_m": 0.013686706323099785,
+          "combined_rmse_m": 0.01581343695142181,
+          "active_mean_m": 0.01768625586319518,
+          "target_in_play_mean_m": 0.013686706323099785
+        },
+        "sample_id": 12005,
+        "handoff_w": 0.0012341712526270016,
+        "active_error_m": 0.01768625586319518,
+        "target_error_m": 0.013686706323099785,
+        "max_endpoint_error_m": 0.01768625586319518,
+        "sim_active": [
+          2.3359875679016113,
+          8.281756401062012
+        ],
+        "sim_target": [
+          2.6596481800079346,
+          3.735102415084839
+        ],
+        "unity_active": [
+          2.3185,
+          8.2844
+        ],
+        "unity_target": [
+          2.6502,
+          3.7252
+        ]
+      },
+      "sample_12005_contact_comparison": {
+        "baseline_source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_target_xy_best_contact_20260709.json",
+        "woffset_source": "data\\calibration\\unity_physx_collision_probe_12005_handoff_woffset_bestmax_contact_20260709.json",
+        "baseline_config": {
+          "handoff_w_offset": 0.0
+        },
+        "woffset_config": {
+          "handoff_w_offset": -0.44
+        },
+        "baseline_errors_m": {
+          "active": 0.025147421830752914,
+          "target": 0.024792071972587832
+        },
+        "woffset_errors_m": {
+          "active": 0.01768625586319518,
+          "target": 0.013686706323099785
+        },
+        "handoff_w_visible_magnitude": 0.0012341712526270016,
+        "required_offset_over_visible_w": 356.5145429075874,
+        "baseline_first_contact": {
+          "first_contact_time": 0.01,
+          "contact_count": 4,
+          "normal": [
+            0.9987955689430237,
+            -0.049067120999097824,
+            0.0
+          ],
+          "impulse": [
+            10.938982009887695,
+            -0.5373916029930115,
+            0.0
+          ],
+          "separation": -0.006521075963973999
+        },
+        "woffset_first_contact": {
+          "first_contact_time": 0.01,
+          "contact_count": 4,
+          "normal": [
+            0.9987955689430237,
+            -0.049067120999097824,
+            0.0
+          ],
+          "impulse": [
+            10.624011993408203,
+            -0.5219182968139648,
+            0.0
+          ],
+          "separation": -0.006521075963973999
+        },
+        "snapshot_delta_0p02": {
+          "time_key": "0.020000",
+          "active_linear_velocity_delta": [
+            -0.011018775403499603,
+            -0.0005002021789550781
+          ],
+          "target_linear_velocity_delta": [
+            0.011018775403499603,
+            0.0005002021789550781
+          ],
+          "active_angular_velocity_delta": [
+            -0.265567421913147
+          ],
+          "target_angular_velocity_delta": [
+            0.12094104290008545
+          ]
+        }
+      },
+      "global_woffset_summary": {
+        "source": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_woffset_global_20260709.json",
+        "best_by_target_rmse": {
+          "handoff_w_offset": -0.5,
+          "active_rmse_m": 0.033603785408257446,
+          "target_in_play_rmse_m": 0.10937501613881255,
+          "bad_in_play_pair_count": 7
+        },
+        "baseline": {
+          "handoff_w_offset": 0.0,
+          "active_rmse_m": 0.03855842111554859,
+          "target_in_play_rmse_m": 0.11323278407673086,
+          "bad_in_play_pair_count": 6
+        },
+        "rows": [
+          {
+            "handoff_w_offset": -0.6,
+            "active_rmse_m": 0.03306748821370086,
+            "target_in_play_rmse_m": 0.109718525544439,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.5,
+            "active_rmse_m": 0.033603785408257446,
+            "target_in_play_rmse_m": 0.10937501613881255,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.44,
+            "active_rmse_m": 0.03393275107368199,
+            "target_in_play_rmse_m": 0.10951615821133841,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.4,
+            "active_rmse_m": 0.034210057699146625,
+            "target_in_play_rmse_m": 0.1096805819821484,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.3,
+            "active_rmse_m": 0.03503021707227375,
+            "target_in_play_rmse_m": 0.10974825805406048,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.2,
+            "active_rmse_m": 0.03603319882000189,
+            "target_in_play_rmse_m": 0.11087278299374324,
+            "bad_in_play_pair_count": 7
+          },
+          {
+            "handoff_w_offset": -0.1,
+            "active_rmse_m": 0.03722846795475923,
+            "target_in_play_rmse_m": 0.1117041805708573,
+            "bad_in_play_pair_count": 6
+          },
+          {
+            "handoff_w_offset": 0.0,
+            "active_rmse_m": 0.03855842111554859,
+            "target_in_play_rmse_m": 0.11323278407673086,
+            "bad_in_play_pair_count": 6
+          },
+          {
+            "handoff_w_offset": 0.1,
+            "active_rmse_m": 0.03998643434926437,
+            "target_in_play_rmse_m": 0.11495697102755661,
+            "bad_in_play_pair_count": 6
+          }
+        ]
+      },
+      "interpretation": [
+        "For 12005, independent handoff vx/vy offsets and active/target yaw probes do not improve the pair endpoint error.",
+        "A handoff_w_offset around -0.44rad/s brings 12005 under 2cm, but the visible reconstructed handoff w is only about 0.00123rad/s.",
+        "The required diagnostic offset is hundreds of times larger than the visible handoff w, so it is not a simple angular_sign or small unit-conversion fix.",
+        "The same w offset as a global constant does not close the unique-role set; the best global target RMSE remains about 10.94cm.",
+        "For the 12005 contact-report A/B, first contact time, point count, normal and separation are unchanged; the effect appears through post-contact linear/angular velocity distribution.",
+        "The current best explanation is a sample-specific active-side tangent/angular native-state or friction/contact-row/cache proxy, not a proven managed-level angular-velocity formula."
+      ]
+    }
+  },
+  "pyphysx_capabilities": {
+    "available": true,
+    "shape_mesh_methods": [
+      "create_convex_mesh_from_points",
+      "create_triangle_mesh_from_points",
+      "get_convex_mesh_data"
+    ],
+    "rigid_static_create_methods": [
+      "create_plane"
+    ],
+    "has_triangle_mesh_shape_creation": true,
+    "has_contact_report_dump": true,
+    "scene_contact_report_methods": [
+      "get_contact_reports"
+    ]
+  },
+  "requirements": [
+    {
+      "group": "scene",
+      "field": "fixed timestep",
+      "unity_state": "fixedDeltaTime=0.01s",
+      "local_pyphysx_state": "probe dt=0.01s",
+      "status": "matched",
+      "evidence": [
+        "docs/unity_reverse/10_simulator_alignment_strategy.zh.md",
+        "probe config"
+      ],
+      "impact": "Wrong dt was already shown to create meter-level drift; this item is not the current collision gap."
+    },
+    {
+      "group": "scene",
+      "field": "gravity",
+      "unity_state": "PhysicsManager gravity=(0,-9.81,0), formal stones use gravity",
+      "local_pyphysx_state": "pyphysx scene z gravity=-9.81, gravity enabled by default",
+      "status": "matched_for_main_probe",
+      "evidence": [
+        "data/calibration/unity_collision_support_contact_audit_20260709.json"
+      ],
+      "impact": "Disabling gravity is catastrophic, but removing vertical settling does not fix the 10cm target error."
+    },
+    {
+      "group": "scene",
+      "field": "contact generation and friction type",
+      "unity_state": "contactsGeneration=1 selects PCM; frictionType=0 selects patch friction",
+      "local_pyphysx_state": "pyphysx Scene defaults include PCM; patch friction is the PhysX default path used in probes",
+      "status": "mostly_matched",
+      "evidence": [
+        "docs/unity_reverse/05_physx_contact_generation.zh.md",
+        "docs/unity_reverse/06_physx_solver.zh.md"
+      ],
+      "impact": "The code path is known; equality of the actual contact cache/manifold is still not proven."
+    },
+    {
+      "group": "static_geometry",
+      "field": "rink collider geometry",
+      "unity_state": "static MeshCollider triangle mesh, Unity default Plane mesh, m_CookingOptions=30",
+      "local_pyphysx_state": "probe now supports both historical PxPlane and a Unity-Plane-like 10x10 triangle mesh",
+      "status": "binding_available_not_main_cause",
+      "evidence": [
+        "docs/unity_reverse/00_overview_assets.zh.md",
+        "tools/reverse/probe_physx_collision_alignment.py",
+        "data/calibration/unity_physx_collision_probe_unique_role_rink_mesh_currentbest_winding_20260709.json"
+      ],
+      "impact": "The historical PxPlane probe is not a strict native-state match, but replacing it with a triangle mesh did not reduce the target error."
+    },
+    {
+      "group": "dynamic_actor",
+      "field": "Rigidbody scalar properties",
+      "unity_state": "mass=19.1, drag=0, angularDrag=0.05, constraints FreezeRotationX|FreezeRotationZ",
+      "local_pyphysx_state": "probe sets mass=19.1, linear damping=0, angular damping=0.05; lock-upright replay maps Unity X/Z locks to PhysX X/Y locks",
+      "status": "tested_non_main_cause",
+      "evidence": [
+        "docs/unity_reverse/00_overview_assets.zh.md",
+        "tools/reverse/probe_physx_collision_alignment.py",
+        "data/calibration/unity_collision_lock_constraints_audit_20260709.json"
+      ],
+      "impact": "The lock-axis mismatch is real in the historical baseline, but a locked replay suppresses horizontal angular velocity and still leaves about 11.37cm target RMSE."
+    },
+    {
+      "group": "dynamic_actor",
+      "field": "first-contact pose and velocity",
+      "unity_state": "Unity true PxRigidDynamic pose/velocity at the frame entering PhysX",
+      "local_pyphysx_state": "reconstructed from MOTIONINFO plus Newfrictionstep or console-derived handoff_state",
+      "status": "inferred_not_captured",
+      "evidence": [
+        "tools/reverse/merge_console_handoff_into_samples.py",
+        "data/calibration/unity_physx_collision_probe_unique_role_current_best_20260708.json"
+      ],
+      "impact": "A small velocity or yaw error at contact is amplified over 3-4m of post-collision sliding."
+    },
+    {
+      "group": "shape",
+      "field": "formal stone cooked convex stream",
+      "unity_state": "runtime MeshCollider cooked PxConvexMesh/CLHL/GAUS/VALE for the actual match stone",
+      "local_pyphysx_state": "offline pyphysx cook of recovered formal mesh under recovered Unity flags",
+      "status": "inferred_not_captured",
+      "evidence": [
+        "data/calibration/pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_raw_20260708.json",
+        "docs/unity_reverse/12_physx_convex_cooking.zh.md"
+      ],
+      "impact": "The offline hull is structurally strong evidence, but not a byte-level proof of Unity's runtime stream."
+    },
+    {
+      "group": "shape",
+      "field": "shape local pose, geometry scale, wrapper",
+      "unity_state": "Unity PxShape local pose/scale after MeshCollider rebuild",
+      "local_pyphysx_state": "probe exposes common shape_local x/y/z/yaw sweeps; identity is assumed by default",
+      "status": "not_proven",
+      "evidence": [
+        "data/calibration/unity_physx_collision_probe_unique_role_shape_local_xyz_grid_20260709.json",
+        "data/calibration/unity_collision_feature_phase_audit_20260709.json"
+      ],
+      "impact": "Simple common offsets/yaw, actor yaw, and stone face count do not fix the hard 12003 error, but the exact Unity shape wrapper is still not directly captured."
+    },
+    {
+      "group": "material",
+      "field": "first-contact material timing",
+      "unity_state": "Bouncy/Ice material values plus OnCollisionEnter managed timing",
+      "local_pyphysx_state": "probe tested pre/post/never material switches",
+      "status": "tested_non_main_cause",
+      "evidence": [
+        "data/calibration/unity_collision_material_timing_audit_20260709.json"
+      ],
+      "impact": "The timing variants do not move the oracle floor enough; this is probably not the main mismatch."
+    },
+    {
+      "group": "contact_manager",
+      "field": "persistent contact cache and friction anchors",
+      "unity_state": "Unity PxsContactManager state accumulated before first stone-stone solve",
+      "local_pyphysx_state": "fresh pyphysx scene starts with no existing pair/cache/friction anchors",
+      "status": "not_proven",
+      "evidence": [
+        "docs/unity_reverse/05_physx_contact_generation.zh.md",
+        "docs/unity_reverse/06_physx_solver.zh.md"
+      ],
+      "impact": "Warm-start/cache differences can change early tangent impulses without looking like a simple restitution parameter."
+    },
+    {
+      "group": "contact_manager",
+      "field": "first contact manifold",
+      "unity_state": "actual normal, points, separation, material values and maxImpulse from Unity ContactBuffer",
+      "local_pyphysx_state": "not dumped; only endpoint and local snapshot residuals are available",
+      "status": "missing_required_proof",
+      "evidence": [
+        "data/calibration/unity_collision_impulse_residual_20260709.json",
+        "data/calibration/unity_collision_impulse_residual_refresh_20260709.json",
+        "data/calibration/unity_collision_pair_impulse_residual_refresh_20260709.json",
+        "data/calibration/unity_collision_impulse_feasibility_refresh_20260709.json",
+        "data/calibration/unity_collision_local_impulse_trace_20260709.json"
+      ],
+      "impact": "Target-side endpoint-inferred velocity corrections are stable across early snapshots; this is the shortest path to prove or disprove native-state equality at the collision frame."
+    },
+    {
+      "group": "solver",
+      "field": "normal/friction solver rows and impulses",
+      "unity_state": "Unity SolverContactHeader/Point/Friction rows and applied impulses",
+      "local_pyphysx_state": "formula and layouts are recovered, but row instances are not captured",
+      "status": "missing_required_proof",
+      "evidence": [
+        "docs/unity_reverse/06_physx_solver.zh.md",
+        "data/calibration/unity_collision_impulse_feasibility_refresh_20260709.json"
+      ],
+      "impact": "The observed residual splits into normal-row and tangent/friction/cache classes; the row/impulse dump would localize it directly."
+    }
+  ],
+  "status_counts": {
+    "matched": 1,
+    "matched_for_main_probe": 1,
+    "mostly_matched": 1,
+    "binding_available_not_main_cause": 1,
+    "tested_non_main_cause": 2,
+    "inferred_not_captured": 2,
+    "not_proven": 2,
+    "missing_required_proof": 2
+  },
+  "known_counterexamples_or_gaps": [
+    "The historical current-best probe uses PxPlane for the rink while Unity uses a non-convex MeshCollider triangle mesh; a new 10x10 triangle-mesh A/B test did not improve the target RMSE.",
+    "The formal match-stone runtime cooked convex stream has not been captured byte-for-byte; the local hull is an offline PhysX cook.",
+    "Unity's contact manager cache/friction anchors and first ContactBuffer/SolverContact rows have not been dumped.",
+    "Static feature-phase probes do not reach 2cm: best 12003 error across shape yaw, actor yaw, shape offsets and stone-faces scans is 0.192919m.",
+    "Wide reset-yaw probes can bring 12003 target to 0.017531m, but best pair RMSE remains 0.034094m and no yaw pair puts both endpoints under 2cm.",
+    "Per-sample target-yaw-only probes still do not prove identity: target RMSE remains 0.053666m and pair RMSE remains 0.047918m.",
+    "Hard-sample dual-yaw probes remain above 2cm pair RMSE: 12003=0.034094m, 12004=0.044680m, 12007=0.055667m.",
+    "Current unique-role replay target RMSE is 0.113233m, far above numerical epsilon.",
+    "Recovered 512-vertex formal mesh input is not the missing 10cm lever: current-best scale recovered-mesh vs ring target RMSE delta is 0.000000m, and formal recovered mesh remains 0.120754m target RMSE.",
+    "Serialized formal stone prefab/scene rotations do not explain the wide-yaw lever: 80 stones have 1 unique local rotation and max yaw 0.000000deg.",
+    "Deterministic BESTSHOT->handoff active yaw integration is not the missing rotation state: best integrated target RMSE is 0.162959m vs baseline 0.113233m.",
+    "Millimeter-scale handoff threshold/placement refinement helps but does not prove identity: best target RMSE is 0.102747m after 0.010485m improvement versus baseline.",
+    "Unity lock-axis constraints are not the missing 10cm lever: locked replay target RMSE is 0.113660m and target horizontal angular velocity at 0.02s is 0.000000rad/s.",
+    "Local pyphysx ContactPairPoint dump confirms the hard-sample contact-frame mismatch: sample 12003 first contact report impulse angle is -87.188deg, while Unity-implied target impulse angle is -82.212deg (delta 4.976deg).",
+    "A global handoff-x offset is not the missing native-state constant: the best y=0 global sweep uses x=0.0m and still has target RMSE 0.113233m.",
+    "Sample 12003 is nevertheless strongly sensitive to local handoff pose: x=-0.02m, y=0.0m reduces active/target errors to 0.019286m/0.031641m, so the remaining gap is contact-instance state rather than a solved field-for-field identity.",
+    "A per-sample entrance-state oracle can control the existing in-play collision samples to 2cm, but only by changing sample-specific native-state proxies. Target RMSE is 0.014830m, active RMSE is 0.013502m, both-endpoints-under-2cm count is 7 of 7, and all in-play target pairs are within 2cm.",
+    "Scoring only the active stone, entrance-state perturbations can put all 8 samples under 2cm (active RMSE 0.006122m). With the handoff angular-velocity diagnostic included, the in-play pair objective also falls under 2cm, but only under per-sample native-state proxy changes.",
+    "Visible-feature correction is not a usable substitute for native-state equality: leave-one-out best model headon_linear still has active RMSE 0.052176m, target RMSE 0.309781m, and 0 of 7 in-play pairs with both endpoints under 2cm.",
+    "The 12005 angular handoff diagnostic closes that sample but is not a global angular constant: handoff_w_offset=-0.44 gives active/target errors 0.017686m/0.013687m, while the reconstructed handoff w is only 0.001234rad/s.",
+    "A global handoff_w_offset still does not solve the collision set: best global target RMSE is 0.109375m with 7 in-play pair errors over 2cm."
+  ],
+  "minimum_proof_target": [
+    "Dump Unity runtime PxShape/PxConvexMeshGeometry/PxTriangleMeshGeometry for active, target and rink.",
+    "Dump first stone-stone ContactBuffer after PCM narrowphase: normal, points, separation and material fields.",
+    "Dump SolverContact rows or applied normal/friction impulses for the same pair.",
+    "Replay from those exact dumped fields in local PhysX/C++ or pyphysx and compare the 0.02s post-contact velocity before looking at final endpoints."
+  ],
+  "source_reports": {
+    "oracle": "data\\calibration\\unity_collision_oracle_hypothesis_audit_20260709.json",
+    "impulse": "data\\calibration\\unity_collision_impulse_residual_refresh_20260709.json",
+    "pair_impulse": "data\\calibration\\unity_collision_pair_impulse_residual_refresh_20260709.json",
+    "impulse_feasibility": "data\\calibration\\unity_collision_impulse_feasibility_refresh_20260709.json",
+    "local_impulse_trace": "data\\calibration\\unity_collision_local_impulse_trace_20260709.json",
+    "friction_offset": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_friction_offset_refresh_20260709.json",
+    "tail_replay_002s": "data\\calibration\\unity_collision_tail_replay_oracle_002s_20260709.json",
+    "tail_replay_020s": "data\\calibration\\unity_collision_tail_replay_oracle_020s_20260709.json",
+    "solver_row_delta_002s": "data\\calibration\\unity_collision_solver_row_delta_from_tail_oracle_20260709.json",
+    "solver_row_delta_020s": "data\\calibration\\unity_collision_solver_row_delta_from_tail_oracle_020s_20260709.json",
+    "row_correction_models_002s": "data\\calibration\\unity_collision_row_correction_models_20260709.json",
+    "row_correction_models_020s": "data\\calibration\\unity_collision_row_correction_models_020s_20260709.json",
+    "contact_frame_quantization": "data\\calibration\\unity_collision_contact_frame_quantization_20260709.json",
+    "feature_phase": "data\\calibration\\unity_collision_feature_phase_audit_20260709.json",
+    "rotation_reset": "data\\calibration\\unity_collision_rotation_reset_audit_20260709.json",
+    "integrated_active_yaw": "data\\calibration\\unity_collision_integrated_active_yaw_audit_20260709.json",
+    "support": "data\\calibration\\unity_collision_support_contact_audit_20260709.json",
+    "stone_geometry_input": "data\\calibration\\unity_collision_stone_geometry_input_audit_20260709.json",
+    "stone_prefab_rotation": "data\\calibration\\unity_stone_prefab_rotation_audit_20260709.json",
+    "handoff_threshold": "data\\calibration\\unity_collision_handoff_threshold_audit_20260709.json",
+    "lock_constraints": "data\\calibration\\unity_collision_lock_constraints_audit_20260709.json",
+    "contact_report_vs_row_delta": "data\\calibration\\unity_collision_contact_report_vs_row_delta_20260709.json",
+    "handoff_xoffset_y0": "data\\calibration\\unity_physx_collision_probe_unique_role_xoffset_y0_20260709.json",
+    "handoff_12003_xyoffset": "data\\calibration\\unity_physx_collision_probe_12003_contact_xyoffset_wide_20260709.json",
+    "handoff_xy_oracle": "data\\calibration\\unity_collision_handoff_xy_oracle_20260709.json",
+    "oracle_generalization": "data\\calibration\\unity_collision_oracle_generalization_20260709.json",
+    "angular_handoff_diagnostic": "data\\calibration\\unity_collision_angular_handoff_diagnostic_20260709.json",
+    "rink_mesh": "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_currentbest_winding_20260709.json"
+  }
+}

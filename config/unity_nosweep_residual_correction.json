@@ -1,0 +1,31 @@
+{
+  "mode": "no_sweep_endpoint_residual_correction",
+  "source_report": "data\\calibration\\unity_nosweep_residual_correction_report.json",
+  "features": [
+    "1",
+    "motion_speed",
+    "motion_vx",
+    "motion_w",
+    "abs_motion_w"
+  ],
+  "alpha": 0.1,
+  "coefficients_dx": [
+    0.009661440639589678,
+    -0.004807359977350023,
+    0.002803038581437589,
+    0.018401930742688245,
+    -0.0015411921423261715
+  ],
+  "coefficients_dy": [
+    -0.03126982083796031,
+    0.00896693166382634,
+    0.0011572518193830644,
+    0.0009906890405635756,
+    -0.0008399999908622052
+  ],
+  "baseline_rmse_m": 0.03310914555518736,
+  "in_sample_rmse_m": 0.02846538867791385,
+  "grouped_cv_rmse_m": 0.02888969672978437,
+  "units": "meters",
+  "apply": "endpoint_corrected = endpoint_recovered - predicted_residual"
+}

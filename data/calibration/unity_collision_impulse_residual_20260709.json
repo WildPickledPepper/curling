@@ -1,0 +1,1667 @@
+{
+  "snapshot_time_s": 0.02,
+  "mass_kg": 19.1,
+  "results": [
+    {
+      "label": "unique_role_current_best",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_current_best_20260708.json",
+      "probe_summary": {
+        "sample_count": 8,
+        "active_error_count": 8,
+        "target_in_play_error_count": 7,
+        "target_cleared_count": 1,
+        "active_rmse_m": 0.037766793771995454,
+        "target_in_play_rmse_m": 0.10796148501441558,
+        "combined_rmse_m": 0.07874025714129404,
+        "active_mean_m": 0.027085394156134764,
+        "target_in_play_mean_m": 0.09279868530483147
+      },
+      "config_excerpt": {
+        "radius": 0.146,
+        "height": 0.23,
+        "center_height": 0.1276,
+        "stone_restitution": 1.0,
+        "contact_offset": 0.01,
+        "handoff_x_offset": null,
+        "handoff_y_offset": null,
+        "handoff_v_scale": 1.0,
+        "pre_collision_dynamic_friction": null,
+        "pre_collision_static_friction": null,
+        "material_switch_mode": null
+      },
+      "summary": {
+        "row_count": 8,
+        "ok_count": 7,
+        "skipped_count": 1,
+        "endpoint_rmse_m": 0.10796148501441558,
+        "delta_v_norm_rmse_mps": 0.046644797065500676,
+        "delta_v_norm_mean_mps": 0.042290510654024185,
+        "delta_v_normal_rmse_mps": 0.0340627649375485,
+        "delta_v_tangent_rmse_mps": 0.03186636374127204,
+        "required_impulse_norm_mean_Ns": 0.8077487534918621,
+        "required_impulse_norm_max_Ns": 1.4001835666751725,
+        "delta_v_fraction_of_early_speed_mean": 0.043009563335508906,
+        "dominant_delta_v_component_counts": {
+          "mixed": 1,
+          "tangent": 3,
+          "normal": 3
+        },
+        "tail_distance_scale_required_mean": 1.009415300721923,
+        "tail_distance_scale_required_median": 1.0123392464507004,
+        "tail_direction_delta_abs_deg_mean": 1.2270256801530304,
+        "tail_direction_delta_abs_deg_median": 1.1324224393087305,
+        "early_velocity_to_contact_abs_deg_mean": 2.5716280162971907,
+        "contact_normal_to_unity_abs_deg_mean": 3.103096070705832
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351402997970581,
+            6.489634037017822
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376896619796753,
+            6.174746036529541
+          ],
+          "early_velocity": [
+            0.09492892026901245,
+            -1.262671709060669
+          ],
+          "early_speed_mps": 1.2662351064338846,
+          "sim_target": [
+            2.691636323928833,
+            2.8164846897125244
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "endpoint_error_m": 0.19527685089492122,
+          "sim_tail_m": 3.3729779653716077,
+          "unity_tail_m": 3.282513173410502,
+          "tail_distance_scale_required": 0.9731795484910205,
+          "tail_direction_delta_deg_required": 2.980258922431321,
+          "required_early_velocity": [
+            0.15614588366540355,
+            -1.2223411729657723
+          ],
+          "delta_v_required_mps": [
+            0.0612169633963911,
+            0.040330536094896674
+          ],
+          "delta_v_required_norm_mps": 0.07330804014006138,
+          "delta_v_required_normal_mps": -0.03522636742581131,
+          "delta_v_required_tangent_mps": 0.06428974869416267,
+          "delta_v_required_fraction_of_early_speed": 0.05789449350091061,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 1.4001835666751725,
+          "required_impulse_normal_Ns": -0.672823617832996,
+          "required_impulse_tangent_Ns": 1.227934200058507,
+          "contact_normal": [
+            0.08120268000198008,
+            -0.9966976094887033
+          ],
+          "contact_tangent": [
+            0.9966976094887033,
+            0.08120268000198008
+          ],
+          "contact_normal_to_unity_disp_deg": 3.6458381677930882,
+          "early_velocity_to_contact_normal_deg": 0.35823350905742096,
+          "target_error_m": 0.1952768508949212,
+          "active_error_m": 0.07334214841812915
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351292371749878,
+            8.290797233581543
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.3771181106567383,
+            7.9718217849731445
+          ],
+          "early_velocity": [
+            0.10602723807096481,
+            -1.408910870552063
+          ],
+          "early_speed_mps": 1.4128947647906156,
+          "sim_target": [
+            2.765028476715088,
+            3.786233901977539
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "endpoint_error_m": 0.13004120983484946,
+          "sim_tail_m": 4.203524756484153,
+          "unity_tail_m": 4.255393084416031,
+          "tail_distance_scale_required": 1.0123392464507004,
+          "tail_direction_delta_deg_required": -1.615534248467605,
+          "required_early_velocity": [
+            0.06708180364320838,
+            -1.4287549017378909
+          ],
+          "delta_v_required_mps": [
+            -0.03894543442775643,
+            -0.019844031185827893
+          ],
+          "delta_v_required_norm_mps": 0.043709637798439664,
+          "delta_v_required_normal_mps": 0.016613832426860348,
+          "delta_v_required_tangent_mps": -0.040429110904928255,
+          "delta_v_required_fraction_of_early_speed": 0.03093623027537881,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.8348540819501976,
+          "required_impulse_normal_Ns": 0.3173241993530327,
+          "required_impulse_tangent_Ns": -0.7721960182841298,
+          "contact_normal": [
+            0.0812567288967049,
+            -0.9966932045564508
+          ],
+          "contact_tangent": [
+            0.9966932045564508,
+            0.0812567288967049
+          ],
+          "contact_normal_to_unity_disp_deg": -0.9773427260808223,
+          "early_velocity_to_contact_normal_deg": 0.35713858114062275,
+          "target_error_m": 0.13004120983484946,
+          "active_error_m": 0.009530003904597758
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351361036300659,
+            8.28537654876709
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.376594066619873,
+            7.9790120124816895
+          ],
+          "early_velocity": [
+            0.07979103177785873,
+            -1.0494024753570557
+          ],
+          "early_speed_mps": 1.0524315483857802,
+          "sim_target": [
+            2.5849878787994385,
+            5.662623405456543
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "endpoint_error_m": 0.11664039001615524,
+          "sim_tail_m": 2.325743786342475,
+          "unity_tail_m": 2.210176720450413,
+          "tail_distance_scale_required": 0.9503096314517921,
+          "tail_direction_delta_deg_required": -0.3989629812869142,
+          "required_early_velocity": [
+            0.06888028439775246,
+            -0.9977610929588309
+          ],
+          "delta_v_required_mps": [
+            -0.010910747380106278,
+            0.0516413823982248
+          ],
+          "delta_v_required_norm_mps": 0.0527814056689681,
+          "delta_v_required_normal_mps": -0.05236581898487811,
+          "delta_v_required_tangent_mps": -0.006610430124822274,
+          "delta_v_required_fraction_of_early_speed": 0.05015186569608658,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.0081248482772909,
+          "required_impulse_normal_Ns": -1.000187142611172,
+          "required_impulse_tangent_Ns": -0.12625921538410545,
+          "contact_normal": [
+            0.08255155924057252,
+            -0.996586795049458
+          ],
+          "contact_tangent": [
+            0.996586795049458,
+            0.08255155924057252
+          ],
+          "contact_normal_to_unity_disp_deg": 0.002806702084221308,
+          "early_velocity_to_contact_normal_deg": 0.3871419266330279,
+          "target_error_m": 0.11664039001615524,
+          "active_error_m": 0.0072533130159951305
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351454973220825,
+            6.409041881561279
+          ],
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.5632359981536865,
+            6.188369274139404
+          ],
+          "early_velocity": [
+            0.4119488596916199,
+            -0.5812970399856567
+          ],
+          "early_speed_mps": 0.7124662179340941,
+          "sim_target": [
+            3.1953136920928955,
+            5.337728500366211
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "endpoint_error_m": 0.09006639430899464,
+          "sim_tail_m": 1.0597697566834814,
+          "unity_tail_m": 1.1488681490028745,
+          "tail_distance_scale_required": 1.0840733487226735,
+          "tail_direction_delta_deg_required": -0.6838310365537087,
+          "required_early_velocity": [
+            0.43903002408207104,
+            -0.6354536315433068
+          ],
+          "delta_v_required_mps": [
+            0.027081164390451162,
+            -0.05415659155765007
+          ],
+          "delta_v_required_norm_mps": 0.06055019301277887,
+          "delta_v_required_normal_mps": 0.057693723263758837,
+          "delta_v_required_tangent_mps": -0.018378252633196333,
+          "delta_v_required_fraction_of_early_speed": 0.08498675654875751,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.1565086865440766,
+          "required_impulse_normal_Ns": 1.1019501143377939,
+          "required_impulse_tangent_Ns": -0.35102462529405,
+          "contact_normal": [
+            0.6976239465294061,
+            -0.7164641157997632
+          ],
+          "contact_tangent": [
+            0.7164641157997632,
+            0.6976239465294061
+          ],
+          "contact_normal_to_unity_disp_deg": -8.313611224557263,
+          "early_velocity_to_contact_normal_deg": 8.912554856954515,
+          "target_error_m": 0.09006639430899464,
+          "active_error_m": 0.06533819075570976
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351485013961792,
+            6.4896039962768555
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376290798187256,
+            6.182222843170166
+          ],
+          "early_velocity": [
+            0.06462216377258301,
+            -0.8888301253318787
+          ],
+          "early_speed_mps": 0.891176197925042,
+          "sim_target": [
+            2.5282320976257324,
+            4.524882793426514
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "endpoint_error_m": 0.051089795127476086,
+          "sim_tail_m": 1.6642902988839852,
+          "unity_tail_m": 1.678248920513161,
+          "tail_distance_scale_required": 1.0083871315229898,
+          "tail_direction_delta_deg_required": -1.6849354025220564,
+          "required_early_velocity": [
+            0.038782132133849526,
+            -0.8978133797809711
+          ],
+          "delta_v_required_mps": [
+            -0.025840031638733482,
+            -0.008983254449092426
+          ],
+          "delta_v_required_norm_mps": 0.027357011817592328,
+          "delta_v_required_normal_mps": 0.006862536841678594,
+          "delta_v_required_tangent_mps": -0.02648229000076259,
+          "delta_v_required_fraction_of_early_speed": 0.030697646415252848,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.5225189257160135,
+          "required_impulse_normal_Ns": 0.13107445367606116,
+          "required_impulse_tangent_Ns": -0.5058117390145656,
+          "contact_normal": [
+            0.08093063474179667,
+            -0.9967197361145659
+          ],
+          "contact_tangent": [
+            0.9967197361145659,
+            0.08093063474179667
+          ],
+          "contact_normal_to_unity_disp_deg": -1.0825837029288796,
+          "early_velocity_to_contact_normal_deg": 0.48370254985371136,
+          "target_error_m": 0.05108979512747609,
+          "active_error_m": 0.005653482939763956
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351682186126709,
+            5.489490985870361
+          ],
+          "target0": [
+            2.375,
+            5.199999809265137
+          ],
+          "early_position": [
+            2.376081705093384,
+            5.184258937835693
+          ],
+          "early_velocity": [
+            0.05415567010641098,
+            -0.7870427370071411
+          ],
+          "early_speed_mps": 0.7889037371443783,
+          "sim_target": [
+            2.4896321296691895,
+            3.8871958255767822
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ],
+          "endpoint_error_m": 0.035402347434248214,
+          "sim_tail_m": 1.302023969097389,
+          "unity_tail_m": 1.3260838880364623,
+          "tail_distance_scale_required": 1.0184788602284738,
+          "tail_direction_delta_deg_required": -1.1324224393087305,
+          "required_early_velocity": [
+            0.03930370966979491,
+            -0.8025198986008492
+          ],
+          "delta_v_required_mps": [
+            -0.014851960436616067,
+            -0.015477161593708044
+          ],
+          "delta_v_required_norm_mps": 0.021450483906163054,
+          "delta_v_required_normal_mps": 0.014234769797667437,
+          "delta_v_required_tangent_mps": -0.016046637922504988,
+          "delta_v_required_fraction_of_early_speed": 0.02719024247978353,
+          "dominant_delta_v_component": "mixed",
+          "required_impulse_norm_Ns": 0.4097042426077144,
+          "required_impulse_normal_Ns": 0.2718841031354481,
+          "required_impulse_tangent_Ns": -0.3064907843198453,
+          "contact_normal": [
+            0.0802875523363226,
+            -0.9967717436503917
+          ],
+          "contact_tangent": [
+            0.9967717436503917,
+            0.0802875523363226
+          ],
+          "contact_normal_to_unity_disp_deg": -0.7336454706475483,
+          "early_velocity_to_contact_normal_deg": 0.6688302687802153,
+          "target_error_m": 0.035402347434248214,
+          "active_error_m": 0.008581849185563482
+        },
+        {
+          "sample_id": 12001,
+          "status": "unity_target_cleared"
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351485013961792,
+            6.4896039962768555
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376290798187256,
+            6.182222843170166
+          ],
+          "early_velocity": [
+            0.06462216377258301,
+            -0.8888301253318787
+          ],
+          "early_speed_mps": 0.891176197925042,
+          "sim_target": [
+            2.5282320976257324,
+            4.524882793426514
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "endpoint_error_m": 0.051089795127476086,
+          "sim_tail_m": 1.6642902988839852,
+          "unity_tail_m": 1.678248920513161,
+          "tail_distance_scale_required": 1.0083871315229898,
+          "tail_direction_delta_deg_required": -1.6849354025220564,
+          "required_early_velocity": [
+            0.038782132133849526,
+            -0.8978133797809711
+          ],
+          "delta_v_required_mps": [
+            -0.025840031638733482,
+            -0.008983254449092426
+          ],
+          "delta_v_required_norm_mps": 0.027357011817592328,
+          "delta_v_required_normal_mps": 0.006862536841678594,
+          "delta_v_required_tangent_mps": -0.02648229000076259,
+          "delta_v_required_fraction_of_early_speed": 0.030697646415252848,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.5225189257160135,
+          "required_impulse_normal_Ns": 0.13107445367606116,
+          "required_impulse_tangent_Ns": -0.5058117390145656,
+          "contact_normal": [
+            0.08093063474179667,
+            -0.9967197361145659
+          ],
+          "contact_tangent": [
+            0.9967197361145659,
+            0.08093063474179667
+          ],
+          "contact_normal_to_unity_disp_deg": -1.0825837029288796,
+          "early_velocity_to_contact_normal_deg": 0.48370254985371136,
+          "target_error_m": 0.05108979512747609,
+          "active_error_m": 0.005653482939763956
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351402997970581,
+            6.489634037017822
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376896619796753,
+            6.174746036529541
+          ],
+          "early_velocity": [
+            0.09492892026901245,
+            -1.262671709060669
+          ],
+          "early_speed_mps": 1.2662351064338846,
+          "sim_target": [
+            2.691636323928833,
+            2.8164846897125244
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "endpoint_error_m": 0.19527685089492122,
+          "sim_tail_m": 3.3729779653716077,
+          "unity_tail_m": 3.282513173410502,
+          "tail_distance_scale_required": 0.9731795484910205,
+          "tail_direction_delta_deg_required": 2.980258922431321,
+          "required_early_velocity": [
+            0.15614588366540355,
+            -1.2223411729657723
+          ],
+          "delta_v_required_mps": [
+            0.0612169633963911,
+            0.040330536094896674
+          ],
+          "delta_v_required_norm_mps": 0.07330804014006138,
+          "delta_v_required_normal_mps": -0.03522636742581131,
+          "delta_v_required_tangent_mps": 0.06428974869416267,
+          "delta_v_required_fraction_of_early_speed": 0.05789449350091061,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 1.4001835666751725,
+          "required_impulse_normal_Ns": -0.672823617832996,
+          "required_impulse_tangent_Ns": 1.227934200058507,
+          "contact_normal": [
+            0.08120268000198008,
+            -0.9966976094887033
+          ],
+          "contact_tangent": [
+            0.9966976094887033,
+            0.08120268000198008
+          ],
+          "contact_normal_to_unity_disp_deg": 3.6458381677930882,
+          "early_velocity_to_contact_normal_deg": 0.35823350905742096,
+          "target_error_m": 0.1952768508949212,
+          "active_error_m": 0.07334214841812915
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351361036300659,
+            8.28537654876709
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.376594066619873,
+            7.9790120124816895
+          ],
+          "early_velocity": [
+            0.07979103177785873,
+            -1.0494024753570557
+          ],
+          "early_speed_mps": 1.0524315483857802,
+          "sim_target": [
+            2.5849878787994385,
+            5.662623405456543
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "endpoint_error_m": 0.11664039001615524,
+          "sim_tail_m": 2.325743786342475,
+          "unity_tail_m": 2.210176720450413,
+          "tail_distance_scale_required": 0.9503096314517921,
+          "tail_direction_delta_deg_required": -0.3989629812869142,
+          "required_early_velocity": [
+            0.06888028439775246,
+            -0.9977610929588309
+          ],
+          "delta_v_required_mps": [
+            -0.010910747380106278,
+            0.0516413823982248
+          ],
+          "delta_v_required_norm_mps": 0.0527814056689681,
+          "delta_v_required_normal_mps": -0.05236581898487811,
+          "delta_v_required_tangent_mps": -0.006610430124822274,
+          "delta_v_required_fraction_of_early_speed": 0.05015186569608658,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.0081248482772909,
+          "required_impulse_normal_Ns": -1.000187142611172,
+          "required_impulse_tangent_Ns": -0.12625921538410545,
+          "contact_normal": [
+            0.08255155924057252,
+            -0.996586795049458
+          ],
+          "contact_tangent": [
+            0.996586795049458,
+            0.08255155924057252
+          ],
+          "contact_normal_to_unity_disp_deg": 0.002806702084221308,
+          "early_velocity_to_contact_normal_deg": 0.3871419266330279,
+          "target_error_m": 0.11664039001615524,
+          "active_error_m": 0.0072533130159951305
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351292371749878,
+            8.290797233581543
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.3771181106567383,
+            7.9718217849731445
+          ],
+          "early_velocity": [
+            0.10602723807096481,
+            -1.408910870552063
+          ],
+          "early_speed_mps": 1.4128947647906156,
+          "sim_target": [
+            2.765028476715088,
+            3.786233901977539
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "endpoint_error_m": 0.13004120983484946,
+          "sim_tail_m": 4.203524756484153,
+          "unity_tail_m": 4.255393084416031,
+          "tail_distance_scale_required": 1.0123392464507004,
+          "tail_direction_delta_deg_required": -1.615534248467605,
+          "required_early_velocity": [
+            0.06708180364320838,
+            -1.4287549017378909
+          ],
+          "delta_v_required_mps": [
+            -0.03894543442775643,
+            -0.019844031185827893
+          ],
+          "delta_v_required_norm_mps": 0.043709637798439664,
+          "delta_v_required_normal_mps": 0.016613832426860348,
+          "delta_v_required_tangent_mps": -0.040429110904928255,
+          "delta_v_required_fraction_of_early_speed": 0.03093623027537881,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.8348540819501976,
+          "required_impulse_normal_Ns": 0.3173241993530327,
+          "required_impulse_tangent_Ns": -0.7721960182841298,
+          "contact_normal": [
+            0.0812567288967049,
+            -0.9966932045564508
+          ],
+          "contact_tangent": [
+            0.9966932045564508,
+            0.0812567288967049
+          ],
+          "contact_normal_to_unity_disp_deg": -0.9773427260808223,
+          "early_velocity_to_contact_normal_deg": 0.35713858114062275,
+          "target_error_m": 0.13004120983484946,
+          "active_error_m": 0.009530003904597758
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.3514537811279297,
+            6.436899185180664
+          ],
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.18713116645813,
+            6.18428897857666
+          ],
+          "early_velocity": [
+            -0.3934897482395172,
+            -0.7855101823806763
+          ],
+          "early_speed_mps": 0.8785558767621567,
+          "sim_target": [
+            1.468359112739563,
+            4.735141754150391
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "endpoint_error_m": 0.03107380951717546,
+          "sim_tail_m": 1.6176096387166983,
+          "unity_tail_m": 1.6485696166447248,
+          "tail_distance_scale_required": 1.0191393381858111,
+          "tail_direction_delta_deg_required": -0.09323473050087745,
+          "required_early_velocity": [
+            -0.40232303826481036,
+            -0.7998907053537884
+          ],
+          "delta_v_required_mps": [
+            -0.00883329002529315,
+            -0.014380522973112098
+          ],
+          "delta_v_required_norm_mps": 0.016876802234165933,
+          "delta_v_required_normal_mps": 0.016867706166534234,
+          "delta_v_required_tangent_mps": 0.0005540237635800107,
+          "delta_v_required_fraction_of_early_speed": 0.019209708432392437,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 0.32234692267256937,
+          "required_impulse_normal_Ns": 0.3221731877808039,
+          "required_impulse_tangent_Ns": 0.010581853884378205,
+          "contact_normal": [
+            -0.5510881804626302,
+            -0.8344470129099797
+          ],
+          "contact_tangent": [
+            0.8344470129099797,
+            -0.5510881804626302
+          ],
+          "contact_normal_to_unity_disp_deg": 6.965844500849003,
+          "early_velocity_to_contact_normal_deg": -6.833794421660822,
+          "target_error_m": 0.03107380951717546,
+          "active_error_m": 0.009179528968203654
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351454973220825,
+            6.409041881561279
+          ],
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.5632359981536865,
+            6.188369274139404
+          ],
+          "early_velocity": [
+            0.4119488596916199,
+            -0.5812970399856567
+          ],
+          "early_speed_mps": 0.7124662179340941,
+          "sim_target": [
+            3.1953136920928955,
+            5.337728500366211
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "endpoint_error_m": 0.09006639430899464,
+          "sim_tail_m": 1.0597697566834814,
+          "unity_tail_m": 1.1488681490028745,
+          "tail_distance_scale_required": 1.0840733487226735,
+          "tail_direction_delta_deg_required": -0.6838310365537087,
+          "required_early_velocity": [
+            0.43903002408207104,
+            -0.6354536315433068
+          ],
+          "delta_v_required_mps": [
+            0.027081164390451162,
+            -0.05415659155765007
+          ],
+          "delta_v_required_norm_mps": 0.06055019301277887,
+          "delta_v_required_normal_mps": 0.057693723263758837,
+          "delta_v_required_tangent_mps": -0.018378252633196333,
+          "delta_v_required_fraction_of_early_speed": 0.08498675654875751,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.1565086865440766,
+          "required_impulse_normal_Ns": 1.1019501143377939,
+          "required_impulse_tangent_Ns": -0.35102462529405,
+          "contact_normal": [
+            0.6976239465294061,
+            -0.7164641157997632
+          ],
+          "contact_tangent": [
+            0.7164641157997632,
+            0.6976239465294061
+          ],
+          "contact_normal_to_unity_disp_deg": -8.313611224557263,
+          "early_velocity_to_contact_normal_deg": 8.912554856954515,
+          "target_error_m": 0.09006639430899464,
+          "active_error_m": 0.06533819075570976
+        }
+      ]
+    },
+    {
+      "label": "unique_role_material_baseline",
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_baseline_20260709.json",
+      "probe_summary": {
+        "sample_count": 8,
+        "active_error_count": 8,
+        "target_in_play_error_count": 7,
+        "target_cleared_count": 1,
+        "active_rmse_m": 0.04187487564044832,
+        "target_in_play_rmse_m": 0.12421756003042551,
+        "combined_rmse_m": 0.09019906031240409,
+        "active_mean_m": 0.03234410782308349,
+        "target_in_play_mean_m": 0.09920079829323082
+      },
+      "config_excerpt": {
+        "radius": 0.146,
+        "height": 0.23,
+        "center_height": 0.1276,
+        "stone_restitution": 1.0,
+        "contact_offset": 0.01,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "pre_collision_dynamic_friction": null,
+        "pre_collision_static_friction": null,
+        "material_switch_mode": "post-step-distance"
+      },
+      "summary": {
+        "row_count": 8,
+        "ok_count": 7,
+        "skipped_count": 1,
+        "endpoint_rmse_m": 0.1242175600304255,
+        "delta_v_norm_rmse_mps": 0.05440408160304236,
+        "delta_v_norm_mean_mps": 0.04516873846402108,
+        "delta_v_normal_rmse_mps": 0.04294203535355789,
+        "delta_v_tangent_rmse_mps": 0.033403378493264364,
+        "required_impulse_norm_mean_Ns": 0.8627229046628028,
+        "required_impulse_norm_max_Ns": 1.745882155609001,
+        "delta_v_fraction_of_early_speed_mean": 0.04510011712103702,
+        "dominant_delta_v_component_counts": {
+          "mixed": 1,
+          "tangent": 3,
+          "normal": 3
+        },
+        "tail_distance_scale_required_mean": 0.9960209314022499,
+        "tail_distance_scale_required_median": 0.9998500218959224,
+        "tail_direction_delta_abs_deg_mean": 1.0477616674120307,
+        "tail_direction_delta_abs_deg_median": 0.8915507416050786,
+        "early_velocity_to_contact_abs_deg_mean": 3.2291979651948,
+        "contact_normal_to_unity_abs_deg_mean": 3.31706657688838
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351402997970581,
+            6.4846343994140625
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376589298248291,
+            6.174631118774414
+          ],
+          "early_velocity": [
+            0.07944165915250778,
+            -1.2684420347213745
+          ],
+          "early_speed_mps": 1.2709272885011966,
+          "sim_target": [
+            2.651841402053833,
+            2.7876617908477783
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "endpoint_error_m": 0.24440019487884568,
+          "sim_tail_m": 3.3981355106830544,
+          "unity_tail_m": 3.282444031537813,
+          "tail_distance_scale_required": 0.9659544244832113,
+          "tail_direction_delta_deg_required": 3.6939359176342728,
+          "required_early_velocity": [
+            0.1555168624594002,
+            -1.217767741207384
+          ],
+          "delta_v_required_mps": [
+            0.07607520330689241,
+            0.050674293513990554
+          ],
+          "delta_v_required_norm_mps": 0.09140744270204193,
+          "delta_v_required_normal_mps": -0.044215762335065315,
+          "delta_v_required_tangent_mps": 0.08000179337024951,
+          "delta_v_required_fraction_of_early_speed": 0.07192185070621833,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 1.745882155609001,
+          "required_impulse_normal_Ns": -0.8445210605997475,
+          "required_impulse_tangent_Ns": 1.528034253371766,
+          "contact_normal": [
+            0.08261936129932138,
+            -0.9965811763918142
+          ],
+          "contact_tangent": [
+            0.9965811763918142,
+            0.08261936129932138
+          ],
+          "contact_normal_to_unity_disp_deg": 3.5643946224541434,
+          "early_velocity_to_contact_normal_deg": 1.1554278621009315,
+          "target_error_m": 0.24440019487884568,
+          "active_error_m": 0.07828963307773358
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.3514537811279297,
+            6.431899070739746
+          ],
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.187159299850464,
+            6.18496036529541
+          ],
+          "early_velocity": [
+            -0.3922271430492401,
+            -0.7518706917762756
+          ],
+          "early_speed_mps": 0.8480281061950155,
+          "sim_target": [
+            1.494973063468933,
+            4.847113609313965
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "endpoint_error_m": 0.14496742711277993,
+          "sim_tail_m": 1.5063053237395483,
+          "unity_tail_m": 1.6491831616445403,
+          "tail_distance_scale_required": 1.0948531719653516,
+          "tail_direction_delta_deg_required": 0.8915507416050786,
+          "required_early_velocity": [
+            -0.41657044710869795,
+            -0.8297702466569014
+          ],
+          "delta_v_required_mps": [
+            -0.024343304059457838,
+            -0.07789955488062572
+          ],
+          "delta_v_required_norm_mps": 0.08161456428316477,
+          "delta_v_required_normal_mps": 0.07819177839645247,
+          "delta_v_required_tangent_mps": 0.02338766543139574,
+          "delta_v_required_fraction_of_early_speed": 0.09624040015531797,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.5588381778084472,
+          "required_impulse_normal_Ns": 1.4934629673722424,
+          "required_impulse_tangent_Ns": 0.4467044097396587,
+          "contact_normal": [
+            -0.5592809098146714,
+            -0.8289782047296983
+          ],
+          "contact_tangent": [
+            0.8289782047296983,
+            -0.5592809098146714
+          ],
+          "contact_normal_to_unity_disp_deg": 7.530228176220299,
+          "early_velocity_to_contact_normal_deg": -6.4564586588204875,
+          "target_error_m": 0.14496742711277993,
+          "active_error_m": 0.05938381671775458
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351361036300659,
+            8.280376434326172
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.376328945159912,
+            7.978914260864258
+          ],
+          "early_velocity": [
+            0.0664302334189415,
+            -1.0542793273925781
+          ],
+          "early_speed_mps": 1.056370141607307,
+          "sim_target": [
+            2.5691468715667725,
+            5.643633842468262
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "endpoint_error_m": 0.1331308133581208,
+          "sim_tail_m": 2.343227130537631,
+          "unity_tail_m": 2.210101236644992,
+          "tail_distance_scale_required": 0.943186944126029,
+          "tail_direction_delta_deg_required": 0.02881499820736259,
+          "required_early_velocity": [
+            0.0631562123684918,
+            -0.9943508605010016
+          ],
+          "delta_v_required_mps": [
+            -0.003274021050449702,
+            0.05992846689157649
+          ],
+          "delta_v_required_norm_mps": 0.06001783366478307,
+          "delta_v_required_normal_mps": -0.05999165883490229,
+          "delta_v_required_tangent_mps": 0.001772350995220182,
+          "delta_v_required_fraction_of_early_speed": 0.05681515531427618,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.1463406229973567,
+          "required_impulse_normal_Ns": -1.1458406837466337,
+          "required_impulse_tangent_Ns": 0.03385190400870548,
+          "contact_normal": [
+            0.08401344804838809,
+            -0.9964646208205391
+          ],
+          "contact_tangent": [
+            0.9964646208205391,
+            0.08401344804838809
+          ],
+          "contact_normal_to_unity_disp_deg": -0.08124536312292811,
+          "early_velocity_to_contact_normal_deg": 1.2138510519902177,
+          "target_error_m": 0.13313081335812083,
+          "active_error_m": 0.008572869044773767
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351292371749878,
+            8.285797119140625
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.3767788410186768,
+            7.971691131591797
+          ],
+          "early_velocity": [
+            0.08890184015035629,
+            -1.4154490232467651
+          ],
+          "early_speed_mps": 1.41823815862934,
+          "sim_target": [
+            2.7206616401672363,
+            3.750149726867676
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "endpoint_error_m": 0.07474845554142726,
+          "sim_tail_m": 4.235524431679075,
+          "unity_tail_m": 4.255284486478721,
+          "tail_distance_scale_required": 1.0046653147959324,
+          "tail_direction_delta_deg_required": -0.9729285731309244,
+          "required_early_velocity": [
+            0.06515727919254193,
+            -1.42336411555686
+          ],
+          "delta_v_required_mps": [
+            -0.023744560957814367,
+            -0.007915092310094796
+          ],
+          "delta_v_required_norm_mps": 0.025029040360283174,
+          "delta_v_required_normal_mps": 0.005925067401292974,
+          "delta_v_required_tangent_mps": -0.024317615788699752,
+          "delta_v_required_fraction_of_early_speed": 0.017647981199767293,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.4780546708814086,
+          "required_impulse_normal_Ns": 0.11316878736469581,
+          "required_impulse_tangent_Ns": -0.4644664615641653,
+          "contact_normal": [
+            0.08266870954609754,
+            -0.9965770840542055
+          ],
+          "contact_tangent": [
+            0.9965770840542055,
+            0.08266870954609754
+          ],
+          "contact_normal_to_unity_disp_deg": -1.058516382152264,
+          "early_velocity_to_contact_normal_deg": 1.1480545672699458,
+          "target_error_m": 0.07474845554142726,
+          "active_error_m": 0.016133895575521202
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351454973220825,
+            6.404041767120361
+          ],
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.5637080669403076,
+            6.187582969665527
+          ],
+          "early_velocity": [
+            0.4354967176914215,
+            -0.6206971406936646
+          ],
+          "early_speed_mps": 0.7582363296395739,
+          "sim_target": [
+            3.2748732566833496,
+            5.219064712524414
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "endpoint_error_m": 0.05411098441867252,
+          "sim_tail_m": 1.2015754414592188,
+          "unity_tail_m": 1.1479544466432252,
+          "tail_distance_scale_required": 0.9553744251373222,
+          "tail_direction_delta_deg_required": -0.3544469369134638,
+          "required_early_velocity": [
+            0.41238604392139805,
+            -0.5955606834790582
+          ],
+          "delta_v_required_mps": [
+            -0.02311067377002346,
+            0.025136457214606334
+          ],
+          "delta_v_required_norm_mps": 0.03414593275056614,
+          "delta_v_required_normal_mps": -0.03411759434762729,
+          "delta_v_required_tangent_mps": 0.0013908556132594709,
+          "delta_v_required_fraction_of_early_speed": 0.04503336415810799,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 0.6521873155358133,
+          "required_impulse_normal_Ns": -0.6516460520396813,
+          "required_impulse_tangent_Ns": 0.026565342213255894,
+          "contact_normal": [
+            0.7062442660187215,
+            -0.707968245556026
+          ],
+          "contact_tangent": [
+            0.707968245556026,
+            0.7062442660187215
+          ],
+          "contact_normal_to_unity_disp_deg": -9.007083106738143,
+          "early_velocity_to_contact_normal_deg": 9.875689416298199,
+          "target_error_m": 0.05411098441867253,
+          "active_error_m": 0.03063054029969701
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351682186126709,
+            5.484490871429443
+          ],
+          "target0": [
+            2.375,
+            5.199999809265137
+          ],
+          "early_position": [
+            2.3758890628814697,
+            5.184167861938477
+          ],
+          "early_velocity": [
+            0.04444986954331398,
+            -0.791593611240387
+          ],
+          "early_speed_mps": 0.7928406121403057,
+          "sim_target": [
+            2.4744749069213867,
+            3.872728109359741
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ],
+          "endpoint_error_m": 0.014548583376859417,
+          "sim_tail_m": 1.315140066034351,
+          "unity_tail_m": 1.326006039187133,
+          "tail_distance_scale_required": 1.0082622174119802,
+          "tail_direction_delta_deg_required": -0.419743513377945,
+          "required_early_velocity": [
+            0.03896891929044903,
+            -0.7984408354832389
+          ],
+          "delta_v_required_mps": [
+            -0.0054809502528649495,
+            -0.00684722424285189
+          ],
+          "delta_v_required_norm_mps": 0.00877070667086062,
+          "delta_v_required_normal_mps": 0.006376604628058631,
+          "delta_v_required_tangent_mps": -0.006021977160675739,
+          "delta_v_required_fraction_of_early_speed": 0.011062383203584563,
+          "dominant_delta_v_component": "mixed",
+          "required_impulse_norm_Ns": 0.16752049741343786,
+          "required_impulse_normal_Ns": 0.12179314839591987,
+          "required_impulse_tangent_Ns": -0.11501976376890662,
+          "contact_normal": [
+            0.08168932227746357,
+            -0.9966578423038914
+          ],
+          "contact_tangent": [
+            0.9966578423038914,
+            0.08168932227746357
+          ],
+          "contact_normal_to_unity_disp_deg": -0.8142256815597972,
+          "early_velocity_to_contact_normal_deg": 1.4717550470803862,
+          "target_error_m": 0.014548583376859416,
+          "active_error_m": 0.008698458604051695
+        },
+        {
+          "sample_id": 12001,
+          "status": "unity_target_cleared"
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351485013961792,
+            6.4846038818359375
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.3760743141174316,
+            6.182133674621582
+          ],
+          "early_velocity": [
+            0.05370035395026207,
+            -0.8933185338973999
+          ],
+          "early_speed_mps": 0.8949311319978669,
+          "sim_target": [
+            2.508744716644287,
+            4.508960247039795
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ],
+          "endpoint_error_m": 0.028499129365910123,
+          "sim_tail_m": 1.6784250815786874,
+          "unity_tail_m": 1.678173354567116,
+          "tail_distance_scale_required": 0.9998500218959224,
+          "tail_direction_delta_deg_required": -0.9729109910151685,
+          "required_early_velocity": [
+            0.03851856789851206,
+            -0.8939674678167646
+          ],
+          "delta_v_required_mps": [
+            -0.01518178605175001,
+            -0.0006489339193647137
+          ],
+          "delta_v_required_norm_mps": 0.015195648816447858,
+          "delta_v_required_normal_mps": -0.000603382422344844,
+          "delta_v_required_tangent_mps": -0.015183664663223385,
+          "delta_v_required_fraction_of_early_speed": 0.01697968510998685,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.2902368923941541,
+          "required_impulse_normal_Ns": -0.01152460426678652,
+          "required_impulse_tangent_Ns": -0.2900079950675667,
+          "contact_normal": [
+            0.08234292025251246,
+            -0.9966040555226978
+          ],
+          "contact_tangent": [
+            0.9966040555226978,
+            0.08234292025251246
+          ],
+          "contact_normal_to_unity_disp_deg": -1.1637727059710832,
+          "early_velocity_to_contact_normal_deg": 1.2831491528034353,
+          "target_error_m": 0.028499129365910127,
+          "active_error_m": 0.0020864455750463132
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351402997970581,
+            6.4846343994140625
+          ],
+          "target0": [
+            2.375,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.376589298248291,
+            6.174631118774414
+          ],
+          "early_velocity": [
+            0.07944165915250778,
+            -1.2684420347213745
+          ],
+          "early_speed_mps": 1.2709272885011966,
+          "sim_target": [
+            2.651841402053833,
+            2.7876617908477783
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ],
+          "endpoint_error_m": 0.24440019487884568,
+          "sim_tail_m": 3.3981355106830544,
+          "unity_tail_m": 3.282444031537813,
+          "tail_distance_scale_required": 0.9659544244832113,
+          "tail_direction_delta_deg_required": 3.6939359176342728,
+          "required_early_velocity": [
+            0.1555168624594002,
+            -1.217767741207384
+          ],
+          "delta_v_required_mps": [
+            0.07607520330689241,
+            0.050674293513990554
+          ],
+          "delta_v_required_norm_mps": 0.09140744270204193,
+          "delta_v_required_normal_mps": -0.044215762335065315,
+          "delta_v_required_tangent_mps": 0.08000179337024951,
+          "delta_v_required_fraction_of_early_speed": 0.07192185070621833,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 1.745882155609001,
+          "required_impulse_normal_Ns": -0.8445210605997475,
+          "required_impulse_tangent_Ns": 1.528034253371766,
+          "contact_normal": [
+            0.08261936129932138,
+            -0.9965811763918142
+          ],
+          "contact_tangent": [
+            0.9965811763918142,
+            0.08261936129932138
+          ],
+          "contact_normal_to_unity_disp_deg": 3.5643946224541434,
+          "early_velocity_to_contact_normal_deg": 1.1554278621009315,
+          "target_error_m": 0.24440019487884568,
+          "active_error_m": 0.07828963307773358
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351361036300659,
+            8.280376434326172
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.376328945159912,
+            7.978914260864258
+          ],
+          "early_velocity": [
+            0.0664302334189415,
+            -1.0542793273925781
+          ],
+          "early_speed_mps": 1.056370141607307,
+          "sim_target": [
+            2.5691468715667725,
+            5.643633842468262
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ],
+          "endpoint_error_m": 0.1331308133581208,
+          "sim_tail_m": 2.343227130537631,
+          "unity_tail_m": 2.210101236644992,
+          "tail_distance_scale_required": 0.943186944126029,
+          "tail_direction_delta_deg_required": 0.02881499820736259,
+          "required_early_velocity": [
+            0.0631562123684918,
+            -0.9943508605010016
+          ],
+          "delta_v_required_mps": [
+            -0.003274021050449702,
+            0.05992846689157649
+          ],
+          "delta_v_required_norm_mps": 0.06001783366478307,
+          "delta_v_required_normal_mps": -0.05999165883490229,
+          "delta_v_required_tangent_mps": 0.001772350995220182,
+          "delta_v_required_fraction_of_early_speed": 0.05681515531427618,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.1463406229973567,
+          "required_impulse_normal_Ns": -1.1458406837466337,
+          "required_impulse_tangent_Ns": 0.03385190400870548,
+          "contact_normal": [
+            0.08401344804838809,
+            -0.9964646208205391
+          ],
+          "contact_tangent": [
+            0.9964646208205391,
+            0.08401344804838809
+          ],
+          "contact_normal_to_unity_disp_deg": -0.08124536312292811,
+          "early_velocity_to_contact_normal_deg": 1.2138510519902177,
+          "target_error_m": 0.13313081335812083,
+          "active_error_m": 0.008572869044773767
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351292371749878,
+            8.285797119140625
+          ],
+          "target0": [
+            2.375,
+            8.0
+          ],
+          "early_position": [
+            2.3767788410186768,
+            7.971691131591797
+          ],
+          "early_velocity": [
+            0.08890184015035629,
+            -1.4154490232467651
+          ],
+          "early_speed_mps": 1.41823815862934,
+          "sim_target": [
+            2.7206616401672363,
+            3.750149726867676
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ],
+          "endpoint_error_m": 0.07474845554142726,
+          "sim_tail_m": 4.235524431679075,
+          "unity_tail_m": 4.255284486478721,
+          "tail_distance_scale_required": 1.0046653147959324,
+          "tail_direction_delta_deg_required": -0.9729285731309244,
+          "required_early_velocity": [
+            0.06515727919254193,
+            -1.42336411555686
+          ],
+          "delta_v_required_mps": [
+            -0.023744560957814367,
+            -0.007915092310094796
+          ],
+          "delta_v_required_norm_mps": 0.025029040360283174,
+          "delta_v_required_normal_mps": 0.005925067401292974,
+          "delta_v_required_tangent_mps": -0.024317615788699752,
+          "delta_v_required_fraction_of_early_speed": 0.017647981199767293,
+          "dominant_delta_v_component": "tangent",
+          "required_impulse_norm_Ns": 0.4780546708814086,
+          "required_impulse_normal_Ns": 0.11316878736469581,
+          "required_impulse_tangent_Ns": -0.4644664615641653,
+          "contact_normal": [
+            0.08266870954609754,
+            -0.9965770840542055
+          ],
+          "contact_tangent": [
+            0.9965770840542055,
+            0.08266870954609754
+          ],
+          "contact_normal_to_unity_disp_deg": -1.058516382152264,
+          "early_velocity_to_contact_normal_deg": 1.1480545672699458,
+          "target_error_m": 0.07474845554142726,
+          "active_error_m": 0.016133895575521202
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.3514537811279297,
+            6.431899070739746
+          ],
+          "target0": [
+            2.194999933242798,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.187159299850464,
+            6.18496036529541
+          ],
+          "early_velocity": [
+            -0.3922271430492401,
+            -0.7518706917762756
+          ],
+          "early_speed_mps": 0.8480281061950155,
+          "sim_target": [
+            1.494973063468933,
+            4.847113609313965
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ],
+          "endpoint_error_m": 0.14496742711277993,
+          "sim_tail_m": 1.5063053237395483,
+          "unity_tail_m": 1.6491831616445403,
+          "tail_distance_scale_required": 1.0948531719653516,
+          "tail_direction_delta_deg_required": 0.8915507416050786,
+          "required_early_velocity": [
+            -0.41657044710869795,
+            -0.8297702466569014
+          ],
+          "delta_v_required_mps": [
+            -0.024343304059457838,
+            -0.07789955488062572
+          ],
+          "delta_v_required_norm_mps": 0.08161456428316477,
+          "delta_v_required_normal_mps": 0.07819177839645247,
+          "delta_v_required_tangent_mps": 0.02338766543139574,
+          "delta_v_required_fraction_of_early_speed": 0.09624040015531797,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 1.5588381778084472,
+          "required_impulse_normal_Ns": 1.4934629673722424,
+          "required_impulse_tangent_Ns": 0.4467044097396587,
+          "contact_normal": [
+            -0.5592809098146714,
+            -0.8289782047296983
+          ],
+          "contact_tangent": [
+            0.8289782047296983,
+            -0.5592809098146714
+          ],
+          "contact_normal_to_unity_disp_deg": 7.530228176220299,
+          "early_velocity_to_contact_normal_deg": -6.4564586588204875,
+          "target_error_m": 0.14496742711277993,
+          "active_error_m": 0.05938381671775458
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "status": "ok",
+          "snapshot_key": "0.020000",
+          "active0": [
+            2.351454973220825,
+            6.404041767120361
+          ],
+          "target0": [
+            2.555000066757202,
+            6.199999809265137
+          ],
+          "early_position": [
+            2.5637080669403076,
+            6.187582969665527
+          ],
+          "early_velocity": [
+            0.4354967176914215,
+            -0.6206971406936646
+          ],
+          "early_speed_mps": 0.7582363296395739,
+          "sim_target": [
+            3.2748732566833496,
+            5.219064712524414
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ],
+          "endpoint_error_m": 0.05411098441867252,
+          "sim_tail_m": 1.2015754414592188,
+          "unity_tail_m": 1.1479544466432252,
+          "tail_distance_scale_required": 0.9553744251373222,
+          "tail_direction_delta_deg_required": -0.3544469369134638,
+          "required_early_velocity": [
+            0.41238604392139805,
+            -0.5955606834790582
+          ],
+          "delta_v_required_mps": [
+            -0.02311067377002346,
+            0.025136457214606334
+          ],
+          "delta_v_required_norm_mps": 0.03414593275056614,
+          "delta_v_required_normal_mps": -0.03411759434762729,
+          "delta_v_required_tangent_mps": 0.0013908556132594709,
+          "delta_v_required_fraction_of_early_speed": 0.04503336415810799,
+          "dominant_delta_v_component": "normal",
+          "required_impulse_norm_Ns": 0.6521873155358133,
+          "required_impulse_normal_Ns": -0.6516460520396813,
+          "required_impulse_tangent_Ns": 0.026565342213255894,
+          "contact_normal": [
+            0.7062442660187215,
+            -0.707968245556026
+          ],
+          "contact_tangent": [
+            0.707968245556026,
+            0.7062442660187215
+          ],
+          "contact_normal_to_unity_disp_deg": -9.007083106738143,
+          "early_velocity_to_contact_normal_deg": 9.875689416298199,
+          "target_error_m": 0.05411098441867253,
+          "active_error_m": 0.03063054029969701
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "delta_v_required is the early target velocity correction that would make the post-snapshot tail point to Unity's endpoint under a local linear approximation.",
+    "Large normal components point at missing normal impulse/contact normal. Large tangent components point at contact point/friction/rotation coupling.",
+    "This is a diagnostic only; it should guide native contact/cooked-stream reverse engineering, not become a residual correction model."
+  ]
+}

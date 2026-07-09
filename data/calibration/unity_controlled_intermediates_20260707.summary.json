@@ -1,0 +1,30 @@
+{
+  "rows": 96,
+  "has_randseed_rows": 0,
+  "exact_rng_draws_available": false,
+  "estimated_pre_midline_rng_draws_min": 243,
+  "estimated_pre_midline_rng_draws_max": 1235,
+  "estimated_pre_midline_rng_draws_unique": [
+    243,
+    280,
+    321,
+    322,
+    329,
+    338,
+    347,
+    378,
+    395,
+    396,
+    402,
+    415,
+    436,
+    437,
+    460,
+    487,
+    488,
+    551,
+    553,
+    1235
+  ],
+  "output": "data\\calibration\\unity_controlled_intermediates_20260707.jsonl"
+}

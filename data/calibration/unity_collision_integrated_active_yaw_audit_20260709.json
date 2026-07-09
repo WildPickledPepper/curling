@@ -1,0 +1,255 @@
+{
+  "question": "Does setting active actor yaw to the recovered BESTSHOT->handoff integrated spin phase close the collision residual?",
+  "answer": "No. The integrated active-yaw replay is worse than the current 0-yaw baseline.",
+  "baseline": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+    "active_rmse_m": 0.03855842111554859,
+    "target_in_play_rmse_m": 0.11323278407673086
+  },
+  "integrated_probe": "data\\calibration\\unity_physx_collision_probe_unique_role_integrated_active_yaw_currentbest_20260709.json",
+  "best_integrated_by_target_rmse": {
+    "active_yaw_integral_sign": 1.0,
+    "active_rmse_m": 0.04123224623908148,
+    "target_in_play_rmse_m": 0.16295920665205238,
+    "target_delta_vs_baseline_m": 0.04972642257532152,
+    "integrated_yaw_deg_rmse": 6.040898269587641,
+    "rows": [
+      {
+        "sample_id": 12000,
+        "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+        "effective_active_yaw_deg": 14.200426921891763,
+        "integrated_yaw_deg": 14.200426921891763,
+        "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+        "motioninfo_to_handoff_yaw_deg": 12.686091770321994,
+        "active_error_m": 0.03157236879950192,
+        "target_error_m": 0.2968898071452578
+      },
+      {
+        "sample_id": 12002,
+        "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+        "effective_active_yaw_deg": 5.142053501497851,
+        "integrated_yaw_deg": 5.142053501497851,
+        "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+        "motioninfo_to_handoff_yaw_deg": 3.627718349928081,
+        "active_error_m": 0.007303584573279132,
+        "target_error_m": 0.018515716821534415
+      },
+      {
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "effective_active_yaw_deg": 2.2356934010293568,
+        "integrated_yaw_deg": 2.2356934010293568,
+        "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+        "motioninfo_to_handoff_yaw_deg": 0.9479743287669267,
+        "active_error_m": 0.08379051821729175,
+        "target_error_m": 0.2705696979122266
+      },
+      {
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "effective_active_yaw_deg": 2.4401687283555735,
+        "integrated_yaw_deg": 2.4401687283555735,
+        "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+        "motioninfo_to_handoff_yaw_deg": 0.9258335767858036,
+        "active_error_m": 0.014585920127925403,
+        "target_error_m": 0.11215056891945534
+      },
+      {
+        "sample_id": 12005,
+        "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+        "effective_active_yaw_deg": 2.1542967007518614,
+        "integrated_yaw_deg": 2.1542967007518614,
+        "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+        "motioninfo_to_handoff_yaw_deg": 0.8665776284894317,
+        "active_error_m": 0.01719400817012524,
+        "target_error_m": 0.08108103396775256
+      },
+      {
+        "sample_id": 12006,
+        "label": "collision_glance_left_target_active_a06_target_t14_r00",
+        "effective_active_yaw_deg": 2.4246398439871735,
+        "integrated_yaw_deg": 2.4246398439871735,
+        "release_to_motioninfo_yaw_deg": 1.431704972521317,
+        "motioninfo_to_handoff_yaw_deg": 0.9929348714658566,
+        "active_error_m": 0.00727068111232749,
+        "target_error_m": 0.026693531851160933
+      },
+      {
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "effective_active_yaw_deg": 2.4252223184943023,
+        "integrated_yaw_deg": 2.4252223184943023,
+        "release_to_motioninfo_yaw_deg": 1.431704972521317,
+        "motioninfo_to_handoff_yaw_deg": 0.9935173459729856,
+        "active_error_m": 0.04411084738471914,
+        "target_error_m": 0.06581140952191125
+      }
+    ]
+  },
+  "sign_summaries": [
+    {
+      "active_yaw_integral_sign": 1.0,
+      "active_rmse_m": 0.04123224623908148,
+      "target_in_play_rmse_m": 0.16295920665205238,
+      "target_delta_vs_baseline_m": 0.04972642257532152,
+      "integrated_yaw_deg_rmse": 6.040898269587641,
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "effective_active_yaw_deg": 14.200426921891763,
+          "integrated_yaw_deg": 14.200426921891763,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 12.686091770321994,
+          "active_error_m": 0.03157236879950192,
+          "target_error_m": 0.2968898071452578
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "effective_active_yaw_deg": 5.142053501497851,
+          "integrated_yaw_deg": 5.142053501497851,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 3.627718349928081,
+          "active_error_m": 0.007303584573279132,
+          "target_error_m": 0.018515716821534415
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "effective_active_yaw_deg": 2.2356934010293568,
+          "integrated_yaw_deg": 2.2356934010293568,
+          "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+          "motioninfo_to_handoff_yaw_deg": 0.9479743287669267,
+          "active_error_m": 0.08379051821729175,
+          "target_error_m": 0.2705696979122266
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "effective_active_yaw_deg": 2.4401687283555735,
+          "integrated_yaw_deg": 2.4401687283555735,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 0.9258335767858036,
+          "active_error_m": 0.014585920127925403,
+          "target_error_m": 0.11215056891945534
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "effective_active_yaw_deg": 2.1542967007518614,
+          "integrated_yaw_deg": 2.1542967007518614,
+          "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+          "motioninfo_to_handoff_yaw_deg": 0.8665776284894317,
+          "active_error_m": 0.01719400817012524,
+          "target_error_m": 0.08108103396775256
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "effective_active_yaw_deg": 2.4246398439871735,
+          "integrated_yaw_deg": 2.4246398439871735,
+          "release_to_motioninfo_yaw_deg": 1.431704972521317,
+          "motioninfo_to_handoff_yaw_deg": 0.9929348714658566,
+          "active_error_m": 0.00727068111232749,
+          "target_error_m": 0.026693531851160933
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "effective_active_yaw_deg": 2.4252223184943023,
+          "integrated_yaw_deg": 2.4252223184943023,
+          "release_to_motioninfo_yaw_deg": 1.431704972521317,
+          "motioninfo_to_handoff_yaw_deg": 0.9935173459729856,
+          "active_error_m": 0.04411084738471914,
+          "target_error_m": 0.06581140952191125
+        }
+      ]
+    },
+    {
+      "active_yaw_integral_sign": -1.0,
+      "active_rmse_m": 0.07978004939774067,
+      "target_in_play_rmse_m": 0.4192552154169486,
+      "target_delta_vs_baseline_m": 0.3060224313402177,
+      "integrated_yaw_deg_rmse": 6.040898269587641,
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "effective_active_yaw_deg": -14.200426921891763,
+          "integrated_yaw_deg": 14.200426921891763,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 12.686091770321994,
+          "active_error_m": 0.055835429506264855,
+          "target_error_m": 0.48055931983019123
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "effective_active_yaw_deg": -5.142053501497851,
+          "integrated_yaw_deg": 5.142053501497851,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 3.627718349928081,
+          "active_error_m": 0.19229812880169228,
+          "target_error_m": 0.9552209717123492
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "effective_active_yaw_deg": -2.2356934010293568,
+          "integrated_yaw_deg": 2.2356934010293568,
+          "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+          "motioninfo_to_handoff_yaw_deg": 0.9479743287669267,
+          "active_error_m": 0.07642613188764409,
+          "target_error_m": 0.23745244201949123
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "effective_active_yaw_deg": -2.4401687283555735,
+          "integrated_yaw_deg": 2.4401687283555735,
+          "release_to_motioninfo_yaw_deg": 1.5143351515697698,
+          "motioninfo_to_handoff_yaw_deg": 0.9258335767858036,
+          "active_error_m": 0.008988271418871036,
+          "target_error_m": 0.1348325678746448
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "effective_active_yaw_deg": -2.1542967007518614,
+          "integrated_yaw_deg": 2.1542967007518614,
+          "release_to_motioninfo_yaw_deg": 1.2877190722624299,
+          "motioninfo_to_handoff_yaw_deg": 0.8665776284894317,
+          "active_error_m": 0.014021232228626378,
+          "target_error_m": 0.08482462289849514
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "effective_active_yaw_deg": -2.4246398439871735,
+          "integrated_yaw_deg": 2.4246398439871735,
+          "release_to_motioninfo_yaw_deg": 1.431704972521317,
+          "motioninfo_to_handoff_yaw_deg": 0.9929348714658566,
+          "active_error_m": 0.0072199155856020394,
+          "target_error_m": 0.030335753930965034
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "effective_active_yaw_deg": -2.4252223184943023,
+          "integrated_yaw_deg": 2.4252223184943023,
+          "release_to_motioninfo_yaw_deg": 1.431704972521317,
+          "motioninfo_to_handoff_yaw_deg": 0.9935173459729856,
+          "active_error_m": 0.04381538247146521,
+          "target_error_m": 0.06603958440451166
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "The simple recovered-motion yaw integration gives only about 2deg for most hard samples and about 14deg for 12000.",
+    "Using +integrated yaw worsens target RMSE from about 11.32cm to about 16.30cm; -integrated yaw is much worse.",
+    "This rules out a simple missing active visible-spin phase as the global 10cm source.",
+    "Wide-yaw improvements remain best interpreted as contact-feature/manifold compensation or runtime carryover not captured by this deterministic yaw integral."
+  ]
+}

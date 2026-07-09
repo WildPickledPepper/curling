@@ -1,0 +1,101 @@
+{
+  "question": "Does using generated ring points instead of the recovered ExtendedColliders3D 512-vertex formal mesh explain the 10cm collision residual?",
+  "answer": "No. The exact recovered mesh input is now wired into the probe and does not close the error.",
+  "comparisons": {
+    "current_best_scale_ring": {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+      "missing": false,
+      "stone_geometry": "ring",
+      "formal_stone_scale": null,
+      "radius": 0.146,
+      "height": 0.23,
+      "center_height": 0.1276,
+      "handoff_extra": 0.0,
+      "inertia_model": "solid-cylinder",
+      "inertia_radial": null,
+      "inertia_vertical": null,
+      "active_rmse_m": 0.03855842111554859,
+      "target_in_play_rmse_m": 0.11323278407673086,
+      "combined_rmse_m": 0.08231875381295352,
+      "target_cleared_count": 1
+    },
+    "current_best_scale_recovered_mesh": {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_currentbest_scale_20260709.json",
+      "missing": false,
+      "stone_geometry": "formal-recovered",
+      "formal_stone_scale": [
+        0.1168,
+        0.115,
+        0.1168
+      ],
+      "radius": 0.146,
+      "height": 0.23,
+      "center_height": 0.1276,
+      "handoff_extra": 0.0,
+      "inertia_model": "solid-cylinder",
+      "inertia_radial": null,
+      "inertia_vertical": null,
+      "active_rmse_m": 0.03855842111554859,
+      "target_in_play_rmse_m": 0.11323278407673086,
+      "combined_rmse_m": 0.08231875381295352,
+      "target_cleared_count": 1
+    },
+    "formal_params_ring": {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_ring_formal_params_handoff292_20260709.json",
+      "missing": false,
+      "stone_geometry": "ring",
+      "formal_stone_scale": null,
+      "radius": 0.14087501,
+      "height": 0.23,
+      "center_height": 0.115,
+      "handoff_extra": 0.01024998,
+      "inertia_model": "custom",
+      "inertia_radial": 0.178810612362,
+      "inertia_vertical": 0.189222883199,
+      "active_rmse_m": 0.03326649863514951,
+      "target_in_play_rmse_m": 0.1264634894346983,
+      "combined_rmse_m": 0.08974199261272638,
+      "target_cleared_count": 1
+    },
+    "formal_params_recovered_mesh": {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_handoff292_20260709.json",
+      "missing": false,
+      "stone_geometry": "formal-recovered",
+      "formal_stone_scale": [
+        0.1127,
+        0.115,
+        0.1127
+      ],
+      "radius": 0.14087501,
+      "height": 0.23,
+      "center_height": 0.115,
+      "handoff_extra": 0.01024998,
+      "inertia_model": "custom",
+      "inertia_radial": 0.178810612362,
+      "inertia_vertical": 0.189222883199,
+      "active_rmse_m": 0.03143197990014625,
+      "target_in_play_rmse_m": 0.12075356565889411,
+      "combined_rmse_m": 0.08562465385580781,
+      "target_cleared_count": 1
+    }
+  },
+  "deltas": {
+    "current_best_scale_recovered_minus_ring_target_rmse_m": 0.0,
+    "current_best_scale_recovered_minus_ring_active_rmse_m": 0.0,
+    "formal_recovered_minus_ring_target_rmse_m": -0.0057099237758041765,
+    "formal_recovered_minus_ring_active_rmse_m": -0.00183451873500326,
+    "formal_recovered_minus_current_best_target_rmse_m": 0.007520781582163252
+  },
+  "interpretation": [
+    "At the current-best inflated scale, recovered formal mesh input and generated ring input give identical endpoint RMSE.",
+    "At the formal physical scale with the 0.292m handoff threshold, recovered mesh input improves target RMSE by only about 0.57cm versus ring input.",
+    "The formal recovered-mesh run is still about 12.08cm target RMSE, worse than the current-best 11.32cm and far from the 2cm target.",
+    "Therefore the remaining collision gap is not caused by failing to feed the recovered 512-vertex formal mesh into pyphysx cooking."
+  ],
+  "source_reports": {
+    "current_best_ring": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+    "current_best_recovered_mesh": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_currentbest_scale_20260709.json",
+    "formal_ring": "data\\calibration\\unity_physx_collision_probe_unique_role_ring_formal_params_handoff292_20260709.json",
+    "formal_recovered_mesh": "data\\calibration\\unity_physx_collision_probe_unique_role_formal_recovered_mesh_handoff292_20260709.json"
+  }
+}

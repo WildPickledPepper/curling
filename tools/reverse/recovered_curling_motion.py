@@ -17,7 +17,7 @@ import argparse
 import math
 import random
 from dataclasses import dataclass
-from typing import Protocol
+from typing import List, Optional, Protocol, Union
 
 try:
     from tools.reverse.recovered_unity_random import RecoveredUnityRandom
@@ -38,6 +38,12 @@ EPS = 1e-5
 BASE_FRICTION = 0.001
 SWEEP_FRICTION = BASE_FRICTION * (1.0 - 0.4)
 FRICTION_NOISE = 0.0002
+FSIMP_SAFETY_MAX_ITERATIONS = 24
+SUPPORTED_KERNELS = tuple(
+    [(1, index) for index in range(1, 8)]
+    + [(2, index) for index in range(1, 8)]
+    + [(3, index) for index in range(1, 9)]
+)
 
 
 class UnityRangeFloatRng(Protocol):
@@ -63,6 +69,13 @@ class MyParams:
     w: float
     r1: float
     r2: float
+
+
+@dataclass(frozen=True)
+class FsimpDiagnostics:
+    value: float
+    iterations: int
+    converged: bool
 
 
 def _atan_ratio(numerator: float, denominator: float) -> float:
@@ -166,21 +179,22 @@ def integrand(type_: int, i: int, x: float, p: MyParams) -> float:
     raise ValueError(f"unsupported integrand type={type_} i={i}")
 
 
-def fsimp(
+def fsimp_diagnostics(
     a: float,
     b: float,
     eps: float,
     p: MyParams,
     type_: int,
     i: int,
-    max_iterations: int = 24,
-) -> float:
+    max_iterations: Optional[int] = FSIMP_SAFETY_MAX_ITERATIONS,
+) -> FsimpDiagnostics:
     step = b - a
     trap = step * (integrand(type_, i, a, p) + integrand(type_, i, b, p)) * 0.5
     simpson = trap
     intervals = 1
+    iterations = 0
 
-    for _ in range(max_iterations):
+    while max_iterations is None or iterations < max_iterations:
         previous = simpson
         old_trap = trap
         midpoint_sum = 0.0
@@ -190,9 +204,22 @@ def fsimp(
         simpson = (4.0 * trap - old_trap) / 3.0
         step *= 0.5
         intervals <<= 1
+        iterations += 1
         if abs(simpson - previous) < eps:
-            return simpson
-    return simpson
+            return FsimpDiagnostics(simpson, iterations, True)
+    return FsimpDiagnostics(simpson, iterations, False)
+
+
+def fsimp(
+    a: float,
+    b: float,
+    eps: float,
+    p: MyParams,
+    type_: int,
+    i: int,
+    max_iterations: Optional[int] = FSIMP_SAFETY_MAX_ITERATIONS,
+) -> float:
+    return fsimp_diagnostics(a, b, eps, p, type_, i, max_iterations=max_iterations).value
 
 
 def _i(p: MyParams, type_: int, index: int) -> float:
@@ -293,7 +320,7 @@ def newfrictionstep(friction: float, vec: B2Vec2, angle: float, steptime: float)
     )
 
 
-def unity_friction_noise(rng: UnityRangeFloatRng | random.Random | None = None) -> float:
+def unity_friction_noise(rng: Optional[Union[UnityRangeFloatRng, random.Random]] = None) -> float:
     if rng is not None and hasattr(rng, "range_float"):
         return float(rng.range_float(-FRICTION_NOISE, FRICTION_NOISE))
     rng = rng or random
@@ -302,8 +329,8 @@ def unity_friction_noise(rng: UnityRangeFloatRng | random.Random | None = None) 
 
 def unity_friction(
     sweeping: bool,
-    rng: UnityRangeFloatRng | random.Random | None = None,
-    noise: float | None = 0.0,
+    rng: Optional[Union[UnityRangeFloatRng, random.Random]] = None,
+    noise: Optional[float] = 0.0,
 ) -> float:
     base = SWEEP_FRICTION if sweeping else BASE_FRICTION
     if noise is None:
@@ -311,7 +338,7 @@ def unity_friction(
     return base + noise
 
 
-def recovered_unity_friction_from_seed(seed: int, sweeping: bool, count: int) -> list[float]:
+def recovered_unity_friction_from_seed(seed: int, sweeping: bool, count: int) -> List[float]:
     rng = RecoveredUnityRandom.from_seed(seed)
     return [unity_friction(sweeping, rng=rng, noise=None) for _ in range(count)]
 

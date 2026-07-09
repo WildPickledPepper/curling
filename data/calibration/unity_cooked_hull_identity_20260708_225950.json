@@ -1,0 +1,252 @@
+{
+  "source": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_cooked_hulls_20260708_225950.json",
+  "formal_stone_expected": {
+    "source": "ExtendedColliders3D size=(2.5,2.0,2.5), scene scale ~= (0.1127,0.115,0.1127)",
+    "radius_world": 0.14087501,
+    "height_world": 0.23,
+    "diameter_world": 0.28175002,
+    "sorted_extents": [
+      0.23,
+      0.28175002,
+      0.28175002
+    ]
+  },
+  "best_candidate": {
+    "sha256_16": "0aac2338ce35d813",
+    "first_event_index": 113,
+    "duplicate_count": 4,
+    "unity_source_meshes": [
+      "1_0",
+      "2_0",
+      "3_0",
+      "4_0"
+    ],
+    "counts": {
+      "vertices": 129,
+      "polygons": 254,
+      "indices": 762
+    },
+    "extents": [
+      0.08359604701399803,
+      0.15925615280866623,
+      0.1599772572517395
+    ],
+    "sorted_extents": [
+      0.08359604701399803,
+      0.15925615280866623,
+      0.1599772572517395
+    ],
+    "stone_extent_relative_rmse": 0.5102276769244287,
+    "stone_extent_max_relative_error": 0.6365389260260955,
+    "matches_formal_stone_by_extent": false
+  },
+  "any_extent_match_5pct": false,
+  "candidates": [
+    {
+      "sha256_16": "0aac2338ce35d813",
+      "first_event_index": 113,
+      "duplicate_count": 4,
+      "unity_source_meshes": [
+        "1_0",
+        "2_0",
+        "3_0",
+        "4_0"
+      ],
+      "counts": {
+        "vertices": 129,
+        "polygons": 254,
+        "indices": 762
+      },
+      "extents": [
+        0.08359604701399803,
+        0.15925615280866623,
+        0.1599772572517395
+      ],
+      "sorted_extents": [
+        0.08359604701399803,
+        0.15925615280866623,
+        0.1599772572517395
+      ],
+      "stone_extent_relative_rmse": 0.5102276769244287,
+      "stone_extent_max_relative_error": 0.6365389260260955,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "0ee365a79abbc1f0",
+      "first_event_index": 129,
+      "duplicate_count": 1,
+      "unity_source_meshes": [
+        "base_link_0"
+      ],
+      "counts": {
+        "vertices": 129,
+        "polygons": 254,
+        "indices": 762
+      },
+      "extents": [
+        0.15922872722148895,
+        0.159977275878191,
+        0.08359603583812714
+      ],
+      "sorted_extents": [
+        0.08359603583812714,
+        0.15922872722148895,
+        0.159977275878191
+      ],
+      "stone_extent_relative_rmse": 0.5102553283887401,
+      "stone_extent_max_relative_error": 0.6365389746168385,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "957070e591b9f7ce",
+      "first_event_index": 115,
+      "duplicate_count": 4,
+      "unity_source_meshes": [],
+      "counts": {
+        "vertices": 99,
+        "polygons": 158,
+        "indices": 510
+      },
+      "extents": [
+        0.023930981755256653,
+        0.15245624631643295,
+        0.15707647055387497
+      ],
+      "sorted_extents": [
+        0.023930981755256653,
+        0.15245624631643295,
+        0.15707647055387497
+      ],
+      "stone_extent_relative_rmse": 0.6348540541597033,
+      "stone_extent_max_relative_error": 0.8959522532380145,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "7ad7ac0114b053fd",
+      "first_event_index": 137,
+      "duplicate_count": 1,
+      "unity_source_meshes": [],
+      "counts": {
+        "vertices": 115,
+        "polygons": 173,
+        "indices": 572
+      },
+      "extents": [
+        0.5383062064647675,
+        0.22803155705332756,
+        0.4571969509124756
+      ],
+      "sorted_extents": [
+        0.22803155705332756,
+        0.4571969509124756,
+        0.5383062064647675
+      ],
+      "stone_extent_relative_rmse": 0.6369174163550128,
+      "stone_extent_max_relative_error": 0.9105808988576735,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "34dbc236a826b3e9",
+      "first_event_index": 139,
+      "duplicate_count": 1,
+      "unity_source_meshes": [],
+      "counts": {
+        "vertices": 20,
+        "polygons": 13,
+        "indices": 62
+      },
+      "extents": [
+        0.0020000040531158447,
+        0.10149999335408211,
+        0.31049999594688416
+      ],
+      "sorted_extents": [
+        0.0020000040531158447,
+        0.10149999335408211,
+        0.31049999594688416
+      ],
+      "stone_extent_relative_rmse": 0.6837101473043963,
+      "stone_extent_max_relative_error": 0.9913043302038441,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "95886646ab4821cb",
+      "first_event_index": 131,
+      "duplicate_count": 1,
+      "unity_source_meshes": [
+        "base_link_1"
+      ],
+      "counts": {
+        "vertices": 130,
+        "polygons": 255,
+        "indices": 766
+      },
+      "extents": [
+        0.6067385077476501,
+        0.15937298722565174,
+        0.08361849188804626
+      ],
+      "sorted_extents": [
+        0.08361849188804626,
+        0.15937298722565174,
+        0.6067385077476501
+      ],
+      "stone_extent_relative_rmse": 0.8008731074961412,
+      "stone_extent_max_relative_error": 1.1534639385212826,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "d7dd908b0bc18300",
+      "first_event_index": 135,
+      "duplicate_count": 1,
+      "unity_source_meshes": [
+        "base_link_3"
+      ],
+      "counts": {
+        "vertices": 130,
+        "polygons": 255,
+        "indices": 766
+      },
+      "extents": [
+        0.6125931441783905,
+        0.15841330960392952,
+        0.08355090022087097
+      ],
+      "sorted_extents": [
+        0.08355090022087097,
+        0.15841330960392952,
+        0.6125931441783905
+      ],
+      "stone_extent_relative_rmse": 0.8115636217433917,
+      "stone_extent_max_relative_error": 1.1742434807223456,
+      "matches_formal_stone_by_extent": false
+    },
+    {
+      "sha256_16": "5fca89a703de03b5",
+      "first_event_index": 133,
+      "duplicate_count": 1,
+      "unity_source_meshes": [
+        "base_link_2"
+      ],
+      "counts": {
+        "vertices": 130,
+        "polygons": 254,
+        "indices": 764
+      },
+      "extents": [
+        0.6103494763374329,
+        0.15991279110312462,
+        0.4926280081272125
+      ],
+      "sorted_extents": [
+        0.15991279110312462,
+        0.4926280081272125,
+        0.6103494763374329
+      ],
+      "stone_extent_relative_rmse": 0.8191981752018515,
+      "stone_extent_max_relative_error": 1.1662801526595556,
+      "matches_formal_stone_by_extent": false
+    }
+  ],
+  "conclusion": "No captured hull matches the formal curling stone collider extents within 5%; the captured waiting-page hulls are real cooked convex meshes but are not proven to be the gameplay stone collision hull."
+}

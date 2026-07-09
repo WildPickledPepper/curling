@@ -84,6 +84,12 @@ def simulate_tail(
     for step in range(max_steps):
         if math.hypot(vx, vy) <= 0.01:
             return x, y, step
+        # Match Unity's order: controller FixedUpdate updates velocity first,
+        # then the physics step advances Rigidbody.position.
+        speed = newfrictionstep(BASE_FRICTION, B2Vec2(vx, vy), w, STEP)
+        vx = speed.v.x
+        vy = speed.v.y
+        w = speed.angle
         x += vx * dt_pos
         y += vy * dt_pos
         if (
@@ -94,10 +100,6 @@ def simulate_tail(
             or y > y_max
         ):
             return x, y, step + 1
-        speed = newfrictionstep(BASE_FRICTION, B2Vec2(vx, vy), w, STEP)
-        vx = speed.v.x
-        vy = speed.v.y
-        w = speed.angle
         if not all(math.isfinite(value) for value in (vx, vy, w)):
             return x, y, step + 1
         if math.hypot(vx, vy) > speed_bound:

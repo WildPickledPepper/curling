@@ -1,0 +1,38 @@
+{
+  "mode": "collision_endpoint_residual_correction",
+  "source_report": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_collision_endpoint_residual_correction_20260709.json",
+  "features": [
+    "1",
+    "category_collision_glancing",
+    "category_collision_headon",
+    "sim_dx",
+    "sim_dy",
+    "sim_distance",
+    "sim_angle"
+  ],
+  "alpha": 0.01,
+  "coefficients_dx": [
+    0.060650174257161876,
+    -0.0015064985542720462,
+    0.06215667281108739,
+    -0.059817118295780174,
+    0.3715605563247226,
+    0.41521143026084606,
+    0.10826652255450069
+  ],
+  "coefficients_dy": [
+    -0.7230985828062543,
+    -0.4006640904550643,
+    -0.3224344923515525,
+    0.5633081008073624,
+    0.43529576935880715,
+    0.2930557575929321,
+    -0.8103315735154537
+  ],
+  "baseline_target_rmse_m": 0.16596632381523738,
+  "in_sample_rmse_m": 0.10252003228814335,
+  "leave_repeat_out_rmse_m": 0.13310187364582773,
+  "leave_source_case_out_rmse_m": 0.1327814122854051,
+  "units": "meters",
+  "apply": "corrected_target_endpoint = pyphysx_target_endpoint - predicted_residual"
+}

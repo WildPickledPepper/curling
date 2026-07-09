@@ -1,0 +1,135 @@
+{
+  "question": "Does matching Unity RigidbodyConstraints.FreezeRotationX|FreezeRotationZ with pyphysx angular X/Y locks close the collision gap?",
+  "answer": "No. It matches the known constraint axis but leaves target RMSE at about 11.37cm.",
+  "unity_fact": "CurlingStoneNew.Start sets Rigidbody.constraints=80, i.e. FreezeRotationX|FreezeRotationZ; only yaw remains free.",
+  "baseline": {
+    "config": {
+      "lock_upright": false,
+      "inertia_model": "solid-cylinder",
+      "inertia_radial": null,
+      "inertia_vertical": null,
+      "handoff_extra": 0.0,
+      "handoff_y_offset": 0.0,
+      "radius": 0.146,
+      "contact_offset": 0.01
+    },
+    "summary": {
+      "sample_count": 8,
+      "active_error_count": 8,
+      "target_in_play_error_count": 7,
+      "target_cleared_count": 1,
+      "active_rmse_m": 0.03855842111554859,
+      "target_in_play_rmse_m": 0.11323278407673086,
+      "combined_rmse_m": 0.08231875381295352,
+      "active_mean_m": 0.02881708252789582,
+      "target_in_play_mean_m": 0.08403461569378415
+    },
+    "max_target_horizontal_angular_speed_002s": 0.01504597005143072,
+    "row_errors": {
+      "12000": {
+        "active_error_m": 0.010473716049262526,
+        "target_error_m": 0.014113702652814822
+      },
+      "12001": {
+        "active_error_m": 0.055237795827458136,
+        "target_error_m": null
+      },
+      "12002": {
+        "active_error_m": 0.0062849194634827295,
+        "target_error_m": 0.02847197249155637
+      },
+      "12003": {
+        "active_error_m": 0.07945947880636535,
+        "target_error_m": 0.24572499750997046
+      },
+      "12004": {
+        "active_error_m": 0.010863133849230005,
+        "target_error_m": 0.1335143633427367
+      },
+      "12005": {
+        "active_error_m": 0.017246264486427618,
+        "target_error_m": 0.0744778632985414
+      },
+      "12006": {
+        "active_error_m": 0.00724681288668987,
+        "target_error_m": 0.02645618997061297
+      },
+      "12007": {
+        "active_error_m": 0.04372453885425035,
+        "target_error_m": 0.06548322059025638
+      }
+    }
+  },
+  "lock_upright_best": {
+    "config": {
+      "lock_upright": true,
+      "inertia_model": "custom",
+      "inertia_radial": 0.178810612362,
+      "inertia_vertical": 0.189222883199,
+      "handoff_extra": 0.0,
+      "handoff_y_offset": 0.0,
+      "radius": 0.146,
+      "contact_offset": 0.01
+    },
+    "summary": {
+      "sample_count": 8,
+      "active_error_count": 8,
+      "target_in_play_error_count": 7,
+      "target_cleared_count": 1,
+      "active_rmse_m": 0.037082026812417804,
+      "target_in_play_rmse_m": 0.11365979421567847,
+      "combined_rmse_m": 0.08223156549168031,
+      "active_mean_m": 0.028302075764611967,
+      "target_in_play_mean_m": 0.08368052704691288
+    },
+    "max_target_horizontal_angular_speed_002s": 0.0,
+    "row_errors": {
+      "12000": {
+        "active_error_m": 0.01047422884343126,
+        "target_error_m": 0.013375797951978682
+      },
+      "12001": {
+        "active_error_m": 0.05487567577607447,
+        "target_error_m": null
+      },
+      "12002": {
+        "active_error_m": 0.0065909123545079525,
+        "target_error_m": 0.026891928228203705
+      },
+      "12003": {
+        "active_error_m": 0.07902671683653668,
+        "target_error_m": 0.2487340801327138
+      },
+      "12004": {
+        "active_error_m": 0.010463771679957445,
+        "target_error_m": 0.1335420953912889
+      },
+      "12005": {
+        "active_error_m": 0.016685460595814588,
+        "target_error_m": 0.07005045609797976
+      },
+      "12006": {
+        "active_error_m": 0.01987382645875872,
+        "target_error_m": 0.029580378886718585
+      },
+      "12007": {
+        "active_error_m": 0.02842601357181466,
+        "target_error_m": 0.06358895263950674
+      }
+    }
+  },
+  "delta_vs_baseline_m": {
+    "target_rmse": 0.00042701013894760886,
+    "active_rmse": -0.0014763943031307833
+  },
+  "interpretation": [
+    "The pyphysx lock flags are mapped in the z-up replay as LOCK_ANGULAR_X and LOCK_ANGULAR_Y, leaving z/yaw free.",
+    "The locked replay suppresses target horizontal angular velocity at 0.02s to zero, so the diagnostic is actually exercising the constraint.",
+    "Despite that, best target RMSE is 11.37cm versus the baseline 11.32cm, and the hard 12003 target remains about 24.9cm.",
+    "Therefore the missing 10cm is not explained by free roll/pitch in the local replay; the remaining priority is still first ContactBuffer/SolverContact/cache or runtime shape state."
+  ],
+  "source_reports": {
+    "baseline": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+    "lock_upright_probe": "data\\calibration\\unity_physx_collision_probe_unique_role_lockupright_refresh_20260709.json"
+  }
+}

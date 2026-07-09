@@ -1,0 +1,450 @@
+{
+  "samples": "data\\calibration\\unity_unique_role_collision_samples_20260708_r00.jsonl",
+  "probe": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+  "impulse_report": "data\\calibration\\unity_collision_impulse_residual_refresh_20260709.json",
+  "sample_count": 7,
+  "sample_ids": [
+    12000,
+    12002,
+    12003,
+    12004,
+    12005,
+    12006,
+    12007
+  ],
+  "target": "target linear velocity at t=0.02s",
+  "baseline_required_delta_rmse_mps": 0.03261085945107625,
+  "least_squares_residual_rmse_mps": 0.021863168861034316,
+  "plausible_clipped_residual_rmse_mps": 0.03628209240638129,
+  "least_squares_rank": 11,
+  "singular_values": [
+    53.8730179622053,
+    33.50208639875272,
+    10.569642112747289,
+    2.2143426199548633,
+    1.290760724379264,
+    0.8049457821102721,
+    0.6033799215156657,
+    0.39601764704226783,
+    0.018808836375757722,
+    0.010084461285391564,
+    8.734847109674024e-05,
+    0.0
+  ],
+  "parameters": [
+    {
+      "name": "active_handoff_x_offset",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "protocol x offset applied to active handoff pose",
+      "sensitivity_norm_per_unit": 19.006244398170935,
+      "least_squares_value": -0.014263266336348984,
+      "abs_over_plausible": 1.4263266336348983,
+      "plausible_clipped_value": -0.01
+    },
+    {
+      "name": "active_handoff_y_offset",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "protocol y offset applied to active handoff pose",
+      "sensitivity_norm_per_unit": 53.56350566607757,
+      "least_squares_value": -0.0008120634917992368,
+      "abs_over_plausible": 0.08120634917992367,
+      "plausible_clipped_value": -0.0008120634917992368
+    },
+    {
+      "name": "active_handoff_vx_offset",
+      "finite_difference_step": 0.01,
+      "plausible_abs": 0.05,
+      "description": "protocol vx offset applied to active handoff velocity",
+      "sensitivity_norm_per_unit": 0.9733639194139059,
+      "least_squares_value": -0.09086019805700572,
+      "abs_over_plausible": 1.8172039611401143,
+      "plausible_clipped_value": -0.05
+    },
+    {
+      "name": "active_handoff_vy_offset",
+      "finite_difference_step": 0.01,
+      "plausible_abs": 0.05,
+      "description": "protocol vy offset applied to active handoff velocity",
+      "sensitivity_norm_per_unit": 2.499478799040701,
+      "least_squares_value": 0.0270959959874238,
+      "abs_over_plausible": 0.541919919748476,
+      "plausible_clipped_value": 0.0270959959874238
+    },
+    {
+      "name": "active_handoff_w_offset",
+      "finite_difference_step": 0.01,
+      "plausible_abs": 0.1,
+      "description": "angular velocity offset applied to active handoff",
+      "sensitivity_norm_per_unit": 0.06568271974239091,
+      "least_squares_value": 0.9471367587378483,
+      "abs_over_plausible": 9.471367587378483,
+      "plausible_clipped_value": 0.1
+    },
+    {
+      "name": "target_x_offset",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "protocol x offset applied to target reset position",
+      "sensitivity_norm_per_unit": 10.519166272892397,
+      "least_squares_value": 0.0045113836339218845,
+      "abs_over_plausible": 0.45113836339218844,
+      "plausible_clipped_value": 0.0045113836339218845
+    },
+    {
+      "name": "target_y_offset",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "protocol y offset applied to target reset position",
+      "sensitivity_norm_per_unit": 28.158069013024658,
+      "least_squares_value": 0.007891741400695243,
+      "abs_over_plausible": 0.7891741400695244,
+      "plausible_clipped_value": 0.007891741400695243
+    },
+    {
+      "name": "active_yaw",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.05,
+      "description": "active initial yaw around vertical axis",
+      "sensitivity_norm_per_unit": 0.4421439120318167,
+      "least_squares_value": -0.7650157512753469,
+      "abs_over_plausible": 15.300315025506938,
+      "plausible_clipped_value": -0.05
+    },
+    {
+      "name": "target_yaw",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.05,
+      "description": "target initial yaw around vertical axis",
+      "sensitivity_norm_per_unit": 0.453840504941944,
+      "least_squares_value": 0.8497258236734598,
+      "abs_over_plausible": 16.994516473469197,
+      "plausible_clipped_value": 0.05
+    },
+    {
+      "name": "radius",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "stone convex radius, with explicit handoff held fixed",
+      "sensitivity_norm_per_unit": 1.6525966089808202,
+      "least_squares_value": 0.02816336126642872,
+      "abs_over_plausible": 2.816336126642872,
+      "plausible_clipped_value": 0.01
+    },
+    {
+      "name": "contact_offset",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.005,
+      "description": "shape contact offset",
+      "sensitivity_norm_per_unit": 0.0,
+      "least_squares_value": 0.0,
+      "abs_over_plausible": 0.0,
+      "plausible_clipped_value": 0.0
+    },
+    {
+      "name": "center_height",
+      "finite_difference_step": 0.001,
+      "plausible_abs": 0.01,
+      "description": "actor center height",
+      "sensitivity_norm_per_unit": 0.00012344152872101138,
+      "least_squares_value": 213.9269876944981,
+      "abs_over_plausible": 21392.69876944981,
+      "plausible_clipped_value": 0.01
+    }
+  ],
+  "per_sample": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.04430509731173515,
+        -0.7916496396064758
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.04430509731173515,
+        -0.7916496396064758
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.03909841354108877,
+        -0.7983783507761679
+      ],
+      "required_delta_v_mps": [
+        -0.005206683770646384,
+        -0.006728711169692092
+      ],
+      "required_delta_v_norm_mps": 0.008507943928626444,
+      "least_squares_fit_delta_v_mps": [
+        -0.008939761474883567,
+        -0.009047528384685366
+      ],
+      "least_squares_residual_delta_v_mps": [
+        0.0037330777042371838,
+        0.002318817214993274
+      ],
+      "least_squares_residual_norm_mps": 0.004394631090594741,
+      "baseline_delta_norm_from_rerun_mps": 0.008507943928626444,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.011249908361918045,
+        0.031062170789747268
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.01645659213256443,
+        -0.03779088195943936
+      ],
+      "plausible_clipped_residual_norm_mps": 0.041218566009625576
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.05346119776368141,
+        -0.8933961391448975
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.05346119776368141,
+        -0.8933961391448975
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.03828986988372762,
+        -0.8939108859555402
+      ],
+      "required_delta_v_mps": [
+        -0.015171327879953789,
+        -0.0005147468106427855
+      ],
+      "required_delta_v_norm_mps": 0.015180057770645341,
+      "least_squares_fit_delta_v_mps": [
+        -0.0004974696419518948,
+        0.003232376781621568
+      ],
+      "least_squares_residual_delta_v_mps": [
+        -0.014673858238001894,
+        -0.0037471235922643537
+      ],
+      "least_squares_residual_norm_mps": 0.015144736736063792,
+      "baseline_delta_norm_from_rerun_mps": 0.015180057770645343,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.0160439776757821,
+        0.029743555456390458
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.03121530555573589,
+        -0.030258302267033244
+      ],
+      "plausible_clipped_residual_norm_mps": 0.04347367199836132
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.07903332263231277,
+        -1.2685649394989014
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.07903332263231277,
+        -1.2685649394989014
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.15554523737000278,
+        -1.2176656318357513
+      ],
+      "required_delta_v_mps": [
+        0.07651191473769,
+        0.050899307663150095
+      ],
+      "required_delta_v_norm_mps": 0.09189566158103198,
+      "least_squares_fit_delta_v_mps": [
+        0.010610861878617726,
+        0.04010152337281559
+      ],
+      "least_squares_residual_delta_v_mps": [
+        0.06590105285907227,
+        0.010797784290334504
+      ],
+      "least_squares_residual_norm_mps": 0.06677979420090206,
+      "baseline_delta_norm_from_rerun_mps": 0.09189566158103198,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.026900596650262537,
+        0.03531751999455518
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        0.04961131808742747,
+        0.015581787668594915
+      ],
+      "plausible_clipped_residual_norm_mps": 0.05200072104616516
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.06608836352825165,
+        -1.054384708404541
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.06608836352825165,
+        -1.054384708404541
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.06345160795224498,
+        -0.994256280686929
+      ],
+      "required_delta_v_mps": [
+        -0.0026367555760066635,
+        0.060128427717612065
+      ],
+      "required_delta_v_norm_mps": 0.060186213535656986,
+      "least_squares_fit_delta_v_mps": [
+        0.010695915106012449,
+        0.06296485019476314
+      ],
+      "least_squares_residual_delta_v_mps": [
+        -0.013332670682019113,
+        -0.0028364224771510738
+      ],
+      "least_squares_residual_norm_mps": 0.013631045447215698,
+      "baseline_delta_norm_from_rerun_mps": 0.06018621353565699,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.0201460113193734,
+        0.034355071458609776
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.022782766895380065,
+        0.02577335625900229
+      ],
+      "plausible_clipped_residual_norm_mps": 0.03439942383620223
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.08843953907489777,
+        -1.4155863523483276
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.08843953907489777,
+        -1.4155863523483276
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.06472125353461401,
+        -1.423285934608922
+      ],
+      "required_delta_v_mps": [
+        -0.023718285540283754,
+        -0.0076995822605943065
+      ],
+      "required_delta_v_norm_mps": 0.024936732664045867,
+      "least_squares_fit_delta_v_mps": [
+        0.018150052330863545,
+        -0.0010173032966581202
+      ],
+      "least_squares_residual_delta_v_mps": [
+        -0.0418683378711473,
+        -0.006682278963936186
+      ],
+      "least_squares_residual_norm_mps": 0.04239823779645106,
+      "baseline_delta_norm_from_rerun_mps": 0.024936732664045867,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.03829705589092744,
+        -0.006568481157031032
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.06201534143121119,
+        -0.001131101103563274
+      ],
+      "plausible_clipped_residual_norm_mps": 0.06202565568001826
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "saved_target_velocity_0p02_mps": [
+        -0.393447607755661,
+        -0.7870090007781982
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        -0.393447607755661,
+        -0.7870090007781982
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        -0.4017405262100473,
+        -0.7987177729795835
+      ],
+      "required_delta_v_mps": [
+        -0.008292918454386289,
+        -0.01170877220138522
+      ],
+      "required_delta_v_norm_mps": 0.014348095446958526,
+      "least_squares_fit_delta_v_mps": [
+        -0.00879737981150161,
+        -0.011534897632341626
+      ],
+      "least_squares_residual_delta_v_mps": [
+        0.0005044613571153211,
+        -0.00017387456904359444
+      ],
+      "least_squares_residual_norm_mps": 0.0005335856319118116,
+      "baseline_delta_norm_from_rerun_mps": 0.014348095446958526,
+      "plausible_clipped_fit_delta_v_mps": [
+        0.011343887865272798,
+        -0.01666897605379249
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.019636806319659087,
+        0.00496020385240727
+      ],
+      "plausible_clipped_residual_norm_mps": 0.020253586958690527
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "saved_target_velocity_0p02_mps": [
+        0.43480807542800903,
+        -0.6256478428840637
+      ],
+      "rerun_baseline_target_velocity_0p02_mps": [
+        0.43480807542800903,
+        -0.6256478428840637
+      ],
+      "baseline_rerun_delta_norm_mps": 0.0,
+      "desired_target_velocity_0p02_mps": [
+        0.4102311877275927,
+        -0.5926810400516711
+      ],
+      "required_delta_v_mps": [
+        -0.024576887700416328,
+        0.03296680283239262
+      ],
+      "required_delta_v_norm_mps": 0.0411197458410035,
+      "least_squares_fit_delta_v_mps": [
+        -0.024346382135415623,
+        0.033026599428643735
+      ],
+      "least_squares_residual_delta_v_mps": [
+        -0.00023050556500070485,
+        -5.979659625111877e-05
+      ],
+      "least_squares_residual_norm_mps": 0.00023813535734853295,
+      "baseline_delta_norm_from_rerun_mps": 0.04111974584100351,
+      "plausible_clipped_fit_delta_v_mps": [
+        -0.010792606516343591,
+        0.11362497889599416
+      ],
+      "plausible_clipped_residual_delta_v_mps": [
+        -0.013784281184072737,
+        -0.08065817606360154
+      ],
+      "plausible_clipped_residual_norm_mps": 0.08182754898974139
+    }
+  ],
+  "interpretation": [
+    "This fit is intentionally linearized around the current-best replay and uses explicit baseline handoff so radius sensitivity is isolated from handoff-threshold changes.",
+    "Large abs_over_plausible values mean a simple global initial-state or geometry offset would need to be unrealistically large.",
+    "A poor residual after this fit points back to per-contact runtime state: manifold/cache/solver rows/cooked stream rather than one global scalar."
+  ]
+}

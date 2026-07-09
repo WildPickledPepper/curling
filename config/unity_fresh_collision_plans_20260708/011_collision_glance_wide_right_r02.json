@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 10035,
+    "label": "collision_glance_wide_right_fresh_r02",
+    "category": "collision_glancing",
+    "v0": 3.9,
+    "h0": 0.35,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.795,
+        "y": 5.7
+      }
+    ],
+    "notes": "fresh-page collision calibration; source_sample_id=89; reload Unity before running this one-shot plan",
+    "source_sample_id": 89,
+    "fresh_repeat_index": 2
+  }
+]

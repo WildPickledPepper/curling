@@ -1,0 +1,2877 @@
+{
+  "probe": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_step_snapshots_20260709.json",
+  "row_delta": "data\\calibration\\unity_collision_solver_row_delta_from_tail_oracle_20260709.json",
+  "snapshot_key": "0.020000",
+  "summary": {
+    "best_model": "per_sample_oracle",
+    "best_endpoint_rmse_m": 0.0008986725445721657,
+    "best_endpoint_over_2cm_count": 0,
+    "model_count": 11
+  },
+  "models": [
+    {
+      "model": "per_sample_oracle",
+      "params": {},
+      "summary": {
+        "endpoint_rmse_m": 0.0008986725445721657,
+        "endpoint_mean_m": 0.0007092441112307498,
+        "endpoint_over_2cm_count": 0,
+        "endpoint_max_m": 0.001775078033073606,
+        "impulse_residual_rmse_Ns": 0.0,
+        "impulse_residual_mean_Ns": 0.0,
+        "impulse_residual_max_Ns": 0.0
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.001775078033073606,
+          "predicted_delta_impulse_normal_Ns": 0.05700716230703051,
+          "predicted_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.64844012260437,
+            3.724968194961548
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.001019607405374536,
+          "predicted_delta_impulse_normal_Ns": -0.37890897486089337,
+          "predicted_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            3.238368272781372,
+            5.2577805519104
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.000967809216231448,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.4796817302703857,
+            4.506455421447754
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.0006261403889496378,
+          "predicted_delta_impulse_normal_Ns": -0.44879677887673,
+          "predicted_delta_impulse_tangent_Ns": 1.778199710858479,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.853315830230713,
+            2.9270131587982178
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.00030735129539966494,
+          "predicted_delta_impulse_normal_Ns": 0.14986049744829444,
+          "predicted_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            1.4522771835327148,
+            4.7083024978637695
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.0001762417208086563,
+          "predicted_delta_impulse_normal_Ns": 0.06371098811010079,
+          "predicted_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.465754508972168,
+            3.8611152172088623
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.000967809216231448,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.4796817302703857,
+            4.506455421447754
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.0006261403889496378,
+          "predicted_delta_impulse_normal_Ns": -0.44879677887673,
+          "predicted_delta_impulse_tangent_Ns": 1.778199710858479,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.853315830230713,
+            2.9270131587982178
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 9.248071877770025e-05,
+          "predicted_delta_impulse_normal_Ns": -0.5769863274148861,
+          "predicted_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.5593924522399902,
+            5.776397705078125
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.001775078033073606,
+          "predicted_delta_impulse_normal_Ns": 0.05700716230703051,
+          "predicted_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.64844012260437,
+            3.724968194961548
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.00030735129539966494,
+          "predicted_delta_impulse_normal_Ns": 0.14986049744829444,
+          "predicted_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            1.4522771835327148,
+            4.7083024978637695
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.001019607405374536,
+          "predicted_delta_impulse_normal_Ns": -0.37890897486089337,
+          "predicted_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            3.238368272781372,
+            5.2577805519104
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_full_2x2_linear",
+      "params": {
+        "matrix": [
+          [
+            0.9936524907473409,
+            0.12230485653606744
+          ],
+          [
+            0.01615996921295413,
+            0.9377099175547429
+          ]
+        ]
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.10238862206574004,
+        "endpoint_mean_m": 0.08066325531863458,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2020046905472755,
+        "impulse_residual_rmse_Ns": 0.6379707604733544,
+        "impulse_residual_mean_Ns": 0.5110258547284169,
+        "impulse_residual_max_Ns": 1.3778544915372668
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2020046905472755,
+          "predicted_delta_impulse_normal_Ns": -0.21068951927916402,
+          "predicted_delta_impulse_tangent_Ns": 0.42107483348854546,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.23810725959756596,
+          "residual_impulse_tangent_Ns": -1.3571248773699336,
+          "residual_impulse_norm_Ns": 1.3778544915372668,
+          "endpoint": [
+            2.666478157043457,
+            2.8486227989196777
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.14019129719983667,
+          "predicted_delta_impulse_normal_Ns": -0.23471533306958037,
+          "predicted_delta_impulse_tangent_Ns": 0.4696804819892345,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2917224953766109,
+          "residual_impulse_tangent_Ns": 0.6249664258999051,
+          "residual_impulse_norm_Ns": 0.6896992444615685,
+          "endpoint": [
+            2.746863603591919,
+            3.8267369270324707
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.0918093783276585,
+          "predicted_delta_impulse_normal_Ns": -0.17752902778145696,
+          "predicted_delta_impulse_tangent_Ns": 0.3512113746736744,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.39945729963342913,
+          "residual_impulse_tangent_Ns": 0.05229120819708455,
+          "residual_impulse_norm_Ns": 0.4028653679396406,
+          "endpoint": [
+            2.5748517513275146,
+            5.685917377471924
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.04284774802905634,
+          "predicted_delta_impulse_normal_Ns": -0.1529071175258423,
+          "predicted_delta_impulse_tangent_Ns": 0.2988080954488893,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.1529071175258423,
+          "residual_impulse_tangent_Ns": 0.2988080954488893,
+          "residual_impulse_norm_Ns": 0.33565885135931434,
+          "endpoint": [
+            2.508544683456421,
+            4.5394206047058105
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.036905782008014386,
+          "predicted_delta_impulse_normal_Ns": -0.1414120858383221,
+          "predicted_delta_impulse_tangent_Ns": 0.26773410767868133,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.20512307394842288,
+          "residual_impulse_tangent_Ns": 0.092560517581907,
+          "residual_impulse_norm_Ns": 0.22503982954375137,
+          "endpoint": [
+            2.4717447757720947,
+            3.8975906372070312
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.036905782008014386,
+          "predicted_delta_impulse_normal_Ns": -0.1414120858383221,
+          "predicted_delta_impulse_tangent_Ns": 0.26773410767868133,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.20512307394842288,
+          "residual_impulse_tangent_Ns": 0.092560517581907,
+          "residual_impulse_norm_Ns": 0.22503982954375137,
+          "endpoint": [
+            2.4717447757720947,
+            3.8975906372070312
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.04284774802905634,
+          "predicted_delta_impulse_normal_Ns": -0.1529071175258423,
+          "predicted_delta_impulse_tangent_Ns": 0.2988080954488893,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.1529071175258423,
+          "residual_impulse_tangent_Ns": 0.2988080954488893,
+          "residual_impulse_norm_Ns": 0.33565885135931434,
+          "endpoint": [
+            2.508544683456421,
+            4.5394206047058105
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2020046905472755,
+          "predicted_delta_impulse_normal_Ns": -0.21068951927916402,
+          "predicted_delta_impulse_tangent_Ns": 0.42107483348854546,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.23810725959756596,
+          "residual_impulse_tangent_Ns": -1.3571248773699336,
+          "residual_impulse_norm_Ns": 1.3778544915372668,
+          "endpoint": [
+            2.666478157043457,
+            2.8486227989196777
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.0918093783276585,
+          "predicted_delta_impulse_normal_Ns": -0.17752902778145696,
+          "predicted_delta_impulse_tangent_Ns": 0.3512113746736744,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.39945729963342913,
+          "residual_impulse_tangent_Ns": 0.05229120819708455,
+          "residual_impulse_norm_Ns": 0.4028653679396406,
+          "endpoint": [
+            2.5748517513275146,
+            5.685917377471924
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.14019129719983667,
+          "predicted_delta_impulse_normal_Ns": -0.23471533306958037,
+          "predicted_delta_impulse_tangent_Ns": 0.4696804819892345,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2917224953766109,
+          "residual_impulse_tangent_Ns": 0.6249664258999051,
+          "residual_impulse_norm_Ns": 0.6896992444615685,
+          "endpoint": [
+            2.746863603591919,
+            3.8267369270324707
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.026666954251646672,
+          "predicted_delta_impulse_normal_Ns": 0.1403112727745892,
+          "predicted_delta_impulse_tangent_Ns": 0.1442244861429245,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.009549224673705226,
+          "residual_impulse_tangent_Ns": 0.2634780830864707,
+          "residual_impulse_norm_Ns": 0.2636510723641951,
+          "endpoint": [
+            1.4738205671310425,
+            4.692989826202393
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.02421693686695405,
+          "predicted_delta_impulse_normal_Ns": -0.38298904709418125,
+          "predicted_delta_impulse_tangent_Ns": 0.3806305214110557,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": -0.004080072233287879,
+          "residual_impulse_tangent_Ns": 0.28238265148921116,
+          "residual_impulse_norm_Ns": 0.2824121258931814,
+          "endpoint": [
+            3.2519936561584473,
+            5.277425765991211
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_nt_scale_plus_rotation_term",
+      "params": {
+        "normal_scale_like": 0.9913437722347395,
+        "rotation_term": 0.015622561960081712,
+        "tangent_scale_like": 0.9354011990421416
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.10586830593978538,
+        "endpoint_mean_m": 0.08897737051474262,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2039989607947534,
+        "impulse_residual_rmse_Ns": 0.6587828676721899,
+        "impulse_residual_mean_Ns": 0.5459822980825706,
+        "impulse_residual_max_Ns": 1.3910117363076133
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2039989607947534,
+          "predicted_delta_impulse_normal_Ns": -0.20287272299919223,
+          "predicted_delta_impulse_tangent_Ns": 0.40909963807845673,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24592405587753774,
+          "residual_impulse_tangent_Ns": -1.3691000727800224,
+          "residual_impulse_norm_Ns": 1.3910117363076133,
+          "endpoint": [
+            2.665290117263794,
+            2.846320152282715
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.13664856010326115,
+          "predicted_delta_impulse_normal_Ns": -0.2264382882167162,
+          "predicted_delta_impulse_tangent_Ns": 0.4563097740618011,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2834454505237467,
+          "residual_impulse_tangent_Ns": 0.6115957179724718,
+          "residual_impulse_norm_Ns": 0.6740850433475535,
+          "endpoint": [
+            2.7446494102478027,
+            3.8239529132843018
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09389658400117037,
+          "predicted_delta_impulse_normal_Ns": -0.1683131759594687,
+          "predicted_delta_impulse_tangent_Ns": 0.34130349561196566,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.4086731514554174,
+          "residual_impulse_tangent_Ns": 0.04238332913537579,
+          "residual_impulse_norm_Ns": 0.4108650524309656,
+          "endpoint": [
+            2.574660062789917,
+            5.683768272399902
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0635229437465512,
+          "predicted_delta_impulse_normal_Ns": -0.1758765467266592,
+          "predicted_delta_impulse_tangent_Ns": 0.13061025537308613,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.32573704417495364,
+          "residual_impulse_tangent_Ns": 0.24986385231663233,
+          "residual_impulse_norm_Ns": 0.4105320531241666,
+          "endpoint": [
+            1.5027170181274414,
+            4.747112274169922
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04983606224930065,
+          "predicted_delta_impulse_normal_Ns": -0.08698108772146895,
+          "predicted_delta_impulse_tangent_Ns": 0.3784254067074988,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2919278871394244,
+          "residual_impulse_tangent_Ns": 0.28017753678565427,
+          "residual_impulse_norm_Ns": 0.4046249416545712,
+          "endpoint": [
+            3.2843360900878906,
+            5.241347789764404
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.033931702014878024,
+          "predicted_delta_impulse_normal_Ns": -0.12526409321400678,
+          "predicted_delta_impulse_tangent_Ns": 0.26045332127856907,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.18897508132410756,
+          "residual_impulse_tangent_Ns": 0.08527973118179472,
+          "residual_impulse_norm_Ns": 0.20732634640077038,
+          "endpoint": [
+            2.470947504043579,
+            3.894707679748535
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.041006780693283604,
+          "predicted_delta_impulse_normal_Ns": -0.14226494561363623,
+          "predicted_delta_impulse_tangent_Ns": 0.29046211617973877,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.14226494561363623,
+          "residual_impulse_tangent_Ns": 0.29046211617973877,
+          "residual_impulse_norm_Ns": 0.3234309133123532,
+          "endpoint": [
+            2.5081474781036377,
+            4.537301063537598
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2039989607947534,
+          "predicted_delta_impulse_normal_Ns": -0.20287272299919223,
+          "predicted_delta_impulse_tangent_Ns": 0.40909963807845673,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24592405587753774,
+          "residual_impulse_tangent_Ns": -1.3691000727800224,
+          "residual_impulse_norm_Ns": 1.3910117363076133,
+          "endpoint": [
+            2.665290117263794,
+            2.846320152282715
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09389658400117037,
+          "predicted_delta_impulse_normal_Ns": -0.1683131759594687,
+          "predicted_delta_impulse_tangent_Ns": 0.34130349561196566,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.4086731514554174,
+          "residual_impulse_tangent_Ns": 0.04238332913537579,
+          "residual_impulse_norm_Ns": 0.4108650524309656,
+          "endpoint": [
+            2.574660062789917,
+            5.683768272399902
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.13664856010326115,
+          "predicted_delta_impulse_normal_Ns": -0.2264382882167162,
+          "predicted_delta_impulse_tangent_Ns": 0.4563097740618011,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2834454505237467,
+          "residual_impulse_tangent_Ns": 0.6115957179724718,
+          "residual_impulse_norm_Ns": 0.6740850433475535,
+          "endpoint": [
+            2.7446494102478027,
+            3.8239529132843018
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0635229437465512,
+          "predicted_delta_impulse_normal_Ns": -0.1758765467266592,
+          "predicted_delta_impulse_tangent_Ns": 0.13061025537308613,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.32573704417495364,
+          "residual_impulse_tangent_Ns": 0.24986385231663233,
+          "residual_impulse_norm_Ns": 0.4105320531241666,
+          "endpoint": [
+            1.5027170181274414,
+            4.747112274169922
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04983606224930065,
+          "predicted_delta_impulse_normal_Ns": -0.08698108772146895,
+          "predicted_delta_impulse_tangent_Ns": 0.3784254067074988,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2919278871394244,
+          "residual_impulse_tangent_Ns": 0.28017753678565427,
+          "residual_impulse_norm_Ns": 0.4046249416545712,
+          "endpoint": [
+            3.2843360900878906,
+            5.241347789764404
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_uniform_scale_rotation",
+      "params": {
+        "scale": 0.9912649056304959,
+        "theta_deg": 0.9569537583578278
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.10607979647998442,
+        "endpoint_mean_m": 0.08928139003430327,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2038754697271221,
+        "impulse_residual_rmse_Ns": 0.6621179707460295,
+        "impulse_residual_mean_Ns": 0.5480542784454566,
+        "impulse_residual_max_Ns": 1.3932749157107507
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2038754697271221,
+          "predicted_delta_impulse_normal_Ns": -0.20771094268495816,
+          "predicted_delta_impulse_tangent_Ns": 0.40594149523850553,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24108583619177182,
+          "residual_impulse_tangent_Ns": -1.3722582156199734,
+          "residual_impulse_norm_Ns": 1.3932749157107507,
+          "endpoint": [
+            2.664862632751465,
+            2.8476388454437256
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.1370140265635493,
+          "predicted_delta_impulse_normal_Ns": -0.23184032301379887,
+          "predicted_delta_impulse_tangent_Ns": 0.4529656815459196,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2888474853208294,
+          "residual_impulse_tangent_Ns": 0.6082516254565902,
+          "residual_impulse_norm_Ns": 0.6733519953536566,
+          "endpoint": [
+            2.7435123920440674,
+            3.8255276679992676
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.0929155096078217,
+          "predicted_delta_impulse_normal_Ns": -0.17231615828075775,
+          "predicted_delta_impulse_tangent_Ns": 0.3375801062075065,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40467016913412834,
+          "residual_impulse_tangent_Ns": 0.03865993973091664,
+          "residual_impulse_norm_Ns": 0.40651265260387914,
+          "endpoint": [
+            2.5732169151306152,
+            5.684532642364502
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0685356227722579,
+          "predicted_delta_impulse_normal_Ns": -0.18137696964766903,
+          "predicted_delta_impulse_tangent_Ns": 0.25835649084748535,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.33123746709596347,
+          "residual_impulse_tangent_Ns": 0.37761008779103156,
+          "residual_impulse_norm_Ns": 0.5023023372528741,
+          "endpoint": [
+            1.5132840871810913,
+            4.739678382873535
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04765465571644505,
+          "predicted_delta_impulse_normal_Ns": -0.08787199839163584,
+          "predicted_delta_impulse_tangent_Ns": 0.25883224040535824,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2910369764692575,
+          "residual_impulse_tangent_Ns": 0.1605843704835137,
+          "residual_impulse_norm_Ns": 0.3324001530023017,
+          "endpoint": [
+            3.2780065536499023,
+            5.233158588409424
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.03429047257332123,
+          "predicted_delta_impulse_normal_Ns": -0.12820567728696552,
+          "predicted_delta_impulse_tangent_Ns": 0.2539292076315619,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.1919166653970663,
+          "residual_impulse_tangent_Ns": 0.07875561753478755,
+          "residual_impulse_norm_Ns": 0.2074474722680786,
+          "endpoint": [
+            2.4703221321105957,
+            3.8951637744903564
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.04068397327960573,
+          "predicted_delta_impulse_normal_Ns": -0.14563688901950655,
+          "predicted_delta_impulse_tangent_Ns": 0.286162464785195,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.14563688901950655,
+          "residual_impulse_tangent_Ns": 0.286162464785195,
+          "residual_impulse_norm_Ns": 0.3210904229266548,
+          "endpoint": [
+            2.507050037384033,
+            4.537853240966797
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2038754697271221,
+          "predicted_delta_impulse_normal_Ns": -0.20771094268495816,
+          "predicted_delta_impulse_tangent_Ns": 0.40594149523850553,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24108583619177182,
+          "residual_impulse_tangent_Ns": -1.3722582156199734,
+          "residual_impulse_norm_Ns": 1.3932749157107507,
+          "endpoint": [
+            2.664862632751465,
+            2.8476388454437256
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.0929155096078217,
+          "predicted_delta_impulse_normal_Ns": -0.17231615828075775,
+          "predicted_delta_impulse_tangent_Ns": 0.3375801062075065,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40467016913412834,
+          "residual_impulse_tangent_Ns": 0.03865993973091664,
+          "residual_impulse_norm_Ns": 0.40651265260387914,
+          "endpoint": [
+            2.5732169151306152,
+            5.684532642364502
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.1370140265635493,
+          "predicted_delta_impulse_normal_Ns": -0.23184032301379887,
+          "predicted_delta_impulse_tangent_Ns": 0.4529656815459196,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2888474853208294,
+          "residual_impulse_tangent_Ns": 0.6082516254565902,
+          "residual_impulse_norm_Ns": 0.6733519953536566,
+          "endpoint": [
+            2.7435123920440674,
+            3.8255276679992676
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0685356227722579,
+          "predicted_delta_impulse_normal_Ns": -0.18137696964766903,
+          "predicted_delta_impulse_tangent_Ns": 0.25835649084748535,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.33123746709596347,
+          "residual_impulse_tangent_Ns": 0.37761008779103156,
+          "residual_impulse_norm_Ns": 0.5023023372528741,
+          "endpoint": [
+            1.5132840871810913,
+            4.739678382873535
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04765465571644505,
+          "predicted_delta_impulse_normal_Ns": -0.08787199839163584,
+          "predicted_delta_impulse_tangent_Ns": 0.25883224040535824,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2910369764692575,
+          "residual_impulse_tangent_Ns": 0.1605843704835137,
+          "residual_impulse_norm_Ns": 0.3324001530023017,
+          "endpoint": [
+            3.2780065536499023,
+            5.233158588409424
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_constant_impulse_offset",
+      "params": {
+        "normal_offset_Ns": -0.16201620475529768,
+        "tangent_offset_Ns": 0.2965716852142101
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.10651312627774219,
+        "endpoint_mean_m": 0.08733022960138456,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2241497768139459,
+        "impulse_residual_rmse_Ns": 0.6801537436193893,
+        "impulse_residual_mean_Ns": 0.5477385703138048,
+        "impulse_residual_max_Ns": 1.5091271331693539
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2241497768139459,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.2867805741214333,
+          "residual_impulse_tangent_Ns": -1.4816280256442689,
+          "residual_impulse_norm_Ns": 1.5091271331693539,
+          "endpoint": [
+            2.649000644683838,
+            2.833360195159912
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.10318432266771474,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.21902336706232717,
+          "residual_impulse_tangent_Ns": 0.45185762912488076,
+          "residual_impulse_norm_Ns": 0.5021419643065865,
+          "endpoint": [
+            2.7197799682617188,
+            3.8013947010040283
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09512980341924036,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.41497012265958944,
+          "residual_impulse_tangent_Ns": -0.0023484812623797424,
+          "residual_impulse_norm_Ns": 0.41497676810196793,
+          "endpoint": [
+            2.568547487258911,
+            5.681720733642578
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.06718227340436346,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.29657168521420996,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.3118767022035911,
+          "residual_impulse_tangent_Ns": 0.41582528215775616,
+          "residual_impulse_norm_Ns": 0.5197862470852466,
+          "endpoint": [
+            1.5144107341766357,
+            4.7339630126953125
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.04404607543673926,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.16201620475529666,
+          "residual_impulse_tangent_Ns": 0.2965716852142101,
+          "residual_impulse_norm_Ns": 0.3379408455249332,
+          "endpoint": [
+            2.508310079574585,
+            4.541192531585693
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.04100276969730538,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529843,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.22572719286539922,
+          "residual_impulse_tangent_Ns": 0.12139809511743577,
+          "residual_impulse_norm_Ns": 0.2563011180175286,
+          "endpoint": [
+            2.473902702331543,
+            3.901353359222412
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.04404607543673926,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.16201620475529666,
+          "residual_impulse_tangent_Ns": 0.2965716852142101,
+          "residual_impulse_norm_Ns": 0.3379408455249332,
+          "endpoint": [
+            2.508310079574585,
+            4.541192531585693
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2241497768139459,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.2867805741214333,
+          "residual_impulse_tangent_Ns": -1.4816280256442689,
+          "residual_impulse_norm_Ns": 1.5091271331693539,
+          "endpoint": [
+            2.649000644683838,
+            2.833360195159912
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09512980341924036,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.41497012265958944,
+          "residual_impulse_tangent_Ns": -0.0023484812623797424,
+          "residual_impulse_norm_Ns": 0.41497676810196793,
+          "endpoint": [
+            2.568547487258911,
+            5.681720733642578
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.10318432266771474,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.2965716852142101,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.21902336706232717,
+          "residual_impulse_tangent_Ns": 0.45185762912488076,
+          "residual_impulse_norm_Ns": 0.5021419643065865,
+          "endpoint": [
+            2.7197799682617188,
+            3.8013947010040283
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.06718227340436346,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529666,
+          "predicted_delta_impulse_tangent_Ns": 0.29657168521420996,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.3118767022035911,
+          "residual_impulse_tangent_Ns": 0.41582528215775616,
+          "residual_impulse_norm_Ns": 0.5197862470852466,
+          "endpoint": [
+            1.5144107341766357,
+            4.7339630126953125
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.03661658577038281,
+          "predicted_delta_impulse_normal_Ns": -0.16201620475529843,
+          "predicted_delta_impulse_tangent_Ns": 0.29657168521420996,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.21689277010559493,
+          "residual_impulse_tangent_Ns": 0.19832381529236542,
+          "residual_impulse_norm_Ns": 0.29389591599101667,
+          "endpoint": [
+            3.2714428901672363,
+            5.244614601135254
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_rotation_only",
+      "params": {
+        "theta_deg": 0.9569537583578278
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.11281739017347332,
+        "endpoint_mean_m": 0.0893072045771699,
+        "endpoint_over_2cm_count": 6,
+        "endpoint_max_m": 0.22915255696645212,
+        "impulse_residual_rmse_Ns": 0.6843494591119068,
+        "impulse_residual_mean_Ns": 0.5571946193987797,
+        "impulse_residual_max_Ns": 1.4456177419613627
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.22915255696645212,
+          "predicted_delta_impulse_normal_Ns": 0.004346573637239004,
+          "predicted_delta_impulse_tangent_Ns": 0.40543907697292436,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.453143352513969,
+          "residual_impulse_tangent_Ns": -1.3727606338855547,
+          "residual_impulse_norm_Ns": 1.4456177419613627,
+          "endpoint": [
+            2.6700799465179443,
+            2.7884774208068848
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.13386570347838456,
+          "predicted_delta_impulse_normal_Ns": 0.003941938726352845,
+          "predicted_delta_impulse_tangent_Ns": 0.3369903528753959,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5809282661412389,
+          "residual_impulse_tangent_Ns": 0.03807018639880605,
+          "residual_impulse_norm_Ns": 0.5821743634808269,
+          "endpoint": [
+            2.577824354171753,
+            5.643822193145752
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.10306603328344045,
+          "predicted_delta_impulse_normal_Ns": 0.00479640642284096,
+          "predicted_delta_impulse_tangent_Ns": 0.45243325680453933,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05221075588418955,
+          "residual_impulse_tangent_Ns": 0.6077192007152099,
+          "residual_impulse_norm_Ns": 0.6099578591574438,
+          "endpoint": [
+            2.7497737407684326,
+            3.7518022060394287
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06783251923086221,
+          "predicted_delta_impulse_normal_Ns": 0.03785361791299913,
+          "predicted_delta_impulse_tangent_Ns": 0.24008394617169193,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.4167625927738925,
+          "residual_impulse_tangent_Ns": 0.1418360762498474,
+          "residual_impulse_norm_Ns": 0.44023690356621614,
+          "endpoint": [
+            3.2905921936035156,
+            5.216006755828857
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0490540152897415,
+          "predicted_delta_impulse_normal_Ns": -0.035949037103410575,
+          "predicted_delta_impulse_tangent_Ns": 0.27837310362374623,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.185809534551705,
+          "residual_impulse_tangent_Ns": 0.39762670056729243,
+          "residual_impulse_norm_Ns": 0.43889882220661347,
+          "endpoint": [
+            1.5009456872940063,
+            4.7140913009643555
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.012613070189992505,
+          "predicted_delta_impulse_normal_Ns": 0.004076083536515895,
+          "predicted_delta_impulse_tangent_Ns": 0.2529020389046343,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.05963490457358489,
+          "residual_impulse_tangent_Ns": 0.07772844880785995,
+          "residual_impulse_norm_Ns": 0.0979695544420647,
+          "endpoint": [
+            2.4718337059020996,
+            3.8721649646759033
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.02956653360131588,
+          "predicted_delta_impulse_normal_Ns": 0.0036826829711884557,
+          "predicted_delta_impulse_tangent_Ns": 0.28548333899589085,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": 0.0036826829711884557,
+          "residual_impulse_tangent_Ns": 0.28548333899589085,
+          "residual_impulse_norm_Ns": 0.28550709097693006,
+          "endpoint": [
+            2.5098328590393066,
+            4.508610725402832
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.22915255696645212,
+          "predicted_delta_impulse_normal_Ns": 0.004346573637239004,
+          "predicted_delta_impulse_tangent_Ns": 0.40543907697292436,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.453143352513969,
+          "residual_impulse_tangent_Ns": -1.3727606338855547,
+          "residual_impulse_norm_Ns": 1.4456177419613627,
+          "endpoint": [
+            2.6700799465179443,
+            2.7884774208068848
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.13386570347838456,
+          "predicted_delta_impulse_normal_Ns": 0.003941938726352845,
+          "predicted_delta_impulse_tangent_Ns": 0.3369903528753959,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5809282661412389,
+          "residual_impulse_tangent_Ns": 0.03807018639880605,
+          "residual_impulse_norm_Ns": 0.5821743634808269,
+          "endpoint": [
+            2.577824354171753,
+            5.643822193145752
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.10306603328344045,
+          "predicted_delta_impulse_normal_Ns": 0.00479640642284096,
+          "predicted_delta_impulse_tangent_Ns": 0.45243325680453933,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05221075588418955,
+          "residual_impulse_tangent_Ns": 0.6077192007152099,
+          "residual_impulse_norm_Ns": 0.6099578591574438,
+          "endpoint": [
+            2.7497737407684326,
+            3.7518022060394287
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.0490540152897415,
+          "predicted_delta_impulse_normal_Ns": -0.035949037103410575,
+          "predicted_delta_impulse_tangent_Ns": 0.27837310362374623,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.185809534551705,
+          "residual_impulse_tangent_Ns": 0.39762670056729243,
+          "residual_impulse_norm_Ns": 0.43889882220661347,
+          "endpoint": [
+            1.5009456872940063,
+            4.7140913009643555
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06783251923086221,
+          "predicted_delta_impulse_normal_Ns": 0.03785361791299913,
+          "predicted_delta_impulse_tangent_Ns": 0.24008394617169193,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.4167625927738925,
+          "residual_impulse_tangent_Ns": 0.1418360762498474,
+          "residual_impulse_norm_Ns": 0.44023690356621614,
+          "endpoint": [
+            3.2905921936035156,
+            5.216006755828857
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_nt_scale",
+      "params": {
+        "normal_scale": 0.9916052728007962,
+        "tangent_scale": 0.8682861799970594
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.114013352069386,
+        "endpoint_mean_m": 0.08790791136169843,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2538379072489641,
+        "impulse_residual_rmse_Ns": 0.7230895292892741,
+        "impulse_residual_mean_Ns": 0.5161957783918382,
+        "impulse_residual_max_Ns": 1.7346167430002721
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2538379072489641,
+          "predicted_delta_impulse_normal_Ns": -0.20375810449581522,
+          "predicted_delta_impulse_tangent_Ns": 0.060977741177647204,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24503867438091476,
+          "residual_impulse_tangent_Ns": -1.717221969680832,
+          "residual_impulse_norm_Ns": 1.7346167430002721,
+          "endpoint": [
+            2.61364483833313,
+            2.8415400981903076
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09847934431372678,
+          "predicted_delta_impulse_normal_Ns": -0.16935702364163063,
+          "predicted_delta_impulse_tangent_Ns": 0.05327899704553374,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40762930377325546,
+          "residual_impulse_tangent_Ns": -0.24564116943105613,
+          "residual_impulse_norm_Ns": 0.4759214571902866,
+          "endpoint": [
+            2.53753662109375,
+            5.680355548858643
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09695734733043494,
+          "predicted_delta_impulse_normal_Ns": -0.22737580047838435,
+          "predicted_delta_impulse_tangent_Ns": 0.06761998260475116,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.28438296278541486,
+          "residual_impulse_tangent_Ns": 0.2229059265154218,
+          "residual_impulse_norm_Ns": 0.36133187182742305,
+          "endpoint": [
+            2.679145336151123,
+            3.8177359104156494
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05987036404035133,
+          "predicted_delta_impulse_normal_Ns": -0.14006304528481905,
+          "predicted_delta_impulse_tangent_Ns": -0.2651588054347689,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.2899235427331135,
+          "residual_impulse_tangent_Ns": -0.14590520849122268,
+          "residual_impulse_norm_Ns": 0.3245673897602571,
+          "endpoint": [
+            1.4685206413269043,
+            4.766202926635742
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.043106229336735115,
+          "predicted_delta_impulse_normal_Ns": -0.12050888615631727,
+          "predicted_delta_impulse_tangent_Ns": 0.31432217605460355,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2584000887045761,
+          "residual_impulse_tangent_Ns": 0.21607430613275902,
+          "residual_impulse_norm_Ns": 0.3368363276330005,
+          "endpoint": [
+            3.27681827545166,
+            5.240654468536377
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.035229240174064085,
+          "predicted_delta_impulse_normal_Ns": -0.12709312052456667,
+          "predicted_delta_impulse_tangent_Ns": 0.048799057131749535,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.19080410863466746,
+          "residual_impulse_tangent_Ns": -0.12637453296502482,
+          "residual_impulse_norm_Ns": 0.22885963045936722,
+          "endpoint": [
+            2.4507737159729004,
+            3.893157482147217
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.0278749470876126,
+          "predicted_delta_impulse_normal_Ns": -0.1434703476424808,
+          "predicted_delta_impulse_tangent_Ns": 0.04784243147515432,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.1434703476424808,
+          "residual_impulse_tangent_Ns": 0.04784243147515432,
+          "residual_impulse_norm_Ns": 0.15123702887226106,
+          "endpoint": [
+            2.4815988540649414,
+            4.5350446701049805
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2538379072489641,
+          "predicted_delta_impulse_normal_Ns": -0.20375810449581522,
+          "predicted_delta_impulse_tangent_Ns": 0.060977741177647204,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24503867438091476,
+          "residual_impulse_tangent_Ns": -1.717221969680832,
+          "residual_impulse_norm_Ns": 1.7346167430002721,
+          "endpoint": [
+            2.61364483833313,
+            2.8415400981903076
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09847934431372678,
+          "predicted_delta_impulse_normal_Ns": -0.16935702364163063,
+          "predicted_delta_impulse_tangent_Ns": 0.05327899704553374,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40762930377325546,
+          "residual_impulse_tangent_Ns": -0.24564116943105613,
+          "residual_impulse_norm_Ns": 0.4759214571902866,
+          "endpoint": [
+            2.53753662109375,
+            5.680355548858643
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09695734733043494,
+          "predicted_delta_impulse_normal_Ns": -0.22737580047838435,
+          "predicted_delta_impulse_tangent_Ns": 0.06761998260475116,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.28438296278541486,
+          "residual_impulse_tangent_Ns": 0.2229059265154218,
+          "residual_impulse_norm_Ns": 0.36133187182742305,
+          "endpoint": [
+            2.679145336151123,
+            3.8177359104156494
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05987036404035133,
+          "predicted_delta_impulse_normal_Ns": -0.14006304528481905,
+          "predicted_delta_impulse_tangent_Ns": -0.2651588054347689,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.2899235427331135,
+          "residual_impulse_tangent_Ns": -0.14590520849122268,
+          "residual_impulse_norm_Ns": 0.3245673897602571,
+          "endpoint": [
+            1.4685206413269043,
+            4.766202926635742
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.043106229336735115,
+          "predicted_delta_impulse_normal_Ns": -0.12050888615631727,
+          "predicted_delta_impulse_tangent_Ns": 0.31432217605460355,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2584000887045761,
+          "residual_impulse_tangent_Ns": 0.21607430613275902,
+          "residual_impulse_norm_Ns": 0.3368363276330005,
+          "endpoint": [
+            3.27681827545166,
+            5.240654468536377
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_uniform_scale",
+      "params": {
+        "scale": 0.9911266489009583
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.11631205575931888,
+        "endpoint_mean_m": 0.08913840236939405,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2611586007282987,
+        "impulse_residual_rmse_Ns": 0.7388667553847816,
+        "impulse_residual_mean_Ns": 0.516319522305056,
+        "impulse_residual_max_Ns": 1.789381753952879
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2611586007282987,
+          "predicted_delta_impulse_normal_Ns": -0.21537533710900192,
+          "predicted_delta_impulse_tangent_Ns": 0.004107973686312327,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.23342144176772806,
+          "residual_impulse_tangent_Ns": -1.7740917371721667,
+          "residual_impulse_norm_Ns": 1.789381753952879,
+          "endpoint": [
+            2.6050798892974854,
+            2.843905448913574
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09824731280300494,
+          "predicted_delta_impulse_normal_Ns": -0.17901288465972343,
+          "predicted_delta_impulse_tangent_Ns": 0.003589321507638854,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.39797344275516267,
+          "residual_impulse_tangent_Ns": -0.295330844968951,
+          "residual_impulse_norm_Ns": 0.49558366511465174,
+          "endpoint": [
+            2.5321013927459717,
+            5.681992530822754
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09713653917943553,
+          "predicted_delta_impulse_normal_Ns": -0.24033959188831489,
+          "predicted_delta_impulse_tangent_Ns": 0.0045554509538152654,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2973467541953454,
+          "residual_impulse_tangent_Ns": 0.1598413948644859,
+          "residual_impulse_norm_Ns": 0.3375860834553635,
+          "endpoint": [
+            2.668199062347412,
+            3.8206543922424316
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05659864871227356,
+          "predicted_delta_impulse_normal_Ns": -0.14804871526153462,
+          "predicted_delta_impulse_tangent_Ns": -0.01786332806665758,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.29790921270982906,
+          "residual_impulse_tangent_Ns": 0.10139026887688862,
+          "residual_impulse_norm_Ns": 0.31469014226746594,
+          "endpoint": [
+            1.4886054992675781,
+            4.751936435699463
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.043897922329428574,
+          "predicted_delta_impulse_normal_Ns": -0.1273796791777677,
+          "predicted_delta_impulse_tangent_Ns": 0.02117538635114391,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.25152929568312565,
+          "residual_impulse_tangent_Ns": -0.07707248357070062,
+          "residual_impulse_norm_Ns": 0.2630725267119415,
+          "endpoint": [
+            3.2613353729248047,
+            5.221301555633545
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.03778754307863688,
+          "predicted_delta_impulse_normal_Ns": -0.13433931251443987,
+          "predicted_delta_impulse_tangent_Ns": 0.003287515062751545,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.19805030062454065,
+          "residual_impulse_tangent_Ns": -0.1718860750340228,
+          "residual_impulse_norm_Ns": 0.2622379537139364,
+          "endpoint": [
+            2.446826457977295,
+            3.893994092941284
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.02914224975468011,
+          "predicted_delta_impulse_normal_Ns": -0.15165028436588912,
+          "predicted_delta_impulse_tangent_Ns": 0.0032230687098849242,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.15165028436588912,
+          "residual_impulse_tangent_Ns": 0.0032230687098849242,
+          "residual_impulse_norm_Ns": 0.15168453091915363,
+          "endpoint": [
+            2.478285312652588,
+            4.5362725257873535
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2611586007282987,
+          "predicted_delta_impulse_normal_Ns": -0.21537533710900192,
+          "predicted_delta_impulse_tangent_Ns": 0.004107973686312327,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.23342144176772806,
+          "residual_impulse_tangent_Ns": -1.7740917371721667,
+          "residual_impulse_norm_Ns": 1.789381753952879,
+          "endpoint": [
+            2.6050798892974854,
+            2.843905448913574
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.09824731280300494,
+          "predicted_delta_impulse_normal_Ns": -0.17901288465972343,
+          "predicted_delta_impulse_tangent_Ns": 0.003589321507638854,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.39797344275516267,
+          "residual_impulse_tangent_Ns": -0.295330844968951,
+          "residual_impulse_norm_Ns": 0.49558366511465174,
+          "endpoint": [
+            2.5321013927459717,
+            5.681992530822754
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09713653917943553,
+          "predicted_delta_impulse_normal_Ns": -0.24033959188831489,
+          "predicted_delta_impulse_tangent_Ns": 0.0045554509538152654,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.2973467541953454,
+          "residual_impulse_tangent_Ns": 0.1598413948644859,
+          "residual_impulse_norm_Ns": 0.3375860834553635,
+          "endpoint": [
+            2.668199062347412,
+            3.8206543922424316
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05659864871227356,
+          "predicted_delta_impulse_normal_Ns": -0.14804871526153462,
+          "predicted_delta_impulse_tangent_Ns": -0.01786332806665758,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.29790921270982906,
+          "residual_impulse_tangent_Ns": 0.10139026887688862,
+          "residual_impulse_norm_Ns": 0.31469014226746594,
+          "endpoint": [
+            1.4886054992675781,
+            4.751936435699463
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.043897922329428574,
+          "predicted_delta_impulse_normal_Ns": -0.1273796791777677,
+          "predicted_delta_impulse_tangent_Ns": 0.02117538635114391,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.25152929568312565,
+          "residual_impulse_tangent_Ns": -0.07707248357070062,
+          "residual_impulse_norm_Ns": 0.2630725267119415,
+          "endpoint": [
+            3.2613353729248047,
+            5.221301555633545
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_normal_scale_only",
+      "params": {
+        "normal_scale": 0.9916052728007962
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.1164224205314857,
+        "endpoint_mean_m": 0.08881320514552071,
+        "endpoint_over_2cm_count": 7,
+        "endpoint_max_m": 0.2622069685944989,
+        "impulse_residual_rmse_Ns": 0.7411300771459909,
+        "impulse_residual_mean_Ns": 0.5167052803354357,
+        "impulse_residual_max_Ns": 1.7950036667482143
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2622069685944989,
+          "predicted_delta_impulse_normal_Ns": -0.20375810449581522,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24503867438091476,
+          "residual_impulse_tangent_Ns": -1.778199710858479,
+          "residual_impulse_norm_Ns": 1.7950036667482143,
+          "endpoint": [
+            2.6050922870635986,
+            2.840627670288086
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.10071570376915069,
+          "predicted_delta_impulse_normal_Ns": -0.16935702364163063,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40762930377325546,
+          "residual_impulse_tangent_Ns": -0.29892016647658987,
+          "residual_impulse_norm_Ns": 0.50548483184074,
+          "endpoint": [
+            2.531221389770508,
+            5.679677486419678
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09336679288830417,
+          "predicted_delta_impulse_normal_Ns": -0.22737580047838435,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.28438296278541486,
+          "residual_impulse_tangent_Ns": 0.15528594391067063,
+          "residual_impulse_norm_Ns": 0.32401758270013464,
+          "endpoint": [
+            2.669005870819092,
+            3.816653251647949
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05534594837381886,
+          "predicted_delta_impulse_normal_Ns": -0.14006304528481905,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.2899235427331135,
+          "residual_impulse_tangent_Ns": 0.1192535969435462,
+          "residual_impulse_norm_Ns": 0.3134917558962169,
+          "endpoint": [
+            1.4898126125335693,
+            4.74920129776001
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04569853322935059,
+          "predicted_delta_impulse_normal_Ns": -0.12050888615631727,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2584000887045761,
+          "residual_impulse_tangent_Ns": -0.09824786992184453,
+          "residual_impulse_norm_Ns": 0.2764475534106107,
+          "endpoint": [
+            3.261052131652832,
+            5.218998432159424
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.03682774611313235,
+          "predicted_delta_impulse_normal_Ns": -0.12709312052456667,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.19080410863466746,
+          "residual_impulse_tangent_Ns": -0.17517359009677436,
+          "residual_impulse_norm_Ns": 0.2590212241096523,
+          "endpoint": [
+            2.4465529918670654,
+            3.8927197456359863
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.027530743050389436,
+          "predicted_delta_impulse_normal_Ns": -0.1434703476424808,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": -0.1434703476424808,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.1434703476424808,
+          "endpoint": [
+            2.4776227474212646,
+            4.534600257873535
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2622069685944989,
+          "predicted_delta_impulse_normal_Ns": -0.20375810449581522,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.24503867438091476,
+          "residual_impulse_tangent_Ns": -1.778199710858479,
+          "residual_impulse_norm_Ns": 1.7950036667482143,
+          "endpoint": [
+            2.6050922870635986,
+            2.840627670288086
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.10071570376915069,
+          "predicted_delta_impulse_normal_Ns": -0.16935702364163063,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.40762930377325546,
+          "residual_impulse_tangent_Ns": -0.29892016647658987,
+          "residual_impulse_norm_Ns": 0.50548483184074,
+          "endpoint": [
+            2.531221389770508,
+            5.679677486419678
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.09336679288830417,
+          "predicted_delta_impulse_normal_Ns": -0.22737580047838435,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.28438296278541486,
+          "residual_impulse_tangent_Ns": 0.15528594391067063,
+          "residual_impulse_norm_Ns": 0.32401758270013464,
+          "endpoint": [
+            2.669005870819092,
+            3.816653251647949
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.05534594837381886,
+          "predicted_delta_impulse_normal_Ns": -0.14006304528481905,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.2899235427331135,
+          "residual_impulse_tangent_Ns": 0.1192535969435462,
+          "residual_impulse_norm_Ns": 0.3134917558962169,
+          "endpoint": [
+            1.4898126125335693,
+            4.74920129776001
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.04569853322935059,
+          "predicted_delta_impulse_normal_Ns": -0.12050888615631727,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.2584000887045761,
+          "residual_impulse_tangent_Ns": -0.09824786992184453,
+          "residual_impulse_norm_Ns": 0.2764475534106107,
+          "endpoint": [
+            3.261052131652832,
+            5.218998432159424
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "global_tangent_scale_only",
+      "params": {
+        "tangent_scale": 0.8682861799970594
+      },
+      "summary": {
+        "endpoint_rmse_m": 0.11988340811201972,
+        "endpoint_mean_m": 0.08121660660147208,
+        "endpoint_over_2cm_count": 5,
+        "endpoint_max_m": 0.2737357583854379,
+        "impulse_residual_rmse_Ns": 0.7418880010830062,
+        "impulse_residual_mean_Ns": 0.4952560082532312,
+        "impulse_residual_max_Ns": 1.774899952640893
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2737357583854379,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.060977741177647204,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.44879677887673,
+          "residual_impulse_tangent_Ns": -1.717221969680832,
+          "residual_impulse_norm_Ns": 1.774899952640893,
+          "endpoint": [
+            2.618793249130249,
+            2.7847068309783936
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.13649175132557298,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.05327899704553374,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5769863274148861,
+          "residual_impulse_tangent_Ns": -0.24564116943105613,
+          "residual_impulse_norm_Ns": 0.6270987212099662,
+          "endpoint": [
+            2.541114091873169,
+            5.641125202178955
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06200783468912059,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.31432217605460355,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.37890897486089337,
+          "residual_impulse_tangent_Ns": 0.21607430613275902,
+          "residual_impulse_norm_Ns": 0.4361881669656874,
+          "endpoint": [
+            3.29048490524292,
+            5.226053714752197
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.04148900663985514,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.06761998260475116,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05700716230703051,
+          "residual_impulse_tangent_Ns": 0.2229059265154218,
+          "residual_impulse_norm_Ns": 0.23008013523552776,
+          "endpoint": [
+            2.6855311393737793,
+            3.7469496726989746
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.034503965363688265,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": -0.2651588054347689,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.14986049744829444,
+          "residual_impulse_tangent_Ns": -0.14590520849122268,
+          "residual_impulse_norm_Ns": 0.20915663642427754,
+          "endpoint": [
+            1.4547569751739502,
+            4.743009090423584
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.016481325417180188,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.048799057131749535,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.06371098811010079,
+          "residual_impulse_tangent_Ns": -0.12637453296502482,
+          "residual_impulse_norm_Ns": 0.14152601382111188,
+          "endpoint": [
+            2.4523983001708984,
+            3.8710665702819824
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.003806604389449454,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.04784243147515432,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.04784243147515432,
+          "residual_impulse_norm_Ns": 0.04784243147515432,
+          "endpoint": [
+            2.4840965270996094,
+            4.506923198699951
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.2737357583854379,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.060977741177647204,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.44879677887673,
+          "residual_impulse_tangent_Ns": -1.717221969680832,
+          "residual_impulse_norm_Ns": 1.774899952640893,
+          "endpoint": [
+            2.618793249130249,
+            2.7847068309783936
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.13649175132557298,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.05327899704553374,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5769863274148861,
+          "residual_impulse_tangent_Ns": -0.24564116943105613,
+          "residual_impulse_norm_Ns": 0.6270987212099662,
+          "endpoint": [
+            2.541114091873169,
+            5.641125202178955
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.04148900663985514,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.06761998260475116,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05700716230703051,
+          "residual_impulse_tangent_Ns": 0.2229059265154218,
+          "residual_impulse_norm_Ns": 0.23008013523552776,
+          "endpoint": [
+            2.6855311393737793,
+            3.7469496726989746
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.034503965363688265,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": -0.2651588054347689,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.14986049744829444,
+          "residual_impulse_tangent_Ns": -0.14590520849122268,
+          "residual_impulse_norm_Ns": 0.20915663642427754,
+          "endpoint": [
+            1.4547569751739502,
+            4.743009090423584
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06200783468912059,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.31432217605460355,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.37890897486089337,
+          "residual_impulse_tangent_Ns": 0.21607430613275902,
+          "residual_impulse_norm_Ns": 0.4361881669656874,
+          "endpoint": [
+            3.29048490524292,
+            5.226053714752197
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "model": "no_correction",
+      "params": {},
+      "summary": {
+        "endpoint_rmse_m": 0.12266015697923287,
+        "endpoint_mean_m": 0.08110041851244779,
+        "endpoint_over_2cm_count": 5,
+        "endpoint_max_m": 0.28234345809495665,
+        "impulse_residual_rmse_Ns": 0.7594821459610339,
+        "impulse_residual_mean_Ns": 0.48836553355833884,
+        "impulse_residual_max_Ns": 1.833960948446642
+      },
+      "worst_rows": [
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.28234345809495665,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.44879677887673,
+          "residual_impulse_tangent_Ns": -1.778199710858479,
+          "residual_impulse_norm_Ns": 1.833960948446642,
+          "endpoint": [
+            2.6093506813049316,
+            2.7837255001068115
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.1380151637326276,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5769863274148861,
+          "residual_impulse_tangent_Ns": -0.29892016647658987,
+          "residual_impulse_norm_Ns": 0.6498203505201344,
+          "endpoint": [
+            2.5352671146392822,
+            5.640493392944336
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06547219590749705,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.37890897486089337,
+          "residual_impulse_tangent_Ns": -0.09824786992184453,
+          "residual_impulse_norm_Ns": 0.3914392100624474,
+          "endpoint": [
+            3.2742600440979004,
+            5.203989505767822
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.03183096912498178,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05700716230703051,
+          "residual_impulse_tangent_Ns": 0.15528594391067063,
+          "residual_impulse_norm_Ns": 0.1654192882662964,
+          "endpoint": [
+            2.674506425857544,
+            3.7457525730133057
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.02942201751204452,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.14986049744829444,
+          "residual_impulse_tangent_Ns": 0.1192535969435462,
+          "residual_impulse_norm_Ns": 0.19151916112865583,
+          "endpoint": [
+            1.4758954048156738,
+            4.726040840148926
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "sample_id": 12000,
+          "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+          "endpoint_error_m": 0.019651315998795472,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.06371098811010079,
+          "oracle_delta_impulse_tangent_Ns": 0.17517359009677436,
+          "residual_impulse_normal_Ns": -0.06371098811010079,
+          "residual_impulse_tangent_Ns": -0.17517359009677436,
+          "residual_impulse_norm_Ns": 0.18639977648419573,
+          "endpoint": [
+            2.448366403579712,
+            3.870643377304077
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+          "endpoint_error_m": 0.000967809216231448,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.0,
+          "oracle_delta_impulse_tangent_Ns": 0.0,
+          "residual_impulse_normal_Ns": 0.0,
+          "residual_impulse_tangent_Ns": 0.0,
+          "residual_impulse_norm_Ns": 0.0,
+          "endpoint": [
+            2.4796817302703857,
+            4.506455421447754
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+          "endpoint_error_m": 0.28234345809495665,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.44879677887673,
+          "oracle_delta_impulse_tangent_Ns": 1.778199710858479,
+          "residual_impulse_normal_Ns": 0.44879677887673,
+          "residual_impulse_tangent_Ns": -1.778199710858479,
+          "residual_impulse_norm_Ns": 1.833960948446642,
+          "endpoint": [
+            2.6093506813049316,
+            2.7837255001068115
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+          "endpoint_error_m": 0.1380151637326276,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.5769863274148861,
+          "oracle_delta_impulse_tangent_Ns": 0.29892016647658987,
+          "residual_impulse_normal_Ns": 0.5769863274148861,
+          "residual_impulse_tangent_Ns": -0.29892016647658987,
+          "residual_impulse_norm_Ns": 0.6498203505201344,
+          "endpoint": [
+            2.5352671146392822,
+            5.640493392944336
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+          "endpoint_error_m": 0.03183096912498178,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.05700716230703051,
+          "oracle_delta_impulse_tangent_Ns": -0.15528594391067063,
+          "residual_impulse_normal_Ns": -0.05700716230703051,
+          "residual_impulse_tangent_Ns": 0.15528594391067063,
+          "residual_impulse_norm_Ns": 0.1654192882662964,
+          "endpoint": [
+            2.674506425857544,
+            3.7457525730133057
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "label": "collision_glance_left_target_active_a06_target_t14_r00",
+          "endpoint_error_m": 0.02942201751204452,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": 0.14986049744829444,
+          "oracle_delta_impulse_tangent_Ns": -0.1192535969435462,
+          "residual_impulse_normal_Ns": -0.14986049744829444,
+          "residual_impulse_tangent_Ns": 0.1192535969435462,
+          "residual_impulse_norm_Ns": 0.19151916112865583,
+          "endpoint": [
+            1.4758954048156738,
+            4.726040840148926
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "label": "collision_glance_right_target_active_a07_target_t15_r00",
+          "endpoint_error_m": 0.06547219590749705,
+          "predicted_delta_impulse_normal_Ns": 0.0,
+          "predicted_delta_impulse_tangent_Ns": 0.0,
+          "oracle_delta_impulse_normal_Ns": -0.37890897486089337,
+          "oracle_delta_impulse_tangent_Ns": 0.09824786992184453,
+          "residual_impulse_normal_Ns": 0.37890897486089337,
+          "residual_impulse_tangent_Ns": -0.09824786992184453,
+          "residual_impulse_norm_Ns": 0.3914392100624474,
+          "endpoint": [
+            3.2742600440979004,
+            5.203989505767822
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "Low-dimensional global models correspond to tuning one or two solver parameters; failure to reach 2cm means the residual is sample/contact-instance specific.",
+    "per_sample_oracle is included as a sanity check and should be near the tail-oracle report.",
+    "global_full_2x2_linear is intentionally generous; if it still leaves >2cm endpoints, a single global contact-frame transform is not enough."
+  ]
+}

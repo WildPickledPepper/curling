@@ -1,0 +1,1742 @@
+{
+  "sample_id": 12003,
+  "probe_files": [
+    "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json"
+  ],
+  "summary": {
+    "row_count": 487,
+    "best_target_error_m": 0.017530962407189186,
+    "best_pair_rmse_m": 0.03409371324332975,
+    "best_active_error_m": 0.006648823646249384,
+    "target_within_2cm_count": 1,
+    "pair_within_2cm_count": 0,
+    "both_endpoints_within_2cm_count": 0,
+    "interpretation": "Large vertical yaw is a real contact-feature lever for hard sample 12003: it can bring the target endpoint to about 1.75cm, unlike the small +/-11.25deg yaw grid. However, the same yaw settings leave active around 4-7cm, and no tested yaw pair gets the pair RMSE or both endpoints under 2cm. This makes reset yaw/rotation a plausible missing runtime state, but not a complete collision alignment by itself.",
+    "target_yaw_only_oracle_target_rmse_m": 0.053666473508266026,
+    "target_yaw_only_oracle_pair_rmse_m": 0.04791778756070653,
+    "hard_sample_dual_yaw_best_pair_rmse_m": {
+      "12003": 0.03409371324332975,
+      "12004": 0.04468047372600473,
+      "12007": 0.05566744379648056
+    }
+  },
+  "best_target": {
+    "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+    "result_index": 32,
+    "sample_id": 12003,
+    "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+    "active_yaw_deg": -14.062500000000025,
+    "target_yaw_deg": 104.06250000000006,
+    "active_error_m": 0.0688384750230107,
+    "target_error_m": 0.017530962407189186,
+    "pair_rmse_m": 0.05022982324484105,
+    "unity_target_in_play": true,
+    "sim_active": [
+      2.3293089866638184,
+      6.478721618652344
+    ],
+    "sim_target": [
+      2.8493502140045166,
+      2.9096920490264893
+    ],
+    "unity_active": [
+      2.261,
+      6.4702
+    ],
+    "unity_target": [
+      2.8527,
+      2.9269
+    ]
+  },
+  "best_pair": {
+    "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+    "result_index": 12,
+    "sample_id": 12003,
+    "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+    "active_yaw_deg": -19.68750000000002,
+    "target_yaw_deg": 98.43750000000011,
+    "active_error_m": 0.0435423113210377,
+    "target_error_m": 0.020708203453188048,
+    "pair_rmse_m": 0.03409371324332975,
+    "unity_target_in_play": true,
+    "sim_active": [
+      2.3025400638580322,
+      6.483252048492432
+    ],
+    "sim_target": [
+      2.8362162113189697,
+      2.93943452835083
+    ],
+    "unity_active": [
+      2.261,
+      6.4702
+    ],
+    "unity_target": [
+      2.8527,
+      2.9269
+    ]
+  },
+  "best_active": {
+    "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+    "result_index": 29,
+    "sample_id": 12003,
+    "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+    "active_yaw_deg": -14.062500000000025,
+    "target_yaw_deg": 95.62500000000014,
+    "active_error_m": 0.006648823646249384,
+    "target_error_m": 0.1228317383562639,
+    "pair_rmse_m": 0.08698230510713256,
+    "unity_target_in_play": true,
+    "sim_active": [
+      2.2547688484191895,
+      6.472519397735596
+    ],
+    "sim_target": [
+      2.890564441680908,
+      2.8100500106811523
+    ],
+    "unity_active": [
+      2.261,
+      6.4702
+    ],
+    "unity_target": [
+      2.8527,
+      2.9269
+    ]
+  },
+  "target_yaw_only_oracle": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+    "sample_count": 7,
+    "target_rmse_m": 0.053666473508266026,
+    "active_rmse_m": 0.04137799355469744,
+    "pair_rmse_m": 0.04791778756070653,
+    "target_over_2cm_sample_ids": [
+      12004,
+      12005,
+      12007
+    ],
+    "pair_over_2cm_sample_ids": [
+      12003,
+      12004,
+      12005,
+      12007
+    ],
+    "best_by_sample": {
+      "12000": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 30,
+        "sample_id": 12000,
+        "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -11.249999999999996,
+        "active_error_m": 0.009879923804654436,
+        "target_error_m": 0.011712465324113021,
+        "pair_rmse_m": 0.010835006653305002,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.3451895713806152,
+          5.490835666656494
+        ],
+        "sim_target": [
+          2.4655239582061768,
+          3.849487781524658
+        ],
+        "unity_active": [
+          2.3388,
+          5.4833
+        ],
+        "unity_target": [
+          2.4656,
+          3.8612
+        ]
+      },
+      "12002": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 31,
+        "sample_id": 12002,
+        "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -5.624999999999998,
+        "active_error_m": 0.006241934273292546,
+        "target_error_m": 0.007238657039248426,
+        "pair_rmse_m": 0.006758694371103228,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.3450117111206055,
+          6.48905611038208
+        ],
+        "sim_target": [
+          2.4756667613983154,
+          4.501638412475586
+        ],
+        "unity_active": [
+          2.3435,
+          6.483
+        ],
+        "unity_target": [
+          2.4803,
+          4.5072
+        ]
+      },
+      "12003": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 15,
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -95.62500000000014,
+        "active_error_m": 0.07306813687185486,
+        "target_error_m": 0.002667494409298522,
+        "pair_rmse_m": 0.05170139336781822,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.333759069442749,
+          6.4769134521484375
+        ],
+        "sim_target": [
+          2.855367422103882,
+          2.926880359649658
+        ],
+        "unity_active": [
+          2.261,
+          6.4702
+        ],
+        "unity_target": [
+          2.8527,
+          2.9269
+        ]
+      },
+      "12004": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 25,
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -39.374999999999986,
+        "active_error_m": 0.04280868463637605,
+        "target_error_m": 0.1293353078931587,
+        "pair_rmse_m": 0.09633328954238732,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.3680012226104736,
+          8.252721786499023
+        ],
+        "sim_target": [
+          2.596822500228882,
+          5.900172710418701
+        ],
+        "unity_active": [
+          2.3336,
+          8.2782
+        ],
+        "unity_target": [
+          2.5593,
+          5.7764
+        ]
+      },
+      "12005": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 63,
+        "sample_id": 12005,
+        "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": 174.3749999999999,
+        "active_error_m": 0.01687550245174858,
+        "target_error_m": 0.024021141220844137,
+        "pair_rmse_m": 0.02075810454437868,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.334348440170288,
+          8.290197372436523
+        ],
+        "sim_target": [
+          2.672757387161255,
+          3.733457088470459
+        ],
+        "unity_active": [
+          2.3185,
+          8.2844
+        ],
+        "unity_target": [
+          2.6502,
+          3.7252
+        ]
+      },
+      "12006": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 2,
+        "sample_id": 12006,
+        "label": "collision_glance_left_target_active_a06_target_t14_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -168.74999999999994,
+        "active_error_m": 0.009846307195696952,
+        "target_error_m": 0.014884191050349651,
+        "pair_rmse_m": 0.012619209733880768,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.7473042011260986,
+          6.21107292175293
+        ],
+        "sim_target": [
+          1.4594347476959229,
+          4.695592403411865
+        ],
+        "unity_active": [
+          2.7378,
+          6.2085
+        ],
+        "unity_target": [
+          1.4522,
+          4.7086
+        ]
+      },
+      "12007": {
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_target_yaw_fine_grid_20260709.json",
+        "result_index": 37,
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": 28.12499999999999,
+        "active_error_m": 0.06553720593539505,
+        "target_error_m": 0.04937368620000618,
+        "pair_rmse_m": 0.0580210576032317,
+        "unity_target_in_play": true,
+        "sim_active": [
+          1.8360378742218018,
+          5.886615753173828
+        ],
+        "sim_target": [
+          3.194816827774048,
+          5.283088684082031
+        ],
+        "unity_active": [
+          1.7736,
+          5.8667
+        ],
+        "unity_target": [
+          3.2374,
+          5.2581
+        ]
+      }
+    },
+    "interpretation": "Per-sample target-yaw-only oracle reduces several target endpoints, showing hidden/reset yaw is a real state lever. It still leaves hard samples above 2cm and does not close active+target pairs."
+  },
+  "hard_sample_dual_yaw": {
+    "12003": {
+      "row_count": 487,
+      "best_target_error_m": 0.017530962407189186,
+      "best_pair_rmse_m": 0.03409371324332975,
+      "best_active_error_m": 0.006648823646249384,
+      "target_within_2cm_count": 1,
+      "pair_within_2cm_count": 0,
+      "both_endpoints_within_2cm_count": 0,
+      "probe_files": [
+        "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+        "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json"
+      ],
+      "best_target": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+        "result_index": 32,
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "active_yaw_deg": -14.062500000000025,
+        "target_yaw_deg": 104.06250000000006,
+        "active_error_m": 0.0688384750230107,
+        "target_error_m": 0.017530962407189186,
+        "pair_rmse_m": 0.05022982324484105,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.3293089866638184,
+          6.478721618652344
+        ],
+        "sim_target": [
+          2.8493502140045166,
+          2.9096920490264893
+        ],
+        "unity_active": [
+          2.261,
+          6.4702
+        ],
+        "unity_target": [
+          2.8527,
+          2.9269
+        ]
+      },
+      "best_pair": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+        "result_index": 12,
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "active_yaw_deg": -19.68750000000002,
+        "target_yaw_deg": 98.43750000000011,
+        "active_error_m": 0.0435423113210377,
+        "target_error_m": 0.020708203453188048,
+        "pair_rmse_m": 0.03409371324332975,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.3025400638580322,
+          6.483252048492432
+        ],
+        "sim_target": [
+          2.8362162113189697,
+          2.93943452835083
+        ],
+        "unity_active": [
+          2.261,
+          6.4702
+        ],
+        "unity_target": [
+          2.8527,
+          2.9269
+        ]
+      },
+      "best_active": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+        "result_index": 29,
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "active_yaw_deg": -14.062500000000025,
+        "target_yaw_deg": 95.62500000000014,
+        "active_error_m": 0.006648823646249384,
+        "target_error_m": 0.1228317383562639,
+        "pair_rmse_m": 0.08698230510713256,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.2547688484191895,
+          6.472519397735596
+        ],
+        "sim_target": [
+          2.890564441680908,
+          2.8100500106811523
+        ],
+        "unity_active": [
+          2.261,
+          6.4702
+        ],
+        "unity_target": [
+          2.8527,
+          2.9269
+        ]
+      }
+    },
+    "12004": {
+      "row_count": 289,
+      "best_target_error_m": 0.061096657467716295,
+      "best_pair_rmse_m": 0.04468047372600473,
+      "best_active_error_m": 0.004272207201799096,
+      "target_within_2cm_count": 0,
+      "pair_within_2cm_count": 0,
+      "both_endpoints_within_2cm_count": 0,
+      "probe_files": [
+        "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json"
+      ],
+      "best_target": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+        "result_index": 248,
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "active_yaw_deg": 134.99999999999972,
+        "target_yaw_deg": 44.999999999999986,
+        "active_error_m": 0.016121039390589686,
+        "target_error_m": 0.061096657467716295,
+        "pair_rmse_m": 0.04468047372600473,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.342848300933838,
+          8.264995574951172
+        ],
+        "sim_target": [
+          2.5214149951934814,
+          5.7284674644470215
+        ],
+        "unity_active": [
+          2.3336,
+          8.2782
+        ],
+        "unity_target": [
+          2.5593,
+          5.7764
+        ]
+      },
+      "best_pair": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+        "result_index": 248,
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "active_yaw_deg": 134.99999999999972,
+        "target_yaw_deg": 44.999999999999986,
+        "active_error_m": 0.016121039390589686,
+        "target_error_m": 0.061096657467716295,
+        "pair_rmse_m": 0.04468047372600473,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.342848300933838,
+          8.264995574951172
+        ],
+        "sim_target": [
+          2.5214149951934814,
+          5.7284674644470215
+        ],
+        "unity_active": [
+          2.3336,
+          8.2782
+        ],
+        "unity_target": [
+          2.5593,
+          5.7764
+        ]
+      },
+      "best_active": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12004_actor_yaw_wide_grid_20260709.json",
+        "result_index": 154,
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "active_yaw_deg": 22.499999999999993,
+        "target_yaw_deg": -157.50000000000006,
+        "active_error_m": 0.004272207201799096,
+        "target_error_m": 0.11368504748506475,
+        "pair_rmse_m": 0.08044420978559157,
+        "unity_target_in_play": true,
+        "sim_active": [
+          2.336604118347168,
+          8.281237602233887
+        ],
+        "sim_target": [
+          2.6406848430633545,
+          5.697022438049316
+        ],
+        "unity_active": [
+          2.3336,
+          8.2782
+        ],
+        "unity_target": [
+          2.5593,
+          5.7764
+        ]
+      }
+    },
+    "12007": {
+      "row_count": 289,
+      "best_target_error_m": 0.06546744080300343,
+      "best_pair_rmse_m": 0.05566744379648056,
+      "best_active_error_m": 0.016714685931224424,
+      "target_within_2cm_count": 0,
+      "pair_within_2cm_count": 0,
+      "both_endpoints_within_2cm_count": 0,
+      "probe_files": [
+        "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json"
+      ],
+      "best_target": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+        "result_index": 0,
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "active_yaw_deg": -179.99999999999983,
+        "target_yaw_deg": -179.99999999999983,
+        "active_error_m": 0.04374813365085991,
+        "target_error_m": 0.06546744080300343,
+        "pair_rmse_m": 0.05567712727515788,
+        "unity_target_in_play": true,
+        "sim_active": [
+          1.8031314611434937,
+          5.898976802825928
+        ],
+        "sim_target": [
+          3.277888298034668,
+          5.206654071807861
+        ],
+        "unity_active": [
+          1.7736,
+          5.8667
+        ],
+        "unity_target": [
+          3.2374,
+          5.2581
+        ]
+      },
+      "best_pair": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+        "result_index": 136,
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "active_yaw_deg": 0.0,
+        "target_yaw_deg": -179.99999999999983,
+        "active_error_m": 0.04372186367527444,
+        "target_error_m": 0.06546852094273523,
+        "pair_rmse_m": 0.05566744379648056,
+        "unity_target_in_play": true,
+        "sim_active": [
+          1.803343653678894,
+          5.898745536804199
+        ],
+        "sim_target": [
+          3.2779154777526855,
+          5.206674098968506
+        ],
+        "unity_active": [
+          1.7736,
+          5.8667
+        ],
+        "unity_target": [
+          3.2374,
+          5.2581
+        ]
+      },
+      "best_active": {
+        "file": "data\\calibration\\unity_physx_collision_probe_12007_actor_yaw_wide_grid_20260709.json",
+        "result_index": 122,
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "active_yaw_deg": -22.499999999999993,
+        "target_yaw_deg": -112.49999999999996,
+        "active_error_m": 0.016714685931224424,
+        "target_error_m": 8.422328804234299,
+        "pair_rmse_m": 5.955497538718346,
+        "unity_target_in_play": true,
+        "sim_active": [
+          1.7816025018692017,
+          5.852025508880615
+        ],
+        "sim_target": [
+          6.64051628112793,
+          -2.44608211517334
+        ],
+        "unity_active": [
+          1.7736,
+          5.8667
+        ],
+        "unity_target": [
+          3.2374,
+          5.2581
+        ]
+      }
+    }
+  },
+  "top_by_target": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 32,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -14.062500000000025,
+      "target_yaw_deg": 104.06250000000006,
+      "active_error_m": 0.0688384750230107,
+      "target_error_m": 0.017530962407189186,
+      "pair_rmse_m": 0.05022982324484105,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3293089866638184,
+        6.478721618652344
+      ],
+      "sim_target": [
+        2.8493502140045166,
+        2.9096920490264893
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 12,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -19.68750000000002,
+      "target_yaw_deg": 98.43750000000011,
+      "active_error_m": 0.0435423113210377,
+      "target_error_m": 0.020708203453188048,
+      "pair_rmse_m": 0.03409371324332975,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3025400638580322,
+        6.483252048492432
+      ],
+      "sim_target": [
+        2.8362162113189697,
+        2.93943452835083
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 2,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 0.0,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06716517572000794,
+      "target_error_m": 0.022306078679456432,
+      "pair_rmse_m": 0.05004359087612341,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3275349140167236,
+        6.479379653930664
+      ],
+      "sim_target": [
+        2.8747482299804688,
+        2.923518180847168
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 76,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 0.0,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06716517572000794,
+      "target_error_m": 0.022306078679456432,
+      "pair_rmse_m": 0.05004359087612341,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3275349140167236,
+        6.479379653930664
+      ],
+      "sim_target": [
+        2.8747482299804688,
+        2.923518180847168
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 56,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -5.624999999999998,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07125656534324101,
+      "target_error_m": 0.02364426272493606,
+      "pair_rmse_m": 0.053087424425759144,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3319764137268066,
+        6.476512432098389
+      ],
+      "sim_target": [
+        2.829916000366211,
+        2.9205801486968994
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 42,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -11.249999999999996,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.06121967175660123,
+      "target_error_m": 0.049157199401119955,
+      "pair_rmse_m": 0.05551701749440196,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3199472427368164,
+        6.486724853515625
+      ],
+      "sim_target": [
+        2.8053603172302246,
+        2.913656711578369
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 67,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -2.812499999999999,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06574127472883648,
+      "target_error_m": 0.068118258108355,
+      "pair_rmse_m": 0.06694031778640144,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3258473873138428,
+        6.481004238128662
+      ],
+      "sim_target": [
+        2.8274872303009033,
+        2.863619565963745
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+      "result_index": 181,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 44.999999999999986,
+      "target_yaw_deg": 67.49999999999986,
+      "active_error_m": 4.278246481104711,
+      "target_error_m": 0.07358021713033232,
+      "pair_rmse_m": 3.0256244811144186,
+      "unity_target_in_play": true,
+      "sim_active": [
+        -1.4539366960525513,
+        8.592142105102539
+      ],
+      "sim_target": [
+        2.8106801509857178,
+        2.987301826477051
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 48,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 28.12499999999999,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.07251534911050914,
+      "target_error_m": 0.0755460943958945,
+      "pair_rmse_m": 0.0740462295970984,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3331615924835205,
+        6.477354049682617
+      ],
+      "sim_target": [
+        2.9247591495513916,
+        2.9042131900787354
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 60,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -5.624999999999998,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.06246685169391919,
+      "target_error_m": 0.07872240479935816,
+      "pair_rmse_m": 0.07106097585153226,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3208723068237305,
+        6.488016128540039
+      ],
+      "sim_target": [
+        2.904327869415283,
+        2.867471218109131
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+      "result_index": 166,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.08244658243506649,
+      "target_error_m": 0.08511184901393283,
+      "pair_rmse_m": 0.08378981381347232,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3428966999053955,
+        6.479706287384033
+      ],
+      "sim_target": [
+        2.7770626544952393,
+        2.887874126434326
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 40,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.08244658243506649,
+      "target_error_m": 0.08511184901393283,
+      "pair_rmse_m": 0.08378981381347232,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3428966999053955,
+        6.479706287384033
+      ],
+      "sim_target": [
+        2.7770626544952393,
+        2.887874126434326
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+      "result_index": 167,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 134.99999999999972,
+      "active_error_m": 0.08741665194036194,
+      "target_error_m": 0.10185948275312087,
+      "pair_rmse_m": 0.09491318470896368,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.348245143890381,
+        6.475673198699951
+      ],
+      "sim_target": [
+        2.7734591960906982,
+        2.9909019470214844
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 44,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 134.99999999999972,
+      "active_error_m": 0.08741665194036194,
+      "target_error_m": 0.10185948275312087,
+      "pair_rmse_m": 0.09491318470896368,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.348245143890381,
+        6.475673198699951
+      ],
+      "sim_target": [
+        2.7734591960906982,
+        2.9909019470214844
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 16,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 5.624999999999998,
+      "target_yaw_deg": 129.37499999999977,
+      "active_error_m": 0.0839507653168364,
+      "target_error_m": 0.10752752074432163,
+      "pair_rmse_m": 0.09646216541915037,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.185608386993408,
+        6.507130146026611
+      ],
+      "sim_target": [
+        2.748843193054199,
+        2.9547555446624756
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 25,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -16.874999999999993,
+      "target_yaw_deg": 109.68749999999999,
+      "active_error_m": 0.03357296406437024,
+      "target_error_m": 0.11164812624514155,
+      "pair_rmse_m": 0.08243921400073681,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.2944581508636475,
+        6.46742582321167
+      ],
+      "sim_target": [
+        2.748913049697876,
+        2.885746955871582
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 44,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -11.249999999999996,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.020710564945028383,
+      "target_error_m": 0.11953365075460602,
+      "pair_rmse_m": 0.08578234422964426,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.274200677871704,
+        6.48615837097168
+      ],
+      "sim_target": [
+        2.773184061050415,
+        2.8376502990722656
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 101,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 8.437500000000025,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07538098990973392,
+      "target_error_m": 0.1201519368400566,
+      "pair_rmse_m": 0.10029651431178542,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3362436294555664,
+        6.474748611450195
+      ],
+      "sim_target": [
+        2.9210562705993652,
+        3.025712490081787
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 10,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 5.624999999999998,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07639137340070253,
+      "target_error_m": 0.12224751324344561,
+      "pair_rmse_m": 0.10193158593942304,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3371782302856445,
+        6.475902557373047
+      ],
+      "sim_target": [
+        2.9715585708618164,
+        2.9554848670959473
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 92,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 5.624999999999998,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07639137340070253,
+      "target_error_m": 0.12224751324344561,
+      "pair_rmse_m": 0.10193158593942304,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3371782302856445,
+        6.475902557373047
+      ],
+      "sim_target": [
+        2.9715585708618164,
+        2.9554848670959473
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    }
+  ],
+  "top_by_pair": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 12,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -19.68750000000002,
+      "target_yaw_deg": 98.43750000000011,
+      "active_error_m": 0.0435423113210377,
+      "target_error_m": 0.020708203453188048,
+      "pair_rmse_m": 0.03409371324332975,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3025400638580322,
+        6.483252048492432
+      ],
+      "sim_target": [
+        2.8362162113189697,
+        2.93943452835083
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 2,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 0.0,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06716517572000794,
+      "target_error_m": 0.022306078679456432,
+      "pair_rmse_m": 0.05004359087612341,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3275349140167236,
+        6.479379653930664
+      ],
+      "sim_target": [
+        2.8747482299804688,
+        2.923518180847168
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 76,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 0.0,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06716517572000794,
+      "target_error_m": 0.022306078679456432,
+      "pair_rmse_m": 0.05004359087612341,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3275349140167236,
+        6.479379653930664
+      ],
+      "sim_target": [
+        2.8747482299804688,
+        2.923518180847168
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 32,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -14.062500000000025,
+      "target_yaw_deg": 104.06250000000006,
+      "active_error_m": 0.0688384750230107,
+      "target_error_m": 0.017530962407189186,
+      "pair_rmse_m": 0.05022982324484105,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3293089866638184,
+        6.478721618652344
+      ],
+      "sim_target": [
+        2.8493502140045166,
+        2.9096920490264893
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 56,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -5.624999999999998,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07125656534324101,
+      "target_error_m": 0.02364426272493606,
+      "pair_rmse_m": 0.053087424425759144,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3319764137268066,
+        6.476512432098389
+      ],
+      "sim_target": [
+        2.829916000366211,
+        2.9205801486968994
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 42,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -11.249999999999996,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.06121967175660123,
+      "target_error_m": 0.049157199401119955,
+      "pair_rmse_m": 0.05551701749440196,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3199472427368164,
+        6.486724853515625
+      ],
+      "sim_target": [
+        2.8053603172302246,
+        2.913656711578369
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 67,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -2.812499999999999,
+      "target_yaw_deg": 101.25000000000009,
+      "active_error_m": 0.06574127472883648,
+      "target_error_m": 0.068118258108355,
+      "pair_rmse_m": 0.06694031778640144,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3258473873138428,
+        6.481004238128662
+      ],
+      "sim_target": [
+        2.8274872303009033,
+        2.863619565963745
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 60,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -5.624999999999998,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.06246685169391919,
+      "target_error_m": 0.07872240479935816,
+      "pair_rmse_m": 0.07106097585153226,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3208723068237305,
+        6.488016128540039
+      ],
+      "sim_target": [
+        2.904327869415283,
+        2.867471218109131
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 48,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 28.12499999999999,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.07251534911050914,
+      "target_error_m": 0.0755460943958945,
+      "pair_rmse_m": 0.0740462295970984,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3331615924835205,
+        6.477354049682617
+      ],
+      "sim_target": [
+        2.9247591495513916,
+        2.9042131900787354
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 25,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -16.874999999999993,
+      "target_yaw_deg": 109.68749999999999,
+      "active_error_m": 0.03357296406437024,
+      "target_error_m": 0.11164812624514155,
+      "pair_rmse_m": 0.08243921400073681,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.2944581508636475,
+        6.46742582321167
+      ],
+      "sim_target": [
+        2.748913049697876,
+        2.885746955871582
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+      "result_index": 166,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.08244658243506649,
+      "target_error_m": 0.08511184901393283,
+      "pair_rmse_m": 0.08378981381347232,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3428966999053955,
+        6.479706287384033
+      ],
+      "sim_target": [
+        2.7770626544952393,
+        2.887874126434326
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 40,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.08244658243506649,
+      "target_error_m": 0.08511184901393283,
+      "pair_rmse_m": 0.08378981381347232,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3428966999053955,
+        6.479706287384033
+      ],
+      "sim_target": [
+        2.7770626544952393,
+        2.887874126434326
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 44,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -11.249999999999996,
+      "target_yaw_deg": 112.49999999999996,
+      "active_error_m": 0.020710564945028383,
+      "target_error_m": 0.11953365075460602,
+      "pair_rmse_m": 0.08578234422964426,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.274200677871704,
+        6.48615837097168
+      ],
+      "sim_target": [
+        2.773184061050415,
+        2.8376502990722656
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 29,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -14.062500000000025,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.006648823646249384,
+      "target_error_m": 0.1228317383562639,
+      "pair_rmse_m": 0.08698230510713256,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.2547688484191895,
+        6.472519397735596
+      ],
+      "sim_target": [
+        2.890564441680908,
+        2.8100500106811523
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_grid_20260709.json",
+      "result_index": 167,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 134.99999999999972,
+      "active_error_m": 0.08741665194036194,
+      "target_error_m": 0.10185948275312087,
+      "pair_rmse_m": 0.09491318470896368,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.348245143890381,
+        6.475673198699951
+      ],
+      "sim_target": [
+        2.7734591960906982,
+        2.9909019470214844
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 44,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 22.499999999999993,
+      "target_yaw_deg": 134.99999999999972,
+      "active_error_m": 0.08741665194036194,
+      "target_error_m": 0.10185948275312087,
+      "pair_rmse_m": 0.09491318470896368,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.348245143890381,
+        6.475673198699951
+      ],
+      "sim_target": [
+        2.7734591960906982,
+        2.9909019470214844
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 16,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 5.624999999999998,
+      "target_yaw_deg": 129.37499999999977,
+      "active_error_m": 0.0839507653168364,
+      "target_error_m": 0.10752752074432163,
+      "pair_rmse_m": 0.09646216541915037,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.185608386993408,
+        6.507130146026611
+      ],
+      "sim_target": [
+        2.748843193054199,
+        2.9547555446624756
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 33,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": -14.062500000000025,
+      "target_yaw_deg": 106.87500000000003,
+      "active_error_m": 0.04564783715750378,
+      "target_error_m": 0.1307647511948897,
+      "pair_rmse_m": 0.09793657435355647,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.30564284324646,
+        6.4797258377075195
+      ],
+      "sim_target": [
+        2.7473948001861572,
+        2.849374294281006
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine2_20260709.json",
+      "result_index": 101,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 8.437500000000025,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07538098990973392,
+      "target_error_m": 0.1201519368400566,
+      "pair_rmse_m": 0.10029651431178542,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3362436294555664,
+        6.474748611450195
+      ],
+      "sim_target": [
+        2.9210562705993652,
+        3.025712490081787
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_12003_actor_yaw_wide_refine_20260709.json",
+      "result_index": 10,
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "active_yaw_deg": 5.624999999999998,
+      "target_yaw_deg": 95.62500000000014,
+      "active_error_m": 0.07639137340070253,
+      "target_error_m": 0.12224751324344561,
+      "pair_rmse_m": 0.10193158593942304,
+      "unity_target_in_play": true,
+      "sim_active": [
+        2.3371782302856445,
+        6.475902557373047
+      ],
+      "sim_target": [
+        2.9715585708618164,
+        2.9554848670959473
+      ],
+      "unity_active": [
+        2.261,
+        6.4702
+      ],
+      "unity_target": [
+        2.8527,
+        2.9269
+      ]
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "generated_at": "2026-07-09T00:31:42",
+  "source_raw": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\pyphysx_cooked_stone_hull_probe_unity_flags_rebuilt_raw_20260708.json",
+  "physx_source_reference": {
+    "mass_constructor": "PxMassProperties(const PxGeometry&), eCONVEXMESH branch",
+    "inertia_scaling": "PxMassProperties::scaleInertia(identity scaleRotation)",
+    "rigidbody_mass_scaling": "PxRigidBodyExt::setMassAndUpdateInertia(single mass) scales density by targetMass / computedShapeMass"
+  },
+  "raw_mass_information": {
+    "unit_density_mass": 9.801713943481445,
+    "local_center_of_mass": [
+      9.228223e-09,
+      2.1022355e-08,
+      6.973805e-09
+    ],
+    "local_inertia_rows_noncom": [
+      [
+        7.089887142181396,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        7.645298004150391,
+        8.033399e-08
+      ],
+      [
+        0.0,
+        8.033399e-08,
+        7.089887142181396
+      ]
+    ],
+    "local_inertia_rows_com": [
+      [
+        7.089887142181392,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        7.64529800415039,
+        8.0333992e-08
+      ],
+      [
+        0.0,
+        8.0333992e-08,
+        7.089887142181391
+      ]
+    ],
+    "local_bounds": {
+      "minimum": [
+        -1.25,
+        -1.0,
+        -1.25
+      ],
+      "maximum": [
+        1.25,
+        1.0,
+        1.25
+      ]
+    },
+    "raw_mesh_axes": "x/z radial, y vertical"
+  },
+  "rigidbody_mass": 19.1,
+  "candidates": [
+    {
+      "name": "mesh_local_identity",
+      "role": "Control only: raw PxConvexMesh mass information without Unity object scale.",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "scale_product": 1.0,
+      "scaled_bounds": {
+        "minimum": [
+          -1.25,
+          -1.0,
+          -1.25
+        ],
+        "maximum": [
+          1.25,
+          1.0,
+          1.25
+        ],
+        "extents": [
+          2.5,
+          2.0,
+          2.5
+        ],
+        "radius_x_m": 1.25,
+        "radius_z_m": 1.25,
+        "mean_radius_m": 1.25,
+        "height_y_m": 2.0
+      },
+      "unit_density_scaled_mass": 9.801713943481445,
+      "density_scale_to_rigidbody_mass_19p1": 1.94863879,
+      "center_of_mass_after_scale_before_csharp_override": [
+        9.228223e-09,
+        2.1022355e-08,
+        6.973805e-09
+      ],
+      "center_of_mass_runtime_after_csharp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "unit_density_scaled_inertia_rows": [
+        [
+          7.089887142181392,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.64529800415039,
+          8.0333992e-08
+        ],
+        [
+          0.0,
+          8.0333992e-08,
+          7.089887142181391
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_rows": [
+        [
+          13.81562910288,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          14.897924252971,
+          1.56542e-07
+        ],
+        [
+          0.0,
+          1.56542e-07,
+          13.81562910288
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_diag_xyz": [
+        13.81562910288,
+        14.897924252971,
+        13.81562910288
+      ],
+      "max_abs_offdiag": 1.56541932e-07,
+      "axis_convention": {
+        "mesh_x": "horizontal/radial",
+        "mesh_y": "vertical",
+        "mesh_z": "horizontal/radial",
+        "probe_custom_inertia_note": "probe_physx_collision_alignment.py builds z-up stones, so pass inertia_radial=(diag_x+diag_z)/2 and inertia_vertical=diag_y."
+      },
+      "probe_z_up_custom_args": {
+        "inertia_radial": 13.81562910288,
+        "inertia_vertical": 14.897924252971
+      },
+      "comparison": {
+        "solid_cylinder_diag_xyz_same_radius_height": [
+          13.827604166667,
+          14.921875,
+          13.827604166667
+        ],
+        "thin_shell_cylinder_diag_xyz_same_radius_height": [
+          21.288541666667,
+          29.84375,
+          21.288541666667
+        ],
+        "ratio_to_solid_cylinder_diag_xyz": [
+          0.999133974,
+          0.998394924,
+          0.999133974
+        ],
+        "ratio_to_thin_shell_cylinder_diag_xyz": [
+          0.648970198,
+          0.499197462,
+          0.648970198
+        ]
+      }
+    },
+    {
+      "name": "unity_local_uniform_scale_0p115",
+      "role": "Stone localScale without parent/non-uniform world scale.",
+      "scale": [
+        0.115,
+        0.115,
+        0.115
+      ],
+      "scale_product": 0.001520875,
+      "scaled_bounds": {
+        "minimum": [
+          -0.14375,
+          -0.115,
+          -0.14375
+        ],
+        "maximum": [
+          0.14375,
+          0.115,
+          0.14375
+        ],
+        "extents": [
+          0.2875,
+          0.23,
+          0.2875
+        ],
+        "radius_x_m": 0.14375,
+        "radius_z_m": 0.14375,
+        "mean_radius_m": 0.14375,
+        "height_y_m": 0.23
+      },
+      "unit_density_scaled_mass": 0.014907181693792,
+      "density_scale_to_rigidbody_mass_19p1": 1281.261635655,
+      "center_of_mass_after_scale_before_csharp_override": [
+        1.061246e-09,
+        2.417571e-09,
+        8.01988e-10
+      ],
+      "center_of_mass_runtime_after_csharp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "unit_density_scaled_inertia_rows": [
+        [
+          0.00014260295462,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000153774250912,
+          1.616e-12
+        ],
+        [
+          0.0,
+          1.616e-12,
+          0.00014260295462
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_rows": [
+        [
+          0.182711694886,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.197025048246,
+          2.07e-09
+        ],
+        [
+          0.0,
+          2.07e-09,
+          0.182711694886
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_diag_xyz": [
+        0.182711694886,
+        0.197025048246,
+        0.182711694886
+      ],
+      "max_abs_offdiag": 2.070267e-09,
+      "axis_convention": {
+        "mesh_x": "horizontal/radial",
+        "mesh_y": "vertical",
+        "mesh_z": "horizontal/radial",
+        "probe_custom_inertia_note": "probe_physx_collision_alignment.py builds z-up stones, so pass inertia_radial=(diag_x+diag_z)/2 and inertia_vertical=diag_y."
+      },
+      "probe_z_up_custom_args": {
+        "inertia_radial": 0.182711694886,
+        "inertia_vertical": 0.197025048246
+      },
+      "comparison": {
+        "solid_cylinder_diag_xyz_same_radius_height": [
+          0.182870065104,
+          0.197341796875,
+          0.182870065104
+        ],
+        "thin_shell_cylinder_diag_xyz_same_radius_height": [
+          0.281540963542,
+          0.39468359375,
+          0.281540963542
+        ],
+        "ratio_to_solid_cylinder_diag_xyz": [
+          0.999133974,
+          0.998394924,
+          0.999133974
+        ],
+        "ratio_to_thin_shell_cylinder_diag_xyz": [
+          0.648970198,
+          0.499197462,
+          0.648970198
+        ]
+      }
+    },
+    {
+      "name": "unity_world_lossy_scale_0p112700008_0p115",
+      "role": "Formal scene world scale recovered from assets; current best runtime geometry candidate.",
+      "scale": [
+        0.112700008,
+        0.115,
+        0.112700008
+      ],
+      "scale_product": 0.001460648557368,
+      "scaled_bounds": {
+        "minimum": [
+          -0.14087501,
+          -0.115,
+          -0.14087501
+        ],
+        "maximum": [
+          0.14087501,
+          0.115,
+          0.14087501
+        ],
+        "extents": [
+          0.28175002,
+          0.23,
+          0.28175002
+        ],
+        "radius_x_m": 0.14087501,
+        "radius_z_m": 0.14087501,
+        "mean_radius_m": 0.14087501,
+        "height_y_m": 0.23
+      },
+      "unit_density_scaled_mass": 0.01431685933128,
+      "density_scale_to_rigidbody_mass_19p1": 1334.091476213,
+      "center_of_mass_after_scale_before_csharp_override": [
+        1.040021e-09,
+        2.417571e-09,
+        7.85948e-10
+      ],
+      "center_of_mass_runtime_after_csharp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "unit_density_scaled_inertia_rows": [
+        [
+          0.00013403174786,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000141836513142,
+          1.521e-12
+        ],
+        [
+          0.0,
+          1.521e-12,
+          0.00013403174786
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_rows": [
+        [
+          0.178810612362,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.189222883199,
+          2.029e-09
+        ],
+        [
+          0.0,
+          2.029e-09,
+          0.178810612362
+        ]
+      ],
+      "rigidbody_mass_scaled_inertia_diag_xyz": [
+        0.178810612362,
+        0.189222883199,
+        0.178810612362
+      ],
+      "max_abs_offdiag": 2.028862e-09,
+      "axis_convention": {
+        "mesh_x": "horizontal/radial",
+        "mesh_y": "vertical",
+        "mesh_z": "horizontal/radial",
+        "probe_custom_inertia_note": "probe_physx_collision_alignment.py builds z-up stones, so pass inertia_radial=(diag_x+diag_z)/2 and inertia_vertical=diag_y."
+      },
+      "probe_z_up_custom_args": {
+        "inertia_radial": 0.178810612362,
+        "inertia_vertical": 0.189222883199
+      },
+      "comparison": {
+        "solid_cylinder_diag_xyz_same_radius_height": [
+          0.17896271098,
+          0.189527088626,
+          0.17896271098
+        ],
+        "thin_shell_cylinder_diag_xyz_same_radius_height": [
+          0.273726255293,
+          0.379054177252,
+          0.273726255293
+        ],
+        "ratio_to_solid_cylinder_diag_xyz": [
+          0.99915011,
+          0.998394924,
+          0.99915011
+        ],
+        "ratio_to_thin_shell_cylinder_diag_xyz": [
+          0.653246113,
+          0.499197462,
+          0.653246113
+        ]
+      }
+    }
+  ],
+  "recommended_for_collision_probe": {
+    "candidate": "unity_world_lossy_scale_0p112700008_0p115",
+    "reason": "It uses the formal stone world radius 1.25*0.112700008=0.14087501m and world height 2*0.115=0.23m recovered from the Unity assets.",
+    "command_fragment": "--radius 0.14087501 --height 0.23 --inertia-model custom --inertia-radial 0.178810612362 --inertia-vertical 0.189222883199"
+  },
+  "conclusion": "The cooked hull inertia is now a derived PhysX value, not a fitted parameter. The remaining collision-error suspects are shape wrapper/local pose/contact handoff and solver/contact state, not the convex hull mass-property formula itself."
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "sample_id": 11000,
+    "label": "collision_headon_y5p2_v3p4_unique_t02_r00",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 2
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=78; target_index=2; reload Unity before each batch file",
+    "source_sample_id": 78,
+    "batch_repeat_index": 0,
+    "batch_case_index": 0,
+    "assigned_target_index": 2
+  },
+  {
+    "sample_id": 11001,
+    "label": "collision_headon_y5p2_v4_unique_t03_r00",
+    "category": "collision_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 3
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=79; target_index=3; reload Unity before each batch file",
+    "source_sample_id": 79,
+    "batch_repeat_index": 0,
+    "batch_case_index": 1,
+    "assigned_target_index": 3
+  },
+  {
+    "sample_id": 11002,
+    "label": "collision_headon_y6p2_v3p4_unique_t04_r00",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 6.2,
+        "index": 4
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=80; target_index=4; reload Unity before each batch file",
+    "source_sample_id": 80,
+    "batch_repeat_index": 0,
+    "batch_case_index": 2,
+    "assigned_target_index": 4
+  },
+  {
+    "sample_id": 11003,
+    "label": "collision_headon_y6p2_v4_unique_t05_r00",
+    "category": "collision_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 6.2,
+        "index": 5
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=81; target_index=5; reload Unity before each batch file",
+    "source_sample_id": 81,
+    "batch_repeat_index": 0,
+    "batch_case_index": 3,
+    "assigned_target_index": 5
+  },
+  {
+    "sample_id": 11004,
+    "label": "collision_headon_y8_v3p4_unique_t06_r00",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 8.0,
+        "index": 6
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=82; target_index=6; reload Unity before each batch file",
+    "source_sample_id": 82,
+    "batch_repeat_index": 0,
+    "batch_case_index": 4,
+    "assigned_target_index": 6
+  },
+  {
+    "sample_id": 11005,
+    "label": "collision_headon_y8_v4_unique_t07_r00",
+    "category": "collision_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 8.0,
+        "index": 7
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=83; target_index=7; reload Unity before each batch file",
+    "source_sample_id": 83,
+    "batch_repeat_index": 0,
+    "batch_case_index": 5,
+    "assigned_target_index": 7
+  },
+  {
+    "sample_id": 11006,
+    "label": "collision_glance_left_target_unique_t08_r00",
+    "category": "collision_glancing",
+    "v0": 3.6,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.195,
+        "y": 6.2,
+        "index": 8
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=84; target_index=8; reload Unity before each batch file",
+    "source_sample_id": 84,
+    "batch_repeat_index": 0,
+    "batch_case_index": 6,
+    "assigned_target_index": 8
+  },
+  {
+    "sample_id": 11007,
+    "label": "collision_glance_right_target_unique_t09_r00",
+    "category": "collision_glancing",
+    "v0": 3.6,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.555,
+        "y": 6.2,
+        "index": 9
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=85; target_index=9; reload Unity before each batch file",
+    "source_sample_id": 85,
+    "batch_repeat_index": 0,
+    "batch_case_index": 7,
+    "assigned_target_index": 9
+  },
+  {
+    "sample_id": 11008,
+    "label": "collision_glance_left_curl_in_unique_t10_r00",
+    "category": "collision_glancing",
+    "v0": 3.4,
+    "h0": -0.2,
+    "w0": -1.57,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.0949999999999998,
+        "y": 6.8,
+        "index": 10
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=86; target_index=10; reload Unity before each batch file",
+    "source_sample_id": 86,
+    "batch_repeat_index": 0,
+    "batch_case_index": 8,
+    "assigned_target_index": 10
+  },
+  {
+    "sample_id": 11009,
+    "label": "collision_glance_right_curl_in_unique_t11_r00",
+    "category": "collision_glancing",
+    "v0": 3.4,
+    "h0": 0.2,
+    "w0": 1.57,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.6550000000000002,
+        "y": 6.8,
+        "index": 11
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=87; target_index=11; reload Unity before each batch file",
+    "source_sample_id": 87,
+    "batch_repeat_index": 0,
+    "batch_case_index": 9,
+    "assigned_target_index": 11
+  },
+  {
+    "sample_id": 11010,
+    "label": "collision_glance_wide_left_unique_t12_r00",
+    "category": "collision_glancing",
+    "v0": 3.9,
+    "h0": -0.35,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 1.955,
+        "y": 5.7,
+        "index": 12
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=88; target_index=12; reload Unity before each batch file",
+    "source_sample_id": 88,
+    "batch_repeat_index": 0,
+    "batch_case_index": 10,
+    "assigned_target_index": 12
+  },
+  {
+    "sample_id": 11011,
+    "label": "collision_glance_wide_right_unique_t13_r00",
+    "category": "collision_glancing",
+    "v0": 3.9,
+    "h0": 0.35,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.795,
+        "y": 5.7,
+        "index": 13
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=89; target_index=13; reload Unity before each batch file",
+    "source_sample_id": 89,
+    "batch_repeat_index": 0,
+    "batch_case_index": 11,
+    "assigned_target_index": 13
+  }
+]

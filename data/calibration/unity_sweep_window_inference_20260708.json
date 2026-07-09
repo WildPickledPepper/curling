@@ -1,0 +1,308 @@
+{
+  "inputs": [
+    "data\\calibration\\unity_controlled_samples_20260707.jsonl"
+  ],
+  "n": 21,
+  "baseline_error": {
+    "n": 21,
+    "mean": 0.7615105691989321,
+    "rmse": 1.0027915430661507,
+    "p50": 0.4981599403250962,
+    "p90": 1.6530433443047083,
+    "max": 2.6459875968465325
+  },
+  "start_lag_error": {
+    "n": 21,
+    "mean": 0.12107527120551746,
+    "rmse": 0.32425648199512014,
+    "p50": 0.01286492694543493,
+    "p90": 0.17395238510100153,
+    "max": 1.2030214993007997
+  },
+  "effective_distance_error": {
+    "n": 21,
+    "mean": 0.04513628956800453,
+    "rmse": 0.053675319467448496,
+    "p50": 0.03189767843994428,
+    "p90": 0.08765606756894345,
+    "max": 0.09778320261498342
+  },
+  "best_start_lag_m": {
+    "n": 21,
+    "mean": 4.02433379461162,
+    "rmse": 4.518212550790675,
+    "p50": 3.7244651700109364,
+    "p90": 7.777087639996635,
+    "max": 7.777087639996635
+  },
+  "best_effective_distance_m": {
+    "n": 21,
+    "mean": 2.4268005744909664,
+    "rmse": 4.086402593536635,
+    "p50": 0.30622585455462253,
+    "p90": 8.467903045420165,
+    "max": 8.701838781831931
+  },
+  "lost_distance_m": {
+    "n": 21,
+    "mean": 3.7160565683661764,
+    "rmse": 4.654279163370726,
+    "p50": 3.1671842700025237,
+    "p90": 7.777087639996635,
+    "max": 11.693774145445378
+  },
+  "rows": [
+    {
+      "sample_id": 47,
+      "label": "sweep_straight_s1",
+      "requested_distance": 1.0,
+      "baseline_error": 0.1992675009495538,
+      "baseline_steps": 2066,
+      "best_start_lag_m": 1.1876941012509463,
+      "best_start_lag_error": 0.0520793318312023,
+      "best_effective_distance_m": 0.02786404500042062,
+      "best_effective_distance_error": 0.079511933356656,
+      "lost_distance_m": 0.9721359549995794
+    },
+    {
+      "sample_id": 48,
+      "label": "sweep_straight_s2",
+      "requested_distance": 2.0,
+      "baseline_error": 0.2757071794344263,
+      "baseline_steps": 2073,
+      "best_start_lag_m": 2.11881039375368,
+      "best_start_lag_error": 0.007929719152777312,
+      "best_effective_distance_m": 0.05572809000084124,
+      "best_effective_distance_error": 0.0265911225175372,
+      "lost_distance_m": 1.9442719099991588
+    },
+    {
+      "sample_id": 49,
+      "label": "sweep_straight_s4",
+      "requested_distance": 4.0,
+      "baseline_error": 0.45969716886347317,
+      "baseline_steps": 2091,
+      "best_start_lag_m": 3.563082303752839,
+      "best_start_lag_error": 0.009560240591768035,
+      "best_effective_distance_m": 0.6099033699941114,
+      "best_effective_distance_error": 0.008649891163594051,
+      "lost_distance_m": 3.3900966300058886
+    },
+    {
+      "sample_id": 50,
+      "label": "sweep_straight_s6",
+      "requested_distance": 6.0,
+      "baseline_error": 0.5826639550357726,
+      "baseline_steps": 2112,
+      "best_start_lag_m": 4.422209268743165,
+      "best_start_lag_error": 0.009825435042314304,
+      "best_effective_distance_m": 2.1246117974981074,
+      "best_effective_distance_error": 0.008774666235265014,
+      "lost_distance_m": 3.8753882025018926
+    },
+    {
+      "sample_id": 51,
+      "label": "sweep_straight_s8",
+      "requested_distance": 8.0,
+      "baseline_error": 0.3902960416071171,
+      "baseline_steps": 2139,
+      "best_start_lag_m": 3.1083505599865404,
+      "best_start_lag_error": 0.009363462167245,
+      "best_effective_distance_m": 5.8885438199983176,
+      "best_effective_distance_error": 0.015126216660811891,
+      "lost_distance_m": 2.1114561800016824
+    },
+    {
+      "sample_id": 52,
+      "label": "sweep_straight_s10",
+      "requested_distance": 10.0,
+      "baseline_error": 0.48292094862354623,
+      "baseline_steps": 2170,
+      "best_start_lag_m": 4.0,
+      "best_start_lag_error": 0.015041560272578629,
+      "best_effective_distance_m": 7.7050983124842265,
+      "best_effective_distance_error": 0.03189767843994428,
+      "lost_distance_m": 2.2949016875157735
+    },
+    {
+      "sample_id": 53,
+      "label": "sweep_straight_s12",
+      "requested_distance": 12.0,
+      "baseline_error": 0.4479756687137709,
+      "baseline_steps": 2188,
+      "best_start_lag_m": 3.7244651700109364,
+      "best_start_lag_error": 0.009544231572201902,
+      "best_effective_distance_m": 8.701838781831931,
+      "best_effective_distance_error": 0.02899456418722222,
+      "lost_distance_m": 3.298161218168069
+    },
+    {
+      "sample_id": 55,
+      "label": "sweep_negcurl_s1",
+      "requested_distance": 1.0,
+      "baseline_error": 0.18632493836334044,
+      "baseline_steps": 1832,
+      "best_start_lag_m": 1.155764746872634,
+      "best_start_lag_error": 0.012641721853277343,
+      "best_effective_distance_m": 0.02786404500042062,
+      "best_effective_distance_error": 0.029553542445016255,
+      "lost_distance_m": 0.9721359549995794
+    },
+    {
+      "sample_id": 56,
+      "label": "sweep_negcurl_s2",
+      "requested_distance": 2.0,
+      "baseline_error": 0.4003478174463612,
+      "baseline_steps": 1846,
+      "best_start_lag_m": 2.2049150281252627,
+      "best_start_lag_error": 0.03648214837547858,
+      "best_effective_distance_m": 0.05572809000084124,
+      "best_effective_distance_error": 0.07578627465509298,
+      "lost_distance_m": 1.9442719099991588
+    },
+    {
+      "sample_id": 57,
+      "label": "sweep_negcurl_s4",
+      "requested_distance": 4.0,
+      "baseline_error": 0.7304057440581126,
+      "baseline_steps": 1873,
+      "best_start_lag_m": 4.219623455629258,
+      "best_start_lag_error": 0.014122182122309328,
+      "best_effective_distance_m": 0.11145618000168248,
+      "best_effective_distance_error": 0.04246052336744117,
+      "lost_distance_m": 3.8885438199983176
+    },
+    {
+      "sample_id": 58,
+      "label": "sweep_negcurl_s6",
+      "requested_distance": 6.0,
+      "baseline_error": 0.8885903792945334,
+      "baseline_steps": 1909,
+      "best_start_lag_m": 5.008313903114747,
+      "best_start_lag_error": 0.011621182364299943,
+      "best_effective_distance_m": 1.376941012509464,
+      "best_effective_distance_error": 0.01662716685884335,
+      "lost_distance_m": 4.623058987490536
+    },
+    {
+      "sample_id": 59,
+      "label": "sweep_negcurl_s8",
+      "requested_distance": 8.0,
+      "baseline_error": 0.5985246475273603,
+      "baseline_steps": 1953,
+      "best_start_lag_m": 4.0,
+      "best_start_lag_error": 0.016097025265839393,
+      "best_effective_distance_m": 5.442719099991588,
+      "best_effective_distance_error": 0.020368043869244765,
+      "lost_distance_m": 2.5572809000084122
+    },
+    {
+      "sample_id": 60,
+      "label": "sweep_negcurl_s10",
+      "requested_distance": 10.0,
+      "baseline_error": 0.4981599403250962,
+      "baseline_steps": 2022,
+      "best_start_lag_m": 3.55417527999327,
+      "best_start_lag_error": 0.012245413589327936,
+      "best_effective_distance_m": 8.47524157501472,
+      "best_effective_distance_error": 0.027067135890599687,
+      "lost_distance_m": 1.5247584249852792
+    },
+    {
+      "sample_id": 61,
+      "label": "sweep_negcurl_s12",
+      "requested_distance": 12.0,
+      "baseline_error": 2.6459875968465325,
+      "baseline_steps": 2062,
+      "best_start_lag_m": 7.777087639996635,
+      "best_start_lag_error": 1.2030214993007997,
+      "best_effective_distance_m": 0.30622585455462253,
+      "best_effective_distance_error": 0.09165901116528027,
+      "lost_distance_m": 11.693774145445378
+    },
+    {
+      "sample_id": 63,
+      "label": "sweep_poscurl_s1",
+      "requested_distance": 1.0,
+      "baseline_error": 0.23995217414846376,
+      "baseline_steps": 1834,
+      "best_start_lag_m": 1.1876941012509463,
+      "best_start_lag_error": 0.04801069696350933,
+      "best_effective_distance_m": 0.02786404500042062,
+      "best_effective_distance_error": 0.08097257320148281,
+      "lost_distance_m": 0.9721359549995794
+    },
+    {
+      "sample_id": 64,
+      "label": "sweep_poscurl_s2",
+      "requested_distance": 2.0,
+      "baseline_error": 0.3770688046260956,
+      "baseline_steps": 1845,
+      "best_start_lag_m": 2.2049150281252627,
+      "best_start_lag_error": 0.01425006285747863,
+      "best_effective_distance_m": 0.05572809000084124,
+      "best_effective_distance_error": 0.050941784461990054,
+      "lost_distance_m": 1.9442719099991588
+    },
+    {
+      "sample_id": 65,
+      "label": "sweep_poscurl_s4",
+      "requested_distance": 4.0,
+      "baseline_error": 0.5686772782616828,
+      "baseline_steps": 1872,
+      "best_start_lag_m": 3.3123058987490532,
+      "best_start_lag_error": 0.01286492694543493,
+      "best_effective_distance_m": 0.8328157299974763,
+      "best_effective_distance_error": 0.01538333915266929,
+      "lost_distance_m": 3.1671842700025237
+    },
+    {
+      "sample_id": 66,
+      "label": "sweep_poscurl_s6",
+      "requested_distance": 6.0,
+      "baseline_error": 1.1546941541595497,
+      "baseline_steps": 1908,
+      "best_start_lag_m": 6.318883707497266,
+      "best_start_lag_error": 0.012360404745056447,
+      "best_effective_distance_m": 0.16718427000252373,
+      "best_effective_distance_error": 0.06222592932747927,
+      "lost_distance_m": 5.832815729997476
+    },
+    {
+      "sample_id": 67,
+      "label": "sweep_poscurl_s8",
+      "requested_distance": 8.0,
+      "baseline_error": 1.6530433443047083,
+      "baseline_steps": 1953,
+      "best_start_lag_m": 7.777087639996635,
+      "best_start_lag_error": 0.17395238510100153,
+      "best_effective_distance_m": 0.22291236000336495,
+      "best_effective_distance_error": 0.09778320261498342,
+      "lost_distance_m": 7.777087639996635
+    },
+    {
+      "sample_id": 68,
+      "label": "sweep_poscurl_s10",
+      "requested_distance": 10.0,
+      "baseline_error": 2.3104403633665376,
+      "baseline_steps": 2021,
+      "best_start_lag_m": 7.777087639996635,
+      "best_start_lag_error": 0.8496449325177808,
+      "best_effective_distance_m": 0.2786404500042061,
+      "best_effective_distance_error": 0.08765606756894345,
+      "lost_distance_m": 9.721359549995794
+    },
+    {
+      "sample_id": 69,
+      "label": "sweep_poscurl_s12",
+      "requested_distance": 12.0,
+      "baseline_error": 0.9009763072215394,
+      "baseline_steps": 2063,
+      "best_start_lag_m": 5.8885438199983176,
+      "best_start_lag_error": 0.01192213268418541,
+      "best_effective_distance_m": 8.467903045420165,
+      "best_effective_distance_error": 0.04983141378799761,
+      "lost_distance_m": 3.532096954579835
+    }
+  ]
+}

@@ -1,0 +1,4117 @@
+{
+  "probe": "D:\\Desktop\\冰壶\\DCCourse\\data\\calibration\\unity_physx_collision_probe_unique_role_current_best_20260708.json",
+  "snapshot_time_s": 0.02,
+  "snapshot_times_s": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "probe_summary": {
+    "sample_count": 8,
+    "active_error_count": 8,
+    "target_in_play_error_count": 7,
+    "target_cleared_count": 1,
+    "active_rmse_m": 0.037766793771995454,
+    "target_in_play_rmse_m": 0.10796148501441558,
+    "combined_rmse_m": 0.07874025714129404,
+    "active_mean_m": 0.027085394156134764,
+    "target_in_play_mean_m": 0.09279868530483147
+  },
+  "config_excerpt": {
+    "radius": 0.146,
+    "height": 0.23,
+    "center_height": 0.1276,
+    "stone_restitution": 1.0,
+    "stone_friction": 0.6,
+    "ice_friction": 0.02,
+    "contact_offset": 0.01,
+    "combine_mode": "multiply",
+    "rink_geometry": null
+  },
+  "summary": {
+    "row_count": 8,
+    "ok_count": 7,
+    "classification_counts": {
+      "pair_check_weak": 5,
+      "non_closing_pair": 1,
+      "pair_impulse_like": 1
+    },
+    "active_delta_rmse_mps": 0.16103061608637795,
+    "target_delta_rmse_mps": 0.046644797065500655,
+    "pair_delta_sum_mean_mps": 0.0963700803718852,
+    "pair_delta_sum_rmse_mps": 0.1413905398987644,
+    "pair_impulse_closure_fraction_mean": 0.6621313776174544,
+    "opposition_cosine_mean": -0.13227475035331512,
+    "equivalent_unbalanced_pair_impulse_mean_Ns": 1.840668535103008,
+    "normal_residual_rmse_mps": {
+      "active": 0.04217496265222159,
+      "target": 0.03406276493754846
+    },
+    "tangent_residual_rmse_mps": {
+      "active": 0.15540956161846078,
+      "target": 0.03186636374127205
+    }
+  },
+  "worst_rows": [
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail",
+          "large_tail_scale"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.349508285522461,
+          6.489408016204834
+        ],
+        "early_velocity": [
+          -0.09485074877738953,
+          -0.011311769485473633
+        ],
+        "early_speed_mps": 0.09552288036132471,
+        "sim_endpoint": [
+          2.3323521614074707,
+          6.487168788909912
+        ],
+        "unity_endpoint": [
+          2.261,
+          6.4702
+        ],
+        "endpoint_error_m": 0.07334214841812915,
+        "sim_tail_m": 0.01730163961962197,
+        "unity_tail_m": 0.09056856238591074,
+        "tail_distance_scale_required": 5.234680895976818,
+        "tail_direction_delta_deg_required": 4.808184325470083,
+        "required_early_velocity": [
+          -0.4898028335943784,
+          -0.10062297038981596
+        ],
+        "delta_v_required_mps": [
+          -0.39495208481698885,
+          -0.08931120090434233
+        ],
+        "delta_v_required_norm_mps": 0.40492423971437147
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376896619796753,
+          6.174746036529541
+        ],
+        "early_velocity": [
+          0.09492892026901245,
+          -1.262671709060669
+        ],
+        "early_speed_mps": 1.2662351064338846,
+        "sim_endpoint": [
+          2.691636323928833,
+          2.8164846897125244
+        ],
+        "unity_endpoint": [
+          2.8527,
+          2.9269
+        ],
+        "endpoint_error_m": 0.1952768508949212,
+        "sim_tail_m": 3.3729779653716077,
+        "unity_tail_m": 3.282513173410502,
+        "tail_distance_scale_required": 0.9731795484910205,
+        "tail_direction_delta_deg_required": 2.980258922431321,
+        "required_early_velocity": [
+          0.15614588366540355,
+          -1.2223411729657723
+        ],
+        "delta_v_required_mps": [
+          0.0612169633963911,
+          0.040330536094896674
+        ],
+        "delta_v_required_norm_mps": 0.07330804014006138
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08120268000198011,
+        -0.9966976094887036
+      ],
+      "contact_tangent": [
+        0.9966976094887036,
+        0.08120268000198011
+      ],
+      "active_delta_normal_mps": 0.056945092682414496,
+      "active_delta_tangent_mps": -0.40090010766730033,
+      "target_delta_normal_mps": -0.03522636742581131,
+      "target_delta_tangent_mps": 0.06428974869416268,
+      "pair_delta_sum_mps": [
+        -0.33373512142059775,
+        -0.048980664809445656
+      ],
+      "pair_delta_sum_norm_mps": 0.3373102974929707,
+      "pair_delta_relative_mps": [
+        0.45616904821337995,
+        0.129641736999239
+      ],
+      "pair_delta_relative_norm_mps": 0.47423325539240796,
+      "pair_impulse_closure_fraction": 0.7053273308854082,
+      "opposition_cosine": -0.9358424235058317,
+      "equivalent_unbalanced_pair_impulse_Ns": 6.4426266821157405,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3491764068603516,
+          8.290542602539062
+        ],
+        "early_velocity": [
+          -0.10594001412391663,
+          -0.012738943099975586
+        ],
+        "early_speed_mps": 0.10670317363546442,
+        "sim_endpoint": [
+          2.3275623321533203,
+          8.287348747253418
+        ],
+        "unity_endpoint": [
+          2.3185,
+          8.2844
+        ],
+        "endpoint_error_m": 0.009530003904597758,
+        "sim_tail_m": 0.021848774268291748,
+        "unity_tail_m": 0.0312853560602199,
+        "tail_distance_scale_required": 1.431904402327186,
+        "tail_direction_delta_deg_required": 2.9174598114235826,
+        "required_early_velocity": [
+          -0.15057094383112538,
+          -0.025938218685333345
+        ],
+        "delta_v_required_mps": [
+          -0.04463092970720875,
+          -0.013199275585357759
+        ],
+        "delta_v_required_norm_mps": 0.04654181735287128
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3771181106567383,
+          7.9718217849731445
+        ],
+        "early_velocity": [
+          0.10602723807096481,
+          -1.408910870552063
+        ],
+        "early_speed_mps": 1.4128947647906154,
+        "sim_endpoint": [
+          2.765028476715088,
+          3.786233901977539
+        ],
+        "unity_endpoint": [
+          2.6502,
+          3.7252
+        ],
+        "endpoint_error_m": 0.13004120983484946,
+        "sim_tail_m": 4.203524756484153,
+        "unity_tail_m": 4.255393084416031,
+        "tail_distance_scale_required": 1.0123392464507004,
+        "tail_direction_delta_deg_required": -1.615534248467605,
+        "required_early_velocity": [
+          0.06708180364320838,
+          -1.4287549017378909
+        ],
+        "delta_v_required_mps": [
+          -0.03894543442775643,
+          -0.019844031185827893
+        ],
+        "delta_v_required_norm_mps": 0.043709637798439664
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08125672889670492,
+        -0.996693204556451
+      ],
+      "contact_tangent": [
+        0.996693204556451,
+        0.08125672889670492
+      ],
+      "active_delta_normal_mps": 0.009529064925367396,
+      "active_delta_tangent_mps": -0.04555587431008391,
+      "target_delta_normal_mps": 0.016613832426860355,
+      "target_delta_tangent_mps": -0.04042911090492827,
+      "pair_delta_sum_mps": [
+        -0.08357636413496518,
+        -0.03304330677118565
+      ],
+      "pair_delta_sum_norm_mps": 0.08987140125977217,
+      "pair_delta_relative_mps": [
+        0.005685495279452321,
+        -0.006644755600470134
+      ],
+      "pair_delta_relative_norm_mps": 0.008745149144677514,
+      "pair_impulse_closure_fraction": 0.9957889444452547,
+      "opposition_cosine": 0.9831746747469152,
+      "equivalent_unbalanced_pair_impulse_Ns": 1.7165437640616485,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.34976863861084,
+          8.285184860229492
+        ],
+        "early_velocity": [
+          -0.07972590625286102,
+          -0.009587407112121582
+        ],
+        "early_speed_mps": 0.0803003020104753,
+        "sim_endpoint": [
+          2.3378303050994873,
+          8.28409194946289
+        ],
+        "unity_endpoint": [
+          2.3336,
+          8.2782
+        ],
+        "endpoint_error_m": 0.0072533130159951305,
+        "sim_tail_m": 0.011988255126249051,
+        "unity_tail_m": 0.017612868788288827,
+        "tail_distance_scale_required": 1.4691770072297115,
+        "tail_direction_delta_deg_required": 18.133730047980084,
+        "required_early_velocity": [
+          -0.10692991681370723,
+          -0.04984152727291307
+        ],
+        "delta_v_required_mps": [
+          -0.027204010560846204,
+          -0.04025412016079149
+        ],
+        "delta_v_required_norm_mps": 0.048584487035617366
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376594066619873,
+          7.9790120124816895
+        ],
+        "early_velocity": [
+          0.07979103177785873,
+          -1.0494024753570557
+        ],
+        "early_speed_mps": 1.0524315483857805,
+        "sim_endpoint": [
+          2.5849878787994385,
+          5.662623405456543
+        ],
+        "unity_endpoint": [
+          2.5593,
+          5.7764
+        ],
+        "endpoint_error_m": 0.11664039001615524,
+        "sim_tail_m": 2.325743786342475,
+        "unity_tail_m": 2.210176720450413,
+        "tail_distance_scale_required": 0.9503096314517921,
+        "tail_direction_delta_deg_required": -0.3989629812869142,
+        "required_early_velocity": [
+          0.06888028439775246,
+          -0.9977610929588309
+        ],
+        "delta_v_required_mps": [
+          -0.010910747380106278,
+          0.0516413823982248
+        ],
+        "delta_v_required_norm_mps": 0.05278140566896811
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08255155924057252,
+        -0.996586795049458
+      ],
+      "contact_tangent": [
+        0.996586795049458,
+        0.08255155924057252
+      ],
+      "active_delta_normal_mps": 0.037870991109184106,
+      "active_delta_tangent_mps": -0.03043419808245603,
+      "target_delta_normal_mps": -0.05236581898487811,
+      "target_delta_tangent_mps": -0.006610430124822274,
+      "pair_delta_sum_mps": [
+        -0.03811475794095248,
+        0.011387262237433311
+      ],
+      "pair_delta_sum_norm_mps": 0.039779448389356466,
+      "pair_delta_relative_mps": [
+        0.016293263180739925,
+        0.0918955025590163
+      ],
+      "pair_delta_relative_norm_mps": 0.09332874056608191,
+      "pair_impulse_closure_fraction": 0.3924342530607139,
+      "opposition_cosine": -0.6948962115694416,
+      "equivalent_unbalanced_pair_impulse_Ns": 0.7597874642367085,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3432226181030273,
+          6.400036811828613
+        ],
+        "early_velocity": [
+          -0.4118853509426117,
+          -0.45045006275177
+        ],
+        "early_speed_mps": 0.6103726741542351,
+        "sim_endpoint": [
+          1.8230032920837402,
+          5.823940277099609
+        ],
+        "unity_endpoint": [
+          1.7736,
+          5.8667
+        ],
+        "endpoint_error_m": 0.06533819075570976,
+        "sim_tail_m": 0.7762186318884182,
+        "unity_tail_m": 0.7803320331154278,
+        "tail_distance_scale_required": 1.0052992817461779,
+        "tail_direction_delta_deg_required": -4.802006590505679,
+        "required_early_velocity": [
+          -0.4505228762538251,
+          -0.41658486202792677
+        ],
+        "delta_v_required_mps": [
+          -0.038637525311213394,
+          0.03386520072384325
+        ],
+        "delta_v_required_norm_mps": 0.05137810995201019
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.5632359981536865,
+          6.188369274139404
+        ],
+        "early_velocity": [
+          0.4119488596916199,
+          -0.5812970399856567
+        ],
+        "early_speed_mps": 0.7124662179340941,
+        "sim_endpoint": [
+          3.1953136920928955,
+          5.337728500366211
+        ],
+        "unity_endpoint": [
+          3.2374,
+          5.2581
+        ],
+        "endpoint_error_m": 0.09006639430899464,
+        "sim_tail_m": 1.0597697566834814,
+        "unity_tail_m": 1.1488681490028743,
+        "tail_distance_scale_required": 1.0840733487226732,
+        "tail_direction_delta_deg_required": -0.6838310365537087,
+        "required_early_velocity": [
+          0.4390300240820709,
+          -0.6354536315433067
+        ],
+        "delta_v_required_mps": [
+          0.02708116439045105,
+          -0.05415659155764996
+        ],
+        "delta_v_required_norm_mps": 0.060550193012778725
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.697623946529406,
+        -0.7164641157997631
+      ],
+      "contact_tangent": [
+        0.7164641157997631,
+        0.697623946529406
+      ],
+      "active_delta_normal_mps": -0.05121766398472835,
+      "active_delta_tangent_mps": -0.004057225429811448,
+      "target_delta_normal_mps": 0.05769372326375867,
+      "target_delta_tangent_mps": -0.01837825263319633,
+      "pair_delta_sum_mps": [
+        -0.011556360920762343,
+        -0.02029139083380671
+      ],
+      "pair_delta_sum_norm_mps": 0.02335144577325391,
+      "pair_delta_relative_mps": [
+        0.06571868970166445,
+        -0.0880217922814932
+      ],
+      "pair_delta_relative_norm_mps": 0.10984890574124985,
+      "pair_impulse_closure_fraction": 0.2086286055869171,
+      "opposition_cosine": -0.9258808002739545,
+      "equivalent_unbalanced_pair_impulse_Ns": 0.44601261426914973,
+      "classification": "pair_impulse_like"
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.350196361541748,
+          6.489444255828857
+        ],
+        "early_velocity": [
+          -0.0645270124077797,
+          -0.008001148700714111
+        ],
+        "early_speed_mps": 0.06502117894043981,
+        "sim_endpoint": [
+          2.3425869941711426,
+          6.488579273223877
+        ],
+        "unity_endpoint": [
+          2.3435,
+          6.483
+        ],
+        "endpoint_error_m": 0.005653482939763956,
+        "sim_tail_m": 0.007658372326268421,
+        "unity_tail_m": 0.009293529527879478,
+        "tail_distance_scale_required": 1.2135123668514292,
+        "tail_direction_delta_deg_required": 37.415734119085506,
+        "required_early_velocity": [
+          -0.056293610352426034,
+          -0.05528898081273836
+        ],
+        "delta_v_required_mps": [
+          0.00823340205535366,
+          -0.047287832112024246
+        ],
+        "delta_v_required_norm_mps": 0.04799924973642915
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376290798187256,
+          6.182222843170166
+        ],
+        "early_velocity": [
+          0.06462216377258301,
+          -0.8888301253318787
+        ],
+        "early_speed_mps": 0.8911761979250421,
+        "sim_endpoint": [
+          2.5282320976257324,
+          4.524882793426514
+        ],
+        "unity_endpoint": [
+          2.4803,
+          4.5072
+        ],
+        "endpoint_error_m": 0.05108979512747609,
+        "sim_tail_m": 1.6642902988839852,
+        "unity_tail_m": 1.678248920513161,
+        "tail_distance_scale_required": 1.0083871315229898,
+        "tail_direction_delta_deg_required": -1.6849354025220564,
+        "required_early_velocity": [
+          0.038782132133849526,
+          -0.8978133797809711
+        ],
+        "delta_v_required_mps": [
+          -0.025840031638733482,
+          -0.008983254449092426
+        ],
+        "delta_v_required_norm_mps": 0.02735701181759233
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08093063474179668,
+        -0.9967197361145661
+      ],
+      "contact_tangent": [
+        0.9967197361145661,
+        0.08093063474179668
+      ],
+      "active_delta_normal_mps": 0.0477990499985509,
+      "active_delta_tangent_mps": 0.004379360055547588,
+      "target_delta_normal_mps": 0.0068625368416785956,
+      "target_delta_tangent_mps": -0.026482290000762593,
+      "pair_delta_sum_mps": [
+        -0.017606629583379822,
+        -0.05627108656111667
+      ],
+      "pair_delta_sum_norm_mps": 0.058961246493396235,
+      "pair_delta_relative_mps": [
+        -0.03407343369408714,
+        0.03830457766293182
+      ],
+      "pair_delta_relative_norm_mps": 0.05126635888807521,
+      "pair_impulse_closure_fraction": 0.7824332746539986,
+      "opposition_cosine": 0.16148402104366966,
+      "equivalent_unbalanced_pair_impulse_Ns": 1.1261598080238682,
+      "classification": "pair_check_weak"
+    }
+  ],
+  "rows": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail",
+          "large_tail_scale"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3506062030792236,
+          5.489348888397217
+        ],
+        "early_velocity": [
+          -0.053887270390987396,
+          -0.007126748561859131
+        ],
+        "early_speed_mps": 0.05435649414058406,
+        "sim_endpoint": [
+          2.345421314239502,
+          5.488759517669678
+        ],
+        "unity_endpoint": [
+          2.3388,
+          5.4833
+        ],
+        "endpoint_error_m": 0.008581849185563482,
+        "sim_tail_m": 0.005218278464661536,
+        "unity_tail_m": 0.013265575071961853,
+        "tail_distance_scale_required": 2.542136292993378,
+        "tail_direction_delta_deg_required": 20.643232227270637,
+        "required_early_velocity": [
+          -0.12180608698591816,
+          -0.06524903306397471
+        ],
+        "delta_v_required_mps": [
+          -0.06791881659493076,
+          -0.05812228450211558
+        ],
+        "delta_v_required_norm_mps": 0.08939331967994425
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376081705093384,
+          5.184258937835693
+        ],
+        "early_velocity": [
+          0.05415567010641098,
+          -0.7870427370071411
+        ],
+        "early_speed_mps": 0.7889037371443783,
+        "sim_endpoint": [
+          2.4896321296691895,
+          3.8871958255767822
+        ],
+        "unity_endpoint": [
+          2.4656,
+          3.8612
+        ],
+        "endpoint_error_m": 0.035402347434248214,
+        "sim_tail_m": 1.302023969097389,
+        "unity_tail_m": 1.3260838880364623,
+        "tail_distance_scale_required": 1.0184788602284738,
+        "tail_direction_delta_deg_required": -1.1324224393087305,
+        "required_early_velocity": [
+          0.03930370966979491,
+          -0.8025198986008492
+        ],
+        "delta_v_required_mps": [
+          -0.014851960436616067,
+          -0.015477161593708044
+        ],
+        "delta_v_required_norm_mps": 0.021450483906163057
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.0802875523363226,
+        -0.9967717436503917
+      ],
+      "contact_tangent": [
+        0.9967717436503917,
+        0.0802875523363226
+      ],
+      "active_delta_normal_mps": 0.052481615326131284,
+      "active_delta_tangent_mps": -0.07236605320287054,
+      "target_delta_normal_mps": 0.014234769797667437,
+      "target_delta_tangent_mps": -0.016046637922504988,
+      "pair_delta_sum_mps": [
+        -0.08277077703154684,
+        -0.07359944609582363
+      ],
+      "pair_delta_sum_norm_mps": 0.110760462241804,
+      "pair_delta_relative_mps": [
+        0.0530668561583147,
+        0.04264512290840754
+      ],
+      "pair_delta_relative_norm_mps": 0.06807861433960335,
+      "pair_impulse_closure_fraction": 0.9992481190503485,
+      "opposition_cosine": 0.9951842219539038,
+      "equivalent_unbalanced_pair_impulse_Ns": 2.1155248288184567,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail",
+          "large_tail_scale"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3491406440734863,
+          5.4797892570495605
+        ],
+        "early_velocity": [
+          -0.11569283157587051,
+          -0.04074513912200928
+        ],
+        "early_speed_mps": 0.12265805167258542,
+        "sim_endpoint": [
+          2.32187557220459,
+          5.468932151794434
+        ],
+        "unity_endpoint": [
+          2.2847,
+          5.4758
+        ],
+        "endpoint_error_m": 0.037804636061115206,
+        "sim_tail_m": 0.02934724652394149,
+        "unity_tail_m": 0.0645640053002695,
+        "tail_distance_scale_required": 2.2000021449234826,
+        "tail_direction_delta_deg_required": -18.170298745460034,
+        "required_early_velocity": [
+          -0.2697856835315771,
+          -0.005797890068481004
+        ],
+        "delta_v_required_mps": [
+          -0.1540928519557066,
+          0.03494724905352827
+        ],
+        "delta_v_required_norm_mps": 0.15800606709950302
+      },
+      "target": {
+        "role": "target",
+        "status": "unity_not_in_play",
+        "requested_time_s": 0.02
+      },
+      "status": "missing_role_residual"
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.350196361541748,
+          6.489444255828857
+        ],
+        "early_velocity": [
+          -0.0645270124077797,
+          -0.008001148700714111
+        ],
+        "early_speed_mps": 0.06502117894043981,
+        "sim_endpoint": [
+          2.3425869941711426,
+          6.488579273223877
+        ],
+        "unity_endpoint": [
+          2.3435,
+          6.483
+        ],
+        "endpoint_error_m": 0.005653482939763956,
+        "sim_tail_m": 0.007658372326268421,
+        "unity_tail_m": 0.009293529527879478,
+        "tail_distance_scale_required": 1.2135123668514292,
+        "tail_direction_delta_deg_required": 37.415734119085506,
+        "required_early_velocity": [
+          -0.056293610352426034,
+          -0.05528898081273836
+        ],
+        "delta_v_required_mps": [
+          0.00823340205535366,
+          -0.047287832112024246
+        ],
+        "delta_v_required_norm_mps": 0.04799924973642915
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376290798187256,
+          6.182222843170166
+        ],
+        "early_velocity": [
+          0.06462216377258301,
+          -0.8888301253318787
+        ],
+        "early_speed_mps": 0.8911761979250421,
+        "sim_endpoint": [
+          2.5282320976257324,
+          4.524882793426514
+        ],
+        "unity_endpoint": [
+          2.4803,
+          4.5072
+        ],
+        "endpoint_error_m": 0.05108979512747609,
+        "sim_tail_m": 1.6642902988839852,
+        "unity_tail_m": 1.678248920513161,
+        "tail_distance_scale_required": 1.0083871315229898,
+        "tail_direction_delta_deg_required": -1.6849354025220564,
+        "required_early_velocity": [
+          0.038782132133849526,
+          -0.8978133797809711
+        ],
+        "delta_v_required_mps": [
+          -0.025840031638733482,
+          -0.008983254449092426
+        ],
+        "delta_v_required_norm_mps": 0.02735701181759233
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08093063474179668,
+        -0.9967197361145661
+      ],
+      "contact_tangent": [
+        0.9967197361145661,
+        0.08093063474179668
+      ],
+      "active_delta_normal_mps": 0.0477990499985509,
+      "active_delta_tangent_mps": 0.004379360055547588,
+      "target_delta_normal_mps": 0.0068625368416785956,
+      "target_delta_tangent_mps": -0.026482290000762593,
+      "pair_delta_sum_mps": [
+        -0.017606629583379822,
+        -0.05627108656111667
+      ],
+      "pair_delta_sum_norm_mps": 0.058961246493396235,
+      "pair_delta_relative_mps": [
+        -0.03407343369408714,
+        0.03830457766293182
+      ],
+      "pair_delta_relative_norm_mps": 0.05126635888807521,
+      "pair_impulse_closure_fraction": 0.7824332746539986,
+      "opposition_cosine": 0.16148402104366966,
+      "equivalent_unbalanced_pair_impulse_Ns": 1.1261598080238682,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail",
+          "large_tail_scale"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.349508285522461,
+          6.489408016204834
+        ],
+        "early_velocity": [
+          -0.09485074877738953,
+          -0.011311769485473633
+        ],
+        "early_speed_mps": 0.09552288036132471,
+        "sim_endpoint": [
+          2.3323521614074707,
+          6.487168788909912
+        ],
+        "unity_endpoint": [
+          2.261,
+          6.4702
+        ],
+        "endpoint_error_m": 0.07334214841812915,
+        "sim_tail_m": 0.01730163961962197,
+        "unity_tail_m": 0.09056856238591074,
+        "tail_distance_scale_required": 5.234680895976818,
+        "tail_direction_delta_deg_required": 4.808184325470083,
+        "required_early_velocity": [
+          -0.4898028335943784,
+          -0.10062297038981596
+        ],
+        "delta_v_required_mps": [
+          -0.39495208481698885,
+          -0.08931120090434233
+        ],
+        "delta_v_required_norm_mps": 0.40492423971437147
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376896619796753,
+          6.174746036529541
+        ],
+        "early_velocity": [
+          0.09492892026901245,
+          -1.262671709060669
+        ],
+        "early_speed_mps": 1.2662351064338846,
+        "sim_endpoint": [
+          2.691636323928833,
+          2.8164846897125244
+        ],
+        "unity_endpoint": [
+          2.8527,
+          2.9269
+        ],
+        "endpoint_error_m": 0.1952768508949212,
+        "sim_tail_m": 3.3729779653716077,
+        "unity_tail_m": 3.282513173410502,
+        "tail_distance_scale_required": 0.9731795484910205,
+        "tail_direction_delta_deg_required": 2.980258922431321,
+        "required_early_velocity": [
+          0.15614588366540355,
+          -1.2223411729657723
+        ],
+        "delta_v_required_mps": [
+          0.0612169633963911,
+          0.040330536094896674
+        ],
+        "delta_v_required_norm_mps": 0.07330804014006138
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08120268000198011,
+        -0.9966976094887036
+      ],
+      "contact_tangent": [
+        0.9966976094887036,
+        0.08120268000198011
+      ],
+      "active_delta_normal_mps": 0.056945092682414496,
+      "active_delta_tangent_mps": -0.40090010766730033,
+      "target_delta_normal_mps": -0.03522636742581131,
+      "target_delta_tangent_mps": 0.06428974869416268,
+      "pair_delta_sum_mps": [
+        -0.33373512142059775,
+        -0.048980664809445656
+      ],
+      "pair_delta_sum_norm_mps": 0.3373102974929707,
+      "pair_delta_relative_mps": [
+        0.45616904821337995,
+        0.129641736999239
+      ],
+      "pair_delta_relative_norm_mps": 0.47423325539240796,
+      "pair_impulse_closure_fraction": 0.7053273308854082,
+      "opposition_cosine": -0.9358424235058317,
+      "equivalent_unbalanced_pair_impulse_Ns": 6.4426266821157405,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.34976863861084,
+          8.285184860229492
+        ],
+        "early_velocity": [
+          -0.07972590625286102,
+          -0.009587407112121582
+        ],
+        "early_speed_mps": 0.0803003020104753,
+        "sim_endpoint": [
+          2.3378303050994873,
+          8.28409194946289
+        ],
+        "unity_endpoint": [
+          2.3336,
+          8.2782
+        ],
+        "endpoint_error_m": 0.0072533130159951305,
+        "sim_tail_m": 0.011988255126249051,
+        "unity_tail_m": 0.017612868788288827,
+        "tail_distance_scale_required": 1.4691770072297115,
+        "tail_direction_delta_deg_required": 18.133730047980084,
+        "required_early_velocity": [
+          -0.10692991681370723,
+          -0.04984152727291307
+        ],
+        "delta_v_required_mps": [
+          -0.027204010560846204,
+          -0.04025412016079149
+        ],
+        "delta_v_required_norm_mps": 0.048584487035617366
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.376594066619873,
+          7.9790120124816895
+        ],
+        "early_velocity": [
+          0.07979103177785873,
+          -1.0494024753570557
+        ],
+        "early_speed_mps": 1.0524315483857805,
+        "sim_endpoint": [
+          2.5849878787994385,
+          5.662623405456543
+        ],
+        "unity_endpoint": [
+          2.5593,
+          5.7764
+        ],
+        "endpoint_error_m": 0.11664039001615524,
+        "sim_tail_m": 2.325743786342475,
+        "unity_tail_m": 2.210176720450413,
+        "tail_distance_scale_required": 0.9503096314517921,
+        "tail_direction_delta_deg_required": -0.3989629812869142,
+        "required_early_velocity": [
+          0.06888028439775246,
+          -0.9977610929588309
+        ],
+        "delta_v_required_mps": [
+          -0.010910747380106278,
+          0.0516413823982248
+        ],
+        "delta_v_required_norm_mps": 0.05278140566896811
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08255155924057252,
+        -0.996586795049458
+      ],
+      "contact_tangent": [
+        0.996586795049458,
+        0.08255155924057252
+      ],
+      "active_delta_normal_mps": 0.037870991109184106,
+      "active_delta_tangent_mps": -0.03043419808245603,
+      "target_delta_normal_mps": -0.05236581898487811,
+      "target_delta_tangent_mps": -0.006610430124822274,
+      "pair_delta_sum_mps": [
+        -0.03811475794095248,
+        0.011387262237433311
+      ],
+      "pair_delta_sum_norm_mps": 0.039779448389356466,
+      "pair_delta_relative_mps": [
+        0.016293263180739925,
+        0.0918955025590163
+      ],
+      "pair_delta_relative_norm_mps": 0.09332874056608191,
+      "pair_impulse_closure_fraction": 0.3924342530607139,
+      "opposition_cosine": -0.6948962115694416,
+      "equivalent_unbalanced_pair_impulse_Ns": 0.7597874642367085,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "weak",
+        "tail_quality_reasons": [
+          "short_sim_tail",
+          "short_unity_tail"
+        ],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3491764068603516,
+          8.290542602539062
+        ],
+        "early_velocity": [
+          -0.10594001412391663,
+          -0.012738943099975586
+        ],
+        "early_speed_mps": 0.10670317363546442,
+        "sim_endpoint": [
+          2.3275623321533203,
+          8.287348747253418
+        ],
+        "unity_endpoint": [
+          2.3185,
+          8.2844
+        ],
+        "endpoint_error_m": 0.009530003904597758,
+        "sim_tail_m": 0.021848774268291748,
+        "unity_tail_m": 0.0312853560602199,
+        "tail_distance_scale_required": 1.431904402327186,
+        "tail_direction_delta_deg_required": 2.9174598114235826,
+        "required_early_velocity": [
+          -0.15057094383112538,
+          -0.025938218685333345
+        ],
+        "delta_v_required_mps": [
+          -0.04463092970720875,
+          -0.013199275585357759
+        ],
+        "delta_v_required_norm_mps": 0.04654181735287128
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3771181106567383,
+          7.9718217849731445
+        ],
+        "early_velocity": [
+          0.10602723807096481,
+          -1.408910870552063
+        ],
+        "early_speed_mps": 1.4128947647906154,
+        "sim_endpoint": [
+          2.765028476715088,
+          3.786233901977539
+        ],
+        "unity_endpoint": [
+          2.6502,
+          3.7252
+        ],
+        "endpoint_error_m": 0.13004120983484946,
+        "sim_tail_m": 4.203524756484153,
+        "unity_tail_m": 4.255393084416031,
+        "tail_distance_scale_required": 1.0123392464507004,
+        "tail_direction_delta_deg_required": -1.615534248467605,
+        "required_early_velocity": [
+          0.06708180364320838,
+          -1.4287549017378909
+        ],
+        "delta_v_required_mps": [
+          -0.03894543442775643,
+          -0.019844031185827893
+        ],
+        "delta_v_required_norm_mps": 0.043709637798439664
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.08125672889670492,
+        -0.996693204556451
+      ],
+      "contact_tangent": [
+        0.996693204556451,
+        0.08125672889670492
+      ],
+      "active_delta_normal_mps": 0.009529064925367396,
+      "active_delta_tangent_mps": -0.04555587431008391,
+      "target_delta_normal_mps": 0.016613832426860355,
+      "target_delta_tangent_mps": -0.04042911090492827,
+      "pair_delta_sum_mps": [
+        -0.08357636413496518,
+        -0.03304330677118565
+      ],
+      "pair_delta_sum_norm_mps": 0.08987140125977217,
+      "pair_delta_relative_mps": [
+        0.005685495279452321,
+        -0.006644755600470134
+      ],
+      "pair_delta_relative_norm_mps": 0.008745149144677514,
+      "pair_impulse_closure_fraction": 0.9957889444452547,
+      "opposition_cosine": 0.9831746747469152,
+      "equivalent_unbalanced_pair_impulse_Ns": 1.7165437640616485,
+      "classification": "pair_check_weak"
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3593218326568604,
+          6.431949615478516
+        ],
+        "early_velocity": [
+          0.39355334639549255,
+          -0.24753737449645996
+        ],
+        "early_speed_mps": 0.4649290141857047,
+        "sim_endpoint": [
+          2.7422287464141846,
+          6.2004594802856445
+        ],
+        "unity_endpoint": [
+          2.7378,
+          6.2085
+        ],
+        "endpoint_error_m": 0.009179528968203654,
+        "sim_tail_m": 0.4474431665527731,
+        "unity_tail_m": 0.43951729637514625,
+        "tail_distance_scale_required": 0.9822863085859821,
+        "tail_direction_delta_deg_required": 0.5983068318128015,
+        "required_early_velocity": [
+          0.38910004294797007,
+          -0.23910253624502417
+        ],
+        "delta_v_required_mps": [
+          -0.004453303447522483,
+          0.008434838251435789
+        ],
+        "delta_v_required_norm_mps": 0.009538260214714211
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.18713116645813,
+          6.18428897857666
+        ],
+        "early_velocity": [
+          -0.3934897482395172,
+          -0.7855101823806763
+        ],
+        "early_speed_mps": 0.8785558767621567,
+        "sim_endpoint": [
+          1.468359112739563,
+          4.735141754150391
+        ],
+        "unity_endpoint": [
+          1.4522,
+          4.7086
+        ],
+        "endpoint_error_m": 0.03107380951717546,
+        "sim_tail_m": 1.6176096387166983,
+        "unity_tail_m": 1.648569616644725,
+        "tail_distance_scale_required": 1.0191393381858111,
+        "tail_direction_delta_deg_required": -0.09323473050087745,
+        "required_early_velocity": [
+          -0.40232303826481036,
+          -0.7998907053537884
+        ],
+        "delta_v_required_mps": [
+          -0.00883329002529315,
+          -0.014380522973112098
+        ],
+        "delta_v_required_norm_mps": 0.016876802234165933
+      },
+      "status": "ok",
+      "contact_normal": [
+        -0.5510881804626301,
+        -0.8344470129099795
+      ],
+      "contact_tangent": [
+        0.8344470129099795,
+        -0.5510881804626301
+      ],
+      "active_delta_normal_mps": -0.004584262689346305,
+      "active_delta_tangent_mps": -0.00836438542384719,
+      "target_delta_normal_mps": 0.016867706166534227,
+      "target_delta_tangent_mps": 0.0005540237635800107,
+      "pair_delta_sum_mps": [
+        -0.013286593472815633,
+        -0.005945684721676309
+      ],
+      "pair_delta_sum_norm_mps": 0.014556260952643096,
+      "pair_delta_relative_mps": [
+        -0.004379986577770667,
+        -0.022815361224547887
+      ],
+      "pair_delta_relative_norm_mps": 0.023231982055521103,
+      "pair_impulse_closure_fraction": 0.5510591156395394,
+      "opposition_cosine": -0.5091467348684668,
+      "equivalent_unbalanced_pair_impulse_Ns": 0.27802458419548315,
+      "classification": "non_closing_pair"
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "snapshot_time_s": 0.02,
+      "active": {
+        "role": "active",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.3432226181030273,
+          6.400036811828613
+        ],
+        "early_velocity": [
+          -0.4118853509426117,
+          -0.45045006275177
+        ],
+        "early_speed_mps": 0.6103726741542351,
+        "sim_endpoint": [
+          1.8230032920837402,
+          5.823940277099609
+        ],
+        "unity_endpoint": [
+          1.7736,
+          5.8667
+        ],
+        "endpoint_error_m": 0.06533819075570976,
+        "sim_tail_m": 0.7762186318884182,
+        "unity_tail_m": 0.7803320331154278,
+        "tail_distance_scale_required": 1.0052992817461779,
+        "tail_direction_delta_deg_required": -4.802006590505679,
+        "required_early_velocity": [
+          -0.4505228762538251,
+          -0.41658486202792677
+        ],
+        "delta_v_required_mps": [
+          -0.038637525311213394,
+          0.03386520072384325
+        ],
+        "delta_v_required_norm_mps": 0.05137810995201019
+      },
+      "target": {
+        "role": "target",
+        "status": "ok",
+        "tail_quality": "good",
+        "tail_quality_reasons": [],
+        "snapshot_key": "0.020000",
+        "requested_time_s": 0.02,
+        "early_position": [
+          2.5632359981536865,
+          6.188369274139404
+        ],
+        "early_velocity": [
+          0.4119488596916199,
+          -0.5812970399856567
+        ],
+        "early_speed_mps": 0.7124662179340941,
+        "sim_endpoint": [
+          3.1953136920928955,
+          5.337728500366211
+        ],
+        "unity_endpoint": [
+          3.2374,
+          5.2581
+        ],
+        "endpoint_error_m": 0.09006639430899464,
+        "sim_tail_m": 1.0597697566834814,
+        "unity_tail_m": 1.1488681490028743,
+        "tail_distance_scale_required": 1.0840733487226732,
+        "tail_direction_delta_deg_required": -0.6838310365537087,
+        "required_early_velocity": [
+          0.4390300240820709,
+          -0.6354536315433067
+        ],
+        "delta_v_required_mps": [
+          0.02708116439045105,
+          -0.05415659155764996
+        ],
+        "delta_v_required_norm_mps": 0.060550193012778725
+      },
+      "status": "ok",
+      "contact_normal": [
+        0.697623946529406,
+        -0.7164641157997631
+      ],
+      "contact_tangent": [
+        0.7164641157997631,
+        0.697623946529406
+      ],
+      "active_delta_normal_mps": -0.05121766398472835,
+      "active_delta_tangent_mps": -0.004057225429811448,
+      "target_delta_normal_mps": 0.05769372326375867,
+      "target_delta_tangent_mps": -0.01837825263319633,
+      "pair_delta_sum_mps": [
+        -0.011556360920762343,
+        -0.02029139083380671
+      ],
+      "pair_delta_sum_norm_mps": 0.02335144577325391,
+      "pair_delta_relative_mps": [
+        0.06571868970166445,
+        -0.0880217922814932
+      ],
+      "pair_delta_relative_norm_mps": 0.10984890574124985,
+      "pair_impulse_closure_fraction": 0.2086286055869171,
+      "opposition_cosine": -0.9258808002739545,
+      "equivalent_unbalanced_pair_impulse_Ns": 0.44601261426914973,
+      "classification": "pair_impulse_like"
+    }
+  ],
+  "snapshot_stability": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3506062030792236,
+                5.489348888397217
+              ],
+              "early_velocity": [
+                -0.053887270390987396,
+                -0.007126748561859131
+              ],
+              "early_speed_mps": 0.05435649414058406,
+              "sim_endpoint": [
+                2.345421314239502,
+                5.488759517669678
+              ],
+              "unity_endpoint": [
+                2.3388,
+                5.4833
+              ],
+              "endpoint_error_m": 0.008581849185563482,
+              "sim_tail_m": 0.005218278464661536,
+              "unity_tail_m": 0.013265575071961853,
+              "tail_distance_scale_required": 2.542136292993378,
+              "tail_direction_delta_deg_required": 20.643232227270637,
+              "required_early_velocity": [
+                -0.12180608698591816,
+                -0.06524903306397471
+              ],
+              "delta_v_required_mps": [
+                -0.06791881659493076,
+                -0.05812228450211558
+              ],
+              "delta_v_required_norm_mps": 0.08939331967994425
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.349052906036377,
+                5.4891438484191895
+              ],
+              "early_velocity": [
+                -0.04756295308470726,
+                -0.006290363613516092
+              ],
+              "early_speed_mps": 0.04797711100648216,
+              "sim_endpoint": [
+                2.345421314239502,
+                5.488759517669678
+              ],
+              "unity_endpoint": [
+                2.3388,
+                5.4833
+              ],
+              "endpoint_error_m": 0.008581849185563482,
+              "sim_tail_m": 0.0036518719999679653,
+              "unity_tail_m": 0.011801383246774088,
+              "tail_distance_scale_required": 3.2315982725784504,
+              "tail_direction_delta_deg_required": 23.640724692946776,
+              "required_early_velocity": [
+                -0.13265366588947955,
+                -0.0802574542309808
+              ],
+              "delta_v_required_mps": [
+                -0.08509071280477229,
+                -0.0739670906174647
+              ],
+              "delta_v_required_norm_mps": 0.1127455537927615
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.347276449203491,
+                5.488921165466309
+              ],
+              "early_velocity": [
+                -0.030600856989622116,
+                -0.0037015811540186405
+              ],
+              "early_speed_mps": 0.03082392174171046,
+              "sim_endpoint": [
+                2.345421314239502,
+                5.488759517669678
+              ],
+              "unity_endpoint": [
+                2.3388,
+                5.4833
+              ],
+              "endpoint_error_m": 0.008581849185563482,
+              "sim_tail_m": 0.0018621642636381561,
+              "unity_tail_m": 0.010170923866541772,
+              "tail_distance_scale_required": 5.4618832855650385,
+              "tail_direction_delta_deg_required": 28.570477605166243,
+              "required_early_velocity": [
+                -0.13711694070561128,
+                -0.09768782182759787
+              ],
+              "delta_v_required_mps": [
+                -0.10651608371598917,
+                -0.09398624067357923
+              ],
+              "delta_v_required_norm_mps": 0.14205312219780167
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale",
+                "low_early_speed"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3454976081848145,
+                5.48875093460083
+              ],
+              "early_velocity": [
+                -0.0072601959109306335,
+                4.118506330996752e-05
+              ],
+              "early_speed_mps": 0.00726031272567055,
+              "sim_endpoint": [
+                2.345421314239502,
+                5.488759517669678
+              ],
+              "unity_endpoint": [
+                2.3388,
+                5.4833
+              ],
+              "endpoint_error_m": 0.008581849185563482,
+              "sim_tail_m": 7.677522492438787e-05,
+              "unity_tail_m": 0.008635429544604136,
+              "tail_distance_scale_required": 112.47677298384662,
+              "tail_direction_delta_deg_required": 45.55964991088752,
+              "required_early_velocity": [
+                -0.5750656230666394,
+                -0.5797948885209234
+              ],
+              "delta_v_required_mps": [
+                -0.5678054271557088,
+                -0.5798360735842334
+              ],
+              "delta_v_required_norm_mps": 0.8115496752122185
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.2889354177206815,
+          "delta_v_norm_range_mps": 0.7221563555322743,
+          "tail_direction_delta_abs_mean_deg": 29.603521109067792,
+          "tail_scale_median": 4.3467407790717445
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.376081705093384,
+                5.184258937835693
+              ],
+              "early_velocity": [
+                0.05415567010641098,
+                -0.7870427370071411
+              ],
+              "early_speed_mps": 0.7889037371443783,
+              "sim_endpoint": [
+                2.4896321296691895,
+                3.8871958255767822
+              ],
+              "unity_endpoint": [
+                2.4656,
+                3.8612
+              ],
+              "endpoint_error_m": 0.035402347434248214,
+              "sim_tail_m": 1.302023969097389,
+              "unity_tail_m": 1.3260838880364623,
+              "tail_distance_scale_required": 1.0184788602284738,
+              "tail_direction_delta_deg_required": -1.1324224393087305,
+              "required_early_velocity": [
+                0.03930370966979491,
+                -0.8025198986008492
+              ],
+              "delta_v_required_mps": [
+                -0.014851960436616067,
+                -0.015477161593708044
+              ],
+              "delta_v_required_norm_mps": 0.021450483906163057
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.377701997756958,
+                5.160712718963623
+              ],
+              "early_velocity": [
+                0.0537126399576664,
+                -0.7806042432785034
+              ],
+              "early_speed_mps": 0.7824500190527359,
+              "sim_endpoint": [
+                2.4896321296691895,
+                3.8871958255767822
+              ],
+              "unity_endpoint": [
+                2.4656,
+                3.8612
+              ],
+              "endpoint_error_m": 0.035402347434248214,
+              "sim_tail_m": 1.2784262325889435,
+              "unity_tail_m": 1.3024820020048435,
+              "tail_distance_scale_required": 1.018816705104044,
+              "tail_direction_delta_deg_required": -1.1533053032685034,
+              "required_early_velocity": [
+                0.038704904382849,
+                -0.7962329822154294
+              ],
+              "delta_v_required_mps": [
+                -0.015007735574817396,
+                -0.015628738936925957
+              ],
+              "delta_v_required_norm_mps": 0.021667708873857088
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3803467750549316,
+                5.122287273406982
+              ],
+              "early_velocity": [
+                0.052666351199150085,
+                -0.7635394334793091
+              ],
+              "early_speed_mps": 0.7653536509526406,
+              "sim_endpoint": [
+                2.4896321296691895,
+                3.8871958255767822
+              ],
+              "unity_endpoint": [
+                2.4656,
+                3.8612
+              ],
+              "endpoint_error_m": 0.035402347434248214,
+              "sim_tail_m": 1.2399170025596327,
+              "unity_tail_m": 1.2639656733917226,
+              "tail_distance_scale_required": 1.0193953875803339,
+              "tail_direction_delta_deg_required": -1.1890890709133526,
+              "required_early_velocity": [
+                0.037523961274079386,
+                -0.779295093593758
+              ],
+              "delta_v_required_mps": [
+                -0.0151423899250707,
+                -0.015755660114448955
+              ],
+              "delta_v_required_norm_mps": 0.021852523842451708
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.385589838027954,
+                5.047229766845703
+              ],
+              "early_velocity": [
+                0.052011266350746155,
+                -0.7399816513061523
+              ],
+              "early_speed_mps": 0.7418072634432668,
+              "sim_endpoint": [
+                2.4896321296691895,
+                3.8871958255767822
+              ],
+              "unity_endpoint": [
+                2.4656,
+                3.8612
+              ],
+              "endpoint_error_m": 0.035402347434248214,
+              "sim_tail_m": 1.1646903207916972,
+              "unity_tail_m": 1.1887254661455124,
+              "tail_distance_scale_required": 1.0206365116329612,
+              "tail_direction_delta_deg_required": -1.2657340930944674,
+              "required_early_velocity": [
+                0.036388551682188255,
+                -0.7562406172965512
+              ],
+              "delta_v_required_mps": [
+                -0.0156227146685579,
+                -0.016258965990398888
+              ],
+              "delta_v_required_norm_mps": 0.022548241365838752
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.021879739497077652,
+          "delta_v_norm_range_mps": 0.0010977574596756946,
+          "tail_direction_delta_abs_mean_deg": 1.1851377266462635,
+          "tail_scale_median": 1.019106046342189
+        }
+      }
+    },
+    {
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3491406440734863,
+                5.4797892570495605
+              ],
+              "early_velocity": [
+                -0.11569283157587051,
+                -0.04074513912200928
+              ],
+              "early_speed_mps": 0.12265805167258542,
+              "sim_endpoint": [
+                2.32187557220459,
+                5.468932151794434
+              ],
+              "unity_endpoint": [
+                2.2847,
+                5.4758
+              ],
+              "endpoint_error_m": 0.037804636061115206,
+              "sim_tail_m": 0.02934724652394149,
+              "unity_tail_m": 0.0645640053002695,
+              "tail_distance_scale_required": 2.2000021449234826,
+              "tail_direction_delta_deg_required": -18.170298745460034,
+              "required_early_velocity": [
+                -0.2697856835315771,
+                -0.005797890068481004
+              ],
+              "delta_v_required_mps": [
+                -0.1540928519557066,
+                0.03494724905352827
+              ],
+              "delta_v_required_norm_mps": 0.15800606709950302
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.345738649368286,
+                5.478533744812012
+              ],
+              "early_velocity": [
+                -0.108710877597332,
+                -0.044090136885643005
+              ],
+              "early_speed_mps": 0.11731153003254556,
+              "sim_endpoint": [
+                2.32187557220459,
+                5.468932151794434
+              ],
+              "unity_endpoint": [
+                2.2847,
+                5.4758
+              ],
+              "endpoint_error_m": 0.037804636061115206,
+              "sim_tail_m": 0.025722306276765472,
+              "unity_tail_m": 0.061099836967063885,
+              "tail_distance_scale_required": 2.3753638693842296,
+              "tail_direction_delta_deg_required": -19.35357663983978,
+              "required_early_velocity": [
+                -0.2783430391128753,
+                -0.013236081021703323
+              ],
+              "delta_v_required_mps": [
+                -0.16963216151554328,
+                0.030854055863939682
+              ],
+              "delta_v_required_norm_mps": 0.17241532119765482
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3408970832824707,
+                5.476570129394531
+              ],
+              "early_velocity": [
+                -0.09217572957277298,
+                -0.03738401457667351
+              ],
+              "early_speed_mps": 0.0994682344678034,
+              "sim_endpoint": [
+                2.32187557220459,
+                5.468932151794434
+              ],
+              "unity_endpoint": [
+                2.2847,
+                5.4758
+              ],
+              "endpoint_error_m": 0.037804636061115206,
+              "sim_tail_m": 0.020497721471069357,
+              "unity_tail_m": 0.05620235999263087,
+              "tail_distance_scale_required": 2.741883290391828,
+              "tail_direction_delta_deg_required": -21.092504909743063,
+              "required_early_velocity": [
+                -0.2726900985512477,
+                -0.0046820126191513866
+              ],
+              "delta_v_required_mps": [
+                -0.18051436897847473,
+                0.03270200195752212
+              ],
+              "delta_v_required_norm_mps": 0.18345260515928005
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.332878589630127,
+                5.473318576812744
+              ],
+              "early_velocity": [
+                -0.0703563392162323,
+                -0.028534753248095512
+              ],
+              "early_speed_mps": 0.07592263569475999,
+              "sim_endpoint": [
+                2.32187557220459,
+                5.468932151794434
+              ],
+              "unity_endpoint": [
+                2.2847,
+                5.4758
+              ],
+              "endpoint_error_m": 0.037804636061115206,
+              "sim_tail_m": 0.011845130514601093,
+              "unity_tail_m": 0.04824244976970417,
+              "tail_distance_scale_required": 4.0727664174098654,
+              "tail_direction_delta_deg_required": -24.683418024477692,
+              "required_early_velocity": [
+                -0.3088950836742189,
+                0.014065669592339809
+              ],
+              "delta_v_required_mps": [
+                -0.23853874445798662,
+                0.04260042284043532
+              ],
+              "delta_v_required_norm_mps": 0.2423128734379924
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.18904671672360757,
+          "delta_v_norm_range_mps": 0.08430680633848939,
+          "tail_direction_delta_abs_mean_deg": 20.824949579880144,
+          "tail_scale_median": 2.558623579888029
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "unity_not_in_play",
+              "requested_time_s": 0.02
+            },
+            {
+              "role": "target",
+              "status": "unity_not_in_play",
+              "requested_time_s": 0.05
+            },
+            {
+              "role": "target",
+              "status": "unity_not_in_play",
+              "requested_time_s": 0.1
+            },
+            {
+              "role": "target",
+              "status": "unity_not_in_play",
+              "requested_time_s": 0.2
+            }
+          ],
+          "ok_count": 0,
+          "delta_v_norm_mean_mps": null,
+          "delta_v_norm_range_mps": null,
+          "tail_direction_delta_abs_mean_deg": null,
+          "tail_scale_median": null
+        }
+      }
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.350196361541748,
+                6.489444255828857
+              ],
+              "early_velocity": [
+                -0.0645270124077797,
+                -0.008001148700714111
+              ],
+              "early_speed_mps": 0.06502117894043981,
+              "sim_endpoint": [
+                2.3425869941711426,
+                6.488579273223877
+              ],
+              "unity_endpoint": [
+                2.3435,
+                6.483
+              ],
+              "endpoint_error_m": 0.005653482939763956,
+              "sim_tail_m": 0.007658372326268421,
+              "unity_tail_m": 0.009293529527879478,
+              "tail_distance_scale_required": 1.2135123668514292,
+              "tail_direction_delta_deg_required": 37.415734119085506,
+              "required_early_velocity": [
+                -0.056293610352426034,
+                -0.05528898081273836
+              ],
+              "delta_v_required_mps": [
+                0.00823340205535366,
+                -0.047287832112024246
+              ],
+              "delta_v_required_norm_mps": 0.04799924973642915
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.348324775695801,
+                6.489206314086914
+              ],
+              "early_velocity": [
+                -0.05811787396669388,
+                -0.007880885154008865
+              ],
+              "early_speed_mps": 0.05864977088803665,
+              "sim_endpoint": [
+                2.3425869941711426,
+                6.488579273223877
+              ],
+              "unity_endpoint": [
+                2.3435,
+                6.483
+              ],
+              "endpoint_error_m": 0.005653482939763956,
+              "sim_tail_m": 0.005771942226722937,
+              "unity_tail_m": 0.007861093757246558,
+              "tail_distance_scale_required": 1.3619494874448446,
+              "tail_direction_delta_deg_required": 45.90188505993463,
+              "required_early_velocity": [
+                -0.047373979785286666,
+                -0.06431333439545346
+              ],
+              "delta_v_required_mps": [
+                0.010743894181407213,
+                -0.056432449241444596
+              ],
+              "delta_v_required_norm_mps": 0.057446084197005955
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.346021890640259,
+                6.488898277282715
+              ],
+              "early_velocity": [
+                -0.04114457219839096,
+                -0.005368511658161879
+              ],
+              "early_speed_mps": 0.04149333366713774,
+              "sim_endpoint": [
+                2.3425869941711426,
+                6.488579273223877
+              ],
+              "unity_endpoint": [
+                2.3435,
+                6.483
+              ],
+              "endpoint_error_m": 0.005653482939763956,
+              "sim_tail_m": 0.0034496778607722286,
+              "unity_tail_m": 0.006414795967543963,
+              "tail_distance_scale_required": 1.859534781635517,
+              "tail_direction_delta_deg_required": 61.544268731635036,
+              "required_early_velocity": [
+                -0.027678491142833415,
+                -0.07202294043355054
+              ],
+              "delta_v_required_mps": [
+                0.013466081055557546,
+                -0.06665442877538866
+              ],
+              "delta_v_required_norm_mps": 0.06800108980279805
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale",
+                "low_early_speed"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3431835174560547,
+                6.488595485687256
+              ],
+              "early_velocity": [
+                -0.017891818657517433,
+                -0.0014563784934580326
+              ],
+              "early_speed_mps": 0.017950994768805878,
+              "sim_endpoint": [
+                2.3425869941711426,
+                6.488579273223877
+              ],
+              "unity_endpoint": [
+                2.3435,
+                6.483
+              ],
+              "endpoint_error_m": 0.005653482939763956,
+              "sim_tail_m": 0.0005967435574944617,
+              "unity_tail_m": 0.005604428719942048,
+              "tail_distance_scale_required": 9.39168701455828,
+              "tail_direction_delta_deg_required": 91.68040318026567,
+              "required_early_velocity": [
+                0.01859946954639189,
+                -0.16756100322249842
+              ],
+              "delta_v_required_mps": [
+                0.036491288203909324,
+                -0.1661046247290404
+              ],
+              "delta_v_required_norm_mps": 0.17006575337544036
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.08587804427791837,
+          "delta_v_norm_range_mps": 0.12206650363901121,
+          "tail_direction_delta_abs_mean_deg": 59.135572772730214,
+          "tail_scale_median": 1.610742134540181
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.376290798187256,
+                6.182222843170166
+              ],
+              "early_velocity": [
+                0.06462216377258301,
+                -0.8888301253318787
+              ],
+              "early_speed_mps": 0.8911761979250421,
+              "sim_endpoint": [
+                2.5282320976257324,
+                4.524882793426514
+              ],
+              "unity_endpoint": [
+                2.4803,
+                4.5072
+              ],
+              "endpoint_error_m": 0.05108979512747609,
+              "sim_tail_m": 1.6642902988839852,
+              "unity_tail_m": 1.678248920513161,
+              "tail_distance_scale_required": 1.0083871315229898,
+              "tail_direction_delta_deg_required": -1.6849354025220564,
+              "required_early_velocity": [
+                0.038782132133849526,
+                -0.8978133797809711
+              ],
+              "delta_v_required_mps": [
+                -0.025840031638733482,
+                -0.008983254449092426
+              ],
+              "delta_v_required_norm_mps": 0.02735701181759233
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.3782246112823486,
+                6.155622482299805
+              ],
+              "early_velocity": [
+                0.06415388733148575,
+                -0.8823893666267395
+              ],
+              "early_speed_mps": 0.884718438598224,
+              "sim_endpoint": [
+                2.5282320976257324,
+                4.524882793426514
+              ],
+              "unity_endpoint": [
+                2.4803,
+                4.5072
+              ],
+              "endpoint_error_m": 0.05108979512747609,
+              "sim_tail_m": 1.637624553683053,
+              "unity_tail_m": 1.6515798694381416,
+              "tail_distance_scale_required": 1.008521682044705,
+              "tail_direction_delta_deg_required": -1.712292017227491,
+              "required_early_velocity": [
+                0.03808061086989326,
+                -0.8914447374627306
+              ],
+              "delta_v_required_mps": [
+                -0.026073276461592486,
+                -0.009055370835991061
+              ],
+              "delta_v_required_norm_mps": 0.02760100517046345
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.38139009475708,
+                6.112107276916504
+              ],
+              "early_velocity": [
+                0.06312106549739838,
+                -0.8653261065483093
+              ],
+              "early_speed_mps": 0.8676252299141507,
+              "sim_endpoint": [
+                2.5282320976257324,
+                4.524882793426514
+              ],
+              "unity_endpoint": [
+                2.4803,
+                4.5072
+              ],
+              "endpoint_error_m": 0.05108979512747609,
+              "sim_tail_m": 1.5940025516907252,
+              "unity_tail_m": 1.6079522806522308,
+              "tail_distance_scale_required": 1.0087513843354325,
+              "tail_direction_delta_deg_required": -1.7590112532269797,
+              "required_early_velocity": [
+                0.0368492011559913,
+                -0.8744420790108336
+              ],
+              "delta_v_required_mps": [
+                -0.026271864341407075,
+                -0.009115972462524269
+              ],
+              "delta_v_required_norm_mps": 0.027808484495038515
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3876678943634033,
+                6.0268707275390625
+              ],
+              "early_velocity": [
+                0.06228673458099365,
+                -0.8417775630950928
+              ],
+              "early_speed_mps": 0.8440788488257931,
+              "sim_endpoint": [
+                2.5282320976257324,
+                4.524882793426514
+              ],
+              "unity_endpoint": [
+                2.4803,
+                4.5072
+              ],
+              "endpoint_error_m": 0.05108979512747609,
+              "sim_tail_m": 1.5085509767516827,
+              "unity_tail_m": 1.5224913225150982,
+              "tail_distance_scale_required": 1.009240884781655,
+              "tail_direction_delta_deg_required": -1.8583084331782462,
+              "required_early_velocity": [
+                0.03527991815680778,
+                -0.8511480251667516
+              ],
+              "delta_v_required_mps": [
+                -0.02700681642418587,
+                -0.009370462071658814
+              ],
+              "delta_v_required_norm_mps": 0.028586250065478543
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.02783818788714321,
+          "delta_v_norm_range_mps": 0.0012292382478862121,
+          "tail_direction_delta_abs_mean_deg": 1.7536367765386933,
+          "tail_scale_median": 1.0086365331900686
+        }
+      }
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.349508285522461,
+                6.489408016204834
+              ],
+              "early_velocity": [
+                -0.09485074877738953,
+                -0.011311769485473633
+              ],
+              "early_speed_mps": 0.09552288036132471,
+              "sim_endpoint": [
+                2.3323521614074707,
+                6.487168788909912
+              ],
+              "unity_endpoint": [
+                2.261,
+                6.4702
+              ],
+              "endpoint_error_m": 0.07334214841812915,
+              "sim_tail_m": 0.01730163961962197,
+              "unity_tail_m": 0.09056856238591074,
+              "tail_distance_scale_required": 5.234680895976818,
+              "tail_direction_delta_deg_required": 4.808184325470083,
+              "required_early_velocity": [
+                -0.4898028335943784,
+                -0.10062297038981596
+              ],
+              "delta_v_required_mps": [
+                -0.39495208481698885,
+                -0.08931120090434233
+              ],
+              "delta_v_required_norm_mps": 0.40492423971437147
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.3467276096343994,
+                6.489063739776611
+              ],
+              "early_velocity": [
+                -0.08833909034729004,
+                -0.012225418351590633
+              ],
+              "early_speed_mps": 0.08918102789976173,
+              "sim_endpoint": [
+                2.3323521614074707,
+                6.487168788909912
+              ],
+              "unity_endpoint": [
+                2.261,
+                6.4702
+              ],
+              "endpoint_error_m": 0.07334214841812915,
+              "sim_tail_m": 0.014499805188771054,
+              "unity_tail_m": 0.08777849242261826,
+              "tail_distance_scale_required": 6.053770466557421,
+              "tail_direction_delta_deg_required": 4.9004030326463495,
+              "required_early_velocity": [
+                -0.5265075609859133,
+                -0.11942274900662614
+              ],
+              "delta_v_required_mps": [
+                -0.4381684706386233,
+                -0.1071973306550355
+              ],
+              "delta_v_required_norm_mps": 0.4510907628863122
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3429179191589355,
+                6.488511085510254
+              ],
+              "early_velocity": [
+                -0.07125526666641235,
+                -0.010417988523840904
+              ],
+              "early_speed_mps": 0.07201282880559835,
+              "sim_endpoint": [
+                2.3323521614074707,
+                6.487168788909912
+              ],
+              "unity_endpoint": [
+                2.261,
+                6.4702
+              ],
+              "endpoint_error_m": 0.07334214841812915,
+              "sim_tail_m": 0.010650680589799347,
+              "unity_tail_m": 0.08393950995743127,
+              "tail_distance_scale_required": 7.881140482029293,
+              "tail_direction_delta_deg_required": 5.35998014440941,
+              "required_early_velocity": [
+                -0.5514475380307072,
+                -0.1342047679369957
+              ],
+              "delta_v_required_mps": [
+                -0.4801922713642949,
+                -0.1237867794131548
+              ],
+              "delta_v_required_norm_mps": 0.4958908995287992
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.337070941925049,
+                6.487675666809082
+              ],
+              "early_velocity": [
+                -0.048003509640693665,
+                -0.006696334108710289
+              ],
+              "early_speed_mps": 0.04846831777893314,
+              "sim_endpoint": [
+                2.3323521614074707,
+                6.487168788909912
+              ],
+              "unity_endpoint": [
+                2.261,
+                6.4702
+              ],
+              "endpoint_error_m": 0.07334214841812915,
+              "sim_tail_m": 0.0047459261243451515,
+              "unity_tail_m": 0.07805246399561117,
+              "tail_distance_scale_required": 16.446202901310635,
+              "tail_direction_delta_deg_required": 6.806951935144329,
+              "required_early_velocity": [
+                -0.7708575422016365,
+                -0.20292512612617528
+              ],
+              "delta_v_required_mps": [
+                -0.7228540325609428,
+                -0.196228792017465
+              ],
+              "delta_v_required_norm_mps": 0.7490151475145547
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.5252302624110093,
+          "delta_v_norm_range_mps": 0.3440909078001832,
+          "tail_direction_delta_abs_mean_deg": 5.468879859417543,
+          "tail_scale_median": 6.967455474293358
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.376896619796753,
+                6.174746036529541
+              ],
+              "early_velocity": [
+                0.09492892026901245,
+                -1.262671709060669
+              ],
+              "early_speed_mps": 1.2662351064338846,
+              "sim_endpoint": [
+                2.691636323928833,
+                2.8164846897125244
+              ],
+              "unity_endpoint": [
+                2.8527,
+                2.9269
+              ],
+              "endpoint_error_m": 0.1952768508949212,
+              "sim_tail_m": 3.3729779653716077,
+              "unity_tail_m": 3.282513173410502,
+              "tail_distance_scale_required": 0.9731795484910205,
+              "tail_direction_delta_deg_required": 2.980258922431321,
+              "required_early_velocity": [
+                0.15614588366540355,
+                -1.2223411729657723
+              ],
+              "delta_v_required_mps": [
+                0.0612169633963911,
+                0.040330536094896674
+              ],
+              "delta_v_required_norm_mps": 0.07330804014006138
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.379739999771118,
+                6.136930465698242
+              ],
+              "early_velocity": [
+                0.09444355219602585,
+                -1.2562158107757568
+              ],
+              "early_speed_mps": 1.2597609883602505,
+              "sim_endpoint": [
+                2.691636323928833,
+                2.8164846897125244
+              ],
+              "unity_endpoint": [
+                2.8527,
+                2.9269
+              ],
+              "endpoint_error_m": 0.1952768508949212,
+              "sim_tail_m": 3.335062138594196,
+              "unity_tail_m": 3.2446859250977402,
+              "tail_distance_scale_required": 0.9729011905203807,
+              "tail_direction_delta_deg_required": 3.0153863435919908,
+              "required_early_velocity": [
+                0.15604841640467892,
+                -1.2156481994899357
+              ],
+              "delta_v_required_mps": [
+                0.061604864208653076,
+                0.04056761128582109
+              ],
+              "delta_v_required_norm_mps": 0.07376239136310633
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.384416341781616,
+                6.074722766876221
+              ],
+              "early_velocity": [
+                0.09317371249198914,
+                -1.2391818761825562
+              ],
+              "early_speed_mps": 1.2426797909996203,
+              "sim_endpoint": [
+                2.691636323928833,
+                2.8164846897125244
+              ],
+              "unity_endpoint": [
+                2.8527,
+                2.9269
+              ],
+              "endpoint_error_m": 0.1952768508949212,
+              "sim_tail_m": 3.272689946345348,
+              "unity_tail_m": 3.1824641013244217,
+              "tail_distance_scale_required": 0.9724306773632245,
+              "tail_direction_delta_deg_required": 3.0750046858525364,
+              "required_early_velocity": [
+                0.1551155620121375,
+                -1.198423105657006
+              ],
+              "delta_v_required_mps": [
+                0.06194184952014836,
+                0.0407587705255501
+              ],
+              "delta_v_required_norm_mps": 0.07414897232417424
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3936960697174072,
+                5.9521002769470215
+              ],
+              "early_velocity": [
+                0.09241321682929993,
+                -1.21562659740448
+              ],
+              "early_speed_mps": 1.2191342120381712,
+              "sim_endpoint": [
+                2.691636323928833,
+                2.8164846897125244
+              ],
+              "unity_endpoint": [
+                2.8527,
+                2.9269
+              ],
+              "endpoint_error_m": 0.1952768508949212,
+              "sim_tail_m": 3.1497386409014174,
+              "unity_tail_m": 3.0598237406189273,
+              "tail_distance_scale_required": 0.9714532186528475,
+              "tail_direction_delta_deg_required": 3.1996611206386962,
+              "required_early_velocity": [
+                0.15554916789350687,
+                -1.1740725690386562
+              ],
+              "delta_v_required_mps": [
+                0.06313595106420694,
+                0.04155402836582378
+              ],
+              "delta_v_required_norm_mps": 0.07558363308421752
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.07420075922788986,
+          "delta_v_norm_range_mps": 0.002275592944156135,
+          "tail_direction_delta_abs_mean_deg": 3.067577768128636,
+          "tail_scale_median": 0.9726659339418027
+        }
+      }
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.34976863861084,
+                8.285184860229492
+              ],
+              "early_velocity": [
+                -0.07972590625286102,
+                -0.009587407112121582
+              ],
+              "early_speed_mps": 0.0803003020104753,
+              "sim_endpoint": [
+                2.3378303050994873,
+                8.28409194946289
+              ],
+              "unity_endpoint": [
+                2.3336,
+                8.2782
+              ],
+              "endpoint_error_m": 0.0072533130159951305,
+              "sim_tail_m": 0.011988255126249051,
+              "unity_tail_m": 0.017612868788288827,
+              "tail_distance_scale_required": 1.4691770072297115,
+              "tail_direction_delta_deg_required": 18.133730047980084,
+              "required_early_velocity": [
+                -0.10692991681370723,
+                -0.04984152727291307
+              ],
+              "delta_v_required_mps": [
+                -0.027204010560846204,
+                -0.04025412016079149
+              ],
+              "delta_v_required_norm_mps": 0.048584487035617366
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.347440004348755,
+                8.284903526306152
+              ],
+              "early_velocity": [
+                -0.07340341061353683,
+                -0.00882712472230196
+              ],
+              "early_speed_mps": 0.07393225832180812,
+              "sim_endpoint": [
+                2.3378303050994873,
+                8.28409194946289
+              ],
+              "unity_endpoint": [
+                2.3336,
+                8.2782
+              ],
+              "endpoint_error_m": 0.0072533130159951305,
+              "sim_tail_m": 0.009643908783988603,
+              "unity_tail_m": 0.01537800329401796,
+              "tail_distance_scale_required": 1.5945819935117436,
+              "tail_direction_delta_deg_required": 21.016232136641552,
+              "required_early_velocity": [
+                -0.10421364957801244,
+                -0.055116371497668654
+              ],
+              "delta_v_required_mps": [
+                -0.0308102389644756,
+                -0.046289246775366694
+              ],
+              "delta_v_required_norm_mps": 0.0556054421084743
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.344372510910034,
+                8.28455638885498
+              ],
+              "early_velocity": [
+                -0.05646013095974922,
+                -0.0059389458037912846
+              ],
+              "early_speed_mps": 0.056771625529417453,
+              "sim_endpoint": [
+                2.3378303050994873,
+                8.28409194946289
+              ],
+              "unity_endpoint": [
+                2.3336,
+                8.2782
+              ],
+              "endpoint_error_m": 0.0072533130159951305,
+              "sim_tail_m": 0.006558670659247807,
+              "unity_tail_m": 0.012508024247758825,
+              "tail_distance_scale_required": 1.9070974741081648,
+              "tail_direction_delta_deg_required": 26.482314523010945,
+              "required_early_velocity": [
+                -0.09132628485101961,
+                -0.0581523101607983
+              ],
+              "delta_v_required_mps": [
+                -0.03486615389127039,
+                -0.05221336435700701
+              ],
+              "delta_v_required_norm_mps": 0.06278442565355934
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3400073051452637,
+                8.284174919128418
+              ],
+              "early_velocity": [
+                -0.03314070776104927,
+                -0.002414379734545946
+              ],
+              "early_speed_mps": 0.03322853804195811,
+              "sim_endpoint": [
+                2.3378303050994873,
+                8.28409194946289
+              ],
+              "unity_endpoint": [
+                2.3336,
+                8.2782
+              ],
+              "endpoint_error_m": 0.0072533130159951305,
+              "sim_tail_m": 0.002178580538953753,
+              "unity_tail_m": 0.008760891382482476,
+              "tail_distance_scale_required": 4.02137594908005,
+              "tail_direction_delta_deg_required": 40.81745364709838,
+              "required_early_velocity": [
+                -0.09451275836473005,
+                -0.0944607350266062
+              ],
+              "delta_v_required_mps": [
+                -0.06137205060368078,
+                -0.09204635529206025
+              ],
+              "delta_v_required_norm_mps": 0.11063028571712605
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.06940116012869427,
+          "delta_v_norm_range_mps": 0.06204579868150868,
+          "tail_direction_delta_abs_mean_deg": 26.612432588682744,
+          "tail_scale_median": 1.7508397338099542
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.376594066619873,
+                7.9790120124816895
+              ],
+              "early_velocity": [
+                0.07979103177785873,
+                -1.0494024753570557
+              ],
+              "early_speed_mps": 1.0524315483857805,
+              "sim_endpoint": [
+                2.5849878787994385,
+                5.662623405456543
+              ],
+              "unity_endpoint": [
+                2.5593,
+                5.7764
+              ],
+              "endpoint_error_m": 0.11664039001615524,
+              "sim_tail_m": 2.325743786342475,
+              "unity_tail_m": 2.210176720450413,
+              "tail_distance_scale_required": 0.9503096314517921,
+              "tail_direction_delta_deg_required": -0.3989629812869142,
+              "required_early_velocity": [
+                0.06888028439775246,
+                -0.9977610929588309
+              ],
+              "delta_v_required_mps": [
+                -0.010910747380106278,
+                0.0516413823982248
+              ],
+              "delta_v_required_norm_mps": 0.05278140566896811
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.3789472579956055,
+                7.947591304779053
+              ],
+              "early_velocity": [
+                0.0754811242222786,
+                -1.0432430505752563
+              ],
+              "early_speed_mps": 1.0459701060199693,
+              "sim_endpoint": [
+                2.5849878787994385,
+                5.662623405456543
+              ],
+              "unity_endpoint": [
+                2.5593,
+                5.7764
+              ],
+              "endpoint_error_m": 0.11664039001615524,
+              "sim_tail_m": 2.2942386620305117,
+              "unity_tail_m": 2.178669041753857,
+              "tail_distance_scale_required": 0.9496261560798692,
+              "tail_direction_delta_deg_required": -0.4041076927270178,
+              "required_early_velocity": [
+                0.06468977244700837,
+                -0.9911717945811219
+              ],
+              "delta_v_required_mps": [
+                -0.010791351775270228,
+                0.052071255994134424
+              ],
+              "delta_v_required_norm_mps": 0.05317771125146614
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3826076984405518,
+                7.8960280418396
+              ],
+              "early_velocity": [
+                0.07290548086166382,
+                -1.0262995958328247
+              ],
+              "early_speed_mps": 1.0288858389278617,
+              "sim_endpoint": [
+                2.5849878787994385,
+                5.662623405456543
+              ],
+              "unity_endpoint": [
+                2.5593,
+                5.7764
+              ],
+              "endpoint_error_m": 0.11664039001615524,
+              "sim_tail_m": 2.242555240617147,
+              "unity_tail_m": 2.1269798318703335,
+              "tail_distance_scale_required": 0.9484626257344692,
+              "tail_direction_delta_deg_required": -0.41256005504033955,
+              "required_early_velocity": [
+                0.06213734557810097,
+                -0.973879474063304
+              ],
+              "delta_v_required_mps": [
+                -0.010768135283562845,
+                0.05242012176952071
+              ],
+              "delta_v_required_norm_mps": 0.053514688673451986
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3898568153381348,
+                7.794693470001221
+              ],
+              "early_velocity": [
+                0.07205594331026077,
+                -1.0027546882629395
+              ],
+              "early_speed_mps": 1.0053402527501005,
+              "sim_endpoint": [
+                2.5849878787994385,
+                5.662623405456543
+              ],
+              "unity_endpoint": [
+                2.5593,
+                5.7764
+              ],
+              "endpoint_error_m": 0.11664039001615524,
+              "sim_tail_m": 2.140980824775198,
+              "unity_tail_m": 2.025393671333532,
+              "tail_distance_scale_required": 0.9460120557344075,
+              "tail_direction_delta_deg_required": -0.4303109226640632,
+              "required_early_velocity": [
+                0.06103948941494004,
+                -0.9491032142701723
+              ],
+              "delta_v_required_mps": [
+                -0.01101645389532073,
+                0.05365147399276715
+              ],
+              "delta_v_required_norm_mps": 0.05477082177605424
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.05356115684248512,
+          "delta_v_norm_range_mps": 0.0019894161070861324,
+          "tail_direction_delta_abs_mean_deg": 0.4114854129295837,
+          "tail_scale_median": 0.9490443909071692
+        }
+      }
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail"
+              ],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3491764068603516,
+                8.290542602539062
+              ],
+              "early_velocity": [
+                -0.10594001412391663,
+                -0.012738943099975586
+              ],
+              "early_speed_mps": 0.10670317363546442,
+              "sim_endpoint": [
+                2.3275623321533203,
+                8.287348747253418
+              ],
+              "unity_endpoint": [
+                2.3185,
+                8.2844
+              ],
+              "endpoint_error_m": 0.009530003904597758,
+              "sim_tail_m": 0.021848774268291748,
+              "unity_tail_m": 0.0312853560602199,
+              "tail_distance_scale_required": 1.431904402327186,
+              "tail_direction_delta_deg_required": 2.9174598114235826,
+              "required_early_velocity": [
+                -0.15057094383112538,
+                -0.025938218685333345
+              ],
+              "delta_v_required_mps": [
+                -0.04463092970720875,
+                -0.013199275585357759
+              ],
+              "delta_v_required_norm_mps": 0.04654181735287128
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.34606671333313,
+                8.290125846862793
+              ],
+              "early_velocity": [
+                -0.09914015233516693,
+                -0.016071762889623642
+              ],
+              "early_speed_mps": 0.10043441326268794,
+              "sim_endpoint": [
+                2.3275623321533203,
+                8.287348747253418
+              ],
+              "unity_endpoint": [
+                2.3185,
+                8.2844
+              ],
+              "endpoint_error_m": 0.009530003904597758,
+              "sim_tail_m": 0.018711611504306124,
+              "unity_tail_m": 0.02815508846171739,
+              "tail_distance_scale_required": 1.5046853904185657,
+              "tail_direction_delta_deg_required": 3.198852330387046,
+              "required_early_velocity": [
+                -0.14759286215256492,
+                -0.03246944196040424
+              ],
+              "delta_v_required_mps": [
+                -0.04845270981739799,
+                -0.016397679070780595
+              ],
+              "delta_v_required_norm_mps": 0.05115221371120991
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.341719150543213,
+                8.289372444152832
+              ],
+              "early_velocity": [
+                -0.08208070695400238,
+                -0.014004924334585667
+              ],
+              "early_speed_mps": 0.08326692236228192,
+              "sim_endpoint": [
+                2.3275623321533203,
+                8.287348747253418
+              ],
+              "unity_endpoint": [
+                2.3185,
+                8.2844
+              ],
+              "endpoint_error_m": 0.009530003904597758,
+              "sim_tail_m": 0.014300729214452624,
+              "unity_tail_m": 0.023745613338076347,
+              "tail_distance_scale_required": 1.6604477283632866,
+              "tail_direction_delta_deg_required": 3.95223545616611,
+              "required_early_velocity": [
+                -0.13436379574226884,
+                -0.032592957561503946
+              ],
+              "delta_v_required_mps": [
+                -0.05228308878826646,
+                -0.01858803322691828
+              ],
+              "delta_v_required_norm_mps": 0.055489065161406094
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "weak",
+              "tail_quality_reasons": [
+                "short_sim_tail",
+                "short_unity_tail",
+                "large_tail_scale"
+              ],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.3347787857055664,
+                8.288243293762207
+              ],
+              "early_velocity": [
+                -0.058990634977817535,
+                -0.009326424449682236
+              ],
+              "early_speed_mps": 0.059723338889430315,
+              "sim_endpoint": [
+                2.3275623321533203,
+                8.287348747253418
+              ],
+              "unity_endpoint": [
+                2.3185,
+                8.2844
+              ],
+              "endpoint_error_m": 0.009530003904597758,
+              "sim_tail_m": 0.0072716858656099795,
+              "unity_tail_m": 0.016726319708482842,
+              "tail_distance_scale_required": 2.3001983333172724,
+              "tail_direction_delta_deg_required": 6.217539966203688,
+              "required_early_velocity": [
+                -0.13256861257304073,
+                -0.036022183614178964
+              ],
+              "delta_v_required_mps": [
+                -0.07357797759522319,
+                -0.026695759164496728
+              ],
+              "delta_v_required_norm_mps": 0.07827121018849764
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.05786357660349623,
+          "delta_v_norm_range_mps": 0.03172939283562636,
+          "tail_direction_delta_abs_mean_deg": 4.071521891045107,
+          "tail_scale_median": 1.5825665593909262
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3771181106567383,
+                7.9718217849731445
+              ],
+              "early_velocity": [
+                0.10602723807096481,
+                -1.408910870552063
+              ],
+              "early_speed_mps": 1.4128947647906154,
+              "sim_endpoint": [
+                2.765028476715088,
+                3.786233901977539
+              ],
+              "unity_endpoint": [
+                2.6502,
+                3.7252
+              ],
+              "endpoint_error_m": 0.13004120983484946,
+              "sim_tail_m": 4.203524756484153,
+              "unity_tail_m": 4.255393084416031,
+              "tail_distance_scale_required": 1.0123392464507004,
+              "tail_direction_delta_deg_required": -1.615534248467605,
+              "required_early_velocity": [
+                0.06708180364320838,
+                -1.4287549017378909
+              ],
+              "delta_v_required_mps": [
+                -0.03894543442775643,
+                -0.019844031185827893
+              ],
+              "delta_v_required_norm_mps": 0.043709637798439664
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.38026762008667,
+                7.929616928100586
+              ],
+              "early_velocity": [
+                0.10315977036952972,
+                -1.402628779411316
+              ],
+              "early_speed_mps": 1.406417232209408,
+              "sim_endpoint": [
+                2.765028476715088,
+                3.786233901977539
+              ],
+              "unity_endpoint": [
+                2.6502,
+                3.7252
+              ],
+              "endpoint_error_m": 0.13004120983484946,
+              "sim_tail_m": 4.1612094177003405,
+              "unity_tail_m": 4.213073129560469,
+              "tail_distance_scale_required": 1.0124636149383681,
+              "tail_direction_delta_deg_required": -1.6318909544779547,
+              "required_early_velocity": [
+                0.06396121539602406,
+                -1.4225090358620813
+              ],
+              "delta_v_required_mps": [
+                -0.03919855497350566,
+                -0.01988025645076541
+              ],
+              "delta_v_required_norm_mps": 0.043951692897534055
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3853862285614014,
+                7.8600897789001465
+              ],
+              "early_velocity": [
+                0.10198474675416946,
+                -1.3855922222137451
+              ],
+              "early_speed_mps": 1.3893403811988396,
+              "sim_endpoint": [
+                2.765028476715088,
+                3.786233901977539
+              ],
+              "unity_endpoint": [
+                2.6502,
+                3.7252
+              ],
+              "endpoint_error_m": 0.13004120983484946,
+              "sim_tail_m": 4.091507050283557,
+              "unity_tail_m": 4.143360932527655,
+              "tail_distance_scale_required": 1.012673540973247,
+              "tail_direction_delta_deg_required": -1.659581000565103,
+              "required_early_velocity": [
+                0.06259708792938669,
+                -1.405555037811697
+              ],
+              "delta_v_required_mps": [
+                -0.039387658824782776,
+                -0.019962815597951877
+              ],
+              "delta_v_required_norm_mps": 0.044157690998231774
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.395519256591797,
+                7.722824573516846
+              ],
+              "early_velocity": [
+                0.10093315690755844,
+                -1.3620589971542358
+              ],
+              "early_speed_mps": 1.365793620534277,
+              "sim_endpoint": [
+                2.765028476715088,
+                3.786233901977539
+              ],
+              "unity_endpoint": [
+                2.6502,
+                3.7252
+              ],
+              "endpoint_error_m": 0.13004120983484946,
+              "sim_tail_m": 3.953894684865343,
+              "unity_tail_m": 4.005728961356309,
+              "tail_distance_scale_required": 1.0131096755534172,
+              "tail_direction_delta_deg_required": -1.7170987347667226,
+              "required_early_velocity": [
+                0.06086191735398875,
+                -1.382359579604586
+              ],
+              "delta_v_required_mps": [
+                -0.04007123955356969,
+                -0.020300582450350158
+              ],
+              "delta_v_required_norm_mps": 0.04492012786249648
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.0441847873891755,
+          "delta_v_norm_range_mps": 0.001210490064056817,
+          "tail_direction_delta_abs_mean_deg": 1.6560262345693464,
+          "tail_scale_median": 1.0125685779558076
+        }
+      }
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3593218326568604,
+                6.431949615478516
+              ],
+              "early_velocity": [
+                0.39355334639549255,
+                -0.24753737449645996
+              ],
+              "early_speed_mps": 0.4649290141857047,
+              "sim_endpoint": [
+                2.7422287464141846,
+                6.2004594802856445
+              ],
+              "unity_endpoint": [
+                2.7378,
+                6.2085
+              ],
+              "endpoint_error_m": 0.009179528968203654,
+              "sim_tail_m": 0.4474431665527731,
+              "unity_tail_m": 0.43951729637514625,
+              "tail_distance_scale_required": 0.9822863085859821,
+              "tail_direction_delta_deg_required": 0.5983068318128015,
+              "required_early_velocity": [
+                0.38910004294797007,
+                -0.23910253624502417
+              ],
+              "delta_v_required_mps": [
+                -0.004453303447522483,
+                0.008434838251435789
+              ],
+              "delta_v_required_norm_mps": 0.009538260214714211
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.3710713386535645,
+                6.424558639526367
+              ],
+              "early_velocity": [
+                0.38800248503685,
+                -0.24404601752758026
+              ],
+              "early_speed_mps": 0.45837145097163606,
+              "sim_endpoint": [
+                2.7422287464141846,
+                6.2004594802856445
+              ],
+              "unity_endpoint": [
+                2.7378,
+                6.2085
+              ],
+              "endpoint_error_m": 0.009179528968203654,
+              "sim_tail_m": 0.4335645909296353,
+              "unity_tail_m": 0.42564215811751227,
+              "tail_distance_scale_required": 0.9817272144038885,
+              "tail_direction_delta_deg_required": 0.6184188717380232,
+              "required_early_velocity": [
+                0.3834763260412429,
+                -0.23546138183649218
+              ],
+              "delta_v_required_mps": [
+                -0.004526158995607099,
+                0.008584635691088083
+              ],
+              "delta_v_required_norm_mps": 0.00970474549909571
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.3899588584899902,
+                6.412678241729736
+              ],
+              "early_velocity": [
+                0.3735964596271515,
+                -0.23498502373695374
+              ],
+              "early_speed_mps": 0.44135277956142804,
+              "sim_endpoint": [
+                2.7422287464141846,
+                6.2004594802856445
+              ],
+              "unity_endpoint": [
+                2.7378,
+                6.2085
+              ],
+              "endpoint_error_m": 0.009179528968203654,
+              "sim_tail_m": 0.41125524513006373,
+              "unity_tail_m": 0.40333883289714784,
+              "tail_distance_scale_required": 0.9807506109000209,
+              "tail_direction_delta_deg_required": 0.653736143770234,
+              "required_early_velocity": [
+                0.36901058213135024,
+                -0.22626617025812548
+              ],
+              "delta_v_required_mps": [
+                -0.004585877495801249,
+                0.008718853478828253
+              ],
+              "delta_v_required_norm_mps": 0.009851328762749311
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.426218032836914,
+                6.3898701667785645
+              ],
+              "early_velocity": [
+                0.35366612672805786,
+                -0.22244936227798462
+              ],
+              "early_speed_mps": 0.41780790798249473,
+              "sim_endpoint": [
+                2.7422287464141846,
+                6.2004594802856445
+              ],
+              "unity_endpoint": [
+                2.7378,
+                6.2085
+              ],
+              "endpoint_error_m": 0.009179528968203654,
+              "sim_tail_m": 0.368427983808688,
+              "unity_tail_m": 0.3605252552297865,
+              "tail_distance_scale_required": 0.9785501402548046,
+              "tail_direction_delta_deg_required": 0.7342020427423163,
+              "required_early_velocity": [
+                0.3488409248882666,
+                -0.21322535068089554
+              ],
+              "delta_v_required_mps": [
+                -0.004825201839791238,
+                0.009224011597089077
+              ],
+              "delta_v_required_norm_mps": 0.010409849313892997
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.009876045947613057,
+          "delta_v_norm_range_mps": 0.0008715890991787857,
+          "tail_direction_delta_abs_mean_deg": 0.6511659725158437,
+          "tail_scale_median": 0.9812389126519547
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.18713116645813,
+                6.18428897857666
+              ],
+              "early_velocity": [
+                -0.3934897482395172,
+                -0.7855101823806763
+              ],
+              "early_speed_mps": 0.8785558767621567,
+              "sim_endpoint": [
+                1.468359112739563,
+                4.735141754150391
+              ],
+              "unity_endpoint": [
+                1.4522,
+                4.7086
+              ],
+              "endpoint_error_m": 0.03107380951717546,
+              "sim_tail_m": 1.6176096387166983,
+              "unity_tail_m": 1.648569616644725,
+              "tail_distance_scale_required": 1.0191393381858111,
+              "tail_direction_delta_deg_required": -0.09323473050087745,
+              "required_early_velocity": [
+                -0.40232303826481036,
+                -0.7998907053537884
+              ],
+              "delta_v_required_mps": [
+                -0.00883329002529315,
+                -0.014380522973112098
+              ],
+              "delta_v_required_norm_mps": 0.016876802234165933
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.1753532886505127,
+                6.16077995300293
+              ],
+              "early_velocity": [
+                -0.39067885279655457,
+                -0.7798989415168762
+              ],
+              "early_speed_mps": 0.8722799579272563,
+              "sim_endpoint": [
+                1.468359112739563,
+                4.735141754150391
+              ],
+              "unity_endpoint": [
+                1.4522,
+                4.7086
+              ],
+              "endpoint_error_m": 0.03107380951717546,
+              "sim_tail_m": 1.5913155057371602,
+              "unity_tail_m": 1.6222753449367477,
+              "tail_distance_scale_required": 1.0194555002373622,
+              "tail_direction_delta_deg_required": -0.094818218913966,
+              "required_early_velocity": [
+                -0.3995949165625665,
+                -0.7944120679972573
+              ],
+              "delta_v_required_mps": [
+                -0.00891606376601195,
+                -0.014513126480381056
+              ],
+              "delta_v_required_norm_mps": 0.017033115784116804
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.1560914516448975,
+                6.122332572937012
+              ],
+              "early_velocity": [
+                -0.3829604983329773,
+                -0.7644911408424377
+              ],
+              "early_speed_mps": 0.8550470441502118,
+              "sim_endpoint": [
+                1.468359112739563,
+                4.735141754150391
+              ],
+              "unity_endpoint": [
+                1.4522,
+                4.7086
+              ],
+              "endpoint_error_m": 0.03107380951717546,
+              "sim_tail_m": 1.548313320262439,
+              "unity_tail_m": 1.5792729224177386,
+              "tail_distance_scale_required": 1.0199956958001575,
+              "tail_direction_delta_deg_required": -0.09752692887358409,
+              "required_early_velocity": [
+                -0.3919448044949125,
+                -0.779111647018336
+              ],
+              "delta_v_required_mps": [
+                -0.008984306161935185,
+                -0.014620506175898274
+              ],
+              "delta_v_required_norm_mps": 0.01716033094234683
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.1183722019195557,
+                6.0470428466796875
+              ],
+              "early_velocity": [
+                -0.37241488695144653,
+                -0.7434394955635071
+              ],
+              "early_speed_mps": 0.831501732762344,
+              "sim_endpoint": [
+                1.468359112739563,
+                4.735141754150391
+              ],
+              "unity_endpoint": [
+                1.4522,
+                4.7086
+              ],
+              "endpoint_error_m": 0.03107380951717546,
+              "sim_tail_m": 1.464104331215805,
+              "unity_tail_m": 1.4950634289013882,
+              "tail_distance_scale_required": 1.0211454177311765,
+              "tail_direction_delta_deg_required": -0.10330516698133232,
+              "required_early_velocity": [
+                -0.3816579132236249,
+                -0.7584729324175947
+              ],
+              "delta_v_required_mps": [
+                -0.009243026272178378,
+                -0.015033436854087645
+              ],
+              "delta_v_required_norm_mps": 0.01764759922238774
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.017179462045754323,
+          "delta_v_norm_range_mps": 0.0007707969882218071,
+          "tail_direction_delta_abs_mean_deg": 0.09722126131743997,
+          "tail_scale_median": 1.0197255980187598
+        }
+      }
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "roles": {
+        "active": {
+          "residuals": [
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.3432226181030273,
+                6.400036811828613
+              ],
+              "early_velocity": [
+                -0.4118853509426117,
+                -0.45045006275177
+              ],
+              "early_speed_mps": 0.6103726741542351,
+              "sim_endpoint": [
+                1.8230032920837402,
+                5.823940277099609
+              ],
+              "unity_endpoint": [
+                1.7736,
+                5.8667
+              ],
+              "endpoint_error_m": 0.06533819075570976,
+              "sim_tail_m": 0.7762186318884182,
+              "unity_tail_m": 0.7803320331154278,
+              "tail_distance_scale_required": 1.0052992817461779,
+              "tail_direction_delta_deg_required": -4.802006590505679,
+              "required_early_velocity": [
+                -0.4505228762538251,
+                -0.41658486202792677
+              ],
+              "delta_v_required_mps": [
+                -0.038637525311213394,
+                0.03386520072384325
+              ],
+              "delta_v_required_norm_mps": 0.05137810995201019
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.3309099674224854,
+                6.386569499969482
+              ],
+              "early_velocity": [
+                -0.4076458513736725,
+                -0.4458136260509491
+              ],
+              "early_speed_mps": 0.6040901665437551,
+              "sim_endpoint": [
+                1.8230032920837402,
+                5.823940277099609
+              ],
+              "unity_endpoint": [
+                1.7736,
+                5.8667
+              ],
+              "endpoint_error_m": 0.06533819075570976,
+              "sim_tail_m": 0.7579715253759963,
+              "unity_tail_m": 0.7621408641366577,
+              "tail_distance_scale_required": 1.0055006535484208,
+              "tail_direction_delta_deg_required": -4.916917559788084,
+              "required_early_velocity": [
+                -0.44680116065345765,
+                -0.41148431922856515
+              ],
+              "delta_v_required_mps": [
+                -0.039155309279785167,
+                0.03432930682238394
+              ],
+              "delta_v_required_norm_mps": 0.05207340541678648
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.310943365097046,
+                6.364731311798096
+              ],
+              "early_velocity": [
+                -0.3960205018520355,
+                -0.4330998659133911
+              ],
+              "early_speed_mps": 0.5868626174338721,
+              "sim_endpoint": [
+                1.8230032920837402,
+                5.823940277099609
+              ],
+              "unity_endpoint": [
+                1.7736,
+                5.8667
+              ],
+              "endpoint_error_m": 0.06533819075570976,
+              "sim_tail_m": 0.7283820824694205,
+              "unity_tail_m": 0.7326479915656285,
+              "tail_distance_scale_required": 1.0058566914245686,
+              "tail_direction_delta_deg_required": -5.115393612038952,
+              "required_early_velocity": [
+                -0.4355955109313995,
+                -0.3983845826439885
+              ],
+              "delta_v_required_mps": [
+                -0.039575009079363954,
+                0.0347152832694026
+              ],
+              "delta_v_required_norm_mps": 0.05264344437920645
+            },
+            {
+              "role": "active",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.272219181060791,
+                6.322377681732178
+              ],
+              "early_velocity": [
+                -0.38013187050819397,
+                -0.4157237112522125
+              ],
+              "early_speed_mps": 0.5633173555584555,
+              "sim_endpoint": [
+                1.8230032920837402,
+                5.823940277099609
+              ],
+              "unity_endpoint": [
+                1.7736,
+                5.8667
+              ],
+              "endpoint_error_m": 0.06533819075570976,
+              "sim_tail_m": 0.6709953511361257,
+              "unity_tail_m": 0.6754726029607313,
+              "tail_distance_scale_required": 1.0066725526742095,
+              "tail_direction_delta_deg_required": -5.549755728756427,
+              "required_early_velocity": [
+                -0.42134755506035404,
+                -0.37952808070413097
+              ],
+              "delta_v_required_mps": [
+                -0.04121568455216007,
+                0.03619563054808156
+              ],
+              "delta_v_required_norm_mps": 0.05485304297736254
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.05273700068134141,
+          "delta_v_norm_range_mps": 0.0034749330253523517,
+          "tail_direction_delta_abs_mean_deg": 5.096018372772285,
+          "tail_scale_median": 1.0056786724864946
+        },
+        "target": {
+          "residuals": [
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.020000",
+              "requested_time_s": 0.02,
+              "early_position": [
+                2.5632359981536865,
+                6.188369274139404
+              ],
+              "early_velocity": [
+                0.4119488596916199,
+                -0.5812970399856567
+              ],
+              "early_speed_mps": 0.7124662179340941,
+              "sim_endpoint": [
+                3.1953136920928955,
+                5.337728500366211
+              ],
+              "unity_endpoint": [
+                3.2374,
+                5.2581
+              ],
+              "endpoint_error_m": 0.09006639430899464,
+              "sim_tail_m": 1.0597697566834814,
+              "unity_tail_m": 1.1488681490028743,
+              "tail_distance_scale_required": 1.0840733487226732,
+              "tail_direction_delta_deg_required": -0.6838310365537087,
+              "required_early_velocity": [
+                0.4390300240820709,
+                -0.6354536315433067
+              ],
+              "delta_v_required_mps": [
+                0.02708116439045105,
+                -0.05415659155764996
+              ],
+              "delta_v_required_norm_mps": 0.060550193012778725
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.050000",
+              "requested_time_s": 0.05,
+              "early_position": [
+                2.5755581855773926,
+                6.17098331451416
+              ],
+              "early_velocity": [
+                0.4081610441207886,
+                -0.5759521126747131
+              ],
+              "early_speed_mps": 0.7059152031457021,
+              "sim_endpoint": [
+                3.1953136920928955,
+                5.337728500366211
+              ],
+              "unity_endpoint": [
+                3.2374,
+                5.2581
+              ],
+              "endpoint_error_m": 0.09006639430899464,
+              "sim_tail_m": 1.0384654414842225,
+              "unity_tail_m": 1.1275595475346607,
+              "tail_distance_scale_required": 1.0857940018910026,
+              "tail_direction_delta_deg_required": -0.6988407334331216,
+              "required_early_velocity": [
+                0.43551841147482107,
+                -0.6307241823021574
+              ],
+              "delta_v_required_mps": [
+                0.02735736735403249,
+                -0.0547720696274443
+              ],
+              "delta_v_required_norm_mps": 0.06122422036920591
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.100000",
+              "requested_time_s": 0.1,
+              "early_position": [
+                2.595620632171631,
+                6.1426777839660645
+              ],
+              "early_velocity": [
+                0.398317813873291,
+                -0.5620625019073486
+              ],
+              "early_speed_mps": 0.6888913825118922,
+              "sim_endpoint": [
+                3.1953136920928955,
+                5.337728500366211
+              ],
+              "unity_endpoint": [
+                3.2374,
+                5.2581
+              ],
+              "endpoint_error_m": 0.09006639430899464,
+              "sim_tail_m": 1.0037804118858102,
+              "unity_tail_m": 1.0928671524281874,
+              "tail_distance_scale_required": 1.0887512243589306,
+              "tail_direction_delta_deg_required": -0.7247212490711622,
+              "required_early_velocity": [
+                0.4258941543331008,
+                -0.6173825188058504
+              ],
+              "delta_v_required_mps": [
+                0.02757634045980978,
+                -0.055320016898501745
+              ],
+              "delta_v_required_norm_mps": 0.06181228698896248
+            },
+            {
+              "role": "target",
+              "status": "ok",
+              "tail_quality": "good",
+              "tail_quality_reasons": [],
+              "snapshot_key": "0.200000",
+              "requested_time_s": 0.2,
+              "early_position": [
+                2.6347081661224365,
+                6.087528228759766
+              ],
+              "early_velocity": [
+                0.3847038745880127,
+                -0.5428522229194641
+              ],
+              "early_speed_mps": 0.6653462309592149,
+              "sim_endpoint": [
+                3.1953136920928955,
+                5.337728500366211
+              ],
+              "unity_endpoint": [
+                3.2374,
+                5.2581
+              ],
+              "endpoint_error_m": 0.09006639430899464,
+              "sim_tail_m": 0.9362041382346391,
+              "unity_tail_m": 1.025274906201387,
+              "tail_distance_scale_required": 1.0951403271242797,
+              "tail_direction_delta_deg_required": -0.7810189781061857,
+              "required_early_velocity": [
+                0.413162006059435,
+                -0.6001869042301017
+              ],
+              "delta_v_required_mps": [
+                0.028458131471422288,
+                -0.05733468131063757
+              ],
+              "delta_v_required_norm_mps": 0.0640088347639381
+            }
+          ],
+          "ok_count": 4,
+          "delta_v_norm_mean_mps": 0.061898883783721305,
+          "delta_v_norm_range_mps": 0.0034586417511593692,
+          "tail_direction_delta_abs_mean_deg": 0.7221029992910446,
+          "tail_scale_median": 1.0872726131249666
+        }
+      }
+    }
+  ],
+  "interpretation": [
+    "pair_impulse_like means active and target endpoint-inferred early velocity corrections are approximately equal and opposite.",
+    "non_closing_pair means the residual cannot be explained by a single missing pair impulse at the chosen snapshot.",
+    "This is still endpoint-inferred evidence; it narrows the suspect layer but does not replace a Unity ContactBuffer/SolverContact dump."
+  ]
+}

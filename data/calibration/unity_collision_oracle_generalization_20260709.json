@@ -1,0 +1,1726 @@
+{
+  "question": "Can visible pre-collision features predict the per-sample entrance-state oracle well enough to keep collisions under 2cm?",
+  "samples": "data\\calibration\\unity_unique_role_collision_samples_20260708_r00.jsonl",
+  "oracle_source": "data\\calibration\\unity_collision_handoff_xy_oracle_20260709.json",
+  "oracle_feature_rows": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "category": "collision_headon",
+      "is_glance": 0.0,
+      "is_right": 0.0,
+      "target_before_x": 2.375,
+      "target_before_y": 5.2,
+      "requested_v0": 3.4,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.1926,
+      "motion_w": 0.0035,
+      "motion_speed": 2.1926000022803978,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.0014962423846292291,
+      "approach_normal_y": 0.9999988806287368,
+      "approach_tangent_x": -0.9999988806287368,
+      "approach_tangent_y": -0.0014962423846292291,
+      "active_error_m": 0.010473716049262526,
+      "target_error_m": 0.014113702652814822,
+      "max_endpoint_error_m": 0.014113702652814822,
+      "handoff_x_offset": 0.0,
+      "handoff_y_offset": 0.0,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": 0.0,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": 0.0
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "category": "collision_headon",
+      "is_glance": 0.0,
+      "is_right": 0.0,
+      "target_before_x": 2.375,
+      "target_before_y": 6.2,
+      "requested_v0": 3.4,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.1922,
+      "motion_w": 0.0035,
+      "motion_speed": 2.1922000022808135,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.001593914960941749,
+      "approach_normal_y": 0.9999987297167419,
+      "approach_tangent_x": -0.9999987297167419,
+      "approach_tangent_y": -0.001593914960941749,
+      "active_error_m": 0.010549106257453377,
+      "target_error_m": 0.007847748503906439,
+      "max_endpoint_error_m": 0.010549106257453377,
+      "handoff_x_offset": 0.005,
+      "handoff_y_offset": 0.0,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": 0.0,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": 0.0
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "category": "collision_headon",
+      "is_glance": 0.0,
+      "is_right": 0.0,
+      "target_before_x": 2.375,
+      "target_before_y": 6.2,
+      "requested_v0": 4.0,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.6387,
+      "motion_w": 0.0037,
+      "motion_speed": 2.6387000018948723,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.001593821257208631,
+      "approach_normal_y": 0.9999987298660933,
+      "approach_tangent_x": -0.9999987298660933,
+      "approach_tangent_y": -0.001593821257208631,
+      "active_error_m": 0.01981114550499966,
+      "target_error_m": 0.003583691699579325,
+      "max_endpoint_error_m": 0.01981114550499966,
+      "handoff_x_offset": -0.021,
+      "handoff_y_offset": 0.002,
+      "handoff_v_scale_delta": 0.004999999999999893,
+      "target_x_offset": 0.0,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": 0.0
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "category": "collision_headon",
+      "is_glance": 0.0,
+      "is_right": 0.0,
+      "target_before_x": 2.375,
+      "target_before_y": 8.0,
+      "requested_v0": 3.4,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.1944,
+      "motion_w": 0.0035,
+      "motion_speed": 2.194400002278527,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.0018038635494842337,
+      "approach_normal_y": 0.999998373036824,
+      "approach_tangent_x": -0.999998373036824,
+      "approach_tangent_y": -0.0018038635494842337,
+      "active_error_m": 0.011207224965846214,
+      "target_error_m": 0.015386833633177168,
+      "max_endpoint_error_m": 0.015386833633177168,
+      "handoff_x_offset": 0.0,
+      "handoff_y_offset": 0.02,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": 0.0,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": 0.0
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "category": "collision_headon",
+      "is_glance": 0.0,
+      "is_right": 0.0,
+      "target_before_x": 2.375,
+      "target_before_y": 8.0,
+      "requested_v0": 4.0,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.6392,
+      "motion_w": 0.0037,
+      "motion_speed": 2.6392000018945136,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.001806173585435012,
+      "approach_normal_y": 0.9999983688671593,
+      "approach_tangent_x": -0.9999983688671593,
+      "approach_tangent_y": -0.001806173585435012,
+      "active_error_m": 0.016243541236005493,
+      "target_error_m": 0.017411647927255264,
+      "max_endpoint_error_m": 0.017411647927255264,
+      "handoff_x_offset": 0.008,
+      "handoff_y_offset": -0.006,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": -0.002,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": -0.5
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "category": "collision_glancing",
+      "is_glance": 1.0,
+      "is_right": 0.0,
+      "target_before_x": 2.195,
+      "target_before_y": 6.2,
+      "requested_v0": 3.6,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.3417,
+      "motion_w": 0.0036,
+      "motion_speed": 2.341700002135201,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": 0.010163696418747703,
+      "approach_normal_y": 0.9999483483036049,
+      "approach_tangent_x": -0.9999483483036049,
+      "approach_tangent_y": 0.010163696418747703,
+      "active_error_m": 0.010777582871279244,
+      "target_error_m": 0.01890526844647867,
+      "max_endpoint_error_m": 0.01890526844647867,
+      "handoff_x_offset": 0.0,
+      "handoff_y_offset": 0.008,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": 0.0,
+      "target_y_offset": 0.0,
+      "handoff_w_offset": 0.0
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "category": "collision_glancing",
+      "is_glance": 1.0,
+      "is_right": 1.0,
+      "target_before_x": 2.555,
+      "target_before_y": 6.2,
+      "requested_v0": 3.6,
+      "requested_w0": 0.0,
+      "motion_vx": 0.0001,
+      "motion_vy": -2.3428,
+      "motion_w": 0.0036,
+      "motion_speed": 2.342800002134198,
+      "handoff_x": 0.0,
+      "handoff_y": 0.0,
+      "handoff_vx": 0.0,
+      "handoff_vy": 0.0,
+      "handoff_w": 0.0,
+      "handoff_speed": 0.0,
+      "approach_normal_x": -0.013351654102183214,
+      "approach_normal_y": 0.9999108626936382,
+      "approach_tangent_x": -0.9999108626936382,
+      "approach_tangent_y": -0.013351654102183214,
+      "active_error_m": 0.01807771231543762,
+      "target_error_m": 0.019195001466200633,
+      "max_endpoint_error_m": 0.019195001466200633,
+      "handoff_x_offset": -0.006,
+      "handoff_y_offset": -0.0005,
+      "handoff_v_scale_delta": 0.0,
+      "target_x_offset": -0.004,
+      "target_y_offset": 0.0085,
+      "handoff_w_offset": 0.0
+    }
+  ],
+  "models": [
+    {
+      "name": "headon_linear",
+      "features": [
+        "target_before_y",
+        "requested_v0"
+      ],
+      "loo_parameter_error_summary": {
+        "sample_count": 7,
+        "handoff_x_offset_mae": 0.015084176224864418,
+        "handoff_x_offset_max_abs_error": 0.03212794612794613,
+        "handoff_y_offset_mae": 0.012366992031741244,
+        "handoff_y_offset_max_abs_error": 0.0256607744107744,
+        "handoff_v_scale_delta_mae": 0.0025417185963080738,
+        "handoff_v_scale_delta_max_abs_error": 0.005244107744107631,
+        "target_x_offset_mae": 0.0019015194062285323,
+        "target_x_offset_max_abs_error": 0.0038544917756221007,
+        "target_y_offset_mae": 0.0031769123943340997,
+        "target_y_offset_max_abs_error": 0.0085,
+        "handoff_w_offset_mae": 0.23877394516302106,
+        "handoff_w_offset_max_abs_error": 0.5
+      },
+      "endpoint_summary": {
+        "sample_count": 7,
+        "in_play_pair_count": 7,
+        "active_rmse_m": 0.05217646376325202,
+        "target_in_play_rmse_m": 0.3097812149770539,
+        "both_endpoints_within_2cm_count": 0,
+        "both_endpoints_within_2cm_sample_ids": [],
+        "bottlenecks_over_2cm": [
+          {
+            "sample_id": 12000,
+            "active_error_m": 0.00966271407420298,
+            "target_error_m": 0.05307321111976104,
+            "max_endpoint_error_m": 0.05307321111976104
+          },
+          {
+            "sample_id": 12002,
+            "active_error_m": 0.007104557718766917,
+            "target_error_m": 0.06120240770583756,
+            "max_endpoint_error_m": 0.06120240770583756
+          },
+          {
+            "sample_id": 12003,
+            "active_error_m": 0.08329700952829928,
+            "target_error_m": 0.26652427046714744,
+            "max_endpoint_error_m": 0.26652427046714744
+          },
+          {
+            "sample_id": 12004,
+            "active_error_m": 0.052343165152451146,
+            "target_error_m": 0.23838323715776383,
+            "max_endpoint_error_m": 0.23838323715776383
+          },
+          {
+            "sample_id": 12005,
+            "active_error_m": 0.08650597281977115,
+            "target_error_m": 0.7314522153882478,
+            "max_endpoint_error_m": 0.7314522153882478
+          },
+          {
+            "sample_id": 12006,
+            "active_error_m": 0.029296508591879565,
+            "target_error_m": 0.02752649127978489,
+            "max_endpoint_error_m": 0.029296508591879565
+          },
+          {
+            "sample_id": 12007,
+            "active_error_m": 0.029884332492179855,
+            "target_error_m": 0.039325589590647074,
+            "max_endpoint_error_m": 0.039325589590647074
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "sample_id": 12000,
+          "handoff_x_offset": -0.007234234234234228,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.007234234234234228,
+          "handoff_y_offset": 0.004295045045045104,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.004295045045045104,
+          "handoff_v_scale_delta": 0.0008933933933933666,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0008933933933933666,
+          "target_x_offset": -0.0007597597597597598,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0007597597597597598,
+          "target_y_offset": 0.0035608108108108215,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0035608108108108215,
+          "handoff_w_offset": 0.22897897897898079,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.22897897897898079
+        },
+        {
+          "sample_id": 12002,
+          "handoff_x_offset": -0.0010621550275977838,
+          "handoff_x_offset_true": 0.005,
+          "handoff_x_offset_abs_error": 0.006062155027597784,
+          "handoff_y_offset": 0.008443364530837594,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.008443364530837594,
+          "handoff_v_scale_delta": -0.0002543796496280327,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0002543796496280327,
+          "target_x_offset": -0.0006988240940724724,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0006988240940724724,
+          "target_y_offset": 0.0019031677465802832,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0019031677465802832,
+          "handoff_w_offset": 0.04919606431485568,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.04919606431485568
+        },
+        {
+          "sample_id": 12003,
+          "handoff_x_offset": 0.0033280744336569405,
+          "handoff_x_offset_true": -0.021,
+          "handoff_x_offset_abs_error": 0.024328074433656942,
+          "handoff_y_offset": -0.014295610841423896,
+          "handoff_y_offset_true": 0.002,
+          "handoff_y_offset_abs_error": 0.016295610841423898,
+          "handoff_v_scale_delta": 0.0,
+          "handoff_v_scale_delta_true": 0.004999999999999893,
+          "handoff_v_scale_delta_abs_error": 0.004999999999999893,
+          "target_x_offset": -0.00299838187702264,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.00299838187702264,
+          "target_y_offset": 0.0031823422330096926,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0031823422330096926,
+          "handoff_w_offset": -0.37520226537216683,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.37520226537216683
+        },
+        {
+          "sample_id": 12004,
+          "handoff_x_offset": 0.03212794612794613,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.03212794612794613,
+          "handoff_y_offset": -0.005660774410774401,
+          "handoff_y_offset_true": 0.02,
+          "handoff_y_offset_abs_error": 0.0256607744107744,
+          "handoff_v_scale_delta": -0.005244107744107631,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.005244107744107631,
+          "target_x_offset": -0.0027306397306397327,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0027306397306397327,
+          "target_y_offset": 0.002017676767676775,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.002017676767676775,
+          "handoff_w_offset": -0.4452861952861946,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.4452861952861946
+        },
+        {
+          "sample_id": 12005,
+          "handoff_x_offset": -0.02065947242206248,
+          "handoff_x_offset_true": 0.008,
+          "handoff_x_offset_abs_error": 0.02865947242206248,
+          "handoff_y_offset": 0.015706235011990456,
+          "handoff_y_offset_true": -0.006,
+          "handoff_y_offset_abs_error": 0.021706235011990455,
+          "handoff_v_scale_delta": 0.004448441247002319,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.004448441247002319,
+          "target_x_offset": -0.000661870503597118,
+          "target_x_offset_true": -0.002,
+          "target_x_offset_abs_error": 0.001338129496402882,
+          "target_y_offset": 0.0014064748201438751,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0014064748201438751,
+          "handoff_w_offset": 0.0,
+          "handoff_w_offset_true": -0.5,
+          "handoff_w_offset_abs_error": 0.5
+        },
+        {
+          "sample_id": 12006,
+          "handoff_x_offset": -0.0037101433994095635,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.0037101433994095635,
+          "handoff_y_offset": 0.0013424188106284062,
+          "handoff_y_offset_true": 0.008,
+          "handoff_y_offset_abs_error": 0.006657581189371594,
+          "handoff_v_scale_delta": 0.0009758540700126354,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0009758540700126354,
+          "target_x_offset": -0.0009304091100801376,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0009304091100801376,
+          "target_y_offset": 0.0016679143821172514,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0016679143821172514,
+          "handoff_w_offset": -0.036377056094474614,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.036377056094474614
+        },
+        {
+          "sample_id": 12007,
+          "handoff_x_offset": -0.0025327920708562157,
+          "handoff_x_offset_true": -0.006,
+          "handoff_x_offset_abs_error": 0.0034672079291437844,
+          "handoff_y_offset": 0.0030103331927456567,
+          "handoff_y_offset_true": -0.0005,
+          "handoff_y_offset_abs_error": 0.0035103331927456567,
+          "handoff_v_scale_delta": 0.0009758540700126354,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0009758540700126354,
+          "target_x_offset": -0.00014550822437789943,
+          "target_x_offset_true": -0.004,
+          "target_x_offset_abs_error": 0.0038544917756221007,
+          "target_y_offset": 0.0,
+          "target_y_offset_true": 0.0085,
+          "target_y_offset_abs_error": 0.0085,
+          "handoff_w_offset": -0.036377056094474614,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.036377056094474614
+        }
+      ],
+      "sim_rows": [
+        {
+          "sample_id": 12000,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0008933933933934,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.22897897897898079,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.007234234234234228,
+            "handoff_y_offset": 0.004295045045045104,
+            "target_x_offset": -0.0007597597597597598,
+            "target_y_offset": 0.0035608108108108215
+          },
+          "active_error_m": 0.00966271407420298,
+          "target_error_m": 0.05307321111976104,
+          "max_endpoint_error_m": 0.05307321111976104,
+          "sim_active": [
+            2.3360843658447266,
+            5.492573261260986
+          ],
+          "sim_target": [
+            2.503514289855957,
+            3.898338556289673
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 0.999745620350372,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.04919606431485568,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.0010621550275977838,
+            "handoff_y_offset": 0.008443364530837594,
+            "target_x_offset": -0.0006988240940724724,
+            "target_y_offset": 0.0019031677465802832
+          },
+          "active_error_m": 0.007104557718766917,
+          "target_error_m": 0.06120240770583756,
+          "max_endpoint_error_m": 0.06120240770583756,
+          "sim_active": [
+            2.3451685905456543,
+            6.489905834197998
+          ],
+          "sim_target": [
+            2.4972097873687744,
+            4.5660200119018555
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.37520226537216683,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.0033280744336569405,
+            "handoff_y_offset": -0.014295610841423896,
+            "target_x_offset": -0.00299838187702264,
+            "target_y_offset": 0.0031823422330096926
+          },
+          "active_error_m": 0.08329700952829928,
+          "target_error_m": 0.26652427046714744,
+          "max_endpoint_error_m": 0.26652427046714744,
+          "sim_active": [
+            2.3441836833953857,
+            6.474543571472168
+          ],
+          "sim_target": [
+            2.6264772415161133,
+            2.785979986190796
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 0.9947558922558923,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.4452861952861946,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.03212794612794613,
+            "handoff_y_offset": -0.005660774410774401,
+            "target_x_offset": -0.0027306397306397327,
+            "target_y_offset": 0.002017676767676775
+          },
+          "active_error_m": 0.052343165152451146,
+          "target_error_m": 0.23838323715776383,
+          "max_endpoint_error_m": 0.23838323715776383,
+          "sim_active": [
+            2.38592529296875,
+            8.27956771850586
+          ],
+          "sim_target": [
+            2.353356122970581,
+            5.65634298324585
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0044484412470023,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.0,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.02065947242206248,
+            "handoff_y_offset": 0.015706235011990456,
+            "target_x_offset": -0.000661870503597118,
+            "target_y_offset": 0.0014064748201438751
+          },
+          "active_error_m": 0.08650597281977115,
+          "target_error_m": 0.7314522153882478,
+          "max_endpoint_error_m": 0.7314522153882478,
+          "sim_active": [
+            2.255579948425293,
+            8.2250337600708
+          ],
+          "sim_target": [
+            2.9144725799560547,
+            4.407242774963379
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0009758540700127,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.036377056094474614,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.0037101433994095635,
+            "handoff_y_offset": 0.0013424188106284062,
+            "target_x_offset": -0.0009304091100801376,
+            "target_y_offset": 0.0016679143821172514
+          },
+          "active_error_m": 0.029296508591879565,
+          "target_error_m": 0.02752649127978489,
+          "max_endpoint_error_m": 0.029296508591879565,
+          "sim_active": [
+            2.720576286315918,
+            6.232198715209961
+          ],
+          "sim_target": [
+            1.4741339683532715,
+            4.6919684410095215
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0009758540700127,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.036377056094474614,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.0025327920708562157,
+            "handoff_y_offset": 0.0030103331927456567,
+            "target_x_offset": -0.00014550822437789943,
+            "target_y_offset": 0.0
+          },
+          "active_error_m": 0.029884332492179855,
+          "target_error_m": 0.039325589590647074,
+          "max_endpoint_error_m": 0.039325589590647074,
+          "sim_active": [
+            1.8006786108016968,
+            5.879342079162598
+          ],
+          "sim_target": [
+            3.267578601837158,
+            5.232885837554932
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "name": "headon_plus_glance",
+      "features": [
+        "target_before_y",
+        "requested_v0",
+        "is_glance",
+        "is_right"
+      ],
+      "loo_parameter_error_summary": {
+        "sample_count": 7,
+        "handoff_x_offset_mae": 0.017192436981531597,
+        "handoff_x_offset_max_abs_error": 0.0335283018867924,
+        "handoff_y_offset_mae": 0.014178185287739219,
+        "handoff_y_offset_max_abs_error": 0.027811320754716973,
+        "handoff_v_scale_delta_mae": 0.002636131225508553,
+        "handoff_v_scale_delta_max_abs_error": 0.004999999999999918,
+        "target_x_offset_mae": 0.0018898378840303965,
+        "target_x_offset_max_abs_error": 0.004,
+        "target_y_offset_mae": 0.0018214285714285734,
+        "target_y_offset_max_abs_error": 0.0085,
+        "handoff_w_offset_mae": 0.2581737567218848,
+        "handoff_w_offset_max_abs_error": 0.5
+      },
+      "endpoint_summary": {
+        "sample_count": 7,
+        "in_play_pair_count": 7,
+        "active_rmse_m": 0.05663176629175621,
+        "target_in_play_rmse_m": 0.31825076274072517,
+        "both_endpoints_within_2cm_count": 0,
+        "both_endpoints_within_2cm_sample_ids": [],
+        "bottlenecks_over_2cm": [
+          {
+            "sample_id": 12000,
+            "active_error_m": 0.010315530873172938,
+            "target_error_m": 0.12320900895206702,
+            "max_endpoint_error_m": 0.12320900895206702
+          },
+          {
+            "sample_id": 12002,
+            "active_error_m": 0.006243557390140781,
+            "target_error_m": 0.06984702290409257,
+            "max_endpoint_error_m": 0.06984702290409257
+          },
+          {
+            "sample_id": 12003,
+            "active_error_m": 0.08020523007393557,
+            "target_error_m": 0.2820704201223561,
+            "max_endpoint_error_m": 0.2820704201223561
+          },
+          {
+            "sample_id": 12004,
+            "active_error_m": 0.053854422105395545,
+            "target_error_m": 0.24203612799223628,
+            "max_endpoint_error_m": 0.24203612799223628
+          },
+          {
+            "sample_id": 12005,
+            "active_error_m": 0.09067898525717642,
+            "target_error_m": 0.7364149893611778,
+            "max_endpoint_error_m": 0.7364149893611778
+          },
+          {
+            "sample_id": 12006,
+            "active_error_m": 0.02284429760992648,
+            "target_error_m": 0.00846123378238385,
+            "max_endpoint_error_m": 0.02284429760992648
+          },
+          {
+            "sample_id": 12007,
+            "active_error_m": 0.06501529416305155,
+            "target_error_m": 0.09166204888304375,
+            "max_endpoint_error_m": 0.09166204888304375
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "sample_id": 12000,
+          "handoff_x_offset": -0.010166666666666706,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.010166666666666706,
+          "handoff_y_offset": 0.00366666666666678,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.00366666666666678,
+          "handoff_v_scale_delta": 0.0026388888888888374,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0026388888888888374,
+          "target_x_offset": 0.0010555555555555752,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0010555555555555752,
+          "target_y_offset": -2.973838685346459e-18,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 2.973838685346459e-18,
+          "handoff_w_offset": 0.2638888888888926,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.2638888888888926
+        },
+        {
+          "sample_id": 12002,
+          "handoff_x_offset": -0.0018844765342960201,
+          "handoff_x_offset_true": 0.005,
+          "handoff_x_offset_abs_error": 0.00688447653429602,
+          "handoff_y_offset": 0.008498194945848435,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.008498194945848435,
+          "handoff_v_scale_delta": 0.00032490974729240674,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.00032490974729240674,
+          "target_x_offset": 0.0001299638989169724,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0001299638989169724,
+          "target_y_offset": -2.0151068693030157e-20,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 2.0151068693030157e-20,
+          "handoff_w_offset": 0.03249097472924367,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.03249097472924367
+        },
+        {
+          "sample_id": 12003,
+          "handoff_x_offset": 0.008596026490066182,
+          "handoff_x_offset_true": -0.021,
+          "handoff_x_offset_abs_error": 0.029596026490066183,
+          "handoff_y_offset": -0.01970860927152311,
+          "handoff_y_offset_true": 0.002,
+          "handoff_y_offset_abs_error": 0.021708609271523113,
+          "handoff_v_scale_delta": 0.0,
+          "handoff_v_scale_delta_true": 0.004999999999999893,
+          "handoff_v_scale_delta_abs_error": 0.004999999999999893,
+          "target_x_offset": -0.0019999999999999927,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0019999999999999927,
+          "target_y_offset": -3.2370845288022547e-18,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 3.2370845288022547e-18,
+          "handoff_w_offset": -0.49999999999999845,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.49999999999999845
+        },
+        {
+          "sample_id": 12004,
+          "handoff_x_offset": 0.0335283018867924,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.0335283018867924,
+          "handoff_y_offset": -0.007811320754716973,
+          "handoff_y_offset_true": 0.02,
+          "handoff_y_offset_abs_error": 0.027811320754716973,
+          "handoff_v_scale_delta": -0.004882075471698003,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.004882075471698003,
+          "target_x_offset": -0.0019528301886792415,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0019528301886792415,
+          "target_y_offset": -2.9447626342497807e-18,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 2.9447626342497807e-18,
+          "handoff_w_offset": -0.4882075471698102,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.4882075471698102
+        },
+        {
+          "sample_id": 12005,
+          "handoff_x_offset": -0.02159602649006634,
+          "handoff_x_offset_true": 0.008,
+          "handoff_x_offset_abs_error": 0.02959602649006634,
+          "handoff_y_offset": 0.01570860927152317,
+          "handoff_y_offset_true": -0.006,
+          "handoff_y_offset_abs_error": 0.02170860927152317,
+          "handoff_v_scale_delta": 0.004999999999999918,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.004999999999999918,
+          "target_x_offset": 2.998519262431334e-18,
+          "target_x_offset_true": -0.002,
+          "target_x_offset_abs_error": 0.002000000000000003,
+          "target_y_offset": -5.0668580488439254e-18,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 5.0668580488439254e-18,
+          "handoff_w_offset": 0.0,
+          "handoff_w_offset_true": -0.5,
+          "handoff_w_offset_abs_error": 0.5
+        },
+        {
+          "sample_id": 12006,
+          "handoff_x_offset": -0.004575560802833525,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.004575560802833525,
+          "handoff_y_offset": 0.0006461038961039223,
+          "handoff_y_offset_true": 0.008,
+          "handoff_y_offset_abs_error": 0.007353896103896078,
+          "handoff_v_scale_delta": 0.0006070444706808113,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0006070444706808113,
+          "target_x_offset": -0.0020905155450609905,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0020905155450609905,
+          "target_y_offset": 0.00425,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.00425,
+          "handoff_w_offset": -0.02262888626524867,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.02262888626524867
+        },
+        {
+          "sample_id": 12007,
+          "handoff_x_offset": -6.938893903907228e-18,
+          "handoff_x_offset_true": -0.006,
+          "handoff_x_offset_abs_error": 0.005999999999999993,
+          "handoff_y_offset": 0.007999999999999986,
+          "handoff_y_offset_true": -0.0005,
+          "handoff_y_offset_abs_error": 0.008499999999999987,
+          "handoff_v_scale_delta": 1.734723475976807e-18,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 1.734723475976807e-18,
+          "target_x_offset": 0.0,
+          "target_x_offset_true": -0.004,
+          "target_x_offset_abs_error": 0.004,
+          "target_y_offset": 0.0,
+          "target_y_offset_true": 0.0085,
+          "target_y_offset_abs_error": 0.0085,
+          "handoff_w_offset": -2.7755575615628914e-16,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 2.7755575615628914e-16
+        }
+      ],
+      "sim_rows": [
+        {
+          "sample_id": 12000,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0026388888888889,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.2638888888888926,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.010166666666666706,
+            "handoff_y_offset": 0.00366666666666678,
+            "target_x_offset": 0.0010555555555555752,
+            "target_y_offset": -2.973838685346459e-18
+          },
+          "active_error_m": 0.010315530873172938,
+          "target_error_m": 0.12320900895206702,
+          "max_endpoint_error_m": 0.12320900895206702,
+          "sim_active": [
+            2.3286070823669434,
+            5.481714248657227
+          ],
+          "sim_target": [
+            2.5233047008514404,
+            3.9700605869293213
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0003249097472924,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.03249097472924367,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.0018844765342960201,
+            "handoff_y_offset": 0.008498194945848435,
+            "target_x_offset": 0.0001299638989169724,
+            "target_y_offset": -2.0151068693030157e-20
+          },
+          "active_error_m": 0.006243557390140781,
+          "target_error_m": 0.06984702290409257,
+          "max_endpoint_error_m": 0.06984702290409257,
+          "sim_active": [
+            2.3422951698303223,
+            6.489126205444336
+          ],
+          "sim_target": [
+            2.5147171020507812,
+            4.567978858947754
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.49999999999999845,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.008596026490066182,
+            "handoff_y_offset": -0.01970860927152311,
+            "target_x_offset": -0.0019999999999999927,
+            "target_y_offset": -3.2370845288022547e-18
+          },
+          "active_error_m": 0.08020523007393557,
+          "target_error_m": 0.2820704201223561,
+          "max_endpoint_error_m": 0.2820704201223561,
+          "sim_active": [
+            2.3411550521850586,
+            6.467363357543945
+          ],
+          "sim_target": [
+            2.6141772270202637,
+            2.776332378387451
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 0.995117924528302,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.4882075471698102,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.0335283018867924,
+            "handoff_y_offset": -0.007811320754716973,
+            "target_x_offset": -0.0019528301886792415,
+            "target_y_offset": -2.9447626342497807e-18
+          },
+          "active_error_m": 0.053854422105395545,
+          "target_error_m": 0.24203612799223628,
+          "max_endpoint_error_m": 0.24203612799223628,
+          "sim_active": [
+            2.387448787689209,
+            8.277420997619629
+          ],
+          "sim_target": [
+            2.351428747177124,
+            5.6524200439453125
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.005,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.0,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.02159602649006634,
+            "handoff_y_offset": 0.01570860927152317,
+            "target_x_offset": 2.998519262431334e-18,
+            "target_y_offset": -5.0668580488439254e-18
+          },
+          "active_error_m": 0.09067898525717642,
+          "target_error_m": 0.7364149893611778,
+          "max_endpoint_error_m": 0.7364149893611778,
+          "sim_active": [
+            2.252060890197754,
+            8.222686767578125
+          ],
+          "sim_target": [
+            2.9333012104034424,
+            4.40502405166626
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0006070444706807,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.02262888626524867,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.004575560802833525,
+            "handoff_y_offset": 0.0006461038961039223,
+            "target_x_offset": -0.0020905155450609905,
+            "target_y_offset": 0.00425
+          },
+          "active_error_m": 0.02284429760992648,
+          "target_error_m": 0.00846123378238385,
+          "max_endpoint_error_m": 0.02284429760992648,
+          "sim_active": [
+            2.723355770111084,
+            6.226198196411133
+          ],
+          "sim_target": [
+            1.4604638814926147,
+            4.710416793823242
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -2.7755575615628914e-16,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -6.938893903907228e-18,
+            "handoff_y_offset": 0.007999999999999986,
+            "target_x_offset": 0.0,
+            "target_y_offset": 0.0
+          },
+          "active_error_m": 0.06501529416305155,
+          "target_error_m": 0.09166204888304375,
+          "max_endpoint_error_m": 0.09166204888304375,
+          "sim_active": [
+            1.8153588771820068,
+            5.916531562805176
+          ],
+          "sim_target": [
+            3.286820650100708,
+            5.180902004241943
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    },
+    {
+      "name": "approach_geometry",
+      "features": [
+        "target_before_y",
+        "requested_v0",
+        "handoff_speed",
+        "approach_normal_x",
+        "approach_normal_y",
+        "approach_tangent_x",
+        "approach_tangent_y",
+        "is_glance",
+        "is_right"
+      ],
+      "loo_parameter_error_summary": {
+        "sample_count": 7,
+        "handoff_x_offset_mae": 211.71151813982428,
+        "handoff_x_offset_max_abs_error": 1049.0186486002058,
+        "handoff_y_offset_mae": 176.5386596929337,
+        "handoff_y_offset_max_abs_error": 877.5165426557958,
+        "handoff_v_scale_delta_mae": 30.601253445455406,
+        "handoff_v_scale_delta_max_abs_error": 150.95454643596895,
+        "target_x_offset_mae": 12.23959661607745,
+        "target_x_offset_max_abs_error": 60.37948524125386,
+        "target_y_offset_mae": 0.0018214285714291758,
+        "target_y_offset_max_abs_error": 0.0085,
+        "handoff_w_offset_mae": 3060.1134398148743,
+        "handoff_w_offset_max_abs_error": 15095.371310472488
+      },
+      "endpoint_summary": {
+        "sample_count": 7,
+        "in_play_pair_count": 7,
+        "active_rmse_m": 558.0869224926009,
+        "target_in_play_rmse_m": 25.114887959477713,
+        "both_endpoints_within_2cm_count": 0,
+        "both_endpoints_within_2cm_sample_ids": [],
+        "bottlenecks_over_2cm": [
+          {
+            "sample_id": 12000,
+            "active_error_m": 1.0743626830247472,
+            "target_error_m": 1.2556091638676485,
+            "max_endpoint_error_m": 1.2556091638676485
+          },
+          {
+            "sample_id": 12002,
+            "active_error_m": 0.0400809086054542,
+            "target_error_m": 0.14023590161362953,
+            "max_endpoint_error_m": 0.14023590161362953
+          },
+          {
+            "sample_id": 12003,
+            "active_error_m": 0.09321856405038219,
+            "target_error_m": 0.32007011377794414,
+            "max_endpoint_error_m": 0.32007011377794414
+          },
+          {
+            "sample_id": 12004,
+            "active_error_m": 0.05248987047438378,
+            "target_error_m": 0.2390822725139873,
+            "max_endpoint_error_m": 0.2390822725139873
+          },
+          {
+            "sample_id": 12005,
+            "active_error_m": 0.08031131119915713,
+            "target_error_m": 0.7234645640144227,
+            "max_endpoint_error_m": 0.7234645640144227
+          },
+          {
+            "sample_id": 12006,
+            "active_error_m": 1363.8897918367811,
+            "target_error_m": 61.14061271889,
+            "max_endpoint_error_m": 1363.8897918367811
+          },
+          {
+            "sample_id": 12007,
+            "active_error_m": 565.7124299216081,
+            "target_error_m": 25.97786423499625,
+            "max_endpoint_error_m": 565.7124299216081
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "sample_id": 12000,
+          "handoff_x_offset": 0.27603831194869954,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.27603831194869954,
+          "handoff_y_offset": -0.23203155153780486,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.23203155153780486,
+          "handoff_v_scale_delta": -0.039450078524750354,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.039450078524750354,
+          "target_x_offset": -0.015780031509330272,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.015780031509330272,
+          "target_y_offset": -3.6825936114253595e-16,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 3.6825936114253595e-16,
+          "handoff_w_offset": -3.9450078773423485,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 3.9450078773423485
+        },
+        {
+          "sample_id": 12002,
+          "handoff_x_offset": -0.024224099902426133,
+          "handoff_x_offset_true": 0.005,
+          "handoff_x_offset_abs_error": 0.029224099902426134,
+          "handoff_y_offset": 0.024565116258087327,
+          "handoff_y_offset_true": 0.0,
+          "handoff_y_offset_abs_error": 0.024565116258087327,
+          "handoff_v_scale_delta": 0.004176568941436892,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.004176568941436892,
+          "target_x_offset": 0.001670627587103457,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.001670627587103457,
+          "target_y_offset": 1.2587354950240702e-16,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 1.2587354950240702e-16,
+          "handoff_w_offset": 0.4176568967758456,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.4176568967758456
+        },
+        {
+          "sample_id": 12003,
+          "handoff_x_offset": 0.013985774556161984,
+          "handoff_x_offset_true": -0.021,
+          "handoff_x_offset_abs_error": 0.03498577455616199,
+          "handoff_y_offset": -0.02740824941649317,
+          "handoff_y_offset_true": 0.002,
+          "handoff_y_offset_abs_error": 0.02940824941649317,
+          "handoff_v_scale_delta": 0.0,
+          "handoff_v_scale_delta_true": 0.004999999999999893,
+          "handoff_v_scale_delta_abs_error": 0.004999999999999893,
+          "target_x_offset": -0.00200000001260812,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.00200000001260812,
+          "target_y_offset": -2.2066886460001271e-16,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 2.2066886460001271e-16,
+          "handoff_w_offset": -0.5000000031520565,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.5000000031520565
+        },
+        {
+          "sample_id": 12004,
+          "handoff_x_offset": 0.032684386213467476,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 0.032684386213467476,
+          "handoff_y_offset": -0.007473754524035425,
+          "handoff_y_offset_true": 0.02,
+          "handoff_y_offset_abs_error": 0.027473754524035426,
+          "handoff_v_scale_delta": -0.0046710965554348505,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.0046710965554348505,
+          "target_x_offset": -0.0018684386339528833,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 0.0018684386339528833,
+          "target_y_offset": -1.515102523481446e-16,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 1.515102523481446e-16,
+          "handoff_w_offset": -0.46710965848919095,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 0.46710965848919095
+        },
+        {
+          "sample_id": 12005,
+          "handoff_x_offset": -0.026985774335674506,
+          "handoff_x_offset_true": 0.008,
+          "handoff_x_offset_abs_error": 0.034985774335674506,
+          "handoff_y_offset": 0.023408249231130385,
+          "handoff_y_offset_true": -0.006,
+          "handoff_y_offset_abs_error": 0.029408249231130383,
+          "handoff_v_scale_delta": 0.004999999968479347,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 0.004999999968479347,
+          "target_x_offset": -9.665692146210324e-17,
+          "target_x_offset_true": -0.002,
+          "target_x_offset_abs_error": 0.0019999999999999033,
+          "target_y_offset": 2.0594725992316556e-16,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 2.0594725992316556e-16,
+          "handoff_w_offset": 0.0,
+          "handoff_w_offset_true": -0.5,
+          "handoff_w_offset_abs_error": 0.5
+        },
+        {
+          "sample_id": 12006,
+          "handoff_x_offset": -1049.0186486002058,
+          "handoff_x_offset_true": 0.0,
+          "handoff_x_offset_abs_error": 1049.0186486002058,
+          "handoff_y_offset": 877.5245426557958,
+          "handoff_y_offset_true": 0.008,
+          "handoff_y_offset_abs_error": 877.5165426557958,
+          "handoff_v_scale_delta": 150.95454643596895,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 150.95454643596895,
+          "target_x_offset": 60.37948524125386,
+          "target_x_offset_true": 0.0,
+          "target_x_offset_abs_error": 60.37948524125386,
+          "target_y_offset": 0.0042500000000031575,
+          "target_y_offset_true": 0.0,
+          "target_y_offset_abs_error": 0.0042500000000031575,
+          "handoff_w_offset": 15095.371310472488,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 15095.371310472488
+        },
+        {
+          "sample_id": 12007,
+          "handoff_x_offset": 432.54806003160775,
+          "handoff_x_offset_true": -0.006,
+          "handoff_x_offset_abs_error": 432.5540600316077,
+          "handoff_y_offset": -357.9116882737726,
+          "handoff_y_offset_true": -0.0005,
+          "handoff_y_offset_abs_error": 357.9111882737726,
+          "handoff_v_scale_delta": -63.1959299382288,
+          "handoff_v_scale_delta_true": 0.0,
+          "handoff_v_scale_delta_abs_error": 63.1959299382288,
+          "target_x_offset": -25.27837197354529,
+          "target_x_offset_true": -0.004,
+          "target_x_offset_abs_error": 25.27437197354529,
+          "target_y_offset": 0.0,
+          "target_y_offset_true": 0.0085,
+          "target_y_offset_abs_error": 0.0085,
+          "handoff_w_offset": -6319.592993795872,
+          "handoff_w_offset_true": 0.0,
+          "handoff_w_offset_abs_error": 6319.592993795872
+        }
+      ],
+      "sim_rows": [
+        {
+          "sample_id": 12000,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 0.9605499214752496,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -3.9450078773423485,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.27603831194869954,
+            "handoff_y_offset": -0.23203155153780486,
+            "target_x_offset": -0.015780031509330272,
+            "target_y_offset": -3.6825936114253595e-16
+          },
+          "active_error_m": 1.0743626830247472,
+          "target_error_m": 1.2556091638676485,
+          "max_endpoint_error_m": 1.2556091638676485,
+          "sim_active": [
+            2.8421008586883545,
+            4.534119606018066
+          ],
+          "sim_target": [
+            2.2733571529388428,
+            5.1020050048828125
+          ],
+          "unity_active": [
+            2.3388,
+            5.4833
+          ],
+          "unity_target": [
+            2.4656,
+            3.8612
+          ]
+        },
+        {
+          "sample_id": 12002,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0041765689414368,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.4176568967758456,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.024224099902426133,
+            "handoff_y_offset": 0.024565116258087327,
+            "target_x_offset": 0.001670627587103457,
+            "target_y_offset": 1.2587354950240702e-16
+          },
+          "active_error_m": 0.0400809086054542,
+          "target_error_m": 0.14023590161362953,
+          "max_endpoint_error_m": 0.14023590161362953,
+          "sim_active": [
+            2.3046841621398926,
+            6.492990493774414
+          ],
+          "sim_target": [
+            2.6121206283569336,
+            4.555047988891602
+          ],
+          "unity_active": [
+            2.3435,
+            6.483
+          ],
+          "unity_target": [
+            2.4803,
+            4.5072
+          ]
+        },
+        {
+          "sample_id": 12003,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.5000000031520565,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.013985774556161984,
+            "handoff_y_offset": -0.02740824941649317,
+            "target_x_offset": -0.00200000001260812,
+            "target_y_offset": -2.2066886460001271e-16
+          },
+          "active_error_m": 0.09321856405038219,
+          "target_error_m": 0.32007011377794414,
+          "max_endpoint_error_m": 0.32007011377794414,
+          "sim_active": [
+            2.353760004043579,
+            6.460965156555176
+          ],
+          "sim_target": [
+            2.5743372440338135,
+            2.7689156532287598
+          ],
+          "unity_active": [
+            2.261,
+            6.4702
+          ],
+          "unity_target": [
+            2.8527,
+            2.9269
+          ]
+        },
+        {
+          "sample_id": 12004,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 0.9953289034445651,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -0.46710965848919095,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 0.032684386213467476,
+            "handoff_y_offset": -0.007473754524035425,
+            "target_x_offset": -0.0018684386339528833,
+            "target_y_offset": -1.515102523481446e-16
+          },
+          "active_error_m": 0.05248987047438378,
+          "target_error_m": 0.2390822725139873,
+          "max_endpoint_error_m": 0.2390822725139873,
+          "sim_active": [
+            2.3860881328582764,
+            8.277772903442383
+          ],
+          "sim_target": [
+            2.355301856994629,
+            5.65172004699707
+          ],
+          "unity_active": [
+            2.3336,
+            8.2782
+          ],
+          "unity_target": [
+            2.5593,
+            5.7764
+          ]
+        },
+        {
+          "sample_id": 12005,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 1.0049999999684793,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 0.0,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -0.026985774335674506,
+            "handoff_y_offset": 0.023408249231130385,
+            "target_x_offset": -9.665692146210324e-17,
+            "target_y_offset": 2.0594725992316556e-16
+          },
+          "active_error_m": 0.08031131119915713,
+          "target_error_m": 0.7234645640144227,
+          "max_endpoint_error_m": 0.7234645640144227,
+          "sim_active": [
+            2.2545435428619385,
+            8.235825538635254
+          ],
+          "sim_target": [
+            2.897213935852051,
+            4.405189037322998
+          ],
+          "unity_active": [
+            2.3185,
+            8.2844
+          ],
+          "unity_target": [
+            2.6502,
+            3.7252
+          ]
+        },
+        {
+          "sample_id": 12006,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": 151.95454643596895,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": 15095.371310472488,
+            "angular_sign": 1.0,
+            "handoff_x_offset": -1049.0186486002058,
+            "handoff_y_offset": 877.5245426557958,
+            "target_x_offset": 60.37948524125386,
+            "target_y_offset": 0.0042500000000031575
+          },
+          "active_error_m": 1363.8897918367811,
+          "target_error_m": 61.14061271889,
+          "max_endpoint_error_m": 1363.8897918367811,
+          "sim_active": [
+            -1046.61669921875,
+            877.4435424804688
+          ],
+          "sim_target": [
+            62.57451629638672,
+            6.204251766204834
+          ],
+          "unity_active": [
+            2.7378,
+            6.2085
+          ],
+          "unity_target": [
+            1.4522,
+            4.7086
+          ]
+        },
+        {
+          "sample_id": 12007,
+          "predicted_config": {
+            "handoff_extra": 0.0,
+            "handoff_friction": 0.001,
+            "handoff_v_scale": -62.1959299382288,
+            "handoff_vx_offset": 0.0,
+            "handoff_vy_offset": 0.0,
+            "handoff_w_offset": -6319.592993795872,
+            "angular_sign": 1.0,
+            "handoff_x_offset": 432.54806003160775,
+            "handoff_y_offset": -357.9116882737726,
+            "target_x_offset": -25.27837197354529,
+            "target_y_offset": 0.0
+          },
+          "active_error_m": 565.7124299216081,
+          "target_error_m": 25.97786423499625,
+          "max_endpoint_error_m": 565.7124299216081,
+          "sim_active": [
+            434.95538330078125,
+            -357.97955322265625
+          ],
+          "sim_target": [
+            -22.7233829498291,
+            6.2000017166137695
+          ],
+          "unity_active": [
+            1.7736,
+            5.8667
+          ],
+          "unity_target": [
+            3.2374,
+            5.2581
+          ]
+        }
+      ]
+    }
+  ],
+  "best_model_by_target_rmse": {
+    "name": "headon_linear",
+    "endpoint_summary": {
+      "sample_count": 7,
+      "in_play_pair_count": 7,
+      "active_rmse_m": 0.05217646376325202,
+      "target_in_play_rmse_m": 0.3097812149770539,
+      "both_endpoints_within_2cm_count": 0,
+      "both_endpoints_within_2cm_sample_ids": [],
+      "bottlenecks_over_2cm": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.00966271407420298,
+          "target_error_m": 0.05307321111976104,
+          "max_endpoint_error_m": 0.05307321111976104
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.007104557718766917,
+          "target_error_m": 0.06120240770583756,
+          "max_endpoint_error_m": 0.06120240770583756
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08329700952829928,
+          "target_error_m": 0.26652427046714744,
+          "max_endpoint_error_m": 0.26652427046714744
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.052343165152451146,
+          "target_error_m": 0.23838323715776383,
+          "max_endpoint_error_m": 0.23838323715776383
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.08650597281977115,
+          "target_error_m": 0.7314522153882478,
+          "max_endpoint_error_m": 0.7314522153882478
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.029296508591879565,
+          "target_error_m": 0.02752649127978489,
+          "max_endpoint_error_m": 0.029296508591879565
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.029884332492179855,
+          "target_error_m": 0.039325589590647074,
+          "max_endpoint_error_m": 0.039325589590647074
+        }
+      ]
+    }
+  },
+  "interpretation": [
+    "This is intentionally a tiny-data leave-one-out audit, not a production correction model.",
+    "If simple visible features cannot predict the oracle corrections, the current 2cm result remains a per-sample native-state proxy rather than a general simulator formula.",
+    "The next trustworthy route would be either runtime contact/solver state capture or a larger controlled sample set for correction-model validation."
+  ]
+}

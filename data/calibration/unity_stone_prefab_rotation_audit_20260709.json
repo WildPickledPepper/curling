@@ -1,0 +1,1383 @@
+{
+  "input": "data\\calibration\\unity_assets_inspect_20260709.txt",
+  "stone_count": 80,
+  "unique_local_rotation_count": 1,
+  "unique_local_rotations": [
+    {
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "count": 80
+    }
+  ],
+  "unique_local_yaw_deg": [
+    -0.0
+  ],
+  "max_abs_yaw_deg": 0.0,
+  "interpretation": "Serialized formal stone transforms all have the same near-identity local rotation. Therefore the wide-yaw endpoint improvement is not explained by different prefab initial yaws; if rotation is involved, it must be runtime carryover/contact-state, or the yaw sweep is only compensating for contact feature/manifold differences.",
+  "rows": [
+    {
+      "asset": "level2",
+      "path_id": 169,
+      "name": "Curling stone blue7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 170,
+      "name": "Curling stone red2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 171,
+      "name": "Curling stone blue0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 172,
+      "name": "Curling stone red4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 173,
+      "name": "Curling stone red1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 174,
+      "name": "Curling stone red3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 176,
+      "name": "Curling stone blue4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 177,
+      "name": "Curling stone blue6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 178,
+      "name": "Curling stone blue5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 179,
+      "name": "Curling stone blue1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 180,
+      "name": "Curling stone red0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 181,
+      "name": "Curling stone blue2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 182,
+      "name": "Curling stone red5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 183,
+      "name": "Curling stone red7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 184,
+      "name": "Curling stone blue3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level2",
+      "path_id": 185,
+      "name": "Curling stone red6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 157,
+      "name": "Curling stone red2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 158,
+      "name": "Curling stone blue7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 159,
+      "name": "Curling stone blue5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 160,
+      "name": "Curling stone red3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 161,
+      "name": "Curling stone blue1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 162,
+      "name": "Curling stone red5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 163,
+      "name": "Curling stone blue3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 164,
+      "name": "Curling stone red1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 165,
+      "name": "Curling stone red6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 166,
+      "name": "Curling stone blue2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 167,
+      "name": "Curling stone blue0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 168,
+      "name": "Curling stone red0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 169,
+      "name": "Curling stone blue6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 170,
+      "name": "Curling stone red4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 171,
+      "name": "Curling stone red7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level3",
+      "path_id": 173,
+      "name": "Curling stone blue4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 169,
+      "name": "Curling stone blue7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 170,
+      "name": "Curling stone red2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 171,
+      "name": "Curling stone blue0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 172,
+      "name": "Curling stone red4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 173,
+      "name": "Curling stone red1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 174,
+      "name": "Curling stone red3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 176,
+      "name": "Curling stone blue4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 177,
+      "name": "Curling stone blue6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 178,
+      "name": "Curling stone blue5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 179,
+      "name": "Curling stone blue1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 180,
+      "name": "Curling stone red0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 181,
+      "name": "Curling stone blue2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 182,
+      "name": "Curling stone red5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 183,
+      "name": "Curling stone red7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 184,
+      "name": "Curling stone blue3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level4",
+      "path_id": 185,
+      "name": "Curling stone red6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 157,
+      "name": "Curling stone red2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 158,
+      "name": "Curling stone blue7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 159,
+      "name": "Curling stone blue5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 160,
+      "name": "Curling stone red3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 161,
+      "name": "Curling stone blue1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 162,
+      "name": "Curling stone red5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 163,
+      "name": "Curling stone blue3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 164,
+      "name": "Curling stone red1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 165,
+      "name": "Curling stone red6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 166,
+      "name": "Curling stone blue2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 167,
+      "name": "Curling stone blue0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 168,
+      "name": "Curling stone red0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 169,
+      "name": "Curling stone blue6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 170,
+      "name": "Curling stone red4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 171,
+      "name": "Curling stone red7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level5",
+      "path_id": 173,
+      "name": "Curling stone blue4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -93.1542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 280,
+      "name": "Curling stone red1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 281,
+      "name": "Curling stone red5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 282,
+      "name": "Curling stone blue7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 283,
+      "name": "Curling stone red7",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 284,
+      "name": "Curling stone red3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 285,
+      "name": "Curling stone blue5",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 286,
+      "name": "Curling stone red6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 287,
+      "name": "Curling stone blue2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 288,
+      "name": "Curling stone red0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 289,
+      "name": "Curling stone blue0",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 290,
+      "name": "Curling stone blue3",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 291,
+      "name": "Curling stone blue4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 293,
+      "name": "Curling stone blue6",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 294,
+      "name": "Curling stone blue1",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 295,
+      "name": "Curling stone red4",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    },
+    {
+      "asset": "level6",
+      "path_id": 296,
+      "name": "Curling stone red2",
+      "local_rotation_xyzw": [
+        6.7e-08,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_yaw_deg": -0.0,
+      "world_pos": [
+        -96.8542,
+        14.4324,
+        54.1744
+      ]
+    }
+  ]
+}

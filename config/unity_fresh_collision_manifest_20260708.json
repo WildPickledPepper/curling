@@ -1,0 +1,326 @@
+[
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\000_collision_headon_y5p2_v3p4_r00.json",
+    "sample_id": 10000,
+    "label": "collision_headon_y5p2_v3p4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 78,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\000_collision_headon_y5p2_v3p4_r01.json",
+    "sample_id": 10001,
+    "label": "collision_headon_y5p2_v3p4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 78,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\000_collision_headon_y5p2_v3p4_r02.json",
+    "sample_id": 10002,
+    "label": "collision_headon_y5p2_v3p4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 78,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\001_collision_headon_y5p2_v4_r00.json",
+    "sample_id": 10003,
+    "label": "collision_headon_y5p2_v4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 79,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\001_collision_headon_y5p2_v4_r01.json",
+    "sample_id": 10004,
+    "label": "collision_headon_y5p2_v4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 79,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\001_collision_headon_y5p2_v4_r02.json",
+    "sample_id": 10005,
+    "label": "collision_headon_y5p2_v4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 79,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\002_collision_headon_y6p2_v3p4_r00.json",
+    "sample_id": 10006,
+    "label": "collision_headon_y6p2_v3p4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 80,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\002_collision_headon_y6p2_v3p4_r01.json",
+    "sample_id": 10007,
+    "label": "collision_headon_y6p2_v3p4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 80,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\002_collision_headon_y6p2_v3p4_r02.json",
+    "sample_id": 10008,
+    "label": "collision_headon_y6p2_v3p4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 80,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\003_collision_headon_y6p2_v4_r00.json",
+    "sample_id": 10009,
+    "label": "collision_headon_y6p2_v4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 81,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\003_collision_headon_y6p2_v4_r01.json",
+    "sample_id": 10010,
+    "label": "collision_headon_y6p2_v4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 81,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\003_collision_headon_y6p2_v4_r02.json",
+    "sample_id": 10011,
+    "label": "collision_headon_y6p2_v4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 81,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\004_collision_headon_y8_v3p4_r00.json",
+    "sample_id": 10012,
+    "label": "collision_headon_y8_v3p4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 82,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\004_collision_headon_y8_v3p4_r01.json",
+    "sample_id": 10013,
+    "label": "collision_headon_y8_v3p4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 82,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\004_collision_headon_y8_v3p4_r02.json",
+    "sample_id": 10014,
+    "label": "collision_headon_y8_v3p4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 82,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\005_collision_headon_y8_v4_r00.json",
+    "sample_id": 10015,
+    "label": "collision_headon_y8_v4_fresh_r00",
+    "category": "collision_headon",
+    "source_sample_id": 83,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\005_collision_headon_y8_v4_r01.json",
+    "sample_id": 10016,
+    "label": "collision_headon_y8_v4_fresh_r01",
+    "category": "collision_headon",
+    "source_sample_id": 83,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\005_collision_headon_y8_v4_r02.json",
+    "sample_id": 10017,
+    "label": "collision_headon_y8_v4_fresh_r02",
+    "category": "collision_headon",
+    "source_sample_id": 83,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\006_collision_glance_left_target_r00.json",
+    "sample_id": 10018,
+    "label": "collision_glance_left_target_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 84,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\006_collision_glance_left_target_r01.json",
+    "sample_id": 10019,
+    "label": "collision_glance_left_target_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 84,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\006_collision_glance_left_target_r02.json",
+    "sample_id": 10020,
+    "label": "collision_glance_left_target_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 84,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\007_collision_glance_right_target_r00.json",
+    "sample_id": 10021,
+    "label": "collision_glance_right_target_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 85,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\007_collision_glance_right_target_r01.json",
+    "sample_id": 10022,
+    "label": "collision_glance_right_target_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 85,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\007_collision_glance_right_target_r02.json",
+    "sample_id": 10023,
+    "label": "collision_glance_right_target_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 85,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\008_collision_glance_left_curl_in_r00.json",
+    "sample_id": 10024,
+    "label": "collision_glance_left_curl_in_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 86,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\008_collision_glance_left_curl_in_r01.json",
+    "sample_id": 10025,
+    "label": "collision_glance_left_curl_in_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 86,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\008_collision_glance_left_curl_in_r02.json",
+    "sample_id": 10026,
+    "label": "collision_glance_left_curl_in_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 86,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\009_collision_glance_right_curl_in_r00.json",
+    "sample_id": 10027,
+    "label": "collision_glance_right_curl_in_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 87,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\009_collision_glance_right_curl_in_r01.json",
+    "sample_id": 10028,
+    "label": "collision_glance_right_curl_in_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 87,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\009_collision_glance_right_curl_in_r02.json",
+    "sample_id": 10029,
+    "label": "collision_glance_right_curl_in_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 87,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\010_collision_glance_wide_left_r00.json",
+    "sample_id": 10030,
+    "label": "collision_glance_wide_left_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 88,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\010_collision_glance_wide_left_r01.json",
+    "sample_id": 10031,
+    "label": "collision_glance_wide_left_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 88,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\010_collision_glance_wide_left_r02.json",
+    "sample_id": 10032,
+    "label": "collision_glance_wide_left_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 88,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\011_collision_glance_wide_right_r00.json",
+    "sample_id": 10033,
+    "label": "collision_glance_wide_right_fresh_r00",
+    "category": "collision_glancing",
+    "source_sample_id": 89,
+    "repeat_index": 0,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\011_collision_glance_wide_right_r01.json",
+    "sample_id": 10034,
+    "label": "collision_glance_wide_right_fresh_r01",
+    "category": "collision_glancing",
+    "source_sample_id": 89,
+    "repeat_index": 1,
+    "requires_fresh_page": true
+  },
+  {
+    "plan_file": "config\\unity_fresh_collision_plans_20260708\\011_collision_glance_wide_right_r02.json",
+    "sample_id": 10035,
+    "label": "collision_glance_wide_right_fresh_r02",
+    "category": "collision_glancing",
+    "source_sample_id": 89,
+    "repeat_index": 2,
+    "requires_fresh_page": true
+  }
+]

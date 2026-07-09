@@ -1,0 +1,478 @@
+{
+  "contact_probe": "data\\calibration\\unity_physx_collision_probe_unique_role_contact_report_current_best_20260709.json",
+  "row_delta": "data\\calibration\\unity_collision_solver_row_delta_from_tail_oracle_020s_20260709.json",
+  "summary": {
+    "row_count": 8,
+    "ok_count": 8,
+    "all_first_contact_times": [
+      0.01
+    ],
+    "contact_report_angle_delta_abs_mean_deg": 2.7174819258880722,
+    "contact_report_angle_delta_abs_max_deg": 7.090456505506097,
+    "worst_unity_minus_contact_report_sample": {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.6715580821037292,
+        -0.7409518957138062
+      ],
+      "target_contact_normal_angle_deg": -47.81256669237457,
+      "target_contact_impulse_protocol_Ns": [
+        9.691565080080181,
+        -10.693019012804143
+      ],
+      "target_contact_impulse_norm_Ns": 14.431461786999282,
+      "target_contact_impulse_angle_deg": -47.81256598416377,
+      "target_contact_impulse_angle_minus_normal_deg": 7.082107913447544e-07,
+      "separation_min_m": -6.580352783203125e-05,
+      "separation_max_m": -6.58002682030201e-05,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+      "endpoint_error_before_m": 0.06548322059025638,
+      "endpoint_error_after_tail_oracle_m": 0.001226575064250015,
+      "row_delta_contact_normal_angle_deg": -45.76331761025699,
+      "local_row_delta_impulse_angle_deg": -55.20176010092833,
+      "unity_implied_impulse_angle_deg": -54.90302248966988,
+      "unity_minus_contact_report_angle_deg": -7.090456505506097,
+      "local_row_minus_contact_report_angle_deg": -7.389194116764571,
+      "unity_minus_local_row_angle_deg": 0.29873761125844567,
+      "tail_oracle_delta_impulse_normal_Ns": -0.3957349824672964,
+      "tail_oracle_delta_impulse_tangent_Ns": 0.1405182235209639
+    }
+  },
+  "rows": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        0.7430634098127484,
+        -15.125575914978981
+      ],
+      "target_contact_impulse_norm_Ns": 15.143816889767082,
+      "target_contact_impulse_angle_deg": -87.18753206702226,
+      "target_contact_impulse_angle_minus_normal_deg": -8.488780167681398e-08,
+      "separation_min_m": -0.0013616743963211775,
+      "separation_max_m": -0.001361653208732605,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "friction_row_contact_point_or_cache",
+      "endpoint_error_before_m": 0.014113702652814822,
+      "endpoint_error_after_tail_oracle_m": 0.0001236060319211744,
+      "row_delta_contact_normal_angle_deg": -85.39490556124869,
+      "local_row_delta_impulse_angle_deg": -86.79675247596465,
+      "unity_implied_impulse_angle_deg": -86.41376013794633,
+      "unity_minus_contact_report_angle_deg": 0.7737719290759344,
+      "local_row_minus_contact_report_angle_deg": 0.3907795910575942,
+      "unity_minus_local_row_angle_deg": 0.3829923380183118,
+      "tail_oracle_delta_impulse_normal_Ns": 0.06644181092210134,
+      "tail_oracle_delta_impulse_tangent_Ns": 0.10006449276831447
+    },
+    {
+      "sample_id": 12001,
+      "label": "collision_headon_y5p2_v4_active_a01_target_t09_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        1.1125893671996891,
+        -22.64753406867385
+      ],
+      "target_contact_impulse_norm_Ns": 22.674846294776692,
+      "target_contact_impulse_angle_deg": -87.18753189234725,
+      "target_contact_impulse_angle_minus_normal_deg": 8.978722121355531e-08,
+      "separation_min_m": -0.010197145864367485,
+      "separation_max_m": -0.01019713282585144,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ]
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        0.8387245861813426,
+        -17.072825901210308
+      ],
+      "target_contact_impulse_norm_Ns": 17.09341519955865,
+      "target_contact_impulse_angle_deg": -87.18753202922804,
+      "target_contact_impulse_angle_minus_normal_deg": -4.7093578814383363e-08,
+      "separation_min_m": -0.001239125500433147,
+      "separation_max_m": -0.0012391060590744019,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "friction_row_contact_point_or_cache",
+      "endpoint_error_before_m": 0.02847197249155637,
+      "endpoint_error_after_tail_oracle_m": 0.00016010779884742069,
+      "row_delta_contact_normal_angle_deg": -85.3579393571704,
+      "local_row_delta_impulse_angle_deg": -86.5754803424503,
+      "unity_implied_impulse_angle_deg": -86.86885047933896,
+      "unity_minus_contact_report_angle_deg": 0.31868154988907804,
+      "local_row_minus_contact_report_angle_deg": 0.6120516867777326,
+      "unity_minus_local_row_angle_deg": -0.29337013688865454,
+      "tail_oracle_delta_impulse_normal_Ns": -0.005008120685691393,
+      "tail_oracle_delta_impulse_tangent_Ns": -0.08742594135587713
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        1.1910782607737929,
+        -24.245231308043003
+      ],
+      "target_contact_impulse_norm_Ns": 24.274470305318644,
+      "target_contact_impulse_angle_deg": -87.18753200365512,
+      "target_contact_impulse_angle_minus_normal_deg": -2.152063416360761e-08,
+      "separation_min_m": -0.001205096603371203,
+      "separation_max_m": -0.0012050718069076538,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "tangent_sign_flip_contact_basis_or_cache",
+      "endpoint_error_before_m": 0.24572499750997046,
+      "endpoint_error_after_tail_oracle_m": 0.00018576702017670442,
+      "row_delta_contact_normal_angle_deg": -85.34230084054701,
+      "local_row_delta_impulse_angle_deg": -86.43500263936362,
+      "unity_implied_impulse_angle_deg": -82.21202559446705,
+      "unity_minus_contact_report_angle_deg": 4.975506409188085,
+      "local_row_minus_contact_report_angle_deg": 0.7525293642914903,
+      "unity_minus_local_row_angle_deg": 4.222977044896567,
+      "tail_oracle_delta_impulse_normal_Ns": -0.4617239753380273,
+      "tail_oracle_delta_impulse_tangent_Ns": 1.7651017995368796
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        0.9899988654069602,
+        -20.152118485420942
+      ],
+      "target_contact_impulse_norm_Ns": 20.176421318062122,
+      "target_contact_impulse_angle_deg": -87.18753185742794,
+      "target_contact_impulse_angle_minus_normal_deg": 1.247065313236817e-07,
+      "separation_min_m": -0.005455587990581989,
+      "separation_max_m": -0.005455568432807922,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+      "endpoint_error_before_m": 0.1335143633427367,
+      "endpoint_error_after_tail_oracle_m": 0.00029327303153543223,
+      "row_delta_contact_normal_angle_deg": -85.26475538293853,
+      "local_row_delta_impulse_angle_deg": -86.41341806904785,
+      "unity_implied_impulse_angle_deg": -85.72284944736515,
+      "unity_minus_contact_report_angle_deg": 1.4646824100627782,
+      "local_row_minus_contact_report_angle_deg": 0.7741137883800775,
+      "unity_minus_local_row_angle_deg": 0.6905686216827007,
+      "tail_oracle_delta_impulse_normal_Ns": -0.6020526556037719,
+      "tail_oracle_delta_impulse_tangent_Ns": 0.24801809385132229
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.049067120999097824,
+        -0.9987955689430237
+      ],
+      "target_contact_normal_angle_deg": -87.18753198213447,
+      "target_contact_impulse_protocol_Ns": [
+        1.3291307224426419,
+        -27.055385664105415
+      ],
+      "target_contact_impulse_norm_Ns": 27.088013620618653,
+      "target_contact_impulse_angle_deg": -87.18753199469049,
+      "target_contact_impulse_angle_minus_normal_deg": -1.255602910532616e-08,
+      "separation_min_m": -3.806351378443651e-05,
+      "separation_max_m": -3.8042664527893066e-05,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "friction_row_contact_point_or_cache",
+      "endpoint_error_before_m": 0.0744778632985414,
+      "endpoint_error_after_tail_oracle_m": 0.00023271940838450765,
+      "row_delta_contact_normal_angle_deg": -85.33919379948662,
+      "local_row_delta_impulse_angle_deg": -86.42506093145889,
+      "unity_implied_impulse_angle_deg": -86.8982435933071,
+      "unity_minus_contact_report_angle_deg": 0.28928840138337364,
+      "local_row_minus_contact_report_angle_deg": 0.762471063231601,
+      "unity_minus_local_row_angle_deg": -0.4731826618482273,
+      "tail_oracle_delta_impulse_normal_Ns": 0.05726335403507878,
+      "tail_oracle_delta_impulse_tangent_Ns": -0.2253676336287068
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        -0.5141028165817261,
+        -0.8577286005020142
+      ],
+      "target_contact_normal_angle_deg": -120.93750383725705,
+      "target_contact_impulse_protocol_Ns": [
+        -8.614649962401018,
+        -14.372673006728292
+      ],
+      "target_contact_impulse_norm_Ns": 16.75666802598392,
+      "target_contact_impulse_angle_deg": -120.93750377399277,
+      "target_contact_impulse_angle_minus_normal_deg": 6.32642809250683e-08,
+      "separation_min_m": -0.008019551634788513,
+      "separation_max_m": -0.008019528351724148,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+      "endpoint_error_before_m": 0.02645618997061297,
+      "endpoint_error_after_tail_oracle_m": 0.0002540061125025346,
+      "row_delta_contact_normal_angle_deg": -123.44169876623343,
+      "local_row_delta_impulse_angle_deg": -116.56173756614388,
+      "unity_implied_impulse_angle_deg": -116.8275174978816,
+      "unity_minus_contact_report_angle_deg": 4.109986276111158,
+      "local_row_minus_contact_report_angle_deg": 4.375766207848898,
+      "unity_minus_local_row_angle_deg": -0.2657799317377112,
+      "tail_oracle_delta_impulse_normal_Ns": 0.1501315228570744,
+      "tail_oracle_delta_impulse_tangent_Ns": -0.06107057815028095
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "status": "ok",
+      "first_contact_time": 0.01,
+      "contact_count": 4,
+      "point_count": 4,
+      "active_is_actor0": false,
+      "target_contact_normal_protocol": [
+        0.6715580821037292,
+        -0.7409518957138062
+      ],
+      "target_contact_normal_angle_deg": -47.81256669237457,
+      "target_contact_impulse_protocol_Ns": [
+        9.691565080080181,
+        -10.693019012804143
+      ],
+      "target_contact_impulse_norm_Ns": 14.431461786999282,
+      "target_contact_impulse_angle_deg": -47.81256598416377,
+      "target_contact_impulse_angle_minus_normal_deg": 7.082107913447544e-07,
+      "separation_min_m": -6.580352783203125e-05,
+      "separation_max_m": -6.58002682030201e-05,
+      "internal_face_index_pairs": [
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ],
+        [
+          4294967295,
+          4294967295
+        ]
+      ],
+      "row_delta_classification": "normal_row_magnitude_or_separation_bias",
+      "endpoint_error_before_m": 0.06548322059025638,
+      "endpoint_error_after_tail_oracle_m": 0.001226575064250015,
+      "row_delta_contact_normal_angle_deg": -45.76331761025699,
+      "local_row_delta_impulse_angle_deg": -55.20176010092833,
+      "unity_implied_impulse_angle_deg": -54.90302248966988,
+      "unity_minus_contact_report_angle_deg": -7.090456505506097,
+      "local_row_minus_contact_report_angle_deg": -7.389194116764571,
+      "unity_minus_local_row_angle_deg": 0.29873761125844567,
+      "tail_oracle_delta_impulse_normal_Ns": -0.3957349824672964,
+      "tail_oracle_delta_impulse_tangent_Ns": 0.1405182235209639
+    }
+  ],
+  "interpretation": [
+    "pyphysx contact reports now expose the local first stone-stone ContactPairPoint normal, separation and normal impulse.",
+    "For sample 12003, the reported local contact impulse is aligned with the -87.19deg side-face normal, while Unity-implied impulse is about 5deg away, near the adjacent cooked-hull side normal.",
+    "This moves the suspect layer from endpoint/tail replay to first-contact manifold feature selection, friction anchor/cache, or Unity runtime shape rotation/cooked stream.",
+    "PxContactPairPoint internal face indices are 0xffffffff for these convex-convex reports, so they do not directly name the hull polygon."
+  ]
+}

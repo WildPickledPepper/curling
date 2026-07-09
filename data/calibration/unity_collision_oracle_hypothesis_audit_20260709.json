@@ -1,0 +1,1168 @@
+{
+  "source_oracle_report": [
+    "data\\calibration\\unity_physx_collision_probe_unique_role_12003_state_perturb_grid_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_centerheight115_currentbest_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_centerheight115_handoff_y_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_rebuilt_binding_default_control_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_rebuilt_unityflags_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_custom_inertia_wide_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_disable_gravity_currentbest_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_disable_gravity_handoff_y_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_faces_grid_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_cooked_inertia_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_rebuilt_unityflags_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_formal_geometry_rebuilt_unityflags_handoff292_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_formal_radius_old_height_rebuilt_unityflags_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_friction_offset_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_xoffset_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_yoffset_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_height_inertia_contact_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_baseline_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_never_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_post-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_pre-step-distance_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_quantized_small_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_center_height_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_combine_average.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_combine_maximum.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_combine_minimum.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_convex_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_dt0010.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_disable_contact_cache.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_enable_average_point.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_enable_enhanced_determinism.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_enable_friction_every_iteration.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_enable_pcm.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_flag_enable_stabilization.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_grid1.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_friction_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_vscale_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_icefric_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_inertia_model_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_preactive0.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_preboth0.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_pretarget0.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_radius2.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_radius_restitution_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_solid_inertia_dt0010.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_stop_fast.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_stop_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_r00_yaw_grid.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_radius_contact_xyoffset_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_12003_full_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_currentbest_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_currentbest_winding_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_smoke_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_runtime_constraints_20260708.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_shape_local_identity_smoke_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_shape_local_xyz_grid_20260709.json",
+    "data\\calibration\\unity_physx_collision_probe_unique_role_shape_local_yaw_grid_20260709.json"
+  ],
+  "oracle_threshold_m": 0.02,
+  "processed_probe_file_count": 75,
+  "processed_result_set_count": 1697,
+  "target_only_oracle_summary": {
+    "sample_count": 7,
+    "rmse_m": 0.02147360390255492,
+    "mean_m": 0.014847344444216759,
+    "max_m": 0.049329333764244115,
+    "within_2cm_count": 5,
+    "over_2cm_count": 2,
+    "over_2cm_sample_ids": [
+      12003,
+      12004
+    ]
+  },
+  "active_and_target_pair_oracle_summary": {
+    "sample_count": 7,
+    "pair_rmse_floor_m": 0.02205626784319635,
+    "pair_mean_m": 0.018187612190121546,
+    "pair_max_m": 0.0437514405025526,
+    "pair_within_2cm_count": 4,
+    "pair_over_2cm_count": 3,
+    "pair_over_2cm_sample_ids": [
+      12003,
+      12005,
+      12007
+    ],
+    "both_active_and_target_individually_within_2cm_count": 3
+  },
+  "top_global_hypotheses": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+      "result_index": 13,
+      "score": 0.06812388795657764,
+      "target_in_play_rmse_m": 0.09280376775755629,
+      "active_rmse_m": 0.034141592092373274,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "other_center_height",
+        "contact_offset_changed",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.135,
+        "contact_offset": 0.005,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+      "result_index": 15,
+      "score": 0.06812388795657764,
+      "target_in_play_rmse_m": 0.09280376775755629,
+      "active_rmse_m": 0.034141592092373274,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "other_center_height",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.135,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_height_inertia_contact_20260708.json",
+      "result_index": 41,
+      "score": 0.06812388795657764,
+      "target_in_play_rmse_m": 0.09280376775755629,
+      "active_rmse_m": 0.034141592092373274,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "other_center_height",
+        "contact_offset_changed",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.135,
+        "contact_offset": 0.005,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_height_inertia_contact_20260708.json",
+      "result_index": 47,
+      "score": 0.06812388795657764,
+      "target_in_play_rmse_m": 0.09280376775755629,
+      "active_rmse_m": 0.034141592092373274,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "other_center_height",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.135,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+      "result_index": 12,
+      "score": 0.06855060564133032,
+      "target_in_play_rmse_m": 0.09343830514090982,
+      "active_rmse_m": 0.03422857894665177,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "compensated_center_height",
+        "contact_offset_changed",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.1276,
+        "contact_offset": 0.005,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+      "result_index": 14,
+      "score": 0.06855060564133032,
+      "target_in_play_rmse_m": 0.09343830514090982,
+      "active_rmse_m": 0.03422857894665177,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "compensated_center_height",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.1276,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_custom_inertia_wide_20260708.json",
+      "result_index": 45,
+      "score": 0.06855060564133032,
+      "target_in_play_rmse_m": 0.09343830514090982,
+      "active_rmse_m": 0.03422857894665177,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "compensated_center_height",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.1276,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_height_inertia_contact_20260708.json",
+      "result_index": 39,
+      "score": 0.06855060564133032,
+      "target_in_play_rmse_m": 0.09343830514090982,
+      "active_rmse_m": 0.03422857894665177,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "compensated_center_height",
+        "contact_offset_changed",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.1276,
+        "contact_offset": 0.005,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_height_inertia_contact_20260708.json",
+      "result_index": 45,
+      "score": 0.06855060564133032,
+      "target_in_play_rmse_m": 0.09343830514090982,
+      "active_rmse_m": 0.03422857894665177,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "compensated_center_height",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.1276,
+        "contact_offset": 0.01,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_angular_sign_20260708.json",
+      "result_index": 5,
+      "score": 0.0692856998156689,
+      "target_in_play_rmse_m": 0.0946553154914669,
+      "active_rmse_m": 0.03407752508743992,
+      "tags": [
+        "compensated_radius_0.146",
+        "handoff_position_y_offset",
+        "other_center_height",
+        "contact_offset_changed",
+        "custom_inertia"
+      ],
+      "config_signature": {
+        "radius": 0.146,
+        "height": 0.23,
+        "stone_faces": 256,
+        "convex_vertex_limit": 255,
+        "convex_quantized_count": 255,
+        "active_yaw": 0.0,
+        "target_yaw": 0.0,
+        "handoff_x_offset": 0.0,
+        "handoff_y_offset": -0.005,
+        "handoff_v_scale": 1.0,
+        "handoff_friction": 0.001,
+        "center_height": 0.135,
+        "contact_offset": 0.005,
+        "stone_restitution": 1.0,
+        "stone_friction": 0.6,
+        "ice_friction": 0.02,
+        "inertia_model": "custom",
+        "inertia_radial": 0.8,
+        "inertia_vertical": 0.204,
+        "lock_upright": false
+      }
+    }
+  ],
+  "target_only_winner_hypotheses": {
+    "tag_counts": {
+      "compensated_center_height": 6,
+      "inflated_radius": 4,
+      "compensated_radius_0.146": 3,
+      "handoff_position_x_offset": 2,
+      "changed_source_mesh_faces": 2,
+      "rink_triangle_mesh": 1,
+      "handoff_friction_changed": 1,
+      "active_rotation_yaw": 1,
+      "formal_center_height": 1,
+      "handoff_velocity_scale": 1
+    },
+    "conflicting_parameter_values": {
+      "active_yaw": [
+        {
+          "value": 0.0,
+          "count": 6
+        },
+        {
+          "value": 0.049087,
+          "count": 1
+        }
+      ],
+      "center_height": [
+        {
+          "value": 0.1276,
+          "count": 6
+        },
+        {
+          "value": 0.115,
+          "count": 1
+        }
+      ],
+      "handoff_friction": [
+        {
+          "value": 0.001,
+          "count": 5
+        },
+        {
+          "value": 0.00095,
+          "count": 1
+        }
+      ],
+      "handoff_v_scale": [
+        {
+          "value": 1.0,
+          "count": 4
+        },
+        {
+          "value": 1.02,
+          "count": 1
+        }
+      ],
+      "handoff_x_offset": [
+        {
+          "value": 0.005,
+          "count": 2
+        },
+        {
+          "value": 0.0,
+          "count": 1
+        }
+      ],
+      "radius": [
+        {
+          "value": 0.146,
+          "count": 3
+        },
+        {
+          "value": 0.155,
+          "count": 2
+        },
+        {
+          "value": 0.15,
+          "count": 1
+        },
+        {
+          "value": 0.16,
+          "count": 1
+        }
+      ],
+      "stone_faces": [
+        {
+          "value": 128,
+          "count": 2
+        },
+        {
+          "value": 256,
+          "count": 1
+        }
+      ]
+    },
+    "per_sample": [
+      {
+        "sample_id": 12000,
+        "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+        "target_error_m": 0.010360671912893018,
+        "active_error_m": 0.020786610330418932,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_xoffset_20260708.json",
+        "result_index": 26,
+        "tags": [
+          "inflated_radius",
+          "handoff_position_x_offset",
+          "changed_source_mesh_faces",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.15,
+          "height": 0.23,
+          "stone_faces": 128,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.005,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12002,
+        "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+        "target_error_m": 0.003626587869014343,
+        "active_error_m": 0.006274098984031086,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_currentbest_winding_20260709.json",
+        "result_index": 0,
+        "tags": [
+          "compensated_radius_0.146",
+          "compensated_center_height",
+          "rink_triangle_mesh"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "stone_faces": 256,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "shape_local_x": 0.0,
+          "shape_local_y": 0.0,
+          "shape_local_z": 0.0,
+          "shape_local_yaw": 0.0,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false,
+          "disable_stone_gravity": false,
+          "rink_geometry": "unity-plane-mesh",
+          "rink_mesh_center_x": 2.375,
+          "rink_mesh_center_y": 14.0,
+          "rink_mesh_width": 9.9568,
+          "rink_mesh_length": 49.98,
+          "rink_mesh_subdivisions": 10
+        }
+      },
+      {
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "target_error_m": 0.049329333764244115,
+        "active_error_m": 0.03734961743408633,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_preactive0.json",
+        "result_index": 2,
+        "tags": [
+          "compensated_radius_0.146",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "target_error_m": 0.02141132169949298,
+        "active_error_m": 0.021988469373976575,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_friction_grid.json",
+        "result_index": 15,
+        "tags": [
+          "inflated_radius",
+          "handoff_friction_changed",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.16,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_friction": 0.00095,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12005,
+        "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+        "target_error_m": 0.01377729397250943,
+        "active_error_m": 0.034839605701627696,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_xoffset_20260708.json",
+        "result_index": 28,
+        "tags": [
+          "inflated_radius",
+          "handoff_position_x_offset",
+          "changed_source_mesh_faces",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.155,
+          "height": 0.23,
+          "stone_faces": 128,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.005,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12006,
+        "label": "collision_glance_left_target_active_a06_target_t14_r00",
+        "target_error_m": 0.005053021954735761,
+        "active_error_m": 0.015071527223212774,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_yaw_grid.json",
+        "result_index": 22,
+        "tags": [
+          "compensated_radius_0.146",
+          "active_rotation_yaw",
+          "formal_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.049087,
+          "target_yaw": 0.0,
+          "center_height": 0.115,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "target_error_m": 0.00037317993662764725,
+        "active_error_m": 0.059312144576872346,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_vscale_grid.json",
+        "result_index": 14,
+        "tags": [
+          "inflated_radius",
+          "handoff_velocity_scale",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.155,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_v_scale": 1.02,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      }
+    ]
+  },
+  "active_and_target_pair_winner_hypotheses": {
+    "tag_counts": {
+      "compensated_center_height": 7,
+      "compensated_radius_0.146": 6,
+      "handoff_position_y_offset": 2,
+      "shape_local_z_offset": 1,
+      "shape_local_yaw": 1,
+      "handoff_velocity_scale": 1,
+      "rink_triangle_mesh": 1,
+      "changed_source_mesh_faces": 1,
+      "inflated_radius": 1,
+      "restitution_changed": 1
+    },
+    "conflicting_parameter_values": {
+      "handoff_v_scale": [
+        {
+          "value": 1.0,
+          "count": 5
+        },
+        {
+          "value": 0.98,
+          "count": 1
+        }
+      ],
+      "handoff_y_offset": [
+        {
+          "value": -0.005,
+          "count": 2
+        },
+        {
+          "value": 0.0,
+          "count": 1
+        }
+      ],
+      "radius": [
+        {
+          "value": 0.146,
+          "count": 6
+        },
+        {
+          "value": 0.15,
+          "count": 1
+        }
+      ],
+      "shape_local_yaw": [
+        {
+          "value": 0.0,
+          "count": 2
+        },
+        {
+          "value": 0.049087,
+          "count": 1
+        }
+      ],
+      "shape_local_z": [
+        {
+          "value": 0.0,
+          "count": 2
+        },
+        {
+          "value": 0.005,
+          "count": 1
+        }
+      ],
+      "stone_faces": [
+        {
+          "value": 256,
+          "count": 3
+        },
+        {
+          "value": 192,
+          "count": 1
+        }
+      ],
+      "stone_restitution": [
+        {
+          "value": 1.0,
+          "count": 6
+        },
+        {
+          "value": 1.1,
+          "count": 1
+        }
+      ]
+    },
+    "per_sample": [
+      {
+        "sample_id": 12000,
+        "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+        "pair_rmse_m": 0.010621928291865998,
+        "target_error_m": 0.01234820341935316,
+        "active_error_m": 0.008554098058203539,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_shape_local_xyz_grid_20260709.json",
+        "result_index": 14,
+        "tags": [
+          "compensated_radius_0.146",
+          "handoff_position_y_offset",
+          "shape_local_z_offset",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "stone_faces": 256,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": -0.005,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "shape_local_x": 0.0,
+          "shape_local_y": 0.0,
+          "shape_local_z": 0.005,
+          "shape_local_yaw": 0.0,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12002,
+        "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+        "pair_rmse_m": 0.0031130081209339374,
+        "target_error_m": 0.004117832521808817,
+        "active_error_m": 0.0015572714741929003,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_shape_local_yaw_grid_20260709.json",
+        "result_index": 2,
+        "tags": [
+          "compensated_radius_0.146",
+          "handoff_position_y_offset",
+          "shape_local_yaw",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "stone_faces": 256,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": -0.005,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "shape_local_x": 0.0,
+          "shape_local_y": 0.0,
+          "shape_local_z": 0.0,
+          "shape_local_yaw": 0.049087,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12003,
+        "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+        "pair_rmse_m": 0.0437514405025526,
+        "target_error_m": 0.049329333764244115,
+        "active_error_m": 0.03734961743408633,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_preactive0.json",
+        "result_index": 2,
+        "tags": [
+          "compensated_radius_0.146",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12004,
+        "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+        "pair_rmse_m": 0.019855908834628958,
+        "target_error_m": 0.027023595356022802,
+        "active_error_m": 0.0076314825120768984,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_handoff_vscale_grid.json",
+        "result_index": 6,
+        "tags": [
+          "compensated_radius_0.146",
+          "handoff_velocity_scale",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_v_scale": 0.98,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12005,
+        "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+        "pair_rmse_m": 0.02046376722768248,
+        "target_error_m": 0.023476032138529404,
+        "active_error_m": 0.01692357684794434,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_rink_mesh_currentbest_winding_20260709.json",
+        "result_index": 0,
+        "tags": [
+          "compensated_radius_0.146",
+          "compensated_center_height",
+          "rink_triangle_mesh"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "stone_faces": 256,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_x_offset": 0.0,
+          "handoff_y_offset": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "shape_local_x": 0.0,
+          "shape_local_y": 0.0,
+          "shape_local_z": 0.0,
+          "shape_local_yaw": 0.0,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false,
+          "disable_stone_gravity": false,
+          "rink_geometry": "unity-plane-mesh",
+          "rink_mesh_center_x": 2.375,
+          "rink_mesh_center_y": 14.0,
+          "rink_mesh_width": 9.9568,
+          "rink_mesh_length": 49.98,
+          "rink_mesh_subdivisions": 10
+        }
+      },
+      {
+        "sample_id": 12006,
+        "label": "collision_glance_left_target_active_a06_target_t14_r00",
+        "pair_rmse_m": 0.006998402879125971,
+        "target_error_m": 0.009894726335543554,
+        "active_error_m": 0.00022288217025634834,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_faces_grid_20260708.json",
+        "result_index": 16,
+        "tags": [
+          "compensated_radius_0.146",
+          "changed_source_mesh_faces",
+          "compensated_center_height"
+        ],
+        "config_signature": {
+          "radius": 0.146,
+          "height": 0.23,
+          "stone_faces": 192,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "handoff_v_scale": 1.0,
+          "handoff_friction": 0.001,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.0,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      },
+      {
+        "sample_id": 12007,
+        "label": "collision_glance_right_target_active_a07_target_t15_r00",
+        "pair_rmse_m": 0.02250882947406087,
+        "target_error_m": 0.019521075484524853,
+        "active_error_m": 0.025144033497276952,
+        "source_sample_id": null,
+        "file": "data\\calibration\\unity_physx_collision_probe_unique_role_r00_radius_restitution_grid.json",
+        "result_index": 76,
+        "tags": [
+          "inflated_radius",
+          "compensated_center_height",
+          "restitution_changed"
+        ],
+        "config_signature": {
+          "radius": 0.15,
+          "height": 0.23,
+          "convex_vertex_limit": 255,
+          "convex_quantized_count": 255,
+          "active_yaw": 0.0,
+          "target_yaw": 0.0,
+          "center_height": 0.1276,
+          "contact_offset": 0.01,
+          "stone_restitution": 1.1,
+          "stone_friction": 0.6,
+          "ice_friction": 0.02,
+          "inertia_model": "solid-cylinder",
+          "inertia_radial": null,
+          "inertia_vertical": null,
+          "lock_upright": false
+        }
+      }
+    ]
+  },
+  "interpretation": [
+    "Per-sample winners require different effective radii. Treat radius changes as a proxy for missing shape/local-pose/contact-manifold state, not as a valid global radius.",
+    "Several winners modify yaw or handoff state. This points at the first-contact native input state rather than late endpoint friction.",
+    "Some winners alter convex topology. This is not compatible with a single formal stone mesh; it suggests current pyphysx shape/contact manifold is still standing in for Unity's runtime shape.",
+    "Shape local-pose changes appear only as small local improvements in the current grids. If their global RMSE remains high, simple common shape offsets should be deprioritized.",
+    "Because the target-only and active+target winners disagree, endpoint tuning cannot be promoted to the training simulator. The next proof target is the exact native state at first contact."
+  ]
+}

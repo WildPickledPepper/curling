@@ -1,0 +1,880 @@
+{
+  "probe": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_step_snapshots_20260709.json",
+  "snapshot_time_s": 0.2,
+  "result_index": 0,
+  "summary": {
+    "row_count": 7,
+    "ok_count": 7,
+    "baseline_tail_vs_local_full_rmse_m": 0.02288187281022231,
+    "baseline_tail_vs_unity_rmse_m": 0.11932548948666878,
+    "local_full_vs_unity_rmse_m": 0.11323278407673086,
+    "corrected_tail_vs_unity_rmse_m": 0.07249630691555534,
+    "corrected_tail_vs_unity_mean_m": 0.05971987372077488,
+    "corrected_tail_over_2cm_count": 7,
+    "oracle_linear_tail_vs_unity_rmse_m": 0.0005049179893320433,
+    "oracle_linear_tail_vs_unity_mean_m": 0.0003537220668025413,
+    "oracle_linear_tail_over_2cm_count": 0,
+    "oracle_linear_delta_v_norm_mean_mps": 0.02616202257416589,
+    "oracle_linear_delta_v_norm_rmse_mps": 0.03973315868674914,
+    "oracle_linear_delta_v_normal_rmse_mps": 0.01727998856860031,
+    "oracle_linear_delta_v_tangent_rmse_mps": 0.035778847023002734,
+    "oracle_linear_delta_v_component_counts": {
+      "normal": 3,
+      "tangent": 4,
+      "mixed": 0
+    },
+    "baseline_tail_vs_local_full_mean_m": 0.020132703576503264
+  },
+  "rows": [
+    {
+      "sample_id": 12000,
+      "label": "collision_headon_y5p2_v3p4_active_a00_target_t08_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        2.4656,
+        3.8612
+      ],
+      "local_full_replay_target": [
+        2.4740262031555176,
+        3.8725223541259766
+      ],
+      "baseline_tail_endpoint": [
+        2.456669330596924,
+        3.8712587356567383
+      ],
+      "corrected_tail_endpoint": [
+        2.4483067989349365,
+        3.849238634109497
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.4657139778137207,
+        3.861152172088623
+      ],
+      "baseline_tail_vs_local_full_m": 0.017402808872451162,
+      "baseline_tail_vs_unity_m": 0.013451208830405225,
+      "local_full_vs_unity_m": 0.014113702652814822,
+      "corrected_tail_vs_unity_m": 0.02102686560196733,
+      "oracle_linear_tail_vs_unity_m": 0.0001236060319211744,
+      "corrected_tail_vs_local_full_m": 0.03469321794338845,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        0.005501356508161942,
+        -0.0030467741635585854
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.006288700679283748,
+      "oracle_linear_delta_v_normal_mps": 0.0034786288440890756,
+      "oracle_linear_delta_v_tangent_mps": 0.0052389786789693435,
+      "oracle_linear_delta_v_component": "tangent",
+      "oracle_linear_impulse_normal_Ns": 0.06644181092210134,
+      "oracle_linear_impulse_tangent_Ns": 0.10006449276831447,
+      "oracle_linear_velocity_protocol": [
+        0.047650408532049576,
+        -0.7476555936482693
+      ],
+      "required_early_velocity": [
+        0.0366663177709936,
+        -0.751671623841815
+      ],
+      "delta_v_required_mps": [
+        -0.005482734252894035,
+        -0.007062804357104269
+      ],
+      "tail_distance_scale_required": 1.0090702185454556,
+      "tail_direction_delta_deg_required": -0.4471489282178628,
+      "baseline_tail": {
+        "endpoint": [
+          2.456669330596924,
+          3.8712587356567383
+        ],
+        "elapsed_s": 8.15,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.4483067989349365,
+          3.849238634109497
+        ],
+        "elapsed_s": 8.18,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.4657139778137207,
+          3.861152172088623
+        ],
+        "error_m": 0.0001236060319211744,
+        "velocity_protocol": [
+          0.047650408532049576,
+          -0.7476555936482693
+        ],
+        "delta_v_from_snapshot_mps": [
+          0.005501356508161942,
+          -0.0030467741635585854
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.006288700679283748,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.013451208830405225,
+            "delta_v_mps": [
+              0.0055013565081619385,
+              -0.0030467741635585325
+            ],
+            "jacobian": [
+              [
+                1.5395641326904297,
+                -0.15130043029785156
+              ],
+              [
+                -0.08778572082519531,
+                3.1429290771484375
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.0001236060319211744
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12002,
+      "label": "collision_headon_y6p2_v3p4_active_a02_target_t10_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        2.4803,
+        4.5072
+      ],
+      "local_full_replay_target": [
+        2.5087316036224365,
+        4.508715629577637
+      ],
+      "baseline_tail_endpoint": [
+        2.4885969161987305,
+        4.507142543792725
+      ],
+      "corrected_tail_endpoint": [
+        2.459693431854248,
+        4.506518840789795
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.4804584980010986,
+        4.507177352905273
+      ],
+      "baseline_tail_vs_local_full_m": 0.020196045071672802,
+      "baseline_tail_vs_unity_m": 0.00829711513867969,
+      "local_full_vs_unity_m": 0.02847197249155637,
+      "corrected_tail_vs_unity_m": 0.020617823081382127,
+      "oracle_linear_tail_vs_unity_m": 0.00016010779884742069,
+      "corrected_tail_vs_local_full_m": 0.0490873524580899,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        -0.004583480187631092,
+        -0.0001090965548983247
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.004584778368547103,
+      "oracle_linear_delta_v_normal_mps": -0.00026220527150216716,
+      "oracle_linear_delta_v_tangent_mps": -0.004577274416538069,
+      "oracle_linear_delta_v_component": "tangent",
+      "oracle_linear_impulse_normal_Ns": -0.005008120685691393,
+      "oracle_linear_impulse_tangent_Ns": -0.08742594135587713,
+      "oracle_linear_velocity_protocol": [
+        0.04644082265260176,
+        -0.8464797935763827
+      ],
+      "required_early_velocity": [
+        0.035173374593408885,
+        -0.8468840937798814
+      ],
+      "delta_v_required_mps": [
+        -0.015850928246823964,
+        -0.0005133967583970112
+      ],
+      "tail_distance_scale_required": 0.9996542946034598,
+      "tail_direction_delta_deg_required": -1.071676830096285,
+      "baseline_tail": {
+        "endpoint": [
+          2.4885969161987305,
+          4.507142543792725
+        ],
+        "elapsed_s": 8.58,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.459693431854248,
+          4.506518840789795
+        ],
+        "elapsed_s": 8.58,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.4804584980010986,
+          4.507177352905273
+        ],
+        "error_m": 0.00016010779884742069,
+        "velocity_protocol": [
+          0.04644082265260176,
+          -0.8464797935763827
+        ],
+        "delta_v_from_snapshot_mps": [
+          -0.004583480187631092,
+          -0.0001090965548983247
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.004584778368547103,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.00829711513867969,
+            "delta_v_mps": [
+              -0.004583480187631089,
+              -0.00010909655489835024
+            ],
+            "jacobian": [
+              [
+                1.8136978149414062,
+                -0.14786720275878906
+              ],
+              [
+                -0.09765625,
+                3.576183319091797
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.00016010779884742069
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12003,
+      "label": "collision_headon_y6p2_v4_active_a03_target_t11_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        2.8527,
+        2.9269
+      ],
+      "local_full_replay_target": [
+        2.650664806365967,
+        2.787033796310425
+      ],
+      "baseline_tail_endpoint": [
+        2.620328664779663,
+        2.7846174240112305
+      ],
+      "corrected_tail_endpoint": [
+        2.814438581466675,
+        3.033964157104492
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.852527141571045,
+        2.9268319606781006
+      ],
+      "baseline_tail_vs_local_full_m": 0.030432225377592406,
+      "baseline_tail_vs_unity_m": 0.27247159276167143,
+      "local_full_vs_unity_m": 0.24572499750997046,
+      "corrected_tail_vs_unity_m": 0.11369551391623903,
+      "oracle_linear_tail_vs_unity_m": 0.00018576702017670442,
+      "corrected_tail_vs_local_full_m": 0.2963046616113651,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        0.09014552460125655,
+        0.03159843869433221
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.09552317485068856,
+      "oracle_linear_delta_v_normal_mps": -0.024174030122409804,
+      "oracle_linear_delta_v_tangent_mps": 0.09241370678203557,
+      "oracle_linear_delta_v_component": "tangent",
+      "oracle_linear_impulse_normal_Ns": -0.4617239753380273,
+      "oracle_linear_impulse_tangent_Ns": 1.7651017995368796,
+      "oracle_linear_velocity_protocol": [
+        0.1662508882682678,
+        -1.1899697881199378
+      ],
+      "required_early_velocity": [
+        0.15505232207809605,
+        -1.1691977271340386
+      ],
+      "delta_v_required_mps": [
+        0.07894695841108479,
+        0.05237049968023144
+      ],
+      "tail_distance_scale_required": 0.9636397280026853,
+      "tail_direction_delta_deg_required": 3.989163450766537,
+      "baseline_tail": {
+        "endpoint": [
+          2.620328664779663,
+          2.7846174240112305
+        ],
+        "elapsed_s": 10.18,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.814438581466675,
+          3.033964157104492
+        ],
+        "elapsed_s": 9.99,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.852527141571045,
+          2.9268319606781006
+        ],
+        "error_m": 0.00018576702017670442,
+        "velocity_protocol": [
+          0.1662508882682678,
+          -1.1899697881199378
+        ],
+        "delta_v_from_snapshot_mps": [
+          0.09014552460125655,
+          0.03159843869433221
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.09552317485068856,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.27247159276167143,
+            "delta_v_mps": [
+              0.09471171400766813,
+              0.030204376328752953
+            ],
+            "jacobian": [
+              [
+                2.6247024536132812,
+                -0.5369663238525391
+              ],
+              [
+                -0.1389026641845703,
+                5.146217346191406
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.01565626024076644
+          },
+          {
+            "iteration": 1,
+            "error_before_m": 0.01565626024076644,
+            "delta_v_mps": [
+              -0.004566189406411593,
+              0.0013940623655793554
+            ],
+            "jacobian": [
+              [
+                2.7309417724609375,
+                -0.5308628082275391
+              ],
+              [
+                -0.3071784973144531,
+                5.02166748046875
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.00018576702017670442
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12004,
+      "label": "collision_headon_y8_v3p4_active_a04_target_t12_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        2.5593,
+        5.7764
+      ],
+      "local_full_replay_target": [
+        2.5677030086517334,
+        5.643150329589844
+      ],
+      "baseline_tail_endpoint": [
+        2.543555498123169,
+        5.64117431640625
+      ],
+      "corrected_tail_endpoint": [
+        2.52603816986084,
+        5.899614334106445
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.5595905780792236,
+        5.776439666748047
+      ],
+      "baseline_tail_vs_local_full_m": 0.024228225127500932,
+      "baseline_tail_vs_unity_m": 0.13613917453380733,
+      "local_full_vs_unity_m": 0.1335143633427367,
+      "corrected_tail_vs_unity_m": 0.12762492496962,
+      "oracle_linear_tail_vs_unity_m": 0.00029327303153543223,
+      "corrected_tail_vs_local_full_m": 0.2598263735731278,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        0.010338804806311316,
+        0.032485445385679546
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.034090981897401756,
+      "oracle_linear_delta_v_normal_mps": -0.031521081445223656,
+      "oracle_linear_delta_v_tangent_mps": 0.012985240515776035,
+      "oracle_linear_delta_v_component": "normal",
+      "oracle_linear_impulse_normal_Ns": -0.6020526556037719,
+      "oracle_linear_impulse_tangent_Ns": 0.24801809385132229,
+      "oracle_linear_velocity_protocol": [
+        0.07348152169092435,
+        -0.9749041000549943
+      ],
+      "required_early_velocity": [
+        0.06050968933906792,
+        -0.9449991591648923
+      ],
+      "delta_v_required_mps": [
+        -0.002633027545545119,
+        0.06239038627578153
+      ],
+      "tail_distance_scale_required": 0.9381472981962209,
+      "tail_direction_delta_deg_required": 0.07715023762905526,
+      "baseline_tail": {
+        "endpoint": [
+          2.543555498123169,
+          5.64117431640625
+        ],
+        "elapsed_s": 9.27,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.52603816986084,
+          5.899614334106445
+        ],
+        "elapsed_s": 9.0,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.5595905780792236,
+          5.776439666748047
+        ],
+        "error_m": 0.00029327303153543223,
+        "velocity_protocol": [
+          0.07348152169092435,
+          -0.9749041000549943
+        ],
+        "delta_v_from_snapshot_mps": [
+          0.010338804806311316,
+          0.032485445385679546
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.034090981897401756,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.13613917453380733,
+            "delta_v_mps": [
+              0.009935551904789463,
+              0.032008984201634325
+            ],
+            "jacobian": [
+              [
+                2.1974563598632812,
+                -0.19021034240722656
+              ],
+              [
+                -0.11358261108398438,
+                4.2598724365234375
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.002096780538157071
+          },
+          {
+            "iteration": 1,
+            "error_before_m": 0.002096780538157071,
+            "delta_v_mps": [
+              0.0004032529015218565,
+              0.0004764611840451843
+            ],
+            "jacobian": [
+              [
+                2.287435531616211,
+                -0.16345977783203125
+              ],
+              [
+                -0.11949539184570312,
+                4.129123687744141
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.00029327303153543223
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12005,
+      "label": "collision_headon_y8_v4_active_a05_target_t13_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        2.6502,
+        3.7252
+      ],
+      "local_full_replay_target": [
+        2.720592498779297,
+        3.749527931213379
+      ],
+      "baseline_tail_endpoint": [
+        2.6837997436523438,
+        3.746525764465332
+      ],
+      "corrected_tail_endpoint": [
+        2.609877109527588,
+        3.703357696533203
+      ],
+      "oracle_linear_tail_endpoint": [
+        2.649998903274536,
+        3.7250828742980957
+      ],
+      "baseline_tail_vs_local_full_m": 0.03691503535166957,
+      "baseline_tail_vs_unity_m": 0.03979611794552374,
+      "local_full_vs_unity_m": 0.0744778632985414,
+      "corrected_tail_vs_unity_m": 0.045858714731071386,
+      "oracle_linear_tail_vs_unity_m": 0.00023271940838450765,
+      "corrected_tail_vs_local_full_m": 0.11995660876992124,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        -0.011516720216238507,
+        -0.003946944112289685
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.012174284881037365,
+      "oracle_linear_delta_v_normal_mps": 0.00299808136309313,
+      "oracle_linear_delta_v_tangent_mps": -0.01179935254600559,
+      "oracle_linear_delta_v_component": "tangent",
+      "oracle_linear_impulse_normal_Ns": 0.05726335403507878,
+      "oracle_linear_impulse_tangent_Ns": -0.2253676336287068,
+      "oracle_linear_velocity_protocol": [
+        0.07398670895818471,
+        -1.3725372990317233
+      ],
+      "required_early_velocity": [
+        0.061121284455451334,
+        -1.3764734886436423
+      ],
+      "delta_v_required_mps": [
+        -0.024382144718971883,
+        -0.00788313372420868
+      ],
+      "tail_distance_scale_required": 1.0047920590664163,
+      "tail_direction_delta_deg_required": -1.0324322693287316,
+      "baseline_tail": {
+        "endpoint": [
+          2.6837997436523438,
+          3.746525764465332
+        ],
+        "elapsed_s": 10.81,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          2.609877109527588,
+          3.703357696533203
+        ],
+        "elapsed_s": 10.83,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          2.649998903274536,
+          3.7250828742980957
+        ],
+        "error_m": 0.00023271940838450765,
+        "velocity_protocol": [
+          0.07398670895818471,
+          -1.3725372990317233
+        ],
+        "delta_v_from_snapshot_mps": [
+          -0.011516720216238507,
+          -0.003946944112289685
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.012174284881037365,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.03979611794552374,
+            "delta_v_mps": [
+              -0.011880350672945577,
+              -0.003986082606443106
+            ],
+            "jacobian": [
+              [
+                2.990293502807617,
+                -0.48317909240722656
+              ],
+              [
+                -0.1434803009033203,
+                5.777692794799805
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.002148766930595559
+          },
+          {
+            "iteration": 1,
+            "error_before_m": 0.002148766930595559,
+            "delta_v_mps": [
+              0.0007272609134141324,
+              7.827698830656207e-05
+            ],
+            "jacobian": [
+              [
+                2.9640674591064453,
+                -0.47817230224609375
+              ],
+              [
+                -0.1274585723876953,
+                5.796384811401367
+              ]
+            ],
+            "chosen_damping": 0.5,
+            "error_after_m": 0.00023271940838450765
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12006,
+      "label": "collision_glance_left_target_active_a06_target_t14_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        1.4522,
+        4.7086
+      ],
+      "local_full_replay_target": [
+        1.4674056768417358,
+        4.730249881744385
+      ],
+      "baseline_tail_endpoint": [
+        1.4707307815551758,
+        4.728603363037109
+      ],
+      "corrected_tail_endpoint": [
+        1.4434483051300049,
+        4.683135986328125
+      ],
+      "oracle_linear_tail_endpoint": [
+        1.4522302150726318,
+        4.708347797393799
+      ],
+      "baseline_tail_vs_local_full_m": 0.0037104373338931814,
+      "baseline_tail_vs_unity_m": 0.02726764378966492,
+      "local_full_vs_unity_m": 0.02645618997061297,
+      "corrected_tail_vs_unity_m": 0.026925975476831256,
+      "oracle_linear_tail_vs_unity_m": 0.0002540061125025346,
+      "corrected_tail_vs_local_full_m": 0.052855224913231705,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        -0.006999783731705567,
+        -0.004796938586338895
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.008485728730742983,
+      "oracle_linear_delta_v_normal_mps": 0.007860289154820649,
+      "oracle_linear_delta_v_tangent_mps": -0.0031974124686010965,
+      "oracle_linear_delta_v_component": "normal",
+      "oracle_linear_impulse_normal_Ns": 0.1501315228570744,
+      "oracle_linear_impulse_tangent_Ns": -0.06107057815028095,
+      "oracle_linear_velocity_protocol": [
+        -0.37939154408097925,
+        -0.7496884629012193
+      ],
+      "required_early_velocity": [
+        -0.3810675632714706,
+        -0.7571301538138975
+      ],
+      "delta_v_required_mps": [
+        -0.00867580292219694,
+        -0.012238629499017106
+      ],
+      "tail_distance_scale_required": 1.0178069571400647,
+      "tail_direction_delta_deg_required": -0.15462309897679802,
+      "baseline_tail": {
+        "endpoint": [
+          1.4707307815551758,
+          4.728603363037109
+        ],
+        "elapsed_s": 8.52,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          1.4434483051300049,
+          4.683135986328125
+        ],
+        "elapsed_s": 8.58,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          1.4522302150726318,
+          4.708347797393799
+        ],
+        "error_m": 0.0002540061125025346,
+        "velocity_protocol": [
+          -0.37939154408097925,
+          -0.7496884629012193
+        ],
+        "delta_v_from_snapshot_mps": [
+          -0.006999783731705567,
+          -0.004796938586338895
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.008485728730742983,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.02726764378966492,
+            "delta_v_mps": [
+              -0.006999783731705591,
+              -0.004796938586338924
+            ],
+            "jacobian": [
+              [
+                2.202725410461426,
+                0.6487846374511719
+              ],
+              [
+                0.67138671875,
+                3.190326690673828
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.0002540061125025346
+          }
+        ]
+      }
+    },
+    {
+      "sample_id": 12007,
+      "label": "collision_glance_right_target_active_a07_target_t15_r00",
+      "status": "ok",
+      "snapshot_key": "0.200000",
+      "unity_target": [
+        3.2374,
+        5.2581
+      ],
+      "local_full_replay_target": [
+        3.2776734828948975,
+        5.206465721130371
+      ],
+      "baseline_tail_endpoint": [
+        3.271172285079956,
+        5.201728343963623
+      ],
+      "corrected_tail_endpoint": [
+        3.194207191467285,
+        5.302981376647949
+      ],
+      "oracle_linear_tail_endpoint": [
+        3.237337112426758,
+        5.256875038146973
+      ],
+      "baseline_tail_vs_local_full_m": 0.008044147900742791,
+      "baseline_tail_vs_unity_m": 0.06571400797246649,
+      "local_full_vs_unity_m": 0.06548322059025638,
+      "corrected_tail_vs_unity_m": 0.06228929826831308,
+      "oracle_linear_tail_vs_unity_m": 0.001226575064250015,
+      "corrected_tail_vs_local_full_m": 0.12760052337144592,
+      "oracle_linear_delta_v_from_snapshot_mps": [
+        -0.009183137983239775,
+        0.019976900102432582
+      ],
+      "oracle_linear_delta_v_norm_from_snapshot_mps": 0.02198650861145971,
+      "oracle_linear_delta_v_normal_mps": -0.02071910902970138,
+      "oracle_linear_delta_v_tangent_mps": 0.007356975053453607,
+      "oracle_linear_delta_v_component": "normal",
+      "oracle_linear_impulse_normal_Ns": -0.3957349824672964,
+      "oracle_linear_impulse_tangent_Ns": 0.1405182235209639,
+      "oracle_linear_velocity_protocol": [
+        0.39875230255707395,
+        -0.5670042176229397
+      ],
+      "required_early_velocity": [
+        0.38214446916273104,
+        -0.5521921723456901
+      ],
+      "delta_v_required_mps": [
+        -0.025790971377582683,
+        0.034788945379682246
+      ],
+      "tail_distance_scale_required": 0.9394459791649489,
+      "tail_direction_delta_deg_required": -0.11305595600768373,
+      "baseline_tail": {
+        "endpoint": [
+          3.271172285079956,
+          5.201728343963623
+        ],
+        "elapsed_s": 8.01,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "corrected_tail": {
+        "endpoint": [
+          3.194207191467285,
+          5.302981376647949
+        ],
+        "elapsed_s": 7.83,
+        "final_linear_speed": 0.0,
+        "final_angular_velocity": 0.0
+      },
+      "oracle_linear_tail": {
+        "endpoint": [
+          3.237337112426758,
+          5.256875038146973
+        ],
+        "error_m": 0.001226575064250015,
+        "velocity_protocol": [
+          0.39875230255707395,
+          -0.5670042176229397
+        ],
+        "delta_v_from_snapshot_mps": [
+          -0.009183137983239775,
+          0.019976900102432582
+        ],
+        "delta_v_norm_from_snapshot_mps": 0.02198650861145971,
+        "iterations": [
+          {
+            "iteration": 0,
+            "error_before_m": 0.06571400797246649,
+            "delta_v_mps": [
+              -0.009183137983239777,
+              0.019976900102432568
+            ],
+            "jacobian": [
+              [
+                1.9863128662109375,
+                -0.7774829864501953
+              ],
+              [
+                -0.7093429565429688,
+                2.4957656860351562
+              ]
+            ],
+            "chosen_damping": 1.0,
+            "error_after_m": 0.001226575064250015
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    "baseline_tail_vs_local_full checks whether a fresh target-only scene can reproduce the original local full replay from the chosen snapshot.",
+    "corrected_tail_vs_unity checks whether replacing only the target's horizontal velocity by the Unity-implied velocity is enough to land near Unity's endpoint.",
+    "oracle_linear_tail_vs_unity uses finite differences through the actual pyphysx tail replay to find the best local target vx/vy correction.",
+    "If baseline_tail_vs_local_full is small and corrected_tail_vs_unity is around 2cm, the tail physics is not the main mismatch; the missing state is before the chosen snapshot, i.e. contact/solver output."
+  ]
+}

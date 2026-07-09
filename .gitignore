@@ -32,3 +32,11 @@ log/local_arena/
 log/local_arena_processes.json
 log/unity_sampling/
 data/calibration/*.jsonl
+
+# Unity reverse-engineering raw captures can be hundreds of MB.
+# Keep derived summaries/reports in git, leave raw probe grids and browser dumps local.
+log/unity_*/
+log/unity_*.json
+log/*_screen*.png
+data/calibration/unity_physx_collision_probe_*.json
+data/calibration/unity_cooked_hulls_*.json

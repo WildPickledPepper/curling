@@ -1,0 +1,58 @@
+{
+  "question": "Can a better Newfrictionstep->PhysX handoff threshold or millimeter placement offset close the 10cm collision gap?",
+  "answer": "No. It helps by about 1cm RMSE but remains around 10cm, far above the 2cm target.",
+  "baseline": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+    "result_set_count": 1,
+    "handoff_extra": 0.0,
+    "handoff_y_offset": 0.0,
+    "handoff_x_offset": 0.0,
+    "radius": 0.146,
+    "contact_offset": 0.01,
+    "active_rmse_m": 0.03855842111554859,
+    "target_in_play_rmse_m": 0.11323278407673086,
+    "combined_rmse_m": 0.08231875381295352,
+    "active_mean_m": 0.02881708252789582,
+    "target_in_play_mean_m": 0.08403461569378415
+  },
+  "best_handoff_extra_only": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_refine_20260709.json",
+    "result_set_count": 8,
+    "handoff_extra": 0.005,
+    "handoff_y_offset": 0.0,
+    "handoff_x_offset": 0.0,
+    "radius": 0.146,
+    "contact_offset": 0.01,
+    "active_rmse_m": 0.03914510341953566,
+    "target_in_play_rmse_m": 0.1054658484052869,
+    "combined_rmse_m": 0.07751130207169267,
+    "active_mean_m": 0.029943326903191177,
+    "target_in_play_mean_m": 0.07736441826608298
+  },
+  "best_handoff_extra_plus_yoffset": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_yoffset_refine_20260709.json",
+    "result_set_count": 25,
+    "handoff_extra": 0.005,
+    "handoff_y_offset": -0.005,
+    "handoff_x_offset": 0.0,
+    "radius": 0.146,
+    "contact_offset": 0.01,
+    "active_rmse_m": 0.03655228601064242,
+    "target_in_play_rmse_m": 0.10274748340235453,
+    "combined_rmse_m": 0.07509455120910362,
+    "active_mean_m": 0.025768810807472654,
+    "target_in_play_mean_m": 0.07140574944584273
+  },
+  "improvement_vs_baseline_m": 0.010485300674376336,
+  "interpretation": [
+    "Current-best starts the local PhysX pair at center distance about 0.0002m-0.0104m inside 2R, depending on sample.",
+    "Starting about 5mm earlier and shifting protocol y by -5mm is the best tested local refinement.",
+    "That reduces target RMSE from about 11.32cm to about 10.27cm, so entry timing/placement contributes but is not the main source.",
+    "The remaining error still has the row-level normal/tangent split seen in solver-row delta reports, so first ContactBuffer/SolverContact/cache remains the priority."
+  ],
+  "source_reports": {
+    "baseline": "data\\calibration\\unity_physx_collision_probe_unique_role_current_best_refresh_20260709.json",
+    "handoff_extra_grid": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_refine_20260709.json",
+    "handoff_extra_yoffset_grid": "data\\calibration\\unity_physx_collision_probe_unique_role_handoff_extra_yoffset_refine_20260709.json"
+  }
+}

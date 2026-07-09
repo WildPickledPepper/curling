@@ -1,0 +1,1599 @@
+{
+  "samples": "data\\calibration\\unity_unique_target_collision_samples_20260708.jsonl",
+  "probe": "data\\calibration\\unity_physx_collision_probe_unique_target_dt0010.json",
+  "probe_config": {
+    "handoff_extra": 0.0,
+    "ice_friction": 0.02,
+    "stone_friction": 0.6,
+    "stone_restitution": 1.0,
+    "pre_collision_dynamic_friction": null,
+    "pre_collision_static_friction": null,
+    "pre_collision_friction_scope": "both",
+    "radius": 0.140875,
+    "height": 0.23,
+    "active_yaw": 0.0,
+    "target_yaw": 0.0,
+    "center_height": 0.115,
+    "scene_flags": [],
+    "combine_mode": "multiply",
+    "contact_offset": 0.01,
+    "rest_offset": 0.0,
+    "convex_quantized_count": 255,
+    "convex_vertex_limit": 255,
+    "solver_position_iterations": 6,
+    "solver_velocity_iterations": 1,
+    "max_depenetration_velocity": 10.0,
+    "lock_upright": false,
+    "disable_strong_friction": false,
+    "improved_patch_friction": false,
+    "friction_offset_threshold": null,
+    "use_unity_frame": true,
+    "dt": 0.01,
+    "max_time": 20.0
+  },
+  "probe_summary": {
+    "sample_count": 36,
+    "active_error_count": 36,
+    "target_in_play_error_count": 28,
+    "target_cleared_count": 8,
+    "active_rmse_m": 0.037351149258191656,
+    "target_in_play_rmse_m": 0.17208973240023331,
+    "combined_rmse_m": 0.11722310649495922,
+    "active_mean_m": 0.027396040223400232,
+    "target_in_play_mean_m": 0.13412744239751978
+  },
+  "summary": {
+    "sample_count": 36,
+    "missing_probe_count": 0,
+    "target_cleared_unmodeled_count": 8,
+    "in_play_target_count": 28,
+    "active_error_count": 36,
+    "target_error_count": 28,
+    "active_rmse_m": 0.03735114925819165,
+    "target_rmse_m": 0.17208973240023331,
+    "combined_rmse_m": 0.11722310649495922,
+    "active_mean_m": 0.027396040223400232,
+    "target_mean_m": 0.13412744239751984,
+    "max_evaluable_error_m": 0.48733191380830365,
+    "threshold_m": 0.02,
+    "pass_excluding_cleared_target_count": 5,
+    "full_in_play_pass_count": 1,
+    "failed_in_play_sample_ids": [
+      11000,
+      11002,
+      11004,
+      11005,
+      11006,
+      11007,
+      11008,
+      11009,
+      11011,
+      11012,
+      11014,
+      11016,
+      11017,
+      11018,
+      11019,
+      11020,
+      11023,
+      11024,
+      11026,
+      11028,
+      11029,
+      11030,
+      11031,
+      11032,
+      11033,
+      11034,
+      11035
+    ],
+    "same_session_target_reuse_detected": false,
+    "target_reuse_rows": [],
+    "same_session_active_reuse_detected": true,
+    "active_reuse_rows": [
+      {
+        "session_key": "batch:0",
+        "active_index": 0,
+        "sample_id": 11002,
+        "prior_sample_ids": [
+          11000
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 1,
+        "sample_id": 11003,
+        "prior_sample_ids": [
+          11001
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 0,
+        "sample_id": 11004,
+        "prior_sample_ids": [
+          11000,
+          11002
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 1,
+        "sample_id": 11005,
+        "prior_sample_ids": [
+          11001,
+          11003
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 0,
+        "sample_id": 11006,
+        "prior_sample_ids": [
+          11000,
+          11002,
+          11004
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 1,
+        "sample_id": 11007,
+        "prior_sample_ids": [
+          11001,
+          11003,
+          11005
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 0,
+        "sample_id": 11008,
+        "prior_sample_ids": [
+          11000,
+          11002,
+          11004,
+          11006
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 1,
+        "sample_id": 11009,
+        "prior_sample_ids": [
+          11001,
+          11003,
+          11005,
+          11007
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 0,
+        "sample_id": 11010,
+        "prior_sample_ids": [
+          11000,
+          11002,
+          11004,
+          11006,
+          11008
+        ]
+      },
+      {
+        "session_key": "batch:0",
+        "active_index": 1,
+        "sample_id": 11011,
+        "prior_sample_ids": [
+          11001,
+          11003,
+          11005,
+          11007,
+          11009
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 0,
+        "sample_id": 11014,
+        "prior_sample_ids": [
+          11012
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 1,
+        "sample_id": 11015,
+        "prior_sample_ids": [
+          11013
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 0,
+        "sample_id": 11016,
+        "prior_sample_ids": [
+          11012,
+          11014
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 1,
+        "sample_id": 11017,
+        "prior_sample_ids": [
+          11013,
+          11015
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 0,
+        "sample_id": 11018,
+        "prior_sample_ids": [
+          11012,
+          11014,
+          11016
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 1,
+        "sample_id": 11019,
+        "prior_sample_ids": [
+          11013,
+          11015,
+          11017
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 0,
+        "sample_id": 11020,
+        "prior_sample_ids": [
+          11012,
+          11014,
+          11016,
+          11018
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 1,
+        "sample_id": 11021,
+        "prior_sample_ids": [
+          11013,
+          11015,
+          11017,
+          11019
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 0,
+        "sample_id": 11022,
+        "prior_sample_ids": [
+          11012,
+          11014,
+          11016,
+          11018,
+          11020
+        ]
+      },
+      {
+        "session_key": "batch:1",
+        "active_index": 1,
+        "sample_id": 11023,
+        "prior_sample_ids": [
+          11013,
+          11015,
+          11017,
+          11019,
+          11021
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 0,
+        "sample_id": 11026,
+        "prior_sample_ids": [
+          11024
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 1,
+        "sample_id": 11027,
+        "prior_sample_ids": [
+          11025
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 0,
+        "sample_id": 11028,
+        "prior_sample_ids": [
+          11024,
+          11026
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 1,
+        "sample_id": 11029,
+        "prior_sample_ids": [
+          11025,
+          11027
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 0,
+        "sample_id": 11030,
+        "prior_sample_ids": [
+          11024,
+          11026,
+          11028
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 1,
+        "sample_id": 11031,
+        "prior_sample_ids": [
+          11025,
+          11027,
+          11029
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 0,
+        "sample_id": 11032,
+        "prior_sample_ids": [
+          11024,
+          11026,
+          11028,
+          11030
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 1,
+        "sample_id": 11033,
+        "prior_sample_ids": [
+          11025,
+          11027,
+          11029,
+          11031
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 0,
+        "sample_id": 11034,
+        "prior_sample_ids": [
+          11024,
+          11026,
+          11028,
+          11030,
+          11032
+        ]
+      },
+      {
+        "session_key": "batch:2",
+        "active_index": 1,
+        "sample_id": 11035,
+        "prior_sample_ids": [
+          11025,
+          11027,
+          11029,
+          11031,
+          11033
+        ]
+      }
+    ],
+    "all_in_play_targets_within_threshold": false
+  },
+  "by_category": {
+    "collision_glancing": {
+      "sample_count": 18,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 2,
+      "in_play_target_count": 16,
+      "active_error_count": 18,
+      "target_error_count": 16,
+      "active_rmse_m": 0.04980780872439059,
+      "target_rmse_m": 0.15594116705669578,
+      "combined_rmse_m": 0.11294677063668837,
+      "active_mean_m": 0.04040204893497166,
+      "target_mean_m": 0.13288007008363006,
+      "max_evaluable_error_m": 0.3869337910868391,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 2,
+      "full_in_play_pass_count": 1,
+      "failed_in_play_sample_ids": [
+        11006,
+        11007,
+        11008,
+        11009,
+        11011,
+        11018,
+        11019,
+        11020,
+        11023,
+        11030,
+        11031,
+        11032,
+        11033,
+        11034,
+        11035
+      ]
+    },
+    "collision_headon": {
+      "sample_count": 18,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 6,
+      "in_play_target_count": 12,
+      "active_error_count": 18,
+      "target_error_count": 12,
+      "active_rmse_m": 0.01758973825529937,
+      "target_rmse_m": 0.1915146135860744,
+      "combined_rmse_m": 0.12188838427817199,
+      "active_mean_m": 0.014390031511828803,
+      "target_mean_m": 0.1357906054827062,
+      "max_evaluable_error_m": 0.48733191380830365,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 3,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11000,
+        11002,
+        11004,
+        11005,
+        11012,
+        11014,
+        11016,
+        11017,
+        11024,
+        11026,
+        11028,
+        11029
+      ]
+    }
+  },
+  "by_session": {
+    "batch:0": {
+      "sample_count": 12,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 3,
+      "in_play_target_count": 9,
+      "active_error_count": 12,
+      "target_error_count": 9,
+      "active_rmse_m": 0.04772579739396408,
+      "target_rmse_m": 0.20450515040239567,
+      "combined_rmse_m": 0.1386558311436106,
+      "active_mean_m": 0.03199736859624079,
+      "target_mean_m": 0.16110906180661966,
+      "max_evaluable_error_m": 0.48733191380830365,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 2,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11000,
+        11002,
+        11004,
+        11005,
+        11006,
+        11007,
+        11008,
+        11009,
+        11011
+      ]
+    },
+    "batch:1": {
+      "sample_count": 12,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 3,
+      "in_play_target_count": 9,
+      "active_error_count": 12,
+      "target_error_count": 9,
+      "active_rmse_m": 0.028621349392233566,
+      "target_rmse_m": 0.13801036004535114,
+      "combined_rmse_m": 0.09290340990487425,
+      "active_mean_m": 0.021759674052750855,
+      "target_mean_m": 0.10988117051612388,
+      "max_evaluable_error_m": 0.32156087889943585,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 3,
+      "full_in_play_pass_count": 1,
+      "failed_in_play_sample_ids": [
+        11012,
+        11014,
+        11016,
+        11017,
+        11018,
+        11019,
+        11020,
+        11023
+      ]
+    },
+    "batch:2": {
+      "sample_count": 12,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 2,
+      "in_play_target_count": 10,
+      "active_error_count": 12,
+      "target_error_count": 10,
+      "active_rmse_m": 0.03299078166399086,
+      "target_rmse_m": 0.1677479012517785,
+      "combined_rmse_m": 0.11569047337250173,
+      "active_mean_m": 0.028431078021209043,
+      "target_mean_m": 0.13166562962258638,
+      "max_evaluable_error_m": 0.3869337910868391,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11024,
+        11026,
+        11028,
+        11029,
+        11030,
+        11031,
+        11032,
+        11033,
+        11034,
+        11035
+      ]
+    }
+  },
+  "by_source_case": {
+    "78": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.007318839988179005,
+      "target_rmse_m": 0.0668886830031673,
+      "combined_rmse_m": 0.047579729574004366,
+      "active_mean_m": 0.00719664661045888,
+      "target_mean_m": 0.06069851406283322,
+      "max_evaluable_error_m": 0.10042330070839701,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11000,
+        11012,
+        11024
+      ]
+    },
+    "79": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 3,
+      "in_play_target_count": 0,
+      "active_error_count": 3,
+      "target_error_count": 0,
+      "active_rmse_m": 0.029854110195002625,
+      "target_rmse_m": null,
+      "combined_rmse_m": 0.029854110195002625,
+      "active_mean_m": 0.02351768458918854,
+      "target_mean_m": null,
+      "max_evaluable_error_m": 0.048669324664190695,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 2,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": []
+    },
+    "80": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.00987848357262382,
+      "target_rmse_m": 0.061245381158103414,
+      "combined_rmse_m": 0.04386673654887019,
+      "active_mean_m": 0.009614304870997169,
+      "target_mean_m": 0.06106219730218306,
+      "max_evaluable_error_m": 0.0665827800514651,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11002,
+        11014,
+        11026
+      ]
+    },
+    "81": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 3,
+      "in_play_target_count": 0,
+      "active_error_count": 3,
+      "target_error_count": 0,
+      "active_rmse_m": 0.017875584203663437,
+      "target_rmse_m": null,
+      "combined_rmse_m": 0.017875584203663437,
+      "active_mean_m": 0.01571257372431221,
+      "target_mean_m": null,
+      "max_evaluable_error_m": 0.022813712576544187,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 1,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": []
+    },
+    "82": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.016282333691662394,
+      "target_rmse_m": 0.07968872895658692,
+      "combined_rmse_m": 0.05751264171103175,
+      "active_mean_m": 0.01624945914178279,
+      "target_mean_m": 0.07323259708785008,
+      "max_evaluable_error_m": 0.10136643008103864,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11004,
+        11016,
+        11028
+      ]
+    },
+    "83": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.015143470482957989,
+      "target_rmse_m": 0.36350516188670234,
+      "combined_rmse_m": 0.2572599146938227,
+      "active_mean_m": 0.01404952013423321,
+      "target_mean_m": 0.3481691134779583,
+      "max_evaluable_error_m": 0.48733191380830365,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11005,
+        11017,
+        11029
+      ]
+    },
+    "84": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.06443164818448431,
+      "target_rmse_m": 0.14020416925577406,
+      "combined_rmse_m": 0.1091069346202864,
+      "active_mean_m": 0.0641252983689829,
+      "target_mean_m": 0.1397775770872853,
+      "max_evaluable_error_m": 0.14848315474493426,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11006,
+        11018,
+        11030
+      ]
+    },
+    "85": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.07424424501517864,
+      "target_rmse_m": 0.12996611602937186,
+      "combined_rmse_m": 0.10583808207265007,
+      "active_mean_m": 0.05921088248753062,
+      "target_mean_m": 0.12033363382045321,
+      "max_evaluable_error_m": 0.16523467209863804,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11007,
+        11019,
+        11031
+      ]
+    },
+    "86": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.06230818755434477,
+      "target_rmse_m": 0.12268357659038975,
+      "combined_rmse_m": 0.09729740541586254,
+      "active_mean_m": 0.06023693312906869,
+      "target_mean_m": 0.11641714769849865,
+      "max_evaluable_error_m": 0.1688916341513215,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11008,
+        11020,
+        11032
+      ]
+    },
+    "87": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.026855686425063845,
+      "target_rmse_m": 0.12396603491584514,
+      "combined_rmse_m": 0.0896905951204414,
+      "active_mean_m": 0.026326812912014646,
+      "target_mean_m": 0.09035418771904706,
+      "max_evaluable_error_m": 0.20916582064948647,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 1,
+      "full_in_play_pass_count": 1,
+      "failed_in_play_sample_ids": [
+        11009,
+        11033
+      ]
+    },
+    "88": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 2,
+      "in_play_target_count": 1,
+      "active_error_count": 3,
+      "target_error_count": 1,
+      "active_rmse_m": 0.02054500013414198,
+      "target_rmse_m": 0.3869337910868391,
+      "combined_rmse_m": 0.19428333032993936,
+      "active_mean_m": 0.02050040175582866,
+      "target_mean_m": 0.3869337910868391,
+      "max_evaluable_error_m": 0.3869337910868391,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 1,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11034
+      ]
+    },
+    "89": {
+      "sample_count": 3,
+      "missing_probe_count": 0,
+      "target_cleared_unmodeled_count": 0,
+      "in_play_target_count": 3,
+      "active_error_count": 3,
+      "target_error_count": 3,
+      "active_rmse_m": 0.01398665412917541,
+      "target_rmse_m": 0.11322969005896787,
+      "combined_rmse_m": 0.08067400202227204,
+      "active_mean_m": 0.012011964956404456,
+      "target_mean_m": 0.11283323042512981,
+      "max_evaluable_error_m": 0.12159799143767343,
+      "threshold_m": 0.02,
+      "pass_excluding_cleared_target_count": 0,
+      "full_in_play_pass_count": 0,
+      "failed_in_play_sample_ids": [
+        11011,
+        11023,
+        11035
+      ]
+    }
+  },
+  "rows": [
+    {
+      "sample_id": 11000,
+      "label": "collision_headon_y5p2_v3p4_unique_t02_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 78,
+      "plan_metadata": {
+        "assigned_target_index": 2,
+        "batch_case_index": 0,
+        "batch_repeat_index": 0,
+        "source_sample_id": 78
+      },
+      "active_index": 0,
+      "target_index": 2,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.008561953706773482,
+      "target_error_m": 0.03977054523043772,
+      "max_evaluable_error_m": 0.03977054523043772,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11001,
+      "label": "collision_headon_y5p2_v4_unique_t03_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 79,
+      "plan_metadata": {
+        "assigned_target_index": 3,
+        "batch_case_index": 1,
+        "batch_repeat_index": 0,
+        "source_sample_id": 79
+      },
+      "active_index": 1,
+      "target_index": 3,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.016671250365312192,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.016671250365312192,
+      "passes_threshold_excluding_cleared_target": true,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11002,
+      "label": "collision_headon_y6p2_v3p4_unique_t04_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 80,
+      "plan_metadata": {
+        "assigned_target_index": 4,
+        "batch_case_index": 2,
+        "batch_repeat_index": 0,
+        "source_sample_id": 80
+      },
+      "active_index": 0,
+      "target_index": 4,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.011775108264718665,
+      "target_error_m": 0.0665827800514651,
+      "max_evaluable_error_m": 0.0665827800514651,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11003,
+      "label": "collision_headon_y6p2_v4_unique_t05_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 81,
+      "plan_metadata": {
+        "assigned_target_index": 5,
+        "batch_case_index": 3,
+        "batch_repeat_index": 0,
+        "source_sample_id": 81
+      },
+      "active_index": 1,
+      "target_index": 5,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.003726503327805441,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.003726503327805441,
+      "passes_threshold_excluding_cleared_target": true,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11004,
+      "label": "collision_headon_y8_v3p4_unique_t06_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 82,
+      "plan_metadata": {
+        "assigned_target_index": 6,
+        "batch_case_index": 4,
+        "batch_repeat_index": 0,
+        "source_sample_id": 82
+      },
+      "active_index": 0,
+      "target_index": 6,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01631533379607127,
+      "target_error_m": 0.08895302606816946,
+      "max_evaluable_error_m": 0.08895302606816946,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11005,
+      "label": "collision_headon_y8_v4_unique_t07_r00",
+      "category": "collision_headon",
+      "session_key": "batch:0",
+      "source_case_id": 83,
+      "plan_metadata": {
+        "assigned_target_index": 7,
+        "batch_case_index": 5,
+        "batch_repeat_index": 0,
+        "source_sample_id": 83
+      },
+      "active_index": 1,
+      "target_index": 7,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.009491690892588896,
+      "target_error_m": 0.48733191380830365,
+      "max_evaluable_error_m": 0.48733191380830365,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11006,
+      "label": "collision_glance_left_target_unique_t08_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 84,
+      "plan_metadata": {
+        "assigned_target_index": 8,
+        "batch_case_index": 6,
+        "batch_repeat_index": 0,
+        "source_sample_id": 84
+      },
+      "active_index": 0,
+      "target_index": 8,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.057934777759380635,
+      "target_error_m": 0.12436509935236519,
+      "max_evaluable_error_m": 0.12436509935236519,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11007,
+      "label": "collision_glance_right_target_unique_t09_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 85,
+      "plan_metadata": {
+        "assigned_target_index": 9,
+        "batch_case_index": 7,
+        "batch_repeat_index": 0,
+        "source_sample_id": 85
+      },
+      "active_index": 1,
+      "target_index": 9,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.12253802433093676,
+      "target_error_m": 0.16523467209863804,
+      "max_evaluable_error_m": 0.16523467209863804,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11008,
+      "label": "collision_glance_left_curl_in_unique_t10_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 86,
+      "plan_metadata": {
+        "assigned_target_index": 10,
+        "batch_case_index": 8,
+        "batch_repeat_index": 0,
+        "source_sample_id": 86
+      },
+      "active_index": 0,
+      "target_index": 10,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.08153691503496169,
+      "target_error_m": 0.1688916341513215,
+      "max_evaluable_error_m": 0.1688916341513215,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11009,
+      "label": "collision_glance_right_curl_in_unique_t11_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 87,
+      "plan_metadata": {
+        "assigned_target_index": 11,
+        "batch_case_index": 9,
+        "batch_repeat_index": 0,
+        "source_sample_id": 87
+      },
+      "active_index": 1,
+      "target_index": 11,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.03180644513882687,
+      "target_error_m": 0.20916582064948647,
+      "max_evaluable_error_m": 0.20916582064948647,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11010,
+      "label": "collision_glance_wide_left_unique_t12_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 88,
+      "plan_metadata": {
+        "assigned_target_index": 12,
+        "batch_case_index": 10,
+        "batch_repeat_index": 0,
+        "source_sample_id": 88
+      },
+      "active_index": 0,
+      "target_index": 12,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.02081383287035385,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.02081383287035385,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11011,
+      "label": "collision_glance_wide_right_unique_t13_r00",
+      "category": "collision_glancing",
+      "session_key": "batch:0",
+      "source_case_id": 89,
+      "plan_metadata": {
+        "assigned_target_index": 13,
+        "batch_case_index": 11,
+        "batch_repeat_index": 0,
+        "source_sample_id": 89
+      },
+      "active_index": 1,
+      "target_index": 13,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.0027965876671597638,
+      "target_error_m": 0.09968606484938963,
+      "max_evaluable_error_m": 0.09968606484938963,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11012,
+      "label": "collision_headon_y5p2_v3p4_unique_t02_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 78,
+      "plan_metadata": {
+        "assigned_target_index": 2,
+        "batch_case_index": 0,
+        "batch_repeat_index": 1,
+        "source_sample_id": 78
+      },
+      "active_index": 0,
+      "target_index": 2,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.005390384186992693,
+      "target_error_m": 0.10042330070839701,
+      "max_evaluable_error_m": 0.10042330070839701,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11013,
+      "label": "collision_headon_y5p2_v4_unique_t03_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 79,
+      "plan_metadata": {
+        "assigned_target_index": 3,
+        "batch_case_index": 1,
+        "batch_repeat_index": 1,
+        "source_sample_id": 79
+      },
+      "active_index": 1,
+      "target_index": 3,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.005212478738062729,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.005212478738062729,
+      "passes_threshold_excluding_cleared_target": true,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11014,
+      "label": "collision_headon_y6p2_v3p4_unique_t04_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 80,
+      "plan_metadata": {
+        "assigned_target_index": 4,
+        "batch_case_index": 2,
+        "batch_repeat_index": 1,
+        "source_sample_id": 80
+      },
+      "active_index": 0,
+      "target_index": 4,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.006479014896531178,
+      "target_error_m": 0.05502325752809408,
+      "max_evaluable_error_m": 0.05502325752809408,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11015,
+      "label": "collision_headon_y6p2_v4_unique_t05_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 81,
+      "plan_metadata": {
+        "assigned_target_index": 5,
+        "batch_case_index": 3,
+        "batch_repeat_index": 1,
+        "source_sample_id": 81
+      },
+      "active_index": 1,
+      "target_index": 5,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.022813712576544187,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.022813712576544187,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11016,
+      "label": "collision_headon_y8_v3p4_unique_t06_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 82,
+      "plan_metadata": {
+        "assigned_target_index": 6,
+        "batch_case_index": 4,
+        "batch_repeat_index": 1,
+        "source_sample_id": 82
+      },
+      "active_index": 0,
+      "target_index": 6,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.014951236286899545,
+      "target_error_m": 0.10136643008103864,
+      "max_evaluable_error_m": 0.10136643008103864,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11017,
+      "label": "collision_headon_y8_v4_unique_t07_r01",
+      "category": "collision_headon",
+      "session_key": "batch:1",
+      "source_case_id": 83,
+      "plan_metadata": {
+        "assigned_target_index": 7,
+        "batch_case_index": 5,
+        "batch_repeat_index": 1,
+        "source_sample_id": 83
+      },
+      "active_index": 1,
+      "target_index": 7,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010643087988849968,
+      "target_error_m": 0.32156087889943585,
+      "max_evaluable_error_m": 0.32156087889943585,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11018,
+      "label": "collision_glance_left_target_unique_t08_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 84,
+      "plan_metadata": {
+        "assigned_target_index": 8,
+        "batch_case_index": 6,
+        "batch_repeat_index": 1,
+        "source_sample_id": 84
+      },
+      "active_index": 0,
+      "target_index": 8,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.07272811586583286,
+      "target_error_m": 0.14848315474493426,
+      "max_evaluable_error_m": 0.14848315474493426,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11019,
+      "label": "collision_glance_right_target_unique_t09_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 85,
+      "plan_metadata": {
+        "assigned_target_index": 9,
+        "batch_case_index": 7,
+        "batch_repeat_index": 1,
+        "source_sample_id": 85
+      },
+      "active_index": 1,
+      "target_index": 9,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.0288410653451132,
+      "target_error_m": 0.05200899995264286,
+      "max_evaluable_error_m": 0.05200899995264286,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11020,
+      "label": "collision_glance_left_curl_in_unique_t10_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 86,
+      "plan_metadata": {
+        "assigned_target_index": 10,
+        "batch_case_index": 8,
+        "batch_repeat_index": 1,
+        "source_sample_id": 86
+      },
+      "active_index": 0,
+      "target_index": 10,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.04322563229735195,
+      "target_error_m": 0.0766786921647291,
+      "max_evaluable_error_m": 0.0766786921647291,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11021,
+      "label": "collision_glance_right_curl_in_unique_t11_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 87,
+      "plan_metadata": {
+        "assigned_target_index": 11,
+        "batch_case_index": 9,
+        "batch_repeat_index": 1,
+        "source_sample_id": 87
+      },
+      "active_index": 1,
+      "target_index": 11,
+      "status": "pass",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01915185915927119,
+      "target_error_m": 0.016170185577516816,
+      "max_evaluable_error_m": 0.01915185915927119,
+      "passes_threshold_excluding_cleared_target": true,
+      "passes_full_in_play_collision_threshold": true
+    },
+    {
+      "sample_id": 11022,
+      "label": "collision_glance_wide_left_unique_t12_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 88,
+      "plan_metadata": {
+        "assigned_target_index": 12,
+        "batch_case_index": 10,
+        "batch_repeat_index": 1,
+        "source_sample_id": 88
+      },
+      "active_index": 0,
+      "target_index": 12,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.018709012456009953,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.018709012456009953,
+      "passes_threshold_excluding_cleared_target": true,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11023,
+      "label": "collision_glance_wide_right_unique_t13_r01",
+      "category": "collision_glancing",
+      "session_key": "batch:1",
+      "source_case_id": 89,
+      "plan_metadata": {
+        "assigned_target_index": 13,
+        "batch_case_index": 11,
+        "batch_repeat_index": 1,
+        "source_sample_id": 89
+      },
+      "active_index": 1,
+      "target_index": 13,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.012970488835550853,
+      "target_error_m": 0.11721563498832636,
+      "max_evaluable_error_m": 0.11721563498832636,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11024,
+      "label": "collision_headon_y5p2_v3p4_unique_t02_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 78,
+      "plan_metadata": {
+        "assigned_target_index": 2,
+        "batch_case_index": 0,
+        "batch_repeat_index": 2,
+        "source_sample_id": 78
+      },
+      "active_index": 0,
+      "target_index": 2,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.007637601937610466,
+      "target_error_m": 0.04190169624966491,
+      "max_evaluable_error_m": 0.04190169624966491,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11025,
+      "label": "collision_headon_y5p2_v4_unique_t03_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 79,
+      "plan_metadata": {
+        "assigned_target_index": 3,
+        "batch_case_index": 1,
+        "batch_repeat_index": 2,
+        "source_sample_id": 79
+      },
+      "active_index": 1,
+      "target_index": 3,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.048669324664190695,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.048669324664190695,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11026,
+      "label": "collision_headon_y6p2_v3p4_unique_t04_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 80,
+      "plan_metadata": {
+        "assigned_target_index": 4,
+        "batch_case_index": 2,
+        "batch_repeat_index": 2,
+        "source_sample_id": 80
+      },
+      "active_index": 0,
+      "target_index": 4,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.010588791451741663,
+      "target_error_m": 0.061580554326989986,
+      "max_evaluable_error_m": 0.061580554326989986,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11027,
+      "label": "collision_headon_y6p2_v4_unique_t05_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 81,
+      "plan_metadata": {
+        "assigned_target_index": 5,
+        "batch_case_index": 3,
+        "batch_repeat_index": 2,
+        "source_sample_id": 81
+      },
+      "active_index": 1,
+      "target_index": 5,
+      "status": "target_cleared_unmodeled",
+      "unity_target_in_play": false,
+      "active_error_m": 0.020597505268587012,
+      "target_error_m": null,
+      "max_evaluable_error_m": 0.020597505268587012,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11028,
+      "label": "collision_headon_y8_v3p4_unique_t06_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 82,
+      "plan_metadata": {
+        "assigned_target_index": 6,
+        "batch_case_index": 4,
+        "batch_repeat_index": 2,
+        "source_sample_id": 82
+      },
+      "active_index": 0,
+      "target_index": 6,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.01748180734237756,
+      "target_error_m": 0.02937833511434217,
+      "max_evaluable_error_m": 0.02937833511434217,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11029,
+      "label": "collision_headon_y8_v4_unique_t07_r02",
+      "category": "collision_headon",
+      "session_key": "batch:2",
+      "source_case_id": 83,
+      "plan_metadata": {
+        "assigned_target_index": 7,
+        "batch_case_index": 5,
+        "batch_repeat_index": 2,
+        "source_sample_id": 83
+      },
+      "active_index": 1,
+      "target_index": 7,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.02201378152126077,
+      "target_error_m": 0.23561454772613552,
+      "max_evaluable_error_m": 0.23561454772613552,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11030,
+      "label": "collision_glance_left_target_unique_t08_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 84,
+      "plan_metadata": {
+        "assigned_target_index": 8,
+        "batch_case_index": 6,
+        "batch_repeat_index": 2,
+        "source_sample_id": 84
+      },
+      "active_index": 0,
+      "target_index": 8,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.06171300148173519,
+      "target_error_m": 0.14648447716455648,
+      "max_evaluable_error_m": 0.14648447716455648,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11031,
+      "label": "collision_glance_right_target_unique_t09_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 85,
+      "plan_metadata": {
+        "assigned_target_index": 9,
+        "batch_case_index": 7,
+        "batch_repeat_index": 2,
+        "source_sample_id": 85
+      },
+      "active_index": 1,
+      "target_index": 9,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.026253557786541894,
+      "target_error_m": 0.14375722941007874,
+      "max_evaluable_error_m": 0.14375722941007874,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11032,
+      "label": "collision_glance_left_curl_in_unique_t10_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 86,
+      "plan_metadata": {
+        "assigned_target_index": 10,
+        "batch_case_index": 8,
+        "batch_repeat_index": 2,
+        "source_sample_id": 86
+      },
+      "active_index": 0,
+      "target_index": 10,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.05594825205489245,
+      "target_error_m": 0.10368111677944533,
+      "max_evaluable_error_m": 0.10368111677944533,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11033,
+      "label": "collision_glance_right_curl_in_unique_t11_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 87,
+      "plan_metadata": {
+        "assigned_target_index": 11,
+        "batch_case_index": 9,
+        "batch_repeat_index": 2,
+        "source_sample_id": 87
+      },
+      "active_index": 1,
+      "target_index": 11,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.028022134437945875,
+      "target_error_m": 0.0457265569301379,
+      "max_evaluable_error_m": 0.0457265569301379,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11034,
+      "label": "collision_glance_wide_left_unique_t12_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 88,
+      "plan_metadata": {
+        "assigned_target_index": 12,
+        "batch_case_index": 10,
+        "batch_repeat_index": 2,
+        "source_sample_id": 88
+      },
+      "active_index": 0,
+      "target_index": 12,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.02197835994112218,
+      "target_error_m": 0.3869337910868391,
+      "max_evaluable_error_m": 0.3869337910868391,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    },
+    {
+      "sample_id": 11035,
+      "label": "collision_glance_wide_right_unique_t13_r02",
+      "category": "collision_glancing",
+      "session_key": "batch:2",
+      "source_case_id": 89,
+      "plan_metadata": {
+        "assigned_target_index": 13,
+        "batch_case_index": 11,
+        "batch_repeat_index": 2,
+        "source_sample_id": 89
+      },
+      "active_index": 1,
+      "target_index": 13,
+      "status": "fail",
+      "unity_target_in_play": true,
+      "active_error_m": 0.02026881836650275,
+      "target_error_m": 0.12159799143767343,
+      "max_evaluable_error_m": 0.12159799143767343,
+      "passes_threshold_excluding_cleared_target": false,
+      "passes_full_in_play_collision_threshold": false
+    }
+  ]
+}

@@ -1,0 +1,1852 @@
+{
+  "candidate_count": 19,
+  "baseline": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_baseline_20260709.json",
+    "scope": "both",
+    "material_switch_mode": "post-step-distance",
+    "pre_collision_dynamic_friction": null,
+    "pre_collision_static_friction": null,
+    "active_rmse_m": 0.04187487564044832,
+    "target_in_play_rmse_m": 0.12421756003042551,
+    "combined_rmse_m": 0.09019906031240409,
+    "per_sample": [
+      {
+        "sample_id": 12000,
+        "active_error_m": 0.008698458604051695,
+        "target_error_m": 0.014548583376859416,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12001,
+        "active_error_m": 0.054957203690089745,
+        "target_error_m": null,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12002,
+        "active_error_m": 0.0020864455750463132,
+        "target_error_m": 0.028499129365910127,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12003,
+        "active_error_m": 0.07828963307773358,
+        "target_error_m": 0.24440019487884568,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12004,
+        "active_error_m": 0.008572869044773767,
+        "target_error_m": 0.13313081335812083,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12005,
+        "active_error_m": 0.016133895575521202,
+        "target_error_m": 0.07474845554142726,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12006,
+        "active_error_m": 0.05938381671775458,
+        "target_error_m": 0.14496742711277993,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      },
+      {
+        "sample_id": 12007,
+        "active_error_m": 0.03063054029969701,
+        "target_error_m": 0.05411098441867253,
+        "material_switch_time_s": null,
+        "material_switch_distance_m": null
+      }
+    ]
+  },
+  "best": {
+    "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_pre-step-distance_20260709.json",
+    "scope": "active",
+    "material_switch_mode": "pre-step-distance",
+    "pre_collision_dynamic_friction": 0.0,
+    "pre_collision_static_friction": 0.0,
+    "active_rmse_m": 0.04187487564044832,
+    "target_in_play_rmse_m": 0.12421756003042551,
+    "combined_rmse_m": 0.09019906031240409,
+    "per_sample": [
+      {
+        "sample_id": 12000,
+        "active_error_m": 0.008698458604051695,
+        "target_error_m": 0.014548583376859416,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.2854450645837213
+      },
+      {
+        "sample_id": 12001,
+        "active_error_m": 0.054957203690089745,
+        "target_error_m": null,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.27663719120418223
+      },
+      {
+        "sample_id": 12002,
+        "active_error_m": 0.0020864455750463132,
+        "target_error_m": 0.028499129365910127,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.2855738655624193
+      },
+      {
+        "sample_id": 12003,
+        "active_error_m": 0.07828963307773358,
+        "target_error_m": 0.24440019487884568,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.2856110439286677
+      },
+      {
+        "sample_id": 12004,
+        "active_error_m": 0.008572869044773767,
+        "target_error_m": 0.13313081335812083,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.28137118816651596
+      },
+      {
+        "sample_id": 12005,
+        "active_error_m": 0.016133895575521202,
+        "target_error_m": 0.07474845554142726,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.2867787386580926
+      },
+      {
+        "sample_id": 12006,
+        "active_error_m": 0.05938381671775458,
+        "target_error_m": 0.14496742711277993,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.27974108384456725
+      },
+      {
+        "sample_id": 12007,
+        "active_error_m": 0.03063054029969701,
+        "target_error_m": 0.05411098441867253,
+        "material_switch_time_s": 0.0,
+        "material_switch_distance_m": 0.2882077821088905
+      }
+    ]
+  },
+  "dynamic_static_zero_post_step": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_post-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_post-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_post-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    }
+  ],
+  "dynamic_zero_static_default_post_step": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_post-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_post-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_post-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_pre-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_baseline_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": null,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_pre-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_post-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_pre-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_post-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_pre-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_post-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2933814483342931
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2885160880465933
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2945300468544592
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29832867586830847
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919422043699827
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009705946889884
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.28805527508790746
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.295880975858818
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_pre-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_pre-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "pre-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 0.09019906031240409,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2854450645837213
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27663719120418223
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2855738655624193
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2856110439286677
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.28137118816651596
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2867787386580926
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.27974108384456725
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": 0.0,
+          "material_switch_distance_m": 0.2882077821088905
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_post-step-distance_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_post-step-distance_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_post-step-distance_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "post-step-distance",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 0.17235303209472744,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29337036296269625
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2884827765179682
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29451078055007895
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29829462069567125
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2919119835256488
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.3009321933501936
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.2877689011818928
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": 0.01,
+          "material_switch_distance_m": 0.29618066628765616
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_active_never_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 5.2100046005140355,
+      "target_in_play_rmse_m": 0.12421756003042551,
+      "combined_rmse_m": 3.8057955236241017,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.7102564882203005,
+          "target_error_m": 0.014548583376859416,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 1.1667034825359015,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.8703534797501943,
+          "target_error_m": 0.028499129365910127,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 1.2151486485070693,
+          "target_error_m": 0.24440019487884568,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 1.0867424897573572,
+          "target_error_m": 0.13313081335812083,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 1.3842808414899328,
+          "target_error_m": 0.07474845554142726,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 9.209090026310328,
+          "target_error_m": 0.14496742711277993,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 11.186994189069226,
+          "target_error_m": 0.05411098441867253,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_active_never_20260709.json",
+      "scope": "active",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 6.308308659561115,
+      "target_in_play_rmse_m": 0.19040898579134174,
+      "combined_rmse_m": 4.6087731861992705,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.7612569024203035,
+          "target_error_m": 0.012084833344078245,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 1.1013783193867055,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.8705990196456118,
+          "target_error_m": 0.009326392855660995,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 1.158632883067529,
+          "target_error_m": 0.28475311572704737,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 1.0211169538995633,
+          "target_error_m": 0.13316200459193994,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 1.3619891022627828,
+          "target_error_m": 0.030642489075444236,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 11.866131355583413,
+          "target_error_m": 0.3497407654863127,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 13.067607989740722,
+          "target_error_m": 0.17743175230793296,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_target_never_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 0.15483638218821527,
+      "target_in_play_rmse_m": 18.188861069454333,
+      "combined_rmse_m": 12.42587210479107,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.009643398885624165,
+          "target_error_m": 14.507875778451726,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.05904905985013706,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.003995574211116248,
+          "target_error_m": 16.189143936522672,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.08318613735242195,
+          "target_error_m": 22.104062505616774,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.011643345569129347,
+          "target_error_m": 18.876348205027636,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.022558845791465953,
+          "target_error_m": 24.053821846863716,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.35908260076599396,
+          "target_error_m": 14.89642122684989,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.22736308875580521,
+          "target_error_m": 14.066983202125439,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_target_never_20260709.json",
+      "scope": "target",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 0.04187487564044832,
+      "target_in_play_rmse_m": 18.241021050120985,
+      "combined_rmse_m": 12.461027166592586,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.008698458604051695,
+          "target_error_m": 14.501935921470267,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 0.054957203690089745,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.0020864455750463132,
+          "target_error_m": 16.200806497667795,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 0.07828963307773358,
+          "target_error_m": 22.12340237851933,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 0.008572869044773767,
+          "target_error_m": 18.89534283477565,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 0.016133895575521202,
+          "target_error_m": 24.081333885650796,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 0.05938381671775458,
+          "target_error_m": 15.294818736990504,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 0.03063054029969701,
+          "target_error_m": 14.001808113819507,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_dyn0_static06_both_never_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": null,
+      "active_rmse_m": 5.2100046005140355,
+      "target_in_play_rmse_m": 18.241021050120985,
+      "combined_rmse_m": 13.028934789295496,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.7102564882203005,
+          "target_error_m": 14.501935921470267,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 1.1667034825359015,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.8703534797501943,
+          "target_error_m": 16.200806497667795,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 1.2151486485070693,
+          "target_error_m": 22.12340237851933,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 1.0867424897573572,
+          "target_error_m": 18.89534283477565,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 1.3842808414899328,
+          "target_error_m": 24.081333885650796,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 9.209090026310328,
+          "target_error_m": 15.294818736990504,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 11.186994189069226,
+          "target_error_m": 14.001808113819507,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    },
+    {
+      "file": "data\\calibration\\unity_physx_collision_probe_unique_role_material_timing_both_never_20260709.json",
+      "scope": "both",
+      "material_switch_mode": "never",
+      "pre_collision_dynamic_friction": 0.0,
+      "pre_collision_static_friction": 0.0,
+      "active_rmse_m": 6.308308659561115,
+      "target_in_play_rmse_m": 18.188861069454333,
+      "combined_rmse_m": 13.251919946890036,
+      "per_sample": [
+        {
+          "sample_id": 12000,
+          "active_error_m": 0.7612569024203035,
+          "target_error_m": 14.507875778451726,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12001,
+          "active_error_m": 1.1013783193867055,
+          "target_error_m": null,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12002,
+          "active_error_m": 0.8705990196456118,
+          "target_error_m": 16.189143936522672,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12003,
+          "active_error_m": 1.158632883067529,
+          "target_error_m": 22.104062505616774,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12004,
+          "active_error_m": 1.0211169538995633,
+          "target_error_m": 18.876348205027636,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12005,
+          "active_error_m": 1.3619891022627828,
+          "target_error_m": 24.053821846863716,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12006,
+          "active_error_m": 11.866131355583413,
+          "target_error_m": 14.89642122684989,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        },
+        {
+          "sample_id": 12007,
+          "active_error_m": 13.067607989740722,
+          "target_error_m": 14.066983202125439,
+          "material_switch_time_s": null,
+          "material_switch_distance_m": null
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "pre-step-distance with pre-friction 0 switches back to 0.6 before the first solve and matches baseline.",
+    "dynamic=0/static=0.6 post-step candidates match baseline, so zero dynamic friction alone is not a missing 10cm effect.",
+    "dynamic=0/static=0 post-step candidates are substantially worse, so first-contact friction cannot be fully zero in the matching model.",
+    "never-switch candidates are catastrophic for the active stone, target stone, or both, so permanent pre-collision zero friction is ruled out.",
+    "Adding all material-timing candidates does not improve the global oracle floor; material timing is not the remaining path to 2cm."
+  ]
+}
