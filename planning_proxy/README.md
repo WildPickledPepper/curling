@@ -50,6 +50,29 @@ $py = 'D:\esp\tmp\curling_pyphysx_conda\python.exe'
 
 `--shot-index` 是本局的零基投壶序号：第 1–5 次投壶填 `0..4`，第 6 次填 `5`。它不能省略，因为前五手需要执行自由防守区规则过滤。
 
+## 先手中线控场模式
+
+先手方使用偶数全局投壶序号 `0, 2, ..., 14`。在粗筛命令追加
+`--first-player` 后，规划器会把本轮策略写入报告，严格 PhysX 读取同一份
+报告并据此排序：
+
+```powershell
+# 我方先手的第七颗（全局第 13 次投壶）。
+# 状态机先判断：最近壶、第二红圈壶、前方保护壶，哪一层被对手拆掉。
+& $py planning_proxy\run_analytic_proxy.py `
+  --board current_board.json --shot-index 12 --first-player `
+  --output planning_proxy\runs\first_player_coarse.json
+
+& $py planning_proxy\strict_refine.py `
+  --proxy-report planning_proxy\runs\first_player_coarse.json `
+  --output planning_proxy\runs\first_player_strict.json
+```
+
+它对应的规则是：第一颗占中线；第二、三颗建立错层红圈壶；第六颗“处理对方
+第五颗＋滚到前方保护位”；第七、八颗按缺失层依次修复“最近壶 → 第二红圈壶
+→ 前方保护壶”。这不是固定坐标脚本：目标点只用于吸引搜索，最终是否真的
+清壶、进红圈、保住己方壶，都仍由每条摩擦序列下的严格 PhysX 终局决定。
+
 ## 当前实测状态
 
 - 粗筛使用随目录交付的 14×10 白盒受力表；它由已恢复的自由滑行公式离线计算，不是训练出的模型。首次部署不需要现场建表。

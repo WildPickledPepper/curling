@@ -23,7 +23,7 @@ import json
 import statistics
 import sys
 import time
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence, Tuple
 
@@ -37,6 +37,7 @@ from local_simulator.examples.train_policy_tree_selfplay import (  # noqa: E402
 )
 from local_simulator.runtime_loader import install_bundled_pyphysx  # noqa: E402
 from planning_proxy.competition_rules import RuleBoardStone, free_guard_rule_violations  # noqa: E402
+from planning_proxy.first_player_strategy import FirstPlayerPlan, score_strict_outcome  # noqa: E402
 
 
 @dataclass(frozen=True)
@@ -75,6 +76,9 @@ class StrictEvaluation:
     final_center_distance_by_index: List[Dict[int, float]]
     mean_score: float
     worst_score: float
+    # 仅在 --first-player 生成的粗筛报告中填充；默认空列表以兼容历史报告和单测。
+    tactical_scores: List[float] = field(default_factory=list)
+    tactical_goal_met: List[bool] = field(default_factory=list)
 
     def to_json(self) -> dict:
         data = asdict(self)
@@ -82,7 +86,7 @@ class StrictEvaluation:
         return data
 
 
-def selection_priority(item: StrictEvaluation) -> tuple[float, float, float, float]:
+def selection_priority(item: StrictEvaluation, tactical_plan: FirstPlayerPlan | None = None) -> tuple[float, ...]:
     """合规候选的最终排序键：先尽量多留己方得分壶，再比较清壶收益。
 
     这是在 ``is_loss_budget_candidate`` 已经完成规则、目标清除和己方出界
@@ -90,11 +94,21 @@ def selection_priority(item: StrictEvaluation) -> tuple[float, float, float, flo
     目标或更高的己方损失；只会在同一安全档的可提交路线中选择更有得分潜力者。
     """
 
-    return (
+    base = (
         float(min(item.own_in_house, default=0)),
         float(statistics.mean(item.own_in_house)) if item.own_in_house else 0.0,
         item.worst_score,
         item.mean_score,
+    )
+    if tactical_plan is None:
+        return base
+    # 战术层只能在既有规则/损失档过滤完成后排序。多摩擦序列下“全部实现本轮
+    # 目标”优先；再比较最差情形的战术分，避免只在幸运随机序列中摆成球形。
+    return (
+        float(all(item.tactical_goal_met)) if item.tactical_goal_met else 0.0,
+        float(min(item.tactical_scores, default=-float("inf"))),
+        float(statistics.mean(item.tactical_scores)) if item.tactical_scores else -float("inf"),
+        *base,
     )
 
 
@@ -213,6 +227,7 @@ def evaluate_one(
     physics_seeds: Sequence[int],
     shot_index: int,
     active_index: int = 0,
+    tactical_plan: FirstPlayerPlan | None = None,
 ) -> StrictEvaluation:
     scores: List[float] = []
     enemy_counts: List[int] = []
@@ -222,6 +237,8 @@ def evaluate_one(
     enemy_out_indices: List[List[int]] = []
     final_center_distances: List[Dict[int, float]] = []
     own_in_house: List[int] = []
+    tactical_scores: List[float] = []
+    tactical_goal_met: List[bool] = []
     enemy_indices = {stone.index for stone in board if stone.owner == "opponent"}
     own_indices = {stone.index for stone in board if stone.owner == "self"}
     if not 0 <= int(active_index) < STONE_COUNT:
@@ -271,6 +288,10 @@ def evaluate_one(
                 shot_index=shot_index,
             )
         )
+        if tactical_plan is not None:
+            tactical_score, tactical_goal = score_strict_outcome(states, board, int(active_index), tactical_plan)
+            tactical_scores.append(float(tactical_score))
+            tactical_goal_met.append(bool(tactical_goal))
 
     return StrictEvaluation(
         candidate=candidate,
@@ -289,6 +310,8 @@ def evaluate_one(
         final_center_distance_by_index=final_center_distances,
         mean_score=statistics.mean(scores),
         worst_score=min(scores),
+        tactical_scores=tactical_scores,
+        tactical_goal_met=tactical_goal_met,
     )
 
 
@@ -330,6 +353,14 @@ def main() -> None:
     if source.get("schema") not in {"whitebox_attack_proxy_p1_v1", "continuous_math_coarse_proxy_v1"}:
         raise SystemExit("--proxy-report 不是可识别的白盒/数学粗代理报告")
     board = parse_board(source.get("board") or [])
+    tactical_plan = None
+    raw_tactical_plan = source.get("firstPlayerPlan")
+    if raw_tactical_plan is not None:
+        if not isinstance(raw_tactical_plan, dict):
+            raise SystemExit("粗筛报告中的 firstPlayerPlan 格式不正确")
+        tactical_plan = FirstPlayerPlan.from_json(raw_tactical_plan)
+        if tactical_plan.shot_index != int(source.get("shotIndex", -1)):
+            raise SystemExit("firstPlayerPlan 与粗筛报告的 shotIndex 不一致")
     shot_index_raw = args.shot_index if args.shot_index is not None else source.get("shotIndex")
     if shot_index_raw is None or not 0 <= int(shot_index_raw) < STONE_COUNT:
         raise SystemExit("必须提供正确的 --shot-index（零基 0..15），才能安全执行自由防守区规则过滤")
@@ -365,10 +396,11 @@ def main() -> None:
         if not batch:
             continue
         parents_evaluated += 1
-        evaluated.extend(evaluate_one(environment, candidate, board, position, seeds, shot_index) for candidate in batch)
+        evaluated.extend(evaluate_one(environment, candidate, board, position, seeds, shot_index, tactical_plan=tactical_plan) for candidate in batch)
         if not args.no_stop_on_perfect and any(
             is_loss_budget_candidate(item, 0, target_index, args.last_end_hammer_closer_win)
             and item.worst_score >= perfect_score
+            and (tactical_plan is None or bool(item.tactical_goal_met) and all(item.tactical_goal_met))
             for item in evaluated
         ):
             stopped_early_perfect = True
@@ -393,7 +425,7 @@ def main() -> None:
         if args.last_end_hammer_closer_win and target_index is not None else None
     )
     for candidates in by_budget.values():
-        candidates.sort(key=selection_priority, reverse=True)
+        candidates.sort(key=lambda item: selection_priority(item, tactical_plan), reverse=True)
     if args.last_end_hammer_closer_win:
         last_hammer_candidates = by_budget[0]
         selected_budget = None
@@ -432,6 +464,7 @@ def main() -> None:
             {
                 "schema": "whitebox_then_strict_physx_attack_v1",
                 "scope": "non-sweeping; strict PhysX is final evaluator",
+                "firstPlayerPlan": None if tactical_plan is None else tactical_plan.to_json(),
                 "warning": "该评分只覆盖一手清敌保己；最终上线仍应按比赛局面价值重新评分。",
                 "sourceProxyReport": str(args.proxy_report),
                 "board": [asdict(stone) for stone in board],

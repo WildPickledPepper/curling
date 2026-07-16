@@ -21,6 +21,7 @@ from analytic_proxy import (
     make_initial_candidates, refine_candidates, simulate_batch,
 )
 from planning_proxy.competition_rules import is_in_free_guard_zone  # noqa: E402
+from planning_proxy.first_player_strategy import plan_first_player_turn, tactical_coarse_score  # noqa: E402
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--minimum-parents", type=int, default=48)
     parser.add_argument("--top-k", type=int, default=16)
     parser.add_argument("--proxy-dt", type=float, default=0.02, help="粗代理受力表积分步长（秒）。")
+    parser.add_argument("--first-player", action="store_true", help="启用先手中线控场状态机；仅可用于我方偶数 shot-index。")
     parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "planning_proxy" / "runs" / "analytic_proxy.json")
     return parser.parse_args()
 
@@ -76,7 +78,15 @@ def main() -> None:
     if args.risk_radius <= 0 or args.minimum_parents < 1 or args.top_k < 1 or args.proxy_dt <= 0 or not 0 <= args.shot_index < 16:
         raise SystemExit("风险半径、父区域数量、top-k 都必须为正")
     board = load_board(args.board)
+    tactical_plan = None
+    if args.first_player:
+        try:
+            tactical_plan = plan_first_player_turn(board, args.shot_index)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
     target_index = args.must_clear_index
+    if target_index is None and tactical_plan is not None and tactical_plan.opponent_action == "physical_clear":
+        target_index = tactical_plan.target_opponent_index
     target = None if target_index is None else next((stone for stone in board if stone.index == target_index), None)
     if target_index is not None and (target is None or target.owner != "opponent"):
         raise SystemExit("--must-clear-index 必须是场上已有的对方壶 slot")
@@ -103,11 +113,35 @@ def main() -> None:
         protected_opponent_indices=protected_opponent_indices,
         must_clear_index=target_index, chain_entry_indices=chain_entry_indices,
     )
+    if tactical_plan is not None:
+        # 无敌壶的首颗守壶、以及“推到边缘而不能清出界”的第二颗，不能只靠
+        # 原先的“贴近敌壶”筛选。把最靠近本轮策略目标的区域并入严格候选。
+        initial_base = attack_score(
+            initial, protected_opponent_indices=protected_opponent_indices,
+            must_clear_index=target_index, chain_entry_indices=chain_entry_indices,
+        )
+        initial_tactical = np.asarray([
+            tactical_coarse_score(
+                float(initial.stop_points[index, 0]), float(initial.stop_points[index, 1]),
+                int(initial.first_hit_index[index]), float(initial_base[index]), tactical_plan,
+            )
+            for index in range(len(initial.shots))
+        ])
+        tactical_parent = np.argsort(-initial_tactical)[:args.minimum_parents]
+        parent_indices = np.asarray(list(dict.fromkeys([int(index) for index in parent_indices] + [int(index) for index in tactical_parent])), dtype=np.int32)
     refined = simulate_batch(refine_candidates(initial.shots[parent_indices]), board, params, force_lookup=force_lookup, dt=args.proxy_dt)
     score = attack_score(
         refined, protected_opponent_indices=protected_opponent_indices,
         must_clear_index=target_index, chain_entry_indices=chain_entry_indices,
     )
+    if tactical_plan is not None:
+        score = np.asarray([
+            tactical_coarse_score(
+                float(refined.stop_points[index, 0]), float(refined.stop_points[index, 1]),
+                int(refined.first_hit_index[index]), float(score[index]), tactical_plan,
+            )
+            for index in range(len(refined.shots))
+        ])
     elapsed = time.perf_counter() - started
     top = report_rows(refined, score, args.top_k, protected_opponent_indices)
     print(
@@ -127,6 +161,7 @@ def main() -> None:
         "shotIndex": args.shot_index,
         "protectedOpponentFreeGuardIndices": sorted(protected_opponent_indices),
         "mustClearIndex": target_index,
+        "firstPlayerPlan": None if tactical_plan is None else tactical_plan.to_json(),
         "chainEntryIndices": sorted(chain_entry_indices),
         "parameters": params.__dict__,
         "forceLookup": force_lookup.metadata(),
