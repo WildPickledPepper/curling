@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import shutil
@@ -158,6 +159,12 @@ def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[l
                     "pixel_y": round(pixel_y, 2),
                     "fill_pixels": area,
                     "filled_bbox_ratio": round(filled_bbox_ratio, 3),
+                    # Exact source-pixel signature. It lets the independent
+                    # round-trip validator compare the saved coordinate record
+                    # with a fresh PDF extraction without visual inspection.
+                    "source_component_sha256": hashlib.sha256(
+                        colour.encode("ascii") + np.asarray(sorted(map(tuple, component)), dtype=np.int16).tobytes()
+                    ).hexdigest(),
                 }
             )
     return (

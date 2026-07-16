@@ -45,6 +45,8 @@ python training_data\gushue_shotbook\extract_stone_coordinates.py
 
 还可运行 `python training_data\gushue_shotbook\render_coordinate_qa.py` 生成原图叠图抽检页：绿色十字必须落在每颗被保留的实心壶中心，不能落在空心残影或蓝叉壶上。
 
+日常验收无需人工逐图看：运行 `python training_data\gushue_shotbook\validate_coordinate_pixels.py`。它会重新从官方 PDF 抽出小盘面，并逐壶比较保存的原始连通像素 SHA-256；`pixel_component_difference=0` 才算提取记录与原图像素完全一致。这个检查验证的是“坐标记录没有偏离原图”；战术是否合理仍由后续的状态树和 PhysX 反击验证。
+
 该坐标系是“统一后的官方图表坐标系”，尚未硬绑定本项目 PhysX 的场地原点；策略层可以直接用相对按钮的壶型，真正调用 PhysX 时再由适配层统一转换。
 
 ## 重新生成索引和单场文件
