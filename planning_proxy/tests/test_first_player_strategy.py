@@ -67,7 +67,7 @@ class FirstPlayerStrategyTests(unittest.TestCase):
         ], 10)
         self.assertEqual({shape.name for shape in one_own.defence_shapes}, {"单壶_双红圈错层", "单壶_左侧护门", "单壶_右侧护门"})
         self.assertEqual({shape.name for shape in two_own.defence_shapes}, {"双壶_左侧三角", "双壶_右侧三角", "双壶_第三红圈错层"})
-        self.assertEqual({shape.name for shape in three_own.defence_shapes}, {"三壶以上_左侧外壳", "三壶以上_右侧外壳", "三壶以上_红圈后备"})
+        self.assertEqual({shape.name for shape in three_own.defence_shapes}, {"三壶以上_中心锚双门", "三壶以上_左侧外壳", "三壶以上_右侧外壳", "三壶以上_红圈后备"})
 
     def test_any_one_defence_shape_is_an_acceptable_strict_goal(self):
         board = [
@@ -91,6 +91,50 @@ class FirstPlayerStrategyTests(unittest.TestCase):
         )
         self.assertTrue(goal)
         self.assertGreater(score, 0.0)
+
+    def test_centre_anchor_double_gate_is_a_valid_defence_goal(self):
+        board = [
+            stone(1, "self", 2.375, 7.15),
+            stone(2, "self", 2.375, 4.88),
+            stone(3, "self", 1.92, 6.12),
+        ]
+        plan = plan_first_player_turn(board, 14)
+        self.assertIn("三壶以上_中心锚双门", {shape.name for shape in plan.defence_shapes})
+        score, goal = score_strict_outcome(
+            [
+                {"enabled": False, "x": 0.0, "y": 0.0},
+                {"enabled": True, "x": 2.375, "y": 7.15},
+                {"enabled": True, "x": 2.375, "y": 4.88},
+                {"enabled": True, "x": 1.92, "y": 6.12},
+                {"enabled": True, "x": 2.83, "y": 6.12},
+            ],
+            board,
+            4,
+            plan,
+        )
+        self.assertTrue(goal)
+        self.assertGreater(score, 0.0)
+
+    def test_eighth_throw_does_not_certify_an_ordinary_side_shell(self):
+        board = [
+            stone(1, "self", 2.10, 4.52),
+            stone(2, "self", 2.72, 5.15),
+            stone(3, "self", 2.00, 4.70),
+        ]
+        plan = plan_first_player_turn(board, 14)
+        _, goal = score_strict_outcome(
+            [
+                {"enabled": False, "x": 0.0, "y": 0.0},
+                {"enabled": True, "x": 2.10, "y": 4.52},
+                {"enabled": True, "x": 2.72, "y": 5.15},
+                {"enabled": True, "x": 2.00, "y": 4.70},
+                {"enabled": True, "x": 1.92, "y": 6.12},
+            ],
+            board,
+            4,
+            plan,
+        )
+        self.assertFalse(goal)
 
     def test_edge_dead_band_is_explicit(self):
         self.assertTrue(is_edge_dead(StrategyStone(1, "opponent", sum(EDGE_DEAD_RIGHT) / 2.0, 7.0)))

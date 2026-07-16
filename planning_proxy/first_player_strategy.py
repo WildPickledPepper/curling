@@ -57,6 +57,12 @@ class DefenceShape:
     active_targets: tuple[tuple[float, float], ...]
     required_inner_count: int
     require_front_guard: bool = False
+    require_centre_anchor: bool = False
+    require_centre_guard: bool = False
+    required_side_gate_count: int = 0
+    # 仅当完整球形已通过“对方最后一颗反击”筛查时才为真。第八颗使用它
+    # 作为提交门槛；此前各颗仍可把普通形状当作过渡层。
+    certified_for_last_reply: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -65,6 +71,10 @@ class DefenceShape:
             "active_targets": [list(point) for point in self.active_targets],
             "required_inner_count": self.required_inner_count,
             "require_front_guard": self.require_front_guard,
+            "require_centre_anchor": self.require_centre_anchor,
+            "require_centre_guard": self.require_centre_guard,
+            "required_side_gate_count": self.required_side_gate_count,
+            "certified_for_last_reply": self.certified_for_last_reply,
         }
 
     @classmethod
@@ -80,6 +90,10 @@ class DefenceShape:
             active_targets=points,
             required_inner_count=int(raw["required_inner_count"]),
             require_front_guard=bool(raw.get("require_front_guard", False)),
+            require_centre_anchor=bool(raw.get("require_centre_anchor", False)),
+            require_centre_guard=bool(raw.get("require_centre_guard", False)),
+            required_side_gate_count=int(raw.get("required_side_gate_count", 0)),
+            certified_for_last_reply=bool(raw.get("certified_for_last_reply", False)),
         )
 
 
@@ -236,8 +250,20 @@ def _defence_shapes(stones: Sequence[StrategyStone]) -> tuple[DefenceShape, ...]
         )
 
     # 三颗及以上时不再执着于把壶都堆到中心。优先补左右任一侧的外壳；
-    # 只有本来已有良好保护层时，才允许把新壶作为红圈内的后备得分壶。
+    # 首选是已经经末手反击筛查的“中心锚＋中线守壶＋左右双门”。它需要
+    # 四个相对角色；一手无法补齐时会自然不达标，搜索器再退到普通外壳/红圈
+    # 后备候选，而不是伪造成功。
     return (
+        DefenceShape(
+            "三壶以上_中心锚双门",
+            "优先完成中心锚、中线守壶与左右双门；它是目前唯一通过末手反击筛查的候选防线。",
+            _unique_points(((HOUSE_X, HOUSE_Y),), FRONT_GUARD_LEFT, FRONT_GUARD_RIGHT),
+            required_inner_count=1,
+            require_centre_anchor=True,
+            require_centre_guard=True,
+            required_side_gate_count=2,
+            certified_for_last_reply=True,
+        ),
         DefenceShape(
             "三壶以上_左侧外壳",
             "在既有壶群左前方补保护壶，保持侧向通道被遮挡。",
@@ -292,6 +318,37 @@ def _has_front_guard(stones: Sequence[StrategyStone]) -> bool:
         and abs(stone.x - HOUSE_X) >= 0.20
         for stone in stones
     )
+
+
+def _has_centre_anchor(stones: Sequence[StrategyStone]) -> bool:
+    """是否已有一颗己方壶真正占住按钮附近。"""
+
+    return any(stone.owner == "self" and distance_to_house(stone) <= 0.25 for stone in stones)
+
+
+def _has_centre_guard(stones: Sequence[StrategyStone]) -> bool:
+    """是否还保有第一颗建立的中线守壶，而不是只剩侧门壶。"""
+
+    return any(
+        stone.owner == "self"
+        and abs(stone.x - GUARD_TARGET[0]) <= 0.25
+        and abs(stone.y - GUARD_TARGET[1]) <= 0.60
+        for stone in stones
+    )
+
+
+def _side_gate_count(stones: Sequence[StrategyStone]) -> int:
+    """数出左右两个前方门中已有几个；同一颗壶不会重复计数。"""
+
+    count = 0
+    for targets in (FRONT_GUARD_LEFT, FRONT_GUARD_RIGHT):
+        if any(
+            stone.owner == "self"
+            and min(math.hypot(stone.x - x, stone.y - y) for x, y in targets) <= 0.55
+            for stone in stones
+        ):
+            count += 1
+    return count
 
 
 def _own_inner_count(stones: Sequence[StrategyStone]) -> int:
@@ -434,11 +491,19 @@ def score_strict_outcome(
             shape_landing_error <= 0.70
             and own_inner >= shape.required_inner_count
             and (not shape.require_front_guard or guard_present)
+            and (not shape.require_centre_anchor or _has_centre_anchor(final))
+            and (not shape.require_centre_guard or _has_centre_guard(final))
+            and _side_gate_count(final) >= shape.required_side_gate_count
         )
 
-    shapes_met = tuple(shape.name for shape in plan.defence_shapes if shape_is_met(shape))
+    matched_shapes = tuple(shape for shape in plan.defence_shapes if shape_is_met(shape))
+    shapes_met = tuple(shape.name for shape in matched_shapes)
     if plan.defence_shapes:
-        goal_met = target_ok and bool(shapes_met)
+        # 第八颗就是对方最后一颗前的最终布阵。此时普通三角只是“壶还在场”
+        # 的描述，不能被当作已通过反击筛查的交付目标。
+        goal_met = target_ok and bool(shapes_met) and (
+            plan.own_throw_number < 8 or any(shape.certified_for_last_reply for shape in matched_shapes)
+        )
     elif plan.phase == "open_centre_guard":
         goal_met = landing_ok
     elif plan.phase == "process_first_enemy_and_score":
@@ -458,6 +523,7 @@ def score_strict_outcome(
     score += 55.0 * min(2, own_inner)
     score += 45.0 if guard_present else 0.0
     score += 65.0 if shapes_met else 0.0
+    score += 260.0 if any(shape.certified_for_last_reply for shape in matched_shapes) else 0.0
     if math.isfinite(landing_error):
         score -= 70.0 * landing_error
     else:

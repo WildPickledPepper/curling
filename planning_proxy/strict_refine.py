@@ -422,6 +422,14 @@ def main() -> None:
         budget: [item for item in evaluated if is_loss_budget_candidate(item, budget, target_index, args.last_end_hammer_closer_win)]
         for budget in range(args.max_own_out + 1)
     }
+    # 先手第八颗是对方最后一颗之前的最终防线。此时若没有完成经过末手反击
+    # 筛查的球形，普通三角/外壳不能伪装成可交付的防御解；宁可明确返回没有
+    # 可提交候选，让上层走重新搜索或保守兜底。
+    if tactical_plan is not None and tactical_plan.own_throw_number == 8:
+        by_budget = {
+            budget: [item for item in candidates if item.tactical_goal_met and all(item.tactical_goal_met)]
+            for budget, candidates in by_budget.items()
+        }
     # 失败时要能分清是“最终比分没翻过来”，还是物理/出界安全约束卡住。
     by_budget_without_target_goal = {
         budget: [item for item in evaluated if is_loss_budget_candidate(item, budget)]
