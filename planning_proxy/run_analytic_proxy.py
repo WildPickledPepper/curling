@@ -67,6 +67,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--risk-radius", type=float, default=0.45, help="敌方风险通道半径（米）。")
     parser.add_argument("--minimum-parents", type=int, default=48)
     parser.add_argument("--top-k", type=int, default=16)
+    parser.add_argument("--coarse-velocity-count", type=int, default=7, help="首轮速度档数；默认 7。")
+    parser.add_argument("--coarse-lateral-count", type=int, default=41, help="首轮横向偏移档数；默认 41。")
+    parser.add_argument("--coarse-spin-count", type=int, default=15, help="首轮旋转档数；默认 15。")
     parser.add_argument("--proxy-dt", type=float, default=0.02, help="粗代理受力表积分步长（秒）。")
     parser.add_argument("--first-player", action="store_true", help="启用先手中线控场状态机；仅可用于我方偶数 shot-index。")
     parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "planning_proxy" / "runs" / "analytic_proxy.json")
@@ -75,8 +78,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    if args.risk_radius <= 0 or args.minimum_parents < 1 or args.top_k < 1 or args.proxy_dt <= 0 or not 0 <= args.shot_index < 16:
-        raise SystemExit("风险半径、父区域数量、top-k 都必须为正")
+    if (
+        args.risk_radius <= 0 or args.minimum_parents < 1 or args.top_k < 1 or args.proxy_dt <= 0
+        or min(args.coarse_velocity_count, args.coarse_lateral_count, args.coarse_spin_count) < 1
+        or not 0 <= args.shot_index < 16
+    ):
+        raise SystemExit("风险半径、父区域数量、初筛档数、top-k 都必须为正")
     board = load_board(args.board)
     tactical_plan = None
     if args.first_player:
@@ -107,7 +114,12 @@ def main() -> None:
     started = time.perf_counter()
     params = calibrate_from_recovered_formula()
     force_lookup = calibrate_force_lookup()
-    initial = simulate_batch(make_initial_candidates(), board, params, force_lookup=force_lookup, dt=args.proxy_dt)
+    initial_shots = make_initial_candidates(
+        velocity_count=args.coarse_velocity_count,
+        lateral_count=args.coarse_lateral_count,
+        spin_count=args.coarse_spin_count,
+    )
+    initial = simulate_batch(initial_shots, board, params, force_lookup=force_lookup, dt=args.proxy_dt)
     parent_indices = conservative_parent_indices(
         initial, risk_radius_m=args.risk_radius, minimum_count=args.minimum_parents,
         protected_opponent_indices=protected_opponent_indices,
@@ -166,6 +178,11 @@ def main() -> None:
         "parameters": params.__dict__,
         "forceLookup": force_lookup.metadata(),
         "proxyDtSeconds": args.proxy_dt,
+        "coarseGrid": {
+            "velocityCount": args.coarse_velocity_count,
+            "lateralCount": args.coarse_lateral_count,
+            "spinCount": args.coarse_spin_count,
+        },
         "board": [stone.__dict__ for stone in board],
         "initialCandidateCount": int(len(initial.shots)),
         "parentRegionCount": int(len(parent_indices)),

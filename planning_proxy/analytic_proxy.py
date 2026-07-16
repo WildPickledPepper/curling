@@ -218,12 +218,24 @@ def _lookup_bilinear(table: np.ndarray, speeds: np.ndarray, spins: np.ndarray, l
     )
 
 
-def make_initial_candidates() -> np.ndarray:
-    """首轮只做覆盖；后续在命中的连续区域局部细分。"""
+def make_initial_candidates(
+    *, velocity_count: int = 5, lateral_count: int = 25, spin_count: int = 9,
+) -> np.ndarray:
+    """首轮做连续空间覆盖；后续只在命中的区域局部细分。
 
+    三个计数被显式暴露给调用方，便于在比赛的单核时间预算内扩大粗筛。
+    它们不改变输入范围，只是把速度、横向偏移和旋转的网格切得更细。
+    """
+
+    if min(int(velocity_count), int(lateral_count), int(spin_count)) < 1:
+        raise ValueError("初筛的速度、横向、旋转档数都必须至少为 1")
     return np.asarray(
-        [(v0, float(h0), float(w0)) for v0 in (3.2, 3.8, 4.4, 5.0, 5.6)
-         for h0 in np.linspace(-2.2, 2.2, 25) for w0 in np.linspace(-15.0, 15.0, 9)],
+        [
+            (float(v0), float(h0), float(w0))
+            for v0 in np.linspace(3.2, 5.6, int(velocity_count))
+            for h0 in np.linspace(-2.2, 2.2, int(lateral_count))
+            for w0 in np.linspace(-15.0, 15.0, int(spin_count))
+        ],
         dtype=np.float32,
     )
 
