@@ -49,6 +49,22 @@ python training_data\gushue_shotbook\extract_stone_coordinates.py
 
 该坐标系是“统一后的官方图表坐标系”，尚未硬绑定本项目 PhysX 的场地原点；策略层可以直接用相对按钮的壶型，真正调用 PhysX 时再由适配层统一转换。
 
+## 后续讨论只读的逐手状态表
+
+运行：
+
+```powershell
+python training_data\gushue_shotbook\build_structured_shotbook.py
+```
+
+它把已经提取的坐标与官方逐手文字合并为两个不需要再打开 PDF 的文件：
+
+- `coordinates/gushue_structured_shots.jsonl`：每一手的投壶方、投手、官方叫球、旋转方向、完成度、是否后手、当局前后比分、出手后所有壶的坐标和分区，以及双方壶数变化。
+- `coordinates/gushue_structured_ends.jsonl`：每局的先后手、实际下一局后手、该局得分和累计比分，以及是否提前结束。
+- `coordinates/gushue_structured_games.jsonl`：每场比赛的最终比分、胜方和按局汇总的进程。
+
+这两份表包含战术复盘所需的公开信息。它们不声称恢复 PDF 没有记录的内容，例如真实初速度、扫冰输入、逐 tick 摩擦、壶的 yaw 或每次碰撞的精确先后次序。
+
 ## 重新生成索引和单场文件
 
 在 `DCCourse` 根目录执行：
