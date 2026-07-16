@@ -1,0 +1,13 @@
+[
+  {
+    "sample_id": 13001,
+    "label": "native_solver_next_shot_centerline_hit_r00",
+    "category": "collision_next_shot_native_solver",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [],
+    "notes": "No-reset fallback: after an initial centerline stone is in play, fire a faster centerline shot to force stone-stone collision and capture native solver rows."
+  }
+]

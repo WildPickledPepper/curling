@@ -1,0 +1,16 @@
+[
+  {
+    "sample_id": 14000,
+    "label": "a0_fixed_tick_resolver_headon",
+    "category": "a0_fixed_tick_resolver",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {"x": 2.375, "y": 5.2, "index": 8}
+    ],
+    "notes": "A0 resolver preflight only: identify controller and velocity/omega write dispatch before any full fixed-tick capture."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {"sample_id":39000,"label":"free_low_leftcurl_v2p55_hm1p2_wm3p14_r00","category":"no_collision","v0":2.55,"h0":-1.2,"w0":-3.14,"sweep":0.0,"stones":[],"notes":"extended non-sweep: low-speed left curl"},
+  {"sample_id":39001,"label":"free_mid_straight_v3p15_h0_w0_r00","category":"no_collision","v0":3.15,"h0":0.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: mid-speed straight"},
+  {"sample_id":39002,"label":"free_high_rightcurl_v3p45_h1p2_w3p14_r00","category":"no_collision","v0":3.45,"h0":1.2,"w0":3.14,"sweep":0.0,"stones":[],"notes":"extended non-sweep: high-speed right curl"},
+  {"sample_id":39003,"label":"free_mid_rightcurl_v2p85_h0_w3p14_r00","category":"no_collision","v0":2.85,"h0":0.0,"w0":3.14,"sweep":0.0,"stones":[],"notes":"extended non-sweep: mid-speed centered right curl"},
+  {"sample_id":39004,"label":"boundary_fast_center_r00","category":"boundary","v0":5.5,"h0":0.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast centre, end boundary"},
+  {"sample_id":39005,"label":"boundary_fast_left_neg_r00","category":"boundary","v0":5.0,"h0":-2.2,"w0":-1.57,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast left boundary approach"},
+  {"sample_id":39006,"label":"boundary_fast_right_pos_r00","category":"boundary","v0":5.0,"h0":2.2,"w0":1.57,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast right boundary approach"},
+  {"sample_id":39007,"label":"boundary_clamp_hi_r00","category":"boundary","v0":4.4,"h0":3.6,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: positive lateral clamp"},
+  {"sample_id":39008,"label":"boundary_clamp_lo_r00","category":"boundary","v0":4.4,"h0":-3.6,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: negative lateral clamp"},
+  {"sample_id":39009,"label":"boundary_wall_left_r00","category":"boundary","v0":4.8,"h0":-3.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: left wall"},
+  {"sample_id":39010,"label":"boundary_wall_right_r00","category":"boundary","v0":4.8,"h0":3.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: right wall"},
+  {"sample_id":39011,"label":"boundary_slow_curl_r00","category":"boundary","v0":2.3,"h0":1.8,"w0":3.14,"sweep":0.0,"stones":[],"notes":"extended non-sweep: slow curl near boundary"}
+]

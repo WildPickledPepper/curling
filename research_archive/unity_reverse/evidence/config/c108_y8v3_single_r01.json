@@ -1,0 +1,19 @@
+[
+  {
+    "sample_id": 11016,
+    "label": "collision_headon_y8_v3p4_unique_t06_r01",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {"x": 2.375, "y": 8.0, "index": 6}
+    ],
+    "notes": "C108: single-shot activation/static-support timeline capture; source_sample_id=82; target_index=6",
+    "source_sample_id": 82,
+    "batch_repeat_index": 1,
+    "batch_case_index": 4,
+    "assigned_target_index": 6
+  }
+]

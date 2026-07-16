@@ -1,0 +1,15 @@
+[
+  {
+    "sample_id": 26108,
+    "label": "collision_double_split_right_r08_manifest_replay",
+    "category": "collision_double",
+    "v0": 4.2,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [{"x": 2.535, "y": 6.1}, {"x": 2.215, "y": 5.0}],
+    "notes": "one-shot Unity DCP-friction-manifest replay of captured far branch r08 that local classified as normal",
+    "source_sample_id": 26008,
+    "repeat_index": 0
+  }
+]

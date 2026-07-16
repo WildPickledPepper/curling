@@ -1,0 +1,16 @@
+[
+  {
+    "sample_id": 12001,
+    "label": "c59_headon_y8_v4_target7_c04",
+    "category": "collision_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {"x": 2.375, "y": 8.0, "index": 7}
+    ],
+    "notes": "C59 diagnostic: isolate y8/v4 target tail with C03/C04/C31 core capture",
+    "assigned_target_index": 7
+  }
+]

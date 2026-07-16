@@ -1,0 +1,16 @@
+--- a/source/lowleveldynamics/src/DyRigidBodyToSolverBody.cpp
++++ b/source/lowleveldynamics/src/DyRigidBodyToSolverBody.cpp
+@@
+ 	if (lockFlags & PxRigidDynamicLockFlag::eLOCK_ANGULAR_X)
+ 	{
+-		data.angularVelocity.x = 0.f;
++		// Keep authored locked-axis components through solver-body setup.
++		// integrateCore still projects the final motion state.
+ 	}
+@@
+ 	if (lockFlags & PxRigidDynamicLockFlag::eLOCK_ANGULAR_Z)
+ 	{
+-		data.angularVelocity.z = 0.f;
++		// Keep authored locked-axis components through solver-body setup.
++		// integrateCore still projects the final motion state.
+ 	}

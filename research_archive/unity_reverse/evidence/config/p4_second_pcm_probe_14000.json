@@ -1,0 +1,14 @@
+[
+  {
+    "sample_id": 14000,
+    "label": "p4_second_pcm_headon",
+    "category": "front_half_pcm_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [{"x": 2.375, "y": 5.2, "index": 8}],
+    "notes": "Single P4 capture: first and second PCM invocation only."
+  }
+]

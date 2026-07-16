@@ -1,0 +1,15 @@
+[
+  {
+    "sample_id": 12108,
+    "label": "diagnostic_highcurl_left_to_right_y6p4_t10_r01",
+    "category": "collision_high_curl",
+    "v0": 3.7,
+    "h0": -0.25,
+    "w0": 3.14,
+    "sweep": 0.0,
+    "stones": [{"x": 2.775, "y": 6.4, "index": 10}],
+    "notes": "targeted diagnostic: high positive curl with large endpoint divergence",
+    "source_sample_id": 12008,
+    "assigned_target_index": 10
+  }
+]

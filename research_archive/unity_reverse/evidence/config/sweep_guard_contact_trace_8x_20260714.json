@@ -1,0 +1,10 @@
+[
+  {"sample_id": 1, "label": "sweep_guard_s2_trace_r00", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 2.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 2, "label": "sweep_guard_s6_trace_r00", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 6.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 3, "label": "sweep_guard_s2_trace_r01", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 2.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 4, "label": "sweep_guard_s6_trace_r01", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 6.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 5, "label": "sweep_guard_s2_trace_r02", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 2.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 6, "label": "sweep_guard_s6_trace_r02", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 6.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 7, "label": "sweep_guard_s2_trace_r03", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 2.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"},
+  {"sample_id": 8, "label": "sweep_guard_s6_trace_r03", "category": "sweep_guard_trace", "v0": 3.0, "h0": 0.0, "w0": 0.0, "sweep": 6.0, "stones": [{"x": 2.375, "y": 8.0}], "notes": "C31 first-contact trace"}
+]

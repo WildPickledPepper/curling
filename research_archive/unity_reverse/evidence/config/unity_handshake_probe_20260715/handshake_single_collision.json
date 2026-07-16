@@ -1,0 +1,13 @@
+[
+  {
+    "sample_id": 39900,
+    "label": "handshake_single_tangent_r00",
+    "category": "collision_tangent",
+    "v0": 4.1,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [{"x": 1.875, "y": 5.6, "index": 2}],
+    "notes": "one-shot handshake gate regression; near-tangent left"
+  }
+]

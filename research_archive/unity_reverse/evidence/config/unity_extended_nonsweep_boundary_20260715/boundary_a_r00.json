@@ -1,0 +1,6 @@
+[
+  {"sample_id":39100,"label":"boundary_fast_center_a_r00","category":"boundary","v0":5.5,"h0":0.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast centre, end boundary"},
+  {"sample_id":39101,"label":"boundary_fast_left_neg_a_r00","category":"boundary","v0":5.0,"h0":-2.2,"w0":-1.57,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast left boundary approach"},
+  {"sample_id":39102,"label":"boundary_fast_right_pos_a_r00","category":"boundary","v0":5.0,"h0":2.2,"w0":1.57,"sweep":0.0,"stones":[],"notes":"extended non-sweep: fast right boundary approach"},
+  {"sample_id":39103,"label":"boundary_clamp_hi_a_r00","category":"boundary","v0":4.4,"h0":3.6,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: positive lateral clamp"}
+]

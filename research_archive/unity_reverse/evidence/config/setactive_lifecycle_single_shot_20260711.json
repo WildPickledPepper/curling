@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 14000,
+    "label": "setactive_lifecycle_headon_14000",
+    "category": "setactive_native_lifecycle",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "index": 8,
+        "x": 2.375,
+        "y": 5.2
+      }
+    ],
+    "notes": "Single controlled collision for GameObject.SetActive to native pair-lifecycle capture."
+  }
+]

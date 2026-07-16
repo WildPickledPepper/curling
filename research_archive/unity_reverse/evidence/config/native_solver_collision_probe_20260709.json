@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 13000,
+    "label": "native_solver_headon_active_a00_target_t08_r00",
+    "category": "collision_headon_native_solver",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 8
+      }
+    ],
+    "active_index": 0,
+    "notes": "Targeted runtime-native capture: force one no-sweep head-on stone-stone collision and dump ContactBuffer/PxSolverBodyData/SolverContact rows."
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "sample_id": 11014,
+    "label": "collision_headon_y6p2_v3p4_unique_t04_r01",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {"x": 2.375, "y": 6.2, "index": 4}
+    ],
+    "notes": "C108 control: y=6.2 target pose timeline under identical reset lifecycle",
+    "source_sample_id": 80,
+    "batch_repeat_index": 1,
+    "batch_case_index": 2,
+    "assigned_target_index": 4
+  }
+]

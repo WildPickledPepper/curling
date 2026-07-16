@@ -1,0 +1,6 @@
+[
+  {"sample_id":39104,"label":"boundary_clamp_lo_b_r00","category":"boundary","v0":4.4,"h0":-3.6,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: negative lateral clamp"},
+  {"sample_id":39105,"label":"boundary_wall_left_b_r00","category":"boundary","v0":4.8,"h0":-3.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: left wall"},
+  {"sample_id":39106,"label":"boundary_wall_right_b_r00","category":"boundary","v0":4.8,"h0":3.0,"w0":0.0,"sweep":0.0,"stones":[],"notes":"extended non-sweep: right wall"},
+  {"sample_id":39107,"label":"boundary_slow_curl_b_r00","category":"boundary","v0":2.3,"h0":1.8,"w0":3.14,"sweep":0.0,"stones":[],"notes":"extended non-sweep: slow curl near boundary"}
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "sample_id": 14000,
+    "label": "b20_same_run_headon",
+    "category": "b20_same_run_contactbuffer",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      { "index": 8, "x": 2.375, "y": 5.2 }
+    ],
+    "notes": "One-shot B20 capture: first dynamic-dynamic PCM transform/cache/ContactBuffer only."
+  }
+]

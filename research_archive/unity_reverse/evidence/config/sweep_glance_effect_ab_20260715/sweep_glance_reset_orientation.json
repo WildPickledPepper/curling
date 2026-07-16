@@ -1,0 +1,6 @@
+[
+  {"sample_id": 27101, "label": "sweep_glance_s4_reset_r00", "category": "collision_with_sweep", "v0": 3.3, "h0": -0.15, "w0": -1.57, "sweep": 4.0, "stones": [{"x": 2.135, "y": 6.8}], "notes": "strict sweep-effect A/B", "repeat_index": 0},
+  {"sample_id": 27102, "label": "sweep_glance_s8_reset_r00", "category": "collision_with_sweep", "v0": 3.3, "h0": -0.15, "w0": -1.57, "sweep": 8.0, "stones": [{"x": 2.135, "y": 6.8}], "notes": "strict sweep-effect A/B", "repeat_index": 0},
+  {"sample_id": 27103, "label": "sweep_glance_s4_reset_r01", "category": "collision_with_sweep", "v0": 3.3, "h0": -0.15, "w0": -1.57, "sweep": 4.0, "stones": [{"x": 2.135, "y": 6.8}], "notes": "strict sweep-effect A/B", "repeat_index": 1},
+  {"sample_id": 27104, "label": "sweep_glance_s8_reset_r01", "category": "collision_with_sweep", "v0": 3.3, "h0": -0.15, "w0": -1.57, "sweep": 8.0, "stones": [{"x": 2.135, "y": 6.8}], "notes": "strict sweep-effect A/B", "repeat_index": 1}
+]

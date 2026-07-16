@@ -1,0 +1,16 @@
+[
+  {
+    "sample_id": 12002,
+    "label": "c59_glance_right_target9_c04",
+    "category": "collision_glancing",
+    "v0": 3.6,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {"x": 2.555, "y": 6.2, "index": 9}
+    ],
+    "notes": "C59 diagnostic: isolate right-target target tail with C03/C04/C31 core capture",
+    "assigned_target_index": 9
+  }
+]

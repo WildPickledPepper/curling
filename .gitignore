@@ -40,3 +40,23 @@ log/unity_*.json
 log/*_screen*.png
 data/calibration/unity_physx_collision_probe_*.json
 data/calibration/unity_cooked_hulls_*.json
+
+# Archived Unity reverse-engineering raw captures are local evidence, not Git
+# content.  They total multiple GB; the archived source, docs, tests and small
+# configuration manifests remain versioned.
+research_archive/unity_reverse/evidence/log/
+research_archive/unity_reverse/evidence/data/
+
+# Generated planner/training reports are reproducible outputs, not source.
+local_simulator/runs/
+planning_proxy/runs/
+training_research/runs/
+training_research/benchmarks/runs/
+
+# Local submission probes and transferred packages.  Source versions that are
+# intentionally kept live elsewhere are tracked independently.
+/*.zip
+/probeext.cpython-39-x86_64-linux-gnu.so
+/probeext.cp313-win_amd64.pyd
+/run_probe.py
+deployment_probe/build/

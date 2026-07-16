@@ -1,0 +1,110 @@
+[
+  {
+    "sample_id": 14000,
+    "label": "front_half_headon_y5p2_v3p4",
+    "category": "front_half_pcm_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 8
+      }
+    ],
+    "notes": "Baseline no-sweep centerline hit used by native13000."
+  },
+  {
+    "sample_id": 14001,
+    "label": "front_half_headon_y5p2_v4p0",
+    "category": "front_half_pcm_headon",
+    "v0": 4.0,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 8
+      }
+    ],
+    "notes": "Same geometry, faster incoming speed to expose tick-phase handoff differences."
+  },
+  {
+    "sample_id": 14002,
+    "label": "front_half_headon_y8p0_v3p4",
+    "category": "front_half_pcm_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 8.0,
+        "index": 8
+      }
+    ],
+    "notes": "Longer no-sweep glide before first PCM, useful for RNG consumption and drift."
+  },
+  {
+    "sample_id": 14003,
+    "label": "front_half_glance_left_target",
+    "category": "front_half_pcm_glancing",
+    "v0": 3.6,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.195,
+        "y": 6.2,
+        "index": 8
+      }
+    ],
+    "notes": "Left-offset target, straight incoming stone."
+  },
+  {
+    "sample_id": 14004,
+    "label": "front_half_glance_right_target",
+    "category": "front_half_pcm_glancing",
+    "v0": 3.6,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.555,
+        "y": 6.2,
+        "index": 8
+      }
+    ],
+    "notes": "Right-offset target, straight incoming stone."
+  },
+  {
+    "sample_id": 14005,
+    "label": "front_half_glance_left_curl_in",
+    "category": "front_half_pcm_glancing",
+    "v0": 3.4,
+    "h0": -0.2,
+    "w0": -1.57,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "x": 2.095,
+        "y": 6.8,
+        "index": 8
+      }
+    ],
+    "notes": "Left-offset target with incoming lateral heading and spin."
+  }
+]
