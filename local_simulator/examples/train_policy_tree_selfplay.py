@@ -306,6 +306,10 @@ class StrictCurlingEnd:
         self.shot_number += 1
         return {
             "contact": bool(replay.get("reachedFirstContact")),
+            # Forensic callers can use this to distinguish “真的先撞了哪颗壶”
+            # from a coarse trajectory merely预测会经过哪颗壶。训练快速路径的
+            # native loop may not expose identity, in that case it is an empty list.
+            "firstContactTargets": [int(index) for index in replay.get("targetIndices", [])],
             "settled": bool(settled),
             "cleared": cleared,
             "states": self.states(),
