@@ -1,0 +1,5 @@
+# Only needed when using the bundled CPython 3.8 / Windows x64 extension.
+# The bundled CPython 3.13 extension uses the shipped lightweight quaternion
+# compatibility module; it still requires the platform-provided NumPy.
+numpy==1.23.5
+numpy-quaternion==2023.0.4
