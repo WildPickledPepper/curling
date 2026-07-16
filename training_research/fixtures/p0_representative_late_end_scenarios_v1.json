@@ -1,0 +1,36 @@
+{
+  "schema": "p0_fixed_representative_late_end_scenarios_v1",
+  "scope": "non-sweeping; fresh stationary boards; all explicitly supplied stone yaws are 0 radians",
+  "coordinateSystem": "strict_local_simulator_protocol_xy",
+  "notes": [
+    "Each row is a fixed reproducible late-end board, not a seeded random prelude.",
+    "targetShot is zero based: 14 is the 15th throw by first; 15 is the final hammer throw by second.",
+    "Stone id parity determines ownership: even=first, odd=second.  Only ids lower than targetShot are allowed."
+  ],
+  "scenarios": [
+    {"id":"F01_empty_house","category":"空场", "targetShot":14, "stones":[]},
+    {"id":"F02_own_center","category":"己方占圆心", "targetShot":14, "stones":[{"id":0,"x":2.375,"y":4.88}]},
+    {"id":"F03_enemy_center","category":"对方占圆心", "targetShot":14, "stones":[{"id":1,"x":2.375,"y":4.88}]},
+    {"id":"F04_single_enemy_guard","category":"单守壶", "targetShot":14, "stones":[{"id":1,"x":2.375,"y":7.15}]},
+    {"id":"F05_guard_and_enemy_house","category":"守壶加营内敌壶", "targetShot":14, "stones":[{"id":0,"x":1.95,"y":7.05},{"id":1,"x":2.375,"y":4.88}]},
+    {"id":"F06_enemy_guard_own_house","category":"对方守壶加己方得分壶", "targetShot":14, "stones":[{"id":1,"x":2.80,"y":7.05},{"id":0,"x":2.375,"y":4.88}]},
+    {"id":"F07_single_takeout","category":"单次碰撞", "targetShot":14, "stones":[{"id":1,"x":2.375,"y":5.60},{"id":0,"x":2.02,"y":4.70}]},
+    {"id":"F08_double_takeout","category":"双壶碰撞", "targetShot":14, "stones":[{"id":1,"x":2.30,"y":5.55},{"id":3,"x":2.48,"y":5.22},{"id":0,"x":1.88,"y":4.68}]},
+    {"id":"F09_left_port","category":"左侧通道", "targetShot":14, "stones":[{"id":1,"x":2.12,"y":6.35},{"id":3,"x":2.62,"y":6.35},{"id":0,"x":2.12,"y":4.75}]},
+    {"id":"F10_right_port","category":"右侧通道", "targetShot":14, "stones":[{"id":1,"x":2.12,"y":6.35},{"id":3,"x":2.62,"y":6.35},{"id":0,"x":2.63,"y":4.75}]},
+    {"id":"F11_left_split","category":"左侧分裂", "targetShot":14, "stones":[{"id":1,"x":2.22,"y":5.52},{"id":3,"x":1.85,"y":4.92},{"id":0,"x":2.70,"y":4.65}]},
+    {"id":"F12_cluttered_house","category":"多壶营内", "targetShot":14, "stones":[{"id":0,"x":2.15,"y":4.74},{"id":1,"x":2.58,"y":4.82},{"id":2,"x":2.34,"y":5.27},{"id":3,"x":1.86,"y":5.05},{"id":4,"x":2.84,"y":5.20},{"id":5,"x":2.36,"y":6.02}]},
+    {"id":"S01_empty_house_hammer","category":"空场", "targetShot":15, "stones":[]},
+    {"id":"S02_own_center_hammer","category":"己方占圆心", "targetShot":15, "stones":[{"id":1,"x":2.375,"y":4.88}]},
+    {"id":"S03_enemy_center_hammer","category":"对方占圆心", "targetShot":15, "stones":[{"id":0,"x":2.375,"y":4.88}]},
+    {"id":"S04_single_enemy_guard_hammer","category":"单守壶", "targetShot":15, "stones":[{"id":0,"x":2.375,"y":7.15}]},
+    {"id":"S05_guard_and_enemy_house_hammer","category":"守壶加营内敌壶", "targetShot":15, "stones":[{"id":1,"x":1.95,"y":7.05},{"id":0,"x":2.375,"y":4.88}]},
+    {"id":"S06_enemy_guard_own_house_hammer","category":"对方守壶加己方得分壶", "targetShot":15, "stones":[{"id":0,"x":2.80,"y":7.05},{"id":1,"x":2.375,"y":4.88}]},
+    {"id":"S07_single_takeout_hammer","category":"单次碰撞", "targetShot":15, "stones":[{"id":0,"x":2.375,"y":5.60},{"id":1,"x":2.02,"y":4.70}]},
+    {"id":"S08_double_takeout_hammer","category":"双壶碰撞", "targetShot":15, "stones":[{"id":0,"x":2.30,"y":5.55},{"id":2,"x":2.48,"y":5.22},{"id":1,"x":1.88,"y":4.68}]},
+    {"id":"S09_left_port_hammer","category":"左侧通道", "targetShot":15, "stones":[{"id":0,"x":2.12,"y":6.35},{"id":2,"x":2.62,"y":6.35},{"id":1,"x":2.12,"y":4.75}]},
+    {"id":"S10_right_port_hammer","category":"右侧通道", "targetShot":15, "stones":[{"id":0,"x":2.12,"y":6.35},{"id":2,"x":2.62,"y":6.35},{"id":1,"x":2.63,"y":4.75}]},
+    {"id":"S11_right_split_hammer","category":"右侧分裂", "targetShot":15, "stones":[{"id":0,"x":2.53,"y":5.52},{"id":2,"x":2.90,"y":4.92},{"id":1,"x":2.05,"y":4.65}]},
+    {"id":"S12_cluttered_house_hammer","category":"多壶营内", "targetShot":15, "stones":[{"id":1,"x":2.15,"y":4.74},{"id":0,"x":2.58,"y":4.82},{"id":3,"x":2.34,"y":5.27},{"id":2,"x":1.86,"y":5.05},{"id":5,"x":2.84,"y":5.20},{"id":4,"x":2.36,"y":6.02}]}
+  ]
+}

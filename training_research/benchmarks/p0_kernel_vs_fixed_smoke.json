@@ -1,0 +1,724 @@
+{
+  "schema": "p0_kernel_vs_fixed_paired_benchmark_v1",
+  "scope": "non-sweeping; strict local PhysX; fresh paired evaluation paths excluded from root search",
+  "configuration": {
+    "targetShots": [
+      14,
+      15
+    ],
+    "searchSamples": 10,
+    "targetRollouts": 2,
+    "evaluationRollouts": 2,
+    "fixedPolicy": "scripted_continuation_v1"
+  },
+  "summary": {
+    "all": {
+      "scenarioCount": 2,
+      "meanDeltaSearchMinusFixed": 1.5,
+      "sampleStdDelta": 2.1213203435596424,
+      "standardErrorDelta": 1.4999999999999998,
+      "searchMeanScore": 1.0,
+      "fixedMeanScore": -0.5
+    },
+    "first": {
+      "scenarioCount": 1,
+      "meanDeltaSearchMinusFixed": 3.0,
+      "sampleStdDelta": 0.0,
+      "standardErrorDelta": 0.0,
+      "searchMeanScore": 1.0,
+      "fixedMeanScore": -2.0
+    },
+    "second": {
+      "scenarioCount": 1,
+      "meanDeltaSearchMinusFixed": 0.0,
+      "sampleStdDelta": 0.0,
+      "standardErrorDelta": 0.0,
+      "searchMeanScore": 1.0,
+      "fixedMeanScore": 1.0
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": 1,
+      "scenarioSeed": 20260715,
+      "targetShot": 14,
+      "currentShooter": "first",
+      "isHammerSide": false,
+      "searchAction": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "searchTactic": "draw_center",
+      "fixedAction": [
+        4.2,
+        0.04852414550781248,
+        0.0
+      ],
+      "fixedPolicy": "scripted_continuation_v1",
+      "searchMeanTerminalScoreForSelf": 1.0,
+      "fixedMeanTerminalScoreForSelf": -2.0,
+      "meanDeltaSearchMinusFixed": 3.0,
+      "pairedEvaluation": [
+        {
+          "episodeSeed": 20740872,
+          "searchTerminalScoreForSelf": 1,
+          "fixedTerminalScoreForSelf": -2,
+          "deltaSearchMinusFixed": 3
+        },
+        {
+          "episodeSeed": 20751875,
+          "searchTerminalScoreForSelf": 1,
+          "fixedTerminalScoreForSelf": -2,
+          "deltaSearchMinusFixed": 3
+        }
+      ],
+      "state": {
+        "rawStones": [
+          {
+            "id": 0,
+            "owner": "first",
+            "x": 4.255619049072266,
+            "y": 6.6598029277343755,
+            "yaw": 0.6997710339802081,
+            "inPlay": true
+          },
+          {
+            "id": 1,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 1.6502613408168065,
+            "inPlay": false
+          },
+          {
+            "id": 2,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.19519394493868425,
+            "inPlay": false
+          },
+          {
+            "id": 3,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": -1.3691033902817562,
+            "inPlay": false
+          },
+          {
+            "id": 4,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": -1.358320338543785,
+            "inPlay": false
+          },
+          {
+            "id": 5,
+            "owner": "second",
+            "x": 1.9775352478027344,
+            "y": 6.096364512207032,
+            "yaw": 0.6862928657718561,
+            "inPlay": true
+          },
+          {
+            "id": 6,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.627905828921948,
+            "inPlay": false
+          },
+          {
+            "id": 7,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 2.4701168903814734,
+            "inPlay": false
+          },
+          {
+            "id": 8,
+            "owner": "first",
+            "x": 1.3842124938964844,
+            "y": 7.542356028320313,
+            "yaw": -2.6865158319556186,
+            "inPlay": true
+          },
+          {
+            "id": 9,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": -1.4101021659578965,
+            "inPlay": false
+          },
+          {
+            "id": 10,
+            "owner": "first",
+            "x": 3.3718719482421875,
+            "y": 7.743535532714844,
+            "yaw": -2.7331423024227957,
+            "inPlay": true
+          },
+          {
+            "id": 11,
+            "owner": "second",
+            "x": 2.3991241455078125,
+            "y": 4.7930426738281255,
+            "yaw": -1.3694083778641684,
+            "inPlay": true
+          },
+          {
+            "id": 12,
+            "owner": "first",
+            "x": 1.3695259094238281,
+            "y": 7.918401255371094,
+            "yaw": 2.821343902436609,
+            "inPlay": true
+          },
+          {
+            "id": 13,
+            "owner": "second",
+            "x": 1.3604316711425781,
+            "y": 8.374837412597657,
+            "yaw": 2.3356010253041437,
+            "inPlay": true
+          },
+          {
+            "id": 14,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.0,
+            "inPlay": false
+          },
+          {
+            "id": 15,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.0,
+            "inPlay": false
+          }
+        ],
+        "board": {
+          "self": [
+            {
+              "id": 0,
+              "x": 4.255619049072266,
+              "y": 6.6598029277343755,
+              "yaw": 0.6997710339802081,
+              "inPlay": true
+            },
+            {
+              "id": 2,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.19519394493868425,
+              "inPlay": false
+            },
+            {
+              "id": 4,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": -1.358320338543785,
+              "inPlay": false
+            },
+            {
+              "id": 6,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.627905828921948,
+              "inPlay": false
+            },
+            {
+              "id": 8,
+              "x": 1.3842124938964844,
+              "y": 7.542356028320313,
+              "yaw": -2.6865158319556186,
+              "inPlay": true
+            },
+            {
+              "id": 10,
+              "x": 3.3718719482421875,
+              "y": 7.743535532714844,
+              "yaw": -2.7331423024227957,
+              "inPlay": true
+            },
+            {
+              "id": 12,
+              "x": 1.3695259094238281,
+              "y": 7.918401255371094,
+              "yaw": 2.821343902436609,
+              "inPlay": true
+            },
+            {
+              "id": 14,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.0,
+              "inPlay": false
+            }
+          ],
+          "opponent": [
+            {
+              "id": 1,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 1.6502613408168065,
+              "inPlay": false
+            },
+            {
+              "id": 3,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": -1.3691033902817562,
+              "inPlay": false
+            },
+            {
+              "id": 5,
+              "x": 1.9775352478027344,
+              "y": 6.096364512207032,
+              "yaw": 0.6862928657718561,
+              "inPlay": true
+            },
+            {
+              "id": 7,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 2.4701168903814734,
+              "inPlay": false
+            },
+            {
+              "id": 9,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": -1.4101021659578965,
+              "inPlay": false
+            },
+            {
+              "id": 11,
+              "x": 2.3991241455078125,
+              "y": 4.7930426738281255,
+              "yaw": -1.3694083778641684,
+              "inPlay": true
+            },
+            {
+              "id": 13,
+              "x": 1.3604316711425781,
+              "y": 8.374837412597657,
+              "yaw": 2.3356010253041437,
+              "inPlay": true
+            },
+            {
+              "id": 15,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.0,
+              "inPlay": false
+            }
+          ]
+        },
+        "turn": {
+          "shotIndex": 14,
+          "remainingShotsInEnd": 2,
+          "currentShooter": "first",
+          "isHammerSide": false,
+          "isLastShotOfEnd": false,
+          "houseLeader": "opponent",
+          "houseScoreForSelf": 2
+        },
+        "match": {
+          "endIndex": 0,
+          "endsRemainingAfterThis": 0,
+          "scoreDifferenceForSelf": 0,
+          "mode": "single_end_p0_1"
+        }
+      },
+      "searchSummary": {
+        "selected": {
+          "index": 2,
+          "tactic": "draw_center",
+          "origin": "tactic_template",
+          "action": [
+            3.0,
+            0.0,
+            0.0
+          ],
+          "directEvaluationCount": 4,
+          "directTerminalScoreHistogram": {
+            "-8": 0,
+            "-7": 0,
+            "-6": 0,
+            "-5": 0,
+            "-4": 0,
+            "-3": 0,
+            "-2": 0,
+            "-1": 0,
+            "0": 0,
+            "1": 4,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0
+          },
+          "effectiveEvaluationCount": 4.000000001157726,
+          "kernelMeanEndScoreForSelf": 0.999999999421137,
+          "kernelVarianceEndScore": 2.315451171154652e-09,
+          "kernelStandardError": 2.4059567590069482e-05,
+          "lowerConfidenceBound": 0.9999759398535469,
+          "searchWeight": 0.3333333333333333
+        },
+        "sampleBudget": 10,
+        "targetRollouts": 2
+      }
+    },
+    {
+      "scenario": 1,
+      "scenarioSeed": 20260715,
+      "targetShot": 15,
+      "currentShooter": "second",
+      "isHammerSide": true,
+      "searchAction": [
+        6.0,
+        -2.23,
+        0.0
+      ],
+      "searchTactic": "throw_out",
+      "fixedAction": [
+        4.2,
+        -0.08377718505859377,
+        0.0
+      ],
+      "fixedPolicy": "scripted_continuation_v1",
+      "searchMeanTerminalScoreForSelf": 1.0,
+      "fixedMeanTerminalScoreForSelf": 1.0,
+      "meanDeltaSearchMinusFixed": 0.0,
+      "pairedEvaluation": [
+        {
+          "episodeSeed": 20760883,
+          "searchTerminalScoreForSelf": 1,
+          "fixedTerminalScoreForSelf": 1,
+          "deltaSearchMinusFixed": 0
+        },
+        {
+          "episodeSeed": 20771886,
+          "searchTerminalScoreForSelf": 1,
+          "fixedTerminalScoreForSelf": 1,
+          "deltaSearchMinusFixed": 0
+        }
+      ],
+      "state": {
+        "rawStones": [
+          {
+            "id": 0,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": -1.318189941503726,
+            "inPlay": false
+          },
+          {
+            "id": 1,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.15342099977454446,
+            "inPlay": false
+          },
+          {
+            "id": 2,
+            "owner": "first",
+            "x": 4.2061614990234375,
+            "y": 4.809842600585938,
+            "yaw": 1.594896223955961,
+            "inPlay": true
+          },
+          {
+            "id": 3,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 2.100336418717788,
+            "inPlay": false
+          },
+          {
+            "id": 4,
+            "owner": "first",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": -2.8666788759253414,
+            "inPlay": false
+          },
+          {
+            "id": 5,
+            "owner": "second",
+            "x": 1.9121742248535156,
+            "y": 3.946828379394532,
+            "yaw": -1.1413498228406689,
+            "inPlay": true
+          },
+          {
+            "id": 6,
+            "owner": "first",
+            "x": 3.094654083251953,
+            "y": 3.808774485351563,
+            "yaw": 3.03790829879066,
+            "inPlay": true
+          },
+          {
+            "id": 7,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.17292423217009567,
+            "inPlay": false
+          },
+          {
+            "id": 8,
+            "owner": "first",
+            "x": 1.3702011108398438,
+            "y": 4.747106089355469,
+            "yaw": 1.9458954761189187,
+            "inPlay": true
+          },
+          {
+            "id": 9,
+            "owner": "second",
+            "x": 1.6076087951660156,
+            "y": 6.666905894042969,
+            "yaw": 1.0032611931770574,
+            "inPlay": true
+          },
+          {
+            "id": 10,
+            "owner": "first",
+            "x": 1.3811607360839844,
+            "y": 7.652562632324219,
+            "yaw": -2.69123224869383,
+            "inPlay": true
+          },
+          {
+            "id": 11,
+            "owner": "second",
+            "x": 2.669391632080078,
+            "y": 5.626180186035157,
+            "yaw": 0.2324198530599364,
+            "inPlay": true
+          },
+          {
+            "id": 12,
+            "owner": "first",
+            "x": 1.3644332885742188,
+            "y": 8.115201487304688,
+            "yaw": 2.8131530218523197,
+            "inPlay": true
+          },
+          {
+            "id": 13,
+            "owner": "second",
+            "x": 3.399364471435547,
+            "y": 7.519933237792969,
+            "yaw": -1.373738259833421,
+            "inPlay": true
+          },
+          {
+            "id": 14,
+            "owner": "first",
+            "x": 2.2668228149414062,
+            "y": 5.884892954589844,
+            "yaw": 2.1553252676169428,
+            "inPlay": true
+          },
+          {
+            "id": 15,
+            "owner": "second",
+            "x": 0.0,
+            "y": -2.370117186956122e-06,
+            "yaw": 0.0,
+            "inPlay": false
+          }
+        ],
+        "board": {
+          "self": [
+            {
+              "id": 1,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.15342099977454446,
+              "inPlay": false
+            },
+            {
+              "id": 3,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 2.100336418717788,
+              "inPlay": false
+            },
+            {
+              "id": 5,
+              "x": 1.9121742248535156,
+              "y": 3.946828379394532,
+              "yaw": -1.1413498228406689,
+              "inPlay": true
+            },
+            {
+              "id": 7,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.17292423217009567,
+              "inPlay": false
+            },
+            {
+              "id": 9,
+              "x": 1.6076087951660156,
+              "y": 6.666905894042969,
+              "yaw": 1.0032611931770574,
+              "inPlay": true
+            },
+            {
+              "id": 11,
+              "x": 2.669391632080078,
+              "y": 5.626180186035157,
+              "yaw": 0.2324198530599364,
+              "inPlay": true
+            },
+            {
+              "id": 13,
+              "x": 3.399364471435547,
+              "y": 7.519933237792969,
+              "yaw": -1.373738259833421,
+              "inPlay": true
+            },
+            {
+              "id": 15,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": 0.0,
+              "inPlay": false
+            }
+          ],
+          "opponent": [
+            {
+              "id": 0,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": -1.318189941503726,
+              "inPlay": false
+            },
+            {
+              "id": 2,
+              "x": 4.2061614990234375,
+              "y": 4.809842600585938,
+              "yaw": 1.594896223955961,
+              "inPlay": true
+            },
+            {
+              "id": 4,
+              "x": 0.0,
+              "y": -2.370117186956122e-06,
+              "yaw": -2.8666788759253414,
+              "inPlay": false
+            },
+            {
+              "id": 6,
+              "x": 3.094654083251953,
+              "y": 3.808774485351563,
+              "yaw": 3.03790829879066,
+              "inPlay": true
+            },
+            {
+              "id": 8,
+              "x": 1.3702011108398438,
+              "y": 4.747106089355469,
+              "yaw": 1.9458954761189187,
+              "inPlay": true
+            },
+            {
+              "id": 10,
+              "x": 1.3811607360839844,
+              "y": 7.652562632324219,
+              "yaw": -2.69123224869383,
+              "inPlay": true
+            },
+            {
+              "id": 12,
+              "x": 1.3644332885742188,
+              "y": 8.115201487304688,
+              "yaw": 2.8131530218523197,
+              "inPlay": true
+            },
+            {
+              "id": 14,
+              "x": 2.2668228149414062,
+              "y": 5.884892954589844,
+              "yaw": 2.1553252676169428,
+              "inPlay": true
+            }
+          ]
+        },
+        "turn": {
+          "shotIndex": 15,
+          "remainingShotsInEnd": 1,
+          "currentShooter": "second",
+          "isHammerSide": true,
+          "isLastShotOfEnd": true,
+          "houseLeader": "self",
+          "houseScoreForSelf": 1
+        },
+        "match": {
+          "endIndex": 0,
+          "endsRemainingAfterThis": 0,
+          "scoreDifferenceForSelf": 0,
+          "mode": "single_end_p0_1"
+        }
+      },
+      "searchSummary": {
+        "selected": {
+          "index": 4,
+          "tactic": "throw_out",
+          "origin": "tactic_template",
+          "action": [
+            6.0,
+            -2.23,
+            0.0
+          ],
+          "directEvaluationCount": 4,
+          "directTerminalScoreHistogram": {
+            "-8": 0,
+            "-7": 0,
+            "-6": 0,
+            "-5": 0,
+            "-4": 0,
+            "-3": 0,
+            "-2": 0,
+            "-1": 0,
+            "0": 0,
+            "1": 4,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0
+          },
+          "effectiveEvaluationCount": 4.0,
+          "kernelMeanEndScoreForSelf": 1.0,
+          "kernelVarianceEndScore": 2.525251365587187e-178,
+          "kernelStandardError": 7.945519752645492e-90,
+          "lowerConfidenceBound": 1.0,
+          "searchWeight": 0.3333333332690152
+        },
+        "sampleBudget": 10,
+        "targetRollouts": 2
+      }
+    }
+  ]
+}

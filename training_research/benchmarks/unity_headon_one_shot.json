@@ -1,0 +1,15 @@
+[
+  {
+    "sample_id": 1,
+    "label": "headon_y5p2_v3p4_speed_compare",
+    "category": "speed_compare",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      { "x": 2.375, "y": 5.2, "index": 2 }
+    ],
+    "notes": "One-to-one Unity versus strict-local timing fixture; no sweep."
+  }
+]

@@ -26,6 +26,7 @@
 - [07 数字冰壶 NFSP](deep_reading/07_digital_curling_nfsp_deep.md)
 - [08 Hammer Shot 最后一壶动作选择](deep_reading/08_hammer_shots_curling_deep.md)
 - [09 MCTS 方法综述](deep_reading/09_mcts_survey_deep.md)
+- [九篇论文的统一结论与当前训练决策](deep_reading/10_all_papers_synthesis_and_current_decisions.md)
 
 ## 项目落地
 

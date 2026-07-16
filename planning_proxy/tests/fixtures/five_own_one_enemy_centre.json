@@ -1,0 +1,8 @@
+[
+  {"index": 1, "owner": "opponent", "x": 2.375, "y": 4.880},
+  {"index": 2, "owner": "self", "x": 1.950, "y": 4.880},
+  {"index": 4, "owner": "self", "x": 2.800, "y": 4.880},
+  {"index": 6, "owner": "self", "x": 2.375, "y": 4.400},
+  {"index": 8, "owner": "self", "x": 2.375, "y": 5.360},
+  {"index": 10, "owner": "self", "x": 1.950, "y": 5.360}
+]

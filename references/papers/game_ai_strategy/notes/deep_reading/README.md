@@ -24,4 +24,5 @@
 
 ## 综合决策
 
+- [九篇论文的统一结论与当前训练决策](10_all_papers_synthesis_and_current_decisions.md)（从九篇证据到当前 P0–P4 路线）
 - [论文到训练决策映射](PAPER_TO_TRAINING_DECISIONS.md)

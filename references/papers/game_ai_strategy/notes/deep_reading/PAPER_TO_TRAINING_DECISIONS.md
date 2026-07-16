@@ -34,7 +34,5 @@
 4. 设计下一代训练标签：`state -> tactic distribution + continuous delta + score distribution`。
 5. 准备官方服务器 calibration 脚本：固定 `(v,h,w,sweep)` 多次发球并记录落点。
 
-## 当前判断
 
-现在最该强化的是“可信搜索老师”，不是急着堆更复杂网络。只要本地物理还粗，模型越大越容易学到代理服务器的偏差；等官方校准数据回来，再把网络容量和自我博弈规模提上去。
 

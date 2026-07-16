@@ -1,0 +1,18 @@
+{
+  "schema": "planning_proxy_rule_and_safety_scenarios_v1",
+  "scope": "non-sweeping; each row checks legal one-shot planning, not full-end tactical optimality",
+  "scenarios": [
+    {"id": "01_empty_draw", "category": "空场", "shotIndex": 8, "board": []},
+    {"id": "02_single_enemy_house", "category": "单清", "shotIndex": 8, "board": [{"index": 1, "owner": "opponent", "x": 2.375, "y": 5.60}]},
+    {"id": "03_double_takeout", "category": "双清", "shotIndex": 8, "board": [{"index": 1, "owner": "opponent", "x": 2.30, "y": 5.55}, {"index": 3, "owner": "opponent", "x": 2.48, "y": 5.22}]},
+    {"id": "04_triple_chain", "category": "三壶连锁", "shotIndex": 10, "board": [{"index": 1, "owner": "opponent", "x": 2.33, "y": 6.15}, {"index": 3, "owner": "opponent", "x": 2.43, "y": 5.78}, {"index": 5, "owner": "opponent", "x": 2.52, "y": 5.41}]},
+    {"id": "05_own_blocker", "category": "己方挡路", "shotIndex": 10, "board": [{"index": 2, "owner": "self", "x": 2.12, "y": 6.20}, {"index": 1, "owner": "opponent", "x": 2.375, "y": 5.42}]},
+    {"id": "06_narrow_port", "category": "窄通道", "shotIndex": 10, "board": [{"index": 2, "owner": "self", "x": 2.12, "y": 6.35}, {"index": 4, "owner": "self", "x": 2.62, "y": 6.35}, {"index": 1, "owner": "opponent", "x": 2.375, "y": 5.20}]},
+    {"id": "07_crowded_house", "category": "多壶营内", "shotIndex": 12, "board": [{"index": 2, "owner": "self", "x": 2.15, "y": 4.74}, {"index": 1, "owner": "opponent", "x": 2.58, "y": 4.82}, {"index": 4, "owner": "self", "x": 2.34, "y": 5.27}, {"index": 3, "owner": "opponent", "x": 1.86, "y": 5.05}, {"index": 6, "owner": "self", "x": 2.84, "y": 5.20}, {"index": 5, "owner": "opponent", "x": 2.36, "y": 6.02}]},
+    {"id": "08_early_centre_guard", "category": "前五手中线守壶", "shotIndex": 2, "board": [{"index": 1, "owner": "opponent", "x": 2.375, "y": 7.15}]},
+    {"id": "09_early_side_guard", "category": "前五手侧守壶", "shotIndex": 3, "board": [{"index": 1, "owner": "opponent", "x": 2.78, "y": 7.15}]},
+    {"id": "10_early_two_guards", "category": "前五手双守壶", "shotIndex": 4, "board": [{"index": 1, "owner": "opponent", "x": 2.375, "y": 7.55}, {"index": 3, "owner": "opponent", "x": 2.82, "y": 6.95}, {"index": 2, "owner": "self", "x": 2.10, "y": 5.05}]},
+    {"id": "11_sixth_throw_centre_takeout", "category": "第六手可清中线守壶", "shotIndex": 5, "board": [{"index": 1, "owner": "opponent", "x": 2.375, "y": 7.15}]},
+    {"id": "12_ten_stone_clutter", "category": "十壶复杂局面", "shotIndex": 12, "board": [{"index": 2, "owner": "self", "x": 1.82, "y": 7.00}, {"index": 1, "owner": "opponent", "x": 2.90, "y": 6.86}, {"index": 4, "owner": "self", "x": 2.02, "y": 6.18}, {"index": 3, "owner": "opponent", "x": 2.70, "y": 6.08}, {"index": 6, "owner": "self", "x": 1.88, "y": 5.32}, {"index": 5, "owner": "opponent", "x": 2.43, "y": 5.47}, {"index": 8, "owner": "self", "x": 2.96, "y": 5.25}, {"index": 7, "owner": "opponent", "x": 2.15, "y": 4.70}, {"index": 10, "owner": "self", "x": 2.66, "y": 4.60}, {"index": 9, "owner": "opponent", "x": 3.13, "y": 4.90}]}
+  ]
+}
