@@ -79,6 +79,7 @@ class StrictEvaluation:
     # 仅在 --first-player 生成的粗筛报告中填充；默认空列表以兼容历史报告和单测。
     tactical_scores: List[float] = field(default_factory=list)
     tactical_goal_met: List[bool] = field(default_factory=list)
+    active_final_positions: List[Tuple[float, float] | None] = field(default_factory=list)
 
     def to_json(self) -> dict:
         data = asdict(self)
@@ -239,6 +240,7 @@ def evaluate_one(
     own_in_house: List[int] = []
     tactical_scores: List[float] = []
     tactical_goal_met: List[bool] = []
+    active_final_positions: List[Tuple[float, float] | None] = []
     enemy_indices = {stone.index for stone in board if stone.owner == "opponent"}
     own_indices = {stone.index for stone in board if stone.owner == "self"}
     if not 0 <= int(active_index) < STONE_COUNT:
@@ -275,6 +277,10 @@ def evaluate_one(
             if bool(state["enabled"]) and (index == int(active_index) or index in enemy_indices or index in own_indices)
         }
         final_center_distances.append(final_distances)
+        active_state = states[int(active_index)]
+        active_final_positions.append(
+            (float(active_state["x"]), float(active_state["y"])) if bool(active_state.get("enabled", False)) else None
+        )
         own_in_house.append(sum(
             1 for index, distance in final_distances.items()
             if (index == int(active_index) or index in own_indices) and distance <= HOUSE_R + STONE_R
@@ -312,6 +318,7 @@ def evaluate_one(
         worst_score=min(scores),
         tactical_scores=tactical_scores,
         tactical_goal_met=tactical_goal_met,
+        active_final_positions=active_final_positions,
     )
 
 

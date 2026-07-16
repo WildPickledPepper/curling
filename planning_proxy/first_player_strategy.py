@@ -25,8 +25,11 @@ GUARD_TARGET = (HOUSE_X, 7.15)
 HOUSE_PAIR_LEFT = ((2.28, 4.70), (2.67, 5.18))
 HOUSE_PAIR_RIGHT = ((2.47, 4.70), (2.08, 5.18))
 # 第六/第七/第八颗用于保护直线入口的前方偏侧位置。
-FRONT_GUARD_LEFT = (1.86, 6.18)
-FRONT_GUARD_RIGHT = (2.89, 6.18)
+# 不是把“滚位”锁死到一个坐标。每侧给三个可接受的保护槽：靠前、靠中、
+# 靠内。它们共同的几何要求是：位于两颗红圈壶前方、偏侧，且不和两颗得分
+# 壶排成一条直线。严格层命中任一槽都可进入最终排序。
+FRONT_GUARD_LEFT = ((1.82, 6.42), (1.92, 6.12), (2.08, 5.92))
+FRONT_GUARD_RIGHT = ((2.93, 6.42), (2.83, 6.12), (2.67, 5.92))
 EDGE_DEAD_LEFT = (0.195, 0.435)
 EDGE_DEAD_RIGHT = (4.315, 4.555)
 
@@ -38,6 +41,46 @@ class StrategyStone:
     x: float
     y: float
     enabled: bool = True
+
+
+@dataclass(frozen=True)
+class DefenceShape:
+    """下一颗壶可尝试达成的一种防御球形。
+
+    ``active_targets`` 是本次出手壶的可接受终点集合；其余条件由场上既有壶
+    与这颗新壶共同检查。多个 shape 是“或”关系：严格物理只要稳定达成其中
+    一种，便可以作为候选解进入最终排序。
+    """
+
+    name: str
+    description: str
+    active_targets: tuple[tuple[float, float], ...]
+    required_inner_count: int
+    require_front_guard: bool = False
+
+    def to_json(self) -> dict:
+        return {
+            "name": self.name,
+            "description": self.description,
+            "active_targets": [list(point) for point in self.active_targets],
+            "required_inner_count": self.required_inner_count,
+            "require_front_guard": self.require_front_guard,
+        }
+
+    @classmethod
+    def from_json(cls, raw: Mapping[str, object]) -> "DefenceShape":
+        points = tuple(
+            (float(point[0]), float(point[1]))
+            for point in raw.get("active_targets", [])
+            if isinstance(point, (list, tuple)) and len(point) == 2
+        )
+        return cls(
+            name=str(raw["name"]),
+            description=str(raw["description"]),
+            active_targets=points,
+            required_inner_count=int(raw["required_inner_count"]),
+            require_front_guard=bool(raw.get("require_front_guard", False)),
+        )
 
 
 @dataclass(frozen=True)
@@ -55,10 +98,12 @@ class FirstPlayerPlan:
     target_opponent_index: int | None
     opponent_action: str
     rationale: str
+    defence_shapes: tuple[DefenceShape, ...] = ()
 
     def to_json(self) -> dict:
         result = asdict(self)
         result["target_points"] = [list(point) for point in self.target_points]
+        result["defence_shapes"] = [shape.to_json() for shape in self.defence_shapes]
         return result
 
     @classmethod
@@ -72,6 +117,7 @@ class FirstPlayerPlan:
             target_opponent_index=None if raw.get("target_opponent_index") is None else int(raw["target_opponent_index"]),
             opponent_action=str(raw["opponent_action"]),
             rationale=str(raw["rationale"]),
+            defence_shapes=tuple(DefenceShape.from_json(shape) for shape in raw.get("defence_shapes", []) if isinstance(shape, Mapping)),
         )
 
 
@@ -109,7 +155,7 @@ def _target_pair(stones: Sequence[StrategyStone]) -> tuple[tuple[float, float], 
     return HOUSE_PAIR_RIGHT if left_pressure > right_pressure else HOUSE_PAIR_LEFT
 
 
-def _front_guard_target(stones: Sequence[StrategyStone]) -> tuple[float, float]:
+def _front_guard_targets(stones: Sequence[StrategyStone]) -> tuple[tuple[float, float], ...]:
     """保护壶落在与主要得分壶相反的一侧，避免三个己方壶排成一线。"""
 
     own_house = [stone for stone in stones if stone.owner == "self" and is_in_inner_ring(stone)]
@@ -117,6 +163,102 @@ def _front_guard_target(stones: Sequence[StrategyStone]) -> tuple[float, float]:
         mean_x = sum(stone.x for stone in own_house) / len(own_house)
         return FRONT_GUARD_RIGHT if mean_x <= HOUSE_X else FRONT_GUARD_LEFT
     return FRONT_GUARD_LEFT
+
+
+def _unique_points(*groups: Sequence[tuple[float, float]]) -> tuple[tuple[float, float], ...]:
+    """合并候选落点，同时保持声明这些落点时的优先顺序。"""
+
+    result: list[tuple[float, float]] = []
+    for group in groups:
+        for point in group:
+            if point not in result:
+                result.append(point)
+    return tuple(result)
+
+
+def _defence_shapes(stones: Sequence[StrategyStone]) -> tuple[DefenceShape, ...]:
+    """按己方当前在场壶数，给第六至第八颗生成可替代的防御球形。
+
+    这些不是必须依次完成的待办项，而是交给搜索器的“或”目标。比如已经有
+    两颗己方壶时，搜索器可以尝试补左侧三角、补右侧三角，或补第三颗错层
+    红圈壶；严格 PhysX 中任一形状稳定成立即可通过战术检查。
+    """
+
+    own_count = sum(stone.owner == "self" and not is_edge_dead(stone) for stone in stones)
+    pair = _target_pair(stones)
+
+    if own_count <= 1:
+        return (
+            DefenceShape(
+                "单壶_双红圈错层",
+                "已有的一颗与新壶分别占红圈两侧，形成前后、左右错开的两颗得分壶。",
+                pair,
+                required_inner_count=2,
+            ),
+            DefenceShape(
+                "单壶_左侧护门",
+                "保留已有内圈锚点，新壶落在左前方偏侧，堵住一条直线击打入口。",
+                FRONT_GUARD_LEFT,
+                required_inner_count=1,
+                require_front_guard=True,
+            ),
+            DefenceShape(
+                "单壶_右侧护门",
+                "保留已有内圈锚点，新壶落在右前方偏侧，堵住另一侧直线击打入口。",
+                FRONT_GUARD_RIGHT,
+                required_inner_count=1,
+                require_front_guard=True,
+            ),
+        )
+
+    if own_count == 2:
+        return (
+            DefenceShape(
+                "双壶_左侧三角",
+                "两颗已有壶作为底，第三颗落左前方，形成左偏的防御三角。",
+                FRONT_GUARD_LEFT,
+                required_inner_count=1,
+                require_front_guard=True,
+            ),
+            DefenceShape(
+                "双壶_右侧三角",
+                "两颗已有壶作为底，第三颗落右前方，形成右偏的防御三角。",
+                FRONT_GUARD_RIGHT,
+                required_inner_count=1,
+                require_front_guard=True,
+            ),
+            DefenceShape(
+                "双壶_第三红圈错层",
+                "不在中心堆壶，而是在红圈另一侧补第三颗错层得分壶。",
+                pair,
+                required_inner_count=3,
+            ),
+        )
+
+    # 三颗及以上时不再执着于把壶都堆到中心。优先补左右任一侧的外壳；
+    # 只有本来已有良好保护层时，才允许把新壶作为红圈内的后备得分壶。
+    return (
+        DefenceShape(
+            "三壶以上_左侧外壳",
+            "在既有壶群左前方补保护壶，保持侧向通道被遮挡。",
+            FRONT_GUARD_LEFT,
+            required_inner_count=2,
+            require_front_guard=True,
+        ),
+        DefenceShape(
+            "三壶以上_右侧外壳",
+            "在既有壶群右前方补保护壶，保持另一侧通道被遮挡。",
+            FRONT_GUARD_RIGHT,
+            required_inner_count=2,
+            require_front_guard=True,
+        ),
+        DefenceShape(
+            "三壶以上_红圈后备",
+            "在不碰撞聚堆的前提下补一颗错层红圈壶，给最终计分留下后备。",
+            pair,
+            required_inner_count=3,
+        ),
+    )
 
 
 def _priority_opponent(stones: Sequence[StrategyStone]) -> StrategyStone | None:
@@ -193,29 +335,46 @@ def plan_first_player_turn(board: Iterable[object], shot_index: int) -> FirstPla
         return FirstPlayerPlan(int(shot_index), own_throw, "complete_staggered_house_pair", (pair[1],), target.index if target and opponent_action != "avoid_protected_centre_guard" else None, opponent_action, "保护期的最后一颗：优先补第二红圈壶，并与第一颗前后、左右错开；只有明显敌方得分威胁才顺带处理。")
 
     if own_throw in (4, 5):
-        if target is not None and is_in_inner_ring(target):
-            return FirstPlayerPlan(int(shot_index), own_throw, "reclaim_centre_or_clear_threat", (pair[0], pair[1]), target.index, "physical_clear", "对方已占红圈：能稳定清出则清出；否则先投得比它更靠中心。")
+        if target is not None:
+            return FirstPlayerPlan(int(shot_index), own_throw, "reclaim_centre_or_clear_threat", (pair[0], pair[1]), target.index, "physical_clear", "保护期结束后，先处理对方上一颗仍有效的壶；若它已占红圈，则优先清出或重新取得最近壶。")
         if _own_inner_count(stones) < 2:
             return FirstPlayerPlan(int(shot_index), own_throw, "restore_second_scoring_stone", (pair[1],), None, "none", "己方红圈壶不足两颗，补另一侧得分层，不把壶堆在同一条直线上。")
         return FirstPlayerPlan(int(shot_index), own_throw, "maintain_centre_advantage", (pair[0],), None, "none", "当前中心层仍完整；用更靠中心或轻微错层的壶维持优势。")
 
+    # 从第六颗开始，不再把滚位锁成一个固定点。根据己方现有 1/2/3 颗在场壶
+    # 提供多个阵型；这些阵型是替代解，粗筛和严格 PhysX 都会把它们一起搜索。
+    defence_shapes = _defence_shapes(stones)
+    defence_targets = _unique_points(*(shape.active_targets for shape in defence_shapes))
     if own_throw == 6:
-        return FirstPlayerPlan(int(shot_index), own_throw, "sixth_hit_and_roll_defence", (_front_guard_target(stones),), target.index if target else None, "physical_clear" if target else "none", "第六颗先处理对方第五颗，再让出手壶滚到前方偏侧保护位，形成防御三角。")
+        return FirstPlayerPlan(
+            int(shot_index), own_throw, "sixth_clear_and_choose_defence_shape", defence_targets,
+            target.index if target else None, "physical_clear" if target else "none",
+            "第六颗先处理对方第五颗；随后在当前壶数对应的多个防御形中任选一个稳定完成，而不是死守单一滚位。",
+            defence_shapes,
+        )
 
-    # 第七、第八颗：不贪清场，而是按“最近壶、第二红圈壶、前方保护壶”的顺序修复。
-    if not _self_is_closest(stones):
-        return FirstPlayerPlan(int(shot_index), own_throw, "repair_closest_scoring_anchor", (pair[0],), target.index if target and is_in_inner_ring(target) else None, "physical_clear" if target and is_in_inner_ring(target) else "none", "对方已抢到最近壶；先重新取得最近壶，不能为了清无关壶放弃计分锚点。")
-    if _own_inner_count(stones) < 2:
-        return FirstPlayerPlan(int(shot_index), own_throw, "repair_second_inner_stone", (pair[1],), None, "none", "最近壶仍在，但第二红圈层被拆；在另一侧补回，避免一杆连锁双清。")
-    if not _has_front_guard(stones):
-        return FirstPlayerPlan(int(shot_index), own_throw, "repair_front_protector", (_front_guard_target(stones),), None, "none", "两颗得分壶仍在，但前方保护层缺失；优先堵住对方最后的直线击打。")
-    return FirstPlayerPlan(int(shot_index), own_throw, "reinforce_final_defence", (_front_guard_target(stones),), target.index if target and is_in_inner_ring(target) else None, "physical_clear" if target and is_in_inner_ring(target) else "none", "三层仍完整；第八颗只加固最容易被直线击打的一侧，不为边缘废球浪费机会。")
+    # 第七、第八颗：上一颗对方有效壶仍是首先处理的对象；击打后的滚位由
+    # “当前壶数对应的多个防御形”决定，而不是按一个固定坐标修补。
+    target_index = target.index if target is not None else None
+    target_action = "physical_clear" if target is not None else "none"
+    return FirstPlayerPlan(
+        int(shot_index), own_throw, "clear_then_choose_defence_shape", defence_targets,
+        target_index, target_action,
+        "先处理对方上一颗有效壶；再从与当前己方壶数匹配的多个防御形中，选择严格物理下最稳的一种。",
+        defence_shapes,
+    )
 
 
 def tactical_coarse_score(stop_x: float, stop_y: float, first_hit_index: int, base_score: float, plan: FirstPlayerPlan) -> float:
     """给粗筛的轻量加分；严格 PhysX 仍负责真正的碰撞与终局排序。"""
 
-    score = float(base_score)
+    # 旧粗筛天生偏好“首撞敌方”。第七/八颗若只是补保护壶或红圈层，继续
+    # 沿用它会把一条无意义的清外圈路线排在防守落点之前，因此此类回合改为
+    # 纯落点优先并显式惩罚先撞任何已有壶。
+    if plan.opponent_action == "none":
+        score = -120.0 if int(first_hit_index) >= 0 else 0.0
+    else:
+        score = float(base_score)
     if plan.target_opponent_index is not None and int(first_hit_index) == plan.target_opponent_index:
         score += 250.0
     if plan.target_points:
@@ -264,16 +423,32 @@ def score_strict_outcome(
             target_ok = target is not None and is_edge_dead(target)
 
     landing_ok = not plan.target_points or (active is not None and landing_error <= 0.70)
-    if plan.phase == "open_centre_guard":
+
+    # 第六至第八颗的多个防御形是“或”关系。每一个都要求本次出手壶靠近
+    # 它自己的落点槽，且场面满足它声明的内圈数/保护层条件。
+    def shape_is_met(shape: DefenceShape) -> bool:
+        if active is None or not shape.active_targets:
+            return False
+        shape_landing_error = min(math.hypot(active.x - point[0], active.y - point[1]) for point in shape.active_targets)
+        return (
+            shape_landing_error <= 0.70
+            and own_inner >= shape.required_inner_count
+            and (not shape.require_front_guard or guard_present)
+        )
+
+    shapes_met = tuple(shape.name for shape in plan.defence_shapes if shape_is_met(shape))
+    if plan.defence_shapes:
+        goal_met = target_ok and bool(shapes_met)
+    elif plan.phase == "open_centre_guard":
         goal_met = landing_ok
-    elif plan.phase in {"process_first_enemy_and_score", "sixth_hit_and_roll_defence"}:
+    elif plan.phase == "process_first_enemy_and_score":
         goal_met = target_ok and landing_ok
-    elif plan.phase in {"repair_closest_scoring_anchor", "reclaim_centre_or_clear_threat"}:
-        goal_met = own_closest and landing_ok
-    elif plan.phase in {"repair_second_inner_stone", "restore_second_scoring_stone", "complete_staggered_house_pair"}:
-        goal_met = own_inner >= 2 and landing_ok
-    elif plan.phase in {"repair_front_protector", "reinforce_final_defence"}:
-        goal_met = own_closest and own_inner >= 2 and guard_present and landing_ok
+    elif plan.phase in {"clear_then_repair_closest_scoring_anchor", "reclaim_centre_or_clear_threat"}:
+        goal_met = target_ok and own_closest and landing_ok
+    elif plan.phase in {"clear_then_repair_second_inner_stone", "restore_second_scoring_stone", "complete_staggered_house_pair"}:
+        goal_met = target_ok and own_inner >= 2 and landing_ok
+    elif plan.phase in {"clear_then_repair_front_protector", "clear_then_reinforce_final_defence"}:
+        goal_met = target_ok and own_closest and own_inner >= 2 and guard_present and landing_ok
     else:
         goal_met = landing_ok
 
@@ -282,6 +457,7 @@ def score_strict_outcome(
     score += 120.0 if own_closest else -120.0
     score += 55.0 * min(2, own_inner)
     score += 45.0 if guard_present else 0.0
+    score += 65.0 if shapes_met else 0.0
     if math.isfinite(landing_error):
         score -= 70.0 * landing_error
     else:

@@ -38,7 +38,11 @@ class FirstPlayerStrategyTests(unittest.TestCase):
             stone(3, "opponent", 1.20, 8.0),
         ]
         plan = plan_first_player_turn(board, 12)
-        self.assertEqual(plan.phase, "repair_front_protector")
+        self.assertEqual(plan.phase, "clear_then_choose_defence_shape")
+        self.assertEqual(plan.target_opponent_index, 3)
+        self.assertEqual(plan.opponent_action, "physical_clear")
+        self.assertEqual({shape.name for shape in plan.defence_shapes}, {"双壶_左侧三角", "双壶_右侧三角", "双壶_第三红圈错层"})
+        self.assertGreaterEqual(len(plan.target_points), 8)
 
     def test_eighth_throw_reclaims_centre_before_everything_else(self):
         board = [
@@ -47,7 +51,46 @@ class FirstPlayerStrategyTests(unittest.TestCase):
             stone(3, "opponent", 2.375, 4.88),
         ]
         plan = plan_first_player_turn(board, 14)
-        self.assertEqual(plan.phase, "repair_closest_scoring_anchor")
+        self.assertEqual(plan.phase, "clear_then_choose_defence_shape")
+        self.assertEqual({shape.name for shape in plan.defence_shapes}, {"双壶_左侧三角", "双壶_右侧三角", "双壶_第三红圈错层"})
+
+    def test_defence_shapes_change_with_own_stone_count(self):
+        one_own = plan_first_player_turn([stone(1, "self", 2.28, 4.70)], 10)
+        two_own = plan_first_player_turn([
+            stone(1, "self", 2.28, 4.70),
+            stone(2, "self", 2.67, 5.18),
+        ], 10)
+        three_own = plan_first_player_turn([
+            stone(1, "self", 2.28, 4.70),
+            stone(2, "self", 2.67, 5.18),
+            stone(3, "self", 1.92, 6.12),
+        ], 10)
+        self.assertEqual({shape.name for shape in one_own.defence_shapes}, {"单壶_双红圈错层", "单壶_左侧护门", "单壶_右侧护门"})
+        self.assertEqual({shape.name for shape in two_own.defence_shapes}, {"双壶_左侧三角", "双壶_右侧三角", "双壶_第三红圈错层"})
+        self.assertEqual({shape.name for shape in three_own.defence_shapes}, {"三壶以上_左侧外壳", "三壶以上_右侧外壳", "三壶以上_红圈后备"})
+
+    def test_any_one_defence_shape_is_an_acceptable_strict_goal(self):
+        board = [
+            stone(1, "self", 2.28, 4.70),
+            stone(2, "self", 2.67, 5.18),
+            stone(3, "opponent", 1.20, 8.0),
+        ]
+        plan = plan_first_player_turn(board, 12)
+        # 对手 3 已被清出；出手壶落入左侧三角的其中一个保护槽。
+        score, goal = score_strict_outcome(
+            [
+                {"enabled": True, "x": 2.28, "y": 4.70},
+                {"enabled": True, "x": 2.67, "y": 5.18},
+                {"enabled": False, "x": 0.0, "y": 0.0},
+                {"enabled": False, "x": 0.0, "y": 0.0},
+                {"enabled": True, "x": 1.92, "y": 6.12},
+            ],
+            board,
+            4,
+            plan,
+        )
+        self.assertTrue(goal)
+        self.assertGreater(score, 0.0)
 
     def test_edge_dead_band_is_explicit(self):
         self.assertTrue(is_edge_dead(StrategyStone(1, "opponent", sum(EDGE_DEAD_RIGHT) / 2.0, 7.0)))
