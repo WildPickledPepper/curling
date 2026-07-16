@@ -19,6 +19,34 @@
 
 `extracted_text/` 是完整图册的文本层。它包含每手显示的 `Draw`、`Guard`、`Take-out`、`Hit and Roll`、`Raise`、`Clearing` 等记录，便于先筛选，再回看对应的壶位图。
 
+## 坐标提取
+
+`extract_stone_coordinates.py` 直接从 PDF 里取出每个小盘面的内嵌图，不对整页做 OCR。
+一页是一个 End，通常有 16 个小盘面；每个小盘面是一次投壶结束后的场上状态。
+
+- 实心红、黄圆：当前仍在场的壶；
+- 空心红、黄圆，或带蓝色叉号的红、黄圆：前一位置或出界标记，**不算在场壶**；
+- 小盘面最上、最下边缘的成排小壶：尚未投出的计数，**不算在场壶**；
+- 壶中心贴近上方 back line 仍视为在场；代码只剔除顶边未投壶计数，不把 back-line 壶误删。
+
+代码不会只看颜色：必须是实心圆面积占自身包围框至少 50% 的色块；这会剔除内部白色、只画外圈的“上一位置残影”。
+- 官方图册的 End 视角上下交替：壶在上方的页直接读取，壶在下方的页先作 **180° 旋转**；
+  所有输出最终都统一为“壶在上方”的坐标系。原点是按钮，`+x` 向统一视角右侧，`+y` 向前方守壶/起滑线方向；单位为米。
+
+运行：
+
+```powershell
+python training_data\gushue_shotbook\extract_stone_coordinates.py
+```
+
+输出在 `coordinates/gushue_stone_states.jsonl`：一行是一手后的完整壶面，保留来源比赛、End、手数、红黄队伍、原始 PDF 页码和每颗壶的图像/米制坐标。`coordinates/extraction_audit.json` 给出总数和过滤规则。
+
+每一手还会检查“活壶数相对上一手不能净增超过一颗”。少数图例相互贴近、难以自动区分的状态不删除，但会标成 `quality_status=needs_manual_review`，并写入 `coordinates/manual_review_states.json`。自动归纳战术树时只使用 `auto_pass` 状态。
+
+还可运行 `python training_data\gushue_shotbook\render_coordinate_qa.py` 生成原图叠图抽检页：绿色十字必须落在每颗被保留的实心壶中心，不能落在空心残影或蓝叉壶上。
+
+该坐标系是“统一后的官方图表坐标系”，尚未硬绑定本项目 PhysX 的场地原点；策略层可以直接用相对按钮的壶型，真正调用 PhysX 时再由适配层统一转换。
+
 ## 重新生成索引和单场文件
 
 在 `DCCourse` 根目录执行：

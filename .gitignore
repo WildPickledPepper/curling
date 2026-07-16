@@ -59,6 +59,8 @@ training_research/benchmarks/runs/
 training_data/gushue_shotbook/source_results_books/
 training_data/gushue_shotbook/extracted_text/
 training_data/gushue_shotbook/gushue_games/
+training_data/gushue_shotbook/diagnostics/
+training_data/gushue_shotbook/coordinates/
 
 # Local submission probes and transferred packages.  Source versions that are
 # intentionally kept live elsewhere are tracked independently.
