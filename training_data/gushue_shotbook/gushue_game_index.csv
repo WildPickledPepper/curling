@@ -1,0 +1,44 @@
+event_year,game_sequence_in_book,phase,opponent_code,source_book,source_page_start,source_page_end,shot_chart_pages,gushue_game_pdf
+2022,1,Gold Medal Game,SWE,source_results_books/WMCC2022_ResultsBook.pdf,9,18,10,gushue_games/wmcc_2022_01_vs_SWE_pages_9-18.pdf
+2022,2,Unclassified,USA,source_results_books/WMCC2022_ResultsBook.pdf,38,47,10,gushue_games/wmcc_2022_02_vs_USA_pages_38-47.pdf
+2022,3,Session 20,DEN,source_results_books/WMCC2022_ResultsBook.pdf,134,139,6,gushue_games/wmcc_2022_03_vs_DEN_pages_134-139.pdf
+2022,4,Session 18,SCO,source_results_books/WMCC2022_ResultsBook.pdf,202,211,10,gushue_games/wmcc_2022_04_vs_SCO_pages_202-211.pdf
+2022,5,Session 17,KOR,source_results_books/WMCC2022_ResultsBook.pdf,233,238,6,gushue_games/wmcc_2022_05_vs_KOR_pages_233-238.pdf
+2022,6,Session 15,USA,source_results_books/WMCC2022_ResultsBook.pdf,305,313,9,gushue_games/wmcc_2022_06_vs_USA_pages_305-313.pdf
+2022,7,Session 14,FIN,source_results_books/WMCC2022_ResultsBook.pdf,368,376,9,gushue_games/wmcc_2022_07_vs_FIN_pages_368-376.pdf
+2022,8,Session 12,SWE,source_results_books/WMCC2022_ResultsBook.pdf,462,471,10,gushue_games/wmcc_2022_08_vs_SWE_pages_462-471.pdf
+2022,9,Session 10,GER,source_results_books/WMCC2022_ResultsBook.pdf,522,530,9,gushue_games/wmcc_2022_09_vs_GER_pages_522-530.pdf
+2022,10,Session 7,ITA,source_results_books/WMCC2022_ResultsBook.pdf,644,651,8,gushue_games/wmcc_2022_10_vs_ITA_pages_644-651.pdf
+2022,11,Session 5,SUI,source_results_books/WMCC2022_ResultsBook.pdf,728,736,9,gushue_games/wmcc_2022_11_vs_SUI_pages_728-736.pdf
+2022,12,Session 4,NED,source_results_books/WMCC2022_ResultsBook.pdf,762,771,10,gushue_games/wmcc_2022_12_vs_NED_pages_762-771.pdf
+2022,13,Session 2,NOR,source_results_books/WMCC2022_ResultsBook.pdf,839,848,10,gushue_games/wmcc_2022_13_vs_NOR_pages_839-848.pdf
+2022,14,Session 1,CZE,source_results_books/WMCC2022_ResultsBook.pdf,871,880,10,gushue_games/wmcc_2022_14_vs_CZE_pages_871-880.pdf
+2023,1,Gold Medal Game,SCO,source_results_books/WMCC2023_ResultsBook.pdf,9,16,8,gushue_games/wmcc_2023_01_vs_SCO_pages_9-16.pdf
+2023,2,Unclassified,SUI,source_results_books/WMCC2023_ResultsBook.pdf,36,45,10,gushue_games/wmcc_2023_02_vs_SUI_pages_36-45.pdf
+2023,3,Unclassified,SWE,source_results_books/WMCC2023_ResultsBook.pdf,70,77,8,gushue_games/wmcc_2023_03_vs_SWE_pages_70-77.pdf
+2023,4,Session 20,SWE,source_results_books/WMCC2023_ResultsBook.pdf,131,138,8,gushue_games/wmcc_2023_04_vs_SWE_pages_131-138.pdf
+2023,5,Session 18,TUR,source_results_books/WMCC2023_ResultsBook.pdf,200,207,8,gushue_games/wmcc_2023_05_vs_TUR_pages_200-207.pdf
+2023,6,Session 17,SCO,source_results_books/WMCC2023_ResultsBook.pdf,228,237,10,gushue_games/wmcc_2023_06_vs_SCO_pages_228-237.pdf
+2023,7,Session 15,GER,source_results_books/WMCC2023_ResultsBook.pdf,302,310,9,gushue_games/wmcc_2023_07_vs_GER_pages_302-310.pdf
+2023,8,Session 14,USA,source_results_books/WMCC2023_ResultsBook.pdf,359,367,9,gushue_games/wmcc_2023_08_vs_USA_pages_359-367.pdf
+2023,9,Session 12,KOR,source_results_books/WMCC2023_ResultsBook.pdf,444,451,8,gushue_games/wmcc_2023_09_vs_KOR_pages_444-451.pdf
+2023,10,Session 10,CZE,source_results_books/WMCC2023_ResultsBook.pdf,505,512,8,gushue_games/wmcc_2023_10_vs_CZE_pages_505-512.pdf
+2023,11,Session 7,JPN,source_results_books/WMCC2023_ResultsBook.pdf,620,629,10,gushue_games/wmcc_2023_11_vs_JPN_pages_620-629.pdf
+2023,12,Session 5,NOR,source_results_books/WMCC2023_ResultsBook.pdf,707,716,10,gushue_games/wmcc_2023_12_vs_NOR_pages_707-716.pdf
+2023,13,Session 4,NZL,source_results_books/WMCC2023_ResultsBook.pdf,739,745,7,gushue_games/wmcc_2023_13_vs_NZL_pages_739-745.pdf
+2023,14,Session 2,ITA,source_results_books/WMCC2023_ResultsBook.pdf,807,815,9,gushue_games/wmcc_2023_14_vs_ITA_pages_807-815.pdf
+2023,15,Session 1,SUI,source_results_books/WMCC2023_ResultsBook.pdf,837,844,8,gushue_games/wmcc_2023_15_vs_SUI_pages_837-844.pdf
+2024,1,Gold Medal Game,SWE,source_results_books/WMCC2024_ResultsBook.pdf,9,18,10,gushue_games/wmcc_2024_01_vs_SWE_pages_9-18.pdf
+2024,2,Unclassified,SCO,source_results_books/WMCC2024_ResultsBook.pdf,52,59,8,gushue_games/wmcc_2024_02_vs_SCO_pages_52-59.pdf
+2024,3,Session 20,SUI,source_results_books/WMCC2024_ResultsBook.pdf,121,126,6,gushue_games/wmcc_2024_03_vs_SUI_pages_121-126.pdf
+2024,4,Session 19,JPN,source_results_books/WMCC2024_ResultsBook.pdf,151,156,6,gushue_games/wmcc_2024_04_vs_JPN_pages_151-156.pdf
+2024,5,Session 17,SWE,source_results_books/WMCC2024_ResultsBook.pdf,225,234,10,gushue_games/wmcc_2024_05_vs_SWE_pages_225-234.pdf
+2024,6,Session 15,NOR,source_results_books/WMCC2024_ResultsBook.pdf,347,356,10,gushue_games/wmcc_2024_06_vs_NOR_pages_347-356.pdf
+2024,7,Session 14,KOR,source_results_books/WMCC2024_ResultsBook.pdf,369,378,10,gushue_games/wmcc_2024_07_vs_KOR_pages_369-378.pdf
+2024,8,Session 12,NED,source_results_books/WMCC2024_ResultsBook.pdf,463,472,10,gushue_games/wmcc_2024_08_vs_NED_pages_463-472.pdf
+2024,9,Session 11,USA,source_results_books/WMCC2024_ResultsBook.pdf,486,491,6,gushue_games/wmcc_2024_09_vs_USA_pages_486-491.pdf
+2024,10,Session 9,NZL,source_results_books/WMCC2024_ResultsBook.pdf,592,600,9,gushue_games/wmcc_2024_10_vs_NZL_pages_592-600.pdf
+2024,11,Session 7,ITA,source_results_books/WMCC2024_ResultsBook.pdf,660,670,11,gushue_games/wmcc_2024_11_vs_ITA_pages_660-670.pdf
+2024,12,Session 4,SCO,source_results_books/WMCC2024_ResultsBook.pdf,776,784,9,gushue_games/wmcc_2024_12_vs_SCO_pages_776-784.pdf
+2024,13,Session 2,GER,source_results_books/WMCC2024_ResultsBook.pdf,870,879,10,gushue_games/wmcc_2024_13_vs_GER_pages_870-879.pdf
+2024,14,Session 1,CZE,source_results_books/WMCC2024_ResultsBook.pdf,890,900,11,gushue_games/wmcc_2024_14_vs_CZE_pages_890-900.pdf

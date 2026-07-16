@@ -53,6 +53,13 @@ planning_proxy/runs/
 training_research/runs/
 training_research/benchmarks/runs/
 
+# Downloaded World Curling results books and derived page extracts are local
+# research evidence (~150 MB). Keep the reproducible extractor, README and
+# small game index under training_data/gushue_shotbook/ in Git instead.
+training_data/gushue_shotbook/source_results_books/
+training_data/gushue_shotbook/extracted_text/
+training_data/gushue_shotbook/gushue_games/
+
 # Local submission probes and transferred packages.  Source versions that are
 # intentionally kept live elsewhere are tracked independently.
 /*.zip
