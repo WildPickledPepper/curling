@@ -1,0 +1,472 @@
+{
+  "schema": "planning_proxy_draw_recall_benchmark_v0",
+  "dataset": "planning_proxy\\solver_benchmark\\actual_fallback_restore_draw_v1.json",
+  "decision_budget_seconds": 105.0,
+  "sample_count": 7,
+  "solved_count": 7,
+  "recall": 1.0,
+  "rows": [
+    {
+      "id": "实战回退净空_v1_000",
+      "found": true,
+      "elapsed_seconds": 5.634337800000001,
+      "bestshot": [
+        3.080000162124634,
+        -1.2200000286102295,
+        6.4285712242126465
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 769,
+        "maxLandingErrorM": 0.2226071728927886,
+        "meanLandingErrorM": 0.20499094437490784,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2226071728927886,
+            "active_final": [
+              2.101207733154297,
+              4.361730112792969
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2141818744502343,
+            "active_final": [
+              2.1004600524902344,
+              4.370839609863282
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.17818378578170052,
+            "active_final": [
+              2.09930419921875,
+              4.412053599121094
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_001",
+      "found": true,
+      "elapsed_seconds": 5.58894,
+      "bestshot": [
+        3.080000162124634,
+        -1.2200000286102295,
+        6.4285712242126465
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 768,
+        "maxLandingErrorM": 0.23160173694254202,
+        "meanLandingErrorM": 0.21275339714515953,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 21074696,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.19533189899379502,
+            "active_final": [
+              2.0997352600097656,
+              4.392049326660157
+            ]
+          },
+          {
+            "physics_seed": 21179425,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2113265554991416,
+            "active_final": [
+              2.0979843139648438,
+              4.372762217285157
+            ]
+          },
+          {
+            "physics_seed": 21284154,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.23160173694254205,
+            "active_final": [
+              2.099590301513672,
+              4.3509040019531255
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_002",
+      "found": true,
+      "elapsed_seconds": 5.7403520000000015,
+      "bestshot": [
+        3.080000162124634,
+        -1.4200000762939453,
+        7.628571033477783
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 777,
+        "maxLandingErrorM": 0.12174046314271793,
+        "meanLandingErrorM": 0.10455050184990484,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.09045721253764949,
+            "active_final": [
+              2.0674476623535156,
+              4.499722971679688
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.12174046314271793,
+            "active_final": [
+              2.067657470703125,
+              4.458791270019532
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.10145382986934712,
+            "active_final": [
+              2.0720977783203125,
+              4.488622202636719
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_003",
+      "found": true,
+      "elapsed_seconds": 6.8312297000000015,
+      "bestshot": [
+        3.080000162124634,
+        -1.4399999380111694,
+        7.371428489685059
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1081,
+        "maxLandingErrorM": 0.13221380904388172,
+        "meanLandingErrorM": 0.11114470583721851,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 21074696,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.09134283643980641,
+            "active_final": [
+              2.0155982971191406,
+              4.469998850585938
+            ]
+          },
+          {
+            "physics_seed": 21179425,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.10987747202796742,
+            "active_final": [
+              2.0133209228515625,
+              4.450932993652344
+            ]
+          },
+          {
+            "physics_seed": 21284154,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.13221380904388172,
+            "active_final": [
+              2.0153961181640625,
+              4.428685679199219
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_004",
+      "found": true,
+      "elapsed_seconds": 5.990854299999999,
+      "bestshot": [
+        3.080000162124634,
+        -1.2200000286102295,
+        6.4285712242126465
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 761,
+        "maxLandingErrorM": 0.26167899853829213,
+        "meanLandingErrorM": 0.21129909969576924,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.17461577725319574,
+            "active_final": [
+              2.094928741455078,
+              4.413442148925782
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2616789985382922,
+            "active_final": [
+              2.1048240661621094,
+              4.3202338359375005
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.19760252329581987,
+            "active_final": [
+              2.1012649536132812,
+              4.390317454101563
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_005",
+      "found": true,
+      "elapsed_seconds": 6.3860395000000025,
+      "bestshot": [
+        3.080000162124634,
+        -1.2200000286102295,
+        6.4285712242126465
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 760,
+        "maxLandingErrorM": 0.26167899853829213,
+        "meanLandingErrorM": 0.21129909969576924,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.17461577725319574,
+            "active_final": [
+              2.094928741455078,
+              4.413442148925782
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2616789985382922,
+            "active_final": [
+              2.1048240661621094,
+              4.3202338359375005
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.19760252329581987,
+            "active_final": [
+              2.1012649536132812,
+              4.390317454101563
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "实战回退净空_v1_006",
+      "found": true,
+      "elapsed_seconds": 6.898171300000001,
+      "bestshot": [
+        3.080000162124634,
+        -1.4399999380111694,
+        7.371428489685059
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1078,
+        "maxLandingErrorM": 0.16313047018492222,
+        "meanLandingErrorM": 0.10846419930604063,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.06824256484802553,
+            "active_final": [
+              2.009765625,
+              4.492459788085938
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.16313047018492222,
+            "active_final": [
+              2.021076202392578,
+              4.3982367656250005
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.09401956288517414,
+            "active_final": [
+              2.0171890258789062,
+              4.467565073730469
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

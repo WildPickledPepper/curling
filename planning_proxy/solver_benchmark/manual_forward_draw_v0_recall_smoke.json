@@ -1,0 +1,76 @@
+{
+  "schema": "planning_proxy_draw_recall_benchmark_v0",
+  "dataset": "D:\\Desktop\\冰壶\\DCCourse\\planning_proxy\\solver_benchmark\\manual_forward_draw_v0.json",
+  "decision_budget_seconds": 105.0,
+  "sample_count": 1,
+  "solved_count": 1,
+  "recall": 1.0,
+  "rows": [
+    {
+      "id": "手工正向净空_v0_0000",
+      "found": true,
+      "elapsed_seconds": 5.3855759999999995,
+      "bestshot": [
+        3.080000162124634,
+        2.2300000190734863,
+        -7.371428489685059
+      ],
+      "solver_detail": {
+        "target": [
+          3.4993934631347656,
+          4.455085927408855
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1190,
+        "maxLandingErrorM": 0.036549866691631405,
+        "meanLandingErrorM": 0.02832361636547517,
+        "preferredPrecisionMet": true,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 20260720,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.036549866691631405,
+            "active_final": [
+              3.477680206298828,
+              4.484487070800782
+            ]
+          },
+          {
+            "physics_seed": 20365449,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.023774395249726212,
+            "active_final": [
+              3.480518341064453,
+              4.469541086914063
+            ]
+          },
+          {
+            "physics_seed": 20470178,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.024646587155067887,
+            "active_final": [
+              3.4747695922851562,
+              4.456143870117188
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

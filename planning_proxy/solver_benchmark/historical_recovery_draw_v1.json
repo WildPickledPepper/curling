@@ -1,0 +1,3387 @@
+{
+  "schema": "planning_proxy_historical_recovery_draw_set_v1",
+  "scope": "历史真实壶面；曾安全回退、后来找到解的同类绕行盘面；固定输入正向复验",
+  "sample_count": 8,
+  "samples": [
+    {
+      "id": "历史K2_中线守壶绕行_20260720",
+      "category": "受保护中线守壶后的第一红圈锚绕行",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl:3",
+        "shot": 3,
+        "earlier_fallback_replay": "planning_proxy/runs/ppo_k1k8_k8_connected_acceptance_seed20260720.jsonl",
+        "board_source": "planning_proxy/runs/ppo_k1k8_k8_connected_acceptance_seed20260720.jsonl",
+        "centreline_mirrored": false
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.37542724609375,
+          "y": 7.154050364257813,
+          "yaw": -1.3447864694148353,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20276558,
+          20381287,
+          20486016
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20276558,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22227178350361207,
+            "active_final": [
+              1.7665634155273438,
+              4.566556467773438
+            ]
+          },
+          {
+            "physics_seed": 20381287,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2028175421159725,
+            "active_final": [
+              1.763275146484375,
+              4.602452769042969
+            ]
+          },
+          {
+            "physics_seed": 20486016,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.26523851363022544,
+            "active_final": [
+              1.7736587524414062,
+              4.5022101542968755
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22227178350361207,
+              "active_final": [
+                1.7665634155273438,
+                4.566556467773438
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2028175421159725,
+              "active_final": [
+                1.763275146484375,
+                4.602452769042969
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.26523851363022544,
+              "active_final": [
+                1.7736587524414062,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.587881801452311,
+              "active_final": [
+                1.7226448059082031,
+                5.264340891601563
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6211215595105417,
+              "active_final": [
+                1.7194023132324219,
+                5.298604502441407
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5248264135020649,
+              "active_final": [
+                1.7303581237792969,
+                5.199544443847657
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8387978117236536,
+              "active_final": [
+                1.8085556030273438,
+                3.885335459472657
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.806399197892471,
+              "active_final": [
+                1.8052139282226562,
+                3.918630137207032
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.9030198419317729,
+              "active_final": [
+                1.8153419494628906,
+                3.819547190429688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.9800000143051149,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.3217281518600203,
+              "active_final": [
+                1.6465682983398438,
+                4.566548838378907
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.30988433882987043,
+              "active_final": [
+                1.6432762145996094,
+                4.602452769042969
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.35036091952002996,
+              "active_final": [
+                1.6536598205566406,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.7400000143051146,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.15524083188829504,
+              "active_final": [
+                1.886566162109375,
+                4.566556467773438
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.12264214053445015,
+              "active_final": [
+                1.8832740783691406,
+                4.602452769042969
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2162166774455452,
+              "active_final": [
+                1.8936576843261719,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5821448112269387,
+              "active_final": [
+                1.4584236145019531,
+                4.3764472148437505
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5646943008390563,
+              "active_final": [
+                1.4559860229492188,
+                4.4112067363281255
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6178526181605104,
+              "active_final": [
+                1.4638328552246094,
+                4.3118109843750005
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17122966104635512,
+              "active_final": [
+                2.0762901306152344,
+                4.807195200683594
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.19022386376958328,
+              "active_final": [
+                2.0721168518066406,
+                4.843656077148438
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.15693350876327877,
+              "active_final": [
+                2.0859146118164062,
+                4.745633616210938
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_20713579",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed20713579_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl",
+        "centreline_mirrored": false
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3750686645507812,
+          "y": 7.219869150878907,
+          "yaw": -1.382394938723111,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.24576568603515625,
+          "y": 4.4354987285156255,
+          "yaw": 0.36486548364753524,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20761093,
+          20865822,
+          20970551
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22857174595940882,
+            "active_final": [
+              1.7705764770507812,
+              4.5531745097656255
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2223203909290412,
+            "active_final": [
+              1.7693367004394531,
+              4.563451304199219
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19782251646729576,
+            "active_final": [
+              1.7681083679199219,
+              4.604215159179688
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22857174595940882,
+              "active_final": [
+                1.7705764770507812,
+                4.5531745097656255
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2223203909290412,
+              "active_final": [
+                1.7693367004394531,
+                4.563451304199219
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.19782251646729576,
+              "active_final": [
+                1.7681083679199219,
+                4.604215159179688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5719911498388726,
+              "active_final": [
+                1.7270126342773438,
+                5.248998179199219
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5810784940355769,
+              "active_final": [
+                1.7257347106933594,
+                5.258237375976563
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6222580849860024,
+              "active_final": [
+                1.7243461608886719,
+                5.3015875957031255
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.854984237398574,
+              "active_final": [
+                1.8127326965332031,
+                3.868375315429688
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8442106914635337,
+              "active_final": [
+                1.8110466003417969,
+                3.8794989726562505
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8039525369648083,
+              "active_final": [
+                1.80987548828125,
+                3.920377268554688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.9800000143051149,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.3246322340347328,
+              "active_final": [
+                1.6505775451660156,
+                4.5531745097656255
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.32072565267617886,
+              "active_final": [
+                1.6493377685546875,
+                4.563451304199219
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.30474109218131185,
+              "active_final": [
+                1.6481094360351562,
+                4.604215159179688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.7400000143051146,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16704336573013828,
+              "active_final": [
+                1.8905754089355469,
+                4.5531745097656255
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1574396883511009,
+              "active_final": [
+                1.8893356323242188,
+                4.563451304199219
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.11916312385137193,
+              "active_final": [
+                1.8881072998046875,
+                4.604215159179688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5882427980556235,
+              "active_final": [
+                1.4614944458007812,
+                4.361936106445313
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5833520474717238,
+              "active_final": [
+                1.4608421325683594,
+                4.371037974121094
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5609231800488442,
+              "active_final": [
+                1.4597549438476562,
+                4.412312998535157
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16940107646218913,
+              "active_final": [
+                2.0818099975585938,
+                4.7940802714843755
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1730915781378724,
+              "active_final": [
+                2.08001708984375,
+                4.8047309062500005
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.19569859375309562,
+              "active_final": [
+                2.0784912109375,
+                4.844762339355469
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457791",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed21457791_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl",
+        "centreline_mirrored": false
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3748130798339844,
+          "y": 7.172338022949219,
+          "yaw": -1.391229285093585,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2701072692871094,
+          "y": 4.293553843261719,
+          "yaw": -0.006800426707496531,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505305,
+          21610034,
+          21714763
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21054574788074054,
+            "active_final": [
+              1.7629814147949219,
+              4.589452280761719
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.23628428538179466,
+            "active_final": [
+              1.7632713317871094,
+              4.549588694335938
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.212961764704399,
+            "active_final": [
+              1.7681198120117188,
+              4.579000010253907
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21054574788074054,
+              "active_final": [
+                1.7629814147949219,
+                4.589452280761719
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.23628428538179466,
+              "active_final": [
+                1.7632713317871094,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.212961764704399,
+              "active_final": [
+                1.7681198120117188,
+                4.579000010253907
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6090769350106787,
+              "active_final": [
+                1.7192878723144531,
+                5.285726084472657
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5697627343879524,
+              "active_final": [
+                1.7195320129394531,
+                5.2436652324218755
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5961852787471446,
+              "active_final": [
+                1.7241249084472656,
+                5.273770823242188
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8178422068197774,
+              "active_final": [
+                1.8045120239257812,
+                3.907155527832032
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8578789895750806,
+              "active_final": [
+                1.8056564331054688,
+                3.866475596191407
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8273368920541544,
+              "active_final": [
+                1.809722900390625,
+                3.896749033691407
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.9800000143051149,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.31510848130558494,
+              "active_final": [
+                1.6429824829101562,
+                4.589452280761719
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.33275295205248256,
+              "active_final": [
+                1.6432723999023438,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.31477508146426253,
+              "active_final": [
+                1.6481208801269531,
+                4.579000010253907
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.7400000143051146,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.13477817411427467,
+              "active_final": [
+                1.8829803466796875,
+                4.589452280761719
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17243980759702288,
+              "active_final": [
+                1.883270263671875,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.14291129102182037,
+              "active_final": [
+                1.8881187438964844,
+                4.5789923808593755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5712587643515044,
+              "active_final": [
+                1.4558372497558594,
+                4.3993964335937505
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5946729225615008,
+              "active_final": [
+                1.4560661315917969,
+                4.358457102539063
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5741682934229224,
+              "active_final": [
+                1.4596939086914062,
+                4.388509287597657
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.18212323585570292,
+              "active_final": [
+                2.0719985961914062,
+                4.831487192871094
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1595028981159968,
+              "active_final": [
+                2.0728721618652344,
+                4.7898078105468755
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17990149508777933,
+              "active_final": [
+                2.0779342651367188,
+                4.8202033183593755
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457792",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed21457792_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl",
+        "centreline_mirrored": false
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3746261596679688,
+          "y": 7.1269965312500005,
+          "yaw": -1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505306,
+          21610035,
+          21714764
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505306,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20307155177863814,
+            "active_final": [
+              1.7657814025878906,
+              4.5983405253906255
+            ]
+          },
+          {
+            "physics_seed": 21610035,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21556204267131382,
+            "active_final": [
+              1.769989013671875,
+              4.572804941894532
+            ]
+          },
+          {
+            "physics_seed": 21714764,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22531149587232177,
+            "active_final": [
+              1.7678031921386719,
+              4.5607123515625005
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.20307155177863814,
+              "active_final": [
+                1.7657814025878906,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21556204267131382,
+              "active_final": [
+                1.769989013671875,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22531149587232177,
+              "active_final": [
+                1.7678031921386719,
+                4.5607123515625005
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6161168787513491,
+              "active_final": [
+                1.7223625183105469,
+                5.2943549296875005
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5888900140966286,
+              "active_final": [
+                1.7267341613769531,
+                5.266957773925782
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5800051385604872,
+              "active_final": [
+                1.72442626953125,
+                5.256589426757813
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            -1.8600000143051147,
+            8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8089885739147138,
+              "active_final": [
+                1.8080024719238281,
+                3.9155707500000005
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8354166466282879,
+              "active_final": [
+                1.8120307922363281,
+                3.888242258789063
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8449078943770749,
+              "active_final": [
+                1.8098220825195312,
+                3.8789725444335943
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.9800000143051149,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.3090791275595016,
+              "active_final": [
+                1.645782470703125,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.3158306959750092,
+              "active_final": [
+                1.6499900817871094,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.32337578287528396,
+              "active_final": [
+                1.6478042602539062,
+                4.5607123515625005
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            -1.7400000143051146,
+            8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1254818333369208,
+              "active_final": [
+                1.8857803344726562,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.14827153222439307,
+              "active_final": [
+                1.8899879455566406,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16049339768729734,
+              "active_final": [
+                1.8878021240234375,
+                4.5607123515625005
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.564473949272013,
+              "active_final": [
+                1.4582099914550781,
+                4.4081549785156255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5766378173379837,
+              "active_final": [
+                1.4613609313964844,
+                4.3818183085937505
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5847807314703012,
+              "active_final": [
+                1.4594688415527344,
+                4.3704962871093755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            -1.8600000143051147,
+            10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.18963849082162793,
+              "active_final": [
+                2.0758209228515625,
+                4.8386054179687505
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17867882407002614,
+              "active_final": [
+                2.0808563232421875,
+                4.813832773925782
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16967570398980214,
+              "active_final": [
+                2.0786056518554688,
+                4.800420298339844
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K2_中线守壶绕行_20260720_左右镜像",
+      "category": "受保护中线守壶后的第一红圈锚绕行",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl:3",
+        "shot": 3,
+        "earlier_fallback_replay": "planning_proxy/runs/ppo_k1k8_k8_connected_acceptance_seed20260720.jsonl",
+        "board_source": "planning_proxy/runs/ppo_k1k8_k8_connected_acceptance_seed20260720.jsonl",
+        "centreline_mirrored": true
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.37457275390625,
+          "y": 7.154050364257813,
+          "yaw": 1.3447864694148353,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20276558,
+          20381287,
+          20486016
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20276558,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.18878123189557625,
+            "active_final": [
+              2.93463134765625,
+              4.566556467773438
+            ]
+          },
+          {
+            "physics_seed": 20381287,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.16446430796377207,
+            "active_final": [
+              2.9379234313964844,
+              4.602452769042969
+            ]
+          },
+          {
+            "physics_seed": 20486016,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2393275079962018,
+            "active_final": [
+              2.9275360107421875,
+              4.5022101542968755
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.18878123189557625,
+              "active_final": [
+                2.93463134765625,
+                4.566556467773438
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16446430796377207,
+              "active_final": [
+                2.9379234313964844,
+                4.602452769042969
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2393275079962018,
+              "active_final": [
+                2.9275360107421875,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5723223994220811,
+              "active_final": [
+                2.9785537719726562,
+                5.264340891601563
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6061556576190152,
+              "active_final": [
+                2.981800079345703,
+                5.298604502441407
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5080832451392517,
+              "active_final": [
+                2.9708328247070312,
+                5.199552073242188
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8330079014543745,
+              "active_final": [
+                2.8926429748535156,
+                3.885343088867188
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8001794542085012,
+              "active_final": [
+                2.8959884643554688,
+                3.918630137207032
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8980207634881315,
+              "active_final": [
+                2.8858642578125,
+                3.819547190429688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.7400000143051146,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1484741848951419,
+              "active_final": [
+                2.8146286010742188,
+                4.566564097167969
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.11254726755164515,
+              "active_final": [
+                2.8179092407226562,
+                4.602452769042969
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21304767233893754,
+              "active_final": [
+                2.8075218200683594,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.9800000143051149,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.279337379266645,
+              "active_final": [
+                3.0546302795410156,
+                4.566556467773438
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2650119563174832,
+              "active_final": [
+                3.05792236328125,
+                4.602445139648438
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.31299490142990843,
+              "active_final": [
+                3.047534942626953,
+                4.5022101542968755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21397595568611827,
+              "active_final": [
+                2.624908447265625,
+                4.8072028300781255
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22856933686940442,
+              "active_final": [
+                2.629077911376953,
+                4.843656077148438
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2050115305043176,
+              "active_final": [
+                2.6152877807617188,
+                4.7456183574218755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20276558,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5431896525532671,
+              "active_final": [
+                3.242778778076172,
+                4.3764472148437505
+              ]
+            },
+            {
+              "physics_seed": 20381287,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5242145688013916,
+              "active_final": [
+                3.2452125549316406,
+                4.4112067363281255
+              ]
+            },
+            {
+              "physics_seed": 20486016,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.581749251121785,
+              "active_final": [
+                3.2373695373535156,
+                4.3118109843750005
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_20713579_左右镜像",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed20713579_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl",
+        "centreline_mirrored": true
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3749313354492188,
+          "y": 7.219869150878907,
+          "yaw": 1.382394938723111,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.504234313964844,
+          "y": 4.4354987285156255,
+          "yaw": -0.36486548364753524,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20761093,
+          20865822,
+          20970551
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19715787299769658,
+            "active_final": [
+              2.930622100830078,
+              4.5531745097656255
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1895523427809903,
+            "active_final": [
+              2.931865692138672,
+              4.5634589335937505
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.15974953980404727,
+            "active_final": [
+              2.933094024658203,
+              4.604215159179688
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.19715787299769658,
+              "active_final": [
+                2.930622100830078,
+                4.5531745097656255
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1895523427809903,
+              "active_final": [
+                2.931865692138672,
+                4.5634589335937505
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.15974953980404727,
+              "active_final": [
+                2.933094024658203,
+                4.604215159179688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5563767257906769,
+              "active_final": [
+                2.97418212890625,
+                5.2490058085937505
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5655942988967502,
+              "active_final": [
+                2.9754486083984375,
+                5.258237375976563
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.607717294290155,
+              "active_final": [
+                2.976856231689453,
+                5.3015875957031255
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8495521155043296,
+              "active_final": [
+                2.8884658813476562,
+                3.868375315429688
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8386186104766924,
+              "active_final": [
+                2.890155792236328,
+                3.8794913432617193
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.7980057183007304,
+              "active_final": [
+                2.8913192749023438,
+                3.920369639160157
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.7400000143051146,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16198643985353517,
+              "active_final": [
+                2.8106117248535156,
+                4.553182139160157
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.15166543799213303,
+              "active_final": [
+                2.811859130859375,
+                4.5634589335937505
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.11087084002546459,
+              "active_final": [
+                2.8130874633789062,
+                4.604238047363282
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.9800000143051149,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2833726065640713,
+              "active_final": [
+                3.0506210327148438,
+                4.5531745097656255
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.27867069666035393,
+              "active_final": [
+                3.0518646240234375,
+                4.5634589335937505
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2598883975318944,
+              "active_final": [
+                3.0530929565429688,
+                4.604215159179688
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2137731946560976,
+              "active_final": [
+                2.6193885803222656,
+                4.794072642089844
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21631843919771762,
+              "active_final": [
+                2.6211700439453125,
+                4.8047309062500005
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2344822962737419,
+              "active_final": [
+                2.6226959228515625,
+                4.844762339355469
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 20761093,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5499787868999557,
+              "active_final": [
+                3.239696502685547,
+                4.361943735839844
+              ]
+            },
+            {
+              "physics_seed": 20865822,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5446999765763145,
+              "active_final": [
+                3.2403602600097656,
+                4.371037974121094
+              ]
+            },
+            {
+              "physics_seed": 20970551,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5205110771034904,
+              "active_final": [
+                3.2414474487304688,
+                4.4123053691406255
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457791_左右镜像",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed21457791_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl",
+        "centreline_mirrored": true
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3751869201660156,
+          "y": 7.172338022949219,
+          "yaw": 1.391229285093585,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.479892730712891,
+          "y": 4.293553843261719,
+          "yaw": 0.006800426707496531,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505305,
+          21610034,
+          21714763
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17381473841073672,
+            "active_final": [
+              2.938213348388672,
+              4.5894599101562505
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20431212493907586,
+            "active_final": [
+              2.93792724609375,
+              4.549588694335938
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17815229888538295,
+            "active_final": [
+              2.933074951171875,
+              4.579000010253907
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17381473841073672,
+              "active_final": [
+                2.938213348388672,
+                4.5894599101562505
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.20431212493907586,
+              "active_final": [
+                2.93792724609375,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.17815229888538295,
+              "active_final": [
+                2.933074951171875,
+                4.579000010253907
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5938054749645738,
+              "active_final": [
+                2.981914520263672,
+                5.285733713867188
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5534199783630831,
+              "active_final": [
+                2.9816665649414062,
+                5.2436652324218755
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5809737333685202,
+              "active_final": [
+                2.9770774841308594,
+                5.273770823242188
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8116675828106407,
+              "active_final": [
+                2.896686553955078,
+                3.907155527832032
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8520604671555084,
+              "active_final": [
+                2.8955459594726562,
+                3.866475596191407
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8215359968841243,
+              "active_final": [
+                2.8914794921875,
+                3.896756663085938
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.7400000143051146,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.12554024781627615,
+              "active_final": [
+                2.8181991577148438,
+                4.5894599101562505
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.16541132289481703,
+              "active_final": [
+                2.8179244995117188,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.13608161243016412,
+              "active_final": [
+                2.8130722045898438,
+                4.579007639648438
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.9800000143051149,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.27103582990526465,
+              "active_final": [
+                3.058208465576172,
+                4.5894599101562505
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2914197503960019,
+              "active_final": [
+                3.0579261779785156,
+                4.549588694335938
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2715838783131802,
+              "active_final": [
+                3.0530738830566406,
+                4.5789923808593755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2218463804969908,
+              "active_final": [
+                2.629192352294922,
+                4.831479563476563
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.20390625279741764,
+              "active_final": [
+                2.628314971923828,
+                4.789815439941407
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22134294109778718,
+              "active_final": [
+                2.6232566833496094,
+                4.8202033183593755
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505305,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5312581667527008,
+              "active_final": [
+                3.2453575134277344,
+                4.399404062988282
+              ]
+            },
+            {
+              "physics_seed": 21610034,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5563875862439714,
+              "active_final": [
+                3.245128631591797,
+                4.358449473144532
+              ]
+            },
+            {
+              "physics_seed": 21714763,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5347514590716475,
+              "active_final": [
+                3.2415008544921875,
+                4.388494028808594
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457792_左右镜像",
+      "category": "中线守壶对齐后的红圈锚重建",
+      "history_source": {
+        "successful_replay": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl",
+        "shot": 7,
+        "earlier_fallback_replay": "planning_proxy/runs/k3_guard_aligned_recovery_ppo_seed21457792_exact_full.jsonl",
+        "board_source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl",
+        "centreline_mirrored": true
+      },
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3753738403320312,
+          "y": 7.1269965312500005,
+          "yaw": 1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难净空绕行合同_v1",
+        "kind": "绕守壶重建红圈锚",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505306,
+          21610035,
+          21714764
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505306,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1655234659256287,
+            "active_final": [
+              2.9354248046875,
+              4.5983405253906255
+            ]
+          },
+          {
+            "physics_seed": 21610035,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.18176001681609613,
+            "active_final": [
+              2.93121337890625,
+              4.572804941894532
+            ]
+          },
+          {
+            "physics_seed": 21714764,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19265912629334178,
+            "active_final": [
+              2.933391571044922,
+              4.560719980957032
+            ]
+          }
+        ]
+      },
+      "fixed_input_probe_report": [
+        {
+          "name": "原历史解",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1655234659256287,
+              "active_final": [
+                2.9354248046875,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.18176001681609613,
+              "active_final": [
+                2.93121337890625,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.19265912629334178,
+              "active_final": [
+                2.933391571044922,
+                4.560719980957032
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度减0.08",
+          "bestshot": [
+            3.0000001621246337,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.6012636015143566,
+              "active_final": [
+                2.9788284301757812,
+                5.2943549296875005
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5737059332349741,
+              "active_final": [
+                2.9744644165039062,
+                5.266957773925782
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5643794106766691,
+              "active_final": [
+                2.9767608642578125,
+                5.256589426757813
+              ]
+            }
+          ]
+        },
+        {
+          "name": "速度加0.08",
+          "bestshot": [
+            3.160000162124634,
+            1.8600000143051147,
+            -8.571428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8029269209619821,
+              "active_final": [
+                2.8931884765625,
+                3.9156012675781255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8298154971723671,
+              "active_final": [
+                2.889171600341797,
+                3.888242258789063
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.8392410003858658,
+              "active_final": [
+                2.8913726806640625,
+                3.8789725444335943
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向减0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.7400000143051146,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.1166882082128329,
+              "active_final": [
+                2.815410614013672,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.14235759758550112,
+              "active_final": [
+                2.811199188232422,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.15434925619559087,
+              "active_final": [
+                2.8133773803710938,
+                4.560719980957032
+              ]
+            }
+          ]
+        },
+        {
+          "name": "横向加0.12",
+          "bestshot": [
+            3.080000162124634,
+            1.9800000143051149,
+            -8.571428298950195
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2645363183082274,
+              "active_final": [
+                3.0554237365722656,
+                4.5983405253906255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.27314358212138656,
+              "active_final": [
+                3.0512123107910156,
+                4.572804941894532
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.2814477021525624,
+              "active_final": [
+                3.053394317626953,
+                4.560719980957032
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转减2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -10.711428298950196
+          ],
+          "passed": true,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.22888095705494563,
+              "active_final": [
+                2.6253700256347656,
+                4.838613047363282
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.221006882015838,
+              "active_final": [
+                2.6203269958496094,
+                4.813840403320313
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": true,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.21327262402651917,
+              "active_final": [
+                2.622577667236328,
+                4.800412668945313
+              ]
+            }
+          ]
+        },
+        {
+          "name": "旋转加2.14",
+          "bestshot": [
+            3.080000162124634,
+            1.8600000143051147,
+            -6.431428298950195
+          ],
+          "passed": false,
+          "per_seed": [
+            {
+              "physics_seed": 21505306,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.524184286107405,
+              "active_final": [
+                3.2429885864257812,
+                4.4081549785156255
+              ]
+            },
+            {
+              "physics_seed": 21610035,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5375425151454205,
+              "active_final": [
+                3.239837646484375,
+                4.381825937988282
+              ]
+            },
+            {
+              "physics_seed": 21714764,
+              "passed": false,
+              "contact": false,
+              "old_stones_static": true,
+              "rule_legal": true,
+              "landing_error_m": 0.5461070686779407,
+              "active_final": [
+                3.2417335510253906,
+                4.3704962871093755
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

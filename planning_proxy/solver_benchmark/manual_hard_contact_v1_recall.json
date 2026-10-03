@@ -1,0 +1,74 @@
+{
+  "schema": "planning_proxy_contact_recall_benchmark_v1",
+  "purpose": "反解器盲测；oracle_witness 不传入求解器。",
+  "budget_seconds": 105.0,
+  "sample_count": 3,
+  "found_count": 1,
+  "within_budget_count": 3,
+  "samples": [
+    {
+      "id": "手工高难接触_K5_中线遮挡_000",
+      "found": true,
+      "within_budget": true,
+      "elapsed_seconds": 17.2918722,
+      "target_region_count": 2,
+      "bestshot": [
+        5.344542218108741,
+        -1.6830581723242153,
+        15.7
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "solver_detail": {
+        "targetIndex": 7,
+        "targetRegionCentres": [
+          [
+            1.5,
+            7.7
+          ],
+          [
+            3.25,
+            7.7
+          ]
+        ],
+        "targetRegionRadiusM": 0.25,
+        "coarseCandidateCount": 4305,
+        "coarseHitBranchCount": 574,
+        "locallyRefinedHitBranchCount": 15004,
+        "strictCandidateCount": 3,
+        "multiSeedVerifiedCount": 1,
+        "eligibleCount": 1,
+        "allowedOwnExchangeBudget": 0,
+        "madsParentBranchCount": 3,
+        "exchangeFineRefinementUsed": false,
+        "worstRegionMarginM": 0.03997312905273148
+      },
+      "dataset": "manual_hard_contact_v1.json"
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_左偏_001",
+      "found": false,
+      "within_budget": true,
+      "elapsed_seconds": 18.461232799999998,
+      "target_region_count": 2,
+      "dataset": "manual_hard_contact_v1.json"
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_右偏_002",
+      "found": false,
+      "within_budget": true,
+      "elapsed_seconds": 24.6603372,
+      "target_region_count": 2,
+      "dataset": "manual_hard_contact_v1.json"
+    }
+  ]
+}

@@ -27,3 +27,6 @@
 
 # Captured stdout is evidence; preserve original whitespace.
 /analysis_input/*.stdout.txt -whitespace
+
+# Historical opponent archive retains original source bytes.
+/research_archive/ppo_stage_s_u6_flat/AIRobot.py -whitespace

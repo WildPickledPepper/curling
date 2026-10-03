@@ -1,0 +1,281 @@
+{
+  "schema": "planning_proxy_actual_fallback_contact_v1",
+  "scope": "真实长时 physical_clear 回退；同完整壶面历史动作；三种子原合同正向验证",
+  "candidate_state_count": 73,
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": "实战接触回退_v1_000",
+      "history_source": "planning_proxy/runs/k5_full_hit_topology_ppo_seed21457792_stop10.jsonl",
+      "original_fallback_seconds": 90.0113815,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3746261596679688,
+          "y": 7.1269965312500005,
+          "yaw": -1.4077232855817636,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.438831329345703,
+          "y": 4.945096506835938,
+          "yaw": -0.5695516861819764,
+          "enabled": true
+        },
+        {
+          "index": 7,
+          "owner": "opponent",
+          "x": 2.2993545532226562,
+          "y": 7.885289683105469,
+          "yaw": -0.010003172083745706,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "shot_index": 8,
+        "own_throw_number": 5,
+        "phase": "clear_side_guard_and_hold_outer_roll",
+        "target_points": [
+          [
+            1.5,
+            7.7
+          ],
+          [
+            3.25,
+            7.7
+          ]
+        ],
+        "target_opponent_index": 7,
+        "opponent_action": "physical_clear",
+        "rationale": "K5 的近中线高位侧守壶同时反解左右高外环出口；严格 PhysX 必须清目标、保住已有锚和中线守壶，不能以纯清替代。",
+        "landing_region_radius_m": 0.25,
+        "defence_shapes": [],
+        "situation_type": "P5_SINGLE_INNER_ANCHOR_OPPONENT_SIDE_GUARD",
+        "strategy_type": "CLEAR_SIDE_GUARD_AND_HOLD_OUTER_ROLL",
+        "desired_state_type": "P6_SINGLE_INNER_ANCHOR_SIDE_GUARD_CLEARED",
+        "max_own_cleared": 0
+      },
+      "required_physics_seeds": [
+        21521144,
+        21625873,
+        21730602
+      ],
+      "oracle_witness": {
+        "bestshot": [
+          4.4,
+          -1.87,
+          15.0
+        ],
+        "strict": {
+          "candidate": {
+            "v0": 4.4,
+            "h0": -1.87,
+            "w0": 15.0,
+            "parent_rank": 1
+          },
+          "active_index": 8,
+          "scores": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "enemy_cleared": [
+            0,
+            0,
+            0
+          ],
+          "own_cleared": [
+            0,
+            0,
+            0
+          ],
+          "active_cleared": [
+            false,
+            false,
+            false
+          ],
+          "total_self_cleared": [
+            0,
+            0,
+            0
+          ],
+          "own_in_house": [
+            1,
+            1,
+            1
+          ],
+          "preserves_all_own": true,
+          "rule_legal": true,
+          "rule_violations": [
+            [],
+            [],
+            []
+          ],
+          "enemy_cleared_indices": [
+            [],
+            [],
+            []
+          ],
+          "final_center_distance_by_index": [
+            {
+              "0": 2.2469965623485337,
+              "4": 0.09117013660339093,
+              "7": 2.0061725850670684,
+              "8": 2.890456803110754
+            },
+            {
+              "0": 2.2469965623485337,
+              "4": 0.09117013660339093,
+              "7": 2.1828061202254614,
+              "8": 2.93026910986257
+            },
+            {
+              "0": 2.2469965623485337,
+              "4": 0.09117013660339093,
+              "7": 2.2354516677546457,
+              "8": 2.932762046329448
+            }
+          ],
+          "mean_score": 0.0,
+          "worst_score": 0.0,
+          "tactical_scores": [
+            460.0,
+            460.0,
+            460.0
+          ],
+          "tactical_goal_met": [
+            true,
+            true,
+            true
+          ],
+          "active_final_positions": [
+            [
+              1.3752479553222656,
+              7.5920539042968755
+            ],
+            [
+              1.3058891296386719,
+              7.608273997070313
+            ],
+            [
+              1.2834205627441406,
+              7.602048411132813
+            ]
+          ],
+          "final_boards": [
+            [
+              {
+                "index": 0,
+                "owner": "self",
+                "x": 2.3746261596679688,
+                "y": 7.1269965312500005,
+                "enabled": true,
+                "yaw": -1.4077232718509605
+              },
+              {
+                "index": 4,
+                "owner": "self",
+                "x": 2.438831329345703,
+                "y": 4.945096506835938,
+                "enabled": true,
+                "yaw": -0.5695516624688651
+              },
+              {
+                "index": 7,
+                "owner": "opponent",
+                "x": 4.343608856201172,
+                "y": 4.493596567871094,
+                "enabled": true,
+                "yaw": 0.12760994436107567
+              },
+              {
+                "index": 8,
+                "owner": "self",
+                "x": 1.3752479553222656,
+                "y": 7.5920539042968755,
+                "enabled": true,
+                "yaw": 1.3130529502640418
+              }
+            ],
+            [
+              {
+                "index": 0,
+                "owner": "self",
+                "x": 2.3746261596679688,
+                "y": 7.1269965312500005,
+                "enabled": true,
+                "yaw": -1.4077232718509605
+              },
+              {
+                "index": 4,
+                "owner": "self",
+                "x": 2.438831329345703,
+                "y": 4.945096506835938,
+                "enabled": true,
+                "yaw": -0.5695516624688651
+              },
+              {
+                "index": 7,
+                "owner": "opponent",
+                "x": 4.492149353027344,
+                "y": 4.348660959960938,
+                "enabled": true,
+                "yaw": 0.028142481601175395
+              },
+              {
+                "index": 8,
+                "owner": "self",
+                "x": 1.3058891296386719,
+                "y": 7.608273997070313,
+                "enabled": true,
+                "yaw": -0.8016506475654867
+              }
+            ],
+            [
+              {
+                "index": 0,
+                "owner": "self",
+                "x": 2.3746261596679688,
+                "y": 7.1269965312500005,
+                "enabled": true,
+                "yaw": -1.4077232718509605
+              },
+              {
+                "index": 4,
+                "owner": "self",
+                "x": 2.438831329345703,
+                "y": 4.945096506835938,
+                "enabled": true,
+                "yaw": -0.5695516624688651
+              },
+              {
+                "index": 7,
+                "owner": "opponent",
+                "x": 4.538715362548828,
+                "y": 4.318234934570313,
+                "enabled": true,
+                "yaw": 0.014307611397906955
+              },
+              {
+                "index": 8,
+                "owner": "self",
+                "x": 1.2834205627441406,
+                "y": 7.602048411132813,
+                "enabled": true,
+                "yaw": -1.3847067873173426
+              }
+            ]
+          ],
+          "bestshot": [
+            4.4,
+            -1.87,
+            15.0
+          ]
+        }
+      }
+    }
+  ]
+}

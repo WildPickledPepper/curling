@@ -1,0 +1,128 @@
+{
+  "schema": "planning_proxy_manual_realistic_contact_witness_validation_v1",
+  "dataset": "manual_hard_contact_v1.json",
+  "purpose": "只验证测试样本有正向稳定解；不使用 oracle 评估反解器。",
+  "all_passed": false,
+  "samples": [
+    {
+      "id": "手工高难接触_K5_中线遮挡_000",
+      "passed": false,
+      "oracle_witness": [
+        4.4,
+        -1.87,
+        15.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        true,
+        true,
+        false
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          1.2891921997070312,
+          7.602422251464844
+        ],
+        [
+          1.3042526245117188,
+          7.5990119121093755
+        ],
+        [
+          1.4494247436523438,
+          7.5767035625000005
+        ]
+      ],
+      "target_region_count": 2
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_左偏_001",
+      "passed": false,
+      "oracle_witness": [
+        4.1,
+        -2.0,
+        15.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        false,
+        false,
+        false
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          1.2920494079589844,
+          7.601003184082032
+        ],
+        [
+          1.4880218505859375,
+          7.541783823730469
+        ],
+        [
+          1.4377670288085938,
+          7.650746836425782
+        ]
+      ],
+      "target_region_count": 2
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_右偏_002",
+      "passed": false,
+      "oracle_witness": [
+        4.1,
+        -2.0,
+        20.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        false,
+        false,
+        false
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          1.3330841064453125,
+          7.515225901367188
+        ],
+        [
+          1.4963531494140625,
+          7.473790659667969
+        ],
+        [
+          1.4872703552246094,
+          7.5846381328125005
+        ]
+      ],
+      "target_region_count": 2
+    }
+  ]
+}

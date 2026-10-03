@@ -94,3 +94,13 @@ deployment_probe/build/
 
 /archive/platform_probe_20260724/**/build/
 /archive/platform_probe_20260724/**/.native_probe/
+
+# Captured benchmark console output remains local.
+*.stdout.log
+
+# Small default runtime plans required by the historical policy loaders.
+!/training_data/nwnht_curling/causal_state_machine/artifacts/
+/training_data/nwnht_curling/causal_state_machine/artifacts/*
+!/training_data/nwnht_curling/causal_state_machine/artifacts/nwnht_first_player_state_partition_v2.json
+!/training_data/nwnht_curling/causal_state_machine/artifacts/nwnht_v2_universal_semantic_goal_mdp_v3_physx_admissible.json
+!/training_data/nwnht_curling/causal_state_machine/artifacts/nwnht_v2_tactical_goal_outcome_value_v1.json

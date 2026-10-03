@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-03",
+  "purpose": "Repository organization and publication verification",
+  "unit_tests": {
+    "total": 233,
+    "passed": 233,
+    "skipped": 0,
+    "suites": [
+      {
+        "suite": "simulator",
+        "tests": 49,
+        "seconds": 74.557,
+        "python": "Windows CP39",
+        "scope": "Git-only checkout",
+        "report": "repository_simulator_tests_20261003.stdout.txt"
+      },
+      {
+        "suite": "planner",
+        "tests": 89,
+        "seconds": 29.395,
+        "python": "Windows CP39",
+        "scope": "Git-only checkout",
+        "report": "repository_planner_tests_20261003.stdout.txt"
+      },
+      {
+        "suite": "historical_graph",
+        "tests": 11,
+        "seconds": 0.003,
+        "python": "D:/anaconda3/python.exe",
+        "scope": "Git-only checkout",
+        "report": "repository_data_graph_tests_20261003.stdout.txt"
+      },
+      {
+        "suite": "causal_state_machine",
+        "tests": 84,
+        "seconds": 0.106,
+        "python": "D:/anaconda3/python.exe",
+        "scope": "Git-only checkout with three versioned runtime assets",
+        "report": "repository_causal_tests_20261003.stdout.txt"
+      }
+    ]
+  },
+  "shotbook_validation": {
+    "scope": "Original workspace; requires local PDF source books",
+    "rules_command": "python training_data/gushue_shotbook/validate_extraction_rules.py",
+    "rules_passed": true,
+    "selector_command": "python training_data/gushue_shotbook/validate_sequence_selector.py",
+    "selector_passed": true,
+    "report": "repository_shotbook_tests_20261003.stdout.txt",
+    "frame_order": {
+      "passed": true,
+      "command": "python -m training_data.gushue_shotbook.validate_frame_order",
+      "games": 43,
+      "pages": 382,
+      "mini_sheets": 6097
+    }
+  },
+  "retention": "Raw Unity samples, full Wasm/WAT, most training artifacts and generated delivery copies retained locally, excluded from Git. Three small historical default runtime assets are versioned. No raw data deleted.",
+  "checks": {
+    "staged_whitespace": true,
+    "pending_history_has_no_blobs_over_50MB": true,
+    "common_credential_patterns_found": false
+  },
+  "prior_test_invocations": "Initial fresh-copy causal suite exposed missing default runtime assets; adding the exact existing three assets fixed all three errors. Shotbook validators use script-path invocation for their local imports; module-style invocation failed for two validators before the documented script invocation passed."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "planning_proxy_course_backhand_screen_draw_v1",
+  "scope": "课程平台实战中后手 safe_fallback_after_mads 的真实壶面。目标壶被屏风遮住或前场守壶不可直接击打时，正样本合同是严格 PhysX 净空绕行入大本营，而不是要求清最深目标壶。",
+  "physics_seed_count": 3,
+  "samples": [
+    {
+      "id": "课程实战后手_前场守壶_第2壶",
+      "shot_index": 1,
+      "match_seed": 1009,
+      "proxy_team": 1,
+      "previous_fallback_target": null,
+      "board": [
+        {"index": 0, "owner": "opponent", "x": 2.4048, "y": 7.4987, "yaw": 0.0, "enabled": true}
+      ]
+    },
+    {
+      "id": "课程实战后手_遮挡深壶_第12壶",
+      "shot_index": 11,
+      "match_seed": 1009,
+      "proxy_team": 1,
+      "previous_fallback_target": 6,
+      "board": [
+        {"index": 2, "owner": "opponent", "x": 3.3487, "y": 6.9893, "yaw": 0.0, "enabled": true},
+        {"index": 4, "owner": "opponent", "x": 2.8704, "y": 7.0793, "yaw": 0.0, "enabled": true},
+        {"index": 5, "owner": "self", "x": 1.2929, "y": 7.2631, "yaw": 0.0, "enabled": true},
+        {"index": 6, "owner": "opponent", "x": 2.9981, "y": 6.7248, "yaw": 0.0, "enabled": true},
+        {"index": 10, "owner": "opponent", "x": 2.4248, "y": 6.8655, "yaw": 0.0, "enabled": true}
+      ]
+    },
+    {
+      "id": "课程实战后手_遮挡深壶_第16壶",
+      "shot_index": 15,
+      "match_seed": 1009,
+      "proxy_team": 1,
+      "previous_fallback_target": 14,
+      "board": [
+        {"index": 2, "owner": "opponent", "x": 3.3487, "y": 6.9893, "yaw": 0.0, "enabled": true},
+        {"index": 4, "owner": "opponent", "x": 2.8704, "y": 7.0793, "yaw": 0.0, "enabled": true},
+        {"index": 6, "owner": "opponent", "x": 2.9981, "y": 6.7248, "yaw": 0.0, "enabled": true},
+        {"index": 10, "owner": "opponent", "x": 2.5773, "y": 6.1872, "yaw": 0.0, "enabled": true},
+        {"index": 11, "owner": "self", "x": 2.3181, "y": 7.1316, "yaw": 0.0, "enabled": true},
+        {"index": 14, "owner": "opponent", "x": 2.5938, "y": 5.3218, "yaw": 0.0, "enabled": true}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "planning_proxy_draw_recall_benchmark_v0",
+  "dataset": "planning_proxy\\solver_benchmark\\manual_complex_draw_v1.json",
+  "decision_budget_seconds": 105.0,
+  "sample_count": 1,
+  "solved_count": 1,
+  "recall": 1.0,
+  "rows": [
+    {
+      "id": "手工复杂K3_中线守壶红圈锚侧翼遮挡_000",
+      "found": true,
+      "elapsed_seconds": 14.512317999999999,
+      "bestshot": [
+        3.080000162124634,
+        -1.2200000286102295,
+        6.4285712242126465
+      ],
+      "solver_detail": {
+        "target": [
+          2.0,
+          4.56
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 715,
+        "maxLandingErrorM": 0.21357183982838213,
+        "meanLandingErrorM": 0.1931557784257,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 20260721,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.21357183982838215,
+            "active_final": [
+              2.099689483642578,
+              4.371121897460938
+            ]
+          },
+          {
+            "physics_seed": 20365450,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.16516157028345183,
+            "active_final": [
+              2.094135284423828,
+              4.424291147949219
+            ]
+          },
+          {
+            "physics_seed": 20470179,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.20073392516526606,
+            "active_final": [
+              2.097484588623047,
+              4.384526743652344
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

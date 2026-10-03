@@ -135,10 +135,21 @@ def stone_features(stones: list[dict[str, object]]) -> list[dict[str, object]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).parent)
+    parser.add_argument(
+        "--include-review-states",
+        action="store_true",
+        help="Include coordinate states flagged by the physical-continuity audit. Default output excludes them.",
+    )
     args = parser.parse_args()
     root = args.root.resolve()
     coordinate_path = root / "coordinates" / "gushue_stone_states.jsonl"
-    coordinates = [json.loads(line) for line in coordinate_path.open(encoding="utf-8")]
+    raw_coordinates = [json.loads(line) for line in coordinate_path.open(encoding="utf-8")]
+    coordinates = [
+        row
+        for row in raw_coordinates
+        if args.include_review_states or row["quality_status"] == "auto_pass"
+    ]
+    excluded_review_states = len(raw_coordinates) - len(coordinates)
     by_page = {(row["source_book"], int(row["source_page"])): [] for row in coordinates}
     for row in coordinates:
         by_page[(row["source_book"], int(row["source_page"]))].append(row)
@@ -172,6 +183,7 @@ def main() -> None:
             }
         )
         previous_counts: Counter[str] = Counter()
+        previous_shot: int | None = None
         for state in state_rows:
             shot = int(state["shot_in_end"])
             if shot not in calls:
@@ -202,12 +214,21 @@ def main() -> None:
                     "end_score_after": summary["score_after"],
                     "post_shot_stones": stones,
                     "post_shot_stone_count_by_team": {candidate: current_counts[candidate] for candidate in summary["teams"]},
-                    "net_stone_count_change_by_team": {candidate: current_counts[candidate] - previous_counts[candidate] for candidate in summary["teams"]},
+                    # If a flagged state was excluded, the previous retained
+                    # row can be two real throws ago.  Do not pretend that is
+                    # a one-shot transition.
+                    "transition_observed_from_immediately_previous_shot": previous_shot == shot - 1,
+                    "net_stone_count_change_by_team": (
+                        {candidate: current_counts[candidate] - previous_counts[candidate] for candidate in summary["teams"]}
+                        if previous_shot == shot - 1
+                        else None
+                    ),
                     "coordinate_quality_status": state["quality_status"],
                     "source_id": {"book": state["source_book"], "page": state["source_page"], "game_pdf": state["gushue_game_pdf"]},
                 }
             )
             previous_counts = current_counts
+            previous_shot = shot
 
     # Link every end to the hammer actually observed in the next end.  This is
     # more useful for a state machine than re-deriving the rule from score each
@@ -275,6 +296,8 @@ def main() -> None:
                 "shots": len(shot_rows),
                 "ends": len(end_rows),
                 "games": len(game_rows),
+                "excluded_review_states": excluded_review_states,
+                "include_review_states": args.include_review_states,
                 "shot_output": str(shot_output),
                 "end_output": str(end_output),
                 "game_output": str(game_output),

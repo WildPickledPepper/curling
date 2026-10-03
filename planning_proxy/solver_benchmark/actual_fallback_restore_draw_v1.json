@@ -1,0 +1,688 @@
+{
+  "schema": "planning_proxy_actual_fallback_restore_draw_v1",
+  "scope": "真实 safe_fallback_after_mads 壶面；回退至少 15 秒；固定离线输入表证明有解",
+  "fixed_input_count": 2,
+  "sample_count": 7,
+  "samples": [
+    {
+      "history_source": "planning_proxy/runs/aggressive_first_seed20713579.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 19.195598200000003,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 2,
+          "owner": "self",
+          "x": 2.3560714721679688,
+          "y": 6.617894663574219,
+          "yaw": 0.5395718696658407,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.349803924560547,
+          "y": 7.782773508789063,
+          "yaw": 0.6003728801992435,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.52862548828125,
+          "y": 7.441228403808594,
+          "yaw": -1.4093813871067464,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          2,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20761093,
+          20865822,
+          20970551
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.0577425430863,
+          -1.188821419488,
+          6.41565997474422
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1216827913132673,
+            "active_final": [
+              2.1213836669921875,
+              4.551473154785157
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12056493802760153,
+            "active_final": [
+              2.1205368041992188,
+              4.5626044414062505
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12700442993410477,
+            "active_final": [
+              2.119831085205078,
+              4.602078928710938
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_000"
+    },
+    {
+      "history_source": "planning_proxy/runs/aggressive_first_seed21027182.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 18.2809167,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 2,
+          "owner": "self",
+          "x": 2.3550796508789062,
+          "y": 6.496213450195313,
+          "yaw": 0.6201873742883729,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.351226806640625,
+          "y": 7.7387824199218755,
+          "yaw": 0.5906203762318037,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.5291213989257812,
+          "y": 7.529355540039063,
+          "yaw": -1.3921492285238957,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          2,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21074696,
+          21179425,
+          21284154
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.0577425430863,
+          -1.188821419488,
+          6.41565997474422
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21074696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12187207131267078,
+            "active_final": [
+              2.1200904846191406,
+              4.5807624003906255
+            ]
+          },
+          {
+            "physics_seed": 21179425,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11837077049931133,
+            "active_final": [
+              2.118358612060547,
+              4.561696543457032
+            ]
+          },
+          {
+            "physics_seed": 21284154,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1213652621450881,
+            "active_final": [
+              2.1198997497558594,
+              4.541196360351563
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_001"
+    },
+    {
+      "history_source": "planning_proxy/runs/aggressive_first_seed21457791.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 15.1164947,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 2,
+          "owner": "self",
+          "x": 2.340076446533203,
+          "y": 6.500302805664063,
+          "yaw": 0.7499035949794718,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.3515281677246094,
+          "y": 7.746251597167969,
+          "yaw": 0.5667292630390648,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.5295524597167969,
+          "y": 7.469174875976563,
+          "yaw": -1.3490945502271092,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          2,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505305,
+          21610034,
+          21714763
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.0577425430863,
+          -1.188821419488,
+          6.41565997474422
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11910742834262814,
+            "active_final": [
+              2.1158294677734375,
+              4.5877509257812505
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11654161593030135,
+            "active_final": [
+              2.1159286499023438,
+              4.548062815429688
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12081099700786435,
+            "active_final": [
+              2.119579315185547,
+              4.577207102539063
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_002"
+    },
+    {
+      "history_source": "planning_proxy/runs/k3_counter_edge_aggressive210.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 23.906692700000008,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.374897003173828,
+          "y": 7.167203440429688,
+          "yaw": -1.3820608251456443,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.6076850891113281,
+          "y": 7.569058909179688,
+          "yaw": -0.035055994057217314,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21074696,
+          21179425,
+          21284154
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.17000004768372,
+          1.69499997615814,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21074696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2737339778717937,
+            "active_final": [
+              1.7443962097167969,
+              4.657964243652344
+            ]
+          },
+          {
+            "physics_seed": 21179425,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2634931448629049,
+            "active_final": [
+              1.748687744140625,
+              4.639188303710938
+            ]
+          },
+          {
+            "physics_seed": 21284154,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.26235548560699146,
+            "active_final": [
+              1.7445297241210938,
+              4.619710459472657
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_003"
+    },
+    {
+      "history_source": "planning_proxy/runs/k3_guard_aligned_recovery_aggressive_seed210_exact_full.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 18.903214699999992,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375,
+          "y": 7.134458079101563,
+          "yaw": -1.360638284673274,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.529144287109375,
+          "y": 7.497731699707032,
+          "yaw": -1.3726105634858232,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          47724,
+          152453,
+          257182
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.17000004768372,
+          1.69499997615814,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.27203288064538284,
+            "active_final": [
+              1.7559127807617188,
+              4.6800971171875005
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.268032446624962,
+            "active_final": [
+              1.7336502075195312,
+              4.589986338378907
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.276449233428054,
+            "active_final": [
+              1.7414817810058594,
+              4.6579413554687505
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_004"
+    },
+    {
+      "history_source": "planning_proxy/runs/k3_multiregion_parent_coverage_aggressive_seed210_exact_full.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 20.832962199999997,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375,
+          "y": 7.134458079101563,
+          "yaw": -1.360638284673274,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.529144287109375,
+          "y": 7.497731699707032,
+          "yaw": -1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2515754699707031,
+          "y": 4.305303110839844,
+          "yaw": 0.42468861544328296,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          47724,
+          152453,
+          257182
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.17000004768372,
+          1.69499997615814,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.27203288064538284,
+            "active_final": [
+              1.7559127807617188,
+              4.6800971171875005
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.268032446624962,
+            "active_final": [
+              1.7336502075195312,
+              4.589986338378907
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.276449233428054,
+            "active_final": [
+              1.7414817810058594,
+              4.6579413554687505
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_005"
+    },
+    {
+      "history_source": "planning_proxy/runs/k3plus_physical_aggressive_seed210_full.jsonl",
+      "fallback_shot": 7,
+      "original_fallback_seconds": 19.86743849999999,
+      "category": "实战回退_K3补第二颗得分壶",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375,
+          "y": 7.134458079101563,
+          "yaw": -1.360638284673274,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.7433662414550781,
+          "y": 7.604428782226563,
+          "yaw": -0.09965246063150505,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "实战回退净空合同_v1",
+        "kind": "补第二颗得分壶",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          47724,
+          152453,
+          257182
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.17000004768372,
+          1.69499997615814,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.27203288064538284,
+            "active_final": [
+              1.7559127807617188,
+              4.6800971171875005
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.268032446624962,
+            "active_final": [
+              1.7336502075195312,
+              4.589986338378907
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.276449233428054,
+            "active_final": [
+              1.7414817810058594,
+              4.6579413554687505
+            ]
+          }
+        ]
+      },
+      "id": "实战回退净空_v1_006"
+    }
+  ]
+}

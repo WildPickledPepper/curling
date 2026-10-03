@@ -1,0 +1,34 @@
+{
+  "schema": "planning_proxy_manual_complex_draw_v1",
+  "scope": "手工构造的 K3 三壶复杂净空绕行；固定输入经三物理种子正向确认。",
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": "手工复杂K3_中线守壶红圈锚侧翼遮挡_000",
+      "category": "中线守壶_红圈锚_侧翼遮挡下补第二得分层",
+      "board": [
+        {"index": 0, "owner": "self", "x": 2.38, "y": 7.18, "yaw": 0.0, "enabled": true},
+        {"index": 4, "owner": "self", "x": 2.52, "y": 5.10, "yaw": 0.0, "enabled": true},
+        {"index": 5, "owner": "opponent", "x": 1.55, "y": 7.50, "yaw": 0.0, "enabled": true}
+      ],
+      "goal_contract": {
+        "version": "手工复杂净空合同_v1",
+        "kind": "绕开三颗旧壶补第二得分层",
+        "active_index": 6,
+        "active_target_region": {"center": [2.0, 4.56], "radius_m": 0.3},
+        "must_preserve_indices": [0, 4, 5],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [20260721, 20365450, 20470179]
+      },
+      "oracle_witness": {
+        "bestshot": [3.058, -1.189, 6.416],
+        "strict_forward": [
+          {"physics_seed": 20260721, "active_final": [2.1199150085, 4.5591101787]},
+          {"physics_seed": 20365450, "active_final": [2.1145401001, 4.6116767070]},
+          {"physics_seed": 20470179, "active_final": [2.1175537109, 4.5713095806]}
+        ]
+      },
+      "fixed_input_observation": "速度改为 3.00 或 3.11、或横向改为 -1.30 时均未通过；另一条通过路线为 [3.17, 1.695, -15.0]。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">
+  <style>
+    .bg { fill:#092334; }
+    .title { fill:#f1f7fb; font:700 32px 'Microsoft YaHei',sans-serif; }
+    .sub { fill:#a8d4e4; font:500 17px 'Microsoft YaHei',sans-serif; }
+    .tile { fill:#143e55; stroke:#58a6c1; stroke-width:2; }
+    .k { fill:#ffffff; font:700 28px 'Microsoft YaHei',sans-serif; }
+    .label { fill:#b8dce9; font:600 15px Consolas,'Microsoft YaHei',monospace; }
+  </style>
+  <rect class="bg" width="1600" height="620" rx="20"/>
+  <text class="title" x="70" y="80">先手状态机 · K1–K8 真实枚举详图</text>
+  <text class="sub" x="70" y="115">每张图均按代码字段：Sₖ → Gₖ → Tₖ → PPO 对手回应 → Sₖ₊₁</text>
+  <g>
+    <rect class="tile" x="70" y="170" width="330" height="145" rx="16"/><text class="k" x="105" y="222">K1</text><text class="label" x="105" y="265">S₁ → G₁ → T₁ → S₂</text>
+    <rect class="tile" x="445" y="170" width="330" height="145" rx="16"/><text class="k" x="480" y="222">K2</text><text class="label" x="480" y="265">S₂ → G₂ → T₂ → S₃</text>
+    <rect class="tile" x="820" y="170" width="330" height="145" rx="16"/><text class="k" x="855" y="222">K3</text><text class="label" x="855" y="265">S₃ → G₃ → T₃ → S₄</text>
+    <rect class="tile" x="1195" y="170" width="330" height="145" rx="16"/><text class="k" x="1230" y="222">K4</text><text class="label" x="1230" y="265">S₄ → G₄ → T₄ → S₅</text>
+    <rect class="tile" x="70" y="370" width="330" height="145" rx="16"/><text class="k" x="105" y="422">K5</text><text class="label" x="105" y="465">S₅ → G₅ → T₅ → S₆</text>
+    <rect class="tile" x="445" y="370" width="330" height="145" rx="16"/><text class="k" x="480" y="422">K6</text><text class="label" x="480" y="465">S₆ → G₆ → T₆ → S₇</text>
+    <rect class="tile" x="820" y="370" width="330" height="145" rx="16"/><text class="k" x="855" y="422">K7</text><text class="label" x="855" y="465">S₇ → G₇ → T₇ → S₈</text>
+    <rect class="tile" x="1195" y="370" width="330" height="145" rx="16"/><text class="k" x="1230" y="422">K8</text><text class="label" x="1230" y="465">S₈ → G₈ → T₈ → S₉</text>
+  </g>
+</svg>

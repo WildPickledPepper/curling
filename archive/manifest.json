@@ -9,7 +9,9 @@
       "retained_sha256": "254617a950335c6193367ff9327748af9293608b415fba1d60709a7a9e783c6e",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/README.md"
+      "restore_original": "git show 1696841:deployment_probe/README.md",
+      "git_retained_sha256": "254617a950335c6193367ff9327748af9293608b415fba1d60709a7a9e783c6e",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/local_protocol_smoke_test.py",
@@ -18,7 +20,9 @@
       "retained_sha256": "55d0bbdb35ddaaf832ae1e89c9958bdf2ac2a17b39c0de5a0412cbf8c8d348f9",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/local_protocol_smoke_test.py"
+      "restore_original": "git show 1696841:deployment_probe/local_protocol_smoke_test.py",
+      "git_retained_sha256": "55d0bbdb35ddaaf832ae1e89c9958bdf2ac2a17b39c0de5a0412cbf8c8d348f9",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/probe_submission.py",
@@ -27,7 +31,9 @@
       "retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/probe_submission.py"
+      "restore_original": "git show 1696841:deployment_probe/probe_submission.py",
+      "git_retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/probeext.c",
@@ -36,7 +42,9 @@
       "retained_sha256": "350ed9674b2fb96a21eacb6e78851e4fa48e8667030fbc3c973367a4cf78f13f",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/probeext.c"
+      "restore_original": "git show 1696841:deployment_probe/probeext.c",
+      "git_retained_sha256": "350ed9674b2fb96a21eacb6e78851e4fa48e8667030fbc3c973367a4cf78f13f",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/probeext.cp313-win_amd64.pyd",
@@ -45,7 +53,9 @@
       "retained_sha256": "12c302d69e1b542ac753b0433301932b699be3f9586d4f20f79dd9fb41572e6c",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/probeext.cp313-win_amd64.pyd"
+      "restore_original": "git show 1696841:deployment_probe/probeext.cp313-win_amd64.pyd",
+      "git_retained_sha256": "12c302d69e1b542ac753b0433301932b699be3f9586d4f20f79dd9fb41572e6c",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/quaternion.py",
@@ -54,7 +64,9 @@
       "retained_sha256": "342e20d0b733a724c31099c9b9ba8d5132508dba02cd1246ea61c636ed9a6e95",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/quaternion.py"
+      "restore_original": "git show 1696841:deployment_probe/quaternion.py",
+      "git_retained_sha256": "342e20d0b733a724c31099c9b9ba8d5132508dba02cd1246ea61c636ed9a6e95",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/run_probe.py",
@@ -63,7 +75,9 @@
       "retained_sha256": "af1594ef2bae4419199127de8a6f675ca18e4a60d5248e15e10f386b99f26538",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/run_probe.py"
+      "restore_original": "git show 1696841:deployment_probe/run_probe.py",
+      "git_retained_sha256": "af1594ef2bae4419199127de8a6f675ca18e4a60d5248e15e10f386b99f26538",
+      "git_byte_identical": true
     },
     {
       "original_path": "deployment_probe/setup.py",
@@ -72,7 +86,9 @@
       "retained_sha256": "0684e10503b608512126cf86e0e29a7f7557018de57320d7c08791331ccc6555",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:deployment_probe/setup.py"
+      "restore_original": "git show 1696841:deployment_probe/setup.py",
+      "git_retained_sha256": "0684e10503b608512126cf86e0e29a7f7557018de57320d7c08791331ccc6555",
+      "git_byte_identical": true
     },
     {
       "original_path": "planning_proxy/01_白盒规划代理实施方案.md",
@@ -81,7 +97,9 @@
       "retained_sha256": "db265f5b6dc89aa9a5d4abbfef07463b124435e7dad5cff752aaf80c8b50284f",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:planning_proxy/01_白盒规划代理实施方案.md"
+      "restore_original": "git show 1696841:planning_proxy/01_白盒规划代理实施方案.md",
+      "git_retained_sha256": "db265f5b6dc89aa9a5d4abbfef07463b124435e7dad5cff752aaf80c8b50284f",
+      "git_byte_identical": true
     },
     {
       "original_path": "planning_proxy/02_中线残局球形研究.md",
@@ -90,7 +108,9 @@
       "retained_sha256": "21bb4e6a8c8397751fe91c125cf553f279fd898965b77ba9c4cc8ac9c43fdd2c",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:planning_proxy/02_中线残局球形研究.md"
+      "restore_original": "git show 1696841:planning_proxy/02_中线残局球形研究.md",
+      "git_retained_sha256": "21bb4e6a8c8397751fe91c125cf553f279fd898965b77ba9c4cc8ac9c43fdd2c",
+      "git_byte_identical": true
     },
     {
       "original_path": "planning_proxy/03_中线控场与残局防御策略.md",
@@ -99,7 +119,9 @@
       "retained_sha256": "389b21aed129f855c30878e3d953839d397379a746fc61a2d4b3aecca12455f2",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:planning_proxy/03_中线控场与残局防御策略.md"
+      "restore_original": "git show 1696841:planning_proxy/03_中线控场与残局防御策略.md",
+      "git_retained_sha256": "389b21aed129f855c30878e3d953839d397379a746fc61a2d4b3aecca12455f2",
+      "git_byte_identical": true
     },
     {
       "original_path": "planning_proxy/04_防御形搜索与验收规则.md",
@@ -108,16 +130,20 @@
       "retained_sha256": "0ac15d7e91f31c5edd7e20b21a4c0051af41da02bfe64cc0276d5c16a0650d83",
       "byte_identical": false,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:planning_proxy/04_防御形搜索与验收规则.md"
+      "restore_original": "git show 1696841:planning_proxy/04_防御形搜索与验收规则.md",
+      "git_retained_sha256": "0ac15d7e91f31c5edd7e20b21a4c0051af41da02bfe64cc0276d5c16a0650d83",
+      "git_byte_identical": false
     },
     {
       "original_path": "planning_proxy/05_Team_Gushue公开战术树_证据版.md",
       "retained_path": "planning_proxy/docs/strategy/05_Team_Gushue公开战术树_证据版.md",
       "original_sha256": "ec04506fcc97455b8f02760bc2177ce7d0bd2f66ab2ebd1297e14ae575ddbb0c",
-      "retained_sha256": "b1363846acec1379d5c9c0e4a8b99b2e49a6315723a9ce3b45ba6080e24551e6",
+      "retained_sha256": "92ff0319e11ab794986cc4182480c0e5551c40ef2be2699fc92a53b6213be918",
       "byte_identical": false,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:planning_proxy/05_Team_Gushue公开战术树_证据版.md"
+      "restore_original": "git show 1696841:planning_proxy/05_Team_Gushue公开战术树_证据版.md",
+      "git_retained_sha256": "ec04506fcc97455b8f02760bc2177ce7d0bd2f66ab2ebd1297e14ae575ddbb0c",
+      "git_byte_identical": true
     },
     {
       "original_path": "probe_submission.py",
@@ -126,7 +152,9 @@
       "retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
       "byte_identical": true,
       "reason": "Existing relocation audited; documentation edits retained",
-      "restore_original": "git show 1696841:probe_submission.py"
+      "restore_original": "git show 1696841:probe_submission.py",
+      "git_retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "git_byte_identical": true
     }
   ]
 }

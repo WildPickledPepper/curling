@@ -28,7 +28,6 @@ from typing import Iterator
 import numpy as np
 from PIL import Image
 
-
 # The outer 12-foot circle has radius 6 ft = 1.8288 m.  The official charts
 # draw it at 40% of a mini-sheet's width.  The remaining error is under 1 cm
 # for both 300x600 and 301x601 chart variants.
@@ -90,7 +89,17 @@ def button_centre(image: np.ndarray) -> tuple[float, float, float]:
     return centre_x, centre_y, outer_radius_px
 
 
-def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[list[dict[str, object]], str, int]:
+def extract_stone_candidates(
+    image_path: Path, red_team: str, yellow_team: str
+) -> tuple[list[dict[str, object]], str, int]:
+    """Return every geometrically plausible coloured stone candidate.
+
+    A royal-blue mark inside a coloured stone is ambiguous in these CurlIT
+    charts: it sometimes accompanies a live stone, and sometimes marks chart
+    history.  Do *not* decide that question from one image or from the current
+    thrower.  Keep the flag here so the end-level selector can decide it from
+    the full 16-shot sequence.
+    """
     image = np.asarray(Image.open(image_path).convert("RGB"))
     height, _ = image.shape[:2]
     centre_x, centre_y, outer_radius_px = button_centre(image)
@@ -124,29 +133,27 @@ def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[l
             max_y, max_x = component.max(axis=0)
             bounding_area = int(max_y - min_y + 1) * int(max_x - min_x + 1)
             filled_bbox_ratio = area / bounding_area
-            # CurlIT keeps a removed stone visible as a coloured circle with a
-            # royal-blue X through it.  It is useful to humans but not a live
-            # stone.  Looking for that saturated blue only inside the circle's
-            # bounding box keeps it distinct from the pale-blue house ring.
+            # Black marks are part of a normal yellow stone drawing and must
+            # never be treated as an out marker.  Blue must remain evidence,
+            # rather than an immediate include/exclude decision; see docstring.
             component_box = image[
                 int(min_y) : int(max_y) + 1,
                 int(min_x) : int(max_x) + 1,
             ]
-            crossed_out = bool(
-                np.any(
-                    (component_box[:, :, 0] <= 80)
-                    & (component_box[:, :, 1] <= 80)
-                    & (component_box[:, :, 2] >= 200)
-                )
+            royal_blue_mask = (
+                (component_box[:, :, 0] <= 80)
+                & (component_box[:, :, 1] <= 80)
+                & (component_box[:, :, 2] >= 200)
             )
+            royal_blue_pixel_count = int(np.count_nonzero(royal_blue_mask))
+            has_blue_overlay = bool(royal_blue_pixel_count)
             # Reject outline-only "previous position" marks and unused-stone
-            # counters at the upper/lower margins, plus blue-Xed removed rocks.
+            # counters at the upper/lower margins.
             if (
                 area < MIN_FILLED_COMPONENT_PIXELS
                 or filled_bbox_ratio < MIN_FILLED_BBOX_RATIO
                 or pixel_y < PLAY_Y_MIN
                 or pixel_y > height - PLAY_Y_MAX_MARGIN
-                or crossed_out
             ):
                 continue
             stones.append(
@@ -159,6 +166,8 @@ def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[l
                     "pixel_y": round(pixel_y, 2),
                     "fill_pixels": area,
                     "filled_bbox_ratio": round(filled_bbox_ratio, 3),
+                    "has_royal_blue_mark": has_blue_overlay,
+                    "royal_blue_pixel_count": royal_blue_pixel_count,
                     # Exact source-pixel signature. It lets the independent
                     # round-trip validator compare the saved coordinate record
                     # with a fresh PDF extraction without visual inspection.
@@ -169,6 +178,22 @@ def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[l
             )
     return (
         sorted(stones, key=lambda stone: (str(stone["team"]), float(stone["x_m"]), float(stone["y_m"]))),
+        house_position,
+        rotation_degrees,
+    )
+
+
+def extract_stones(image_path: Path, red_team: str, yellow_team: str) -> tuple[list[dict[str, object]], str, int]:
+    """Compatibility view used until an end-level selector is enabled.
+
+    This conservative view reproduces the prior rule: exclude blue-marked
+    candidates.  It is deliberately not presented as final ground truth; the
+    selector under development will operate on :func:`extract_stone_candidates`
+    and publish an independently audited replacement.
+    """
+    candidates, house_position, rotation_degrees = extract_stone_candidates(image_path, red_team, yellow_team)
+    return (
+        [candidate for candidate in candidates if not bool(candidate["has_royal_blue_mark"])],
         house_position,
         rotation_degrees,
     )

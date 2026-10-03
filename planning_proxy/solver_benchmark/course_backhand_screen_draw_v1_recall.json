@@ -1,0 +1,54 @@
+{
+  "schema": "planning_proxy_course_backhand_screen_draw_recall_v1",
+  "dataset": "D:\\Desktop\\冰壶\\DCCourse\\planning_proxy\\solver_benchmark\\course_backhand_screen_draw_v1.json",
+  "budget_seconds": 105.0,
+  "sample_count": 3,
+  "passed_count": 3,
+  "rows": [
+    {
+      "id": "课程实战后手_前场守壶_第2壶",
+      "passed": true,
+      "elapsed_seconds": 4.4816504000045825,
+      "mode": "backhand_draw_around_screen_after_unreachable_takeout",
+      "bestshot": [
+        3.080000162124634,
+        -1.6399999856948853,
+        9.771428108215332
+      ],
+      "previous_fallback_target": null,
+      "selected_own_in_house_worst": 1,
+      "planner_budget_exceeded": false,
+      "draw_solver": "newton_clear_path"
+    },
+    {
+      "id": "课程实战后手_遮挡深壶_第12壶",
+      "passed": true,
+      "elapsed_seconds": 6.299894600000698,
+      "mode": "backhand_draw_around_screen_after_unreachable_takeout",
+      "bestshot": [
+        3.080000162124634,
+        -1.6399999856948853,
+        9.771428108215332
+      ],
+      "previous_fallback_target": 6,
+      "selected_own_in_house_worst": 1,
+      "planner_budget_exceeded": false,
+      "draw_solver": "newton_clear_path"
+    },
+    {
+      "id": "课程实战后手_遮挡深壶_第16壶",
+      "passed": true,
+      "elapsed_seconds": 7.124898100002611,
+      "mode": "backhand_draw_around_screen_after_unreachable_takeout",
+      "bestshot": [
+        3.080000162124634,
+        -1.75,
+        9.771428108215332
+      ],
+      "previous_fallback_target": 14,
+      "selected_own_in_house_worst": 1,
+      "planner_budget_exceeded": false,
+      "draw_solver": "newton_clear_path"
+    }
+  ]
+}

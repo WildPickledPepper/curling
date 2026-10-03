@@ -1,0 +1,3371 @@
+{
+  "schema": "planning_proxy_historical_targeted_draw_bulk_v2",
+  "scope": "从历史困难类别抽取、按壶面和目标区去重、严格 PhysX 多种子正向确认的净空正样本",
+  "requested_quota": {
+    "process_first_enemy_and_score / DRAW_FIRST_INNER_ANCHOR": 12,
+    "fourth_rebuild_first_anchor_around_centre_guard / REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD": 10,
+    "fifth_add_second_staggered_inner_layer / ADD_SECOND_STAGGERED_INNER_LAYER": 7,
+    "restore_second_scoring_stone / RESTORE_STAGGERED_INNER_PAIR": 2,
+    "seventh_add_second_scoring_layer_without_enemy_house_threat / ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES": 3,
+    "seventh_outdraw_single_outer_house_threat / OUTDRAW_SINGLE_OUTER_HOUSE_THREAT": 2,
+    "screen_single_inner_anchor / ADD_ANCHOR_SIDE_SCREEN": 1,
+    "sixth_add_second_inner_layer_around_external_guard / ADD_SECOND_INNER_LAYER_AROUND_EXTERNAL_GUARD": 1
+  },
+  "accepted_by_category": {
+    "process_first_enemy_and_score / DRAW_FIRST_INNER_ANCHOR": 3,
+    "fourth_rebuild_first_anchor_around_centre_guard / REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD": 4,
+    "fifth_add_second_staggered_inner_layer / ADD_SECOND_STAGGERED_INNER_LAYER": 2,
+    "restore_second_scoring_stone / RESTORE_STAGGERED_INNER_PAIR": 2,
+    "seventh_add_second_scoring_layer_without_enemy_house_threat / ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES": 3,
+    "seventh_outdraw_single_outer_house_threat / OUTDRAW_SINGLE_OUTER_HOUSE_THREAT": 2,
+    "screen_single_inner_anchor / ADD_ANCHOR_SIDE_SCREEN": 1,
+    "sixth_add_second_inner_layer_around_external_guard / ADD_SECOND_INNER_LAYER_AROUND_EXTERNAL_GUARD": 1
+  },
+  "original_structure_count": 18,
+  "strictly_verified_mirror_count": 15,
+  "sample_count": 33,
+  "samples": [
+    {
+      "source": "planning_proxy/runs/core_state_machine_ppo_seed21457791_full.jsonl",
+      "source_shot": 3,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3748130798339844,
+          "y": 7.172338022949219,
+          "yaw": -1.391229285093585,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21473629,
+          21578358,
+          21683087
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21473629,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2344329124848136,
+            "active_final": [
+              1.7684898376464844,
+              4.547002329589844
+            ]
+          },
+          {
+            "physics_seed": 21578358,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22277233738711796,
+            "active_final": [
+              1.7746734619140625,
+              4.557279124023438
+            ]
+          },
+          {
+            "physics_seed": 21683087,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20954976874246276,
+            "active_final": [
+              1.7669677734375,
+              4.585866465332032
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "process_first_enemy_and_score",
+        "strategy": "DRAW_FIRST_INNER_ANCHOR"
+      },
+      "id": "历史困难净空_v2_000"
+    },
+    {
+      "source": "planning_proxy/runs/k3_generic_reply_screen_ppo_seed21457792_exact_full.jsonl",
+      "source_shot": 3,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3746261596679688,
+          "y": 7.1269965312500005,
+          "yaw": -1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21473630,
+          21578359,
+          21683088
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21473630,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2151353562747455,
+            "active_final": [
+              1.7672500610351562,
+              4.576650156738282
+            ]
+          },
+          {
+            "physics_seed": 21578359,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20780700867854918,
+            "active_final": [
+              1.7689628601074219,
+              4.586148752929688
+            ]
+          },
+          {
+            "physics_seed": 21683088,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17924356439224584,
+            "active_final": [
+              1.7589073181152344,
+              4.668447031738282
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "process_first_enemy_and_score",
+        "strategy": "DRAW_FIRST_INNER_ANCHOR"
+      },
+      "id": "历史困难净空_v2_001"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_first_player_after_mads.jsonl",
+      "source_shot": 3,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375030517578125,
+          "y": 7.156766428710938,
+          "yaw": -1.3685241043602143,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            2.0,
+            5.2
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20276555,
+          20381284,
+          20486013
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1153350997863636,
+          1.6960882944658822,
+          -15.201020069077728
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20276555,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.236269778046715,
+            "active_final": [
+              1.7637443542480469,
+              5.197415842773438
+            ]
+          },
+          {
+            "physics_seed": 20381284,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2314682578439822,
+            "active_final": [
+              1.7687149047851562,
+              5.190793528320313
+            ]
+          },
+          {
+            "physics_seed": 20486013,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.23002835862792392,
+            "active_final": [
+              1.7723503112792969,
+              5.1670050761718755
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "process_first_enemy_and_score",
+        "strategy": "DRAW_FIRST_INNER_ANCHOR"
+      },
+      "id": "历史困难净空_v2_002"
+    },
+    {
+      "source": "planning_proxy/runs/current_general_aggressive_seed210_exact_full_r2.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375,
+          "y": 7.134458079101563,
+          "yaw": -1.360638284673274,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.529144287109375,
+          "y": 7.497731699707032,
+          "yaw": -1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2515754699707031,
+          "y": 4.305303110839844,
+          "yaw": 0.42468861544328296,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          47724,
+          152453,
+          257182
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          0.6500000357627869,
+          -7.628571033477783
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 47724,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2118198174119197,
+            "active_final": [
+              1.8644218444824219,
+              4.514249338867188
+            ]
+          },
+          {
+            "physics_seed": 152453,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.30363365687375277,
+            "active_final": [
+              1.8527336120605469,
+              4.421895518066407
+            ]
+          },
+          {
+            "physics_seed": 257182,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2375073285989734,
+            "active_final": [
+              1.8569107055664062,
+              4.489675059082032
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "id": "历史困难净空_v2_003"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3750686645507812,
+          "y": 7.219869150878907,
+          "yaw": -1.382394938723111,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.24576568603515625,
+          "y": 4.4354987285156255,
+          "yaw": 0.36486548364753524,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20761093,
+          20865822,
+          20970551
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22857174595940882,
+            "active_final": [
+              1.7705764770507812,
+              4.5531745097656255
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2223203909290412,
+            "active_final": [
+              1.7693367004394531,
+              4.563451304199219
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19782251646729576,
+            "active_final": [
+              1.7681083679199219,
+              4.604215159179688
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "id": "历史困难净空_v2_004"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3748130798339844,
+          "y": 7.172338022949219,
+          "yaw": -1.391229285093585,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2701072692871094,
+          "y": 4.293553843261719,
+          "yaw": -0.006800426707496531,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505305,
+          21610034,
+          21714763
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21054574788074054,
+            "active_final": [
+              1.7629814147949219,
+              4.589452280761719
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.23628428538179466,
+            "active_final": [
+              1.7632713317871094,
+              4.549588694335938
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.212961764704399,
+            "active_final": [
+              1.7681198120117188,
+              4.579000010253907
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "id": "历史困难净空_v2_005"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3746261596679688,
+          "y": 7.1269965312500005,
+          "yaw": -1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.932,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505306,
+          21610035,
+          21714764
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.8600000143051147,
+          8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505306,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20307155177863814,
+            "active_final": [
+              1.7657814025878906,
+              4.5983405253906255
+            ]
+          },
+          {
+            "physics_seed": 21610035,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21556204267131382,
+            "active_final": [
+              1.769989013671875,
+              4.572804941894532
+            ]
+          },
+          {
+            "physics_seed": 21714764,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.22531149587232177,
+            "active_final": [
+              1.7678031921386719,
+              4.5607123515625005
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "id": "历史困难净空_v2_006"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_full_auto_k1k8_corrected_k7k8_seed20260718.jsonl",
+      "source_shot": 9,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3747596740722656,
+          "y": 7.136647715332032,
+          "yaw": -1.3912856520506038,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.2004661560058594,
+          "y": 4.4561286113281255,
+          "yaw": 1.9024394125909199,
+          "enabled": true
+        },
+        {
+          "index": 6,
+          "owner": "self",
+          "x": 0.16892623901367188,
+          "y": 6.461263193847657,
+          "yaw": 1.4406758864795337,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 8,
+        "active_target_region": {
+          "center": [
+            2.65,
+            4.855
+          ],
+          "radius_m": 0.12
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          6
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20324070,
+          20428799,
+          20533528
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.064017349489722,
+          1.7017069271147187,
+          -9.5414591237444
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20324070,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.0006838161860128921,
+            "active_final": [
+              2.6505088806152344,
+              4.854543223144532
+            ]
+          },
+          {
+            "physics_seed": 20428799,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04276883169583377,
+            "active_final": [
+              2.6453018188476562,
+              4.812490000488282
+            ]
+          },
+          {
+            "physics_seed": 20533528,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04472054207223227,
+            "active_final": [
+              2.6527976989746094,
+              4.899632944824219
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fifth_add_second_staggered_inner_layer",
+        "strategy": "ADD_SECOND_STAGGERED_INNER_LAYER"
+      },
+      "id": "历史困难净空_v2_007"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_full_auto_k1k8_k5historical_seed20260718.jsonl",
+      "source_shot": 9,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3747596740722656,
+          "y": 7.136647715332032,
+          "yaw": -1.3912856520506038,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.2004661560058594,
+          "y": 4.4561286113281255,
+          "yaw": 1.9024394125909199,
+          "enabled": true
+        },
+        {
+          "index": 6,
+          "owner": "self",
+          "x": 0.16892623901367188,
+          "y": 6.461263193847657,
+          "yaw": 1.4406758864795337,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 8,
+        "active_target_region": {
+          "center": [
+            2.139136,
+            5.123235
+          ],
+          "radius_m": 0.153234
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          6
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20324070,
+          20428799,
+          20533528
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.036203556432771,
+          -1.6335361436857352,
+          9.795194488810656
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20324070,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.0037267612903443864,
+            "active_final": [
+              2.1380691528320312,
+              5.126805796386719
+            ]
+          },
+          {
+            "physics_seed": 20428799,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.03948471236759707,
+            "active_final": [
+              2.1432647705078125,
+              5.0839667460937505
+            ]
+          },
+          {
+            "physics_seed": 20533528,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04905812048336669,
+            "active_final": [
+              2.13555908203125,
+              5.1721625468750005
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fifth_add_second_staggered_inner_layer",
+        "strategy": "ADD_SECOND_STAGGERED_INNER_LAYER"
+      },
+      "id": "历史困难净空_v2_008"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_first_player_full_new_trade.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.375030517578125,
+          "y": 7.156766428710938,
+          "yaw": -1.3685241043602143,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.5012550354003906,
+          "y": 5.258809580566407,
+          "yaw": 1.8640932876303453,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.529388427734375,
+          "y": 7.494649424316407,
+          "yaw": -1.3731626227256473,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20308231,
+          20412960,
+          20517689
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.170000047683716,
+          1.694999976158142,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20308231,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.27110771970945136,
+            "active_final": [
+              1.7428131103515625,
+              4.645757212402344
+            ]
+          },
+          {
+            "physics_seed": 20412960,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.28433158502028166,
+            "active_final": [
+              1.7553291320800781,
+              4.7048468730468755
+            ]
+          },
+          {
+            "physics_seed": 20517689,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2689086550333266,
+            "active_final": [
+              1.7435073852539062,
+              4.640767588378907
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "restore_second_scoring_stone",
+        "strategy": "RESTORE_STAGGERED_INNER_PAIR"
+      },
+      "id": "历史困难净空_v2_009"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_loop_k4_seed20260718.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3747596740722656,
+          "y": 7.136647715332032,
+          "yaw": -1.3912856369392943,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.514484405517578,
+          "y": 5.046208872558594,
+          "yaw": -2.236785290560571,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.5290412902832031,
+          "y": 7.4265265605468755,
+          "yaw": -1.3931453968843586,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20308232,
+          20412961,
+          20517690
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.0577425430863006,
+          -1.1888214194880011,
+          6.415659974744221
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20308232,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1197988257280956,
+            "active_final": [
+              2.1197967529296875,
+              4.560704722167969
+            ]
+          },
+          {
+            "physics_seed": 20412961,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12145200704956603,
+            "active_final": [
+              2.1178932189941406,
+              4.5891852519531255
+            ]
+          },
+          {
+            "physics_seed": 20517690,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11989366525846704,
+            "active_final": [
+              2.1162986755371094,
+              4.589139475585938
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "restore_second_scoring_stone",
+        "strategy": "RESTORE_STAGGERED_INNER_PAIR"
+      },
+      "id": "历史困难净空_v2_010"
+    },
+    {
+      "source": "planning_proxy/runs/current_general_aggressive_seed210_exact_full_r2.jsonl",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.529144287109375,
+          "y": 7.497731699707032,
+          "yaw": -1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2515754699707031,
+          "y": 4.305303110839844,
+          "yaw": 0.42468861544328296,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 1.4934883117675781,
+          "y": 5.044126047851563,
+          "yaw": 0.6676535361118305,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 2.2927589416503906,
+          "y": 7.926656260253907,
+          "yaw": 0.295332985154759,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.75,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          1,
+          5,
+          8,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.5499999523162842,
+          -7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11493568328635087,
+            "active_final": [
+              2.798847198486328,
+              4.455960764648438
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.08498953403909994,
+            "active_final": [
+              2.800647735595703,
+              4.491750254394532
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.07563966981168226,
+            "active_final": [
+              2.7993927001953125,
+              4.502713694335938
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "id": "历史困难净空_v2_011"
+    },
+    {
+      "source": "planning_proxy/runs/k5_contract_first_ppo_seed21457792_full.jsonl",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.4412460327148438,
+          "y": 6.277654185058594,
+          "yaw": -1.445718390779101,
+          "enabled": true
+        },
+        {
+          "index": 7,
+          "owner": "opponent",
+          "x": 4.343605041503906,
+          "y": 4.493596567871094,
+          "yaw": 0.1276094757640848,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 1.3752479553222656,
+          "y": 7.5920539042968755,
+          "yaw": 1.3130723565096443,
+          "enabled": true
+        },
+        {
+          "index": 10,
+          "owner": "self",
+          "x": 2.3466224670410156,
+          "y": 7.413724436523438,
+          "yaw": 0.7641976823266945,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 1.0601081848144531,
+          "y": 6.520558848144532,
+          "yaw": 0.17896911269905555,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          7,
+          8,
+          10,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21552820,
+          21657549,
+          21762278
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.5399999618530273,
+          7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21552820,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1275054094127076,
+            "active_final": [
+              1.9121017456054688,
+              4.4676337382812505
+            ]
+          },
+          {
+            "physics_seed": 21657549,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11092296802888016,
+            "active_final": [
+              1.9109954833984375,
+              4.493802561523438
+            ]
+          },
+          {
+            "physics_seed": 21762278,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1443184994141367,
+            "active_final": [
+              1.9154472351074219,
+              4.443044199707032
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "id": "历史困难净空_v2_012"
+    },
+    {
+      "source": "planning_proxy/runs/k5_displace_contract_ppo_seed21457791_full.jsonl",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 0.20930862426757812,
+          "y": 5.183530344726563,
+          "yaw": -1.455958437809847,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.519458770751953,
+          "y": 4.8798957011718755,
+          "yaw": 3.0663001283390052,
+          "enabled": true
+        },
+        {
+          "index": 10,
+          "owner": "self",
+          "x": 2.581165313720703,
+          "y": 7.8935065410156255,
+          "yaw": 0.0957797184233902,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 2.278167724609375,
+          "y": 7.921536936523438,
+          "yaw": -0.385257984160052,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          10,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21552819,
+          21657548,
+          21762277
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.5499999523162842,
+          7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21552819,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.13718528180439915,
+            "active_final": [
+              1.9088020324707031,
+              4.457517161132813
+            ]
+          },
+          {
+            "physics_seed": 21657548,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.11724649611438043,
+            "active_final": [
+              1.9022026062011719,
+              4.495328440429688
+            ]
+          },
+          {
+            "physics_seed": 21762277,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12409959485812525,
+            "active_final": [
+              1.9019012451171875,
+              4.4839911601562505
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "id": "历史困难净空_v2_013"
+    },
+    {
+      "source": "planning_proxy/runs/k7_outer_threat_outdraw_aggressive_seed210_exact_full.jsonl",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 1.5818977355957031,
+          "y": 6.311818613769532,
+          "yaw": -0.7781800935092253,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 3.551921844482422,
+          "y": 4.802365793945313,
+          "yaw": 0.014843732399352176,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.375,
+            4.88
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.5499999523162842,
+          -9.514286041259766
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2396369051938605,
+            "active_final": [
+              2.4904022216796875,
+              4.669980540039063
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21012940666185972,
+            "active_final": [
+              2.4924774169921875,
+              4.705777659179688
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.200973888704097,
+            "active_final": [
+              2.491016387939453,
+              4.7158942363281255
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_outdraw_single_outer_house_threat",
+        "strategy": "OUTDRAW_SINGLE_OUTER_HOUSE_THREAT"
+      },
+      "id": "历史困难净空_v2_014"
+    },
+    {
+      "source": "planning_proxy/runs/k8_back_house_reclaim_aggressive_seed210_exact_full.jsonl",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 0.7823486328125,
+          "y": 5.522176279785157,
+          "yaw": 0.47590605376841777,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.529144287109375,
+          "y": 7.497731699707032,
+          "yaw": -1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 0.2515754699707031,
+          "y": 4.305303110839844,
+          "yaw": 0.42468861544328296,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 3.6423873901367188,
+          "y": 4.967061533691407,
+          "yaw": 0.12144784806352504,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.375,
+            4.88
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          5,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.5499999523162842,
+          -9.514286041259766
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2396369051938605,
+            "active_final": [
+              2.4904022216796875,
+              4.669980540039063
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.21012940666185972,
+            "active_final": [
+              2.4924774169921875,
+              4.705777659179688
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.200973888704097,
+            "active_final": [
+              2.491016387939453,
+              4.7158942363281255
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_outdraw_single_outer_house_threat",
+        "strategy": "OUTDRAW_SINGLE_OUTER_HOUSE_THREAT"
+      },
+      "id": "历史困难净空_v2_015"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_loop_k4_screen_seed20260718.jsonl",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3747596740722656,
+          "y": 7.136647715332032,
+          "yaw": -1.3912856369392943,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.514484405517578,
+          "y": 5.046208872558594,
+          "yaw": -2.236785290560571,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 1.5290412902832031,
+          "y": 7.4265265605468755,
+          "yaw": -1.3931453968843586,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.93,
+            6.42
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20308232,
+          20412961,
+          20517690
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          2.991852124576861,
+          -1.669249176915497,
+          15.7
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20308232,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.07418182668425853,
+            "active_final": [
+              2.9160842895507812,
+              6.347135081054688
+            ]
+          },
+          {
+            "physics_seed": 20412961,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04815308486922657,
+            "active_final": [
+              2.9141006469726562,
+              6.374547495605469
+            ]
+          },
+          {
+            "physics_seed": 20517690,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.050602831861112425,
+            "active_final": [
+              2.9102134704589844,
+              6.3734259746093755
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "screen_single_inner_anchor",
+        "strategy": "ADD_ANCHOR_SIDE_SCREEN"
+      },
+      "id": "历史困难净空_v2_016"
+    },
+    {
+      "source": "planning_proxy/runs/k6_second_inner_contract_ppo_seed21457791_stop12.jsonl",
+      "source_shot": 11,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 0.20930862426757812,
+          "y": 5.183530344726563,
+          "yaw": -1.455958437809847,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.519458770751953,
+          "y": 4.8798957011718755,
+          "yaw": 3.0663001283390052,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 1.617645263671875,
+          "y": 7.754445566894532,
+          "yaw": 2.165571992426525,
+          "enabled": true
+        },
+        {
+          "index": 9,
+          "owner": "opponent",
+          "x": 2.7091522216796875,
+          "y": 7.625707163574219,
+          "yaw": 1.1398814764359075,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 10,
+        "active_target_region": {
+          "center": [
+            1.9,
+            4.46
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          8,
+          9
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21536981,
+          21641710,
+          21746439
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.200000047683716,
+          1.8700000047683716,
+          -15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21536981,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.05039800135440173,
+            "active_final": [
+              1.8922615051269531,
+              4.4101996562500005
+            ]
+          },
+          {
+            "physics_seed": 21641710,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04951867267285574,
+            "active_final": [
+              1.89471435546875,
+              4.410764231445313
+            ]
+          },
+          {
+            "physics_seed": 21746439,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.05271982681393904,
+            "active_final": [
+              1.8969383239746094,
+              4.407369150878907
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "sixth_add_second_inner_layer_around_external_guard",
+        "strategy": "ADD_SECOND_INNER_LAYER_AROUND_EXTERNAL_GUARD"
+      },
+      "id": "历史困难净空_v2_017"
+    },
+    {
+      "source": "planning_proxy/runs/core_state_machine_ppo_seed21457791_full.jsonl [左右镜像]",
+      "source_shot": 3,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3751869201660156,
+          "y": 7.172338022949219,
+          "yaw": 1.391229285093585,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21473629,
+          21578358,
+          21683087
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21473629,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20342612300828994,
+            "active_final": [
+              2.9327125549316406,
+              4.547002329589844
+            ]
+          },
+          {
+            "physics_seed": 21578358,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19143866508126506,
+            "active_final": [
+              2.926525115966797,
+              4.5572943828125005
+            ]
+          },
+          {
+            "physics_seed": 21683087,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17373595747939422,
+            "active_final": [
+              2.9342269897460938,
+              4.585866465332032
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "process_first_enemy_and_score",
+        "strategy": "DRAW_FIRST_INNER_ANCHOR"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_018"
+    },
+    {
+      "source": "planning_proxy/runs/k3_generic_reply_screen_ppo_seed21457792_exact_full.jsonl [左右镜像]",
+      "source_shot": 3,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3753738403320312,
+          "y": 7.1269965312500005,
+          "yaw": 1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 2,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21473630,
+          21578359,
+          21683088
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21473630,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.18050753035124945,
+            "active_final": [
+              2.933940887451172,
+              4.576650156738282
+            ]
+          },
+          {
+            "physics_seed": 21578359,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17220202590035227,
+            "active_final": [
+              2.932231903076172,
+              4.586141123535157
+            ]
+          },
+          {
+            "physics_seed": 21683088,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.13270998890129532,
+            "active_final": [
+              2.942279815673828,
+              4.668454661132813
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "process_first_enemy_and_score",
+        "strategy": "DRAW_FIRST_INNER_ANCHOR"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_019"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed20713579_exact_full.jsonl [左右镜像]",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3749313354492188,
+          "y": 7.219869150878907,
+          "yaw": 1.382394938723111,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.504234313964844,
+          "y": 4.4354987285156255,
+          "yaw": -0.36486548364753524,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20761093,
+          20865822,
+          20970551
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19715787299769658,
+            "active_final": [
+              2.930622100830078,
+              4.5531745097656255
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1895523427809903,
+            "active_final": [
+              2.931865692138672,
+              4.5634589335937505
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.15974953980404727,
+            "active_final": [
+              2.933094024658203,
+              4.604215159179688
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_020"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457791_exact_full.jsonl [左右镜像]",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3751869201660156,
+          "y": 7.172338022949219,
+          "yaw": 1.391229285093585,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.479892730712891,
+          "y": 4.293553843261719,
+          "yaw": 0.006800426707496531,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505305,
+          21610034,
+          21714763
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17381473841073672,
+            "active_final": [
+              2.938213348388672,
+              4.5894599101562505
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.20431212493907586,
+            "active_final": [
+              2.93792724609375,
+              4.549588694335938
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.17815229888538295,
+            "active_final": [
+              2.933074951171875,
+              4.579000010253907
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_021"
+    },
+    {
+      "source": "planning_proxy/runs/k3_guard_recovery_current_ppo_seed21457792_exact_full.jsonl [左右镜像]",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3753738403320312,
+          "y": 7.1269965312500005,
+          "yaw": 1.4077232855817636,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.818,
+            4.715
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21505306,
+          21610035,
+          21714764
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.8600000143051147,
+          -8.571428298950195
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21505306,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1655234659256287,
+            "active_final": [
+              2.9354248046875,
+              4.5983405253906255
+            ]
+          },
+          {
+            "physics_seed": 21610035,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.18176001681609613,
+            "active_final": [
+              2.93121337890625,
+              4.572804941894532
+            ]
+          },
+          {
+            "physics_seed": 21714764,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.19265912629334178,
+            "active_final": [
+              2.933391571044922,
+              4.560719980957032
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fourth_rebuild_first_anchor_around_centre_guard",
+        "strategy": "REBUILD_FIRST_INNER_ANCHOR_AROUND_CENTRE_GUARD"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_022"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_full_auto_k1k8_corrected_k7k8_seed20260718.jsonl [左右镜像]",
+      "source_shot": 9,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3752403259277344,
+          "y": 7.136647715332032,
+          "yaw": 1.3912856520506038,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.5495338439941406,
+          "y": 4.4561286113281255,
+          "yaw": -1.9024394125909199,
+          "enabled": true
+        },
+        {
+          "index": 6,
+          "owner": "self",
+          "x": 4.581073760986328,
+          "y": 6.461263193847657,
+          "yaw": -1.4406758864795337,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 8,
+        "active_target_region": {
+          "center": [
+            2.1,
+            4.855
+          ],
+          "radius_m": 0.12
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          6
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20324070,
+          20428799,
+          20533528
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.064017349489722,
+          -1.7017069271147187,
+          9.5414591237444
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20324070,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04931630411158859,
+            "active_final": [
+              2.0506858825683594,
+              4.8545355937500005
+            ]
+          },
+          {
+            "physics_seed": 20428799,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.061265958344283486,
+            "active_final": [
+              2.055889129638672,
+              4.8124823710937505
+            ]
+          },
+          {
+            "physics_seed": 20533528,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.0682280676552598,
+            "active_final": [
+              2.048389434814453,
+              4.899625315429688
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fifth_add_second_staggered_inner_layer",
+        "strategy": "ADD_SECOND_STAGGERED_INNER_LAYER"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_023"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_full_auto_k1k8_k5historical_seed20260718.jsonl [左右镜像]",
+      "source_shot": 9,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3752403259277344,
+          "y": 7.136647715332032,
+          "yaw": 1.3912856520506038,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.5495338439941406,
+          "y": 4.4561286113281255,
+          "yaw": -1.9024394125909199,
+          "enabled": true
+        },
+        {
+          "index": 6,
+          "owner": "self",
+          "x": 4.581073760986328,
+          "y": 6.461263193847657,
+          "yaw": -1.4406758864795337,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 8,
+        "active_target_region": {
+          "center": [
+            2.610864,
+            5.123235
+          ],
+          "radius_m": 0.153234
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          6
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20324070,
+          20428799,
+          20533528
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.036203556432771,
+          1.6335361436857352,
+          -9.795194488810656
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20324070,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.04789571433721618,
+            "active_final": [
+              2.5631027221679688,
+              5.126821055175782
+            ]
+          },
+          {
+            "physics_seed": 20428799,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.06592596956038185,
+            "active_final": [
+              2.557903289794922,
+              5.083974375488282
+            ]
+          },
+          {
+            "physics_seed": 20533528,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.06665936997490399,
+            "active_final": [
+              2.5656166076660156,
+              5.172185435058594
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "fifth_add_second_staggered_inner_layer",
+        "strategy": "ADD_SECOND_STAGGERED_INNER_LAYER"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_024"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_loop_k4_seed20260718.jsonl [左右镜像]",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3752403259277344,
+          "y": 7.136647715332032,
+          "yaw": 1.3912856369392943,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.235515594482422,
+          "y": 5.046208872558594,
+          "yaw": 2.236785290560571,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 3.220958709716797,
+          "y": 7.4265265605468755,
+          "yaw": 1.3931453968843586,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            2.75,
+            4.56
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20308232,
+          20412961,
+          20517690
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.0577425430863006,
+          1.1888214194880011,
+          -6.415659974744221
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20308232,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.16859974509654216,
+            "active_final": [
+              2.581401824951172,
+              4.560727610351563
+            ]
+          },
+          {
+            "physics_seed": 20412961,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.16922406506494603,
+            "active_final": [
+              2.58331298828125,
+              4.589192881347657
+            ]
+          },
+          {
+            "physics_seed": 20517690,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.16765695811143624,
+            "active_final": [
+              2.5848960876464844,
+              4.589147104980469
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "restore_second_scoring_stone",
+        "strategy": "RESTORE_STAGGERED_INNER_PAIR"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_025"
+    },
+    {
+      "source": "planning_proxy/runs/current_general_aggressive_seed210_exact_full_r2.jsonl [左右镜像]",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 3.220855712890625,
+          "y": 7.497731699707032,
+          "yaw": 1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.498424530029297,
+          "y": 4.305303110839844,
+          "yaw": -0.42468861544328296,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 3.256511688232422,
+          "y": 5.044126047851563,
+          "yaw": -0.6676535361118305,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 2.4572410583496094,
+          "y": 7.926656260253907,
+          "yaw": -0.295332985154759,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.0,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          1,
+          5,
+          8,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.5499999523162842,
+          7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.14271911859745892,
+            "active_final": [
+              1.9023361206054688,
+              4.455930247070313
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12065036515338344,
+            "active_final": [
+              1.9005088806152344,
+              4.491750254394532
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1137186207245845,
+            "active_final": [
+              1.9017868041992188,
+              4.502675547363282
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_026"
+    },
+    {
+      "source": "planning_proxy/runs/k5_contract_first_ppo_seed21457792_full.jsonl [左右镜像]",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3087539672851562,
+          "y": 6.277654185058594,
+          "yaw": 1.445718390779101,
+          "enabled": true
+        },
+        {
+          "index": 7,
+          "owner": "opponent",
+          "x": 0.40639495849609375,
+          "y": 4.493596567871094,
+          "yaw": -0.1276094757640848,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 3.3747520446777344,
+          "y": 7.5920539042968755,
+          "yaw": -1.3130723565096443,
+          "enabled": true
+        },
+        {
+          "index": 10,
+          "owner": "self",
+          "x": 2.4033775329589844,
+          "y": 7.413724436523438,
+          "yaw": -0.7641976823266945,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 3.689891815185547,
+          "y": 6.520558848144532,
+          "yaw": -0.17896911269905555,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.75,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          7,
+          8,
+          10,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21552820,
+          21657549,
+          21762278
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.5399999618530273,
+          -7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21552820,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.10027553416972854,
+            "active_final": [
+              2.7890701293945312,
+              4.467648997070313
+            ]
+          },
+          {
+            "physics_seed": 21657549,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.07742434944127591,
+            "active_final": [
+              2.790180206298828,
+              4.4938178203125005
+            ]
+          },
+          {
+            "physics_seed": 21762278,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.12224142062143384,
+            "active_final": [
+              2.7857322692871094,
+              4.4430976054687505
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_027"
+    },
+    {
+      "source": "planning_proxy/runs/k5_displace_contract_ppo_seed21457791_full.jsonl [左右镜像]",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 4.540691375732422,
+          "y": 5.183530344726563,
+          "yaw": 1.455958437809847,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.230541229248047,
+          "y": 4.8798957011718755,
+          "yaw": -3.0663001283390052,
+          "enabled": true
+        },
+        {
+          "index": 10,
+          "owner": "self",
+          "x": 2.168834686279297,
+          "y": 7.8935065410156255,
+          "yaw": -0.0957797184233902,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 2.471832275390625,
+          "y": 7.921536936523438,
+          "yaw": 0.385257984160052,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.75,
+            4.56
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          10,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21552819,
+          21657548,
+          21762277
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          1.5499999523162842,
+          -7.371428489685059
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21552819,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.1108863310905635,
+            "active_final": [
+              2.7923812866210938,
+              4.4575324199218755
+            ]
+          },
+          {
+            "physics_seed": 21657548,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.08111966410154962,
+            "active_final": [
+              2.798969268798828,
+              4.495328440429688
+            ]
+          },
+          {
+            "physics_seed": 21762277,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.09058301613394618,
+            "active_final": [
+              2.799285888671875,
+              4.483998789550782
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_add_second_scoring_layer_without_enemy_house_threat",
+        "strategy": "ADD_SECOND_SCORING_LAYER_WITH_EXTERNAL_OBSTACLES"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_028"
+    },
+    {
+      "source": "planning_proxy/runs/k7_outer_threat_outdraw_aggressive_seed210_exact_full.jsonl [左右镜像]",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 3.168102264404297,
+          "y": 6.311818613769532,
+          "yaw": 0.7781800935092253,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 1.1980781555175781,
+          "y": 4.802365793945313,
+          "yaw": -0.014843732399352176,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.375,
+            4.88
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.5499999523162842,
+          9.514286041259766
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2666272565524402,
+            "active_final": [
+              2.2107772827148438,
+              4.669950022460938
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.24085752432161983,
+            "active_final": [
+              2.208698272705078,
+              4.705770029785157
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2326008305434543,
+            "active_final": [
+              2.2101669311523438,
+              4.715886606933594
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_outdraw_single_outer_house_threat",
+        "strategy": "OUTDRAW_SINGLE_OUTER_HOUSE_THREAT"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_029"
+    },
+    {
+      "source": "planning_proxy/runs/k8_back_house_reclaim_aggressive_seed210_exact_full.jsonl [左右镜像]",
+      "source_shot": 13,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 3.9676513671875,
+          "y": 5.522176279785157,
+          "yaw": -0.47590605376841777,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 3.220855712890625,
+          "y": 7.497731699707032,
+          "yaw": 1.3726105634858232,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 4.498424530029297,
+          "y": 4.305303110839844,
+          "yaw": -0.42468861544328296,
+          "enabled": true
+        },
+        {
+          "index": 11,
+          "owner": "opponent",
+          "x": 1.1076126098632812,
+          "y": 4.967061533691407,
+          "yaw": -0.12144784806352504,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            2.375,
+            4.88
+          ],
+          "radius_m": 0.35
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          5,
+          11
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          95238,
+          199967,
+          304696
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.080000162124634,
+          -1.5499999523162842,
+          9.514286041259766
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 95238,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2666272565524402,
+            "active_final": [
+              2.2107772827148438,
+              4.669950022460938
+            ]
+          },
+          {
+            "physics_seed": 199967,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.24085752432161983,
+            "active_final": [
+              2.208698272705078,
+              4.705770029785157
+            ]
+          },
+          {
+            "physics_seed": 304696,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.2326008305434543,
+            "active_final": [
+              2.2101669311523438,
+              4.715886606933594
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "seventh_outdraw_single_outer_house_threat",
+        "strategy": "OUTDRAW_SINGLE_OUTER_HOUSE_THREAT"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_030"
+    },
+    {
+      "source": "planning_proxy/runs/ppo_loop_k4_screen_seed20260718.jsonl [左右镜像]",
+      "source_shot": 7,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.3752403259277344,
+          "y": 7.136647715332032,
+          "yaw": 1.3912856369392943,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.235515594482422,
+          "y": 5.046208872558594,
+          "yaw": 2.236785290560571,
+          "enabled": true
+        },
+        {
+          "index": 5,
+          "owner": "opponent",
+          "x": 3.220958709716797,
+          "y": 7.4265265605468755,
+          "yaw": 1.3931453968843586,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 6,
+        "active_target_region": {
+          "center": [
+            1.8199999999999998,
+            6.42
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          5
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20308232,
+          20412961,
+          20517690
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          2.991852124576861,
+          1.669249176915497,
+          -15.7
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20308232,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.08078528566307838,
+            "active_final": [
+              1.7850990295410156,
+              6.347142710449219
+            ]
+          },
+          {
+            "physics_seed": 20412961,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.05610563820417893,
+            "active_final": [
+              1.7870864868164062,
+              6.374562754394532
+            ]
+          },
+          {
+            "physics_seed": 20517690,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.054863699557284866,
+            "active_final": [
+              1.7909774780273438,
+              6.373441233398438
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "screen_single_inner_anchor",
+        "strategy": "ADD_ANCHOR_SIDE_SCREEN"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_031"
+    },
+    {
+      "source": "planning_proxy/runs/k6_second_inner_contract_ppo_seed21457791_stop12.jsonl [左右镜像]",
+      "source_shot": 11,
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 4.540691375732422,
+          "y": 5.183530344726563,
+          "yaw": 1.455958437809847,
+          "enabled": true
+        },
+        {
+          "index": 4,
+          "owner": "self",
+          "x": 2.230541229248047,
+          "y": 4.8798957011718755,
+          "yaw": -3.0663001283390052,
+          "enabled": true
+        },
+        {
+          "index": 8,
+          "owner": "self",
+          "x": 3.132354736328125,
+          "y": 7.754445566894532,
+          "yaw": -2.165571992426525,
+          "enabled": true
+        },
+        {
+          "index": 9,
+          "owner": "opponent",
+          "x": 2.0408477783203125,
+          "y": 7.625707163574219,
+          "yaw": -1.1398814764359075,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "历史困难类别净空合同_v2",
+        "kind": "历史单目标净空反解",
+        "active_index": 10,
+        "active_target_region": {
+          "center": [
+            2.85,
+            4.46
+          ],
+          "radius_m": 0.3
+        },
+        "must_preserve_indices": [
+          0,
+          4,
+          8,
+          9
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21536981,
+          21641710,
+          21746439
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.200000047683716,
+          -1.8700000047683716,
+          15.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21536981,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.06455229029851911,
+            "active_final": [
+              2.8089370727539062,
+              4.410192026855469
+            ]
+          },
+          {
+            "physics_seed": 21641710,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.06571742487592894,
+            "active_final": [
+              2.8064727783203125,
+              4.410764231445313
+            ]
+          },
+          {
+            "physics_seed": 21746439,
+            "passed": true,
+            "contact": false,
+            "old_stones_static": true,
+            "rule_legal": true,
+            "landing_error_m": 0.06973724094256385,
+            "active_final": [
+              2.8042564392089844,
+              4.4073615214843755
+            ]
+          }
+        ]
+      },
+      "category": {
+        "phase": "sixth_add_second_inner_layer_around_external_guard",
+        "strategy": "ADD_SECOND_INNER_LAYER_AROUND_EXTERNAL_GUARD"
+      },
+      "centreline_mirrored": true,
+      "id": "历史困难净空_v2_032"
+    }
+  ]
+}

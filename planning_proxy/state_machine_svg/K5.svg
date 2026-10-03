@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="620" viewBox="0 0 2100 620">
+<style>.bg{fill:#092334}.h{fill:#f1f7fb;font:700 28px 'Microsoft YaHei',sans-serif}.cap{fill:#8fc7db;font:600 15px 'Microsoft YaHei',sans-serif}.box{stroke-width:2}.s{fill:#143e55;stroke:#58a6c1}.g{fill:#654d29;stroke:#f4c66e}.t{fill:#254d3c;stroke:#8dc9aa}.x{fill:#eaf5fa;font:600 14px 'Microsoft YaHei',sans-serif}.a{stroke:#b8d7e4;stroke-width:1.8;fill:none;marker-end:url(#m)}</style>
+<defs><marker id="m" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7Z" fill="#b8d7e4"/></marker></defs>
+<rect class="bg" width="2100" height="620" rx="20"/>
+<text class="h" x="60" y="55">K5 · 状态转移</text><text class="cap" x="60" y="85">S5（当前状态）</text><text class="cap" x="520" y="85">G5（我方策略）</text><text class="cap" x="1050" y="85">T5（独立落定状态）</text><text class="cap" x="1570" y="85">S6（后继状态）</text>
+<rect class="box s" x="60" y="120" width="400" height="70" rx="11"/><text class="x" x="80" y="162">S5^1：前肩守壶对峙</text>
+<path class="a" d="M460 155H495"/><rect class="box g" x="520" y="120" width="450" height="70" rx="11"/><text class="x" x="540" y="162">G5^1：清壶保前肩</text>
+<path class="a" d="M970 155H1035"/><rect class="box t" x="1060" y="120" width="420" height="70" rx="11"/><text class="x" x="1080" y="162">T5^1：前肩压力壶面</text>
+<rect class="box s" x="60" y="225" width="400" height="70" rx="11"/><text class="x" x="80" y="267">S5^2：一内圈锚无敌壶</text>
+<path class="a" d="M460 260H495"/><rect class="box g" x="520" y="225" width="450" height="70" rx="11"/><text class="x" x="540" y="267">G5^2：补第二错层内圈</text>
+<path class="a" d="M970 260H1035"/><rect class="box t" x="1060" y="225" width="420" height="70" rx="11"/><text class="x" x="1080" y="267">T5^2：双内圈壶面</text>
+<rect class="box s" x="60" y="330" width="400" height="70" rx="11"/><text class="x" x="80" y="372">S5^3：敌方有效威胁</text>
+<path class="a" d="M460 365H495"/><rect class="box g" x="520" y="330" width="450" height="70" rx="11"/><text class="x" x="540" y="372">G5^3：清威胁滚入防御</text>
+<path class="a" d="M970 365H1035"/><rect class="box t" x="1060" y="330" width="420" height="70" rx="11"/><text class="x" x="1080" y="372">T5^3：防御滚位壶面</text>
+<rect class="box s" x="60" y="435" width="400" height="70" rx="11"/><text class="x" x="80" y="477">S5^4：无有效敌壶</text>
+<path class="a" d="M460 470H495"/><rect class="box g" x="520" y="435" width="450" height="70" rx="11"/><text class="x" x="540" y="477">G5^4：补防御角色</text>
+<path class="a" d="M970 470H1035"/><rect class="box t" x="1060" y="435" width="420" height="70" rx="11"/><text class="x" x="1080" y="477">T5^4：补防御壶面</text>
+<rect class="box s" x="1600" y="120" width="420" height="70" rx="11"/><text class="x" x="1620" y="162">S6^1：一壶敌方威胁</text>
+<rect class="box s" x="1600" y="225" width="420" height="70" rx="11"/><text class="x" x="1620" y="267">S6^2：两壶敌方威胁</text>
+<rect class="box s" x="1600" y="330" width="420" height="70" rx="11"/><text class="x" x="1620" y="372">S6^3：多壶敌方威胁</text>
+<rect class="box s" x="1600" y="435" width="420" height="70" rx="11"/><text class="x" x="1620" y="477">S6^4：无有效敌壶</text>
+<path class="a" d="M1480 150 C1530 150,1530 155,1575 155"/>
+<path class="a" d="M1480 150 C1530 150,1530 260,1575 260"/>
+<path class="a" d="M1480 255 C1530 255,1530 260,1575 260"/>
+<path class="a" d="M1480 255 C1530 255,1530 365,1575 365"/>
+<path class="a" d="M1480 360 C1530 360,1530 365,1575 365"/>
+<path class="a" d="M1480 360 C1530 360,1530 470,1575 470"/>
+<path class="a" d="M1480 465 C1530 465,1530 155,1575 155"/>
+<path class="a" d="M1480 465 C1530 465,1530 470,1575 470"/>
+</svg>

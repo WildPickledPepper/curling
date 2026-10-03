@@ -24,8 +24,8 @@
 `extract_stone_coordinates.py` 直接从 PDF 里取出每个小盘面的内嵌图，不对整页做 OCR。
 一页是一个 End，通常有 16 个小盘面；每个小盘面是一次投壶结束后的场上状态。
 
-- 实心红、黄圆：当前仍在场的壶；
-- 空心红、黄圆，或带蓝色叉号的红、黄圆：前一位置或出界标记，**不算在场壶**；
+- 实心红、黄圆：当前仍在场的壶；黄壶内部的蓝色十字是该黄壶的绘制组成，**不能据此删壶**；
+- 空心红、黄圆：前一位置残影，**不算在场壶**；
 - 小盘面最上、最下边缘的成排小壶：尚未投出的计数，**不算在场壶**；
 - 壶中心贴近上方 back line 仍视为在场；代码只剔除顶边未投壶计数，不把 back-line 壶误删。
 
@@ -63,7 +63,27 @@ python training_data\gushue_shotbook\build_structured_shotbook.py
 - `coordinates/gushue_structured_ends.jsonl`：每局的先后手、实际下一局后手、该局得分和累计比分，以及是否提前结束。
 - `coordinates/gushue_structured_games.jsonl`：每场比赛的最终比分、胜方和按局汇总的进程。
 
-这两份表包含战术复盘所需的公开信息。它们不声称恢复 PDF 没有记录的内容，例如真实初速度、扫冰输入、逐 tick 摩擦、壶的 yaw 或每次碰撞的精确先后次序。
+默认会剔除被物理连续性检查标成 `needs_manual_review` 的状态；原始坐标仍保留在 `gushue_stone_states.jsonl` 供追溯。若确实要研究这些原图状态，才显式加 `--include-review-states`。剔除点之后的第一条记录会把 `transition_observed_from_immediately_previous_shot=false`，且不计算壶数变化，避免跨过缺口伪造一次“单手变化”。
+
+这些表包含战术复盘所需的公开信息。它们不声称恢复 PDF 没有记录的内容，例如真实初速度、扫冰输入、逐 tick 摩擦、壶的 yaw 或每次碰撞的精确先后次序。
+
+## 安全重建（不覆盖现有结果）
+
+`rebuild_coordinates_parallel.py` 会按比赛并行提取，并默认写入 `coordinates/recovery_candidate.jsonl`，不覆盖当前 `gushue_stone_states.jsonl`。先用小样本测速，例如：
+
+```powershell
+python training_data\gushue_shotbook\rebuild_coordinates_parallel.py --limit-games 2 --workers 2
+```
+
+只有候选文件通过像素和物理连续性核验后，才应人工确认替换正式结果。
+
+在任何全量候选重建前，先运行规则回归测试：
+
+```powershell
+python training_data\gushue_shotbook\validate_extraction_rules.py
+```
+
+该测试直接读取两处曾误判的官方小盘面，要求蓝色标记的有效黄壶被保留，并要求局面壶数分别连续为 `1→2→3` 和 `0→1→2`。失败时不得启动或采纳全量候选。
 
 ## 重新生成索引和单场文件
 

@@ -1,0 +1,2 @@
+RULE_FIXTURES_OK: known blue-marked live stones remain available to the sequence-level selector
+SEQUENCE_SELECTOR_FIXTURES_OK: two known live blue marks retained; every transition is legal

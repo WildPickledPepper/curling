@@ -1,0 +1,168 @@
+{
+  "schema": "planning_proxy_manual_realistic_contact_witness_validation_v1",
+  "dataset": "manual_realistic_contact_v1.json",
+  "purpose": "只验证测试样本有正向稳定解；不使用 oracle 评估反解器。",
+  "all_passed": true,
+  "samples": [
+    {
+      "id": "手工实战相似接触_K5_000",
+      "passed": true,
+      "oracle_witness": [
+        5.2,
+        0.0,
+        0.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          2.3092422485351562,
+          5.8822760722656255
+        ],
+        [
+          2.309173583984375,
+          5.8724799296875005
+        ],
+        [
+          2.3086280822753906,
+          5.8659186503906255
+        ]
+      ],
+      "target_region_count": 1
+    },
+    {
+      "id": "手工实战相似接触_K6_000",
+      "passed": true,
+      "oracle_witness": [
+        5.2,
+        0.0,
+        0.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          2.3092422485351562,
+          5.8822760722656255
+        ],
+        [
+          2.309185028076172,
+          5.872495188476563
+        ],
+        [
+          2.3086204528808594,
+          5.865903391601563
+        ]
+      ],
+      "target_region_count": 9
+    },
+    {
+      "id": "手工实战相似接触_K7_000",
+      "passed": true,
+      "oracle_witness": [
+        5.2,
+        0.0,
+        0.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          2.3092422485351562,
+          5.8822760722656255
+        ],
+        [
+          2.3091964721679688,
+          5.872464670898438
+        ],
+        [
+          2.308643341064453,
+          5.865895762207032
+        ]
+      ],
+      "target_region_count": 1
+    },
+    {
+      "id": "手工实战相似接触_K8_000",
+      "passed": true,
+      "oracle_witness": [
+        5.2,
+        0.0,
+        0.0
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "target_cleared_or_dead": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "active_final_positions": [
+        [
+          2.3092422485351562,
+          5.8822760722656255
+        ],
+        [
+          2.3091964721679688,
+          5.872464670898438
+        ],
+        [
+          2.308643341064453,
+          5.865895762207032
+        ]
+      ],
+      "target_region_count": 9
+    }
+  ]
+}

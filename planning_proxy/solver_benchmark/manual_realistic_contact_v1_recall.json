@@ -1,0 +1,250 @@
+{
+  "schema": "planning_proxy_contact_recall_benchmark_v1",
+  "purpose": "反解器盲测；oracle_witness 不传入求解器。",
+  "budget_seconds": 105.0,
+  "sample_count": 4,
+  "found_count": 4,
+  "within_budget_count": 4,
+  "samples": [
+    {
+      "id": "手工实战相似接触_K5_000",
+      "found": true,
+      "within_budget": true,
+      "elapsed_seconds": 12.5195287,
+      "target_region_count": 1,
+      "bestshot": [
+        5.71999979019165,
+        0.10999999940395355,
+        -0.9428570866584778
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "solver_detail": {
+        "targetIndex": 7,
+        "targetRegionCentres": [
+          [
+            2.31,
+            5.875
+          ]
+        ],
+        "targetRegionRadiusM": 0.12,
+        "coarseCandidateCount": 4305,
+        "coarseHitBranchCount": 550,
+        "locallyRefinedHitBranchCount": 14076,
+        "strictCandidateCount": 8,
+        "multiSeedVerifiedCount": 6,
+        "eligibleCount": 6,
+        "allowedOwnExchangeBudget": 0,
+        "madsParentBranchCount": 3,
+        "exchangeFineRefinementUsed": false,
+        "worstRegionMarginM": 0.08427853088172269
+      },
+      "dataset": "manual_realistic_contact_v1.json"
+    },
+    {
+      "id": "手工实战相似接触_K6_000",
+      "found": true,
+      "within_budget": true,
+      "elapsed_seconds": 31.1727257,
+      "target_region_count": 9,
+      "bestshot": [
+        3.911851962452227,
+        0.9607508183161315,
+        -7.232078858962449
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "solver_detail": {
+        "targetIndex": 9,
+        "targetRegionCentres": [
+          [
+            2.375,
+            4.88
+          ],
+          [
+            1.82,
+            6.42
+          ],
+          [
+            1.92,
+            6.12
+          ],
+          [
+            2.08,
+            5.92
+          ],
+          [
+            2.93,
+            6.42
+          ],
+          [
+            2.83,
+            6.12
+          ],
+          [
+            2.67,
+            5.92
+          ],
+          [
+            2.75,
+            5.2
+          ],
+          [
+            2.0,
+            4.56
+          ]
+        ],
+        "targetRegionRadiusM": 0.3,
+        "coarseCandidateCount": 4305,
+        "coarseHitBranchCount": 549,
+        "locallyRefinedHitBranchCount": 14368,
+        "strictCandidateCount": 3,
+        "multiSeedVerifiedCount": 2,
+        "eligibleCount": 1,
+        "allowedOwnExchangeBudget": 0,
+        "madsParentBranchCount": 3,
+        "exchangeFineRefinementUsed": false,
+        "worstRegionMarginM": 0.003952624577009234
+      },
+      "dataset": "manual_realistic_contact_v1.json"
+    },
+    {
+      "id": "手工实战相似接触_K7_000",
+      "found": true,
+      "within_budget": true,
+      "elapsed_seconds": 19.4832488,
+      "target_region_count": 1,
+      "bestshot": [
+        5.71999979019165,
+        0.10999999940395355,
+        -0.9428570866584778
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "solver_detail": {
+        "targetIndex": 11,
+        "targetRegionCentres": [
+          [
+            2.31,
+            5.875
+          ]
+        ],
+        "targetRegionRadiusM": 0.12,
+        "coarseCandidateCount": 4305,
+        "coarseHitBranchCount": 549,
+        "locallyRefinedHitBranchCount": 14354,
+        "strictCandidateCount": 8,
+        "multiSeedVerifiedCount": 6,
+        "eligibleCount": 6,
+        "allowedOwnExchangeBudget": 0,
+        "madsParentBranchCount": 3,
+        "exchangeFineRefinementUsed": false,
+        "worstRegionMarginM": 0.08427853088172269
+      },
+      "dataset": "manual_realistic_contact_v1.json"
+    },
+    {
+      "id": "手工实战相似接触_K8_000",
+      "found": true,
+      "within_budget": true,
+      "elapsed_seconds": 23.9150634,
+      "target_region_count": 9,
+      "bestshot": [
+        3.911851962452227,
+        0.9607508183161315,
+        -7.232078858962449
+      ],
+      "tactical_goal_met": [
+        true,
+        true,
+        true
+      ],
+      "rule_legal": true,
+      "own_cleared": [
+        0,
+        0,
+        0
+      ],
+      "solver_detail": {
+        "targetIndex": 13,
+        "targetRegionCentres": [
+          [
+            2.375,
+            4.88
+          ],
+          [
+            1.82,
+            6.42
+          ],
+          [
+            1.92,
+            6.12
+          ],
+          [
+            2.08,
+            5.92
+          ],
+          [
+            2.93,
+            6.42
+          ],
+          [
+            2.83,
+            6.12
+          ],
+          [
+            2.67,
+            5.92
+          ],
+          [
+            2.75,
+            5.2
+          ],
+          [
+            2.0,
+            4.56
+          ]
+        ],
+        "targetRegionRadiusM": 0.3,
+        "coarseCandidateCount": 4305,
+        "coarseHitBranchCount": 481,
+        "locallyRefinedHitBranchCount": 11526,
+        "strictCandidateCount": 3,
+        "multiSeedVerifiedCount": 1,
+        "eligibleCount": 1,
+        "allowedOwnExchangeBudget": 0,
+        "madsParentBranchCount": 3,
+        "exchangeFineRefinementUsed": false,
+        "worstRegionMarginM": 0.003952624577009234
+      },
+      "dataset": "manual_realistic_contact_v1.json"
+    }
+  ]
+}

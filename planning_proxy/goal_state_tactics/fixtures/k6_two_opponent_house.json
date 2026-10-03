@@ -1,0 +1,6 @@
+{
+  "board": [
+    {"index": 4, "owner": "opponent", "x": 2.195, "y": 4.93},
+    {"index": 8, "owner": "opponent", "x": 2.595, "y": 4.80}
+  ]
+}

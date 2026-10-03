@@ -1,0 +1,46 @@
+{
+  "schema": "planning_proxy_rejected_manual_hard_contact_candidates_v1",
+  "scope": "已拒绝的 K5 候选构型，保留以防误用：原先的固定输入虽能把出手壶滚入侧外环，却未在全部物理种子把目标壶送入边缘废球带。它们不是正样本，不得进入召回率统计或运行时。",
+  "candidate_count": 3,
+  "samples": [
+    {
+      "id": "手工高难接触_K5_中线遮挡_000",
+      "category": "K5_三壶_中线遮挡高位侧守壶_左旋薄撞",
+      "active_index": 8,
+      "target_opponent_index": 7,
+      "board": [
+        {"index": 0, "owner": "self", "x": 2.375, "y": 7.13, "yaw": 0, "enabled": true},
+        {"index": 4, "owner": "self", "x": 2.44, "y": 4.945, "yaw": 0, "enabled": true},
+        {"index": 7, "owner": "opponent", "x": 2.30, "y": 7.89, "yaw": 0, "enabled": true}
+      ],
+      "goal_contract": {"kind": "physical_clear", "target_points": [[1.5, 7.7], [3.25, 7.7]], "landing_region_radius_m": 0.25, "must_preserve_indices": [0, 4], "required_physics_seeds": [20260721, 20365450, 20470179]},
+      "oracle_witness": {"bestshot": [4.4, -1.87, 15.0]}
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_左偏_001",
+      "category": "K5_三壶_中线遮挡高位侧守壶_左偏薄撞",
+      "active_index": 8,
+      "target_opponent_index": 7,
+      "board": [
+        {"index": 0, "owner": "self", "x": 2.375, "y": 7.13, "yaw": 0, "enabled": true},
+        {"index": 4, "owner": "self", "x": 2.44, "y": 4.945, "yaw": 0, "enabled": true},
+        {"index": 7, "owner": "opponent", "x": 2.25, "y": 7.89, "yaw": 0, "enabled": true}
+      ],
+      "goal_contract": {"kind": "physical_clear", "target_points": [[1.5, 7.7], [3.25, 7.7]], "landing_region_radius_m": 0.25, "must_preserve_indices": [0, 4], "required_physics_seeds": [20260721, 20365450, 20470179]},
+      "oracle_witness": {"bestshot": [4.1, -2.0, 15.0]}
+    },
+    {
+      "id": "手工高难接触_K5_中线遮挡_右偏_002",
+      "category": "K5_三壶_中线遮挡高位侧守壶_右偏薄撞",
+      "active_index": 8,
+      "target_opponent_index": 7,
+      "board": [
+        {"index": 0, "owner": "self", "x": 2.375, "y": 7.13, "yaw": 0, "enabled": true},
+        {"index": 4, "owner": "self", "x": 2.44, "y": 4.945, "yaw": 0, "enabled": true},
+        {"index": 7, "owner": "opponent", "x": 2.35, "y": 7.89, "yaw": 0, "enabled": true}
+      ],
+      "goal_contract": {"kind": "physical_clear", "target_points": [[1.5, 7.7], [3.25, 7.7]], "landing_region_radius_m": 0.25, "must_preserve_indices": [0, 4], "required_physics_seeds": [20260721, 20365450, 20470179]},
+      "oracle_witness": {"bestshot": [4.1, -2.0, 20.0]}
+    }
+  ]
+}

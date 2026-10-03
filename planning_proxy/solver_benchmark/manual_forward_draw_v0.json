@@ -1,0 +1,861 @@
+{
+  "schema": "planning_proxy_manual_forward_fixture_set_v0",
+  "scope": "手工摆盘面 + 手工限定输入网格 + 严格 PhysX 多种子正向复验；仅净空 draw",
+  "manual_board_count": 6,
+  "forward_attempt_count": 13,
+  "physics_seed_count": 3,
+  "samples": [
+    {
+      "board_name": "single_centre_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.375,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.4993934631347656,
+            4.455085927408855
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20260720,
+          20365449,
+          20470178
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          -0.2,
+          9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20260720,
+            "active_final": [
+              3.4992904663085938,
+              4.469350352050782
+            ]
+          },
+          {
+            "physics_seed": 20365449,
+            "active_final": [
+              3.49603271484375,
+              4.454556956054688
+            ]
+          },
+          {
+            "physics_seed": 20470178,
+            "active_final": [
+              3.502857208251953,
+              4.441350474121094
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0000"
+    },
+    {
+      "board_name": "single_centre_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.375,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.2018038431803386,
+            4.455088470540365
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          20260720,
+          20365449,
+          20470178
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 20260720,
+            "active_final": [
+              1.2019081115722656,
+              4.469350352050782
+            ]
+          },
+          {
+            "physics_seed": 20365449,
+            "active_final": [
+              1.2051658630371094,
+              4.454564585449219
+            ]
+          },
+          {
+            "physics_seed": 20470178,
+            "active_final": [
+              1.1983375549316406,
+              4.441350474121094
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0001"
+    },
+    {
+      "board_name": "left_side_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.82,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.5008214314778647,
+            4.4430772604166675
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21260723,
+          21365452,
+          21470181
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          -0.2,
+          9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21260723,
+            "active_final": [
+              3.4947166442871094,
+              4.491414561035157
+            ]
+          },
+          {
+            "physics_seed": 21365452,
+            "active_final": [
+              3.4971923828125,
+              4.446836008789063
+            ]
+          },
+          {
+            "physics_seed": 21470181,
+            "active_final": [
+              3.5105552673339844,
+              4.390981211425782
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0002"
+    },
+    {
+      "board_name": "left_side_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.82,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.2003631591796875,
+            4.443074717285157
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          21260723,
+          21365452,
+          21470181
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 21260723,
+            "active_final": [
+              1.2064704895019531,
+              4.4914069316406255
+            ]
+          },
+          {
+            "physics_seed": 21365452,
+            "active_final": [
+              1.2039909362792969,
+              4.446836008789063
+            ]
+          },
+          {
+            "physics_seed": 21470181,
+            "active_final": [
+              1.1906280517578125,
+              4.390981211425782
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0003"
+    },
+    {
+      "board_name": "right_side_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.93,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.4998270670572915,
+            4.464645558756511
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          22260726,
+          22365455,
+          22470184
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          -0.2,
+          9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 22260726,
+            "active_final": [
+              3.492706298828125,
+              4.518086924316407
+            ]
+          },
+          {
+            "physics_seed": 22365455,
+            "active_final": [
+              3.5025405883789062,
+              4.444448008300782
+            ]
+          },
+          {
+            "physics_seed": 22470184,
+            "active_final": [
+              3.5042343139648438,
+              4.431401743652344
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0004"
+    },
+    {
+      "board_name": "right_side_guard",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.93,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.2013664245605469,
+            4.46463792936198
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          22260726,
+          22365455,
+          22470184
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 22260726,
+            "active_final": [
+              1.2084846496582031,
+              4.518064036132813
+            ]
+          },
+          {
+            "physics_seed": 22365455,
+            "active_final": [
+              1.1986579895019531,
+              4.444448008300782
+            ]
+          },
+          {
+            "physics_seed": 22470184,
+            "active_final": [
+              1.1969566345214844,
+              4.431401743652344
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0005"
+    },
+    {
+      "board_name": "two_guard_gate",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.88,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 3,
+          "owner": "opponent",
+          "x": 2.86,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.500067392985026,
+            4.453463409505209
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1,
+          3
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          23260729,
+          23365458,
+          23470187
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          -0.2,
+          9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 23260729,
+            "active_final": [
+              3.500865936279297,
+              4.451161875488282
+            ]
+          },
+          {
+            "physics_seed": 23365458,
+            "active_final": [
+              3.5016136169433594,
+              4.4364447734375005
+            ]
+          },
+          {
+            "physics_seed": 23470187,
+            "active_final": [
+              3.497722625732422,
+              4.472783579589844
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0006"
+    },
+    {
+      "board_name": "two_guard_gate",
+      "board": [
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 1.88,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 3,
+          "owner": "opponent",
+          "x": 2.86,
+          "y": 7.55,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.2011248270670574,
+            4.45346849576823
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          1,
+          3
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          23260729,
+          23365458,
+          23470187
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 23260729,
+            "active_final": [
+              1.2003250122070312,
+              4.451161875488282
+            ]
+          },
+          {
+            "physics_seed": 23365458,
+            "active_final": [
+              1.1995811462402344,
+              4.436452402832032
+            ]
+          },
+          {
+            "physics_seed": 23470187,
+            "active_final": [
+              1.2034683227539062,
+              4.4727912089843755
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0007"
+    },
+    {
+      "board_name": "inner_anchor_with_opposite_guard",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.58,
+          "y": 4.96,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.08,
+          "y": 7.62,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.499810536702474,
+            4.454284840983074
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          0,
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          24260732,
+          24365461,
+          24470190
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          -0.2,
+          9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 24260732,
+            "active_final": [
+              3.4985923767089844,
+              4.4604926250000005
+            ]
+          },
+          {
+            "physics_seed": 24365461,
+            "active_final": [
+              3.4957008361816406,
+              4.489598765136719
+            ]
+          },
+          {
+            "physics_seed": 24470190,
+            "active_final": [
+              3.505138397216797,
+              4.4127631328125005
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0008"
+    },
+    {
+      "board_name": "inner_anchor_with_opposite_guard",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.58,
+          "y": 4.96,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.08,
+          "y": 7.62,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.201385498046875,
+            4.454287384114584
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          0,
+          1
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          24260732,
+          24365461,
+          24470190
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 24260732,
+            "active_final": [
+              1.2025985717773438,
+              4.460500254394532
+            ]
+          },
+          {
+            "physics_seed": 24365461,
+            "active_final": [
+              1.2055015563964844,
+              4.489598765136719
+            ]
+          },
+          {
+            "physics_seed": 24470190,
+            "active_final": [
+              1.1960563659667969,
+              4.4127631328125005
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0009"
+    },
+    {
+      "board_name": "inner_anchor_with_two_high_guards",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.58,
+          "y": 4.96,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.02,
+          "y": 7.62,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 3,
+          "owner": "opponent",
+          "x": 2.96,
+          "y": 7.56,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            1.203137715657552,
+            4.452512278320313
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          3
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          25260735,
+          25365464,
+          25470193
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.1,
+          0.2,
+          -9.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 25260735,
+            "active_final": [
+              1.2055244445800781,
+              4.459706797363282
+            ]
+          },
+          {
+            "physics_seed": 25365464,
+            "active_final": [
+              1.2030906677246094,
+              4.448087229492188
+            ]
+          },
+          {
+            "physics_seed": 25470193,
+            "active_final": [
+              1.2007980346679688,
+              4.449742808105469
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0010"
+    },
+    {
+      "board_name": "inner_anchor_with_two_high_guards",
+      "board": [
+        {
+          "index": 0,
+          "owner": "self",
+          "x": 2.58,
+          "y": 4.96,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 1,
+          "owner": "opponent",
+          "x": 2.02,
+          "y": 7.62,
+          "yaw": 0.0,
+          "enabled": true
+        },
+        {
+          "index": 3,
+          "owner": "opponent",
+          "x": 2.96,
+          "y": 7.56,
+          "yaw": 0.0,
+          "enabled": true
+        }
+      ],
+      "goal_contract": {
+        "version": "手工正向净空落点合同_v0",
+        "kind": "营内净空落点",
+        "active_index": 12,
+        "active_target_region": {
+          "center": [
+            3.8593762715657554,
+            3.953544789713542
+          ],
+          "radius_m": 0.1
+        },
+        "must_preserve_indices": [
+          0,
+          1,
+          3
+        ],
+        "old_stone_position_tolerance_m": 0.035,
+        "required_physics_seeds": [
+          25260735,
+          25365464,
+          25470193
+        ]
+      },
+      "oracle_witness": {
+        "bestshot": [
+          3.2,
+          -0.35,
+          12.0
+        ],
+        "strict_forward": [
+          {
+            "physics_seed": 25260735,
+            "active_final": [
+              3.8568115234375,
+              3.9594550273437505
+            ]
+          },
+          {
+            "physics_seed": 25365464,
+            "active_final": [
+              3.859302520751953,
+              3.949727549316407
+            ]
+          },
+          {
+            "physics_seed": 25470193,
+            "active_final": [
+              3.8620147705078125,
+              3.9514517924804693
+            ]
+          }
+        ]
+      },
+      "id": "手工正向净空_v0_0011"
+    }
+  ]
+}

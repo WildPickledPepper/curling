@@ -236,7 +236,13 @@ def _parents_for_opponent(board: Sequence[BoardStone], *, direct_count: int, imp
     direct = _closest_to_centre_indices(initial, count=direct_count, require_hit=False)
     impact = _closest_to_centre_indices(initial, count=impact_count, require_hit=True)
     selected = list(dict.fromkeys(direct + impact))
-    rows = [{"bestshot": [float(value) for value in initial.shots[index]]} for index in selected]
+    direct_set = set(direct)
+    rows = [{
+        "bestshot": [float(value) for value in initial.shots[index]],
+        # 这不是“容易/困难”的最终判断；它只记录反击是否需要先撞现有壶，供
+        # 同候选族、同预算下的后续难度比较使用。
+        "replyFamily": "DIRECT_OR_DRAW" if index in direct_set else "IMPACT_OR_RUNBACK",
+    } for index in selected]
     return rows, {
         "initialCandidateCount": int(len(initial.shots)),
         "directParentCount": len(direct),
@@ -245,19 +251,31 @@ def _parents_for_opponent(board: Sequence[BoardStone], *, direct_count: int, imp
     }
 
 
-def _seed_is_safe(final_distances: dict[int, float], own_indices: set[int]) -> tuple[bool, str, float | None, float | None]:
-    opponent_distance = final_distances.get(ACTIVE_INDEX)
+def _seed_is_safe(
+    final_distances: dict[int, float], own_indices: set[int], opponent_indices: set[int],
+) -> tuple[bool, str, float | None, float | None]:
+    """按真实终局双方所有存活壶判断末手反击是否得手。
+
+    静态模板只有己方壶；实战终局还可能有上一手未清干净的敌壶。因此不能只
+    看第 16 手是否比己方更近，而要把它与所有既有敌壶一起纳入计分侧比较。
+    """
+
+    active_distance = final_distances.get(ACTIVE_INDEX)
+    opponent_distances = [
+        distance for index, distance in final_distances.items() if index in opponent_indices
+    ]
     own_distances = [distance for index, distance in final_distances.items() if index in own_indices]
     own_closest = min(own_distances) if own_distances else None
-    if opponent_distance is None:
-        return True, "对方最后一颗出界", None, own_closest
-    if opponent_distance <= STONE_R:
-        return False, "对方最后一颗进入按钮区", opponent_distance, own_closest
+    opponent_closest = min(opponent_distances) if opponent_distances else None
+    if active_distance is None and opponent_closest is None:
+        return True, "对方最后一颗出界，且没有残留敌方得分壶", None, own_closest
+    if active_distance is not None and active_distance <= STONE_R:
+        return False, "对方最后一颗进入按钮区", active_distance, own_closest
     if own_closest is None:
-        return False, "我方壶被全部清空，对方壶留在场内", opponent_distance, None
-    if opponent_distance < own_closest:
-        return False, "对方最后一颗比我方最近壶更靠中心", opponent_distance, own_closest
-    return True, "对方未取得中心优势", opponent_distance, own_closest
+        return False, "我方壶被全部清空，而对方壶留在场内", opponent_closest, None
+    if opponent_closest is not None and opponent_closest < own_closest:
+        return False, "对方（末手或残留壶）比我方最近壶更靠中心", opponent_closest, own_closest
+    return True, "对方未取得中心优势", opponent_closest, own_closest
 
 
 def evaluate_fixture(
@@ -272,12 +290,15 @@ def evaluate_fixture(
         fixture.stones, direct_count=direct_count, impact_count=impact_count,
     )
     position = make_position(fixture.stones)
-    own_indices = {stone.index for stone in fixture.stones}
+    own_indices = {stone.index for stone in fixture.stones if stone.owner == "self"}
+    opponent_indices = {ACTIVE_INDEX} | {stone.index for stone in fixture.stones if stone.owner == "opponent"}
     seen: set[tuple[float, float, float]] = set()
     strict_count = 0
     counterexamples: list[dict] = []
     button_counterexample_count = 0
     stable_counterexample_count = 0
+    direct_counterexample_count = 0
+    impact_counterexample_count = 0
     best_opponent_distance = math.inf
     largest_centre_advantage = 0.0
     for rank, row in enumerate(parents, 1):
@@ -288,7 +309,7 @@ def evaluate_fixture(
                 shot_index=15, active_index=ACTIVE_INDEX,
             )
             seed_results = [
-                _seed_is_safe(distances, own_indices)
+                _seed_is_safe(distances, own_indices, opponent_indices)
                 for distances in result.final_center_distance_by_index
             ]
             breaches = []
@@ -309,9 +330,15 @@ def evaluate_fixture(
                     button_counterexample_count += 1
                 if len(breaches) == len(physics_seeds):
                     stable_counterexample_count += 1
+                reply_family = str(row["replyFamily"])
+                if reply_family == "DIRECT_OR_DRAW":
+                    direct_counterexample_count += 1
+                else:
+                    impact_counterexample_count += 1
                 counterexamples.append({
                     "bestshot": [candidate.v0, candidate.h0, candidate.w0],
                     "parentRank": candidate.parent_rank,
+                    "replyFamily": reply_family,
                     "breachSeedCount": len(breaches),
                     "seedCount": len(physics_seeds),
                     "breaches": breaches,
@@ -328,6 +355,8 @@ def evaluate_fixture(
         "counterexampleCandidateCount": len(counterexamples),
         "stableCounterexampleCandidateCount": stable_counterexample_count,
         "buttonCounterexampleCandidateCount": button_counterexample_count,
+        "directCounterexampleCandidateCount": direct_counterexample_count,
+        "impactCounterexampleCandidateCount": impact_counterexample_count,
         "bestOpponentDistanceM": None if not math.isfinite(best_opponent_distance) else best_opponent_distance,
         "largestOpponentCentreAdvantageM": largest_centre_advantage,
         # 前 20 条足够复现最危险输入，避免长跑报告无限膨胀。
@@ -343,15 +372,56 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--physics-seeds", type=int, default=3, help="每条对方反击路线严格复核的摩擦序列数。")
     parser.add_argument("--stop-on-first-counterexample", action="store_true", help="只用于快速找漏洞；默认完整统计反击成功次数。")
     parser.add_argument("--seed", type=int, default=20260716)
+    parser.add_argument(
+        "--board-json", type=Path, default=None,
+        help="真实第八颗落定后的壶面 JSON 数组。元素为 index/owner/x/y，可选 yaw；slot 15 留给对手末手。提供后只验证该实际壶面。",
+    )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
+
+
+def load_actual_final_board(path: Path) -> DefenceFixture:
+    """读取实际第八颗终局，供与基准模板不同的每个构型单独反击验收。"""
+
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, list):
+        raise ValueError("--board-json 必须是壶对象数组")
+    stones = tuple(
+        BoardStone(
+            index=int(item["index"]), owner=str(item["owner"]), x=float(item["x"]), y=float(item["y"]),
+            enabled=bool(item.get("enabled", True)), yaw=float(item.get("yaw", 0.0)),
+        )
+        for item in raw
+        if isinstance(item, dict) and bool(item.get("enabled", True))
+    )
+    if not stones:
+        raise ValueError("--board-json 没有有效静止壶")
+    if any(stone.owner not in {"self", "opponent"} for stone in stones):
+        raise ValueError("--board-json 的 owner 只能是 self 或 opponent")
+    if any(not 1 <= stone.index < ACTIVE_INDEX for stone in stones):
+        raise ValueError("--board-json 的静止壶 index 必须在 1..14；slot 15 保留给对手末手")
+    if len({stone.index for stone in stones}) != len(stones):
+        raise ValueError("--board-json 的 stone index 不能重复")
+    if not any(stone.owner == "self" for stone in stones):
+        raise ValueError("--board-json 至少需要一颗己方壶")
+    return DefenceFixture(
+        name=f"实际终局:{path.stem}", stage="第八颗落定后的真实壶面",
+        description="由 --board-json 提供；包含残留壶与 yaw 后逐条搜索对手第十六手。", stones=stones,
+    )
 
 
 def main() -> None:
     args = parse_args()
     if min(args.direct_parents, args.impact_parents, args.physics_seeds) < 1:
         raise SystemExit("父区域数和摩擦序列数都必须至少为 1")
-    chosen = tuple(item for item in DEFENCE_FIXTURES if args.fixture is None or item.name in args.fixture)
+    if args.board_json is not None and args.fixture is not None:
+        raise SystemExit("--board-json 与 --fixture 不能同时使用")
+    try:
+        chosen = (load_actual_final_board(args.board_json),) if args.board_json is not None else tuple(
+            item for item in DEFENCE_FIXTURES if args.fixture is None or item.name in args.fixture
+        )
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"无法读取实际终局壶面：{exc}") from exc
     install_bundled_pyphysx()
     environment = StrictCurlingEnd(seed=args.seed, training_fast=True)
     started = time.perf_counter()
@@ -372,7 +442,7 @@ def main() -> None:
         "scope": "strict PhysX screened final-opponent reply; no sweeping; not a mathematical proof over continuous inputs",
         "criteria": {
             "buttonRadiusM": STONE_R,
-            "centreAdvantage": "opponent final distance must not be smaller than closest surviving self stone",
+            "centreAdvantage": "the closest of the final opponent stone and every surviving old opponent stone must not be smaller than the closest surviving self stone",
         },
         "physicsSeedsPerCandidate": args.physics_seeds,
         "stopOnFirstCounterexample": bool(args.stop_on_first_counterexample),

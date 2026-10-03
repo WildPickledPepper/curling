@@ -1,0 +1,9 @@
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+.........................................................................................
+----------------------------------------------------------------------
+Ran 89 tests in 29.395s
+
+OK

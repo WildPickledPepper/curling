@@ -1,0 +1,274 @@
+{
+  "schema": "planning_proxy_draw_recall_benchmark_v0",
+  "dataset": "planning_proxy\\solver_benchmark\\historical_recovery_draw_v1.json",
+  "decision_budget_seconds": 105.0,
+  "sample_count": 4,
+  "solved_count": 4,
+  "recall": 1.0,
+  "rows": [
+    {
+      "id": "历史K2_中线守壶绕行_20260720",
+      "found": true,
+      "elapsed_seconds": 6.0685362000000005,
+      "bestshot": [
+        3.080000162124634,
+        -1.8600000143051147,
+        8.571428298950195
+      ],
+      "solver_detail": {
+        "target": [
+          1.932,
+          4.715
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1105,
+        "maxLandingErrorM": 0.2652385136302255,
+        "meanLandingErrorM": 0.23010927974993667,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 20276558,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.22227178350361207,
+            "active_final": [
+              1.7665634155273438,
+              4.566556467773438
+            ]
+          },
+          {
+            "physics_seed": 20381287,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2028175421159725,
+            "active_final": [
+              1.763275146484375,
+              4.602452769042969
+            ]
+          },
+          {
+            "physics_seed": 20486016,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.26523851363022544,
+            "active_final": [
+              1.7736587524414062,
+              4.5022101542968755
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "历史K3_守壶对齐重建_20713579",
+      "found": true,
+      "elapsed_seconds": 6.7504390999999995,
+      "bestshot": [
+        3.080000162124634,
+        -1.8600000143051147,
+        8.571428298950195
+      ],
+      "solver_detail": {
+        "target": [
+          1.932,
+          4.715
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1107,
+        "maxLandingErrorM": 0.2285717459594088,
+        "meanLandingErrorM": 0.21623821778524857,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 20761093,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.22857174595940882,
+            "active_final": [
+              1.7705764770507812,
+              4.5531745097656255
+            ]
+          },
+          {
+            "physics_seed": 20865822,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.2223203909290412,
+            "active_final": [
+              1.7693367004394531,
+              4.563451304199219
+            ]
+          },
+          {
+            "physics_seed": 20970551,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.19782251646729576,
+            "active_final": [
+              1.7681083679199219,
+              4.604215159179688
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457791",
+      "found": true,
+      "elapsed_seconds": 6.556164000000001,
+      "bestshot": [
+        3.080000162124634,
+        -1.8600000143051147,
+        8.571428298950195
+      ],
+      "solver_detail": {
+        "target": [
+          1.932,
+          4.715
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1105,
+        "maxLandingErrorM": 0.2362842853817947,
+        "meanLandingErrorM": 0.2199305993223114,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 21505305,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.21054574788074054,
+            "active_final": [
+              1.7629814147949219,
+              4.589452280761719
+            ]
+          },
+          {
+            "physics_seed": 21610034,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.23628428538179466,
+            "active_final": [
+              1.7632713317871094,
+              4.549588694335938
+            ]
+          },
+          {
+            "physics_seed": 21714763,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.212961764704399,
+            "active_final": [
+              1.7681198120117188,
+              4.579000010253907
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "历史K3_守壶对齐重建_21457792",
+      "found": true,
+      "elapsed_seconds": 6.216477000000001,
+      "bestshot": [
+        3.080000162124634,
+        -1.8600000143051147,
+        8.571428298950195
+      ],
+      "solver_detail": {
+        "target": [
+          1.932,
+          4.715
+        ],
+        "physicsCalls": 35,
+        "coarseCandidateCount": 4305,
+        "locallyRefinedClearCandidateCount": 1102,
+        "maxLandingErrorM": 0.22531149587232177,
+        "meanLandingErrorM": 0.2146483634407579,
+        "preferredPrecisionMet": false,
+        "topologyAwareInitialisation": true,
+        "multiSeedRecentred": true,
+        "solver": "newton_clear_path"
+      },
+      "verified": {
+        "passed": true,
+        "per_seed": [
+          {
+            "physics_seed": 21505306,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.20307155177863814,
+            "active_final": [
+              1.7657814025878906,
+              4.5983405253906255
+            ]
+          },
+          {
+            "physics_seed": 21610035,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.21556204267131382,
+            "active_final": [
+              1.769989013671875,
+              4.572804941894532
+            ]
+          },
+          {
+            "physics_seed": 21714764,
+            "passed": true,
+            "contact": false,
+            "rule_violations": [],
+            "old_stones_static": true,
+            "landing_error_m": 0.22531149587232177,
+            "active_final": [
+              1.7678031921386719,
+              4.5607123515625005
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

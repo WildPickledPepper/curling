@@ -91,9 +91,16 @@ def main() -> None:
             tactical_plan = plan_first_player_turn(board, args.shot_index)
         except ValueError as exc:
             raise SystemExit(str(exc)) from exc
+    # ``--must-clear-index`` 是诊断者显式指定的反事实分支（例如比较
+    # “加屏风”与“直接清守壶”）。它不能被状态机的默认计划覆盖；否则
+    # 报告会声称在检验清壶，实际却在筛默认落点。常规运行没有该参数，
+    # 仍完整使用状态机计划。
+    explicit_clear_request = args.must_clear_index is not None
     target_index = args.must_clear_index
     if target_index is None and tactical_plan is not None and tactical_plan.opponent_action == "physical_clear":
         target_index = tactical_plan.target_opponent_index
+    if explicit_clear_request:
+        tactical_plan = None
     target = None if target_index is None else next((stone for stone in board if stone.index == target_index), None)
     if target_index is not None and (target is None or target.owner != "opponent"):
         raise SystemExit("--must-clear-index 必须是场上已有的对方壶 slot")

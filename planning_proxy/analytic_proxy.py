@@ -23,6 +23,7 @@ import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FORCE_LOOKUP_ASSET = Path(__file__).resolve().parent / "assets" / "recovered_formula_force_lookup_compact_v1.npz"
+DEFAULT_ENDPOINT_RESIDUAL_ASSET = Path(__file__).resolve().parent / "assets" / "free_slide_endpoint_residual_v1.npz"
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 RUNTIME_SUPPORT_ROOT = PROJECT_ROOT / "local_simulator" / "runtime_support"
@@ -78,6 +79,24 @@ class ForceLookup:
             "speedRangeMps": [float(self.speed_nodes[0]), float(self.speed_nodes[-1])],
             "spinRange": [float(self.spin_nodes[0]), float(self.spin_nodes[-1])],
         }
+
+
+@dataclass(frozen=True)
+class EndpointResidualLookup:
+    """严格空场滑行相对粗代理的终点校正表。
+
+    这不是碰撞近似，也不参与首撞判定。它只描述低速净空 draw 中，白盒
+    受力表轨迹与严格 PhysX 姿态桥接之间的稳定终点差值。
+    """
+
+    speed_nodes: np.ndarray
+    spin_nodes: np.ndarray
+    residual_xy: np.ndarray
+    dt: float
+
+
+_endpoint_residual_lookup: EndpointResidualLookup | None = None
+_endpoint_residual_lookup_loaded = False
 
 
 @dataclass
@@ -196,6 +215,35 @@ def calibrate_force_lookup(
     return ForceLookup(speeds, spins, drag, turn, spin_decay)
 
 
+def load_endpoint_residual_lookup() -> EndpointResidualLookup | None:
+    """读取随包的净空终点校正表；缺失时保持原代理行为。"""
+
+    global _endpoint_residual_lookup, _endpoint_residual_lookup_loaded
+    if _endpoint_residual_lookup_loaded:
+        return _endpoint_residual_lookup
+    _endpoint_residual_lookup_loaded = True
+    if not DEFAULT_ENDPOINT_RESIDUAL_ASSET.is_file():
+        return None
+    with np.load(DEFAULT_ENDPOINT_RESIDUAL_ASSET) as archive:
+        speed_nodes = archive["speed_nodes"].astype(np.float32)
+        spin_nodes = archive["spin_nodes"].astype(np.float32)
+        residual_xy = archive["residual_xy"].astype(np.float32)
+        dt_values = archive["dt"].astype(np.float32)
+    if (
+        speed_nodes.ndim != 1 or spin_nodes.ndim != 1
+        or residual_xy.shape != (len(speed_nodes), len(spin_nodes), 2)
+        or not np.isfinite(residual_xy).all() or not len(dt_values)
+    ):
+        return None
+    _endpoint_residual_lookup = EndpointResidualLookup(
+        speed_nodes=speed_nodes,
+        spin_nodes=spin_nodes,
+        residual_xy=residual_xy,
+        dt=float(dt_values[0]),
+    )
+    return _endpoint_residual_lookup
+
+
 def _lookup_bilinear(table: np.ndarray, speeds: np.ndarray, spins: np.ndarray, lookup: ForceLookup) -> np.ndarray:
     """对同一批候选按速度与绝对旋转量双线性插值。"""
 
@@ -215,6 +263,119 @@ def _lookup_bilinear(table: np.ndarray, speeds: np.ndarray, spins: np.ndarray, l
         + tx * (1.0 - ty) * table[ix_hi, iy_lo]
         + (1.0 - tx) * ty * table[ix_lo, iy_hi]
         + tx * ty * table[ix_hi, iy_hi]
+    )
+
+
+def _lookup_endpoint_residual(
+    speeds: np.ndarray, spins: np.ndarray, lookup: EndpointResidualLookup,
+) -> np.ndarray:
+    """按带符号旋转量双线性插值空场严格终点校正。"""
+
+    x = np.clip(speeds, lookup.speed_nodes[0], lookup.speed_nodes[-1])
+    y = np.clip(spins, lookup.spin_nodes[0], lookup.spin_nodes[-1])
+    ix_hi = np.clip(np.searchsorted(lookup.speed_nodes, x, side="right"), 1, len(lookup.speed_nodes) - 1)
+    iy_hi = np.clip(np.searchsorted(lookup.spin_nodes, y, side="right"), 1, len(lookup.spin_nodes) - 1)
+    ix_lo, iy_lo = ix_hi - 1, iy_hi - 1
+    x0, x1 = lookup.speed_nodes[ix_lo], lookup.speed_nodes[ix_hi]
+    y0, y1 = lookup.spin_nodes[iy_lo], lookup.spin_nodes[iy_hi]
+    tx = (x - x0) / np.maximum(x1 - x0, 1e-9)
+    ty = (y - y0) / np.maximum(y1 - y0, 1e-9)
+    table = lookup.residual_xy
+    return (
+        (1.0 - tx)[:, None] * (1.0 - ty)[:, None] * table[ix_lo, iy_lo]
+        + tx[:, None] * (1.0 - ty)[:, None] * table[ix_hi, iy_lo]
+        + (1.0 - tx)[:, None] * ty[:, None] * table[ix_lo, iy_hi]
+        + tx[:, None] * ty[:, None] * table[ix_hi, iy_hi]
+    )
+
+
+def _apply_endpoint_residual(
+    shots: np.ndarray,
+    first_hit: np.ndarray,
+    exits: np.ndarray,
+    stop_points: np.ndarray,
+    *,
+    dt: float,
+    endpoint_residual_lookup: EndpointResidualLookup | None,
+) -> np.ndarray:
+    """只为满足条件的净空路线附加严格终点校正。"""
+
+    if endpoint_residual_lookup is None:
+        endpoint_residual_lookup = load_endpoint_residual_lookup()
+    if endpoint_residual_lookup is None or not math.isclose(float(dt), endpoint_residual_lookup.dt, abs_tol=1e-8):
+        return stop_points
+    valid = (
+        (first_hit < 0) & ~exits & np.isfinite(stop_points).all(axis=1)
+        & (shots[:, 0] >= endpoint_residual_lookup.speed_nodes[0])
+        & (shots[:, 0] <= endpoint_residual_lookup.speed_nodes[-1])
+        & (shots[:, 2] >= endpoint_residual_lookup.spin_nodes[0])
+        & (shots[:, 2] <= endpoint_residual_lookup.spin_nodes[-1])
+    )
+    if np.any(valid):
+        stop_points = stop_points.copy()
+        stop_points[valid] += _lookup_endpoint_residual(
+            shots[valid, 0], shots[valid, 2], endpoint_residual_lookup,
+        )
+    return stop_points
+
+
+def _simulate_batch_native(
+    shots: np.ndarray,
+    stones: Sequence[ProxyStone],
+    force_lookup: ForceLookup,
+    *,
+    endpoint_residual_lookup: EndpointResidualLookup | None,
+    dt: float,
+    max_time: float,
+    stop_speed_mps: float,
+) -> BatchPrediction | None:
+    """调用可选的原生批量后端；不可用时明确回到 NumPy 实现。
+
+    原生后端逐步复现下面的查表、半隐式推进和扫掠圆盘判定，并不替换为
+    另一种物理模型。这样既可在 Windows CPython 包中提速，也不破坏 Linux
+    或尚未更新扩展的开发环境。
+    """
+
+    try:
+        from local_simulator.runtime_loader import install_bundled_pyphysx
+
+        pyphysx = install_bundled_pyphysx()
+    except (ImportError, RuntimeError):
+        return None
+    native = getattr(pyphysx, "curling_proxy_simulate_batch", None)
+    if native is None:
+        return None
+
+    centers = np.asarray([(stone.x, stone.y) for stone in stones], dtype=np.float32).reshape((-1, 2))
+    indexes = np.asarray([stone.index for stone in stones], dtype=np.int32)
+    # -1 表示无首撞；0/1 分别与原 Python 的 self/opponent 对应。
+    owner_codes = np.asarray([1 if stone.owner == "opponent" else 0 for stone in stones], dtype=np.int8)
+    result = native(
+        np.ascontiguousarray(shots, dtype=np.float32), centers, indexes, owner_codes,
+        np.ascontiguousarray(force_lookup.speed_nodes, dtype=np.float32),
+        np.ascontiguousarray(force_lookup.spin_nodes, dtype=np.float32),
+        np.ascontiguousarray(force_lookup.drag_mps2, dtype=np.float32),
+        np.ascontiguousarray(force_lookup.turn_rate_radps, dtype=np.float32),
+        np.ascontiguousarray(force_lookup.spin_decay_per_s, dtype=np.float32),
+        float(dt), float(max_time), float(stop_speed_mps), float(CONTACT_DISTANCE),
+        float(DEFAULT_RELEASE_X), float(DEFAULT_RELEASE_Y),
+        float(PLAY_X_MIN), float(PLAY_X_MAX), float(PLAY_Y_MIN), float(PLAY_Y_MAX),
+    )
+    first_hit = np.asarray(result["first_hit_index"], dtype=np.int32)
+    owner_codes = np.asarray(result["first_hit_owner_code"], dtype=np.int8)
+    first_owner = np.full(len(shots), "", dtype=object)
+    first_owner[owner_codes == 0] = "self"
+    first_owner[owner_codes == 1] = "opponent"
+    exits = np.asarray(result["exits_play"], dtype=bool)
+    stop_points = _apply_endpoint_residual(
+        shots, first_hit, exits, np.asarray(result["stop_points"], dtype=np.float32),
+        dt=dt, endpoint_residual_lookup=endpoint_residual_lookup,
+    )
+    return BatchPrediction(
+        shots=shots.copy(), first_hit_index=first_hit, first_hit_owner=first_owner,
+        exits_play=exits, stop_points=stop_points,
+        nearest_enemy=np.asarray(result["nearest_enemy"], dtype=np.float32),
+        nearest_own=np.asarray(result["nearest_own"], dtype=np.float32),
     )
 
 
@@ -265,11 +426,23 @@ def simulate_batch(
     params: AnalyticParameters,
     *,
     force_lookup: ForceLookup | None = None,
+    endpoint_residual_lookup: EndpointResidualLookup | None = None,
     dt: float = 0.05,
     max_time: float = 48.0,
     stop_speed_mps: float = 0.01,
 ) -> BatchPrediction:
     """批量推进低阶方程，并以扫掠圆盘检测首次可能接触。"""
+
+    shots = np.ascontiguousarray(shots, dtype=np.float32)
+    # 只在完整白盒受力表存在时走原生等价实现；旧四参数模型仍由下方路径处理。
+    if force_lookup is not None:
+        native_prediction = _simulate_batch_native(
+            shots, stones, force_lookup,
+            endpoint_residual_lookup=endpoint_residual_lookup,
+            dt=dt, max_time=max_time, stop_speed_mps=stop_speed_mps,
+        )
+        if native_prediction is not None:
+            return native_prediction
 
     count = len(shots)
     centers = np.asarray([(stone.x, stone.y) for stone in stones], dtype=np.float32).reshape((-1, 2))
@@ -318,6 +491,20 @@ def simulate_batch(
         speed[rows] = np.maximum(0.0, speed[rows] - drag * dt)
         x[rows] += np.cos(heading[rows]) * speed[rows] * dt
         y[rows] += np.sin(heading[rows]) * speed[rows] * dt
+        finite = (
+            np.isfinite(x[rows]) & np.isfinite(y[rows])
+            & np.isfinite(speed[rows]) & np.isfinite(heading[rows]) & np.isfinite(spin[rows])
+        )
+        if not np.all(finite):
+            bad_rows = rows[~finite]
+            # 极低速/极大旋转的低阶近似可能离开数值稳定域。它不能作为
+            # “净空成功”送入后续排序，明确按出界失败处理。
+            exits[bad_rows] = True
+            active[bad_rows] = False
+            rows = rows[finite]
+            old_x, old_y = old_x[finite], old_y[finite]
+            if not len(rows):
+                continue
         entered[rows] |= y[rows] <= PLAY_Y_MAX
 
         start = np.stack((old_x, old_y), axis=1)
@@ -353,9 +540,14 @@ def simulate_batch(
         # 仍可能在后半段贴到守壶。对照恢复公式同样以 0.01 m/s 为终止量级。
         active[still_rows[speed[still_rows] <= stop_speed_mps]] = False
 
+    stop_points = _apply_endpoint_residual(
+        shots, first_hit, exits, np.stack((x, y), axis=1),
+        dt=dt, endpoint_residual_lookup=endpoint_residual_lookup,
+    )
+
     return BatchPrediction(
         shots=shots.copy(), first_hit_index=first_hit, first_hit_owner=first_owner,
-        exits_play=exits, stop_points=np.stack((x, y), axis=1),
+        exits_play=exits, stop_points=stop_points,
         nearest_enemy=nearest_enemy, nearest_own=nearest_own,
     )
 

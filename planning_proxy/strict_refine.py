@@ -80,6 +80,9 @@ class StrictEvaluation:
     tactical_scores: List[float] = field(default_factory=list)
     tactical_goal_met: List[bool] = field(default_factory=list)
     active_final_positions: List[Tuple[float, float] | None] = field(default_factory=list)
+    # 第八颗候选的每条摩擦序列终局可直接喂给 validate_final_defence.py
+    # 做对手第十六手反击搜索；不再要求人工从调试日志拼坐标。
+    final_boards: List[List[dict]] = field(default_factory=list)
 
     def to_json(self) -> dict:
         data = asdict(self)
@@ -241,8 +244,11 @@ def evaluate_one(
     tactical_scores: List[float] = []
     tactical_goal_met: List[bool] = []
     active_final_positions: List[Tuple[float, float] | None] = []
+    final_boards: List[List[dict]] = []
     enemy_indices = {stone.index for stone in board if stone.owner == "opponent"}
     own_indices = {stone.index for stone in board if stone.owner == "self"}
+    owners = {stone.index: stone.owner for stone in board}
+    owners[int(active_index)] = "self"
     if not 0 <= int(active_index) < STONE_COUNT:
         raise ValueError("active_index 必须在 0..15")
     # 本次出手壶必须从 factory yaw=0 起步；其他在场壶原样恢复其真实 yaw。
@@ -281,6 +287,17 @@ def evaluate_one(
         active_final_positions.append(
             (float(active_state["x"]), float(active_state["y"])) if bool(active_state.get("enabled", False)) else None
         )
+        # 仅导出仍在场且属于本局双方的壶。PhysX state 的 yaw 若比赛端未
+        # 暴露则安全回退为 0；验证器仍会明确记录这是该回放可见的状态。
+        final_boards.append([
+            {
+                "index": int(index), "owner": owners.get(index, "unknown"),
+                "x": float(state["x"]), "y": float(state["y"]),
+                "enabled": bool(state.get("enabled", False)), "yaw": float(state.get("yaw", 0.0)),
+            }
+            for index, state in enumerate(states)
+            if bool(state.get("enabled", False)) and owners.get(index) in {"self", "opponent"}
+        ])
         own_in_house.append(sum(
             1 for index, distance in final_distances.items()
             if (index == int(active_index) or index in own_indices) and distance <= HOUSE_R + STONE_R
@@ -319,6 +336,7 @@ def evaluate_one(
         tactical_scores=tactical_scores,
         tactical_goal_met=tactical_goal_met,
         active_final_positions=active_final_positions,
+        final_boards=final_boards,
     )
 
 
