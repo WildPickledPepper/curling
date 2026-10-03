@@ -1,0 +1,56 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "d1af92f272aea36bcbe836ef48e5c5f6ec3d3a0e3ad071b90ac771ca03d9221d",
+  "repair": "default ice_use_fast_midphase=True restores actual Unity BVH34 traversal",
+  "repairedTick": 526,
+  "denseOrdinal": 527,
+  "verifiedNativeQueryRvas": [
+    "0x347650",
+    "0x3f69b0"
+  ],
+  "originalFirst525StateOutputsUnchanged": true,
+  "reset42PhysicalStatesUnchanged": true,
+  "sixPersistentContactsFloatWordsExact": 72,
+  "sixFinalContactsFloatWordsExact": 42,
+  "observer": {
+    "unity_release_526_chain_capture_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "densePairsUnchanged": 1563,
+      "originalInstrumentedBodiesRetained": true
+    },
+    "unity_release_1022_1025_chain_capture_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "densePairsUnchanged": 1563,
+      "originalInstrumentedBodiesRetained": true
+    }
+  },
+  "nativeObserverOutputUnchanged": true,
+  "tests": "32 unittest tests passed",
+  "frontier": {
+    "continuousPostReleaseStateTicksExact": 1561,
+    "continuousPostReleaseStateWordsExact": 20293,
+    "nextConfirmedDivergence": null,
+    "comparedStatesAvailable": 1562,
+    "unityEvents": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_release_1022_1025_chain_capture_20261002\\logs\\unity_runtime_probe_20261002_165937\\events.jsonl"
+  },
+  "scope": "sample 11000, fresh Windows CP39, actual Reset and BESTSHOT; recorded friction inputs",
+  "limitations": [
+    "Continuous comparison covers the released stone P/Q/v/w boundaries; does not audit every arithmetic intermediate or every other stone state.",
+    "Last tick 1562 output has no next getter in this capture; direct writeback sampling is separate.",
+    "Recorded friction input agreement does not prove internal RNG-state alignment."
+  ],
+  "evidence": {
+    "analysis_input\\native_first_release_bvh34_full_20261002.json": "bb030496e71df309cd8e3656cb58452810cb1b96f38ebb86047db302e17258c2",
+    "analysis_input\\native_release_526_bvh34_verified_20261002\\calls.json": "f34437f30c7d9386472166568c821144ab8d6f0f874c4165e15378015f8ac7e1",
+    "analysis_input\\native_release_526_bvh34_verified_20261002\\alignment.json": "4e2747ce04ddb20da872c9def46e3551b4707359097bc8c78bfca157f3257f50",
+    "analysis_input\\native_reset_bvh34_verified_20261002.json": "26810189bc94fed0eb1d0cef277270961770f66c0e4b80499bcb679ca444e476",
+    "local_simulator\\unity_physx.py": "d1af92f272aea36bcbe836ef48e5c5f6ec3d3a0e3ad071b90ac771ca03d9221d",
+    "analysis_input\\unity_release_526_chain_capture_20261002\\logs\\unity_runtime_probe_20261002_164504\\events.jsonl": "b59c44cca8f12b53ab374ecd09dc2a1c3a32b36943839884e812d0307e2504ab",
+    "analysis_input\\unity_release_1022_1025_chain_capture_20261002\\logs\\unity_runtime_probe_20261002_165937\\events.jsonl": "4880801c6f854e51ffd8779cc314594059c7d615c68f034343357d5d25b1e822"
+  }
+}

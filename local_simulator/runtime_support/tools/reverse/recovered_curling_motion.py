@@ -196,6 +196,111 @@ def integrand(type_: int, i: int, x: float, p: MyParams) -> float:
     raise ValueError(f"unsupported integrand type={type_} i={i}")
 
 
+def integrand_direct_trig(type_: int, i: int, x: float, p: MyParams) -> float:
+    """Fast algebraic form of :func:`integrand` used by the native batch kernel.
+
+    ``theta`` in the recovered formula is ``atan(a / b)`` and is only consumed
+    by ``sin`` or ``cos``.  The native hot path therefore derives those values
+    from ``a / b`` directly.  This reference form exists solely for numerical
+    regression tests; the recovered, literal form above remains authoritative.
+    """
+
+    sine = _sin(x)
+    cosine = _cos(x)
+    half_pi_sine = _sin(PI / 2.0)
+    half_pi_cosine = _cos(PI / 2.0)
+
+    def local(radius: float, numerator_mode: str, denom_sign: float):
+        spin_radius = p.w * radius
+        if numerator_mode == "plus":
+            a = p.vx + sine * spin_radius
+        elif numerator_mode == "minus":
+            a = sine * spin_radius - p.vx
+        else:
+            raise ValueError(f"unsupported numerator mode={numerator_mode!r}")
+        b = p.vy + denom_sign * cosine * spin_radius
+        speed_sq = a * a + b * b
+        if b == 0.0:
+            if a == 0.0:
+                return float("nan"), float("nan"), speed_sq
+            return math.copysign(1.0, a), 0.0, speed_sq
+        ratio = a / b
+        cos_theta = 1.0 / math.sqrt(1.0 + ratio * ratio)
+        return ratio * cos_theta, cos_theta, speed_sq
+
+    def minus_theta_forward(value):
+        sin_theta, cos_theta, _ = value
+        angle_sine = sine * cos_theta - cosine * sin_theta
+        angle_cosine = cosine * cos_theta + sine * sin_theta
+        return half_pi_sine * angle_cosine + half_pi_cosine * angle_sine
+
+    def plus_theta_forward(value):
+        sin_theta, cos_theta, _ = value
+        angle_sine = sine * cos_theta + cosine * sin_theta
+        angle_cosine = cosine * cos_theta - sine * sin_theta
+        return half_pi_sine * angle_cosine + half_pi_cosine * angle_sine
+
+    def minus_theta_reverse(value):
+        sin_theta, cos_theta, _ = value
+        angle_sine = sine * cos_theta - cosine * sin_theta
+        angle_cosine = cosine * cos_theta + sine * sin_theta
+        return half_pi_sine * angle_cosine - half_pi_cosine * angle_sine
+
+    def plus_theta_reverse(value):
+        sin_theta, cos_theta, _ = value
+        angle_sine = sine * cos_theta + cosine * sin_theta
+        angle_cosine = cosine * cos_theta - sine * sin_theta
+        return half_pi_sine * angle_cosine - half_pi_cosine * angle_sine
+
+    if type_ == 1:
+        if i == 1:
+            return local(p.r2, "plus", 1.0)[0] + local(p.r2, "plus", -1.0)[0]
+        if i == 2:
+            return local(p.r1, "minus", 1.0)[0] + local(p.r1, "minus", -1.0)[0]
+        radial = {
+            3: (p.r1, "plus", 1.0),
+            4: (p.r1, "plus", -1.0),
+            5: (p.r2, "minus", 1.0),
+            6: (p.r2, "minus", -1.0),
+            7: (p.r2, "plus", -1.0),
+        }
+        value = local(*radial[i])
+        return value[0] if i == 7 else value[2] * value[0]
+
+    if type_ == 2:
+        if i == 1:
+            return local(p.r2, "plus", 1.0)[1] + local(p.r2, "plus", -1.0)[1]
+        if i == 2:
+            return local(p.r1, "minus", 1.0)[1] + local(p.r1, "minus", -1.0)[1]
+        radial = {
+            3: (p.r1, "plus", 1.0),
+            4: (p.r1, "plus", -1.0),
+            5: (p.r2, "minus", 1.0),
+            6: (p.r2, "minus", -1.0),
+            7: (p.r2, "plus", -1.0),
+        }
+        value = local(*radial[i])
+        return value[1] if i == 7 else value[2] * value[1]
+
+    if type_ == 3:
+        angular = {
+            1: (p.r2, "plus", 1.0, minus_theta_forward),
+            2: (p.r2, "plus", -1.0, plus_theta_forward),
+            3: (p.r1, "minus", 1.0, minus_theta_reverse),
+            4: (p.r1, "minus", -1.0, plus_theta_reverse),
+            5: (p.r1, "plus", 1.0, minus_theta_forward),
+            6: (p.r1, "plus", -1.0, plus_theta_forward),
+            7: (p.r2, "minus", 1.0, minus_theta_reverse),
+            8: (p.r2, "minus", -1.0, plus_theta_reverse),
+        }
+        radius, numerator_mode, denom_sign, transform = angular[i]
+        value = local(radius, numerator_mode, denom_sign)
+        result = transform(value)
+        return result if i < 5 else value[2] * result
+
+    raise ValueError(f"unsupported integrand type={type_} i={i}")
+
+
 def fsimp_diagnostics(
     a: float,
     b: float,

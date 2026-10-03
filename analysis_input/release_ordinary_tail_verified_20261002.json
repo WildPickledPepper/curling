@@ -1,0 +1,214 @@
+{
+  "sampleId": 11000,
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "d1af92f272aea36bcbe836ef48e5c5f6ec3d3a0e3ad071b90ac771ca03d9221d",
+  "observer": {
+    "frictionRecordsExact": 1562,
+    "resetCoreFramesExact": 256,
+    "endpointUnchanged": true,
+    "densePairsUnchanged": 1563,
+    "originalFunctionBodiesRetained": true,
+    "nativeOutputsUnchanged": true,
+    "tracedFirst256TailOutputsUnchanged": true
+  },
+  "mainPrefixTicksExact": 1561,
+  "completedBoundaryFirstTick": 1561,
+  "completedBoundaryLastTick": 3362,
+  "mainContinuousStateTicksExact": 3362,
+  "mainContinuousStateWordsExact": 43706,
+  "firstObservedTargetStateDifference": {
+    "physicsTick": 1561,
+    "differences": [
+      {
+        "stoneIndex": 2,
+        "wordIndex": 4,
+        "unity": "0x2c414a0a",
+        "native": "0x2c485f1c"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 5,
+        "unity": "0x2057e7fc",
+        "native": "0x205fd134"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 7,
+        "unity": "0x0",
+        "native": "0xab0a7d0e"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 9,
+        "unity": "0x0",
+        "native": "0xab8f626f"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 10,
+        "unity": "0x0",
+        "native": "0x8339c9a2"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 11,
+        "unity": "0x0",
+        "native": "0x2cb9c9a2"
+      },
+      {
+        "stoneIndex": 2,
+        "wordIndex": 12,
+        "unity": "0x0",
+        "native": "0x214f86db"
+      }
+    ]
+  },
+  "observedTargetDifferenceTicks": [
+    1561,
+    1562
+  ],
+  "bothStonePhysicsOnlyTailTicksExact": 1800,
+  "bothStonePhysicsOnlyTailWordsExact": 46800,
+  "targetWakeCalls": [
+    {
+      "physicsTick": 1561,
+      "stoneIndex": 2,
+      "beforeBits": [
+        3263899553,
+        1097250672,
+        1113102746,
+        865008181,
+        742476298,
+        542631932,
+        1065353216,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "afterBits": [
+        3263899553,
+        1097250672,
+        1113102746,
+        865008181,
+        742476298,
+        542631932,
+        1065353216,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sleepingBefore": true,
+      "sleepingAfter": false
+    },
+    {
+      "physicsTick": 1562,
+      "stoneIndex": 2,
+      "beforeBits": [
+        3263899553,
+        1097250672,
+        1113102746,
+        865008181,
+        742940444,
+        543150388,
+        1065353216,
+        2869591310,
+        0,
+        2878300783,
+        2201602466,
+        750373282,
+        558859995
+      ],
+      "afterBits": [
+        3263899553,
+        1097250672,
+        1113102746,
+        865008181,
+        742940444,
+        543150388,
+        1065353216,
+        2869591310,
+        0,
+        2878300783,
+        2201602466,
+        750373282,
+        558859995
+      ],
+      "sleepingBefore": false,
+      "sleepingAfter": false
+    }
+  ],
+  "targetWakeCause": "step_custom_sliding uses _reaches_pcm_shell_this_tick and explicitly calls target.body.wake_up before tick 1561; Unity sampled target core does not advance in that tick",
+  "firstStoneContactTick": 1562,
+  "mainNativeSleepTick": 1603,
+  "targetNativeSleepTick": 1919,
+  "sleepTransition": {
+    "physicsTick": 1919,
+    "unitySolverExitTargetBits": [
+      3263726837,
+      1097250672,
+      1113073977,
+      865008171,
+      985070031,
+      785147075,
+      1065353201,
+      764505232,
+      0,
+      776666367,
+      574519334,
+      2943414062,
+      654546642
+    ],
+    "unityCompletedTargetBits": [
+      3263726837,
+      1097250672,
+      1113073977,
+      865008171,
+      985070031,
+      785147074,
+      1065353201,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nativeCompletedTargetBits": [
+      3263726837,
+      1097250672,
+      1113073977,
+      865008171,
+      985070031,
+      785147074,
+      1065353201,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "scope": "sample 11000; Windows CP39; fresh Reset and actual BESTSHOT; recorded friction inputs; matching completed-step P/Q/v/w boundaries",
+  "limitations": [
+    "Does not prove that every intermediate calculation or internal RNG state is identical.",
+    "The entire precontact target trajectory is not independently sampled in this report.",
+    "Protocol coordinate conversion/formatting and game-state transition internals remain separate checks."
+  ],
+  "evidence": {
+    "analysis_input\\unity_release_tail_fixed_boundaries_20261002\\logs\\unity_runtime_probe_20261002_173246\\events.jsonl": "ec275af330a0d3253cf0f9782c82e95a0f1f2dba557fd0131f5088ee939feffa",
+    "analysis_input\\native_release_ordinary_tail_1800_20261002.json": "7880f60b1f4689b00dc4a2410e113e368174647f6d1537c4aa11de32a8075e38",
+    "analysis_input\\unity_release_tail_fixed_boundaries_20261002\\capture_manifest.json": "bd6cab4e07fbff99aae70f8b61d71edc0d164ec8e65d7c7e17f9fc628d4e084e",
+    "analysis_input\\unity_release_tail_fixed_boundaries_20261002\\observer_source.js": "f7ec7dec15956fb42127bd6f527b5619b57de3bf93dc338b993dcd16b505d60a",
+    "analysis_input\\native_release_target_wake_calls_20261002.json": "5075854a70f2c0048ac59d5e2d6c3856541d6c91ce15cd8526868e39ae9089ac",
+    "analysis_input\\pcm_functions_20261001\\f61107.wat": "0d4861f9fb32a4ba8b00981d527c5e429817444847fc4ba2927e6521aab57943",
+    "analysis_input\\pcm_functions_20261001\\f61030.wat": "e152b539b95226c85eb7ac28ba83db62d5688e36307f08cd2659efb4718197f2"
+  }
+}

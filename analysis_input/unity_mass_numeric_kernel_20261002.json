@@ -1,0 +1,23 @@
+{
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "kernelSha256": "f598ebb73edfb7b0aeefdfc596bba6f95daac352be17a6911fa14e70f2a23a52",
+  "sourceFunctionBodySha256": {
+    "72776": "8580c6f2890d5e95f4b146a3d4dd1e3dc0696819d19e51242f7548c8ed816182",
+    "72779": "697a52946e46ee52afaa9f99aa3a0f059b16da78b3d9f7e6fbc8d53787d976ca",
+    "69768": "425aa2a3a7fe6cf6682e084d96115a2cdd3683788c0cd8581693d0853da77b6c",
+    "72775": "56851f368a36efcd9e4926f486b6c82281c8b9966e0e6cf080478a0287e2c1f1"
+  },
+  "numericSegmentWatSha256": "ece45ae4a340c0e4e5411bd214ad32bf90a4152f320db4cd5c63d6fa234b5fe3",
+  "wrapperInputs": {
+    "l4": "original stack frame with inertia at +48",
+    "l8": "convex scale xyz",
+    "l9": "scale rotation xyzw"
+  },
+  "sourceLines": {
+    "functionIndex": 72776,
+    "start": 1249,
+    "endExclusive": 1418
+  },
+  "method": "Verbatim numeric WAT segment and helpers; new pointer wrapper and exports."
+}

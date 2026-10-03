@@ -1,0 +1,244 @@
+{
+  "boundary": "Sc::RigidSim registration numerical input",
+  "unityFunctionIndex": 71726,
+  "nativeFunctionRva": "0x214bd0",
+  "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "initialRegistrationsExact": 16,
+  "reactivationsExact": 24,
+  "wordsPerRegistration": 35,
+  "totalExactWords": 1400,
+  "checks": [
+    {
+      "stoneRegistrationOrdinal": 0,
+      "unityCallId": 3,
+      "nativeCallId": 2
+    },
+    {
+      "stoneRegistrationOrdinal": 1,
+      "unityCallId": 4,
+      "nativeCallId": 3
+    },
+    {
+      "stoneRegistrationOrdinal": 2,
+      "unityCallId": 5,
+      "nativeCallId": 4
+    },
+    {
+      "stoneRegistrationOrdinal": 3,
+      "unityCallId": 6,
+      "nativeCallId": 5
+    },
+    {
+      "stoneRegistrationOrdinal": 4,
+      "unityCallId": 7,
+      "nativeCallId": 6
+    },
+    {
+      "stoneRegistrationOrdinal": 5,
+      "unityCallId": 8,
+      "nativeCallId": 7
+    },
+    {
+      "stoneRegistrationOrdinal": 6,
+      "unityCallId": 10,
+      "nativeCallId": 8
+    },
+    {
+      "stoneRegistrationOrdinal": 7,
+      "unityCallId": 11,
+      "nativeCallId": 9
+    },
+    {
+      "stoneRegistrationOrdinal": 8,
+      "unityCallId": 12,
+      "nativeCallId": 10
+    },
+    {
+      "stoneRegistrationOrdinal": 9,
+      "unityCallId": 13,
+      "nativeCallId": 11
+    },
+    {
+      "stoneRegistrationOrdinal": 10,
+      "unityCallId": 14,
+      "nativeCallId": 12
+    },
+    {
+      "stoneRegistrationOrdinal": 11,
+      "unityCallId": 15,
+      "nativeCallId": 13
+    },
+    {
+      "stoneRegistrationOrdinal": 12,
+      "unityCallId": 16,
+      "nativeCallId": 14
+    },
+    {
+      "stoneRegistrationOrdinal": 13,
+      "unityCallId": 17,
+      "nativeCallId": 15
+    },
+    {
+      "stoneRegistrationOrdinal": 14,
+      "unityCallId": 18,
+      "nativeCallId": 16
+    },
+    {
+      "stoneRegistrationOrdinal": 15,
+      "unityCallId": 19,
+      "nativeCallId": 17
+    },
+    {
+      "stoneRegistrationOrdinal": 16,
+      "unityCallId": 333,
+      "nativeCallId": 35
+    },
+    {
+      "stoneRegistrationOrdinal": 17,
+      "unityCallId": 357,
+      "nativeCallId": 37
+    },
+    {
+      "stoneRegistrationOrdinal": 18,
+      "unityCallId": 395,
+      "nativeCallId": 42
+    },
+    {
+      "stoneRegistrationOrdinal": 19,
+      "unityCallId": 419,
+      "nativeCallId": 44
+    },
+    {
+      "stoneRegistrationOrdinal": 20,
+      "unityCallId": 460,
+      "nativeCallId": 49
+    },
+    {
+      "stoneRegistrationOrdinal": 21,
+      "unityCallId": 487,
+      "nativeCallId": 51
+    },
+    {
+      "stoneRegistrationOrdinal": 22,
+      "unityCallId": 525,
+      "nativeCallId": 56
+    },
+    {
+      "stoneRegistrationOrdinal": 23,
+      "unityCallId": 552,
+      "nativeCallId": 58
+    },
+    {
+      "stoneRegistrationOrdinal": 24,
+      "unityCallId": 593,
+      "nativeCallId": 63
+    },
+    {
+      "stoneRegistrationOrdinal": 25,
+      "unityCallId": 620,
+      "nativeCallId": 65
+    },
+    {
+      "stoneRegistrationOrdinal": 26,
+      "unityCallId": 658,
+      "nativeCallId": 70
+    },
+    {
+      "stoneRegistrationOrdinal": 27,
+      "unityCallId": 685,
+      "nativeCallId": 72
+    },
+    {
+      "stoneRegistrationOrdinal": 28,
+      "unityCallId": 726,
+      "nativeCallId": 77
+    },
+    {
+      "stoneRegistrationOrdinal": 29,
+      "unityCallId": 753,
+      "nativeCallId": 79
+    },
+    {
+      "stoneRegistrationOrdinal": 30,
+      "unityCallId": 791,
+      "nativeCallId": 84
+    },
+    {
+      "stoneRegistrationOrdinal": 31,
+      "unityCallId": 818,
+      "nativeCallId": 86
+    },
+    {
+      "stoneRegistrationOrdinal": 32,
+      "unityCallId": 859,
+      "nativeCallId": 91
+    },
+    {
+      "stoneRegistrationOrdinal": 33,
+      "unityCallId": 886,
+      "nativeCallId": 93
+    },
+    {
+      "stoneRegistrationOrdinal": 34,
+      "unityCallId": 927,
+      "nativeCallId": 98
+    },
+    {
+      "stoneRegistrationOrdinal": 35,
+      "unityCallId": 954,
+      "nativeCallId": 100
+    },
+    {
+      "stoneRegistrationOrdinal": 36,
+      "unityCallId": 995,
+      "nativeCallId": 105
+    },
+    {
+      "stoneRegistrationOrdinal": 37,
+      "unityCallId": 1022,
+      "nativeCallId": 107
+    },
+    {
+      "stoneRegistrationOrdinal": 38,
+      "unityCallId": 1063,
+      "nativeCallId": 112
+    },
+    {
+      "stoneRegistrationOrdinal": 39,
+      "unityCallId": 1090,
+      "nativeCallId": 114
+    }
+  ],
+  "floatComparison": "raw binary32 words including signed zeros",
+  "regression": {
+    "shots": 12,
+    "endpointOutcomesAndAggregatesUnchanged": true,
+    "activeFirstContactInputsOutputsUnchanged": true,
+    "targetStateChangedByRestoredResetFall": [
+      11000,
+      11001,
+      11002,
+      11003,
+      11004,
+      11005,
+      11006,
+      11007,
+      11008,
+      11009,
+      11010,
+      11011
+    ],
+    "11005SettersExact": 1023
+  },
+  "wholeScenePrefixAligned": false,
+  "remaining": "Attribute synchronization and Reset placement/integration/sleep. Factory/cooking internals are not fully closed.",
+  "evidenceSha256": {
+    "analysis_input\\unity_scene_chain_from_start_20261002\\logs\\unity_runtime_probe_20261002_135437\\events.jsonl": "d51d4de852efad53089f7c7e00b2ec301928d22b17f7fcd870320fc5e94c5791",
+    "analysis_input\\native_reset_settling_regression_20261002\\calls.json": "a84455c1f1b5f9feb9d3bc5db5c2f8810b634ff58329ad7c2222abe142b95385",
+    "analysis_input\\native_reset_settling_regression_20261002\\alignment.json": "e06f08b92c7e2f38feca2ec4365598e68436c89fd2d29f8d44e3eb2c85650c8f"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "b1b123464f65932b5e1fab8a414ba68f965b48369a54e3637324b25232837517",
+    "local_simulator\\assets\\unity_startup_body_roster.json": "21db7e1c72eb92cd6a3c898b815729f37274f12f002304721eb13a852b93ea6b"
+  }
+}

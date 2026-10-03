@@ -1,0 +1,734 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "92a1017a330bb2cde72a2ea5dee3727838636aa9ee0f4ec2b9f657757c3778f9",
+  "importedFunctions": 476,
+  "originalTableSize": 129990,
+  "functions": [
+    {
+      "functionIndex": 71726,
+      "rawFunctionIndex": 83848,
+      "tableIndex": 129990,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "466690f629b88e0541039caf6a2708da81621992f30a7e54418466b9a7b8b234",
+      "originalBodyBytes": 144
+    },
+    {
+      "functionIndex": 71727,
+      "rawFunctionIndex": 83849,
+      "tableIndex": 129991,
+      "typeIndex": 5,
+      "signature": "ii",
+      "originalBodySha256": "4b5bc9be3a212d29bfd841fa6928864119b3512817cb34b12f3098c19bc75b5b",
+      "originalBodyBytes": 39
+    },
+    {
+      "functionIndex": 73034,
+      "rawFunctionIndex": 83850,
+      "tableIndex": 129992,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "1a0939d4f246c838a957fd8c46376b4371666c8f678051a164a221f61a9ade59",
+      "originalBodyBytes": 279
+    },
+    {
+      "functionIndex": 73035,
+      "rawFunctionIndex": 83851,
+      "tableIndex": 129993,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "5e591273b1777c4f0d12daa42e1f4019d4a0ceaa3d39d763cc5149ed37c60be4",
+      "originalBodyBytes": 743
+    },
+    {
+      "functionIndex": 73070,
+      "rawFunctionIndex": 83852,
+      "tableIndex": 129994,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "1cd50e2eafb0958ea8f946e85b4df21c68736e09cb1139a14ea177edd88edc29",
+      "originalBodyBytes": 1852
+    },
+    {
+      "functionIndex": 72606,
+      "rawFunctionIndex": 83853,
+      "tableIndex": 129995,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "3b74a3c10d5b9b7e98a45528245d9762acdf6b26c4519de44b4b006596d18f1d",
+      "originalBodyBytes": 987
+    },
+    {
+      "functionIndex": 71596,
+      "rawFunctionIndex": 83854,
+      "tableIndex": 129996,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "70374a8d59c44566dc749201b4ef9141dffff78f2929a7d7691186c54846209c",
+      "originalBodyBytes": 236
+    },
+    {
+      "functionIndex": 71729,
+      "rawFunctionIndex": 83855,
+      "tableIndex": 129997,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "26bf9f56264999ff62f9c53fbadda74b373fb7de9aa37c1f8cab8e2231746db9",
+      "originalBodyBytes": 314
+    },
+    {
+      "functionIndex": 71632,
+      "rawFunctionIndex": 83856,
+      "tableIndex": 129998,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "a198f68dc343c2e0b6c25c59051f15a142ffea08dc0515cbce8c2c56ce0c8c09",
+      "originalBodyBytes": 64
+    },
+    {
+      "functionIndex": 61066,
+      "rawFunctionIndex": 83857,
+      "tableIndex": 129999,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "63a4bbb6b4481e059890a21f45f2d5b05517b077de572ab5ebe5db88e9aa106e",
+      "originalBodyBytes": 4802
+    },
+    {
+      "functionIndex": 60092,
+      "rawFunctionIndex": 83858,
+      "tableIndex": 130000,
+      "typeIndex": 72,
+      "signature": "vifffi",
+      "originalBodySha256": "514ecf464dbbd348b0e622fb1c4d2873b3b645e5497140438531da4db0f3be1c",
+      "originalBodyBytes": 1238
+    },
+    {
+      "functionIndex": 60705,
+      "rawFunctionIndex": 83859,
+      "tableIndex": 130001,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "f55ccd8238d28377ce39e32644c11867b5b9e493d73d86a403278fbb8dd6fbe8",
+      "originalBodyBytes": 4937
+    },
+    {
+      "functionIndex": 32521,
+      "rawFunctionIndex": 83860,
+      "tableIndex": 130002,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "6debbdf0a2ae03a39e3530fa53ea23b14452e29c5b67304276ff03a08d5358f8",
+      "originalBodyBytes": 42
+    },
+    {
+      "functionIndex": 32524,
+      "rawFunctionIndex": 83861,
+      "tableIndex": 130003,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "d231719411b750a939f750378c88ce30cca057910e447fbfdc1694acc60f0c6b",
+      "originalBodyBytes": 42
+    },
+    {
+      "functionIndex": 32511,
+      "rawFunctionIndex": 83862,
+      "tableIndex": 130004,
+      "typeIndex": 17,
+      "signature": "vifi",
+      "originalBodySha256": "4ecec5fa6794c3fb4f47890f78f7540278248e15b26f5ebc6bc693611369587e",
+      "originalBodyBytes": 42
+    },
+    {
+      "functionIndex": 32512,
+      "rawFunctionIndex": 83863,
+      "tableIndex": 130005,
+      "typeIndex": 17,
+      "signature": "vifi",
+      "originalBodySha256": "5c27f0f464e9097f20e1e1e36d08007aa3f9f38c0454e715f193c6b3ce0801d8",
+      "originalBodyBytes": 42
+    },
+    {
+      "functionIndex": 70030,
+      "rawFunctionIndex": 83864,
+      "tableIndex": 130006,
+      "typeIndex": 486,
+      "signature": "iiiiiiiifiiiiiii",
+      "originalBodySha256": "31d4215a40d080514ca9283d45348ee948329db22fe534a058c756600a934ec2",
+      "originalBodyBytes": 2406
+    },
+    {
+      "functionIndex": 70031,
+      "rawFunctionIndex": 83865,
+      "tableIndex": 130007,
+      "typeIndex": 8,
+      "signature": "iiiii",
+      "originalBodySha256": "ca88f677970b40e7aba061d5fc0d9fc8dd22fc3cd0343f5c0f42478d1322fc4d",
+      "originalBodyBytes": 681
+    },
+    {
+      "functionIndex": 70485,
+      "rawFunctionIndex": 83866,
+      "tableIndex": 130008,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "ee8565ad7dad199276cec38fe66dc120eeadcd7b24dea4855e90da33a254faf0",
+      "originalBodyBytes": 980
+    },
+    {
+      "functionIndex": 70494,
+      "rawFunctionIndex": 83867,
+      "tableIndex": 130009,
+      "typeIndex": 11,
+      "signature": "viiiiii",
+      "originalBodySha256": "92044d9cbc8aea9531f890ee88ad4f588ccf07b363c31f3e7b564cbfa809675b",
+      "originalBodyBytes": 1239
+    },
+    {
+      "functionIndex": 69939,
+      "rawFunctionIndex": 83868,
+      "tableIndex": 130010,
+      "typeIndex": 168,
+      "signature": "viifiiii",
+      "originalBodySha256": "2c6632bcda73a55edefc2b02dbb1f8a8d630029ef43c5a03d14824c867858fb0",
+      "originalBodyBytes": 725
+    },
+    {
+      "functionIndex": 69978,
+      "rawFunctionIndex": 83869,
+      "tableIndex": 130011,
+      "typeIndex": 4,
+      "signature": "viiii",
+      "originalBodySha256": "2f7026b4464d52a0b1a665cf6abea7b0c3b5d08cd22a96e1c354a5238e502398",
+      "originalBodyBytes": 419
+    },
+    {
+      "functionIndex": 69979,
+      "rawFunctionIndex": 83870,
+      "tableIndex": 130012,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "794eaa41c0d232c84df50fd17f22682cdf16b7cc61833060e8ccadd902c076e4",
+      "originalBodyBytes": 832
+    },
+    {
+      "functionIndex": 70050,
+      "rawFunctionIndex": 83871,
+      "tableIndex": 130013,
+      "typeIndex": 28,
+      "signature": "iiiiiiiiii",
+      "originalBodySha256": "f920c21ebb044163e720b09ebd51fcb2c88c46a2ac47dc68ab04bf0ac2afc5e7",
+      "originalBodyBytes": 2442
+    },
+    {
+      "functionIndex": 70051,
+      "rawFunctionIndex": 83872,
+      "tableIndex": 130014,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "5d3047cea2f70dea96fabeb5af62a43d1fa3a5ed07588424500a70045a508820",
+      "originalBodyBytes": 6017
+    },
+    {
+      "functionIndex": 70054,
+      "rawFunctionIndex": 83873,
+      "tableIndex": 130015,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "107208d854191eaae096c897729ed36759d93adf1ef6a046cae78fb183c93a9f",
+      "originalBodyBytes": 2046
+    },
+    {
+      "functionIndex": 70056,
+      "rawFunctionIndex": 83874,
+      "tableIndex": 130016,
+      "typeIndex": 6,
+      "signature": "viiiii",
+      "originalBodySha256": "592ea8abeda7b42c97f33d104c4426b1f527f4b54d496b68232dc5976a669a4f",
+      "originalBodyBytes": 3384
+    },
+    {
+      "functionIndex": 69975,
+      "rawFunctionIndex": 83875,
+      "tableIndex": 130017,
+      "typeIndex": 6,
+      "signature": "viiiii",
+      "originalBodySha256": "034b352bd5bbdfaf5098b2d25ec8133310c4de242ffc5ad4c526b5b61578e16e",
+      "originalBodyBytes": 1737
+    },
+    {
+      "functionIndex": 69976,
+      "rawFunctionIndex": 83876,
+      "tableIndex": 130018,
+      "typeIndex": 6,
+      "signature": "viiiii",
+      "originalBodySha256": "3f8c41bbf971b8201e9eb0e38203ea98dad0c9f3ec100b5839f7cab6273313c1",
+      "originalBodyBytes": 1078
+    },
+    {
+      "functionIndex": 70052,
+      "rawFunctionIndex": 83877,
+      "tableIndex": 130019,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "2ae5252a58fce54b1bb6aa0f0dfcf21dba2b69439460074ddcd76e631bada770",
+      "originalBodyBytes": 895
+    },
+    {
+      "functionIndex": 70055,
+      "rawFunctionIndex": 83878,
+      "tableIndex": 130020,
+      "typeIndex": 29,
+      "signature": "viiiiiiiiii",
+      "originalBodySha256": "57d306157e3d1ea10bca820043940c69950223016ea0a544cf3b0eb47e68d8a0",
+      "originalBodyBytes": 3381
+    },
+    {
+      "functionIndex": 70057,
+      "rawFunctionIndex": 83879,
+      "tableIndex": 130021,
+      "typeIndex": 14,
+      "signature": "iiiiiiii",
+      "originalBodySha256": "65ef21b44403c085e0c14d96225f58cdf86ea9653a40e5e434a261bef9b9c7e4",
+      "originalBodyBytes": 351
+    },
+    {
+      "functionIndex": 70058,
+      "rawFunctionIndex": 83880,
+      "tableIndex": 130022,
+      "typeIndex": 18,
+      "signature": "iiiiiiiii",
+      "originalBodySha256": "cc7e7d206604a8ddb822947fb8784136ac5b42b87c0cb248cc3a4d052e885e2c",
+      "originalBodyBytes": 800
+    },
+    {
+      "functionIndex": 70059,
+      "rawFunctionIndex": 83881,
+      "tableIndex": 130023,
+      "typeIndex": 28,
+      "signature": "iiiiiiiiii",
+      "originalBodySha256": "e7db24d065299df050b4a4a74d0b5dcd327e364a64b49482dc1ad4056007f798",
+      "originalBodyBytes": 1413
+    },
+    {
+      "functionIndex": 70060,
+      "rawFunctionIndex": 83882,
+      "tableIndex": 130024,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "7958cedcb9fb4df7af8fb99f5dcfbd0c55a9b56696003bd3fa8fad579b787aee",
+      "originalBodyBytes": 684
+    },
+    {
+      "functionIndex": 70061,
+      "rawFunctionIndex": 83883,
+      "tableIndex": 130025,
+      "typeIndex": 29,
+      "signature": "viiiiiiiiii",
+      "originalBodySha256": "21c5881827b008998036cd1894e1a5ebbbae398d6132c606423db949888a765a",
+      "originalBodyBytes": 3340
+    },
+    {
+      "functionIndex": 70062,
+      "rawFunctionIndex": 83884,
+      "tableIndex": 130026,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "fbebd33cab36f61e9db5b3967976e55dd968771f64326882ce0f95fda0c7d5b9",
+      "originalBodyBytes": 266
+    },
+    {
+      "functionIndex": 70179,
+      "rawFunctionIndex": 83885,
+      "tableIndex": 130027,
+      "typeIndex": 4,
+      "signature": "viiii",
+      "originalBodySha256": "28e570eaa2b6a1bceaff61dc12d73ffc371bd9d2b36d33812bbefe31f0ff9c3a",
+      "originalBodyBytes": 691
+    },
+    {
+      "functionIndex": 69896,
+      "rawFunctionIndex": 83886,
+      "tableIndex": 130028,
+      "typeIndex": 11,
+      "signature": "viiiiii",
+      "originalBodySha256": "57a781b081673a5ff2e7a18e6a25938119fbe4f40f92c02dfb5eaa619263ae09",
+      "originalBodyBytes": 352
+    },
+    {
+      "functionIndex": 69972,
+      "rawFunctionIndex": 83887,
+      "tableIndex": 130029,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "696f0b07d02db73815004ae0b229c29157b4002e6e071b3247b04b7aec85659c",
+      "originalBodyBytes": 442
+    },
+    {
+      "functionIndex": 69977,
+      "rawFunctionIndex": 83888,
+      "tableIndex": 130030,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "d8c6d6e8cfb35484867f10feba2ceb3eb91bd94eaa7f435a7abe8c10e4d4da42",
+      "originalBodyBytes": 2109
+    },
+    {
+      "functionIndex": 70053,
+      "rawFunctionIndex": 83889,
+      "tableIndex": 130031,
+      "typeIndex": 4,
+      "signature": "viiii",
+      "originalBodySha256": "194ec52afbc320357f4a943410518fc3dabcd1e9aff0f42f65e5f7122f77c42c",
+      "originalBodyBytes": 580
+    },
+    {
+      "functionIndex": 71103,
+      "rawFunctionIndex": 83890,
+      "tableIndex": 130032,
+      "typeIndex": 264,
+      "signature": "iiiifffffii",
+      "originalBodySha256": "d4bc047410e032915fbf0d726a8d3b1ec12859e6649b9f70f3e701c718f92ef6",
+      "originalBodyBytes": 9690
+    },
+    {
+      "functionIndex": 71234,
+      "rawFunctionIndex": 83891,
+      "tableIndex": 130033,
+      "typeIndex": 419,
+      "signature": "iiiiiiiiif",
+      "originalBodySha256": "5e5fc65713cf86e5bb6057e057d99d01f4ec4f04d4c87ddb1366dace09ea3464",
+      "originalBodyBytes": 900
+    },
+    {
+      "functionIndex": 71233,
+      "rawFunctionIndex": 83892,
+      "tableIndex": 130034,
+      "typeIndex": 443,
+      "signature": "iiiiiif",
+      "originalBodySha256": "6ccd39056c17b5e4f21cdc650a515dd0346ad42c5dec25496cf3c65c5ea33866",
+      "originalBodyBytes": 1198
+    },
+    {
+      "functionIndex": 71216,
+      "rawFunctionIndex": 83893,
+      "tableIndex": 130035,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "408f91e04c5b37ff6a648853db58bb62b26df27abfd194ee98db0795a472fa99",
+      "originalBodyBytes": 618
+    },
+    {
+      "functionIndex": 71217,
+      "rawFunctionIndex": 83894,
+      "tableIndex": 130036,
+      "typeIndex": 10,
+      "signature": "iiiiiii",
+      "originalBodySha256": "3b16d27d4a0ecd051136afafd82e32c4a304f7586c2b43ff7c38581c178c936a",
+      "originalBodyBytes": 1366
+    },
+    {
+      "functionIndex": 71218,
+      "rawFunctionIndex": 83895,
+      "tableIndex": 130037,
+      "typeIndex": 526,
+      "signature": "viiiifif",
+      "originalBodySha256": "d1cdaf7d0830695605a24806ff010be63eb0b78dd437cb46ee0fd42d509a9248",
+      "originalBodyBytes": 1602
+    },
+    {
+      "functionIndex": 71104,
+      "rawFunctionIndex": 83896,
+      "tableIndex": 130038,
+      "typeIndex": 520,
+      "signature": "viiiiiiiiiiiiiiiiiiiiiii",
+      "originalBodySha256": "6551c8ec7b619ca8d92f2f476372f87b9a29cf2b45fe5fc53eefd46a24ab2ee1",
+      "originalBodyBytes": 953
+    },
+    {
+      "functionIndex": 71105,
+      "rawFunctionIndex": 83897,
+      "tableIndex": 130039,
+      "typeIndex": 442,
+      "signature": "viiiiiiiiiiiiiiiiiiiiii",
+      "originalBodySha256": "d85807228a40e783803040a0c073b0dc324d80dd6e4a74b34071e436eca6989a",
+      "originalBodyBytes": 1029
+    },
+    {
+      "functionIndex": 71272,
+      "rawFunctionIndex": 83898,
+      "tableIndex": 130040,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "4f6832fd5922e73ef940f487358488894c4f9822fabc9782064299c3e965bb48",
+      "originalBodyBytes": 10298
+    },
+    {
+      "functionIndex": 71379,
+      "rawFunctionIndex": 83899,
+      "tableIndex": 130041,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "e0c9c031d6bae99ade6ae11f5a37985c4f94068984b8f6f70914de20c99a52e5",
+      "originalBodyBytes": 319
+    },
+    {
+      "functionIndex": 71381,
+      "rawFunctionIndex": 83900,
+      "tableIndex": 130042,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "6ff787bff7d91ed4965c3751149df40a04048a8ec234cbc9fad2c57fd1d95a32",
+      "originalBodyBytes": 283
+    },
+    {
+      "functionIndex": 71468,
+      "rawFunctionIndex": 83901,
+      "tableIndex": 130043,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "953f0b135ebd0fcab6a9e88b4471e7a0f0c2d4bfdec8e071a5a2b34e49803273",
+      "originalBodyBytes": 1098
+    },
+    {
+      "functionIndex": 71525,
+      "rawFunctionIndex": 83902,
+      "tableIndex": 130044,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "774617990b8ba837bf7349bedfc5c59e49f621b81730e91adc1e4ed64cb70c96",
+      "originalBodyBytes": 734
+    },
+    {
+      "functionIndex": 71529,
+      "rawFunctionIndex": 83903,
+      "tableIndex": 130045,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "e74bceb02e28ab3f98bff1db8cb7530d947a70a40837cb4c5c624258c9c03801",
+      "originalBodyBytes": 657
+    },
+    {
+      "functionIndex": 71555,
+      "rawFunctionIndex": 83904,
+      "tableIndex": 130046,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "a2ebac263c19dbb3473e850b6daea7e7b8d13d84b7d160d65ff560fc5ff06559",
+      "originalBodyBytes": 1092
+    },
+    {
+      "functionIndex": 71556,
+      "rawFunctionIndex": 83905,
+      "tableIndex": 130047,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "190e3cbd831a3b695a918fc8c78b161c3a4011d8fc91cbe774ac74dc938c356c",
+      "originalBodyBytes": 773
+    },
+    {
+      "functionIndex": 71557,
+      "rawFunctionIndex": 83906,
+      "tableIndex": 130048,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "15cd6d0dabca40420be8c46adda4f5c812768dfad7c8b5df5172ada407083a0c",
+      "originalBodyBytes": 65
+    },
+    {
+      "functionIndex": 71561,
+      "rawFunctionIndex": 83907,
+      "tableIndex": 130049,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "3ecf52c2f30527c3fa271defe603004876977312e434d87bf590337efb9d97d8",
+      "originalBodyBytes": 95
+    },
+    {
+      "functionIndex": 71661,
+      "rawFunctionIndex": 83908,
+      "tableIndex": 130050,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "9f09286f35e6efa304a5a8a473892bf755dd25883552564e270b1dfe907ca6b7",
+      "originalBodyBytes": 50
+    },
+    {
+      "functionIndex": 71566,
+      "rawFunctionIndex": 83909,
+      "tableIndex": 130051,
+      "typeIndex": 17,
+      "signature": "vifi",
+      "originalBodySha256": "3427c681c876515cfac56b016ca25312f2a1e629f52b3e8b2042d8d9925d339d",
+      "originalBodyBytes": 77
+    },
+    {
+      "functionIndex": 71567,
+      "rawFunctionIndex": 83910,
+      "tableIndex": 130052,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "d7a15bd0f6d6f69424549ac912d5cc1e0934c63389c493a2cc57c08218bade1f",
+      "originalBodyBytes": 31
+    },
+    {
+      "functionIndex": 71570,
+      "rawFunctionIndex": 83911,
+      "tableIndex": 130053,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "c1040a11813d5f449da9da1f779bba32e9d9a150fcb4fd5cbb142baa189a5301",
+      "originalBodyBytes": 71
+    },
+    {
+      "functionIndex": 71571,
+      "rawFunctionIndex": 83912,
+      "tableIndex": 130054,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "b1ab51386f2eb34c21ab1a6151cbd7be8fb7982c62b3e288b44ffea01ff1bcbe",
+      "originalBodyBytes": 50
+    },
+    {
+      "functionIndex": 71572,
+      "rawFunctionIndex": 83913,
+      "tableIndex": 130055,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "52ce2ddc73149951c4afd6494785ce57eb4dafb614dbfa562628156d84e8176d",
+      "originalBodyBytes": 253
+    },
+    {
+      "functionIndex": 71573,
+      "rawFunctionIndex": 83914,
+      "tableIndex": 130056,
+      "typeIndex": 21,
+      "signature": "vif",
+      "originalBodySha256": "eb28fdb215b18a6668c1586918ce134f96ad7c311190b9189e112fd2361d071e",
+      "originalBodyBytes": 150
+    },
+    {
+      "functionIndex": 71575,
+      "rawFunctionIndex": 83915,
+      "tableIndex": 130057,
+      "typeIndex": 77,
+      "signature": "viifii",
+      "originalBodySha256": "93f06a69ad03a354db0a18948763270a53e7bf450471f9f6399b813ead6497c0",
+      "originalBodyBytes": 468
+    },
+    {
+      "functionIndex": 71576,
+      "rawFunctionIndex": 83916,
+      "tableIndex": 130058,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "1731dd37c384e0c6fd2939a0547f67a13325c4170e5cde436e021bb2be61ad52",
+      "originalBodyBytes": 40
+    },
+    {
+      "functionIndex": 71618,
+      "rawFunctionIndex": 83917,
+      "tableIndex": 130059,
+      "typeIndex": 17,
+      "signature": "vifi",
+      "originalBodySha256": "18437bbd6ec3cf5431485bc06104228fc04d2424df9711ee06e74d228c11d3dd",
+      "originalBodyBytes": 125
+    },
+    {
+      "functionIndex": 71653,
+      "rawFunctionIndex": 83918,
+      "tableIndex": 130060,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "c50d788e39ae41a7a918f7c0a1d1bb8501fa24b58a0e8bdecbb913a672d1a212",
+      "originalBodyBytes": 262
+    },
+    {
+      "functionIndex": 61029,
+      "rawFunctionIndex": 83919,
+      "tableIndex": 130061,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "8a8eee2e71a32ac32366d266ecc761870c1a71f877414948a3c1dee2d66a6c95",
+      "originalBodyBytes": 268
+    },
+    {
+      "functionIndex": 61030,
+      "rawFunctionIndex": 83920,
+      "tableIndex": 130062,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "1900481acd194c06fb63ce1daedfcfcffb1bf94f63f05f1457936399e83f3545",
+      "originalBodyBytes": 586
+    },
+    {
+      "functionIndex": 54405,
+      "rawFunctionIndex": 83921,
+      "tableIndex": 130063,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "c0e07cbc88970a6f58779cd68343c1b5690d4c3cbc2a68a7711e905c0e700e94",
+      "originalBodyBytes": 42
+    }
+  ],
+  "method": "byte-identical relocated body with argument/return table thunk",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_case12000_cleanup_v4_20261003.wasm",
+  "upstreamRootFunctions": [
+    71726,
+    71727,
+    73034,
+    73035,
+    73070,
+    61066,
+    60092,
+    60705,
+    71379,
+    71381,
+    71468,
+    71525,
+    71529,
+    71555,
+    71556,
+    71557,
+    71561,
+    71661,
+    71566,
+    71567,
+    71570,
+    71571,
+    71572,
+    71573,
+    71575,
+    71576,
+    71618,
+    71653,
+    61029,
+    61030
+  ],
+  "releaseSetterTrace": true,
+  "actorLifecycleTrace": true,
+  "resetCoreTrace": true,
+  "velocityGetterTrace": true,
+  "releasePhaseRootFunctions": [
+    71272
+  ],
+  "wakeFunctionTrace": [
+    61029,
+    61030
+  ],
+  "releaseTailTraceSolverLimit": 1900,
+  "wakeFunctionWindow": {
+    "minOrdinal": 1879,
+    "maxOrdinal": 1881,
+    "maxSolverSerial": 1881
+  },
+  "velocityGetterMaxOrdinal": 5000,
+  "tailCoreWindow": {
+    "minOrdinal": 1,
+    "maxOrdinal": 5000,
+    "allStoneCores": true,
+    "maxSolverSteps": 1900
+  },
+  "collisionTagConstantAudit": true
+}

@@ -1,0 +1,16 @@
+{
+  "functionIndex": 70077,
+  "sourceSha256": "210b2ebc668927491ddd3ce3e333b86b39e274d14e06d8000a245fb66bb1675a",
+  "method": "Observed-path source operation replay; original f32 ordering; both witness inputs bit-exact",
+  "comparison": {
+    "lhs": 0.9997755289077759,
+    "rhs": 0.9997755289077759,
+    "taken": true
+  },
+  "witnessFaces": [
+    37,
+    17
+  ],
+  "generatedContactsReferencePlanePointer": 277348564,
+  "referenceRole": "target"
+}

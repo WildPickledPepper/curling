@@ -1,0 +1,253 @@
+{
+  "captureValidations": [
+    {
+      "events": "analysis_input\\unity_11005_pcm_internal_calls_20261001\\logs\\unity_runtime_probe_20261001_222502\\events.jsonl",
+      "eventsSha256": "8325f490066a9b45664dac694bdb440b3e345156a0cfabcf6aa726ec2729fd5c",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 78,
+      "geometryScaleRecords": 0,
+      "geometryWriteRecords": 0
+    },
+    {
+      "events": "analysis_input\\unity_11005_pcm_candidate_calls_20261001\\logs\\unity_runtime_probe_20261001_224214\\events.jsonl",
+      "eventsSha256": "a9688b59d5e7ad914a141dce4299651376037c435a1a1eab86a473db13d7cefe",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 36,
+      "geometryScaleRecords": 0,
+      "geometryWriteRecords": 0
+    },
+    {
+      "events": "analysis_input\\unity_pcm_geometry_scales_20261001\\logs\\unity_runtime_probe_20261001_225430\\events.jsonl",
+      "eventsSha256": "0705d3294bfbbcf48c2b5d90d59a8fe9c87e22a5036bb437ee17d9d8597d913c",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 0,
+      "geometryScaleRecords": 24,
+      "geometryWriteRecords": 0
+    },
+    {
+      "events": "analysis_input\\unity_geometry_writers_20261001\\logs\\unity_runtime_probe_20261001_230719\\events.jsonl",
+      "eventsSha256": "10a3d600f8ca9e9b30d1d8f4891797709e3a740f87a0c8d7ed308c4462f51e0e",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 0,
+      "geometryScaleRecords": 24,
+      "geometryWriteRecords": 258
+    },
+    {
+      "events": "analysis_input\\unity_geometry_producer_20261001\\logs\\unity_runtime_probe_20261001_231740\\events.jsonl",
+      "eventsSha256": "eec14dabca6b799a93b735eefca3c3b3230c4a30f24fbdc3cf1e7ce6ced15276",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 23,
+      "geometryScaleRecords": 24,
+      "geometryWriteRecords": 258
+    },
+    {
+      "events": "analysis_input\\unity_transform_scale_calc_trace_20261001\\logs\\unity_runtime_probe_20261001_233057\\events.jsonl",
+      "eventsSha256": "3f88f4c1db218bb5c75962c3fc3468985e25be571bd2a7292affe56622857fae",
+      "frictionValuesEqual": 15580,
+      "setterPairsEqual": 1023,
+      "endpointsEqual": 12,
+      "internalCallCount": 207,
+      "geometryScaleRecords": 24,
+      "geometryWriteRecords": 258
+    }
+  ],
+  "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "nativeInternalCalls": 213,
+  "unityScale": [
+    0.11270000040531158,
+    0.11500000208616257,
+    0.11270000040531158
+  ],
+  "nativeScale": [
+    0.11270000785589218,
+    0.11500000208616257,
+    0.11270000785589218
+  ],
+  "matchedInputQueriesGeometricFieldsExact": [
+    486,
+    487,
+    488
+  ],
+  "mainSceneTrajectoryUnchanged": true,
+  "activeScalePerRelease": [
+    {
+      "sampleId": 11000,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "initialQuaternion": [
+        6.657902673623539e-08,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "sampleId": 11001,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "initialQuaternion": [
+        6.657902673623539e-08,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "sampleId": 11002,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "initialQuaternion": [
+        6.613170455693762e-08,
+        0.11568662524223328,
+        7.702283255639486e-09,
+        0.9932858347892761
+      ]
+    },
+    {
+      "sampleId": 11003,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "initialQuaternion": [
+        6.589805678913763e-08,
+        0.14258238673210144,
+        9.492889141426986e-09,
+        0.9897829294204712
+      ]
+    },
+    {
+      "sampleId": 11004,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "initialQuaternion": [
+        6.514345329833304e-08,
+        0.20651067793369293,
+        1.3749229310633382e-08,
+        0.9784443974494934
+      ]
+    },
+    {
+      "sampleId": 11005,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "initialQuaternion": [
+        6.44059525711782e-08,
+        0.25336310267448425,
+        1.6868479946197112e-08,
+        0.9673712253570557
+      ]
+    },
+    {
+      "sampleId": 11006,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "initialQuaternion": [
+        6.519026385376492e-08,
+        0.20314593613147736,
+        1.3525206732367678e-08,
+        0.9791484475135803
+      ]
+    },
+    {
+      "sampleId": 11007,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "initialQuaternion": [
+        6.459882229137293e-08,
+        0.2420354187488556,
+        1.611432054460238e-08,
+        0.9702674746513367
+      ]
+    },
+    {
+      "sampleId": 11008,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "initialQuaternion": [
+        6.636536653559233e-08,
+        0.07996948063373566,
+        5.324400031980758e-09,
+        0.9967973232269287
+      ]
+    },
+    {
+      "sampleId": 11009,
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ],
+      "initialQuaternion": [
+        4.987447965731917e-08,
+        0.662448525428772,
+        4.4104698559976896e-08,
+        0.7491074800491333
+      ]
+    },
+    {
+      "sampleId": 11010,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "initialQuaternion": [
+        -6.04666894332695e-08,
+        -0.4185178279876709,
+        -2.786470076898695e-08,
+        -0.9082085490226746
+      ]
+    },
+    {
+      "sampleId": 11011,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "initialQuaternion": [
+        -5.4447085062747647e-08,
+        -0.5755208730697632,
+        -3.831717876323637e-08,
+        -0.8177871108055115
+      ]
+    }
+  ],
+  "limitation": "This verifies identical-input PCM geometry, not trajectory alignment. The scale writer and calculation are separately verified in recovered_transform_scale_verified_20261001.json; live shape refresh is pending."
+}

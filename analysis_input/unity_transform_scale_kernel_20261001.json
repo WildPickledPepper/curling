@@ -1,0 +1,37 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "kernelSha256": "5d10650717fe5868f94a7a02112828c2de8112eb270731b4db8612c075faee21",
+  "functions": [
+    {
+      "functionIndex": 78119,
+      "typeIndex": 1,
+      "sourceBodySha256": "6de7b29a0ffb360bec316bc883664ed3ce4c647fbbee80cf26ed347211c4a3aa",
+      "relocatedBodySha256": "66923db42cddad8466f3427a691e8fa7e814c0650593275c2fbcc17446a14255"
+    },
+    {
+      "functionIndex": 78120,
+      "typeIndex": 2,
+      "sourceBodySha256": "681da7b7e4bd620bab995383f1c954f3d4245bdf614ed6126291fb6d8b4c95a9",
+      "relocatedBodySha256": "9d3a8621de6fee7b2564c18d03d750eac16ae074a05721b1b8d6a7fcdf782d1b"
+    },
+    {
+      "functionIndex": 78121,
+      "typeIndex": 1,
+      "sourceBodySha256": "fab1ef33cb8bf98f13abfecd97e5f2a680eff7a8f59f216487059914376ed1d2",
+      "relocatedBodySha256": "fab1ef33cb8bf98f13abfecd97e5f2a680eff7a8f59f216487059914376ed1d2"
+    },
+    {
+      "functionIndex": 79911,
+      "typeIndex": 7,
+      "sourceBodySha256": "c0c6f8a6fbd2de45b6db66a884670cca46217280201ad4df4b32001a0ba31dcf",
+      "relocatedBodySha256": "d406912bebabc06fb2a3b01d445ced424110d652317b3f6c2e4ea9874b150191"
+    },
+    {
+      "functionIndex": 79912,
+      "typeIndex": 7,
+      "sourceBodySha256": "3d2dea2dffe599e811fe0a7d7ffe6a51ca321e060bd29e6e2672ad999e225715",
+      "relocatedBodySha256": "d406912bebabc06fb2a3b01d445ced424110d652317b3f6c2e4ea9874b150191"
+    }
+  ],
+  "method": "Original numeric instructions; direct calls relocated; synchronization traps."
+}

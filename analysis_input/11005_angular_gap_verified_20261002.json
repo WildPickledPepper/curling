@@ -1,0 +1,58 @@
+{
+  "sampleId": 11005,
+  "closedAngularGetterOrdinals": [
+    466,
+    482
+  ],
+  "closedSignedZeroLinearGetterOrdinal": 2,
+  "verifiedActiveBody": {
+    "poseAndAngularSetterOrdinals": [
+      1,
+      1023
+    ],
+    "getterOrdinals": [
+      2,
+      1023
+    ],
+    "getterCounts": {
+      "velocity": 2044,
+      "angularVelocity": 1022
+    },
+    "comparison": "raw IEEE754 binary32 bits, including signed zeros"
+  },
+  "solverInputAndDeltaExactOrdinal": 465,
+  "massRebuildCallsExact": 98,
+  "massRebuildReleaseCount": 12,
+  "observerPreservesFrictionSettersDynamicCoreFramesAndEndpoints": true,
+  "remainingSceneDifference": {
+    "location": "target body pose before first stone-pair PCM",
+    "firstObservedOrdinal": 1023,
+    "unityQuaternionBits": [
+      865008181,
+      742474500,
+      542629925,
+      1065353216
+    ],
+    "localQuaternionBits": [
+      865008181,
+      702716748,
+      503127871,
+      1065353216
+    ],
+    "earliestOccurrenceKnown": false,
+    "nextRequiredTrace": "Target activation/reset settling, followed through native P/Q/v/w and sleep boundaries."
+  },
+  "fullSceneAlignedThrough1023": false,
+  "replayConditions": "Recorded initial/reset rotations and friction; no post-release state injection.",
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "5a6d9aa9102d54d0e70f77469758a8a7f1d007fe66a868ef07890e664cdd3b0c",
+    "local_simulator\\runtime_support\\tools\\reverse\\recovered_stone_mass.py": "aa34e7567343b25545d64e6049c5db90622d60d35f51052f9cd313b9e345c87e",
+    "research_archive\\unity_reverse\\source\\reverse\\unity_webgl_runtime_probe.js": "6484cdb77d094a6647763727b132b4e0d971c4cf90819c2cd67c8205c02745d1"
+  },
+  "evidenceSha256": {
+    "analysis_input\\c131_getter_gap_closed_20261002.json": "1360ff44aed42ab34557f76bf8d9fe1840985cc994cd16782cbcb2c6b6599857",
+    "analysis_input\\unity_11005_getter_setter_bits_20261002\\logs\\unity_runtime_probe_20261002_134226\\events.jsonl": "970a06c0c7a4e0213a911531cb6623bc022743f60dc15e33a891b2a94e811d7c",
+    "analysis_input\\unity_11005_mass_properties_v2_20261002\\logs\\unity_runtime_probe_20261002_133353\\events.jsonl": "f17d1d0fcfe10f6f15e3ddbfdbc432d7d93627083ca26a3fe5c0ccb272798898",
+    "analysis_input\\native_getter_mass_fixed_465_20261002\\calls.json": "fa5939125d23daebe922927839d3208f8af2519bb2bde83f3dba5a32bcf1b0f0"
+  }
+}

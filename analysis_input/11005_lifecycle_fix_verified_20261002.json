@@ -1,0 +1,215 @@
+{
+  "sampleId": 11005,
+  "physicalStep": 1022,
+  "setterOrdinal": 1023,
+  "fixed": "RigidID lifecycle, actual pair order, reference face and first PCM contact geometry",
+  "allocatorConstructorStatesMatched": 24,
+  "firstContactOrdersMatched": [
+    {
+      "sampleId": 11000,
+      "order": [
+        "active",
+        "target"
+      ]
+    },
+    {
+      "sampleId": 11001,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11002,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11003,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11004,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11005,
+      "order": [
+        "active",
+        "target"
+      ]
+    },
+    {
+      "sampleId": 11006,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11007,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11008,
+      "order": [
+        "active",
+        "target"
+      ]
+    },
+    {
+      "sampleId": 11009,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11010,
+      "order": [
+        "target",
+        "active"
+      ]
+    },
+    {
+      "sampleId": 11011,
+      "order": [
+        "target",
+        "active"
+      ]
+    }
+  ],
+  "unityRigidIds": {
+    "active": 16,
+    "target": 1
+  },
+  "nativeRigidIds": {
+    "active": 15,
+    "target": 1
+  },
+  "firstContactsBitExact": [
+    {
+      "point": [
+        -72.51753234863281,
+        14.304784774780273,
+        54.164207458496094
+      ],
+      "normal": [
+        -0.9891765117645264,
+        -1.95383673684546e-08,
+        0.14673064649105072
+      ],
+      "separation": 0.015933483839035034
+    },
+    {
+      "point": [
+        -72.51759338378906,
+        14.304784774780273,
+        54.16381072998047
+      ],
+      "normal": [
+        -0.9891765117645264,
+        -1.95383673684546e-08,
+        0.14673064649105072
+      ],
+      "separation": 0.015916461125016212
+    }
+  ],
+  "remainingFirstConstraintAngularCoefficients": {
+    "unity": [
+      -5.255088754763429e-16,
+      -0.0295835193246603,
+      -3.939244042072687e-09
+    ],
+    "local": [
+      -5.255088225367837e-16,
+      -0.029583515599370003,
+      -3.939243597983477e-09
+    ]
+  },
+  "remainingTargetQuaternion": {
+    "unity": [
+      6.657902673623539e-08,
+      2.746415074528219e-12,
+      1.8285371570231372e-19,
+      1
+    ],
+    "local": [
+      6.657902673623539e-08,
+      1.0063355856092249e-13,
+      6.700085009600314e-21,
+      1.0
+    ]
+  },
+  "activeExitAngularY": {
+    "unity": -0.08141568303108215,
+    "local": -0.08308417350053787
+  },
+  "endpointErrorM": {
+    "active": 0.00039733392510384974,
+    "target": 0.008755137861556178
+  },
+  "aggregate": {
+    "rowCount": 12,
+    "reachedFirstContactCount": 12,
+    "strictEndpointComparableCount": 12,
+    "activeEndpointError": {
+      "count": 12,
+      "rmseM": 0.0004793327948464177,
+      "meanM": 0.00023496095695631808,
+      "maxM": 0.0015000063648834792
+    },
+    "targetEndpointError": {
+      "count": 9,
+      "rmseM": 0.002919268407318986,
+      "meanM": 0.001029443547040919,
+      "maxM": 0.008755137861556178
+    },
+    "unreliableUnityEndpointSampleIds": []
+  },
+  "transparency": {
+    "unityFrictionValues": 15580,
+    "unitySetterPairs": 1023,
+    "unitySolverFrames": 40,
+    "unityEndpoints": 12,
+    "nativeObserversDoNotChangeTrajectory": true
+  },
+  "hashes": {
+    "analysis_input\\unity_11005_actor_lifecycle_20261002\\logs\\unity_runtime_probe_20261002_125027\\events.jsonl": "8589ef14ac68d62c1e55f7d6162427a54a332f8ccd45c5c7e886f470e66a1c59",
+    "local_simulator\\assets\\unity_startup_rigid_id_pool.json": "d4e8085cd9d941f790e148efbd42da072470b6438456caca1b78f1f675805777",
+    "analysis_input\\native_actor_lifecycle_fixed_v2_20261002\\calls.json": "3e9d27d15db03f7521cd8498f2e216c6284c1bbd1abc4a5476522d7da066ac41",
+    "analysis_input\\native_stone_pair_lifecycle_fixed_20261002\\calls.json": "a1f16ca009925f941ff965d80b409b7aa6c979047f121192a440589fbc7995ed",
+    "analysis_input\\c131_production_lifecycle_fixed_v2_20261002.json": "c6212bcbc993091c5c16cecb35a903a00e4b2b8f89d9fc56141f39f5252e44e2",
+    "local_simulator\\unity_physx.py": "8a576c174b86e68b1daa71bc8ac024c53d58436983fa7f993a444f70705d4185",
+    "analysis_input\\native_actor_id_lifecycle_20261002.asm": "a3004b386b10f1348bb246a82d92a5719217c5ed9403601750b9ad57b4be436d"
+  },
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "functions": {
+    "unityActorConstructor": 71726,
+    "unityActorDestructor": 71727,
+    "unityRetirement": 71674,
+    "nativeActorConstructor": "0x214bd0",
+    "nativeActorDestructor": "0x214c50",
+    "nativeSort": "0x236ed0",
+    "nativeFullManifold": "0x3c5a90",
+    "nativeGeneratedContacts": "0x3cab40"
+  },
+  "limits": [
+    "The fixed startup scene state is captured; a general Unity activation-queue ordering algorithm is not reconstructed.",
+    "Exact allocator/order validation covers this 16-stone scene and recorded 12-shot lifecycle.",
+    "Initial quaternion and friction replay remain the audit boundary; no post-release Unity state is injected.",
+    "Target history, solver lock flags, first-row angular coefficients and collision-tail error remain."
+  ]
+}

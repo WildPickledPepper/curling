@@ -1,0 +1,127 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "productionCodeSha256": "1c7f1f9dd7498f4225740fca57cca85be7bc46845e92d08e554b9c142edce52f",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "actualArithmetic": {
+    "functionIndex": 61066,
+    "callId": 20,
+    "getterFunctionIndex": 32544,
+    "getterCallId": 24,
+    "setterFunctionIndex": 32546,
+    "setterCallId": 25,
+    "getterPositionBits": [
+      "0xc2c1b55a",
+      "0x4166eb1c",
+      "0x4258b296"
+    ],
+    "horizontalOffsetBits": "0x3e4ccccd",
+    "parseFunctionIndex": 56989,
+    "parseCallId": 22,
+    "setterPositionBits": [
+      "0xc2c1b55a",
+      "0x4166eb1c",
+      "0x4257e5c9"
+    ],
+    "operation": "native float32 position.z minus parsed float32 horizontal offset"
+  },
+  "observer": {
+    "originalBodiesRetained": true,
+    "setterPairsUnchanged": 1384,
+    "protocolResultsUnchanged": true
+  },
+  "sample11009": {
+    "releaseWordsExact": 26,
+    "completedStepsCompared": 3000,
+    "continuousCompletedStepsExact": 1382,
+    "firstObservedRemainingStateDifference": {
+      "physicsTick": 1383,
+      "differences": [
+        {
+          "stoneIndex": 11,
+          "field": "qy",
+          "wordIndex": 4,
+          "unityBits": "0xabcec8e9",
+          "nativeBits": "0xabcec8e5",
+          "unityFloat": -1.469294412699551e-12,
+          "nativeFloat": -1.469293979018682e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "qz",
+          "wordIndex": 5,
+          "unityBits": "0x9fe6fb1f",
+          "nativeBits": "0x9fe6fb1a",
+          "unityFloat": -9.782423393455076e-20,
+          "nativeFloat": -9.782420162280808e-20
+        },
+        {
+          "stoneIndex": 11,
+          "field": "vx",
+          "wordIndex": 7,
+          "unityBits": "0x2a000d30",
+          "nativeBits": "0x2a000ea0",
+          "unityFloat": 1.1373259105329492e-13,
+          "nativeFloat": 1.1373757838328835e-13
+        },
+        {
+          "stoneIndex": 11,
+          "field": "vz",
+          "wordIndex": 9,
+          "unityBits": "0xac1b323e",
+          "nativeBits": "0xac1b3242",
+          "unityFloat": -2.2054714825248123e-12,
+          "nativeFloat": -2.2054723498865503e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wx",
+          "wordIndex": 10,
+          "unityBits": "0x826d55ff",
+          "nativeBits": "0x826d55a5",
+          "unityFloat": -1.7436689740108822e-37,
+          "nativeFloat": -1.743658884661939e-37
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wy",
+          "wordIndex": 11,
+          "unityBits": "0xac1e3955",
+          "nativeBits": "0xac1e3919",
+          "unityFloat": -2.2484976120590305e-12,
+          "nativeFloat": -2.2484846016329607e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wz",
+          "wordIndex": 12,
+          "unityBits": "0xa0b0bce4",
+          "nativeBits": "0xa0b0bca1",
+          "unityFloat": -2.994055707366579e-19,
+          "nativeFloat": -2.994038388272504e-19
+        }
+      ]
+    },
+    "differingCompletedSteps": 1,
+    "firstContactTick": 1383
+  },
+  "sample11000": {
+    "nativeRegressionStepsUnchanged": 3362,
+    "unityCompletedStepsExact": 2000
+  },
+  "limitations": [
+    "State equality at sampled boundaries does not prove every unobserved intermediate/RNG/protocol operation.",
+    "New case remains limited to fresh sample11009; old case to fresh sample11000; Windows CP39."
+  ],
+  "evidence": {
+    "analysis_input\\unity_bestshot_position_inputs_capture_v5_20261002\\logs\\unity_runtime_probe_20261002_192402\\events.jsonl": "8e1d76f10972d07a20a1e05105f5763c1d388020434864da87fa86d48cee57c0",
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+    "analysis_input\\native_bestshot_offset_fixed_11009_20261002.json": "200af9a6fc0dc67ac83036bb97b2c396e3571ab2a696c32010047c983a5749e6",
+    "analysis_input\\native_bestshot_offset_fixed_11000_20261002.json": "23a9125cd58a18bd2dae1a4e446a38437b08c6a517b2ed177245710683dce014",
+    "analysis_input\\native_stone_input_fixed_plain_20261002.json": "a84bfcfaa55f820108c9b577f6036f9f5ac997dea25616a15793dca9c4db9ca5",
+    "analysis_input\\unity_bestshot_position_inputs_v5_20261002.json": "e8205766e5c8c5757f8a01672d579e428a73ef18f58efca82ca942bce4a138ac",
+    "analysis_input\\pcm_functions_20261001\\f61066.wat": "1990f06c58e843ffa446396e9f18fe9c50afc2b9348ba2c95c074a9e302a288b",
+    "analysis_input\\unity_bestshot_position_inputs_capture_v5_20261002\\observer_source.js": "1a0e14862e6d907a523d520dc9288f38dfa74c1474ef82ac612b9e265df3e568",
+    "local_simulator\\tests\\fixtures\\unity_bestshot_offset_11009_20261002.json": "ac70eae0927452ba7a3b61642c4ab3baaf2178760008600d4bdc52cd51a34848"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "sampleId": 11005,
+  "physicalStep": 1022,
+  "setterOrdinal": 1023,
+  "firstConfirmedPairCreationInputDifference": "RigidID role ordering",
+  "unity": {
+    "sortFunctionIndex": 71700,
+    "constructorFunctionIndex": 71680,
+    "activeRigidId": 16,
+    "targetRigidId": 1,
+    "order": [
+      "active",
+      "target"
+    ],
+    "referenceRole": "target"
+  },
+  "local": {
+    "sortRva": "0x236ed0",
+    "sortCompareRva": "0x236f65",
+    "constructorRva": "0x27c630",
+    "activeRigidId": 3,
+    "targetRigidId": 9,
+    "order": [
+      "target",
+      "active"
+    ],
+    "referenceRole": "active",
+    "fullManifoldRva": "0x3c5a90",
+    "compareRva": "0x3c861e",
+    "generatedContactsRva": "0x3cab40",
+    "generatedContactsReturnRva": "0x3c868f"
+  },
+  "gjkStatusBoth": 4,
+  "unitySourceReplayComparison": {
+    "lhs": 0.9997755289077759,
+    "rhs": 0.9997755289077759,
+    "taken": true
+  },
+  "samePhysicalFacePlanes": {
+    "target": [
+      -0.9891765117645264,
+      0.0,
+      0.14673064649105072,
+      -1.2484943866729736
+    ],
+    "active": [
+      0.9039891958236694,
+      0.0,
+      0.4275551438331604,
+      -1.2484941482543945
+    ]
+  },
+  "unityValidations": [
+    {
+      "events": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_11005_stone_internal_calls_20261002\\logs\\unity_runtime_probe_20261002_110956\\events.jsonl",
+      "sha256": "cb00e8fcf00a91fdf94192626cb39b34f2dd441553302f91682803796aff7878",
+      "frictionValues": 15580,
+      "setterPairs": 1023,
+      "solverFrames": 40,
+      "endpoints": 12
+    },
+    {
+      "events": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_11005_stone_deep_calls_20261002\\logs\\unity_runtime_probe_20261002_111549\\events.jsonl",
+      "sha256": "fa9277d23c6858586882c3246626ff0a6e91da3b941d3de0f40e8ff3c481b57f",
+      "frictionValues": 15580,
+      "setterPairs": 1023,
+      "solverFrames": 40,
+      "endpoints": 12
+    },
+    {
+      "events": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_11005_pair_registration_20261002\\logs\\unity_runtime_probe_20261002_111917\\events.jsonl",
+      "sha256": "64baf73d4731fb675b591bce3e1bbfb5a62fe6bce571c16d74b0787811340643",
+      "frictionValues": 15580,
+      "setterPairs": 1023,
+      "solverFrames": 40,
+      "endpoints": 12
+    }
+  ],
+  "localValidations": [
+    {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\native_stone_pair_interceptor_20261002\\alignment.json",
+      "sha256": "5076c16cc6e7b5e1d2177effce83c91e0169155947bc0065c440edf6233591cd"
+    },
+    {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\native_stone_scene_interceptor_20261002\\alignment.json",
+      "sha256": "89bcadbc8a1f0f0c7a6ba739b077bc068eadb52599d441a7380efa004a889f6d"
+    },
+    {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\native_stone_pair_sort_interceptor_20261002\\alignment.json",
+      "sha256": "4e8a83e3c3ec3146233015733968efa7c08af6bfaa27d6139b9db5893cce7681"
+    }
+  ],
+  "nativeCallsPath": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\native_stone_pair_sort_interceptor_20261002\\calls.json",
+  "nativeCallsSha256": "e3b443034c2812eef8e6a16f5fa06f5ba1b55e9ba7b73c7e1fff4e1830cb048a",
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "sourceHashes": {
+    "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\pcm_functions_20261001\\f71700.wat": "5f8a7c68b6e3b7e36d53a0f8e19aa084fae2e6596a50702394b76088f86c5192",
+    "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\pcm_functions_20261001\\f70077.wat": "210b2ebc668927491ddd3ce3e333b86b39e274d14e06d8000a245fb66bb1675a",
+    "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\native_full_manifold_20261002.asm": "102cac32a37b9c193f9c0760b65cc50d700319be12876712240132f5a8bb6208"
+  },
+  "limits": [
+    "Native reference comparison scores are not sampled; its >= branch is observed via the actual call site.",
+    "Target quaternion/velocity history and solver lock flags remain separate known input differences.",
+    "This locates sorting input and the immediate reference-face divergence; no production repair or whole trajectory alignment claim."
+  ]
+}

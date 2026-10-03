@@ -1,0 +1,64 @@
+{
+  "sampleId": 11000,
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedWasmSha256": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "26dacaca09dccf7efadc2704ea13b669e8ce6a97b63a62faaf745be9eb5e021d",
+  "repair": "Default target activation is owned by the PhysX island manager; remove forecast wake_up from both Python replay paths; old bulk loop restricted to explicit manual-wake diagnostic.",
+  "actualTargetActivation": {
+    "physicsTick": 1562,
+    "denseOrdinal": 1563,
+    "callChainFunctionIndices": [
+      71529,
+      71557,
+      71379,
+      71555
+    ],
+    "callIds": [
+      253,
+      254,
+      255,
+      256
+    ],
+    "activeArrayIndexBefore": "0xfffffffe",
+    "activeArrayIndexAfter": 2,
+    "wakeCounterBitsBefore": 0,
+    "wakeCounterBitsAfter": 0,
+    "explicitTargetWakeUpCallsObserved": 0
+  },
+  "observer": {
+    "frictionRecordsExact": 1562,
+    "resetCoreFramesExact": 256,
+    "endpointUnchanged": true,
+    "originalFunctionBodiesRetained": true,
+    "densePairsUnchanged": 1563,
+    "nativeWrappedAndPlainProductionStatesExact": 3362
+  },
+  "continuousBothStoneCompletedStateTicksExact": 2000,
+  "continuousBothStoneCompletedStateWordsExact": 52000,
+  "firstConfirmedCompletedStateDivergence": null,
+  "mainNativeSleepTick": 1603,
+  "targetNativeSleepTick": 1919,
+  "tests": "32 existing tests and 2 actual Unity target-activation regressions passed",
+  "scope": "sample 11000; Windows CP39; fresh Reset; actual BESTSHOT; same recorded friction inputs; two active stones completed-step P/Q/v/w from release through final rest",
+  "limitations": [
+    "Every arithmetic intermediate and internal RNG state are not audited by boundary equality.",
+    "Protocol conversion/formatting and game-state transition internals are not yet compared.",
+    "Other samples, ABIs and the explicit manual-wake diagnostic mode are separate verification scopes."
+  ],
+  "evidence": {
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+    "analysis_input\\native_release_natural_target_wake_20261002.json": "c01ef27797ef4b28c8225b4a9a8194b20d5217c9f4be2ca255e7f048fec8fc00",
+    "analysis_input\\native_natural_wake_unobserved_20261002.json": "f077e8b9c7ae1f99fcba1fccc24a27400b94f88a2533534ad1d89a63cbf2a102",
+    "local_simulator\\unity_physx.py": "26dacaca09dccf7efadc2704ea13b669e8ce6a97b63a62faaf745be9eb5e021d",
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\capture_manifest.json": "7fe2f450ce79571ba0eeaf218a550c0de34c8e60dc80e6724c153b2ad8098370",
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\observer_source.js": "58107163e3c629e50a2654154c43090b3c0b8ff30856ed18fb12a2f5e4ace951",
+    "local_simulator\\tests\\fixtures\\unity_target_activation_20261002.json": "fce2e6c0685861d51a9a251073e5fe6e74a935c43bd33de2916cea85d089a104",
+    "analysis_input\\pcm_functions_20261001\\f71529.wat": "8ff89cff1d579efbab538b845a4a99ce782adaad287731fa29f5987ffcb8beb2",
+    "analysis_input\\pcm_functions_20261001\\f71557.wat": "35953e4efab7944fc6f4ce1a9444584ec497fcf74d2f449c26ea8aef8e3224c3",
+    "analysis_input\\pcm_functions_20261001\\f71379.wat": "004946de4f566a1615da78bd484e62ff263735e9dca579c9c1b58756f65e885d",
+    "analysis_input\\pcm_functions_20261001\\f71555.wat": "8807392314b3f115815a02b53e8b3fb5bcd6526dd6cfb071d83cbab5b8f75b8b",
+    "analysis_input\\pcm_functions_20261001\\f71572.wat": "282f35f9303b9907335c96033d1147ec3476ab822be82ff738b64b627efa1c7a",
+    "analysis_input\\pcm_functions_20261001\\f71618.wat": "dcf52aaaa05281f693fa2ffb886b69e2c9bc0078b08569b268167d26064ae811"
+  }
+}

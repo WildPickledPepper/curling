@@ -1,0 +1,8 @@
+{"case": "free", "request_ms": {"mean": 1266.2556500000003, "median": 1465.3866500000001, "p95": 1623.2550350000001, "min": 435.3756999999998, "max": 1683.6809000000005}, "fixed_steps": 3168, "friction_draws": 3168}
+{"case": "stone_collision", "request_ms": {"mean": 560.8501200000004, "median": 358.3446000000006, "p95": 972.1761800000002, "min": 280.9263000000009, "max": 987.0260000000002}, "fixed_steps": 3168, "friction_draws": 1561}
+{"case": "wall", "request_ms": {"mean": 306.8406900000003, "median": 305.1018999999986, "p95": 317.10717999999946, "min": 295.5900999999983, "max": 318.1995999999998}, "fixed_steps": 3168, "friction_draws": 1881}
+{"case": "spin", "request_ms": {"mean": 1700.70556, "median": 2062.4698499999995, "p95": 2212.478549999999, "min": 575.367700000001, "max": 2235.729599999999}, "fixed_steps": 3168, "friction_draws": 3168}
+{"case": "four_stone_scene", "request_ms": {"mean": 798.9691799999989, "median": 552.4710999999983, "p95": 1489.9561350000013, "min": 349.7848000000019, "max": 1490.8010999999988}, "fixed_steps": 3168, "friction_draws": 1371}
+{"cold_ms": 1421.2807, "output": "analysis_input\\prediction_timing_20261003.json"}
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+

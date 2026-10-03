@@ -1,0 +1,56 @@
+{
+  "sampleId": 11005,
+  "oldFirstDivergentSetter": 488,
+  "rawPositionQuaternionAndSetterOutputsExactThroughOrdinal": 1023,
+  "contactQueriesExactOrdinals": [
+    486,
+    487,
+    488
+  ],
+  "releaseScalesExact": 12,
+  "productionPoseWriteback": true,
+  "postReleaseUnityInjection": false,
+  "recordedInitialQuaternionOverride": true,
+  "recordedResetYawAndFriction": true,
+  "productionSourceSha256": {
+    "local_simulator\\unity_physx.py": "3c87fa08c1293e6cc3868833a99da88bc09553d7893a04f02b1aafe45d9c647d",
+    "local_simulator\\runtime_support\\tools\\reverse\\recovered_transform_scale.py": "a04acbe35542d244f4d0a3629d3eb982b7acace86bda366200572af9bf14e47a"
+  },
+  "report": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\c131_production_geometry_pose_fix_all_steps_20261002.json",
+  "reportSha256": "4617fdc0cb8496dc9c4a2977c57ebb0eb82bb2a9b63542cd93eef5bdb65d0964",
+  "unityEvents": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_11005_step486_pcm_20261001\\logs\\unity_runtime_probe_20261001_215740\\events.jsonl",
+  "unityEventsSha256": "055c84f81ac72d8aebfa6feccc3bc4f0a86693c598c9ed510e52bf2b3af472fc",
+  "remainingGetterAngularVsRawDifferences": [
+    {
+      "ordinal": 466,
+      "unity": [
+        5.371436450054992e-22,
+        0.002803185721859336,
+        3.7326308710561307e-10
+      ],
+      "localRaw": [
+        5.371435945184012e-22,
+        0.002803185721859336,
+        3.7326308710561307e-10
+      ]
+    },
+    {
+      "ordinal": 482,
+      "unity": [
+        1.3871247290711e-17,
+        0.002709126565605402,
+        3.607383558534849e-10
+      ],
+      "localRaw": [
+        1.3871247290711e-17,
+        0.002709126565605402,
+        3.607383280979093e-10
+      ]
+    }
+  ],
+  "remainingEndpointErrorM": {
+    "active": 0.0017659639456871093,
+    "target": 0.03559491725394193
+  },
+  "limitation": "The 488th setter divergence is fixed. Setter capture ends at 1023; no later first-divergence ordinal is established. Collision-tail endpoint error and getter-vs-raw differences remain."
+}

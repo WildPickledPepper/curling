@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 11000,
+    "label": "fresh_11000_straight_regression_20261002",
+    "category": "collision_straight",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "index": 2,
+        "x": 2.375,
+        "y": 5.2
+      }
+    ],
+    "notes": "Fresh Reset and straight BESTSHOT replay using the captured11000 friction stream; compare all3362 steps to the previous production baseline."
+  }
+]

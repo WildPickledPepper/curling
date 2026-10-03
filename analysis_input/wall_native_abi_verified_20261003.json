@@ -1,0 +1,34 @@
+{
+  "versions": [
+    {
+      "kernelSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "filterSiteRva": "0x25d23",
+      "getShapesRva": "0x1b0520",
+      "setSimulationFilterDataRva": "0x1aafd0",
+      "getSimulationFilterDataRva": "0x1ab0d0"
+    },
+    {
+      "kernelSha256": "2a2dbc19f42388239bc27c47ff90d1aef4ae4554f762afad09d13a209ae5b6f0",
+      "filterSiteRva": "0x25073",
+      "getShapesRva": "0x1a7230",
+      "setSimulationFilterDataRva": "0x1a1ce0",
+      "getSimulationFilterDataRva": "0x1a1de0"
+    },
+    {
+      "kernelSha256": "44729fb97df143374a6c01d1a6bae59f11dd302ff8035d0432ec9a7c04c168f5",
+      "filterSiteRva": "0x25d43",
+      "getShapesRva": "0x1ae800",
+      "setSimulationFilterDataRva": "0x1a92b0",
+      "getSimulationFilterDataRva": "0x1a93b0"
+    }
+  ],
+  "originalFilterInstructionsExactAcrossABIs": true,
+  "nativeShapeAccessorAndSetterBodiesExactAcrossABIs": true,
+  "shapeAccessBodiesSha256": [
+    "2f13fb5b2644348ee7be0dffd83ea4bc23708264ae61b01cc435af4e6c72aca8",
+    "bce8f0524e31f24600f192319df44a79ba98b1df913d2aa41c62675feeb598fc",
+    "d73cf74f4478643b30e3f4c574c9e8ffc3e491ee53e1994f0333e6faeba54800"
+  ],
+  "runtimeExecutedABI": "Windows CPython3.9; CP38/CP313 inspected, not executed.",
+  "bridgeSha256": "ea50d57d566156edd95313d9a7140cf090358c7e052c9907f885cb38b2338224"
+}

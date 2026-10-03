@@ -1,0 +1,144 @@
+{
+  "allBytesMatch": true,
+  "rows": [
+    {
+      "case": "free",
+      "bytes": 3227060,
+      "sha256": "d4300bb9b63fba9d7b1e4332bb8bd4b3e8c8d54baf9fef727540f923540001eb",
+      "result": {
+        "settled": true,
+        "contact": false,
+        "firstContactTargets": [],
+        "firstContactStep": null,
+        "fixedSteps": 3168,
+        "frictionDraws": 3168,
+        "updates": 1,
+        "rngState": [
+          4252375800,
+          2143937760,
+          2263538062,
+          731862732
+        ],
+        "clock": {
+          "fixedDt": 0.009999999776482582,
+          "timeScale": 96.0,
+          "maximumDelta": 0.33000001311302185,
+          "frameTime": 31.68000030517578,
+          "fixedTime": 31.67999929189682
+        }
+      }
+    },
+    {
+      "case": "hit",
+      "bytes": 3227060,
+      "sha256": "c5e076a2b643aff69f23fdea1396a883bf68eb8b8ab5b88a807786432806ec0b",
+      "result": {
+        "settled": true,
+        "contact": true,
+        "firstContactTargets": [
+          2
+        ],
+        "firstContactStep": 1561,
+        "fixedSteps": 3168,
+        "frictionDraws": 1561,
+        "updates": 1,
+        "rngState": [
+          3555348961,
+          2365219638,
+          2812024413,
+          2896096281
+        ],
+        "clock": {
+          "fixedDt": 0.009999999776482582,
+          "timeScale": 96.0,
+          "maximumDelta": 0.33000001311302185,
+          "frameTime": 31.68000030517578,
+          "fixedTime": 31.67999929189682
+        }
+      }
+    },
+    {
+      "case": "wall",
+      "bytes": 3227060,
+      "sha256": "dbd1ed3beb4654c76e24b3f4452e67ea343ad6b3d39415987a41af630a7d8593",
+      "result": {
+        "settled": true,
+        "contact": false,
+        "firstContactTargets": [],
+        "firstContactStep": null,
+        "fixedSteps": 3168,
+        "frictionDraws": 1881,
+        "updates": 1,
+        "rngState": [
+          1284646599,
+          1746040189,
+          4277630467,
+          1586166331
+        ],
+        "clock": {
+          "fixedDt": 0.009999999776482582,
+          "timeScale": 96.0,
+          "maximumDelta": 0.33000001311302185,
+          "frameTime": 31.68000030517578,
+          "fixedTime": 31.67999929189682
+        }
+      }
+    },
+    {
+      "case": "spin",
+      "bytes": 3227060,
+      "sha256": "b8f54802dc1726cd98ccbfd0575f5f6d372e8aecdbbb10a9e2156db2d4b785b1",
+      "result": {
+        "settled": true,
+        "contact": false,
+        "firstContactTargets": [],
+        "firstContactStep": null,
+        "fixedSteps": 3168,
+        "frictionDraws": 3168,
+        "updates": 1,
+        "rngState": [
+          4252375800,
+          2143937760,
+          2263538062,
+          731862732
+        ],
+        "clock": {
+          "fixedDt": 0.009999999776482582,
+          "timeScale": 96.0,
+          "maximumDelta": 0.33000001311302185,
+          "frameTime": 31.68000030517578,
+          "fixedTime": 31.67999929189682
+        }
+      }
+    },
+    {
+      "case": "dense",
+      "bytes": 3227060,
+      "sha256": "f8e8ef3856f00002aa0025313e322b1e7b389c2daba96115dce95ee182e0b775",
+      "result": {
+        "settled": true,
+        "contact": true,
+        "firstContactTargets": [
+          1
+        ],
+        "firstContactStep": 1371,
+        "fixedSteps": 3168,
+        "frictionDraws": 1371,
+        "updates": 1,
+        "rngState": [
+          63123175,
+          439012839,
+          2320164683,
+          3174705430
+        ],
+        "clock": {
+          "fixedDt": 0.009999999776482582,
+          "timeScale": 96.0,
+          "maximumDelta": 0.33000001311302185,
+          "frameTime": 31.68000030517578,
+          "fixedTime": 31.67999929189682
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-03",
+  "checkout": "D:\\esp\\tmp\\dccourse_gitcheck_43r2sx8y",
+  "source": "git index (tracked files only)",
+  "python": "C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python39_64/python.exe",
+  "files": [
+    {
+      "path": "local_simulator/unity_physx.py",
+      "original_evidence_sha256": "8874345b7bc5dd709a5ce9f3800827117c9e0166d666b50ebcc8847eff10baa0",
+      "git_checkout_sha256": "8874345b7bc5dd709a5ce9f3800827117c9e0166d666b50ebcc8847eff10baa0",
+      "same_bytes": true,
+      "normalized_text_matches_original": true
+    },
+    {
+      "path": "local_simulator/unity_prediction.py",
+      "original_evidence_sha256": "e91a6fd5e0c803e59b329359370f629a4bf02aecae25fb4aec7769cb92ed4cf4",
+      "git_checkout_sha256": "e91a6fd5e0c803e59b329359370f629a4bf02aecae25fb4aec7769cb92ed4cf4",
+      "same_bytes": true,
+      "normalized_text_matches_original": true
+    },
+    {
+      "path": "local_simulator/native_angular_projection.py",
+      "original_evidence_sha256": "3b682d3b24e65c0378b9817eb895ad0cc1fd469b8410c60e883ef7a784a0db11",
+      "git_checkout_sha256": "3b682d3b24e65c0378b9817eb895ad0cc1fd469b8410c60e883ef7a784a0db11",
+      "same_bytes": true,
+      "normalized_text_matches_original": true
+    },
+    {
+      "path": "local_simulator/runtime/unity_angular_projection.c",
+      "original_evidence_sha256": "a30f50d6ebc1ffa8216ecd320f4663d0dcacb3dc63e385815795d7b8869d7370",
+      "git_checkout_sha256": "a30f50d6ebc1ffa8216ecd320f4663d0dcacb3dc63e385815795d7b8869d7370",
+      "same_bytes": true,
+      "normalized_text_matches_original": true
+    },
+    {
+      "path": "local_simulator/runtime/unity_angular_projection.dll",
+      "original_evidence_sha256": "8c64e77c9c58a037c1231ac4e2ddf63a0a36bcb2d8f7e2e39727ed0b95470848",
+      "git_checkout_sha256": "8c64e77c9c58a037c1231ac4e2ddf63a0a36bcb2d8f7e2e39727ed0b95470848",
+      "same_bytes": true,
+      "normalized_text_matches_original": true
+    }
+  ],
+  "text_hash_scope": "Original manifests retain hashes of tested local bytes. Git LF text normalization changes source byte hashes without changing code; DLL hashes are unchanged."
+}

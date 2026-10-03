@@ -1,0 +1,63 @@
+{
+  "schema": "unity-startup-rigid-id-pool-v1",
+  "stoneCount": 16,
+  "registrationRankReleaseOrder": [
+    11,
+    9,
+    5,
+    10,
+    2,
+    15,
+    4,
+    13,
+    7,
+    12,
+    6,
+    1,
+    8,
+    3,
+    14,
+    0
+  ],
+  "observedUnityFreedRigidIds": [
+    13,
+    11,
+    6,
+    12,
+    3,
+    17,
+    5,
+    15,
+    9,
+    14,
+    8,
+    2,
+    10,
+    4,
+    16,
+    1
+  ],
+  "meaning": "Ranks of the initially registered stone simulations, retired in observed callback order. Native IDs are allocated and retired by PhysX, never overwritten. Numeric IDs may differ because non-stone actors differ.",
+  "scope": "Captured startup state of this fixed Unity scene; callback ordering for different game assets is not inferred.",
+  "source": {
+    "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "events": "analysis_input\\unity_11005_actor_lifecycle_20261002\\logs\\unity_runtime_probe_20261002_125027\\events.jsonl",
+    "eventsSha256": "8589ef14ac68d62c1e55f7d6162427a54a332f8ccd45c5c7e886f470e66a1c59",
+    "firstEnabledActorConstructorCallId": 79,
+    "constructorFunctionIndex": 71726,
+    "destructorFunctionIndex": 71727,
+    "retirementFunctionIndex": 71674,
+    "iceActorConstructorRigidId": 18,
+    "iceActorPosition": [
+      -85.98600006103516,
+      14.304784774780273,
+      55.566017150878906
+    ]
+  },
+  "sourceFunctionSha256": {
+    "71726": "267aafe0d6f770cbafcd52109b7a592bb312f19e1abc95da6070218f275a4f3f",
+    "71727": "ef5d1f25cb7b45487cab4d6e6ef9eaf88b60fd0f9ffa24d31915731b26edab5b",
+    "71674": "0c92e4fd8e6e33e61e827f83570d71f947104245c1834cd95ed22d6127282dcd"
+  },
+  "nativeAdaptation": "Register existing ice after all stones, then retire stones by observed relative registration rank. The surviving ice ID prevents IDPool highest-ID trimming. Smaller diagnostic rosters project the observed order."
+}

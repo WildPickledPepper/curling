@@ -1,0 +1,97 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "observer": {
+    "frictionRecordsExact": 1562,
+    "resetCoreFramesExact": 256,
+    "endpointUnchanged": true,
+    "nativeFirstFourFramesAndSettersUnchanged": true,
+    "selectedWasmBodiesByteIdentical": 51,
+    "unselectedWasmBodiesByteIdentical": true
+  },
+  "scope": "sample 11000, fresh default Windows CP39 scene; controlled recorded friction inputs",
+  "matchedStateBoundaries": [
+    {
+      "boundary": "release linear setter",
+      "beforeStateWordsExact": 13,
+      "afterStateWordsExact": 13,
+      "unityCallId": 75
+    },
+    {
+      "boundary": "release angular setter",
+      "beforeStateWordsExact": 13,
+      "afterStateWordsExact": 13,
+      "unityCallId": 77
+    },
+    {
+      "boundary": "first sliding tick linear setter",
+      "beforeStateWordsExact": 13,
+      "afterStateWordsExact": 13,
+      "unityCallId": 82
+    },
+    {
+      "boundary": "first sliding tick angular setter",
+      "beforeStateWordsExact": 13,
+      "afterStateWordsExact": 13,
+      "unityCallId": 83
+    }
+  ],
+  "firstPhysicsSolverExitWordsExact": 13,
+  "firstPhysicsFetchWritebackWordsExact": 13,
+  "firstConfirmedDivergence": {
+    "phase": "second sliding tick, linear velocity construction/write",
+    "denseOrdinal": 3,
+    "releaseSerial": 2,
+    "unityCallId": 115,
+    "unityFunctionIndex": 73034,
+    "unityBeforeStateWordsExact": 13,
+    "unityInputWords": [
+      1079577421,
+      0,
+      3050217117
+    ],
+    "nativeInputWords": [
+      1079577421,
+      3184060583,
+      3050217117
+    ],
+    "field": "native world-Y linear velocity",
+    "unityValue": 0.0,
+    "nativeValue": -0.09809999912977219,
+    "unityHex": "0x00000000",
+    "nativeHex": "0xbdc8e8a7",
+    "firstChangedStateWordIndex": 8
+  },
+  "mechanism": {
+    "function": 60124,
+    "tableIndex": 11105,
+    "functionBodySha256": "1aeda629edb7aaf4d814d798d7ddb963a29ab9ce6fa50b0a9db98f3ae92dcdac",
+    "literalZeroStoreBodyByteOffset": 837,
+    "velocitySetterCallBodyByteOffset": 874,
+    "bytesFromZeroStoreThroughCall": "2001410036027c2001200bb68c2208380278200120012903783703382005200141386a41001089fe01",
+    "observedChain": [
+      60124,
+      32521,
+      82501,
+      73034
+    ],
+    "nativeCause": "default custom_sliding_zero_vertical_setter=False retains current vz"
+  },
+  "productionCodeChanged": false,
+  "limitations": [
+    "State words and sampled setter boundaries verified; not every f64 sliding arithmetic intermediate audited.",
+    "Later frames are outside the continuous prefix once second-tick velocity diverges.",
+    "Friction draws were controlled identically; this does not close Unity RNG state generation."
+  ],
+  "evidence": {
+    "analysis_input\\unity_first_release_chain_complete_capture_20261002\\logs\\unity_runtime_probe_20261002_162622\\events.jsonl": "407d5ae1e84198db5f7e1589e201aaf5f8210ef61f3b61733a2a39037232f72e",
+    "analysis_input\\unity_first_release_chain_complete_capture_20261002\\capture_manifest.json": "defc3d090064860ce0577db6400ab00eec925cdf062f332f2ea35d6cd6e9f88c",
+    "analysis_input\\unity_first_release_chain_complete_capture_20261002\\observer_source.js": "c186b9509bcd8eb54db9e1dec865419343eca62723d2707895a5e77dba08b970",
+    "analysis_input\\native_first_release_chain_traced_20261002.json": "ee895ee42ff4fe6f2111ee912c09a1e74c1c60de1ad226e0fc5886c0aa69c3fa",
+    "analysis_input\\native_first_release_chain_untraced_20261002.json": "71a3870024d122bed76e6c74ef9d7d0def7b55eb9956bcafde6656761774b6eb",
+    "local_simulator\\unity_physx.py": "41da601d58a8e4640d8f48bce235ae9d9e532c0920666adb8dc0564d3b91c2f4",
+    "analysis_input\\pcm_functions_20261001\\f60124.wat": "0fe10b126ec7ec377ba0252f932930733ece10eb8f326a844759a4cd90f0876f",
+    "analysis_input\\pcm_functions_20261001\\f82501.wat": "4fb8fce2c2132eb396e3885c3c00a7c6887eb674a6ac6c94f3abfd9235ce136f",
+    "analysis_input\\pcm_functions_20261001\\f73034.wat": "7ad8c40ba8cd568c2dc65394f08fa9f7bf67f8e95ce9ec4063a93faf9d1cb6b6"
+  }
+}

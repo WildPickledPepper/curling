@@ -1,0 +1,5821 @@
+{
+  "scope": "Startup, all 16 curling stones, and reset target position inputs before accepting a release-time prefix.",
+  "comparison": "Raw IEEE754 binary32 words, including signed zero; matched semantic boundaries only.",
+  "globallyProvenEarliestArithmeticFork": false,
+  "completePrefixVerified": false,
+  "firstObservedComparableCallBoundary": {
+    "unityFunctionIndex": 71726,
+    "nativeFunctionRva": "0x214bd0",
+    "name": "Sc::RigidSim constructor input",
+    "phase": "startup before reset/release/physics ordinal 1",
+    "stoneCount": 16,
+    "allStoneInputsDiffer": true,
+    "earlierFactoryAndCookingCallsFullyCompared": false
+  },
+  "registration": [
+    {
+      "stoneCreationIndex": 0,
+      "unityCallId": 3,
+      "nativeCallId": 2,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 1,
+      "unityCallId": 4,
+      "nativeCallId": 3,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 2,
+      "unityCallId": 5,
+      "nativeCallId": 4,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 3,
+      "unityCallId": 6,
+      "nativeCallId": 5,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 4,
+      "unityCallId": 7,
+      "nativeCallId": 6,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 5,
+      "unityCallId": 8,
+      "nativeCallId": 7,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 6,
+      "unityCallId": 10,
+      "nativeCallId": 8,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 7,
+      "unityCallId": 11,
+      "nativeCallId": 9,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 8,
+      "unityCallId": 12,
+      "nativeCallId": 10,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 9,
+      "unityCallId": 13,
+      "nativeCallId": 11,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 10,
+      "unityCallId": 14,
+      "nativeCallId": 12,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 11,
+      "unityCallId": 15,
+      "nativeCallId": 13,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 12,
+      "unityCallId": 16,
+      "nativeCallId": 14,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 13,
+      "unityCallId": 17,
+      "nativeCallId": 15,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 14,
+      "unityCallId": 18,
+      "nativeCallId": 16,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    },
+    {
+      "stoneCreationIndex": 15,
+      "unityCallId": 19,
+      "nativeCallId": 17,
+      "unityOrdinal": 0,
+      "words": [
+        {
+          "coreArgumentOffset": 16,
+          "field": "q.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x338efa35",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 6.657902673623539e-08
+        },
+        {
+          "coreArgumentOffset": 20,
+          "field": "q.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 24,
+          "field": "q.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 28,
+          "field": "q.w",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 32,
+          "field": "P.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0xc280c13a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": -64.37739562988281
+        },
+        {
+          "coreArgumentOffset": 36,
+          "field": "P.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "coreArgumentOffset": 40,
+          "field": "P.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x4262199a",
+          "equal": false,
+          "unityValue": 0.0,
+          "nativeValue": 56.525001525878906
+        },
+        {
+          "coreArgumentOffset": 48,
+          "field": "numericWordAt48",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 52,
+          "field": "numericWordAt52",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 56,
+          "field": "numericWordAt56",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 60,
+          "field": "numericWordAt60",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x3f800000",
+          "equal": true,
+          "unityValue": 1.0,
+          "nativeValue": 1.0
+        },
+        {
+          "coreArgumentOffset": 64,
+          "field": "numericWordAt64",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 68,
+          "field": "numericWordAt68",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 72,
+          "field": "numericWordAt72",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 76,
+          "field": "numericWordAt76",
+          "unityBits": "0x3e19999a",
+          "nativeBits": "0x3e19999a",
+          "equal": true,
+          "unityValue": 0.15000000596046448,
+          "nativeValue": 0.15000000596046448
+        },
+        {
+          "coreArgumentOffset": 80,
+          "field": "v.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 84,
+          "field": "v.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 88,
+          "field": "v.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 92,
+          "field": "numericWordAt92",
+          "unityBits": "0xc1200000",
+          "nativeBits": "0xc1200000",
+          "equal": true,
+          "unityValue": -10.0,
+          "nativeValue": -10.0
+        },
+        {
+          "coreArgumentOffset": 96,
+          "field": "w.x",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 100,
+          "field": "w.y",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 104,
+          "field": "w.z",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 108,
+          "field": "numericWordAt108",
+          "unityBits": "0x7f7fffff",
+          "nativeBits": "0x7f7fffff",
+          "equal": true,
+          "unityValue": 3.4028234663852886e+38,
+          "nativeValue": 3.4028234663852886e+38
+        },
+        {
+          "coreArgumentOffset": 112,
+          "field": "maxAngularVelocitySq",
+          "unityBits": "0x411dc0ed",
+          "nativeBits": "0x461c4000",
+          "equal": false,
+          "unityValue": 9.859601020812988,
+          "nativeValue": 10000.0
+        },
+        {
+          "coreArgumentOffset": 116,
+          "field": "maxContactImpulse",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 120,
+          "field": "linearDamping",
+          "unityBits": "0x00000000",
+          "nativeBits": "0x00000000",
+          "equal": true,
+          "unityValue": 0.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 124,
+          "field": "angularDamping",
+          "unityBits": "0x3d4ccccd",
+          "nativeBits": "0x3d4ccccd",
+          "equal": true,
+          "unityValue": 0.05000000074505806,
+          "nativeValue": 0.05000000074505806
+        },
+        {
+          "coreArgumentOffset": 128,
+          "field": "inverseInertia.x",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 132,
+          "field": "inverseInertia.y",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x40a91cda",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 5.284771919250488
+        },
+        {
+          "coreArgumentOffset": 136,
+          "field": "inverseInertia.z",
+          "unityBits": "0x3f800000",
+          "nativeBits": "0x00000000",
+          "equal": false,
+          "unityValue": 1.0,
+          "nativeValue": 0.0
+        },
+        {
+          "coreArgumentOffset": 140,
+          "field": "inverseMass",
+          "unityBits": "0x3d567344",
+          "nativeBits": "0x3d567344",
+          "equal": true,
+          "unityValue": 0.052356019616127014,
+          "nativeValue": 0.052356019616127014
+        },
+        {
+          "coreArgumentOffset": 144,
+          "field": "numericWordAt144",
+          "unityBits": "0x749dc5ae",
+          "nativeBits": "0x749dc5ae",
+          "equal": true,
+          "unityValue": 1.0000000331813535e+32,
+          "nativeValue": 1.0000000331813535e+32
+        },
+        {
+          "coreArgumentOffset": 148,
+          "field": "numericWordAt148",
+          "unityBits": "0x3ba3d70a",
+          "nativeBits": "0x3ba3d70a",
+          "equal": true,
+          "unityValue": 0.004999999888241291,
+          "nativeValue": 0.004999999888241291
+        },
+        {
+          "coreArgumentOffset": 152,
+          "field": "numericWordAt152",
+          "unityBits": "0x3b23d70a",
+          "nativeBits": "0x3b23d70a",
+          "equal": true,
+          "unityValue": 0.0024999999441206455,
+          "nativeValue": 0.0024999999441206455
+        },
+        {
+          "coreArgumentOffset": 156,
+          "field": "numericWordAt156",
+          "unityBits": "0x3ecccccc",
+          "nativeBits": "0x3ecccccc",
+          "equal": true,
+          "unityValue": 0.3999999761581421,
+          "nativeValue": 0.3999999761581421
+        }
+      ],
+      "differenceCount": 8,
+      "firstDifference": {
+        "coreArgumentOffset": 16,
+        "field": "q.x",
+        "unityBits": "0x00000000",
+        "nativeBits": "0x338efa35",
+        "equal": false,
+        "unityValue": 0.0,
+        "nativeValue": 6.657902673623539e-08
+      }
+    }
+  ],
+  "runtimeHullAsset": {
+    "bytes": 4008,
+    "byteExact": true,
+    "sha256": "7c5429592f1447821daf54fc4e57eb27d8177bf0d3945047112a5b6b28f17011",
+    "scope": "Production uses captured Unity hull bytes; this does not prove the two cooking algorithms are bit-exact."
+  },
+  "rawConvexInertiaInput": {
+    "unityFunctionIndex": 72779,
+    "argument": 1,
+    "matrixOffset": 0,
+    "observedCalls": 98,
+    "unityFirstCallId": 6,
+    "words": [
+      {
+        "columnMajorIndex": 0,
+        "unityBits": "0x40e2e05b",
+        "nativeBits": "0x40e2e05b",
+        "equal": true,
+        "unityValue": 7.0898871421813965,
+        "nativeValue": 7.0898871421813965
+      },
+      {
+        "columnMajorIndex": 1,
+        "unityBits": "0xa82cc801",
+        "nativeBits": "0xa70a4800",
+        "equal": false,
+        "unityValue": -9.591286945708714e-15,
+        "nativeValue": -1.919037845299343e-15
+      },
+      {
+        "columnMajorIndex": 2,
+        "unityBits": "0x338e8713",
+        "nativeBits": "0xa623add0",
+        "equal": false,
+        "unityValue": 6.636960137029746e-08,
+        "nativeValue": -5.678754517947533e-16
+      },
+      {
+        "columnMajorIndex": 3,
+        "unityBits": "0xa82cc801",
+        "nativeBits": "0xa70a4800",
+        "equal": false,
+        "unityValue": -9.591286945708714e-15,
+        "nativeValue": -1.919037845299343e-15
+      },
+      {
+        "columnMajorIndex": 4,
+        "unityBits": "0x40f4a648",
+        "nativeBits": "0x40f4a648",
+        "equal": true,
+        "unityValue": 7.645298004150391,
+        "nativeValue": 7.645298004150391
+      },
+      {
+        "columnMajorIndex": 5,
+        "unityBits": "0x33dd3a5f",
+        "nativeBits": "0x33ac8414",
+        "equal": false,
+        "unityValue": 1.0301732089601501e-07,
+        "nativeValue": 8.033399012674636e-08
+      },
+      {
+        "columnMajorIndex": 6,
+        "unityBits": "0x338e8713",
+        "nativeBits": "0xa623add0",
+        "equal": false,
+        "unityValue": 6.636960137029746e-08,
+        "nativeValue": -5.678754517947533e-16
+      },
+      {
+        "columnMajorIndex": 7,
+        "unityBits": "0x33dd3a5f",
+        "nativeBits": "0x33ac8414",
+        "equal": false,
+        "unityValue": 1.0301732089601501e-07,
+        "nativeValue": 8.033399012674636e-08
+      },
+      {
+        "columnMajorIndex": 8,
+        "unityBits": "0x40e2e05b",
+        "nativeBits": "0x40e2e05b",
+        "equal": true,
+        "unityValue": 7.0898871421813965,
+        "nativeValue": 7.0898871421813965
+      }
+    ],
+    "fullMatrixExact": false,
+    "finalInertiaDiagonalPriorVerificationExact": true,
+    "scope": "Unity runtime mass-update input versus native cooked mass metadata, not a synchronized cooking output capture."
+  },
+  "resetTargetPositionInputs": [
+    {
+      "resetSerial": 1,
+      "stoneIndex": 2,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28b27a1",
+          "nativeBits": "0xc28b27a1",
+          "equal": true,
+          "unityValue": -69.57740020751953,
+          "nativeValue": -69.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 3,
+      "stoneIndex": 3,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28b27a1",
+          "nativeBits": "0xc28b27a1",
+          "equal": true,
+          "unityValue": -69.57740020751953,
+          "nativeValue": -69.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 5,
+      "stoneIndex": 4,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28d27a1",
+          "nativeBits": "0xc28d27a1",
+          "equal": true,
+          "unityValue": -70.57740020751953,
+          "nativeValue": -70.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 7,
+      "stoneIndex": 5,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28d27a1",
+          "nativeBits": "0xc28d27a1",
+          "equal": true,
+          "unityValue": -70.57740020751953,
+          "nativeValue": -70.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 9,
+      "stoneIndex": 6,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc290c13a",
+          "nativeBits": "0xc290c13a",
+          "equal": true,
+          "unityValue": -72.37739562988281,
+          "nativeValue": -72.37739562988281
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 11,
+      "stoneIndex": 7,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc290c13a",
+          "nativeBits": "0xc290c13a",
+          "equal": true,
+          "unityValue": -72.37739562988281,
+          "nativeValue": -72.37739562988281
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4258999a",
+          "nativeBits": "0x4258999a",
+          "equal": true,
+          "unityValue": 54.150001525878906,
+          "nativeValue": 54.150001525878906
+        }
+      ]
+    },
+    {
+      "resetSerial": 13,
+      "stoneIndex": 8,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28d27a1",
+          "nativeBits": "0xc28d27a1",
+          "equal": true,
+          "unityValue": -70.57740020751953,
+          "nativeValue": -70.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x425951ec",
+          "nativeBits": "0x425951ec",
+          "equal": true,
+          "unityValue": 54.33000183105469,
+          "nativeValue": 54.33000183105469
+        }
+      ]
+    },
+    {
+      "resetSerial": 15,
+      "stoneIndex": 9,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28d27a1",
+          "nativeBits": "0xc28d27a1",
+          "equal": true,
+          "unityValue": -70.57740020751953,
+          "nativeValue": -70.57740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4257e148",
+          "nativeBits": "0x4257e148",
+          "equal": true,
+          "unityValue": 53.970001220703125,
+          "nativeValue": 53.970001220703125
+        }
+      ]
+    },
+    {
+      "resetSerial": 17,
+      "stoneIndex": 10,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28e5ad4",
+          "nativeBits": "0xc28e5ad4",
+          "equal": true,
+          "unityValue": -71.17739868164062,
+          "nativeValue": -71.17739868164062
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4259b852",
+          "nativeBits": "0x4259b852",
+          "equal": true,
+          "unityValue": 54.43000030517578,
+          "nativeValue": 54.43000030517578
+        }
+      ]
+    },
+    {
+      "resetSerial": 19,
+      "stoneIndex": 11,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28e5ad4",
+          "nativeBits": "0xc28e5ad4",
+          "equal": true,
+          "unityValue": -71.17739868164062,
+          "nativeValue": -71.17739868164062
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x42577ae2",
+          "nativeBits": "0x42577ae2",
+          "equal": true,
+          "unityValue": 53.87000274658203,
+          "nativeValue": 53.87000274658203
+        }
+      ]
+    },
+    {
+      "resetSerial": 21,
+      "stoneIndex": 12,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28c27a1",
+          "nativeBits": "0xc28c27a1",
+          "equal": true,
+          "unityValue": -70.07740020751953,
+          "nativeValue": -70.07740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x425a47ae",
+          "nativeBits": "0x425a47ae",
+          "equal": true,
+          "unityValue": 54.56999969482422,
+          "nativeValue": 54.56999969482422
+        }
+      ]
+    },
+    {
+      "resetSerial": 23,
+      "stoneIndex": 13,
+      "unityLayer": "Transform position input",
+      "nativeLayer": "PxRigidDynamic pose after reset position write",
+      "components": [
+        {
+          "unityBits": "0xc28c27a1",
+          "nativeBits": "0xc28c27a1",
+          "equal": true,
+          "unityValue": -70.07740020751953,
+          "nativeValue": -70.07740020751953
+        },
+        {
+          "unityBits": "0x4166eb1c",
+          "nativeBits": "0x4166b770",
+          "equal": false,
+          "unityValue": 14.43239974975586,
+          "nativeValue": 14.419784545898438
+        },
+        {
+          "unityBits": "0x4256eb86",
+          "nativeBits": "0x4256eb86",
+          "equal": true,
+          "unityValue": 53.730003356933594,
+          "nativeValue": 53.730003356933594
+        }
+      ]
+    }
+  ],
+  "startupActorConstructorCounts": {
+    "unity": 26,
+    "native": 18,
+    "scope": "Rosters differ; only corresponding curling stones and physical ice mapped, no full actor-creation equivalence claimed."
+  },
+  "observerValidation": {
+    "unityOriginalFunctionBodiesByteIdentical": true,
+    "unityFrictionDraws": 15580,
+    "unityDenseSetterPairs": 1023,
+    "unityDynamicCoreFrames": 40,
+    "unityShotEndpoints": 12,
+    "unityObservableSequenceUnchanged": true,
+    "nativeReplayRowsAndAggregateUnchanged": true,
+    "nativeReplayScope": "Recorded reset rotations/friction and release quaternion are present after startup. This replay cannot certify a from-head prefix.",
+    "freshNativeInitialStateInjection": false
+  },
+  "uncovered": "Mesh generation/cooking call sequence, complete scene roster, initialization Transform synchronization, and reset settling/sleep outputs are not yet a closed prefix.",
+  "nextBoundary": "Align and audit initialization lifecycle and its actual writes; do not skip to collision or inject target pose to conceal the differences.",
+  "moduleSha256": {
+    "unity": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "unityInstrumented": "5637218431c9ee010b5329e352822c8462ef346ba991bf48b848da48f13ed002",
+    "native": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df"
+  },
+  "evidenceSha256": {
+    "analysis_input\\unity_scene_chain_from_start_20261002\\logs\\unity_runtime_probe_20261002_135437\\events.jsonl": "d51d4de852efad53089f7c7e00b2ec301928d22b17f7fcd870320fc5e94c5791",
+    "analysis_input\\native_scene_chain_from_start_20261002\\calls.json": "daa1f700a0b134d4880cd7c5d8fda025ee6df28dc088946d48e77ee9a4e71360",
+    "analysis_input\\native_initial_chain_readonly_20261002.json": "fcbe5ab718d65e86a37b9d21988c0aaf024ac14cd0c9240c4975f96d401e6dee",
+    "local_simulator\\assets\\unity_runtime_hull.json": "e434ead6e1734b6d19123b350ff12cb0623de89b35347fbb875983b517bda443",
+    "analysis_input\\unity_11005_mass_properties_v2_20261002\\logs\\unity_runtime_probe_20261002_133353\\events.jsonl": "f17d1d0fcfe10f6f15e3ddbfdbc432d7d93627083ca26a3fe5c0ccb272798898",
+    "analysis_input\\unity_11005_step486_pcm_20261001\\logs\\unity_runtime_probe_20261001_215740\\events.jsonl": "055c84f81ac72d8aebfa6feccc3bc4f0a86693c598c9ed510e52bf2b3af472fc"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "5a6d9aa9102d54d0e70f77469758a8a7f1d007fe66a868ef07890e664cdd3b0c",
+    "local_simulator\\runtime_support\\tools\\reverse\\recovered_stone_mass.py": "aa34e7567343b25545d64e6049c5db90622d60d35f51052f9cd313b9e345c87e",
+    "research_archive\\unity_reverse\\source\\reverse\\unity_webgl_runtime_probe.js": "3d5541ff27d7eaff30a2d2ef955a60609eeeb04c7a79bba55d39f166e57af2e4"
+  }
+}

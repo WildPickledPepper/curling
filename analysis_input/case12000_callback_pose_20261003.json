@@ -1,0 +1,15 @@
+{
+  "callId": 192,
+  "functionIndex": 72606,
+  "parentCallId": 191,
+  "poseWords": [
+    3263024616,
+    1097250672,
+    1113108858,
+    864497474,
+    1051113819,
+    851065732,
+    1064438796
+  ],
+  "eventsPath": "analysis_input\\case12000_cleanup_unity_v4_20261003\\logs\\unity_runtime_probe_20261003_131830\\events.jsonl"
+}

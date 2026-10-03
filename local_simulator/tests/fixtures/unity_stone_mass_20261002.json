@@ -1,0 +1,2109 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "events": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_11005_mass_properties_v2_20261002\\logs\\unity_runtime_probe_20261002_133353\\events.jsonl",
+  "eventsSha256": "f17d1d0fcfe10f6f15e3ddbfdbc432d7d93627083ca26a3fe5c0ccb272798898",
+  "kernelSha256": "f598ebb73edfb7b0aeefdfc596bba6f95daac352be17a6911fa14e70f2a23a52",
+  "massInformation": {
+    "unit_density_mass": 9.801713943481445,
+    "local_center_of_mass": [
+      9.228222630497385e-09,
+      2.1022355412014804e-08,
+      6.973805088961171e-09
+    ],
+    "local_inertia_column_major": [
+      [
+        7.0898871421813965,
+        -1.919037845299343e-15,
+        -5.678754517947533e-16
+      ],
+      [
+        -1.919037845299343e-15,
+        7.645298004150391,
+        8.033399012674636e-08
+      ],
+      [
+        -5.678754517947533e-16,
+        8.033399012674636e-08,
+        7.0898871421813965
+      ]
+    ],
+    "local_inertia_rows": [
+      [
+        7.0898871421813965,
+        -1.919037845299343e-15,
+        -5.678754517947533e-16
+      ],
+      [
+        -1.919037845299343e-15,
+        7.645298004150391,
+        8.033399012674636e-08
+      ],
+      [
+        -5.678754517947533e-16,
+        8.033399012674636e-08,
+        7.0898871421813965
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "callId": 5,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 15,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 25,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 35,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 45,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 70,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 80,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 90,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 100,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 110,
+      "releaseSerial": 2,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 123,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 133,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 143,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 153,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 163,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 192,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 203,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 214,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 225,
+      "releaseSerial": 4,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 242,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 253,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 264,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 275,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 300,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 310,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 320,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 330,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 340,
+      "releaseSerial": 6,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 357,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 368,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 379,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 390,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 419,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 430,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 441,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 452,
+      "releaseSerial": 8,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 469,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 480,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 491,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 502,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 527,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 537,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 547,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 557,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 567,
+      "releaseSerial": 10,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 584,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 595,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 606,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 617,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 646,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 657,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 668,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 679,
+      "releaseSerial": 12,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 696,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 707,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 718,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 729,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 754,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 764,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 774,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 784,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 794,
+      "releaseSerial": 14,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 811,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 822,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 833,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 844,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 873,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 884,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 895,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 906,
+      "releaseSerial": 16,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 923,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 934,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 945,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 956,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 985,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 996,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1007,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1018,
+      "releaseSerial": 18,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1035,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798564,
+        1044497322,
+        1043798564
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824792
+      ],
+      "scaledUnitMassBits": [
+        1013616967
+      ]
+    },
+    {
+      "callId": 1046,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798564,
+        1044497322,
+        1043798564
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824792
+      ],
+      "scaledUnitMassBits": [
+        1013616967
+      ]
+    },
+    {
+      "callId": 1057,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798564,
+        1044497322,
+        1043798564
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824792
+      ],
+      "scaledUnitMassBits": [
+        1013616967
+      ]
+    },
+    {
+      "callId": 1068,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798564,
+        1044497322,
+        1043798564
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824792
+      ],
+      "scaledUnitMassBits": [
+        1013616967
+      ]
+    },
+    {
+      "callId": 1097,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1108,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1119,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1130,
+      "releaseSerial": 20,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1147,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 1158,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 1169,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 1180,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798562,
+        1044497317,
+        1043798562
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824796
+      ],
+      "scaledUnitMassBits": [
+        1013616961
+      ]
+    },
+    {
+      "callId": 1209,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1220,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1231,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1242,
+      "releaseSerial": 22,
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798563,
+        1044497319,
+        1043798563
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616963
+      ]
+    },
+    {
+      "callId": 1259,
+      "releaseSerial": 24,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 1270,
+      "releaseSerial": 24,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 1281,
+      "releaseSerial": 24,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    },
+    {
+      "callId": 1292,
+      "releaseSerial": 24,
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ],
+      "mass": 19.100000381469727,
+      "expectedInertiaBits": [
+        1043798565,
+        1044497320,
+        1043798565
+      ],
+      "expectedInverseYawInertiaBits": [
+        1084824794
+      ],
+      "scaledUnitMassBits": [
+        1013616964
+      ]
+    }
+  ],
+  "scope": "Observed formal stone hull, identity shape and scale rotation, forced zero COM."
+}

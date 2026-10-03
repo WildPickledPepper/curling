@@ -1,0 +1,25 @@
+{
+  "fullTrajectoryRuns": 10,
+  "completedSteps": 37000,
+  "comparedStateBytes": 3738696,
+  "allComparedBytesExact": true,
+  "firstDifference": null,
+  "wallRemovalStep": 1879,
+  "actualNativeSimulationFlagsMatchUnityActorSets": true,
+  "testCount": 44,
+  "allTestsPassed": true,
+  "nativeBindingOnDiskUnchanged": true,
+  "evidence": {
+    "analysis_input\\wall_repair_regression_20261003\\report.json": "e46ff0e41526552092a6bd7653722f608ca373805fafb55ae7573fc2bb0fcde3",
+    "analysis_input\\wall_repair_regression_20261003\\additional12000_comparison.json": "11289f526de509010b6e730dc4681e1a52f049bafde56ac28cab8531b77ac73d",
+    "local_simulator\\native_wall_contact.py": "ea50d57d566156edd95313d9a7140cf090358c7e052c9907f885cb38b2338224",
+    "local_simulator\\assets\\unity_wall_colliders.json": "afe2baf470595a63f129bcaf2fcd6f5a7254cce1fffe3e7c0ab6bd2a62922c76",
+    "local_simulator\\tests\\test_unity_wall_collision.py": "67010ace0b59a81c98dbda07cd73f78678341bda190468196c1a7d125099a2ef",
+    "local_simulator\\tests\\fixtures\\unity_wall_collision_12000_20261003.json": "ab11c175c5de46b9b19a5341f381283735669eb6e6585ebe423925921ec533bc",
+    "analysis_input\\wall_native_abi_verified_20261003.json": "afe8b3570b5add8d866c8f427d0cb5be6aa24ee62c39f50b327542c00df7e7dc",
+    "analysis_input\\pcm_functions_20261001\\f73733.wat": "5b4dc9d5711d16411c77e003ce5e9711248befa9da4bcd31253f750448f3f5a1",
+    "analysis_input\\unity_data_20261002.unity3d": "1c33fae1f3279bcdc42e4567a395fbc39100ba2059fedb16fa0fb2289171caeb",
+    "analysis_input\\wall_full_tests_20261003.log": "441545f44848f471c98a1dfd4e24fb3402960a6a142ab27dc327d822171a923c",
+    "analysis_input\\verify_wall_repair_20261003.py": "1bb709dd3b173b305b6cfaf26f77d72017d9240ab95953c1aa42664e8cf08e8b"
+  }
+}

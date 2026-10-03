@@ -1,0 +1,41 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "811b00391b46681dfbf3fba1c235a69f4f1348831e535f2eb31260b2d36c6495",
+  "importedFunctions": 476,
+  "originalTableSize": 129990,
+  "functions": [
+    {
+      "functionIndex": 60092,
+      "rawFunctionIndex": 83848,
+      "tableIndex": 129990,
+      "typeIndex": 72,
+      "signature": "vifffi",
+      "originalBodySha256": "514ecf464dbbd348b0e622fb1c4d2873b3b645e5497140438531da4db0f3be1c",
+      "originalBodyBytes": 1238
+    },
+    {
+      "functionIndex": 32544,
+      "rawFunctionIndex": 83849,
+      "tableIndex": 129991,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "3b865683dae53bd0fd352a886470af30aa440927c3965dad50e983ae62d9b462",
+      "originalBodyBytes": 99
+    },
+    {
+      "functionIndex": 32546,
+      "rawFunctionIndex": 83850,
+      "tableIndex": 129992,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "4471ac0698255b01ba41a932e63579b52e2af1396ffe4b2b3fa551cbd82d02b2",
+      "originalBodyBytes": 42
+    }
+  ],
+  "method": "byte-identical relocated body with argument/return table thunk",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_bestshot_position_inputs_v2_20261002.wasm",
+  "upstreamRootFunctions": [
+    60092
+  ]
+}

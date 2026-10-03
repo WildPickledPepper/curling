@@ -1,0 +1,324 @@
+{
+  "sampleId": 11009,
+  "physicsTick": 1383,
+  "denseOrdinal": 1384,
+  "hashes": {
+    "unityWasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "patchedWasm": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f",
+    "nativeModule": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+    "productionCode": "1c7f1f9dd7498f4225740fca57cca85be7bc46845e92d08e554b9c142edce52f"
+  },
+  "observer": {
+    "originalFunctionBodiesRetained": true,
+    "denseSetterPairsUnchanged": 1384,
+    "resetCoreRowsUnchanged": 256,
+    "frictionInputsUnchanged": 1383,
+    "completedBoundaryTicksUnchanged": [
+      1382,
+      1383,
+      1384,
+      1385,
+      1386
+    ],
+    "nativeObservedTrajectoryUnchanged": 3000,
+    "protocolResultUnchanged": true
+  },
+  "firstConfirmedInternalDifference": {
+    "stage": "PxcDiscreteNarrowPhasePCM entry / multi-cache lifecycle",
+    "nativeParentRva": "0x284860",
+    "nativeClearRva": "0x330f0",
+    "nativeClearCallSiteRva": "0x28487a",
+    "nativeClearSizeStoreRva": "0x332d1",
+    "unityPcmFunction": 70030,
+    "unityRefreshFunction": 69978,
+    "unityInputCachedSize": 304,
+    "nativeInputCachedSizeBeforeClear": 304,
+    "nativeInputCachedSizeAfterClear": 0,
+    "nativeClearCallId": 1,
+    "unityRefreshCallId": 132
+  },
+  "priorCachedContactArithmeticFieldsExact": 50,
+  "pcmTransformWordsExact": 14,
+  "contactDifferences": [
+    {
+      "contact": 0,
+      "unitySeparation": -2.5178280793625163e-07,
+      "nativeSeparation": -2.450201463943813e-07,
+      "unityBits": "0xb4872cc4",
+      "nativeBits": "0xb4838b50"
+    },
+    {
+      "contact": 1,
+      "unitySeparation": -2.197795794245394e-07,
+      "nativeSeparation": -2.171007054130314e-07,
+      "unityBits": "0xb46bfc8d",
+      "nativeBits": "0xb4691c30"
+    },
+    {
+      "contact": 2,
+      "unitySeparation": -2.437399473365076e-07,
+      "nativeSeparation": -2.3808283344806114e-07,
+      "unityBits": "0xb482db5d",
+      "nativeBits": "0xb47fa3b6"
+    },
+    {
+      "contact": 3,
+      "unitySeparation": -2.181154314939704e-07,
+      "nativeSeparation": -2.1878402378661121e-07,
+      "unityBits": "0xb46a331d",
+      "nativeBits": "0xb46aeae5"
+    },
+    {
+      "contact": 4,
+      "unitySeparation": -2.5187313212882145e-07,
+      "nativeSeparation": -2.4492877059856255e-07,
+      "unityBits": "0xb487392e",
+      "nativeBits": "0xb4837ec1"
+    }
+  ],
+  "normalConstraintDifferences": [
+    {
+      "row": 0,
+      "offsetWithinRow": 36,
+      "unityBits": "0x3fefe256",
+      "nativeBits": "0x3fefe200"
+    },
+    {
+      "row": 1,
+      "offsetWithinRow": 36,
+      "unityBits": "0x3fefe0bc",
+      "nativeBits": "0x3fefe09a"
+    },
+    {
+      "row": 2,
+      "offsetWithinRow": 36,
+      "unityBits": "0x3fefe1ef",
+      "nativeBits": "0x3fefe1a7"
+    },
+    {
+      "row": 3,
+      "offsetWithinRow": 36,
+      "unityBits": "0x3fefe0a7",
+      "nativeBits": "0x3fefe0af"
+    },
+    {
+      "row": 4,
+      "offsetWithinRow": 36,
+      "unityBits": "0x3fefe257",
+      "nativeBits": "0x3fefe1fe"
+    }
+  ],
+  "frictionArithmeticFieldsExact": true,
+  "originalWasmRefreshReplayExact": true,
+  "originalWasmRefreshFunctionBodySha256": "2f7026b4464d52a0b1a665cf6abea7b0c3b5d08cd22a96e1c354a5238e502398",
+  "dynamicPairImpulseZeroAllFiveIterations": true,
+  "targetStaticIterations": [
+    {
+      "iteration": 1,
+      "unityDeltaVelocity": [
+        3.7952952896750903e-20,
+        0.09812014549970627,
+        -1.5054467394914894e-10
+      ],
+      "nativeDeltaVelocity": [
+        3.7952742870423497e-20,
+        0.09811960160732269,
+        -1.5054384128188047e-10
+      ],
+      "unityAngularState": [
+        -3.9509610201638217e-41,
+        -5.094888884053632e-16,
+        -6.78425490308736e-23
+      ],
+      "nativeAngularState": [
+        1.8216880036222622e-44,
+        2.3476264663655763e-19,
+        3.126053621783907e-26
+      ]
+    },
+    {
+      "iteration": 2,
+      "unityDeltaVelocity": [
+        3.7952952896750903e-20,
+        0.09812014549970627,
+        -1.5054467394914894e-10
+      ],
+      "nativeDeltaVelocity": [
+        3.7952742870423497e-20,
+        0.09811960160732269,
+        -1.5054384128188047e-10
+      ],
+      "unityAngularState": [
+        -7.903743728331266e-41,
+        -1.0192125108162342e-15,
+        -1.3571636219714292e-22
+      ],
+      "nativeAngularState": [
+        1.8216880036222622e-44,
+        2.3476264663655763e-19,
+        3.126053621783907e-26
+      ]
+    },
+    {
+      "iteration": 3,
+      "unityDeltaVelocity": [
+        3.7952952896750903e-20,
+        0.09812014549970627,
+        -1.5054467394914894e-10
+      ],
+      "nativeDeltaVelocity": [
+        3.7952742870423497e-20,
+        0.09811960160732269,
+        -1.5054384128188047e-10
+      ],
+      "unityAngularState": [
+        -1.185652643649871e-40,
+        -1.5289361861666644e-15,
+        -2.03590169052525e-22
+      ],
+      "nativeAngularState": [
+        1.8216880036222622e-44,
+        2.3476264663655763e-19,
+        3.126053621783907e-26
+      ]
+    },
+    {
+      "iteration": 4,
+      "unityDeltaVelocity": [
+        2.402363030729049e-12,
+        0.09812014549970627,
+        -5.436757641308354e-11
+      ],
+      "nativeDeltaVelocity": [
+        2.4024098682629003e-12,
+        0.09811960160732269,
+        -5.4366802726413255e-11
+      ],
+      "unityAngularState": [
+        -1.911154072232896e-36,
+        -2.464468559781885e-11,
+        -3.2816455200408e-18
+      ],
+      "nativeAngularState": [
+        -1.9111339832181113e-36,
+        -2.4644470492107828e-11,
+        -3.2816124328162978e-18
+      ]
+    },
+    {
+      "iteration": 5,
+      "unityDeltaVelocity": [
+        8.920932569045359e-13,
+        0.09812014549970627,
+        -1.8728978437576593e-11
+      ],
+      "nativeDeltaVelocity": [
+        8.921231808844965e-13,
+        0.09811960160732269,
+        -1.8728180464777644e-11
+      ],
+      "unityAngularState": [
+        -6.692615814911601e-37,
+        -8.630211129068144e-12,
+        -1.1491908580816519e-18
+      ],
+      "nativeAngularState": [
+        -6.692480393428009e-37,
+        -8.630081024807446e-12,
+        -1.149168524205113e-18
+      ]
+    }
+  ],
+  "completedStateMismatches": [
+    {
+      "physicsTick": 1383,
+      "differences": [
+        {
+          "stoneIndex": 11,
+          "field": "qy",
+          "wordIndex": 4,
+          "unityBits": "0xabcec8e9",
+          "nativeBits": "0xabcec8e5",
+          "unityFloat": -1.469294412699551e-12,
+          "nativeFloat": -1.469293979018682e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "qz",
+          "wordIndex": 5,
+          "unityBits": "0x9fe6fb1f",
+          "nativeBits": "0x9fe6fb1a",
+          "unityFloat": -9.782423393455076e-20,
+          "nativeFloat": -9.782420162280808e-20
+        },
+        {
+          "stoneIndex": 11,
+          "field": "vx",
+          "wordIndex": 7,
+          "unityBits": "0x2a000d30",
+          "nativeBits": "0x2a000ea0",
+          "unityFloat": 1.1373259105329492e-13,
+          "nativeFloat": 1.1373757838328835e-13
+        },
+        {
+          "stoneIndex": 11,
+          "field": "vz",
+          "wordIndex": 9,
+          "unityBits": "0xac1b323e",
+          "nativeBits": "0xac1b3242",
+          "unityFloat": -2.2054714825248123e-12,
+          "nativeFloat": -2.2054723498865503e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wx",
+          "wordIndex": 10,
+          "unityBits": "0x826d55ff",
+          "nativeBits": "0x826d55a5",
+          "unityFloat": -1.7436689740108822e-37,
+          "nativeFloat": -1.743658884661939e-37
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wy",
+          "wordIndex": 11,
+          "unityBits": "0xac1e3955",
+          "nativeBits": "0xac1e3919",
+          "unityFloat": -2.2484976120590305e-12,
+          "nativeFloat": -2.2484846016329607e-12
+        },
+        {
+          "stoneIndex": 11,
+          "field": "wz",
+          "wordIndex": 12,
+          "unityBits": "0xa0b0bce4",
+          "nativeBits": "0xa0b0bca1",
+          "unityFloat": -2.994055707366579e-19,
+          "nativeFloat": -2.994038388272504e-19
+        }
+      ]
+    }
+  ],
+  "mainCompletedStatesExactThroughTick": 3000,
+  "targetCompletedStatesExactAfterDifferenceThroughTick": 3000,
+  "conclusion": "The native multi-cache lifecycle clears a preserved target-ice cache at tick 1383. Unity refreshes old cached contacts; native regenerates them. The differing separation values feed five normal-row bias values, then target static-solver outputs and seven completed-state words.",
+  "productionRepairApplied": false,
+  "limits": [
+    "No claim that every unobserved intermediate before tick 1383 is bitwise identical.",
+    "A general replacement of the old unconditional cache-clear hook still requires tracing the actual invalidation/wake branches and regression validation."
+  ],
+  "evidenceSha256": {
+    "analysis_input\\unity_sample11009_step1383_capture_v2_20261002\\logs\\unity_runtime_probe_20261002_194108\\events.jsonl": "604f212826650567ad0444395cb897f5cdeac5a958661c6a425ef268dd70f6c3",
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+    "analysis_input\\native_sample11009_step1383_trace_20261002.json": "2cbaaeaff1f7eb2f052fb053af6fb8f299fd504dda41ac698124c1804ce4e897",
+    "analysis_input\\native_sample11009_step1383_cache_clear_20261002\\calls.json": "1c296e0060e32b1a7da393caa6bfa79c62e5e122afcb114627f62a1452648230",
+    "analysis_input\\native_sample11009_step1383_cache_clear_20261002\\alignment.json": "11885a0179352b3c6de2dc120f932f9c36b31c0b4927b3292bc96c686825f700",
+    "analysis_input\\unity_sample11009_step1383_capture_v2_20261002\\observer_source.js": "6fe857f803d9b56aee67eca1ea6f874fbb846471d042325ce7c73adab39bf110",
+    "analysis_input\\unity_sample11009_step1383_capture_v2_20261002\\capture_manifest.json": "6c8f57f3a797e58997eaa20077015bc6aaf46d2549d3fa0bb97708e92f99b83b",
+    "analysis_input\\pcm_functions_20261001\\f69978.wat": "b0a77158b543183a8c8293e710791370b1760fbfc7e67e0440fa5901e0825ed6",
+    "analysis_input\\unity_pcm_refresh_numeric_kernel_20261002.wasm": "d85acb3f8dc3649c53f75c9e6906d90a868de45f06abb835ffccb52ad3d4816a",
+    "analysis_input\\native_pcm_cache_clear_step1383_20261002.asm": "985f42f1e277aa054a155660f72620e4420e3ff30682d5fa5b3b65f9a382cdca",
+    "analysis_input\\native_pcm_cache_handoff_step1383_20261002.asm": "85a12eb7434b0654a09b616fbf73f8f8c4afb76024fde8488ad96cab9547e131",
+    "analysis_input\\native_pcm_mesh_step1383_20261002.asm": "912d386b369e3555393dc5b99886cdabdebb499faee940749214507d997b18df"
+  }
+}

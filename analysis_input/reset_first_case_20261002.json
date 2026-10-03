@@ -1,0 +1,23 @@
+[
+  {
+    "sample_id": 11000,
+    "label": "collision_headon_y5p2_v3p4_unique_t02_r00",
+    "category": "collision_headon",
+    "v0": 3.4,
+    "h0": 0.0,
+    "w0": 0.0,
+    "sweep": 0.0,
+    "stones": [
+      {
+        "x": 2.375,
+        "y": 5.2,
+        "index": 2
+      }
+    ],
+    "notes": "unique-target collision calibration; source_sample_id=78; target_index=2; reload Unity before each batch file",
+    "source_sample_id": 78,
+    "batch_repeat_index": 0,
+    "batch_case_index": 0,
+    "assigned_target_index": 2
+  }
+]

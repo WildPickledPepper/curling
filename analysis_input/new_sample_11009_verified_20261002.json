@@ -1,0 +1,91 @@
+{
+  "sampleId": 11009,
+  "plan": {
+    "sample_id": 11009,
+    "label": "fresh_11009_curl_right_20261002",
+    "category": "collision_glancing",
+    "v0": 3.4,
+    "h0": 0.2,
+    "w0": 1.57,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "index": 11,
+        "x": 2.6550000000000002,
+        "y": 6.8
+      }
+    ],
+    "notes": "Fresh Unity page; same shot parameters as historical11009; no previous shots, pose injection or RNG override."
+  },
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "productionCodeSha256": "e20aaccc1f641fe7236108807dfc35e2d28ccc2ffbb8048f7d09400e071ddbb0",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "frictionDraws": 1383,
+  "completedPhysicsStepsCompared": 3000,
+  "releaseStateWordsCompared": 26,
+  "releaseStateWordsExact": 25,
+  "firstObservedDifference": {
+    "boundary": "BESTSHOT release, before first physical step",
+    "physicsTick": 0,
+    "phase": "normalizeCandidate.121708",
+    "edge": "enter",
+    "differences": [
+      {
+        "stoneIndex": 0,
+        "field": "pz",
+        "wordIndex": 2,
+        "unityBits": "0x4257e5c9",
+        "nativeBits": "0x4257e5ca",
+        "unityFloat": 53.97439956665039,
+        "nativeFloat": 53.974403381347656
+      }
+    ]
+  },
+  "firstCompletedStepDifference": {
+    "physicsTick": 1,
+    "differences": [
+      {
+        "stoneIndex": 0,
+        "field": "pz",
+        "wordIndex": 2,
+        "unityBits": "0x4257e5c9",
+        "nativeBits": "0x4257e5ca",
+        "unityFloat": 53.97439956665039,
+        "nativeFloat": 53.974403381347656
+      }
+    ]
+  },
+  "differingCompletedSteps": 3000,
+  "nativeFirstContactTick": 1383,
+  "observer": {
+    "originalBodiesByteIdentical": true,
+    "originalWasmControl": true,
+    "controlSetterPairsEqual": 1384,
+    "controlFrictionInputsEqual": 1383,
+    "controlProtocolResultEqual": true,
+    "scope": "Original-Wasm control preserves observed setter/getter/pose stream and protocol results. RNG control uses recorded return values; internal RNG state is not compared."
+  },
+  "evidenceFunction": {
+    "functionIndex": 60092,
+    "readPositionFunctionIndex": 32544,
+    "writePositionFunctionIndex": 32546,
+    "operation": "f32 load of Rigidbody position.z; p2 horizontal offset; f32.sub; store in position vector; call f32546",
+    "watLine": 326
+  },
+  "limitations": [
+    "Earliest observed release-state divergence; no claim that all earlier internal Reset/cooking/parse operations were sampled bitwise in this new case.",
+    "Later state differences are measured but are not independent root causes.",
+    "No production repair or injected pose was used."
+  ],
+  "evidence": {
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+    "analysis_input\\unity_new_sample_11009_control_20261002\\logs\\unity_runtime_probe_20261002_190444\\events.jsonl": "6fc0f5f380345d0b24b06b99840afc2097ac302a2c330261427e67c45df577c0",
+    "analysis_input\\native_new_sample_11009_20261002.json": "967b97df590a4b7f5f0158b1e2aadff8ed891d1d5b6bbdc461c3c5ea38c7971a",
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\capture_manifest.json": "2f24cc7411da783c3d2f9249446f4becb2ac3a3dd8795eebe5b9362939ac6b21",
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\observer_source.js": "8e000eb8b61e5110970d74e45332d3e96905d616fbf716fad955a84720b01ad5",
+    "analysis_input\\unity_new_sample_11009_control_20261002\\commands.json": "dbb2379de2c6b1dbd4c33eec480a6df9762ff3b0a1c2726a83dd5e046cf3a768",
+    "analysis_input\\new_sample_11009_plan_20261002.json": "e236a69aff1211f9de9b8364dc905878e1b20f5a585ceb73c4a74f646ee4aa9f",
+    "analysis_input\\pcm_functions_20261001\\f60092.wat": "2ba6c737b62507d5bc8c40e41e060675c2f79d65f6f724b77fca33bb02bb0200"
+  }
+}

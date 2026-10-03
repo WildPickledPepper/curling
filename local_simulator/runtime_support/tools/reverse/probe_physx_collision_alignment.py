@@ -548,6 +548,8 @@ def _make_stone(
     disable_stone_gravity: bool,
     disable_strong_friction: bool,
     improved_patch_friction: bool,
+    shared_convex_source: Optional[Any] = None,
+    defer_body_pose_and_inertia: bool = False,
 ) -> Tuple[Any, Any, Any, Dict[str, Any]]:
     material = _make_material(
         static_friction,
@@ -557,7 +559,18 @@ def _make_stone(
         disable_strong_friction=disable_strong_friction,
         improved_patch_friction=improved_patch_friction,
     )
-    if convex_mesh_scale is not None:
+    if shared_convex_source is not None:
+        clone_convex = getattr(pyphysx.Shape, "create_convex_mesh_from_existing", None)
+        if clone_convex is None:
+            raise RuntimeError(
+                "shared convex construction requested, but pyphysx has no "
+                "create_convex_mesh_from_existing binding"
+            )
+        shape = clone_convex(shared_convex_source, material, True)
+        # The source's cooked hull and Unity runtime patches are immutable.
+        # Reapplying the patch would only rewrite the same shared mesh data.
+        runtime_patch = {"shared_convex_mesh": True}
+    elif convex_mesh_scale is not None:
         shape = pyphysx.Shape.create_convex_mesh_from_points_with_scale(
             stone_points,
             material,
@@ -567,6 +580,11 @@ def _make_stone(
             convex_vertex_limit,
             quantize_input,
             gpu_compatible,
+        )
+        runtime_patch = _patch_runtime_stone_shape(
+            shape,
+            runtime_hull_raw_bytes=runtime_hull_raw_bytes,
+            runtime_big_convex_arrays=runtime_big_convex_arrays,
         )
     else:
         shape = pyphysx.Shape.create_convex_mesh_from_points(
@@ -579,11 +597,11 @@ def _make_stone(
             quantize_input,
             gpu_compatible,
         )
-    runtime_patch = _patch_runtime_stone_shape(
-        shape,
-        runtime_hull_raw_bytes=runtime_hull_raw_bytes,
-        runtime_big_convex_arrays=runtime_big_convex_arrays,
-    )
+        runtime_patch = _patch_runtime_stone_shape(
+            shape,
+            runtime_hull_raw_bytes=runtime_hull_raw_bytes,
+            runtime_big_convex_arrays=runtime_big_convex_arrays,
+        )
     shape.set_contact_offset(contact_offset)
     shape.set_rest_offset(rest_offset)
     if (
@@ -600,7 +618,8 @@ def _make_stone(
         )
 
     body = pyphysx.RigidDynamic()
-    body.attach_shape(shape)
+    if not defer_body_pose_and_inertia:
+        body.attach_shape(shape)
     body.set_mass(MASS)
     # CurlingStoneNew.Start explicitly calls Rigidbody.set_centerOfMass(Vector3.zero).
     # The cooked convex hull has a tiny nonzero mass centroid, so leave no implicit
@@ -614,7 +633,7 @@ def _make_stone(
         inertia_radial=inertia_radial,
         inertia_vertical=inertia_vertical,
     )
-    if inertia_tensor is not None:
+    if inertia_tensor is not None and not defer_body_pose_and_inertia:
         body.set_mass_space_inertia_tensor(inertia_tensor)
     body.set_linear_damping(0.0)
     body.set_angular_damping(0.05)
@@ -625,9 +644,10 @@ def _make_stone(
     if lock_upright:
         body.set_rigid_dynamic_lock_flag(pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_X, True)
         body.set_rigid_dynamic_lock_flag(pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_Y, True)
-    body.set_global_pose(([x, y, center_height], _pyphysx_z_yaw_quat(yaw)))
-    body.set_linear_velocity([vx, vy, vz])
-    body.set_angular_velocity([wx, wy, w])
+    if not defer_body_pose_and_inertia:
+        body.set_global_pose(([x, y, center_height], _pyphysx_z_yaw_quat(yaw)))
+        body.set_linear_velocity([vx, vy, vz])
+        body.set_angular_velocity([wx, wy, w])
     return body, shape, material, runtime_patch
 
 

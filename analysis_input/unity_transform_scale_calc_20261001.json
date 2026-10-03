@@ -1,0 +1,125 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "2fe8826ff57da81dd3af7b99e7d78f9a63b9dc61a29be0dae99489bb7ac8ff55",
+  "functions": [
+    {
+      "functionIndex": 72573,
+      "rawFunctionIndex": 83866,
+      "tableIndex": 129999,
+      "typeIndex": 10,
+      "signature": "iiiiiii",
+      "originalBodySha256": "aa92702760d180568e78b167285c9e733d22f9ebf1685c7dd04b3ef26e943c3f",
+      "originalBodyBytes": 2630
+    },
+    {
+      "functionIndex": 72951,
+      "rawFunctionIndex": 83867,
+      "tableIndex": 130000,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "037ee3dc620da8fd79add8009235dea1e530c3e22fe95b5b204252a2cc656823",
+      "originalBodyBytes": 1856
+    },
+    {
+      "functionIndex": 72950,
+      "rawFunctionIndex": 83868,
+      "tableIndex": 130001,
+      "typeIndex": 3,
+      "signature": "iiii",
+      "originalBodySha256": "b730a4de485037bf32864b5b6e58d4c6707a168c35359bc7b61bcd7e445359a6",
+      "originalBodyBytes": 2366
+    },
+    {
+      "functionIndex": 78119,
+      "rawFunctionIndex": 83869,
+      "tableIndex": 130002,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "67dbcf30f95de379b60092fc14796773c6d88c3acdacbeae0dcb3d3e5fc94f96",
+      "originalBodyBytes": 734
+    },
+    {
+      "functionIndex": 78120,
+      "rawFunctionIndex": 83870,
+      "tableIndex": 130003,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "4fd047db8c1f3e8a35876f634ed3c69d6087721698e8ad6e19ef172e274fd7d5",
+      "originalBodyBytes": 645
+    },
+    {
+      "functionIndex": 78121,
+      "rawFunctionIndex": 83871,
+      "tableIndex": 130004,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "43b54fb3ef97770595e07cfa38c2f5ee77325b84ca243b116639db4499c17186",
+      "originalBodyBytes": 1069
+    }
+  ],
+  "writeHooks": [
+    {
+      "storeOpcode": 54,
+      "tableIndex": 129990,
+      "signature": "viiii",
+      "helperFunctionIndex": 83848
+    },
+    {
+      "storeOpcode": 55,
+      "tableIndex": 129991,
+      "signature": "viiji",
+      "helperFunctionIndex": 83849
+    },
+    {
+      "storeOpcode": 56,
+      "tableIndex": 129992,
+      "signature": "viifi",
+      "helperFunctionIndex": 83850
+    },
+    {
+      "storeOpcode": 57,
+      "tableIndex": 129993,
+      "signature": "viidi",
+      "helperFunctionIndex": 83851
+    },
+    {
+      "storeOpcode": 58,
+      "tableIndex": 129994,
+      "signature": "viiii",
+      "helperFunctionIndex": 83852
+    },
+    {
+      "storeOpcode": 59,
+      "tableIndex": 129995,
+      "signature": "viiii",
+      "helperFunctionIndex": 83853
+    },
+    {
+      "storeOpcode": 60,
+      "tableIndex": 129996,
+      "signature": "viiji",
+      "helperFunctionIndex": 83854
+    },
+    {
+      "storeOpcode": 61,
+      "tableIndex": 129997,
+      "signature": "viiji",
+      "helperFunctionIndex": 83855
+    },
+    {
+      "storeOpcode": 62,
+      "tableIndex": 129998,
+      "signature": "viiji",
+      "helperFunctionIndex": 83856
+    }
+  ],
+  "storeInstructions": 682386,
+  "method": "typed original numeric stores with guarded writer-index observation",
+  "scope": "geometry-construction",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_transform_scale_calc_20261001.wasm",
+  "geometryRootFunctions": [
+    72951,
+    72573
+  ]
+}

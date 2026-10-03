@@ -1,0 +1,55 @@
+{
+  "sampleId": 11009,
+  "productionCodeSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "repair": "Disable unconditional multi-cache clearing by default. Preserve standard PhysX invalidation through the existing actual no-autowake pose-writeback path.",
+  "internalVerification": {
+    "physicsTick": 1383,
+    "nativeClearHookRva": "0x330f0",
+    "cachedSizeBeforeAndAfter": 304,
+    "entireCachedPayloadUnchanged": true,
+    "unityRefreshFunction": 69978,
+    "nativeRefreshFunctionRva": "0x29cbe0",
+    "activeContactRecordWordsExactBeforeAndAfter": 65,
+    "refreshMatrixWordsExact": 15,
+    "refreshThresholdExact": true,
+    "pcmContactOutputWordsExact": 35,
+    "normalConstraintWordsExactPerIteration": 60,
+    "frictionArithmeticWordsExactPerIteration": 40,
+    "targetStaticSolverIterationsExact": 5,
+    "solverBodyNumericWordsExactPerInputAndOutput": 6
+  },
+  "sample11009": {
+    "releaseStateWordsExact": 26,
+    "completedStepsExact": 3000,
+    "completedStateWordsExact": 78000,
+    "changedCompletedStepsVersusBeforeRepair": [
+      1383
+    ],
+    "firstObservedRemainingCompletedStateDifference": null,
+    "observedNativeOutputsUnchanged": 3000
+  },
+  "sample11000": {
+    "nativeRegressionStepsUnchanged": 3362,
+    "unityCompletedStepsExact": 2000
+  },
+  "limits": [
+    "Boundary state equality is limited to these samples and captured steps; it does not establish all unsampled internal calculations or all possible scenarios."
+  ],
+  "evidenceSha256": {
+    "analysis_input\\sample11009_step1383_internals_verified_20261002.json": "949a80c58afd3882e644f655b9e849cfefb033a398526d4c6d1f59b379b95ba1",
+    "analysis_input\\unity_sample11009_step1383_capture_v2_20261002\\logs\\unity_runtime_probe_20261002_194108\\events.jsonl": "604f212826650567ad0444395cb897f5cdeac5a958661c6a425ef268dd70f6c3",
+    "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+    "analysis_input\\native_sample11009_cache_fixed_3000_20261002.json": "4be03eb9028dbdd947b6bef7093fd7d430712c9d5b7ee4cd05202b3b1ecb310a",
+    "analysis_input\\native_sample11009_step1383_cache_fixed_calls_20261002\\calls.json": "9b7c6d0a9537775f99dac257b29f7aec8e37a685a37a580be69a83203df099f1",
+    "analysis_input\\native_sample11009_step1383_cache_fixed_calls_20261002\\alignment.json": "040e657db147bcc4e778dc231e619c78c685849aca9df25a7982587d64cdea67",
+    "analysis_input\\native_sample11000_cache_fixed_3362_20261002.json": "f18adb3f55083ead342cc587c5566190e04dcd629d6c48f7581202504bb9432e",
+    "analysis_input\\native_bestshot_offset_fixed_11000_20261002.json": "23a9125cd58a18bd2dae1a4e446a38437b08c6a517b2ed177245710683dce014",
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+    "local_simulator\\unity_physx.py": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+    "analysis_input\\verify_sample11009_cache_repair_20261002.py": "6ed615fa854b38c90c488ce257c71b58a99c58a59c74c7801bb89bbb1e6dcba4",
+    "local_simulator\\tests\\test_unity_preserved_ice_cache.py": "2b4413e130f7dc082b9da527b568270b20838f4b2d641b027d432f4f65c90707",
+    "local_simulator\\tests\\fixtures\\unity_preserved_ice_cache_11009_20261002.json": "ace799eb7bf2cbe36e31555a30a9f98fd111d18cff0824230cc7907b6382d81c"
+  }
+}

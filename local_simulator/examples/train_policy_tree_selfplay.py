@@ -18,13 +18,14 @@ Python 依赖只有严格模拟器已有的 NumPy / pyphysx；不需要 Unity �
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import json
 import math
 import random
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Sequence
+from typing import Any, Mapping, Optional, Sequence
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -40,6 +41,21 @@ HOUSE_Y = 4.88
 HOUSE_R = 1.830
 STONE_R = 0.145
 STONE_COUNT = 16
+
+
+@lru_cache(maxsize=96)
+def _cached_unity_seed_friction_noises(seed: int, count: int) -> tuple[float, ...]:
+    """Return the exact recovered Unity noise stream for one turn seed.
+
+    The strict native front-half receives the stream as read-only input.  A
+    planner evaluates many candidate shots from the same physical seed and
+    turn, so rebuilding all 5,000 values for every candidate is redundant.
+    The bounded cache stores immutable tuples; no scene or shot state is
+    shared between evaluations.
+    """
+    from tools.reverse.front_half_pcm_replay import unity_seed_friction_noises
+
+    return tuple(unity_seed_friction_noises(int(seed), int(count)))
 
 
 @dataclass(frozen=True)
@@ -187,16 +203,19 @@ class LearnedPolicyTree:
 class StrictCurlingEnd:
     """一局 16 手的严格本地物理环境；每手都由同一个 PhysX Scene 连续推进。"""
 
-    def __init__(self, *, seed: int, training_fast: bool = True) -> None:
+    def __init__(self, *, seed: int, training_fast: bool = True,
+                 prediction_frame_elapsed: float = 0.33,
+                 prediction_time_scale: float = 96.) -> None:
         from local_simulator.unity_physx import NativePyphysxMotionStepper, PersistentPhysxFrontHalfScene
 
         self.seed = int(seed)
         self.scene = PersistentPhysxFrontHalfScene(stone_count=STONE_COUNT, ice_use_fast_midphase=True)
         self.motion_stepper = NativePyphysxMotionStepper(self.scene.pyphysx)
         self.shot_number = 0
-        # This only skips Python audit-payload construction between fixed
-        # ticks.  It retains the same native friction setter, PhysX Scene and
-        # contact reports; turn it off for forensic per-tick investigations.
+        self.prediction_frame_elapsed = float(prediction_frame_elapsed)
+        self.prediction_time_scale = float(prediction_time_scale)
+        # Both modes retain the scheduled driver. Fast mode omits only audit
+        # snapshots; legacy native bulk loops cannot replace Update boundaries.
         self.training_fast = bool(training_fast)
 
     def reset(self) -> list[dict[str, Any]]:
@@ -208,23 +227,48 @@ class StrictCurlingEnd:
     def states(self) -> list[dict[str, Any]]:
         return [self.scene.state(index) for index in range(STONE_COUNT)]
 
-    def _friction_noises(self) -> list[float]:
-        from tools.reverse.front_half_pcm_replay import unity_seed_friction_noises
+    def restore_settled_states(self, states: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+        """恢复一手投壶前的静止壶面，但不回退 ``shot_number``。
 
+        用于自由防守区等“该次投壶无效、但仍计作一手”的规则回滚。每次
+        ``play`` 返回时场面本应已静止，因此只需恢复 x/y/yaw 并清零速度；
+        ``reset_positions`` 会同时恢复 PhysX slot 的 enabled、shape 与睡眠
+        状态，不能只替换 Python 层的 states 列表。
+        """
+
+        if len(states) < STONE_COUNT:
+            raise ValueError("restore states must include every stone slot")
+        positions = [0.0] * (STONE_COUNT * 2)
+        yaws: dict[int, float] = {}
+        for index, state in enumerate(states[:STONE_COUNT]):
+            if not bool(state.get("enabled", False)):
+                continue
+            positions[2 * index] = float(state["x"])
+            positions[2 * index + 1] = float(state["y"])
+            yaws[index] = float(state.get("yaw", 0.0))
+        self.scene.reset_positions(
+            positions,
+            yaw_overrides=yaws,
+            settle_steps=0,
+            force_sleep_after_reset=True,
+        )
+        return self.states()
+
+    def _friction_noises(self) -> Sequence[float]:
         # 每一手一条新的本地 RNG 序列；给定 seed 时整局仍可复现。
-        return unity_seed_friction_noises(self.seed + self.shot_number * 7919, 5000)
+        return _cached_unity_seed_friction_noises(self.seed + self.shot_number * 7919, 5000)
 
     def _settle(self, *, max_steps: int = 6000) -> bool:
         """Advance until the existing Unity-aligned quiet criterion is met.
 
-        New bundled runtimes provide the exact loop in the native extension:
-        they execute the same ``Scene.simulate(dt)`` calls and the same
-        linear/angular thresholds, but do not serialise every velocity into
-        Python on every tick.  Keep the Python implementation below as a
-        compatibility fallback for older shipped extensions.
+        Native loops omit the recovered f72606 quaternion writeback. Use
+        the Python step when that writeback is enabled; the native loop
+        remains available for explicit historical configurations.
         """
         native_settle = getattr(self.scene.scene, "simulate_until_quiet", None)
-        if native_settle is not None:
+        if (native_settle is not None
+                and not getattr(self.scene, "emulate_unity_body_pose_writeback", False)
+                and not getattr(self.scene, 'walls', [])):
             bodies = [slot.body for slot in self.scene.slots if slot.enabled]
             settled, _steps = native_settle(
                 bodies,
@@ -238,7 +282,7 @@ class StrictCurlingEnd:
 
         quiet = 0
         for _ in range(max_steps):
-            self.scene.scene.simulate(self.scene.dt)
+            self.scene._simulate_unity_step()
             self.scene.scene.get_contact_reports()
             moving = False
             for slot in self.scene.slots:
@@ -256,64 +300,44 @@ class StrictCurlingEnd:
                 return True
         return False
 
-    def _run_without_target(self, active_index: int, shot: Sequence[float], noises: Sequence[float]) -> None:
-        """首壶没有碰撞目标时的严格逐 tick 滑行路径。"""
+    def _run_prediction(
+        self, active_index: int, shot: Sequence[float],
+        noises: Optional[Sequence[float]], *, friction_seed: Optional[int] = None,
+    ) -> dict[str, Any]:
+        """Shared scheduled path for free shots and scenes with target stones."""
+        from local_simulator.unity_prediction import UnityPredictionClock, UnityPredictionDriver
 
         self.scene.start_bestshot(active_index, shot, yaw=0.0)
-        for noise in noises:
-            step = self.scene.step_custom_sliding(active_index, noise, motion_stepper=self.motion_stepper)
-            state = step["afterScene"]
-            if math.hypot(state["vx"], state["vy"]) <= 0.01:
-                break
-        # 该壶后续不再由自定义滑行器控制；下一手开始前它是普通静止 PhysX 壶。
-        self.scene.slots[active_index].material.set_static_friction(0.6)
-        self.scene.slots[active_index].material.set_dynamic_friction(0.6)
-        self.scene._custom_sliding_index = None  # 清除刚结束的前半段控制权。
+        driver = UnityPredictionDriver(
+            self.scene, active_index, seed=0 if friction_seed is None else friction_seed,
+            noises=noises, motion_stepper=self.motion_stepper,
+            use_lean_steps=self.training_fast,
+            clock=UnityPredictionClock(fixed_dt=self.scene.dt,
+                                      time_scale=self.prediction_time_scale),
+        )
+        return driver.run(frame_elapsed=self.prediction_frame_elapsed)
+
+    def _run_without_target(
+        self, active_index: int, shot: Sequence[float],
+        noises: Optional[Sequence[float]], *, friction_seed: Optional[int] = None,
+    ) -> dict[str, Any]:
+        return self._run_prediction(active_index, shot, noises, friction_seed=friction_seed)
 
     def play(self, shot: Sequence[float]) -> dict[str, Any]:
         if self.shot_number >= STONE_COUNT:
             raise RuntimeError("本局 16 手已结束")
-        active_index = self.shot_number
-        targets = [slot.index for slot in self.scene.slots if slot.enabled]
-        noises = self._friction_noises()
-        if targets:
-            replay_method = (
-                self.scene.run_bestshot_to_first_contact_training
-                if self.training_fast
-                else self.scene.run_bestshot_to_first_contact
-            )
-            replay = replay_method(
-                active_index,
-                shot,
-                noises,
-                target_indices=targets,
-                yaw=0.0,
-                max_steps=len(noises),
-                motion_stepper=self.motion_stepper,
-            )
-            if replay.get("reachedFirstContact"):
-                # 严格审计同样让第一个接触帧后的尾段只由本地 Scene 继续推进。
-                self.scene.scene.simulate(self.scene.dt)
-                self.scene.scene.get_contact_reports()
-                settled = self._settle()
-            else:
-                settled = math.hypot(self.scene.state(active_index)["vx"], self.scene.state(active_index)["vy"]) <= 0.01
-        else:
-            self._run_without_target(active_index, shot, noises)
-            settled = True
-            replay = {"reachedFirstContact": False}
+        # Per-shot seed is the local prediction policy; Unity's unknown global
+        # RNG state is not inferred from an endpoint. Only eligible FixedUpdate
+        # calls advance this generator, with Update between clock batches.
+        replay = self._run_prediction(
+            self.shot_number, shot, None,
+            friction_seed=self.seed + self.shot_number * 7919,
+        )
+        if not replay['settled']:
+            raise RuntimeError('Unity controller did not finish within the prediction step budget')
         cleared = self.scene.clear_out_of_play_stones()
         self.shot_number += 1
-        return {
-            "contact": bool(replay.get("reachedFirstContact")),
-            # Forensic callers can use this to distinguish “真的先撞了哪颗壶”
-            # from a coarse trajectory merely预测会经过哪颗壶。训练快速路径的
-            # native loop may not expose identity, in that case it is an empty list.
-            "firstContactTargets": [int(index) for index in replay.get("targetIndices", [])],
-            "settled": bool(settled),
-            "cleared": cleared,
-            "states": self.states(),
-        }
+        return {**replay, 'cleared': cleared, 'states': self.states()}
 
 
 def closest_enemy_shot(states: Sequence[dict[str, Any]], team: int) -> tuple[float, float, float]:

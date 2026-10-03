@@ -1,0 +1,9 @@
+{
+  "theta": 0.006519068963825703,
+  "thetaBits": "0x3bd59dea",
+  "unityOriginalCosKernelResultBits": "0x3f7ffe9c",
+  "unityPreDemoteDouble": 0.9999787509452933,
+  "roundingMidpoint": 0.9999787509441376,
+  "unityMinusMidpoint": 1.155742168634788e-12,
+  "nativeQuadraticMinusMidpoint": -7.421507852711784e-11
+}

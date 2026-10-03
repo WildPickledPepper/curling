@@ -1,0 +1,119 @@
+{
+  "label": "wall_fixed_12000",
+  "firstDifference": null,
+  "completedStepsCompared": 4000,
+  "stateBytesCompared": 305760,
+  "stateBytesExact": 305760,
+  "actorMembershipBoundariesCompared": 4001,
+  "nativeMembershipFromActualDisableSimulationFlags": true,
+  "nativeWallContactTicks": [
+    1879
+  ],
+  "lastEnabled": [
+    false,
+    true
+  ],
+  "fullTrajectoryExact": true,
+  "nativeBothSleepingAtLastComparedStep": true,
+  "productionSourceSha256": "9f0f750e26e8f9ea4f3b2e5bcead61467c45c93cdd7ac18f473b4a6662692ea3",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "evidence": {
+    "analysis_input\\additional_case_validation_20261002\\additional12000_unity\\logs\\unity_runtime_probe_20261002_231331\\events.jsonl": "17d3fdcd535314b70d608849c1598e7a8329f347078b36a8a1be73abeabb9a9c",
+    "analysis_input\\wall_repair_regression_20261003\\additional12000_native.json": "df22c11e13a2d6550e073753cb83c6408c2b9257b0bcf6e51b000c4042abbb63"
+  },
+  "preCallbackSolverExitBothActorsByteExact": true,
+  "wallCallbackPoseAndZeroVelocitiesExact": true,
+  "nativeWallContact": {
+    "actor0": 1987627227424,
+    "actor1": 1987627190320,
+    "shape0": 1987627213536,
+    "shape1": 1987627203712,
+    "events": 4,
+    "flags": 20,
+    "contact_count": 4,
+    "points": [
+      {
+        "position": [
+          -63.31671905517578,
+          14.34000015258789,
+          54.17714309692383
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          -8.940694584680386e-08
+        ],
+        "impulse": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "separation": 0.016719166189432144,
+        "internal_face_index0": 4294967295,
+        "internal_face_index1": 4294967295
+      },
+      {
+        "position": [
+          -63.31671905517578,
+          14.440000534057617,
+          54.17714309692383
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          -8.940694584680386e-08
+        ],
+        "impulse": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "separation": 0.016719166189432144,
+        "internal_face_index0": 4294967295,
+        "internal_face_index1": 4294967295
+      },
+      {
+        "position": [
+          -63.31702423095703,
+          14.34000015258789,
+          54.1633186340332
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          -8.940694584680386e-08
+        ],
+        "impulse": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "separation": 0.01702311262488365,
+        "internal_face_index0": 4294967295,
+        "internal_face_index1": 4294967295
+      },
+      {
+        "position": [
+          -63.31702423095703,
+          14.440000534057617,
+          54.1633186340332
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          -8.940694584680386e-08
+        ],
+        "impulse": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "separation": 0.01702311262488365,
+        "internal_face_index0": 4294967295,
+        "internal_face_index1": 4294967295
+      }
+    ],
+    "stoneIndex": 0,
+    "wall": "bound1"
+  }
+}

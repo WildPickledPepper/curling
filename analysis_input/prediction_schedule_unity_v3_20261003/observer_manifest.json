@@ -1,0 +1,7 @@
+{
+  "originalObserverSha256": "67ee18bd29d47ee5aae5d58de745c77be4eb9ff1b07d3cd2945d9977bdfe83d7",
+  "observerSha256": "9c8de27b34ebc5731da0a310e42276f043fa778f5686d718974017ca88dd2929",
+  "sourceWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "mutation": false,
+  "scope": "Original table callbacks only; read controller bytes and existing counters. Actual wall-clock scheduling is observed, not prescribed."
+}

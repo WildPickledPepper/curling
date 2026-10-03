@@ -1,0 +1,49 @@
+{
+  "schema": "unity-startup-body-roster-v1",
+  "stoneCount": 16,
+  "protocolIndicesInRegistrationOrder": [
+    15,
+    11,
+    4,
+    13,
+    6,
+    2,
+    10,
+    8,
+    12,
+    1,
+    3,
+    0,
+    9,
+    7,
+    14,
+    5
+  ],
+  "constraintsBeforeFirstReset": [
+    0,
+    0,
+    80,
+    0,
+    80,
+    0,
+    80,
+    0,
+    80,
+    0,
+    80,
+    80,
+    80,
+    80,
+    0,
+    80
+  ],
+  "source": {
+    "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "events": "analysis_input\\unity_reset_roster_first_case_20261002\\logs\\unity_runtime_probe_20261002_145055\\events.jsonl",
+    "eventsSha256": "11e59e969837c62d4e361a43f448e90625a089cff4654b7925570e50f4e87d3d",
+    "factoryFunctionIndex": 73018,
+    "componentConstraintsOffset": 136,
+    "mapping": "RESETPOSITION first 16 Transform writes -> native GameObject component membership -> Rigidbody component -> initial actor/ScRigidCore -> registration rank"
+  },
+  "scope": "Fixed GameSceneNoLimit startup; numeric addresses are evidence, not runtime parameters."
+}

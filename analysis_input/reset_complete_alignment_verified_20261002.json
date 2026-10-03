@@ -1,0 +1,78 @@
+{
+  "originalWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "originalNativeSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "currentNativeSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "observerValidations": {
+    "unity_reset_friction_cache_writes_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "5cbe29a22de3875d222f5eede1f56585bc714baf027a5170e28f5412ecef96f5"
+    },
+    "unity_reset_cache_lifecycle_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "57c804ef2e0b0753d05f2f0dc5a39b5935ce972ad0ae6142e5ef0df1766251e5"
+    },
+    "unity_reset_cache_lifecycle_steps1_8_delayed_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "8594501c040756aadf7a3db0db579127d2a2f163dac0887c3a91edb2b221013c"
+    }
+  },
+  "cacheClearChain": [
+    72606,
+    71596,
+    71729,
+    71632
+  ],
+  "upstreamUnityCaller": 73070,
+  "autoWake": 0,
+  "unchangedRawPoseStillWritten": true,
+  "nativeEmptyCacheStepsExact": 8,
+  "nativeClearRva": "0x2115d0",
+  "gradualUnderflow": {
+    "step": 7,
+    "angularXBits": "0x8001b2e2",
+    "nativeMultiplyInstructionRva": "0x204bed",
+    "nativeAngularXStoreRva": "0x204c26",
+    "operandTermBits": [
+      0,
+      2147594978,
+      2147483648
+    ],
+    "originalMxcsr": "0x9ff0",
+    "guardImmediatePatches": 51,
+    "newMxcsrPolicy": "0x1f80"
+  },
+  "resetSolverExitStepsExact": 42,
+  "resetSolverExitWordsExact": 546,
+  "sleepAfterFetchWordsExact": 13,
+  "naturalSleepAtStep": 42,
+  "sampledConstraintStepsExact": 8,
+  "staticSolverDeltaWordsExact": 480,
+  "bestshotReleasePoseWordsExact": 7,
+  "calibratedRegressionSetterPairs11005Exact": 1023,
+  "calibratedRegressionAggregateUnchanged": true,
+  "nextUnclosedBoundary": "BESTSHOT release setters and the first sliding/physics step; no full post-release prefix claim",
+  "limits": [
+    "Verification is for first Reset sample 11000 on the patched Windows CP39 kernel.",
+    "CP38/CP313 pose-setter instruction streams checked; gradual-underflow repair not applied there.",
+    "Linux requires an explicit no-autowake native binding; this bridge rejects unverified kernels.",
+    "Startup/cooking intermediates and every post-release arithmetic operation are not all compared."
+  ],
+  "evidenceSha256": {
+    "analysis_input\\unity_reset_cache_lifecycle_steps1_8_delayed_first_case_20261002\\logs\\unity_runtime_probe_20261002_155746\\events.jsonl": "8594501c040756aadf7a3db0db579127d2a2f163dac0887c3a91edb2b221013c",
+    "analysis_input\\native_reset_gradual_underflow_full_trace_20261002.json": "1ee60d8d253b1958c13f12d6fb066976b5b88d0fe0ed64531d65ccab3172320b",
+    "analysis_input\\native_reset_pose_cache_fixed_steps1_8_20261002\\calls.json": "445a9d7c45e9a6db39a9aca67b23f73a528e93584b05e17b9453c4b1eb87f57c",
+    "analysis_input\\native_reset_integrate_step7_20261002\\calls.json": "02d263d2c07587f837ff9dcdfca7bd08b7ed0d2cd8aba30524399ba3eb019d7c",
+    "analysis_input\\native_gradual_underflow_patch_20261002.json": "0810293d34d9b478a57f7129dfce59dd710256cc5e16b943ac3b2d1fd5e28c27",
+    "analysis_input\\native_reset_ieee_mxcsr_step7_20261002\\calls.json": "9cc88698678f16005fa9af6012b0cc9417b1e6d2558445cb30292b7c6d73c225"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "e59872f4b2719e2d65ea4f32411a0f7fecdea7467c544f8fd397907c26e41878",
+    "local_simulator\\native_pose_writeback.py": "28b72fb1983496d9b1959f2a78785a9c1fce2f7ce56cf8e30a4fc7da38ec98d0"
+  }
+}

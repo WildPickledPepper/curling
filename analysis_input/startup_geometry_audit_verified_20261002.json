@@ -1,0 +1,473 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedWasmSha256": "5c20a9f0e464cab49db0daf97e0ff32af6ccb9243ac90c05f6b7129317933dd4",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "26dacaca09dccf7efadc2704ea13b669e8ce6a97b63a62faaf745be9eb5e021d",
+  "comparisonBoundary": "Actual convex runtime input at first Reset step; native default post-import initialization",
+  "actualCookerInput": null,
+  "unityFunctionTableIndex": 120119,
+  "unityResetSerial": 1,
+  "unityResetPhysicsStep": 1,
+  "cookedHullBeforeImport": {
+    "unityBytes": 4008,
+    "nativeBytes": 4776,
+    "exact": false,
+    "differingBytes": 2984,
+    "firstDifference": {
+      "offset": 20,
+      "unityByte": 4,
+      "nativeByte": 63
+    }
+  },
+  "actualFormalCookerOutput": {
+    "unityFunctionIndex": 72915,
+    "unityCallIds": [
+      132,
+      143,
+      154,
+      165,
+      176,
+      187,
+      198,
+      209,
+      220,
+      231,
+      242,
+      253,
+      264,
+      275,
+      286,
+      297
+    ],
+    "all16OutputsByteIdentical": true,
+    "vertexBuffer": {
+      "unityBytes": 1536,
+      "nativeBytes": 1536,
+      "exact": false,
+      "differingBytes": 967,
+      "firstDifference": {
+        "offset": 0,
+        "unityByte": 70,
+        "nativeByte": 210
+      }
+    },
+    "firstUnityVertexBits": [
+      3214482502,
+      3212836864,
+      1052362828
+    ],
+    "firstNativeVertexBits": [
+      3205945554,
+      3212836864,
+      3213695871
+    ],
+    "firstDifferentPolygonPlane": {
+      "polygonIndex": 1,
+      "unityPlaneBits": [
+        3211856132,
+        0,
+        1051491568,
+        3214921386
+      ],
+      "nativePlaneBits": [
+        3204684863,
+        0,
+        3210449946,
+        3214921386
+      ]
+    },
+    "differingPolygonPlanes": 64
+  },
+  "hullAfterImport": {
+    "unityBytes": 4008,
+    "nativeBytes": 4008,
+    "exact": true,
+    "differingBytes": 0,
+    "firstDifference": null
+  },
+  "headerFields": [
+    {
+      "field": "aabbCenter",
+      "unityOffset": 0,
+      "unityBits": [
+        0,
+        0,
+        0
+      ],
+      "nativeBits": [
+        0,
+        0,
+        0
+      ],
+      "exact": true,
+      "differences": []
+    },
+    {
+      "field": "aabbExtents",
+      "unityOffset": 12,
+      "unityBits": [
+        1067450368,
+        1065353216,
+        1067450368
+      ],
+      "nativeBits": [
+        1067450368,
+        1065353216,
+        1067450368
+      ],
+      "exact": true,
+      "differences": []
+    },
+    {
+      "field": "centerOfMass",
+      "unityOffset": 24,
+      "unityBits": [
+        3006110759,
+        2996721396,
+        849348704
+      ],
+      "nativeBits": [
+        840862247,
+        850695334,
+        837787197
+      ],
+      "exact": false,
+      "differences": [
+        {
+          "component": 0,
+          "unityBits": "0xb32d9c27",
+          "nativeBits": "0x321e8a27"
+        },
+        {
+          "component": 1,
+          "unityBits": "0xb29e56f4",
+          "nativeBits": "0x32b494a6"
+        },
+        {
+          "component": 2,
+          "unityBits": "0x32a00860",
+          "nativeBits": "0x31ef9e3d"
+        }
+      ]
+    },
+    {
+      "field": "internal",
+      "unityOffset": 48,
+      "unityBits": [
+        1065353216,
+        1066259419,
+        1058262330,
+        1058262330
+      ],
+      "nativeBits": [
+        1065353216,
+        1066259420,
+        1058262330,
+        1058262330
+      ],
+      "exact": false,
+      "differences": [
+        {
+          "component": 1,
+          "unityBits": "0x3f8dd3db",
+          "nativeBits": "0x3f8dd3dc"
+        }
+      ]
+    }
+  ],
+  "bigConvexArrays": {
+    "samples_raw_bytes": {
+      "unityBytes": 3072,
+      "nativeBytes": 3072,
+      "exact": true,
+      "differingBytes": 0,
+      "firstDifference": null
+    },
+    "valencies_raw_bytes": {
+      "unityBytes": 512,
+      "nativeBytes": 512,
+      "exact": true,
+      "differingBytes": 0,
+      "firstDifference": null
+    },
+    "adjacent_vertices_raw_bytes": {
+      "unityBytes": 384,
+      "nativeBytes": 384,
+      "exact": true,
+      "differingBytes": 0,
+      "firstDifference": null
+    }
+  },
+  "firstObservedSurvivingGeometryHeaderDifference": {
+    "field": "centerOfMass",
+    "unityOffset": 24,
+    "unityBits": [
+      3006110759,
+      2996721396,
+      849348704
+    ],
+    "nativeBits": [
+      840862247,
+      850695334,
+      837787197
+    ],
+    "exact": false,
+    "differences": [
+      {
+        "component": 0,
+        "unityBits": "0xb32d9c27",
+        "nativeBits": "0x321e8a27"
+      },
+      {
+        "component": 1,
+        "unityBits": "0xb29e56f4",
+        "nativeBits": "0x32b494a6"
+      },
+      {
+        "component": 2,
+        "unityBits": "0x32a00860",
+        "nativeBits": "0x31ef9e3d"
+      }
+    ]
+  },
+  "observedCookedDescCalls": [
+    {
+      "callId": 2,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 129,
+      "polygons": 254
+    },
+    {
+      "callId": 4,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 99,
+      "polygons": 158
+    },
+    {
+      "callId": 6,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 129,
+      "polygons": 254
+    },
+    {
+      "callId": 8,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 99,
+      "polygons": 158
+    },
+    {
+      "callId": 10,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 129,
+      "polygons": 254
+    },
+    {
+      "callId": 12,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 99,
+      "polygons": 158
+    },
+    {
+      "callId": 14,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 129,
+      "polygons": 254
+    },
+    {
+      "callId": 16,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 99,
+      "polygons": 158
+    },
+    {
+      "callId": 18,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 129,
+      "polygons": 254
+    },
+    {
+      "callId": 20,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 130,
+      "polygons": 255
+    },
+    {
+      "callId": 22,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 130,
+      "polygons": 254
+    },
+    {
+      "callId": 24,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 130,
+      "polygons": 255
+    },
+    {
+      "callId": 26,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 115,
+      "polygons": 173
+    },
+    {
+      "callId": 28,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 20,
+      "polygons": 13
+    },
+    {
+      "callId": 132,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 143,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 154,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 165,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 176,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 187,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 198,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 209,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 220,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 231,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 242,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 253,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 264,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 275,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 286,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    },
+    {
+      "callId": 297,
+      "parentCallId": null,
+      "releaseSerial": null,
+      "points": 128,
+      "polygons": 66
+    }
+  ],
+  "observer": {
+    "frictionRecordsExact": 1562,
+    "resetCoreFramesExact": 256,
+    "endpointUnchanged": true,
+    "originalFunctionBodiesRetained": true,
+    "densePairsUnchanged": 1563,
+    "native": {
+      "plainAndWrappedHullExact": true,
+      "plainAndWrappedStartupStatesExact": true,
+      "plainAndWrappedMassInformationExact": true
+    }
+  },
+  "scope": "Same actual Unity binary, fresh default Windows CP39 startup, first Reset sample11000; fixed geometry asset import is explicit.",
+  "limitations": [
+    "Earliest global calculation divergence is not yet established: scene creation and earlier cooker/load calls are not exhaustively compared.",
+    "Importing captured hull bytes does not verify original cooker internal inputs/branches/intermediates.",
+    "A geometry header difference does not imply a completed-step state difference in the previously verified trajectory."
+  ],
+  "evidence": {
+    "analysis_input\\unity_startup_geometry_audit_capture_20261002\\logs\\unity_runtime_probe_20261002_184033\\events.jsonl": "e4365d20fb14db58a3ad9d0dd3241d294949438830549147316e4c10c97fcda6",
+    "analysis_input\\native_startup_geometry_audit_20261002.json": "55ba9cc602530a05f209d2dc614168397aac183a9ec2a40505bafbb6f944b753",
+    "local_simulator\\assets\\unity_runtime_hull.json": "e434ead6e1734b6d19123b350ff12cb0623de89b35347fbb875983b517bda443",
+    "analysis_input\\unity_startup_geometry_audit_capture_20261002\\capture_manifest.json": "a1f203b8d841a04af85750db5e15a267245f6613f678d52ad29bfe952fc0023b",
+    "analysis_input\\unity_startup_geometry_audit_capture_20261002\\observer_source.js": "bd11228f7ca719ed688c89c9958c30551c97520859c2d04e31216625fd8346e6",
+    "analysis_input\\verify_startup_geometry_audit_20261002.py": "808db89be6cbbd9a473d118896cff67c081ce396f96c7d242782966ec2ff456a",
+    "analysis_input\\sample_startup_geometry_audit_20261002.py": "e37f1c02c5b2a553512e032b90c758178341b429abbe299be61b73f3d52981e7",
+    "analysis_input\\pcm_functions_20261001\\f72915.wat": "bb9b8a8773672a09e82ae171516eed28bc77f3a820ce4523f65e130a27cc4e50"
+  }
+}

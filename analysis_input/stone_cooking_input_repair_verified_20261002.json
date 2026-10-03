@@ -1,0 +1,101 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "e20aaccc1f641fe7236108807dfc35e2d28ccc2ffbb8048f7d09400e071ddbb0",
+  "fixedInputAssetSha256": "71f5c0f584ef88693d40a91fde40ac954f8634a264963f4d1b4cb41f5c62dc00",
+  "repair": "Replace reconstructed default cylinder points with the actual fixed Unity collider cooking input; retain original cooker and existing feature import.",
+  "actualCookerInput": {
+    "unityFunctionIndex": 72908,
+    "unityCallIds": [
+      131,
+      142,
+      153,
+      164,
+      175,
+      186,
+      197,
+      208,
+      219,
+      230,
+      241,
+      252,
+      263,
+      274,
+      285,
+      296
+    ],
+    "nativeFunctionRvas": [
+      "0x926b0",
+      "0x9aaa0",
+      "0x9b070"
+    ],
+    "pointWordsExact": 1536,
+    "differentPointWords": 0,
+    "matchedDescriptorFields": {
+      "count": 512,
+      "stride": 12,
+      "flags": 2,
+      "vertexLimit": 255,
+      "quantizedCount": 255
+    }
+  },
+  "naturalCookerOutputBeforeAnyFeatureImport": {
+    "exactSegments": {
+      "polygons": 1320,
+      "hullVertices": 1536,
+      "facesByEdges8": 384,
+      "facesByVertices8": 384,
+      "vertexData8": 384
+    },
+    "totalFeatureBytesExact": 4008,
+    "headerFloatWordsExact": 13,
+    "originalFourHeaderDifferencesResolved": true,
+    "bigConvexArraysExact": {
+      "samples_raw_bytes": 3072,
+      "valencies_raw_bytes": 512,
+      "adjacent_vertices_raw_bytes": 384
+    }
+  },
+  "states": {
+    "unityBothStoneCompletedStepsExact": 2000,
+    "unityStateWordsExact": 52000,
+    "nativeWrappedPlainAndPreviousProductionStepsExact": 3362,
+    "nativeStateWordsExact": 87412,
+    "firstConfirmedCompletedStateDivergence": null
+  },
+  "observer": {
+    "unity": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true
+    },
+    "originalWasmBodiesRetained": true,
+    "native": {
+      "plainAndWrappedHullExact": true,
+      "plainAndWrappedStartupStatesExact": true,
+      "plainAndWrappedMassInformationExact": true
+    },
+    "nativeStalkerFinalHullUnchanged": true
+  },
+  "tests": "34 existing checks plus one real Unity cooker-output regression passed",
+  "limitations": [
+    "This verifies observed cooker inputs and numerical geometry outputs; all cooker arithmetic intermediates and scene creation are not audited.",
+    "Native pre-import layout has a 768-byte GPU edge array; existing feature import removes it, matching the Unity runtime layout. PxCookingParams/buildGPUData and this structural branch remain unclosed.",
+    "State comparison scope remains sample11000 on Windows CP39 with the same recorded friction inputs; no claim for all samples, protocol internals or RNG states."
+  ],
+  "evidence": {
+    "analysis_input\\unity_startup_geometry_audit_capture_20261002_inputs_v2\\logs\\unity_runtime_probe_20261002_184502\\events.jsonl": "9a94a09ac47c96c8583f17d2291bd2cc849d4e6cc06c183c95293297cbce25ba",
+    "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+    "analysis_input\\native_startup_geometry_input_fixed_20261002.json": "15753e00092e57e54c804238c33d0f997fe5e190e3b45f7c5c1879884aabda2e",
+    "analysis_input\\native_startup_cooker_input_fixed_20261002\\calls.json": "69567c02d5caea68a71d8032d5efec190dbf4365ffbb94b00bb92dd19b6f02b5",
+    "analysis_input\\native_startup_cooker_input_fixed_20261002\\output.json": "270d8eee1ab2445c707252892790f3ffa15bcdd17806e2fd844ef377f72ea110",
+    "analysis_input\\native_stone_input_fixed_plain_20261002.json": "a84bfcfaa55f820108c9b577f6036f9f5ac997dea25616a15793dca9c4db9ca5",
+    "analysis_input\\native_stone_input_fixed_wrapped_20261002.json": "d95ffbcea19a9f3139a7991ffa8a4c166faa22631b515d7284b575272f29a3b2",
+    "analysis_input\\native_natural_wake_unobserved_20261002.json": "f077e8b9c7ae1f99fcba1fccc24a27400b94f88a2533534ad1d89a63cbf2a102",
+    "local_simulator\\assets\\unity_stone_convex_input_512.json": "71f5c0f584ef88693d40a91fde40ac954f8634a264963f4d1b4cb41f5c62dc00",
+    "local_simulator\\unity_physx.py": "e20aaccc1f641fe7236108807dfc35e2d28ccc2ffbb8048f7d09400e071ddbb0",
+    "analysis_input\\verify_stone_cooking_input_repair_20261002.py": "30435bfb4f5ca76da8ab310af3e02b4695409ae30016811e1f74bc656b19d749",
+    "local_simulator\\tests\\test_unity_stone_cooking.py": "c8308b99c798298bea905c6231cdc936938ebb21c2d79b8edb66fb8944dfa2dd",
+    "local_simulator\\tests\\fixtures\\unity_stone_cooking_output_20261002.json": "ccdec22fd9e5dadeeeb46c7b9c4577f8156a8ba818733cbdf880030bbe5ecedc"
+  }
+}

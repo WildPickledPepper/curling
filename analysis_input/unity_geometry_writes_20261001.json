@@ -1,0 +1,65 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "61886aab2c3e568403cebea71ae880aa686b52a796adc52de8a7e5b4d4131494",
+  "functions": [],
+  "writeHooks": [
+    {
+      "storeOpcode": 54,
+      "tableIndex": 129990,
+      "signature": "viiii",
+      "helperFunctionIndex": 83848
+    },
+    {
+      "storeOpcode": 55,
+      "tableIndex": 129991,
+      "signature": "viiji",
+      "helperFunctionIndex": 83849
+    },
+    {
+      "storeOpcode": 56,
+      "tableIndex": 129992,
+      "signature": "viifi",
+      "helperFunctionIndex": 83850
+    },
+    {
+      "storeOpcode": 57,
+      "tableIndex": 129993,
+      "signature": "viidi",
+      "helperFunctionIndex": 83851
+    },
+    {
+      "storeOpcode": 58,
+      "tableIndex": 129994,
+      "signature": "viiii",
+      "helperFunctionIndex": 83852
+    },
+    {
+      "storeOpcode": 59,
+      "tableIndex": 129995,
+      "signature": "viiii",
+      "helperFunctionIndex": 83853
+    },
+    {
+      "storeOpcode": 60,
+      "tableIndex": 129996,
+      "signature": "viiji",
+      "helperFunctionIndex": 83854
+    },
+    {
+      "storeOpcode": 61,
+      "tableIndex": 129997,
+      "signature": "viiji",
+      "helperFunctionIndex": 83855
+    },
+    {
+      "storeOpcode": 62,
+      "tableIndex": 129998,
+      "signature": "viiji",
+      "helperFunctionIndex": 83856
+    }
+  ],
+  "storeInstructions": 682386,
+  "method": "typed original numeric stores with guarded writer-index observation",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_geometry_writes_20261001.wasm"
+}

@@ -1,0 +1,10 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "8b964d6853d5fb7775f39fc3c620c2b9cc16ce8c9ad0f6320f3ba8e55cae8daf",
+  "importedFunctions": 476,
+  "originalTableSize": 129990,
+  "functions": [],
+  "method": "byte-identical relocated body with argument/return table thunk",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\prediction_schedule_calls_20261003.wasm"
+}

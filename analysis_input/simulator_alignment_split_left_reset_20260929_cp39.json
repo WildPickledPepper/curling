@@ -1,0 +1,753 @@
+{
+  "schema": "manifest_collision_session_replay_v1",
+  "policy": "friction values are replayed; local scene persists its own orientation between protocol resets; no Unity P/Q/v/w/contact state is injected",
+  "input": {
+    "samples": "D:\\Desktop\\冰壶\\DCCourse\\research_archive\\unity_reverse\\evidence\\data\\calibration\\unity_split_manifest_rotation_ab_20260715\\left_r03\\collision_double_split_left_manifest.jsonl",
+    "events": "D:\\Desktop\\冰壶\\DCCourse\\research_archive\\unity_reverse\\evidence\\log\\unity_split_manifest_rotation_ab_20260715\\left_r03\\collision_double_split_left_manifest\\unity_runtime_probe_20260715_010811\\events.jsonl",
+    "resetAllStoneRotations": true,
+    "sweepStartDelayM": 0.0,
+    "sweepEffectManifest": null,
+    "sweepRequestPolicy": "protocol-late"
+  },
+  "rows": [
+    {
+      "ordinal": 0,
+      "label": "collision_double_split_left_manifest_r00",
+      "frictionDrawCount": 1095,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1095,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          2.908,
+          6.0503
+        ],
+        "targets": {
+          "2": [
+            0.9999,
+            3.2362
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.9077301025390625,
+          6.050099863769532
+        ],
+        "targets": {
+          "2": [
+            1.0059890747070312,
+            3.2351737163085943
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.33600468771505654,
+        "targets": {
+          "2": 6.174956599284993,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 1,
+      "label": "collision_double_split_left_manifest_r01",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          3.1728,
+          5.9007
+        ],
+        "targets": {
+          "3": [
+            0.7312,
+            3.4287
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          3.1738624572753906,
+          5.902593149902344
+        ],
+        "targets": {
+          "3": [
+            0.7373886108398438,
+            3.4345755717773443
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 2.170905805137112,
+        "targets": {
+          "3": 8.533536654737933,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 2,
+      "label": "collision_double_split_left_manifest_r02",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          2.9024,
+          6.0349
+        ],
+        "targets": {
+          "2": [
+            1.0309,
+            3.3149
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.9019317626953125,
+          6.034604563476563
+        ],
+        "targets": {
+          "2": [
+            1.0365028381347656,
+            3.3146720073242193
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.5536505331721778,
+        "targets": {
+          "2": 5.607474995449778,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 3,
+      "label": "collision_double_split_left_manifest_r03",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          2.8812,
+          5.9875
+        ],
+        "targets": {
+          "3": [
+            1.1353,
+            3.5109
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.8810806274414062,
+          5.987157358886719
+        ],
+        "targets": {
+          "3": [
+            1.1353302001953125,
+            3.5123038432617193
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.36283982727284403,
+        "targets": {
+          "3": 1.404168065180174,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 4,
+      "label": "collision_double_split_left_manifest_r04",
+      "frictionDrawCount": 1097,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1097,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          3.1714,
+          5.9026
+        ],
+        "targets": {
+          "2": [
+            0.7407,
+            3.4413
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          3.1714248657226562,
+          5.902608408691407
+        ],
+        "targets": {
+          "2": [
+            0.7408370971679688,
+            3.4412970683593755
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.026249004826615036,
+        "targets": {
+          "2": 0.1371285090044951,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 5,
+      "label": "collision_double_split_left_manifest_r05",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          2.9062,
+          6.0502
+        ],
+        "targets": {
+          "3": [
+            1.0098,
+            3.2499
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.906208038330078,
+          6.050160898925782
+        ],
+        "targets": {
+          "3": [
+            1.0096702575683594,
+            3.2499823710937505
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.03991877697875768,
+        "targets": {
+          "3": 0.1536818000080879,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 6,
+      "label": "collision_double_split_left_manifest_r06",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          2.876,
+          5.9706
+        ],
+        "targets": {
+          "2": [
+            1.163,
+            3.5712
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.8754539489746094,
+          5.9701972148437505
+        ],
+        "targets": {
+          "2": [
+            1.1683349609375,
+            3.571256174804688
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.6785334217450424,
+        "targets": {
+          "2": 5.335256677361665,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 7,
+      "label": "collision_double_split_left_manifest_r07",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          2.8663,
+          5.9449
+        ],
+        "targets": {
+          "3": [
+            1.2115,
+            3.6709
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.8658905029296875,
+          5.944493784667969
+        ],
+        "targets": {
+          "3": [
+            1.2162322998046875,
+            3.671231760742188
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.5768004391216355,
+        "targets": {
+          "3": 4.74391469479609,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 8,
+      "label": "collision_double_split_left_manifest_r08",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          2.8606,
+          5.9224
+        ],
+        "targets": {
+          "2": [
+            1.2507,
+            3.74
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.8601150512695312,
+          5.921971812011719
+        ],
+        "targets": {
+          "2": [
+            1.2506141662597656,
+            3.742269053222657
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.646931390868196,
+        "targets": {
+          "2": 2.270676101563326,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 9,
+      "label": "collision_double_split_left_manifest_r09",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          2.9028,
+          6.0538
+        ],
+        "targets": {
+          "3": [
+            1.0197,
+            3.2495
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.902812957763672,
+          6.053769602539063
+        ],
+        "targets": {
+          "3": [
+            1.0196990966796875,
+            3.249532236816407
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.033044050459643676,
+        "targets": {
+          "3": 0.032249470067633165,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 10,
+      "label": "collision_double_split_left_manifest_r10",
+      "frictionDrawCount": 1095,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1095,
+        "hitTargets": [
+          2
+        ]
+      },
+      "unity": {
+        "active": [
+          2.9072,
+          6.0511
+        ],
+        "targets": {
+          "2": [
+            1.0016,
+            3.2363
+          ],
+          "4": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.906963348388672,
+          6.050748362304688
+        ],
+        "targets": {
+          "2": [
+            1.0076408386230469,
+            3.235410227539063
+          ],
+          "4": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.4238549916049722,
+        "targets": {
+          "2": 6.106015583171732,
+          "4": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    },
+    {
+      "ordinal": 11,
+      "label": "collision_double_split_left_manifest_r11",
+      "frictionDrawCount": 1096,
+      "sweep": {
+        "requested": 0.0,
+        "effective": 0.0,
+        "startDelayM": 0.0,
+        "source": "protocol_request_not_yet_effective"
+      },
+      "firstContact": {
+        "reached": true,
+        "steps": 1096,
+        "hitTargets": [
+          3
+        ]
+      },
+      "unity": {
+        "active": [
+          2.9064,
+          6.0409
+        ],
+        "targets": {
+          "3": [
+            1.0272,
+            3.2869
+          ],
+          "5": [
+            2.535,
+            5.0
+          ]
+        }
+      },
+      "local": {
+        "active": [
+          2.9063377380371094,
+          6.040860666992188
+        ],
+        "targets": {
+          "3": [
+            1.0275192260742188,
+            3.2878775737304693
+          ],
+          "5": [
+            2.5349998474121094,
+            4.999997629882813
+          ]
+        }
+      },
+      "errorMm": {
+        "active": 0.07364534965982755,
+        "targets": {
+          "3": 1.028375264660004,
+          "5": 0.0023750239039457173
+        }
+      },
+      "branch": {
+        "unityFar": false,
+        "localFar": false
+      }
+    }
+  ],
+  "summary": {
+    "samples": 12,
+    "branchMatches": 12,
+    "unityFar": 0,
+    "localFar": 0,
+    "meanActiveErrorMm": 0.49353152321349003
+  }
+}

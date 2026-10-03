@@ -1,0 +1,15 @@
+free 3227060 d4300bb9b63fba9d7b1e4332bb8bd4b3e8c8d54baf9fef727540f923540001eb
+hit 3227060 c5e076a2b643aff69f23fdea1396a883bf68eb8b8ab5b88a807786432806ec0b
+wall 3227060 dbd1ed3beb4654c76e24b3f4452e67ea343ad6b3d39415987a41af630a7d8593
+spin 3227060 b8f54802dc1726cd98ccbfd0575f5f6d372e8aecdbbb10a9e2156db2d4b785b1
+dense 3227060 f8e8ef3856f00002aa0025313e322b1e7b389c2daba96115dce95ee182e0b775
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+

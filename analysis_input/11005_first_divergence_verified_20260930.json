@@ -1,0 +1,40 @@
+{
+  "sample": 11005,
+  "sameHistoricalEndpoints": 12,
+  "sameHistoricalFrictionValues": 15580,
+  "firstRawQuaternionMismatchSetterOrdinal": 6,
+  "firstNativeAngularOutputMismatchSetterOrdinal": 6,
+  "physicsStepProducingBoundary": 4,
+  "unityWriter": "table[121708] -> wasm f72606",
+  "sharedSolverExitQuaternion": [
+    6.440262012574749e-08,
+    0.2535548806190491,
+    1.688124839915872e-08,
+    0.9673210978507996
+  ],
+  "unityPostWriterQuaternion": [
+    6.440261302032013e-08,
+    0.2535548508167267,
+    1.6881246622801882e-08,
+    0.96732097864151
+  ],
+  "normalizationSquaredNorm": 1.000000238418579,
+  "normalizationInverseLength": 0.9999998807907104,
+  "localOldNativeAngularOutput": [
+    2.220446049250313e-16,
+    0.00982974749058485,
+    1.3088963246588037e-09
+  ],
+  "unityNativeAngularOutput": [
+    2.220446049250313e-16,
+    0.009829753078520298,
+    1.308896879770316e-09
+  ],
+  "oldStateReaderHidesRawDifference": true,
+  "diagnosticPoseSyncFirstAngularOutputMismatchOrdinal": 488,
+  "diagnosticPoseSync11005EndpointErrorM": {
+    "active": 0.0017659639456871093,
+    "target": 0.03560364637004741
+  },
+  "scope": "First divergence verified; diagnostic initial quaternion truth and pose-write replay are not an end-to-end solver repair."
+}

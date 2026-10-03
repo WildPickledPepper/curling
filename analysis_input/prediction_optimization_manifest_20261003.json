@@ -1,0 +1,52 @@
+{
+  "purpose": "Exact prediction acceleration without altering simulation steps, RNG gates, setter arithmetic or callbacks",
+  "implementation": {
+    "lean_snapshots": true,
+    "native_float32_projection": true,
+    "legacy_bulk_loops": false
+  },
+  "compiler": "MinGW-W64 gcc 8.1.0 x64",
+  "floatingPointFlags": [
+    "-msse2",
+    "-mno-avx",
+    "-mno-fma",
+    "-ffp-contract=off",
+    "-fno-fast-math",
+    "-fno-associative-math",
+    "-frounding-math"
+  ],
+  "sha256": {
+    "local_simulator\\unity_physx.py": "8874345b7bc5dd709a5ce9f3800827117c9e0166d666b50ebcc8847eff10baa0",
+    "local_simulator\\unity_prediction.py": "e91a6fd5e0c803e59b329359370f629a4bf02aecae25fb4aec7769cb92ed4cf4",
+    "local_simulator\\native_angular_projection.py": "3b682d3b24e65c0378b9817eb895ad0cc1fd469b8410c60e883ef7a784a0db11",
+    "local_simulator\\runtime\\unity_angular_projection.c": "a30f50d6ebc1ffa8216ecd320f4663d0dcacb3dc63e385815795d7b8869d7370",
+    "local_simulator\\runtime\\unity_angular_projection.dll": "8c64e77c9c58a037c1231ac4e2ddf63a0a36bcb2d8f7e2e39727ed0b95470848"
+  },
+  "equivalence": {
+    "allBytesMatch": true,
+    "bytesCompared": 16135300,
+    "cases": [
+      "free",
+      "hit",
+      "wall",
+      "spin",
+      "dense"
+    ],
+    "numericKernelCases": 50030,
+    "regressionTestsPassed": 49,
+    "scope": "Windows CP39; full local before/after fixed-step comparisons plus existing Unity captured trajectory regressions; no claim about unsampled engine paths"
+  },
+  "timing": {
+    "repeatsPerModePerCase": 10,
+    "requestScope": "Reference: audit snapshots and Python float32 projection. Optimized: lean snapshots and exact native projection. Identical clock, native PhysX, reset and request serialization; modes alternate sequentially, no profiler or concurrent workers.",
+    "minMedianSpeedup": 1.6027389948014932,
+    "maxMedianSpeedup": 2.1246490768301776
+  },
+  "artifacts": [
+    "analysis_input/prediction_optimization_baseline_20261003.json",
+    "analysis_input/prediction_optimization_comparison_20261003.json",
+    "analysis_input/prediction_optimization_tests_20261003.stdout.txt",
+    "analysis_input/prediction_acceleration_timing_20261003.json"
+  ],
+  "fallback": "Missing optional DLL uses the original Python float32 arithmetic; speed changes, precision does not."
+}

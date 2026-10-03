@@ -1,0 +1,114 @@
+[
+  {
+    "protocolIndex": 0,
+    "registrationRank": 11,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333385280,
+    "gameObjectPtr": 333384896
+  },
+  {
+    "protocolIndex": 1,
+    "registrationRank": 9,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333396224,
+    "gameObjectPtr": 333395824
+  },
+  {
+    "protocolIndex": 2,
+    "registrationRank": 5,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333394944,
+    "gameObjectPtr": 333394560
+  },
+  {
+    "protocolIndex": 3,
+    "registrationRank": 10,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333387824,
+    "gameObjectPtr": 333387440
+  },
+  {
+    "protocolIndex": 4,
+    "registrationRank": 2,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333397488,
+    "gameObjectPtr": 333397104
+  },
+  {
+    "protocolIndex": 5,
+    "registrationRank": 15,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333384016,
+    "gameObjectPtr": 333383616
+  },
+  {
+    "protocolIndex": 6,
+    "registrationRank": 4,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333401456,
+    "gameObjectPtr": 333401056
+  },
+  {
+    "protocolIndex": 7,
+    "registrationRank": 13,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333389104,
+    "gameObjectPtr": 333388704
+  },
+  {
+    "protocolIndex": 8,
+    "registrationRank": 7,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333391136,
+    "gameObjectPtr": 333390736
+  },
+  {
+    "protocolIndex": 9,
+    "registrationRank": 12,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333386560,
+    "gameObjectPtr": 333386160
+  },
+  {
+    "protocolIndex": 10,
+    "registrationRank": 6,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333393680,
+    "gameObjectPtr": 333393280
+  },
+  {
+    "protocolIndex": 11,
+    "registrationRank": 1,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333398912,
+    "gameObjectPtr": 333398448
+  },
+  {
+    "protocolIndex": 12,
+    "registrationRank": 8,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333392400,
+    "gameObjectPtr": 333392016
+  },
+  {
+    "protocolIndex": 13,
+    "registrationRank": 3,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333402720,
+    "gameObjectPtr": 333402336
+  },
+  {
+    "protocolIndex": 14,
+    "registrationRank": 14,
+    "constraintsAtFirstDisable": 0,
+    "componentPtr": 333382736,
+    "gameObjectPtr": 333382352
+  },
+  {
+    "protocolIndex": 15,
+    "registrationRank": 0,
+    "constraintsAtFirstDisable": 80,
+    "componentPtr": 333400176,
+    "gameObjectPtr": 333399792
+  }
+]

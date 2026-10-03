@@ -1,0 +1,98 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "739997f0db4a868e1dd1e3f861a0a0f48866f291318548beb74b0b7084579544",
+  "importedFunctions": 476,
+  "originalTableSize": 129990,
+  "functions": [
+    {
+      "functionIndex": 73060,
+      "rawFunctionIndex": 83848,
+      "tableIndex": 129990,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "59859f4672d25b20ddc09d1f61495edafac1ac6b9d873a3eaeb3791d4b4c950f",
+      "originalBodyBytes": 927
+    },
+    {
+      "functionIndex": 73070,
+      "rawFunctionIndex": 83849,
+      "tableIndex": 129991,
+      "typeIndex": 7,
+      "signature": "vi",
+      "originalBodySha256": "1cd50e2eafb0958ea8f946e85b4df21c68736e09cb1139a14ea177edd88edc29",
+      "originalBodyBytes": 1852
+    },
+    {
+      "functionIndex": 72778,
+      "rawFunctionIndex": 83850,
+      "tableIndex": 129992,
+      "typeIndex": 17,
+      "signature": "vifi",
+      "originalBodySha256": "d0bbbac50e1bfdf1fc2ea0451cdf8de708c2464cfadc3249b606e91995fb7669",
+      "originalBodyBytes": 547
+    },
+    {
+      "functionIndex": 72776,
+      "rawFunctionIndex": 83851,
+      "tableIndex": 129993,
+      "typeIndex": 8,
+      "signature": "iiiii",
+      "originalBodySha256": "8580c6f2890d5e95f4b146a3d4dd1e3dc0696819d19e51242f7548c8ed816182",
+      "originalBodyBytes": 4188
+    },
+    {
+      "functionIndex": 72777,
+      "rawFunctionIndex": 83852,
+      "tableIndex": 129994,
+      "typeIndex": 20,
+      "signature": "viiiiiiii",
+      "originalBodySha256": "5536e47255527c7f612c5456dc68620007db7e36006ffda89d144f899ece0bea",
+      "originalBodyBytes": 1188
+    },
+    {
+      "functionIndex": 72779,
+      "rawFunctionIndex": 83853,
+      "tableIndex": 129995,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "697a52946e46ee52afaa9f99aa3a0f059b16da78b3d9f7e6fbc8d53787d976ca",
+      "originalBodyBytes": 537
+    },
+    {
+      "functionIndex": 72775,
+      "rawFunctionIndex": 83854,
+      "tableIndex": 129996,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "56851f368a36efcd9e4926f486b6c82281c8b9966e0e6cf080478a0287e2c1f1",
+      "originalBodyBytes": 967
+    },
+    {
+      "functionIndex": 72798,
+      "rawFunctionIndex": 83855,
+      "tableIndex": 129997,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "92b51693353688200a7c021492fb731717625ad2002d0790c52afc803f7f1d34",
+      "originalBodyBytes": 813
+    },
+    {
+      "functionIndex": 69768,
+      "rawFunctionIndex": 83856,
+      "tableIndex": 129998,
+      "typeIndex": 2,
+      "signature": "viii",
+      "originalBodySha256": "425aa2a3a7fe6cf6682e084d96115a2cdd3683788c0cd8581693d0853da77b6c",
+      "originalBodyBytes": 1132
+    }
+  ],
+  "method": "byte-identical relocated body with argument/return table thunk",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_mass_properties_trace_20261002.wasm",
+  "upstreamRootFunctions": [
+    73060,
+    73070
+  ],
+  "massPropertyTrace": true,
+  "velocityGetterTrace": true
+}

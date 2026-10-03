@@ -1,0 +1,47 @@
+{
+  "sourceSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "patchedSha256": "8b964d6853d5fb7775f39fc3c620c2b9cc16ce8c9ad0f6320f3ba8e55cae8daf",
+  "importedFunctions": 476,
+  "originalTableSize": 129990,
+  "functions": [
+    {
+      "functionIndex": 61097,
+      "rawFunctionIndex": 83848,
+      "tableIndex": 129990,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "5e36e8a0e78eb85a59b34d04e32a97fa99170ab471b3ca8e4d31ad04aecc58d0",
+      "originalBodyBytes": 2503
+    },
+    {
+      "functionIndex": 61107,
+      "rawFunctionIndex": 83849,
+      "tableIndex": 129991,
+      "typeIndex": 1,
+      "signature": "vii",
+      "originalBodySha256": "586ee593c26e226ef8eb242f8d2ed51a06554f4bd80b9bd37191f6aa252d8cf5",
+      "originalBodyBytes": 1671
+    },
+    {
+      "functionIndex": 54300,
+      "rawFunctionIndex": 83850,
+      "tableIndex": 129992,
+      "typeIndex": 154,
+      "signature": "fffi",
+      "originalBodySha256": "28dc99fbe96cb220cb3b674ff90f0cce0ccc7f6a7fa6bc3079b6e97978fc10d5",
+      "originalBodyBytes": 43
+    },
+    {
+      "functionIndex": 54557,
+      "rawFunctionIndex": 83851,
+      "tableIndex": 129993,
+      "typeIndex": 187,
+      "signature": "vfi",
+      "originalBodySha256": "9a6de64768e76ee9a03c4dd0f6effae08e6037173c98d820c60adbb784d5be96",
+      "originalBodyBytes": 41
+    }
+  ],
+  "method": "byte-identical relocated body with argument/return table thunk",
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\unity_20260930.wasm",
+  "patched": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\prediction_schedule_calls_20261003.wasm"
+}

@@ -1,0 +1,366 @@
+{
+  "captureValidation": {
+    "events": "D:\\Desktop\\冰壶\\DCCourse\\analysis_input\\unity_transform_scale_calc_trace_20261001\\logs\\unity_runtime_probe_20261001_233057\\events.jsonl",
+    "eventsSha256": "3f88f4c1db218bb5c75962c3fc3468985e25be571bd2a7292affe56622857fae",
+    "frictionValuesEqual": 15580,
+    "setterPairsEqual": 1023,
+    "endpointsEqual": 12,
+    "internalCallCount": 207,
+    "geometryScaleRecords": 24,
+    "geometryWriteRecords": 258
+  },
+  "matrixCallsBitExact": 138,
+  "matrixFieldsBitExact": 1242,
+  "shapeProducerCallsBitExact": 23,
+  "independentFixtureCases": 11,
+  "portableSource": "D:\\Desktop\\冰壶\\DCCourse\\local_simulator\\runtime_support\\tools\\reverse\\recovered_transform_scale.py",
+  "fixtureSha256": "78699a098da5c9ec99e0b8a376a767a4ead7366dfc5a54e40ca48512adbcfe41",
+  "producers": [
+    {
+      "releaseSerial": 2,
+      "producerCallId": 2,
+      "shapeCreationCallId": 9,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 2,
+      "producerCallId": 11,
+      "shapeCreationCallId": 18,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 4,
+      "producerCallId": 20,
+      "shapeCreationCallId": 27,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 4,
+      "producerCallId": 29,
+      "shapeCreationCallId": 36,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 6,
+      "producerCallId": 38,
+      "shapeCreationCallId": 45,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 6,
+      "producerCallId": 47,
+      "shapeCreationCallId": 54,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 8,
+      "producerCallId": 56,
+      "shapeCreationCallId": 63,
+      "scaleBits": [
+        1038536514,
+        1038845215,
+        1038536514
+      ],
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "releaseSerial": 8,
+      "producerCallId": 65,
+      "shapeCreationCallId": 72,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 10,
+      "producerCallId": 74,
+      "shapeCreationCallId": 81,
+      "scaleBits": [
+        1038536516,
+        1038845215,
+        1038536516
+      ],
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    },
+    {
+      "releaseSerial": 10,
+      "producerCallId": 83,
+      "shapeCreationCallId": 90,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 12,
+      "producerCallId": 92,
+      "shapeCreationCallId": 99,
+      "scaleBits": [
+        1038536514,
+        1038845215,
+        1038536514
+      ],
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "releaseSerial": 12,
+      "producerCallId": 101,
+      "shapeCreationCallId": 108,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 14,
+      "producerCallId": 110,
+      "shapeCreationCallId": 117,
+      "scaleBits": [
+        1038536516,
+        1038845215,
+        1038536516
+      ],
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    },
+    {
+      "releaseSerial": 14,
+      "producerCallId": 119,
+      "shapeCreationCallId": 126,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 16,
+      "producerCallId": 128,
+      "shapeCreationCallId": 135,
+      "scaleBits": [
+        1038536516,
+        1038845215,
+        1038536516
+      ],
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    },
+    {
+      "releaseSerial": 16,
+      "producerCallId": 137,
+      "shapeCreationCallId": 144,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 18,
+      "producerCallId": 146,
+      "shapeCreationCallId": 153,
+      "scaleBits": [
+        1038536514,
+        1038845215,
+        1038536514
+      ],
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "releaseSerial": 18,
+      "producerCallId": 155,
+      "shapeCreationCallId": 162,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 20,
+      "producerCallId": 164,
+      "shapeCreationCallId": 171,
+      "scaleBits": [
+        1038536517,
+        1038845215,
+        1038536517
+      ],
+      "scale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ]
+    },
+    {
+      "releaseSerial": 20,
+      "producerCallId": 173,
+      "shapeCreationCallId": 180,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 22,
+      "producerCallId": 182,
+      "shapeCreationCallId": 189,
+      "scaleBits": [
+        1038536514,
+        1038845215,
+        1038536514
+      ],
+      "scale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "releaseSerial": 22,
+      "producerCallId": 191,
+      "shapeCreationCallId": 198,
+      "scaleBits": [
+        1038536515,
+        1038845215,
+        1038536515
+      ],
+      "scale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "releaseSerial": 24,
+      "producerCallId": 200,
+      "shapeCreationCallId": 207,
+      "scaleBits": [
+        1038536516,
+        1038845215,
+        1038536516
+      ],
+      "scale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    }
+  ],
+  "limitation": "Arithmetic is recovered. Live shape scale update and native-to-Transform rotation synchronization are not yet integrated."
+}

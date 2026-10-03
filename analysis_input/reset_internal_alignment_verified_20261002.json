@@ -1,0 +1,245 @@
+{
+  "originalWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "observerValidations": {
+    "unity_reset_internal_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "196edea2e907a48ece735f47cb78a4c89c32e4c1d5cc516546070d755da9eea3"
+    },
+    "unity_reset_anchors_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "da13f613d58d2ff8b7065bb031ee8021c76554265200782814719b99c8d5deb3"
+    },
+    "unity_reset_contact_prep_first_case_20261002": {
+      "frictionRecordsExact": 1562,
+      "resetCoreFramesExact": 256,
+      "endpointUnchanged": true,
+      "eventsSha256": "10adfb692e9c743ced14cee03b7eee6694615f7fa9b53574799b69f9b778946f"
+    }
+  },
+  "relocatedOriginalBodiesByteIdentical": true,
+  "pcmTransformWordsExact": 84,
+  "pcmContactGeometryWordsExact": 210,
+  "normalConstraintWordsExact": 360,
+  "firstFiveFrictionConstraintFieldsExact": true,
+  "firstDifferingFrictionConstraint": {
+    "step": 6,
+    "fields": [
+      {
+        "row": 0,
+        "offset": 20,
+        "unityBits": 1050226767,
+        "nativeBits": 3197254909
+      },
+      {
+        "row": 0,
+        "offset": 24,
+        "unityBits": 858463497,
+        "nativeBits": 3005438340
+      },
+      {
+        "row": 0,
+        "offset": 28,
+        "unityBits": 1085567202,
+        "nativeBits": 1086268146
+      },
+      {
+        "row": 0,
+        "offset": 44,
+        "unityBits": 0,
+        "nativeBits": 2948417177
+      },
+      {
+        "row": 0,
+        "offset": 48,
+        "unityBits": 791257484,
+        "nativeBits": 791381236
+      },
+      {
+        "row": 1,
+        "offset": 20,
+        "unityBits": 3187527437,
+        "nativeBits": 3189527194
+      },
+      {
+        "row": 1,
+        "offset": 24,
+        "unityBits": 2995634410,
+        "nativeBits": 2997787957
+      },
+      {
+        "row": 1,
+        "offset": 28,
+        "unityBits": 1094518599,
+        "nativeBits": 1093217566
+      },
+      {
+        "row": 1,
+        "offset": 44,
+        "unityBits": 0,
+        "nativeBits": 511213020
+      },
+      {
+        "row": 1,
+        "offset": 48,
+        "unityBits": 2857330750,
+        "nativeBits": 2850084508
+      },
+      {
+        "row": 2,
+        "offset": 20,
+        "unityBits": 3197254909,
+        "nativeBits": 1048587181
+      },
+      {
+        "row": 2,
+        "offset": 24,
+        "unityBits": 3005438340,
+        "nativeBits": 856632062
+      },
+      {
+        "row": 2,
+        "offset": 28,
+        "unityBits": 1086268146,
+        "nativeBits": 1088327823
+      },
+      {
+        "row": 2,
+        "offset": 44,
+        "unityBits": 0,
+        "nativeBits": 2948417177
+      },
+      {
+        "row": 2,
+        "offset": 48,
+        "unityBits": 791381236,
+        "nativeBits": 791267824
+      },
+      {
+        "row": 3,
+        "offset": 20,
+        "unityBits": 3189527194,
+        "nativeBits": 1045586374
+      },
+      {
+        "row": 3,
+        "offset": 24,
+        "unityBits": 2997787957,
+        "nativeBits": 854261687
+      },
+      {
+        "row": 3,
+        "offset": 28,
+        "unityBits": 1093217566,
+        "nativeBits": 1091001054
+      },
+      {
+        "row": 3,
+        "offset": 44,
+        "unityBits": 0,
+        "nativeBits": 511213020
+      },
+      {
+        "row": 3,
+        "offset": 48,
+        "unityBits": 2850084508,
+        "nativeBits": 2879524572
+      }
+    ]
+  },
+  "frictionCacheInputs": [
+    {
+      "step": 1,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x0",
+      "nativeCount": 0
+    },
+    {
+      "step": 2,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x21e7eca7530",
+      "nativeCount": 1
+    },
+    {
+      "step": 3,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x21e7f19eb10",
+      "nativeCount": 1
+    },
+    {
+      "step": 4,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x21e7f1a2b30",
+      "nativeCount": 1
+    },
+    {
+      "step": 5,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x21e7f1f44d0",
+      "nativeCount": 1
+    },
+    {
+      "step": 6,
+      "unityPointer": 0,
+      "unityCount": 0,
+      "nativePointer": "0x21e7eca7530",
+      "nativeCount": 1
+    }
+  ],
+  "firstObservedInternalInputDifference": {
+    "step": 2,
+    "unityFunction": 71233,
+    "nativeFunctionRva": "0xdcf30",
+    "nativeDescriptorFrictionPointerOffset": 160,
+    "nativeDescriptorFrictionCountOffset": 168
+  },
+  "firstObservedPQVelocityOutputDifferenceStep": 6,
+  "appliedFixes": [
+    "Start sets only dynamic friction to 0; Reset preserves material history.",
+    "OnCollisionEnter(Stone) restores both actual contact participants to 0.6/0.6."
+  ],
+  "calibratedRegression": {
+    "setterPairs11005Exact": 1023,
+    "aggregate": {
+      "rowCount": 12,
+      "reachedFirstContactCount": 12,
+      "strictEndpointComparableCount": 12,
+      "activeEndpointError": {
+        "count": 12,
+        "rmseM": 3.765563483309869e-05,
+        "meanM": 3.672302692014626e-05,
+        "maxM": 5.385415640234746e-05
+      },
+      "targetEndpointError": {
+        "count": 9,
+        "rmseM": 7.3490279309657e-05,
+        "meanM": 6.148609507064537e-05,
+        "maxM": 0.0001733203412096975
+      },
+      "unreliableUnityEndpointSampleIds": []
+    }
+  },
+  "limits": [
+    "No claim that every startup/cooking intermediate is aligned.",
+    "The Unity writer clearing friction cache and its caller are still unclosed.",
+    "Endpoint improvements validate the material repair, not cache-mechanism reconstruction."
+  ],
+  "evidenceSha256": {
+    "analysis_input\\unity_reset_contact_prep_first_case_20261002\\logs\\unity_runtime_probe_20261002_152457\\events.jsonl": "10adfb692e9c743ced14cee03b7eee6694615f7fa9b53574799b69f9b778946f",
+    "analysis_input\\native_reset_anchors_steps1_6_20261002\\calls.json": "fa954a7f29a4d8b8e82cc9a164472536ca2133f928639a7786dbf3ad5aa282e7",
+    "analysis_input\\native_reset_friction_prep_steps1_6_20261002\\calls.json": "bd7cd8af0762337eea426a39a949b25c3c1601f5ca7956d5c1d818cbd0abb7fa"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "16418310776d1dc45e60ad6b3a03ef84bcb9c2358ac82a5356d69741fae0c6cd",
+    "analysis_input\\pcm_functions_20261001\\f61028.wat": "491f332f75292511a66080c0bec156634dcf5aa7bffbbc8354452468a3341966"
+  }
+}

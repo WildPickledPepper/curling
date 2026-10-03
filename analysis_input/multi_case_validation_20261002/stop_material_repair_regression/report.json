@@ -1,0 +1,308 @@
+{
+  "cases": [
+    {
+      "label": "stop_fixed_local11009",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 11009,
+        "label": "fresh_11009_curl_right_20261002",
+        "category": "collision_glancing",
+        "v0": 3.4,
+        "h0": 0.2,
+        "w0": 1.57,
+        "sweep": 0.0,
+        "active_index": 0,
+        "stones": [
+          {
+            "index": 11,
+            "x": 2.6550000000000002,
+            "y": 6.8
+          }
+        ],
+        "notes": "Fresh Unity page; same shot parameters as historical11009; no previous shots, pose injection or RNG override."
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 3000,
+      "stateBytesCompared": 312104,
+      "stateBytesExact": 312104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1383,
+      "firstNativeContactTick": 1383,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\local11009_native.json": "1fa749e4526affa7085a52e82d1130268934178062be8e679c245a7ce2ee761c"
+      }
+    },
+    {
+      "label": "stop_fixed_local11000",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 11000,
+        "label": "fresh_11000_straight_regression_20261002",
+        "category": "collision_straight",
+        "v0": 3.4,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "active_index": 0,
+        "stones": [
+          {
+            "index": 2,
+            "x": 2.375,
+            "y": 5.2
+          }
+        ],
+        "notes": "Fresh Reset and straight BESTSHOT replay using the captured11000 friction stream; compare all3362 steps to the previous production baseline."
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 2000,
+      "stateBytesCompared": 208104,
+      "stateBytesExact": 208104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1562,
+      "firstNativeContactTick": 1562,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\local11000_native.json": "647d0ecf3ae9dfdc2a3c6e82ae0e18750dd6607ab59e13bb7e64c9902909d51f"
+      }
+    },
+    {
+      "label": "stop_fixed_full12004_run1",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12004,
+        "label": "full12004_run1",
+        "category": "collision_short_range",
+        "v0": 3.0,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.025,
+            "y": 4.2,
+            "index": 6
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12004,
+        "batch_repeat_index": 3,
+        "batch_case_index": 4,
+        "assigned_target_index": 6,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 3168,
+      "firstNativeContactTick": null,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12004_run1_unity\\logs\\unity_runtime_probe_20261002_202549\\events.jsonl": "541408ef489203523aea8cf0bcb95e12d5fd8a81bfb5b5b9be461b04a858d27a",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\full12004_run1_native.json": "c6cf6189d5c456681f92302af6c8aa657de1ca4769aa75addecea201c98a0343"
+      }
+    },
+    {
+      "label": "stop_fixed_full12008_run2",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12008,
+        "label": "full12008_run2",
+        "category": "collision_high_curl",
+        "v0": 3.7,
+        "h0": -0.25,
+        "w0": 3.14,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.775,
+            "y": 6.4,
+            "index": 10
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12008,
+        "batch_repeat_index": 3,
+        "batch_case_index": 8,
+        "assigned_target_index": 10,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1281,
+      "firstNativeContactTick": 1281,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12008_run2_unity\\logs\\unity_runtime_probe_20261002_202930\\events.jsonl": "c3ab6e55b0bc3ef0740e6abb3935167fe94405200f296f1585a7c33f45f4640b",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\full12008_run2_native.json": "002a5dd555137af1f7f0e2e8c8164201f64be1a128e7d5c1d1a94ba1a3993792"
+      }
+    },
+    {
+      "label": "stop_fixed_full12011_run3",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12011,
+        "label": "full12011_run3",
+        "category": "collision_long_range",
+        "v0": 4.2,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.625,
+            "y": 9.0,
+            "index": 13
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12011,
+        "batch_repeat_index": 3,
+        "batch_case_index": 11,
+        "assigned_target_index": 13,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 910,
+      "firstNativeContactTick": 910,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12011_run3_unity\\logs\\unity_runtime_probe_20261002_203206\\events.jsonl": "4f67402521e25be34b6be4704875d2b098b77962b2e1cd8cc7266a2b61d3c3a9",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\full12011_run3_native.json": "6bc0445cb0a6a5b918f5cbfff953a69e1bc861bb87c2293a87d98e6bb688c482"
+      }
+    },
+    {
+      "label": "stop_fixed_full12008_run4",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12008,
+        "label": "full12008_run4",
+        "category": "collision_high_curl",
+        "v0": 3.7,
+        "h0": -0.25,
+        "w0": 3.14,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.775,
+            "y": 6.4,
+            "index": 10
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12008,
+        "batch_repeat_index": 3,
+        "batch_case_index": 8,
+        "assigned_target_index": 10,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1281,
+      "firstNativeContactTick": 1281,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12008_run4_unity\\logs\\unity_runtime_probe_20261002_203435\\events.jsonl": "d0687b7f5f3ed766c1a7402ec85e2ad6e950c06a95e3daffbba8cccf9043a39a",
+        "analysis_input\\multi_case_validation_20261002\\stop_material_repair_regression\\full12008_run4_native.json": "bffd53a8ee57f928b8ecad380c519cd4f883bd7dcbea696e11a2d75540b59588"
+      }
+    }
+  ],
+  "runs": 6,
+  "completedStepsCompared": 21000,
+  "stateBytesCompared": 2184624,
+  "allComparedBytesExact": true,
+  "allCasesObservedThroughRest": true,
+  "productionCodeChanged": true,
+  "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "correctedSolverIterationsInputsAndOutputsExact": 5,
+  "unchangedExistingRuns": 5,
+  "actualControllerAndOrigin": {
+    "functionIndex": 61097,
+    "tableIndex": 130062,
+    "callId": 162,
+    "line": 26071,
+    "setterLines": [
+      26061,
+      26062
+    ],
+    "originWords": [
+      3267474778,
+      1097263900,
+      1113109142
+    ],
+    "origin": [
+      -96.85420227050781,
+      14.43239974975586,
+      54.174400329589844
+    ],
+    "observedCompletedPhysicsSteps": [
+      3167,
+      3168
+    ],
+    "observerCheck": {
+      "originalCalculationBodiesByteIdentical": true,
+      "unpatchedWasmControl": true,
+      "setterGetterPosePairsByteIdentical": 3169,
+      "frictionInputsByteIdentical": 3168,
+      "protocolResultUnchanged": true,
+      "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12004_run1_original_control\\logs\\unity_runtime_probe_20261002_202823\\events.jsonl": "2d255478796ae905fecbe15b1c719ed1c71c2d51ad05125fcd92e9054433bee4",
+        "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+        "analysis_input\\multi_case_validation_20261002\\unity_stop_controller_calls.wasm": "6637919e41d56e011edd42a9d818a5293fc8711504a934c87806787ab1c7b630"
+      }
+    },
+    "captureLimitation": "Requested five tail boundaries were not captured; only boundary serial1 and solver exits1/2 are present. Used solely for the actual parent call and cached origin. Complete trajectory truth and all five repaired solver iterations use earlier independently validated captures.",
+    "observedBoundarySerials": [
+      1
+    ],
+    "evidenceSha256": "81fa473a14bd4b1571e2a4b0ed56771b99c89d09f43804ed6cb57962295cf6af"
+  },
+  "scope": "Actual Unity P/Q/v/w bytes at release and every completed physics step for both stones. Only shot/layout/friction inputs supplied; no replay of material setter calls or body/contact/cache state. Update is evaluated at the explicit custom-setter-batch to ordinary-physics boundary.",
+  "fixtureSha256": "1a1927d431f838a565ae4fb35402698460a209b56f6bc5624ba0359c1f3d50b7"
+}

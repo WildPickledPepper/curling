@@ -37,6 +37,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--native-extension", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--solver-position-iterations", type=int)
     return parser.parse_args()
 
 
@@ -56,10 +57,11 @@ def install_extension(path: Path | None) -> bool:
     return hasattr(pyphysx.Scene, "simulate_until_quiet")
 
 
-def install_native_settle(environment: Any) -> None:
+def install_native_settle(environment: Any, settle_steps: list[dict[str, Any]]) -> None:
     def native_settle(self: Any, *, max_steps: int = 6000) -> bool:
-        bodies = [slot.body for slot in self.scene.slots if slot.enabled]
-        settled, _steps = self.scene.scene.simulate_until_quiet(
+        slots = [slot for slot in self.scene.slots if slot.enabled]
+        bodies = [slot.body for slot in slots]
+        settled, steps = self.scene.scene.simulate_until_quiet(
             bodies,
             self.scene.dt,
             max_steps,
@@ -67,6 +69,19 @@ def install_native_settle(environment: Any) -> None:
             0.01,
             20,
         )
+        settle_steps.append({
+            "steps": int(steps),
+            "settled": bool(settled),
+            "rawBodies": [
+                {
+                    "index": int(slot.index),
+                    "linearVelocity": [float(value) for value in slot.body.get_linear_velocity()],
+                    "angularVelocity": [float(value) for value in slot.body.get_angular_velocity()],
+                    "position": [float(value) for value in self.scene._pose(slot.index)[0]],
+                }
+                for slot in slots
+            ],
+        })
         return bool(settled)
 
     environment._settle = types.MethodType(native_settle, environment)
@@ -78,12 +93,21 @@ def main() -> int:
     from local_simulator.examples.train_policy_tree_selfplay import StrictCurlingEnd
 
     environment = StrictCurlingEnd(seed=20260715, training_fast=True)
+    if args.solver_position_iterations is not None:
+        for slot in environment.scene.slots:
+            _, velocity_iterations = slot.body.get_solver_iteration_counts()
+            slot.body.set_solver_iteration_counts(int(args.solver_position_iterations), velocity_iterations)
     if native:
-        install_native_settle(environment)
+        settle_steps: list[int] = []
+        install_native_settle(environment, settle_steps)
+    else:
+        settle_steps = []
     environment.reset()
     trace: list[dict[str, Any]] = []
     started = time.perf_counter()
     for shot_number, shot in enumerate(SHOTS, start=1):
+        previous_settle_count = len(settle_steps)
+        shot_started = time.perf_counter()
         result = environment.play(shot)
         trace.append(
             {
@@ -91,6 +115,8 @@ def main() -> int:
                 "contact": result["contact"],
                 "settled": result["settled"],
                 "cleared": result["cleared"],
+                "settle": settle_steps[-1] if len(settle_steps) > previous_settle_count else None,
+                "elapsedSeconds": time.perf_counter() - shot_started,
                 "states": compact_states(result["states"]),
             }
         )

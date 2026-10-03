@@ -1,0 +1,113 @@
+{
+  "closedBoundary": "Initial Sc::RigidSim registration numerical input for 16 stones",
+  "unityFunctionIndex": 71726,
+  "nativeFunctionRva": "0x214bd0",
+  "numericWordsPerStone": 35,
+  "verifiedWordCount": 560,
+  "calls": [
+    {
+      "stoneCreationIndex": 0,
+      "unityCallId": 3,
+      "nativeCallId": 2
+    },
+    {
+      "stoneCreationIndex": 1,
+      "unityCallId": 4,
+      "nativeCallId": 3
+    },
+    {
+      "stoneCreationIndex": 2,
+      "unityCallId": 5,
+      "nativeCallId": 4
+    },
+    {
+      "stoneCreationIndex": 3,
+      "unityCallId": 6,
+      "nativeCallId": 5
+    },
+    {
+      "stoneCreationIndex": 4,
+      "unityCallId": 7,
+      "nativeCallId": 6
+    },
+    {
+      "stoneCreationIndex": 5,
+      "unityCallId": 8,
+      "nativeCallId": 7
+    },
+    {
+      "stoneCreationIndex": 6,
+      "unityCallId": 10,
+      "nativeCallId": 8
+    },
+    {
+      "stoneCreationIndex": 7,
+      "unityCallId": 11,
+      "nativeCallId": 9
+    },
+    {
+      "stoneCreationIndex": 8,
+      "unityCallId": 12,
+      "nativeCallId": 10
+    },
+    {
+      "stoneCreationIndex": 9,
+      "unityCallId": 13,
+      "nativeCallId": 11
+    },
+    {
+      "stoneCreationIndex": 10,
+      "unityCallId": 14,
+      "nativeCallId": 12
+    },
+    {
+      "stoneCreationIndex": 11,
+      "unityCallId": 15,
+      "nativeCallId": 13
+    },
+    {
+      "stoneCreationIndex": 12,
+      "unityCallId": 16,
+      "nativeCallId": 14
+    },
+    {
+      "stoneCreationIndex": 13,
+      "unityCallId": 17,
+      "nativeCallId": 15
+    },
+    {
+      "stoneCreationIndex": 14,
+      "unityCallId": 18,
+      "nativeCallId": 16
+    },
+    {
+      "stoneCreationIndex": 15,
+      "unityCallId": 19,
+      "nativeCallId": 17
+    }
+  ],
+  "rawIEEE754BitsExactIncludingSignedZeros": true,
+  "postStartupAngularSpeedLimit": 20,
+  "postStartupLimitEvidence": "Subsequent Unity f71726 inputs and solver cores: maxAngularVelocitySq = 0x43c80000.",
+  "initialRegistrationWholeAbiEqualClaimed": false,
+  "completeScenePrefixAligned": false,
+  "scopeLimits": [
+    "Pointers and ABI padding excluded; internal reserved identity-transform flag encodings differ between PhysX versions.",
+    "Factory/cooking internals, complete roster and attribute-sync order have not all been traced.",
+    "Reactivation constructor inputs, Reset settling and sleep are not yet closed."
+  ],
+  "regression": {
+    "shots": 12,
+    "rowsAndAggregatesUnchanged": true,
+    "active11005SettersAndTicksUnchanged": true
+  },
+  "evidenceSha256": {
+    "analysis_input\\unity_scene_chain_from_start_20261002\\logs\\unity_runtime_probe_20261002_135437\\events.jsonl": "d51d4de852efad53089f7c7e00b2ec301928d22b17f7fcd870320fc5e94c5791",
+    "analysis_input\\native_startup_registration_fixed_v2_20261002\\calls.json": "888bc6938c5c0ca6c7d441cc8bfa7383e5078849fb43f9683eafa7381c793f25",
+    "analysis_input\\native_startup_registration_fixed_v2_20261002\\alignment.json": "96008b666e934b31f6c01c785ae36043b1cb92887b9ae0700986d0305be44a64"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "9c334f5c5f8370266d8a1b8afbdd0f141038addea0ff95b1153ed4aab3916564",
+    "local_simulator\\runtime_support\\tools\\reverse\\probe_physx_collision_alignment.py": "40cbe4d4bb6d36dc6217320aff25d84ad1ef9b8f25c523e236043ad3a9f6d1c1"
+  }
+}

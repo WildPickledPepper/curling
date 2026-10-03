@@ -1,0 +1,3687 @@
+{
+  "schema": "hybrid_p6_endpoint_sixshot_v1",
+  "purpose": "P6 no-oracle endpoint audit for the captured six-shot session.",
+  "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+  "configuration": {
+    "scalarMath": true,
+    "iceMidphase": true,
+    "sceneLifecycle": "one persistent local Scene; each recorded reset changes positions only",
+    "orientationManifest": "D:\\Desktop\\冰壶\\DCCourse\\research_archive\\unity_reverse\\evidence\\data\\calibration\\c131_strict_yaw_r00_20260714\\orientation_manifest_r00.json",
+    "strictOrientationTruthRequired": true,
+    "motionKernel": "recovered-python",
+    "unityNativeAngularSetterWrapper": true,
+    "unityNativeAngularSetterResidualZ": false,
+    "unityNativeAngularSetterTiltOnly": false,
+    "setActiveSceneMembership": false,
+    "unitySetActiveRefilter": true,
+    "unitySetActiveNoSim": false,
+    "unityMaterialTransition": false,
+    "wakeTargetAtCurrentPcmShell": false,
+    "stoneStoneContactFrictionOverride": true,
+    "pyphysxExtension": "D:\\Desktop\\冰壶\\DCCourse\\local_simulator\\runtime\\pyphysx\\_pyphysx.cp39-win_amd64.pyd",
+    "pyphysxExtensionSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df"
+  },
+  "aggregate": {
+    "rowCount": 12,
+    "reachedFirstContactCount": 12,
+    "strictEndpointComparableCount": 12,
+    "activeEndpointError": {
+      "count": 12,
+      "rmseM": 0.0006860967869098912,
+      "meanM": 0.00037116798889001127,
+      "maxM": 0.0017659639456871093
+    },
+    "targetEndpointError": {
+      "count": 9,
+      "rmseM": 0.011867678915764514,
+      "meanM": 0.004110438710706426,
+      "maxM": 0.03559491725394193
+    },
+    "unreliableUnityEndpointSampleIds": []
+  },
+  "rows": [
+    {
+      "seq": 0,
+      "sampleId": 11000,
+      "label": "collision_headon_y5p2_v3p4_unique_t02_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1562,
+      "firstContactCounts": [
+        2
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.350727081298828,
+          "y": 5.496297373535157,
+          "z": 0.11500000000000021,
+          "yaw": 0.23072607412704718,
+          "vx": 0.00025324177113361657,
+          "vy": -0.7959260940551758,
+          "vz": 0.0,
+          "wx": -6.217248937900877e-15,
+          "wy": 2.2906725405391626e-08,
+          "w": 0.1720273643732071,
+          "physxPosition": [
+            -69.87369537353516,
+            14.419784545898438,
+            54.17427444458008
+          ],
+          "quaternionWxyz": [
+            0.9933531284332275,
+            6.613618808160027e-08,
+            0.11510732769966125,
+            7.663717660477687e-09
+          ],
+          "physxLinearVelocity": [
+            0.7959260940551758,
+            0.0,
+            -0.00025324177113361657
+          ],
+          "physxAngularVelocity": [
+            -6.217248937900877e-15,
+            0.1720273643732071,
+            2.2906725405391626e-08
+          ]
+        },
+        "targets": {
+          "2": {
+            "index": 2,
+            "enabled": true,
+            "x": 2.375,
+            "y": 5.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 2.0129137614545434e-13,
+            "vx": 1.0188081931913895e-12,
+            "vy": 4.920099700919667e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.031280775945087e-19,
+            "w": 5.280401983720484e-12,
+            "physxPosition": [
+              -69.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0064568807272717e-13,
+              6.70089280316726e-21
+            ],
+            "physxLinearVelocity": [
+              -4.920099700919667e-13,
+              0.0,
+              -1.0188081931913895e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.280401983720484e-12,
+              7.031280775945087e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3507308959960938,
+          "y": 5.488339915039063,
+          "z": 0.11500000000000021,
+          "yaw": 0.23244547715647831,
+          "vx": 0.00025324191665276885,
+          "vy": -0.7959260940551758,
+          "vz": 0.0,
+          "wx": -6.214140750500927e-15,
+          "wy": 2.2895271456491173e-08,
+          "w": 0.171941339969635,
+          "physxPosition": [
+            -69.86573791503906,
+            14.419784545898438,
+            54.17427062988281
+          ],
+          "quaternionWxyz": [
+            0.9932537078857422,
+            6.612957292873034e-08,
+            0.11596126109361649,
+            7.720571737479531e-09
+          ],
+          "physxLinearVelocity": [
+            0.7959260940551758,
+            0.0,
+            -0.00025324191665276885
+          ],
+          "physxAngularVelocity": [
+            -6.214140750500927e-15,
+            0.171941339969635,
+            2.2895271456491173e-08
+          ]
+        },
+        "targetsAfterScene": {
+          "2": {
+            "index": 2,
+            "enabled": true,
+            "x": 2.375,
+            "y": 5.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 4.03343645375559e-13,
+            "vx": 1.021970051987009e-12,
+            "vy": 4.937725575637764e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.055053946749861e-19,
+            "w": 5.298255324054368e-12,
+            "physxPosition": [
+              -69.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              2.016718226877795e-13,
+              1.3427115589213256e-20
+            ],
+            "physxLinearVelocity": [
+              -4.937725575637764e-13,
+              0.0,
+              -1.021970051987009e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.298255324054368e-12,
+              7.055053946749861e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 350,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3411,
+          5.4877
+        ],
+        "target": [
+          2.4847,
+          3.8823
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.3409996032714844,
+          5.488194956542969
+        ],
+        "target": [
+          2.4851646423339844,
+          3.8827567241210943
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 0.000505036120019652,
+        "target": 0.0006515285268657138
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 1,
+      "sampleId": 11001,
+      "label": "collision_headon_y5p2_v4_unique_t03_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1235,
+      "firstContactCounts": [
+        2
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 5.493222727539063,
+          "z": 0.11500000000000021,
+          "yaw": 0.03590713189588642,
+          "vx": 8.25417009764351e-05,
+          "vy": -1.1936678886413574,
+          "vz": 0.0,
+          "wx": -9.215718466126788e-18,
+          "wy": 7.051468436936048e-11,
+          "w": 0.0005295623559504747,
+          "physxPosition": [
+            -69.87062072753906,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9998388886451721,
+            6.656753726019815e-08,
+            0.017952602356672287,
+            1.19526188946395e-09
+          ],
+          "physxLinearVelocity": [
+            1.1936678886413574,
+            0.0,
+            -8.25417009764351e-05
+          ],
+          "physxAngularVelocity": [
+            -9.215718466126788e-18,
+            0.0005295623559504747,
+            7.051468436936048e-11
+          ]
+        },
+        "targets": {
+          "3": {
+            "index": 3,
+            "enabled": true,
+            "x": 2.375,
+            "y": 5.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 2.0129137614545434e-13,
+            "vx": 1.0188081931913895e-12,
+            "vy": 4.920099700919667e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.031280775945087e-19,
+            "w": 5.280401983720484e-12,
+            "physxPosition": [
+              -69.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0064568807272717e-13,
+              6.70089280316726e-21
+            ],
+            "physxLinearVelocity": [
+              -4.920099700919667e-13,
+              0.0,
+              -1.0188081931913895e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.280401983720484e-12,
+              7.031280775945087e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3504791259765625,
+          "y": 5.482106699707032,
+          "z": 0.11500000000000021,
+          "yaw": 0.03480155905270347,
+          "vx": -0.012139912694692612,
+          "vy": -1.1112709045410156,
+          "vz": 0.0,
+          "wx": 1.8799445219264783e-15,
+          "wy": -1.4269975423530923e-08,
+          "w": -0.10716690868139267,
+          "physxPosition": [
+            -69.85950469970703,
+            14.419784545898438,
+            54.174522399902344
+          ],
+          "quaternionWxyz": [
+            0.9998487234115601,
+            6.656819095951505e-08,
+            0.017399903386831284,
+            1.158464213446564e-09
+          ],
+          "physxLinearVelocity": [
+            1.1112709045410156,
+            0.0,
+            0.012139912694692612
+          ],
+          "physxAngularVelocity": [
+            1.8799445219264783e-15,
+            -0.10716690868139267,
+            -1.4269975423530923e-08
+          ]
+        },
+        "targetsAfterScene": {
+          "3": {
+            "index": 3,
+            "enabled": true,
+            "x": 2.3750991821289062,
+            "y": 5.1992011210937505,
+            "z": 0.11500000000000021,
+            "yaw": -0.0004991075153229533,
+            "vx": 0.00986805371940136,
+            "vy": -0.08004260063171387,
+            "vz": 0.0,
+            "wx": 8.613790889379289e-29,
+            "wy": -7.099559606871253e-09,
+            "w": -0.05331678315997124,
+            "physxPosition": [
+              -69.57659912109375,
+              14.419784545898438,
+              54.14990234375
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -0.00024955376284196973,
+              -1.6615046144474732e-11
+            ],
+            "physxLinearVelocity": [
+              0.08004260063171387,
+              0.0,
+              -0.00986805371940136
+            ],
+            "physxAngularVelocity": [
+              8.613790889379289e-29,
+              -0.05331678315997124,
+              -7.099559606871253e-09
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 485,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3272,
+          5.4579
+        ],
+        "target": [
+          0.0,
+          0.0
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.3272972106933594,
+          5.4582953593750005
+        ],
+        "target": [
+          2.5391502380371094,
+          2.5985160014648443
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 0.0004071350565892273,
+        "target": null
+      },
+      "unityCleared": {
+        "active": false,
+        "target": true
+      }
+    },
+    {
+      "seq": 2,
+      "sampleId": 11002,
+      "label": "collision_headon_y6p2_v3p4_unique_t04_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1446,
+      "firstContactCounts": [
+        2
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.494985117675782,
+          "z": 0.11500000000000021,
+          "yaw": 0.3176608579215006,
+          "vx": 0.00010022991773439571,
+          "vy": -0.8938374519348145,
+          "vz": 0.0,
+          "wx": -3.3306690738754696e-15,
+          "wy": 1.1090097729038462e-08,
+          "w": 0.0832853764295578,
+          "physxPosition": [
+            -70.87238311767578,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9874129891395569,
+            6.574087052513278e-08,
+            0.15816347301006317,
+            1.0530370353478702e-08
+          ],
+          "physxLinearVelocity": [
+            0.8938374519348145,
+            0.0,
+            -0.00010022991773439571
+          ],
+          "physxAngularVelocity": [
+            -3.3306690738754696e-15,
+            0.0832853764295578,
+            1.1090097729038462e-08
+          ]
+        },
+        "targets": {
+          "4": {
+            "index": 4,
+            "enabled": true,
+            "x": 2.375,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 2.0129137614545434e-13,
+            "vx": 1.0188081931913895e-12,
+            "vy": 4.920099700919667e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.031280775945087e-19,
+            "w": 5.280401983720484e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0064568807272717e-13,
+              6.70089280316726e-21
+            ],
+            "physxLinearVelocity": [
+              -4.920099700919667e-13,
+              0.0,
+              -1.0188081931913895e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.280401983720484e-12,
+              7.031280775945087e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.486043467285157,
+          "z": 0.11500000000000021,
+          "yaw": 0.31849327324415966,
+          "vx": 0.00010023007052950561,
+          "vy": -0.8938374519348145,
+          "vz": 0.0,
+          "wx": -3.329008042265904e-15,
+          "wy": 1.1084567042018989e-08,
+          "w": 0.08324383944272995,
+          "physxPosition": [
+            -70.86344146728516,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9873470067977905,
+            6.573647226559842e-08,
+            0.1585744172334671,
+            1.0557731577875984e-08
+          ],
+          "physxLinearVelocity": [
+            0.8938374519348145,
+            0.0,
+            -0.00010023007052950561
+          ],
+          "physxAngularVelocity": [
+            -3.329008042265904e-15,
+            0.08324383944272995,
+            1.1084567042018989e-08
+          ]
+        },
+        "targetsAfterScene": {
+          "4": {
+            "index": 4,
+            "enabled": true,
+            "x": 2.375,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 4.03343645375559e-13,
+            "vx": 1.021970051987009e-12,
+            "vy": 4.937725575637764e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.055053946749861e-19,
+            "w": 5.298255324054368e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              2.016718226877795e-13,
+              1.3427115589213256e-20
+            ],
+            "physxLinearVelocity": [
+              -4.937725575637764e-13,
+              0.0,
+              -1.021970051987009e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.298255324054368e-12,
+              7.055053946749861e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 394,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3417,
+          6.4857
+        ],
+        "target": [
+          2.4794,
+          4.513
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.3416786193847656,
+          6.485661997558594
+        ],
+        "target": [
+          2.4794349670410156,
+          4.513036265136719
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 4.360408536545332e-05,
+        "target": 5.0377118800714616e-05
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 3,
+      "sampleId": 11003,
+      "label": "collision_headon_y6p2_v4_unique_t05_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1155,
+      "firstContactCounts": [
+        2
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.4964118144531255,
+          "z": 0.11500000000000021,
+          "yaw": 0.32154963425314237,
+          "vx": 8.770974091021344e-05,
+          "vy": -1.2724319696426392,
+          "vz": 0.0,
+          "wx": 6.938893903907228e-18,
+          "wy": 8.658016664719881e-11,
+          "w": 0.0006502057076431811,
+          "physxPosition": [
+            -70.87380981445312,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9871035814285278,
+            6.572042821062496e-08,
+            0.1600830852985382,
+            1.0658175675359871e-08
+          ],
+          "physxLinearVelocity": [
+            1.2724319696426392,
+            0.0,
+            -8.770974091021344e-05
+          ],
+          "physxAngularVelocity": [
+            6.938893903907228e-18,
+            0.0006502057076431811,
+            8.658016664719881e-11
+          ]
+        },
+        "targets": {
+          "5": {
+            "index": 5,
+            "enabled": true,
+            "x": 2.375,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 2.0129137614545434e-13,
+            "vx": 1.0188081931913895e-12,
+            "vy": 4.920099700919667e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.031280775945087e-19,
+            "w": 5.280401983720484e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0064568807272717e-13,
+              6.70089280316726e-21
+            ],
+            "physxLinearVelocity": [
+              -4.920099700919667e-13,
+              0.0,
+              -1.0188081931913895e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.280401983720484e-12,
+              7.031280775945087e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.483701243164063,
+          "z": 0.11500000000000021,
+          "yaw": 0.3215600800406079,
+          "vx": 1.660902489675209e-05,
+          "vy": -1.2709846496582031,
+          "vz": 0.0,
+          "wx": 1.2232881257109883e-17,
+          "wy": 1.4326609343306984e-10,
+          "w": 0.0010759095894172788,
+          "physxPosition": [
+            -70.86109924316406,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.987102746963501,
+            6.57203713672061e-08,
+            0.16008824110031128,
+            1.0658518512229875e-08
+          ],
+          "physxLinearVelocity": [
+            1.2709846496582031,
+            0.0,
+            -1.660902489675209e-05
+          ],
+          "physxAngularVelocity": [
+            1.2232881257109883e-17,
+            0.0010759095894172788,
+            1.4326609343306984e-10
+          ]
+        },
+        "targetsAfterScene": {
+          "5": {
+            "index": 5,
+            "enabled": true,
+            "x": 2.375,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 1.1636340104813422e-06,
+            "vx": 4.081309452885762e-05,
+            "vy": -7.153109891078202e-06,
+            "vz": 0.0,
+            "wx": -1.291109274851368e-31,
+            "wy": 1.0641433047242632e-11,
+            "w": 7.991580059751868e-05,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              5.818170052407368e-07,
+              3.873680212316752e-14
+            ],
+            "physxLinearVelocity": [
+              7.153109891078202e-06,
+              0.0,
+              -4.081309452885762e-05
+            ],
+            "physxAngularVelocity": [
+              -1.291109274851368e-31,
+              7.991580059751868e-05,
+              1.0641433047242632e-11
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 554,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3326,
+          6.4829
+        ],
+        "target": [
+          0.0,
+          0.0
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.332630157470703,
+          6.482884897949219
+        ],
+        "target": [
+          2.583160400390625,
+          2.787839426757813
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 3.3727510684934605e-05,
+        "target": null
+      },
+      "unityCleared": {
+        "active": false,
+        "target": true
+      }
+    },
+    {
+      "seq": 4,
+      "sampleId": 11004,
+      "label": "collision_headon_y8_v3p4_unique_t06_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1259,
+      "firstContactCounts": [
+        1
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 8.299436106445313,
+          "z": 0.11500000000000021,
+          "yaw": 0.454358784612828,
+          "vx": 7.050662679830566e-05,
+          "vy": -1.0617032051086426,
+          "vz": 0.0,
+          "wx": -2.6020852139652106e-17,
+          "wy": 6.915750611069527e-11,
+          "w": 0.000519364548381418,
+          "physxPosition": [
+            -72.67683410644531,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9743056297302246,
+            6.486826009677316e-08,
+            0.22523030638694763,
+            1.4995626074210122e-08
+          ],
+          "physxLinearVelocity": [
+            1.0617032051086426,
+            0.0,
+            -7.050662679830566e-05
+          ],
+          "physxAngularVelocity": [
+            -2.6020852139652106e-17,
+            0.000519364548381418,
+            6.915750611069527e-11
+          ]
+        },
+        "targets": {
+          "6": {
+            "index": 6,
+            "enabled": true,
+            "x": 2.375,
+            "y": 7.999997629882813,
+            "z": 0.11500000000000021,
+            "yaw": 2.0126711712184497e-13,
+            "vx": 1.0185534056808554e-12,
+            "vy": 4.91928980189682e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.029951083110408e-19,
+            "w": 5.2794036503600594e-12,
+            "physxPosition": [
+              -72.37739562988281,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0063355856092249e-13,
+              6.700085009600314e-21
+            ],
+            "physxLinearVelocity": [
+              -4.91928980189682e-13,
+              0.0,
+              -1.0185534056808554e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.2794036503600594e-12,
+              7.029951083110408e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 8.288815989257813,
+          "z": 0.11500000000000021,
+          "yaw": 0.45436398932452476,
+          "vx": 7.050677959341556e-05,
+          "vy": -1.0617032051086426,
+          "vz": 0.0,
+          "wx": -2.601591552575639e-17,
+          "wy": 6.914454425688277e-11,
+          "w": 0.0005192671669647098,
+          "physxPosition": [
+            -72.66621398925781,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9743050336837769,
+            6.486822456963637e-08,
+            0.22523283958435059,
+            1.4995794828109865e-08
+          ],
+          "physxLinearVelocity": [
+            1.0617032051086426,
+            0.0,
+            -7.050677959341556e-05
+          ],
+          "physxAngularVelocity": [
+            -2.601591552575639e-17,
+            0.0005192671669647098,
+            6.914454425688277e-11
+          ]
+        },
+        "targetsAfterScene": {
+          "6": {
+            "index": 6,
+            "enabled": true,
+            "x": 2.375,
+            "y": 7.999997629882813,
+            "z": 0.11500000000000021,
+            "yaw": 4.032951815384489e-13,
+            "vx": 1.021698784603453e-12,
+            "vy": 4.936870140123673e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.053526764543935e-19,
+            "w": 5.297108671836748e-12,
+            "physxPosition": [
+              -72.37739562988281,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              2.0164759076922445e-13,
+              1.3425501617666497e-20
+            ],
+            "physxLinearVelocity": [
+              -4.936870140123673e-13,
+              0.0,
+              -1.021698784603453e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.297108671836748e-12,
+              7.053526764543935e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 462,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3351,
+          8.2867
+        ],
+        "target": [
+          2.5596,
+          5.6563
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.3350677490234375,
+          8.28665687060547
+        ],
+        "target": [
+          2.559558868408203,
+          5.656301035644532
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 5.385415640234746e-05,
+        "target": 4.114462787958154e-05
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 5,
+      "sampleId": 11005,
+      "label": "collision_headon_y8_v4_unique_t07_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1022,
+      "firstContactCounts": [
+        2
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 8.2965521953125,
+          "z": 0.11500000000000021,
+          "yaw": 0.5466672220230289,
+          "vx": 9.731459431350231e-05,
+          "vy": -1.416949987411499,
+          "vz": 0.0,
+          "wx": -3.469446951953614e-18,
+          "wy": 1.226347218219459e-10,
+          "w": 0.000920970574952662,
+          "physxPosition": [
+            -72.6739501953125,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9628763794898987,
+            6.410741093532124e-08,
+            0.2699427902698517,
+            1.797254078894639e-08
+          ],
+          "physxLinearVelocity": [
+            1.416949987411499,
+            0.0,
+            -9.731459431350231e-05
+          ],
+          "physxAngularVelocity": [
+            -3.469446951953614e-18,
+            0.000920970574952662,
+            1.226347218219459e-10
+          ]
+        },
+        "targets": {
+          "7": {
+            "index": 7,
+            "enabled": true,
+            "x": 2.375,
+            "y": 7.999997629882813,
+            "z": 0.11500000000000021,
+            "yaw": 2.0126711712184497e-13,
+            "vx": 1.0185534056808554e-12,
+            "vy": 4.91928980189682e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 7.029951083110408e-19,
+            "w": 5.2794036503600594e-12,
+            "physxPosition": [
+              -72.37739562988281,
+              14.419784545898438,
+              54.150001525878906
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.0063355856092249e-13,
+              6.700085009600314e-21
+            ],
+            "physxLinearVelocity": [
+              -4.91928980189682e-13,
+              0.0,
+              -1.0185534056808554e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              5.2794036503600594e-12,
+              7.029951083110408e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3505287170410156,
+          "y": 8.283078684570313,
+          "z": 0.11500000000000021,
+          "yaw": 0.5462660137833218,
+          "vx": -0.007196830585598946,
+          "vy": -1.3476580381393433,
+          "vz": 0.0,
+          "wx": 1.4234219272019066e-16,
+          "wy": -5.3424815682490134e-09,
+          "w": -0.040121328085660934,
+          "physxPosition": [
+            -72.66047668457031,
+            14.419784545898438,
+            54.17447280883789
+          ],
+          "quaternionWxyz": [
+            0.9629305601119995,
+            6.411101338699154e-08,
+            0.26974964141845703,
+            1.7959679965429132e-08
+          ],
+          "physxLinearVelocity": [
+            1.3476580381393433,
+            0.0,
+            0.007196830585598946
+          ],
+          "physxAngularVelocity": [
+            1.4234219272019066e-16,
+            -0.040121328085660934,
+            -5.3424815682490134e-09
+          ]
+        },
+        "targetsAfterScene": {
+          "7": {
+            "index": 7,
+            "enabled": true,
+            "x": 2.375049591064453,
+            "y": 7.999326243164063,
+            "z": 0.11500000000000021,
+            "yaw": -8.836956834490545e-05,
+            "vx": 0.0049397447146475315,
+            "vy": -0.06693750619888306,
+            "vz": 0.0,
+            "wx": 1.4276166361358053e-29,
+            "wy": -1.1766536633928126e-09,
+            "w": -0.008836518973112106,
+            "physxPosition": [
+              -72.37672424316406,
+              14.419784545898438,
+              54.14995193481445
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -4.418478420120664e-05,
+              -2.9417798492331615e-12
+            ],
+            "physxLinearVelocity": [
+              0.06693750619888306,
+              0.0,
+              -0.0049397447146475315
+            ],
+            "physxAngularVelocity": [
+              1.4276166361358053e-29,
+              -0.008836518973112106,
+              -1.1766536633928126e-09
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 581,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.3207,
+          8.2609
+        ],
+        "target": [
+          2.6856,
+          4.2025
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.3197250366210938,
+          8.259427561523438
+        ],
+        "target": [
+          2.6700477600097656,
+          4.234517588378907
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 0.0017659639456871093,
+        "target": 0.03559491725394193
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 6,
+      "sampleId": 11006,
+      "label": "collision_glance_left_target_unique_t08_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1333,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.450810923339844,
+          "z": 0.11500000000000021,
+          "yaw": 0.4470432577304234,
+          "vx": 6.997489253990352e-05,
+          "vy": -1.0346320867538452,
+          "vz": 0.0,
+          "wx": -8.673617379884035e-18,
+          "wy": 5.750031700779701e-11,
+          "w": 0.0004318206338211894,
+          "physxPosition": [
+            -70.82820892333984,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.97512286901474,
+            6.492263793234088e-08,
+            0.22166500985622406,
+            1.4758230193478994e-08
+          ],
+          "physxLinearVelocity": [
+            1.0346320867538452,
+            0.0,
+            -6.997489253990352e-05
+          ],
+          "physxAngularVelocity": [
+            -8.673617379884035e-18,
+            0.0004318206338211894,
+            5.750031700779701e-11
+          ]
+        },
+        "targets": {
+          "8": {
+            "index": 8,
+            "enabled": true,
+            "x": 2.1949996948242188,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -6.687010022316323e-14,
+            "vx": 2.205895839255123e-12,
+            "vy": -1.137182795846181e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -2.9950811528322035e-19,
+            "w": -2.2492678292823642e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.33000183105469
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -3.343505011158161e-14,
+              -2.226073083144476e-21
+            ],
+            "physxLinearVelocity": [
+              1.137182795846181e-13,
+              0.0,
+              -2.205895839255123e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2492678292823642e-12,
+              -2.9950811528322035e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.440465464355469,
+          "z": 0.11500000000000021,
+          "yaw": 0.44704757198955314,
+          "vx": 6.997504533501342e-05,
+          "vy": -1.0346320867538452,
+          "vz": 0.0,
+          "wx": -8.669105109642559e-18,
+          "wy": 5.747046935566935e-11,
+          "w": 0.00043159647611901164,
+          "physxPosition": [
+            -70.81786346435547,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9751225113868713,
+            6.49226166160588e-08,
+            0.22166714072227478,
+            1.4758372302026146e-08
+          ],
+          "physxLinearVelocity": [
+            1.0346320867538452,
+            0.0,
+            -6.997504533501342e-05
+          ],
+          "physxAngularVelocity": [
+            -8.669105109642559e-18,
+            0.00043159647611901164,
+            5.747046935566935e-11
+          ]
+        },
+        "targetsAfterScene": {
+          "8": {
+            "index": 8,
+            "enabled": true,
+            "x": 2.1949996948242188,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -1.3459361663387126e-13,
+            "vx": 2.236566617672131e-12,
+            "vy": -1.1552678301843256e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -3.033253987137877e-19,
+            "w": -2.2779352189250535e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              54.33000183105469
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -6.729680831693563e-14,
+              -4.480556669935237e-21
+            ],
+            "physxLinearVelocity": [
+              1.1552678301843256e-13,
+              0.0,
+              -2.236566617672131e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2779352189250535e-12,
+              -3.033253987137877e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 385,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.7457,
+          6.1852
+        ],
+        "target": [
+          1.4741,
+          4.7581
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.7457504272460938,
+          6.185201182128907
+        ],
+        "target": [
+          1.4741325378417969,
+          4.7580695292968755
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 5.0441100080898796e-05,
+        "target": 4.457773993469897e-05
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 7,
+      "sampleId": 11007,
+      "label": "collision_glance_right_target_unique_t09_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1336,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.420354380371094,
+          "z": 0.11500000000000021,
+          "yaw": 0.5268506129444479,
+          "vx": 6.976654549362138e-05,
+          "vy": -1.0314233303070068,
+          "vz": 0.0,
+          "wx": 6.071532165918825e-18,
+          "wy": 5.741076017362623e-11,
+          "w": 0.0004311470838729292,
+          "physxPosition": [
+            -70.7977523803711,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9655036926269531,
+            6.428235366229273e-08,
+            0.26038920879364014,
+            1.7336468260964466e-08
+          ],
+          "physxLinearVelocity": [
+            1.0314233303070068,
+            0.0,
+            -6.976654549362138e-05
+          ],
+          "physxAngularVelocity": [
+            6.071532165918825e-18,
+            0.0004311470838729292,
+            5.741076017362623e-11
+          ]
+        },
+        "targets": {
+          "9": {
+            "index": 9,
+            "enabled": true,
+            "x": 2.5550003051757812,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -6.687010022316323e-14,
+            "vx": 2.2058934540103436e-12,
+            "vy": -1.137153522387524e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -2.995153531135802e-19,
+            "w": -2.2493220393909885e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              53.970001220703125
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -3.343505011158161e-14,
+              -2.226073083144476e-21
+            ],
+            "physxLinearVelocity": [
+              1.137153522387524e-13,
+              0.0,
+              -2.2058934540103436e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2493220393909885e-12,
+              -2.995153531135802e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.3506011962890625,
+          "y": 6.410039438964844,
+          "z": 0.11500000000000021,
+          "yaw": 0.5268549207073185,
+          "vx": 6.976669828873128e-05,
+          "vy": -1.0314233303070068,
+          "vz": 0.0,
+          "wx": 6.068592779612118e-18,
+          "wy": 5.7382956025753273e-11,
+          "w": 0.0004309382929932326,
+          "physxPosition": [
+            -70.78743743896484,
+            14.419784545898438,
+            54.174400329589844
+          ],
+          "quaternionWxyz": [
+            0.9655031561851501,
+            6.428231813515595e-08,
+            0.2603912949562073,
+            1.733660681679794e-08
+          ],
+          "physxLinearVelocity": [
+            1.0314233303070068,
+            0.0,
+            -6.976669828873128e-05
+          ],
+          "physxAngularVelocity": [
+            6.068592779612118e-18,
+            0.0004309382929932326,
+            5.7382956025753273e-11
+          ]
+        },
+        "targetsAfterScene": {
+          "9": {
+            "index": 9,
+            "enabled": true,
+            "x": 2.5550003051757812,
+            "y": 6.200002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -1.3459337268838245e-13,
+            "vx": 2.23658439858776e-12,
+            "vy": -1.1553442664374858e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -3.0331717860645047e-19,
+            "w": -2.2778732025607873e-12,
+            "physxPosition": [
+              -70.57740020751953,
+              14.419784545898438,
+              53.970001220703125
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -6.729668634419123e-14,
+              -4.480548188102784e-21
+            ],
+            "physxLinearVelocity": [
+              1.1553442664374858e-13,
+              0.0,
+              -2.23658439858776e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2778732025607873e-12,
+              -3.0331717860645047e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 332,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          1.785,
+          5.8419
+        ],
+        "target": [
+          3.2361,
+          5.2663
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          1.7850074768066406,
+          5.841855540039063
+        ],
+        "target": [
+          3.2361412048339844,
+          5.266301645996094
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 4.508426293116762e-05,
+        "target": 4.123769691463866e-05
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 8,
+      "sampleId": 11008,
+      "label": "collision_glance_left_curl_in_unique_t10_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1383,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 1.9574737548828125,
+          "y": 7.0591254375000005,
+          "z": 0.11500000000000021,
+          "yaw": 0.33480969361058843,
+          "vx": -0.009948858059942722,
+          "vy": -0.9538384675979614,
+          "vz": 0.0,
+          "wx": 7.793765632868599e-14,
+          "wy": -1.2597893395138726e-08,
+          "w": -0.09460904449224472,
+          "physxPosition": [
+            -71.4365234375,
+            14.419784545898438,
+            54.567527770996094
+          ],
+          "quaternionWxyz": [
+            -0.9860205054283142,
+            -6.564788890273121e-08,
+            -0.1666240394115448,
+            -1.1094018148583018e-08
+          ],
+          "physxLinearVelocity": [
+            0.9538384675979614,
+            0.0,
+            0.009948858059942722
+          ],
+          "physxAngularVelocity": [
+            7.793765632868599e-14,
+            -0.09460904449224472,
+            -1.2597893395138726e-08
+          ]
+        },
+        "targets": {
+          "10": {
+            "index": 10,
+            "enabled": true,
+            "x": 2.095001220703125,
+            "y": 6.8000006816406255,
+            "z": 0.11500000000000021,
+            "yaw": -4.686099598638638e-12,
+            "vx": 4.867101079802927e-12,
+            "vy": -1.0773295450183795e-11,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -6.843790467340169e-18,
+            "w": -5.139599162928832e-11,
+            "physxPosition": [
+              -71.17739868164062,
+              14.419784545898438,
+              54.43000030517578
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -2.343049799319319e-12,
+              -1.5599800464607256e-19
+            ],
+            "physxLinearVelocity": [
+              1.0773295450183795e-11,
+              0.0,
+              -4.867101079802927e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -5.139599162928832e-11,
+              -6.843790467340169e-18
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 1.9573745727539062,
+          "y": 7.049588694335938,
+          "z": 0.11500000000000021,
+          "yaw": 0.3338640838272333,
+          "vx": -0.009948858059942722,
+          "vy": -0.9538384675979614,
+          "vz": 0.0,
+          "wx": 7.789853018278642e-14,
+          "wy": -1.2591569564790461e-08,
+          "w": -0.09456155449151993,
+          "physxPosition": [
+            -71.42698669433594,
+            14.419784545898438,
+            54.567626953125
+          ],
+          "quaternionWxyz": [
+            -0.9860991835594177,
+            -6.565312560269376e-08,
+            -0.1661578267812729,
+            -1.1062978089171338e-08
+          ],
+          "physxLinearVelocity": [
+            0.9538384675979614,
+            0.0,
+            0.009948858059942722
+          ],
+          "physxAngularVelocity": [
+            7.789853018278642e-14,
+            -0.09456155449151993,
+            -1.2591569564790461e-08
+          ]
+        },
+        "targetsAfterScene": {
+          "10": {
+            "index": 10,
+            "enabled": true,
+            "x": 2.095001220703125,
+            "y": 6.8000006816406255,
+            "z": 0.11500000000000021,
+            "yaw": -9.35507053767548e-12,
+            "vx": 4.9428985210431264e-12,
+            "vy": -1.0719605758602313e-11,
+            "vz": 0.0,
+            "wx": 2.2840659099748897e-38,
+            "wy": -6.78153892239096e-18,
+            "w": -5.092849059140647e-11,
+            "physxPosition": [
+              -71.17739868164062,
+              14.419784545898438,
+              54.43000030517578
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -4.67753526883774e-12,
+              -3.114257975067605e-19
+            ],
+            "physxLinearVelocity": [
+              1.0719605758602313e-11,
+              0.0,
+              -4.9428985210431264e-12
+            ],
+            "physxAngularVelocity": [
+              2.2840659099748897e-38,
+              -5.092849059140647e-11,
+              -6.78153892239096e-18
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 371,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          1.6749,
+          6.908
+        ],
+        "target": [
+          2.6845,
+          5.427
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          1.6743850708007812,
+          6.909352793457032
+        ],
+        "target": [
+          2.6843299865722656,
+          5.4267096660156255
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 0.0014474813358365528,
+        "target": 0.0003364496813677623
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 9,
+      "sampleId": 11009,
+      "label": "collision_glance_right_curl_in_unique_t11_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1380,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.7441482543945312,
+          "y": 7.086263193847657,
+          "z": 0.11500000000000021,
+          "yaw": 1.2739751967983857,
+          "vx": 0.00997069850564003,
+          "vy": -0.9527469277381897,
+          "vz": 0.0,
+          "wx": 5.773159728050814e-15,
+          "wy": 1.2824902029251461e-08,
+          "w": 0.09631327539682388,
+          "physxPosition": [
+            -71.46366119384766,
+            14.419784545898438,
+            53.780853271484375
+          ],
+          "quaternionWxyz": [
+            -0.803891122341156,
+            -5.352236343014738e-08,
+            -0.5947765111923218,
+            -3.959965866329185e-08
+          ],
+          "physxLinearVelocity": [
+            0.9527469277381897,
+            0.0,
+            -0.00997069850564003
+          ],
+          "physxAngularVelocity": [
+            5.773159728050814e-15,
+            0.09631327539682388,
+            1.2824902029251461e-08
+          ]
+        },
+        "targets": {
+          "11": {
+            "index": 11,
+            "enabled": true,
+            "x": 2.654998779296875,
+            "y": 6.8000006816406255,
+            "z": 0.11500000000000021,
+            "yaw": -6.685311890663667e-14,
+            "vx": 2.2054723498865503e-12,
+            "vy": -1.1373757838328835e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -2.994038388272504e-19,
+            "w": -2.2484846016329607e-12,
+            "physxPosition": [
+              -71.17739868164062,
+              14.419784545898438,
+              53.87000274658203
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -3.3426559453318336e-14,
+              -2.2255082334927886e-21
+            ],
+            "physxLinearVelocity": [
+              1.1373757838328835e-13,
+              0.0,
+              -2.2054723498865503e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2484846016329607e-12,
+              -2.994038388272504e-19
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.7442474365234375,
+          "y": 7.0767340800781255,
+          "z": 0.11500000000000021,
+          "yaw": 1.2749379260700548,
+          "vx": 0.00997069850564003,
+          "vy": -0.9527469277381897,
+          "vz": 0.0,
+          "wx": 5.770273039766571e-15,
+          "wy": 1.2818489381061227e-08,
+          "w": 0.09626511484384537,
+          "physxPosition": [
+            -71.45413208007812,
+            14.419784545898438,
+            53.78075408935547
+          ],
+          "quaternionWxyz": [
+            -0.8036047220230103,
+            -5.350329601583326e-08,
+            -0.5951634049415588,
+            -3.962541583746315e-08
+          ],
+          "physxLinearVelocity": [
+            0.9527469277381897,
+            0.0,
+            -0.00997069850564003
+          ],
+          "physxAngularVelocity": [
+            5.770273039766571e-15,
+            0.09626511484384537,
+            1.2818489381061227e-08
+          ]
+        },
+        "targetsAfterScene": {
+          "11": {
+            "index": 11,
+            "enabled": true,
+            "x": 2.654998779296875,
+            "y": 6.8000006816406255,
+            "z": 0.11500000000000021,
+            "yaw": -1.3455878663908016e-13,
+            "vx": 2.2361279494731434e-12,
+            "vy": -1.1555247860992046e-13,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": -3.032077581210462e-19,
+            "w": -2.2770515941544778e-12,
+            "physxPosition": [
+              -71.17739868164062,
+              14.419784545898438,
+              53.87000274658203
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -6.727939331954008e-14,
+              -4.479397082269886e-21
+            ],
+            "physxLinearVelocity": [
+              1.1555247860992046e-13,
+              0.0,
+              -2.2361279494731434e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              -2.2770515941544778e-12,
+              -3.032077581210462e-19
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 362,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.8706,
+          6.9791
+        ],
+        "target": [
+          2.2904,
+          5.4321
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.8706092834472656,
+          6.979123606445313
+        ],
+        "target": [
+          2.290477752685547,
+          5.432248606445313
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 2.5366250283738464e-05,
+        "target": 0.00016771808399301038
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    },
+    {
+      "seq": 10,
+      "sampleId": 11010,
+      "label": "collision_glance_wide_left_unique_t12_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1234,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.000598907470703,
+          "y": 5.993459238769532,
+          "z": 0.11500000000000021,
+          "yaw": 0.9000144007282713,
+          "vx": 8.11081044957973e-05,
+          "vy": -1.1778535842895508,
+          "vz": 0.0,
+          "wx": -2.42861286636753e-17,
+          "wy": 7.644387900462846e-11,
+          "w": 0.0005740836495533586,
+          "physxPosition": [
+            -70.37085723876953,
+            14.419784545898438,
+            54.5244026184082
+          ],
+          "quaternionWxyz": [
+            0.900443971157074,
+            5.995068619313315e-08,
+            0.43497201800346375,
+            2.8960036146941093e-08
+          ],
+          "physxLinearVelocity": [
+            1.1778535842895508,
+            0.0,
+            -8.11081044957973e-05
+          ],
+          "physxAngularVelocity": [
+            -2.42861286636753e-17,
+            0.0005740836495533586,
+            7.644387900462846e-11
+          ]
+        },
+        "targets": {
+          "12": {
+            "index": 12,
+            "enabled": true,
+            "x": 1.9550018310546875,
+            "y": 5.700002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 2.775212514221498e-13,
+            "vx": 2.898086284841561e-12,
+            "vy": 2.0139131586883498e-15,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 1.3595339956623019e-18,
+            "w": 1.0209926654125567e-11,
+            "physxPosition": [
+              -70.07740020751953,
+              14.419784545898438,
+              54.56999969482422
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              1.387606257110749e-13,
+              9.238547617057486e-21
+            ],
+            "physxLinearVelocity": [
+              -2.0139131586883498e-15,
+              0.0,
+              -2.898086284841561e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              1.0209926654125567e-11,
+              1.3595339956623019e-18
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 0,
+          "enabled": true,
+          "x": 2.000598907470703,
+          "y": 5.981679453613282,
+          "z": 0.11500000000000021,
+          "yaw": 0.9000201589810124,
+          "vx": 8.11082572909072e-05,
+          "vy": -1.1778535842895508,
+          "vz": 0.0,
+          "wx": -2.4280975328459094e-17,
+          "wy": 7.642946692199004e-11,
+          "w": 0.0005739754415117204,
+          "physxPosition": [
+            -70.35907745361328,
+            14.419784545898438,
+            54.5244026184082
+          ],
+          "quaternionWxyz": [
+            0.9004427194595337,
+            5.995060092800486e-08,
+            0.4349746108055115,
+            2.8960208453554515e-08
+          ],
+          "physxLinearVelocity": [
+            1.1778535842895508,
+            0.0,
+            -8.11082572909072e-05
+          ],
+          "physxAngularVelocity": [
+            -2.4280975328459094e-17,
+            0.0005739754415117204,
+            7.642946692199004e-11
+          ]
+        },
+        "targetsAfterScene": {
+          "12": {
+            "index": 12,
+            "enabled": true,
+            "x": 1.9550018310546875,
+            "y": 5.700002207519532,
+            "z": 0.11500000000000021,
+            "yaw": 5.598654135782755e-13,
+            "vx": 2.9470334592801573e-12,
+            "vy": 2.048966346661048e-15,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 1.3826941222355975e-18,
+            "w": 1.0383856101359168e-11,
+            "physxPosition": [
+              -70.07740020751953,
+              14.419784545898438,
+              54.56999969482422
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              2.7993270678913773e-13,
+              1.8637645821132685e-20
+            ],
+            "physxLinearVelocity": [
+              -2.048966346661048e-15,
+              0.0,
+              -2.9470334592801573e-12
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              1.0383856101359168e-11,
+              1.3826941222355975e-18
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 510,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.0506,
+          5.9749
+        ],
+        "target": [
+          0.0,
+          0.0
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.050567626953125,
+          5.974874033691407
+        ],
+        "target": [
+          1.5872116088867188,
+          2.836873545410157
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 4.15001607940883e-05,
+        "target": null
+      },
+      "unityCleared": {
+        "active": false,
+        "target": true
+      }
+    },
+    {
+      "seq": 11,
+      "sampleId": 11011,
+      "label": "collision_glance_wide_right_unique_t13_r00",
+      "finalSource": "position",
+      "policy": "no Unity pose, velocity, cache, or post-collision state is injected",
+      "unityMaterialTransition": false,
+      "wakeTargetAtCurrentPcmShell": false,
+      "motionKernel": "recovered-python",
+      "reachedFirstContact": true,
+      "firstContactStep": 1235,
+      "firstContactCounts": [
+        4
+      ],
+      "physicsOnlyTrailingStep": false,
+      "orientationEvidence": {
+        "resetSemantics": "RESETPOSITION preserves Rigidbody quaternion",
+        "provided": true,
+        "missingStoneIndices": [],
+        "strictEndpointComparable": true
+      },
+      "firstContactEntrance": {
+        "active": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.7005996704101562,
+          "y": 5.984464182617188,
+          "z": 0.11500000000000021,
+          "yaw": 1.2627375247268,
+          "vx": 8.093452197499573e-05,
+          "vy": -1.1750584840774536,
+          "vz": 0.0,
+          "wx": 1.3877787807814457e-17,
+          "wy": 7.008664482111016e-11,
+          "w": 0.0005263419006951153,
+          "physxPosition": [
+            -70.36186218261719,
+            14.419784545898438,
+            53.82440185546875
+          ],
+          "quaternionWxyz": [
+            0.8072203397750854,
+            5.374393197143945e-08,
+            0.5902501940727234,
+            3.929825709292345e-08
+          ],
+          "physxLinearVelocity": [
+            1.1750584840774536,
+            0.0,
+            -8.093452197499573e-05
+          ],
+          "physxAngularVelocity": [
+            1.3877787807814457e-17,
+            0.0005263419006951153,
+            7.008664482111016e-11
+          ]
+        },
+        "targets": {
+          "13": {
+            "index": 13,
+            "enabled": true,
+            "x": 2.7949981689453125,
+            "y": 5.700002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -1.6893749853891249e-12,
+            "vx": 2.3177681995889543e-11,
+            "vy": -3.4003303645002703e-12,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 4.061042803738783e-18,
+            "w": 3.049791322262685e-11,
+            "physxPosition": [
+              -70.07740020751953,
+              14.419784545898438,
+              53.730003356933594
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -8.446874926945624e-13,
+              -5.623847180852889e-20
+            ],
+            "physxLinearVelocity": [
+              3.4003303645002703e-12,
+              0.0,
+              -2.3177681995889543e-11
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              3.049791322262685e-11,
+              4.061042803738783e-18
+            ]
+          }
+        },
+        "afterScene": {
+          "index": 1,
+          "enabled": true,
+          "x": 2.7005996704101562,
+          "y": 5.972714915039063,
+          "z": 0.11500000000000021,
+          "yaw": 1.2627428183867233,
+          "vx": 8.093467477010563e-05,
+          "vy": -1.1750584840774536,
+          "vz": 0.0,
+          "wx": 1.3873718079200696e-17,
+          "wy": 7.006952656984922e-11,
+          "w": 0.0005262133781798184,
+          "physxPosition": [
+            -70.35011291503906,
+            14.419784545898438,
+            53.82440185546875
+          ],
+          "quaternionWxyz": [
+            0.8072187900543213,
+            5.3743828942742766e-08,
+            0.5902523398399353,
+            3.92983992014706e-08
+          ],
+          "physxLinearVelocity": [
+            1.1750584840774536,
+            0.0,
+            -8.093467477010563e-05
+          ],
+          "physxAngularVelocity": [
+            1.3873718079200696e-17,
+            0.0005262133781798184,
+            7.006952656984922e-11
+          ]
+        },
+        "targetsAfterScene": {
+          "13": {
+            "index": 13,
+            "enabled": true,
+            "x": 2.7949981689453125,
+            "y": 5.700002207519532,
+            "z": 0.11500000000000021,
+            "yaw": -3.362441401699723e-12,
+            "vx": 2.316405747770922e-11,
+            "vy": -3.340222196057674e-12,
+            "vz": 0.0,
+            "wx": 0.0,
+            "wy": 4.09420157936389e-18,
+            "w": 3.074693624705027e-11,
+            "physxPosition": [
+              -70.07740020751953,
+              14.419784545898438,
+              53.730003356933594
+            ],
+            "quaternionWxyz": [
+              1.0,
+              6.657902673623539e-08,
+              -1.6812207008498614e-12,
+              -1.1193402879188742e-19
+            ],
+            "physxLinearVelocity": [
+              3.340222196057674e-12,
+              0.0,
+              -2.316405747770922e-11
+            ],
+            "physxAngularVelocity": [
+              0.0,
+              3.074693624705027e-11,
+              4.09420157936389e-18
+            ]
+          }
+        }
+      },
+      "settle": {
+        "settled": true,
+        "steps": 489,
+        "movingIndices": []
+      },
+      "unityEndpoint": {
+        "active": [
+          2.4943,
+          5.9053
+        ],
+        "target": [
+          3.5121,
+          3.1502
+        ]
+      },
+      "localEndpoint": {
+        "active": [
+          2.4943275451660156,
+          5.905278696777344
+        ],
+        "target": [
+          3.5121498107910156,
+          3.1502432963867193
+        ],
+        "activeEnabled": true,
+        "targetEnabled": true
+      },
+      "endpointErrorM": {
+        "active": 3.482188200496486e-05,
+        "target": 6.599766665978751e-05
+      },
+      "unityCleared": {
+        "active": false,
+        "target": false
+      }
+    }
+  ],
+  "diagnosticEffectiveConfiguration": {
+    "iceMesh": {
+      "path": "D:\\Desktop\\冰壶\\DCCourse\\local_simulator\\assets\\unity_runtime_ice_triangle_mesh.json",
+      "mode": "unity-source-once",
+      "vertexSha256": "01a7fde6b4c13248053bbbccff5df80f5f4b88e2634d370cf588dbd5336f84ee",
+      "unityCookedTriangleSha256": "643fd5c9d59918e837fd9295e74c431602ed0ca5d100fa51dfa7ad75dec90856",
+      "sourceInputTriangleOrder": "captured Unity Gu::TriangleMesh.mTriangles reused directly",
+      "scale": [
+        4.997991561889648,
+        1.0160000324249268,
+        0.9956802725791931
+      ],
+      "actorPosition": [
+        -85.98600006103516,
+        14.304784774780273,
+        55.566017150878906
+      ],
+      "actorQuaternionWxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cookedEquivalence": "Unity raw vertices/triangles/face-remap/BVH34 nodes verified byte-for-byte",
+      "useFastMidphase": true,
+      "faceRemapPatched": true,
+      "faceRemapCount": 200
+    },
+    "pcmTaskCacheLifecycle": true,
+    "pcmMultiCacheLifecycle": true,
+    "releasePose": true,
+    "zeroVerticalSetter": true,
+    "transformScaleRefresh": true,
+    "bodyPoseWriteback": true
+  },
+  "diagnosticProfile": "full",
+  "diagnosticKeepMultiCache": false,
+  "diagnosticKeepPcmTaskCache": false,
+  "diagnosticFloat32BodyQuaternionNormalization": false,
+  "diagnosticDirectProbeScaleXz": null,
+  "diagnosticInitialQuaternionInjection": false,
+  "releaseBoundary": [
+    {
+      "sampleId": 11000,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.657902673623539e-08,
+          0,
+          0,
+          1
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.0,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          1.0,
+          6.657902673623539e-08,
+          0.0,
+          0.0
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.0,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          1.0,
+          6.657902673623539e-08,
+          0.0,
+          0.0
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "sampleId": 11001,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.657902673623539e-08,
+          0,
+          0,
+          1
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.0,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          1.0,
+          6.657902673623539e-08,
+          0.0,
+          0.0
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.0,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          1.0,
+          6.657902673623539e-08,
+          0.0,
+          0.0
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "sampleId": 11002,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.613170455693762e-08,
+          0.11568662524223328,
+          7.702283255639486e-09,
+          0.9932858347892761
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.2318924590554318,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9932857751846313,
+          6.613199587945928e-08,
+          0.11568661779165268,
+          7.70230279556472e-09
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.2318924590554318,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9932857751846313,
+          6.613199587945928e-08,
+          0.11568661779165268,
+          7.70230279556472e-09
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "sampleId": 11003,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.589805678913763e-08,
+          0.14258238673210144,
+          9.492889141426986e-09,
+          0.9897829294204712
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.2861399398505943,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9897830486297607,
+          6.589878864815546e-08,
+          0.14258240163326263,
+          9.492997499194189e-09
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.2861399398505943,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9897830486297607,
+          6.589878864815546e-08,
+          0.14258240163326263,
+          9.492997499194189e-09
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "sampleId": 11004,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.514345329833304e-08,
+          0.20651067793369293,
+          1.3749229310633382e-08,
+          0.9784443974494934
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.4160148143870262,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9784444570541382,
+          6.51438796239745e-08,
+          0.20651069283485413,
+          1.3749280824981724e-08
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.4160148143870262,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9784444570541382,
+          6.51438796239745e-08,
+          0.20651069283485413,
+          1.3749280824981724e-08
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    },
+    {
+      "sampleId": 11005,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.44059525711782e-08,
+          0.25336310267448425,
+          1.6868479946197112e-08,
+          0.9673712253570557
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.5123104503693914,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9673712253570557,
+          6.440663469220453e-08,
+          0.25336310267448425,
+          1.6868670016378928e-08
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.5123104503693914,
+        "vx": 0.0,
+        "vy": -4.0,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9673712253570557,
+          6.440663469220453e-08,
+          0.25336310267448425,
+          1.6868670016378928e-08
+        ],
+        "physxLinearVelocity": [
+          4.0,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "sampleId": 11006,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.519026385376492e-08,
+          0.20314593613147736,
+          1.3525206732367678e-08,
+          0.9791484475135803
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.4091395832425297,
+        "vx": 0.0,
+        "vy": -3.5999999046325684,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9791484475135803,
+          6.519075412825259e-08,
+          0.20314593613147736,
+          1.352525913489444e-08
+        ],
+        "physxLinearVelocity": [
+          3.5999999046325684,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.4091395832425297,
+        "vx": 0.0,
+        "vy": -3.5999999046325684,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9791484475135803,
+          6.519075412825259e-08,
+          0.20314593613147736,
+          1.352525913489444e-08
+        ],
+        "physxLinearVelocity": [
+          3.5999999046325684,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    },
+    {
+      "sampleId": 11007,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.459882229137293e-08,
+          0.2420354187488556,
+          1.611432054460238e-08,
+          0.9702674746513367
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.488926161908151,
+        "vx": 0.0,
+        "vy": -3.5999999046325684,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9702674150466919,
+          6.459946177983511e-08,
+          0.2420354038476944,
+          1.6114482193074764e-08
+        ],
+        "physxLinearVelocity": [
+          3.5999999046325684,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.3506011962890625,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.488926161908151,
+        "vx": 0.0,
+        "vy": -3.5999999046325684,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.174400329589844
+        ],
+        "quaternionWxyz": [
+          0.9702674150466919,
+          6.459946177983511e-08,
+          0.2420354038476944,
+          1.6114482193074764e-08
+        ],
+        "physxLinearVelocity": [
+          3.5999999046325684,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000785589218,
+        0.11500000208616257,
+        0.11270000785589218
+      ]
+    },
+    {
+      "sampleId": 11008,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          6.636536653559233e-08,
+          0.07996948063373566,
+          5.324400031980758e-09,
+          0.9967973232269287
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.3744010925293
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.1506004333496094,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.1601099234246207,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.3744010925293
+        ],
+        "quaternionWxyz": [
+          0.9967973232269287,
+          6.636579286123379e-08,
+          0.07996948063373566,
+          5.324290341945925e-09
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": -1.57,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.1506004333496094,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.1601099234246207,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": -2.0905817166294582e-07,
+        "w": -1.5700002908706665,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.3744010925293
+        ],
+        "quaternionWxyz": [
+          0.9967973232269287,
+          6.636579286123379e-08,
+          0.07996948063373566,
+          5.324290341945925e-09
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          -1.5700002908706665,
+          -2.0905817166294582e-07
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "sampleId": 11009,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          4.987447965731917e-08,
+          0.662448525428772,
+          4.4104698559976896e-08,
+          0.7491074800491333
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.97439956665039
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.55059814453125,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 1.4481652357646746,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.974403381347656
+        ],
+        "quaternionWxyz": [
+          0.7491074800491333,
+          4.987484558682809e-08,
+          0.662448525428772,
+          4.4105178176323534e-08
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 1.57,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.55059814453125,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 1.4481652357646746,
+        "vx": 0.0,
+        "vy": -3.4000000953674316,
+        "vz": 0.0,
+        "wx": -7.105427357601002e-15,
+        "wy": 2.0905817166294582e-07,
+        "w": 1.5700002908706665,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.974403381347656
+        ],
+        "quaternionWxyz": [
+          0.7491074800491333,
+          4.987484558682809e-08,
+          0.662448525428772,
+          4.4105178176323534e-08
+        ],
+        "physxLinearVelocity": [
+          3.4000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          -7.105427357601002e-15,
+          1.5700002908706665,
+          2.0905817166294582e-07
+        ]
+      },
+      "localGeometryScale": [
+        0.11270002275705338,
+        0.11500000208616257,
+        0.11270002275705338
+      ]
+    },
+    {
+      "sampleId": 11010,
+      "activeIndex": 0,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          -6.04666894332695e-08,
+          -0.4185178279876709,
+          -2.786470076898695e-08,
+          -0.9082085490226746
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.52439880371094
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 0,
+        "enabled": false,
+        "x": 2.000598907470703,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.8636254999071942,
+        "vx": 0.0,
+        "vy": -3.9000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.5244026184082
+        ],
+        "quaternionWxyz": [
+          0.9082086682319641,
+          6.046764866596277e-08,
+          0.4185178875923157,
+          2.7864514251518813e-08
+        ],
+        "physxLinearVelocity": [
+          3.9000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 0,
+        "enabled": true,
+        "x": 2.000598907470703,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 0.8636254999071942,
+        "vx": 0.0,
+        "vy": -3.9000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          54.5244026184082
+        ],
+        "quaternionWxyz": [
+          0.9082086682319641,
+          6.046764866596277e-08,
+          0.4185178875923157,
+          2.7864514251518813e-08
+        ],
+        "physxLinearVelocity": [
+          3.9000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270000040531158,
+        0.11500000208616257,
+        0.11270000040531158
+      ]
+    },
+    {
+      "sampleId": 11011,
+      "activeIndex": 1,
+      "unity": {
+        "layout": "PxTransform",
+        "q": [
+          -5.4447085062747647e-08,
+          -0.5755208730697632,
+          -3.831717876323637e-08,
+          -0.8177871108055115
+        ],
+        "p": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.82440185546875
+        ]
+      },
+      "ticks": [],
+      "setters": [],
+      "directContacts": [],
+      "localBeforeAngularSetter": {
+        "index": 1,
+        "enabled": false,
+        "x": 2.7005996704101562,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 1.22648184677764,
+        "vx": 0.0,
+        "vy": -3.9000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.82440185546875
+        ],
+        "quaternionWxyz": [
+          0.8177871108055115,
+          5.444746875582496e-08,
+          0.5755208730697632,
+          3.831761929973254e-08
+        ],
+        "physxLinearVelocity": [
+          3.9000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scriptAngularY": 0.0,
+      "localAfterRelease": {
+        "index": 1,
+        "enabled": true,
+        "x": 2.7005996704101562,
+        "y": 32.47680427050781,
+        "z": 0.1276152038574221,
+        "yaw": 1.22648184677764,
+        "vx": 0.0,
+        "vy": -3.9000000953674316,
+        "vz": 0.0,
+        "wx": 0.0,
+        "wy": 0.0,
+        "w": 0.0,
+        "physxPosition": [
+          -96.85420227050781,
+          14.43239974975586,
+          53.82440185546875
+        ],
+        "quaternionWxyz": [
+          0.8177871108055115,
+          5.444746875582496e-08,
+          0.5755208730697632,
+          3.831761929973254e-08
+        ],
+        "physxLinearVelocity": [
+          3.9000000953674316,
+          0.0,
+          -0.0
+        ],
+        "physxAngularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "localGeometryScale": [
+        0.11270001530647278,
+        0.11500000208616257,
+        0.11270001530647278
+      ]
+    }
+  ]
+}

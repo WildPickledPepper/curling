@@ -1,0 +1,1080 @@
+[
+  {
+    "rva": "0xd8cba",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x58]",
+    "beforeBytes": "cccccccccccc48895c2418574883ec3048896c2440488bea4889742448418bf0",
+    "afterBytes": "0fae5c24588b5c2458c7442458c09f00000fae542458e8db153700488bf8e8a3153700488bc84c8b0841ff512884c075"
+  },
+  {
+    "rva": "0xd8ccb",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x58]",
+    "beforeBytes": "896c2440488bea4889742448418bf00fae5c24588b5c2458c7442458c09f0000",
+    "afterBytes": "0fae542458e8db153700488bf8e8a3153700488bc84c8b0841ff512884c075094c8d057ed33700eb16488d15b5333e00"
+  },
+  {
+    "rva": "0xd8d76",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x58]",
+    "beforeBytes": "154885ff740e488b07ba01000000488bcfff501833ff83e3c0488bc7895c2458",
+    "afterBytes": "0fae542458488b5c24504883c4305fc3cccccccccccccccccccc488d4118c3cccccccccccccccccccccce98b163700cc"
+  },
+  {
+    "rva": "0xf9155",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "114a10c3cccccccccccccc40534154415641574883ec384d8bf84c8bf24c8be1",
+    "afterBytes": "0fae5c24688b5c246833c066837a0806c7442468c09f00000fae542468480f44c24885c0743748837850007430e8a912"
+  },
+  {
+    "rva": "0xf916d",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "8bf84c8bf24c8be10fae5c24688b5c246833c066837a0806c7442468c09f0000",
+    "afterBytes": "0fae542468480f44c24885c0743748837850007430e8a9123500488d0dd213360041b95801000048894c24204c8d0570"
+  },
+  {
+    "rva": "0xf935e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "00eb114533c94d8bc7498bd6498bcce81e580000488b6c246083e3c0895c2468",
+    "afterBytes": "0fae5424684883c438415f415e415c5bc3cccccccccccccccccccccccccccccccccc48895c24084889742410574883ec"
+  },
+  {
+    "rva": "0xf94f5",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "cccccccccccccccccccccc48895c24104889742418574883ec30488bfa488bf1",
+    "afterBytes": "0fae5c24408b5c2440488d542440488b01c7442440c09f00000fae542440ff5018448b0041c1e80d41f6c00174376683"
+  },
+  {
+    "rva": "0xf950e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "30488bfa488bf10fae5c24408b5c2440488d542440488b01c7442440c09f0000",
+    "afterBytes": "0fae542440ff5018448b0041c1e80d41f6c001743766837f080c7430e8010f3500488d0d0a14360041b92f0300004889"
+  },
+  {
+    "rva": "0xf9603",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "0000e896103500eb0b488bd7488bcee8c9420000488b74245083e3c0895c2440",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccccccccc48895c24084889742410574883ec30488b0248"
+  },
+  {
+    "rva": "0xf9793",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x78]",
+    "beforeBytes": "cccccccccccccccccccccccccc4053574154415541574883ec404c8bfa4c8be9",
+    "afterBytes": "0fae5c24788b5c24788b4218448b6240c1e81ec7442478c09f0000899c24800000000fae54247885c0744383f803750e"
+  },
+  {
+    "rva": "0xf97b5",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x78]",
+    "beforeBytes": "5c24788b5c24788b4218448b6240c1e81ec7442478c09f0000899c2480000000",
+    "afterBytes": "0fae54247885c0744383f803750e488b4a10e8149e0e00493bc57430e85a0c3500488d0df314360041b99b0400004889"
+  },
+  {
+    "rva": "0xf9954",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x78]",
+    "beforeBytes": "2480000000e8e2b2ffff807c247800488b74243875034c893883e3c0895c2478",
+    "afterBytes": "0fae5424784883c440415f415d415c5f5bc3cccccccccccccccccccc4488442418565741554883ec50488b024c8be948"
+  },
+  {
+    "rva": "0xfa57d",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x48]",
+    "beforeBytes": "c4305bc3cccccccccccccccccccccccccccccc48895c2408574883ec30488bfa",
+    "afterBytes": "0fae5c24488b5c24480fb74a08c7442448c09f00000fae54244883e905744b83e901743883f9070f858e0000004883c2"
+  },
+  {
+    "rva": "0xfa592",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x48]",
+    "beforeBytes": "5c2408574883ec30488bfa0fae5c24488b5c24480fb74a08c7442448c09f0000",
+    "afterBytes": "0fae54244883e905744b83e901743883f9070f858e0000004883c260488bcfe89ab2000084c0747e488b8f8001000048"
+  },
+  {
+    "rva": "0xfa63f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x48]",
+    "beforeBytes": "48488d442448f60001750e41b1014533c0488bcfe8b8460b0083e3c0895c2448",
+    "afterBytes": "0fae542448488b5c24404883c4305fc3cccccccccccccccccccccccccccccccccc8b81e00f0000c3cccccccccccccccc"
+  },
+  {
+    "rva": "0xfa91a",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "504883c4305fc3488b89a8240000f6da1bd2e87f24350084c074df48895c2448",
+    "afterBytes": "0fae5c24408b5c2440488bcfc7442440c09f00000fae542440e8a8490000488d4f1033d2e8adec0c00488bcfe8c54a00"
+  },
+  {
+    "rva": "0xfa92e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "24350084c074df48895c24480fae5c24408b5c2440488bcfc7442440c09f0000",
+    "afterBytes": "0fae542440e8a8490000488d4f1033d2e8adec0c00488bcfe8c54a00004885f67406c70600000000488b74245083e3c0"
+  },
+  {
+    "rva": "0xfa964",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "8bcfe8c54a00004885f67406c70600000000488b74245083e3c0895c2440b001",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccccccc488974241848897c242041564883ec3083b96c1d"
+  },
+  {
+    "rva": "0xfa9fa",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "83c430415ec3488b89a824000041f6d91bd2e89f23350084c074d848895c2448",
+    "afterBytes": "0fae5c24408b5c2440488bcfc7442440c09f00000fae542440e8c8480000488d4f10e81ff20c0083e3c08b4808890e48"
+  },
+  {
+    "rva": "0xfaa0e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "23350084c074d848895c24480fae5c24408b5c2440488bcfc7442440c09f0000",
+    "afterBytes": "0fae542440e8c8480000488d4f10e81ff20c0083e3c08b4808890e488b00488b742450498906b001c6874a2600000148"
+  },
+  {
+    "rva": "0xfaa46",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "08890e488b00488b742450498906b001c6874a26000001488b7c2458895c2440",
+    "afterBytes": "0fae542440488b5c24484883c430415ec3cccccccccccccccccc48895c241848896c24205641544155415641574883ec"
+  },
+  {
+    "rva": "0xfac8d",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "c3cccccccccccccccccccccccccccccccccccc48895c2410574883ec20488bfa",
+    "afterBytes": "0fae5c24308b5c2430c7442430c09f00000fae542430c6814a26000000e8614700004885ff7406c7070000000083e3c0"
+  },
+  {
+    "rva": "0xfac9e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccc48895c2410574883ec20488bfa0fae5c24308b5c2430c7442430c09f0000",
+    "afterBytes": "0fae542430c6814a26000000e8614700004885ff7406c7070000000083e3c0895c24300fae542430488b5c24384883c4"
+  },
+  {
+    "rva": "0xfacc1",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "2430c6814a26000000e8614700004885ff7406c7070000000083e3c0895c2430",
+    "afterBytes": "0fae542430488b5c24384883c4205fc3cccccccccccccccccccccccccccccc40535541564883ec30440fb6f2488be90f"
+  },
+  {
+    "rva": "0xfacf0",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "c3cccccccccccccccccccccccccccccc40535541564883ec30440fb6f2488be9",
+    "afterBytes": "0fae5c245083b96c1d0000008b5c2450c7442450c09f00000fae5424507430e81cf73400488d0d6505360041b9040900"
+  },
+  {
+    "rva": "0xfad08",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "30440fb6f2488be90fae5c245083b96c1d0000008b5c2450c7442450c09f0000",
+    "afterBytes": "0fae5424507430e81cf73400488d0d6505360041b90409000048894c24204c8d05e3f63500488bc8ba02000000e846f9"
+  },
+  {
+    "rva": "0xfadfb",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "e20c00488d8de0210000e8c6770e00488b7c2460488b74245883e3c0895c2450",
+    "afterBytes": "0fae5424504883c430415e5d5bc3cccccccccccccc40534883ec200fae5c24308b5c24304881c1e0210000c7442430c0"
+  },
+  {
+    "rva": "0xfae16",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "c0895c24500fae5424504883c430415e5d5bc3cccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c24308b5c24304881c1e0210000c7442430c09f00000fae542430e8d8730e0083e3c0895c24300fae5424304883"
+  },
+  {
+    "rva": "0xfae2e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccc40534883ec200fae5c24308b5c24304881c1e0210000c7442430c09f0000",
+    "afterBytes": "0fae542430e8d8730e0083e3c0895c24300fae5424304883c4205bc3cccccccccccc40534883ec3083b96c1d00000048"
+  },
+  {
+    "rva": "0xfae3f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "4881c1e0210000c7442430c09f00000fae542430e8d8730e0083e3c0895c2430",
+    "afterBytes": "0fae5424304883c4205bc3cccccccccccc40534883ec3083b96c1d000000488bd97438e8c9f53400488d0de2fe350041"
+  },
+  {
+    "rva": "0xfb046",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccccccccccccccccccc8b8180220000c3cccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c24308b5c24304881c1e0210000c7442430c09f00000fae542430e828720e0083e3c0895c24300fae5424304883"
+  },
+  {
+    "rva": "0xfb05e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccc40534883ec200fae5c24308b5c24304881c1e0210000c7442430c09f0000",
+    "afterBytes": "0fae542430e828720e0083e3c0895c24300fae5424304883c4205bc3cccccccccccc48895c2420565741574883ec3045"
+  },
+  {
+    "rva": "0xfb06f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "4881c1e0210000c7442430c09f00000fae542430e828720e0083e3c0895c2430",
+    "afterBytes": "0fae5424304883c4205bc3cccccccccccc48895c2420565741574883ec30450fb6f8488bf2488bf90fae5c245080b948"
+  },
+  {
+    "rva": "0xfb097",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "205bc3cccccccccccc48895c2420565741574883ec30450fb6f8488bf2488bf9",
+    "afterBytes": "0fae5c245080b948260000008b5c2450c7442450c09f00000fae5424507430e875f33400488d0d9604360041b9910b00"
+  },
+  {
+    "rva": "0xfb0af",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "b6f8488bf2488bf90fae5c245080b948260000008b5c2450c7442450c09f0000",
+    "afterBytes": "0fae5424507430e875f33400488d0d9604360041b9910b000048894c24204c8d053cf33500488bc8ba08000000e89ff5"
+  },
+  {
+    "rva": "0xfb237",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "ed488b6c24587411488b8708230000488d8f08230000ff502083e3c0895c2450",
+    "afterBytes": "0fae542450488b5c24684883c430415f5f5ec3cccccccccccc488b89b8240000f6da1bd2e9301b3500cccccccccccccc"
+  },
+  {
+    "rva": "0xfb2ce",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "c04883c4305fc3488b89b8240000f6da1bd2e8cb1a350084c074e448895c2448",
+    "afterBytes": "0fae5c24408b5c2440488d8fe0210000c7442440c09f00000fae542440e8206f0e00488b8fb8240000e8d41a350083e3"
+  },
+  {
+    "rva": "0xfb2e6",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "c074e448895c24480fae5c24408b5c2440488d8fe0210000c7442440c09f0000",
+    "afterBytes": "0fae542440e8206f0e00488b8fb8240000e8d41a350083e3c0c6874826000000895c2440b0010fae542440488b5c2448"
+  },
+  {
+    "rva": "0xfb30c",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "206f0e00488b8fb8240000e8d41a350083e3c0c6874826000000895c2440b001",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccccccccccccccccccccccc899140230000c3cccccccccc"
+  },
+  {
+    "rva": "0xfbfdd",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x90]",
+    "beforeBytes": "899c248800000048897c24604c896424584c896c24504c897424484c897c2440",
+    "afterBytes": "0fae9c24900000008b9c24900000004533f6448ba9f0230000418bc54c8bb9e823000033c9c7842490000000c09f0000"
+  },
+  {
+    "rva": "0xfc00d",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x90]",
+    "beforeBytes": "33f6448ba9f0230000418bc54c8bb9e823000033c9c7842490000000c09f0000",
+    "afterBytes": "0fae942490000000c1e802899c2498000000898c249000000085c00f846d0100008bd88d43ff3bc8734a418d4604498b"
+  },
+  {
+    "rva": "0xfc408",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x80]",
+    "beforeBytes": "244083e3c04c8b7424484c8b6c24504c8b642458488b7c2460899c2480000000",
+    "afterBytes": "0fae942480000000488b9c24880000004883c4685e5dc3cccccccccccccccccccccccccccccccccc33c0c3cccccccccc"
+  },
+  {
+    "rva": "0xfd3ed",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0xb0]",
+    "beforeBytes": "488d6c24804881ec800100000f29b42460010000498bc1458be84c8bfa4c8bf1",
+    "afterBytes": "0fae9db000000083b96c1d0000008b9db0000000c785b0000000c09f00000fae95b00000007430e817d03400488d0d18"
+  },
+  {
+    "rva": "0xfd40b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0xb0]",
+    "beforeBytes": "8bf10fae9db000000083b96c1d0000008b9db0000000c785b0000000c09f0000",
+    "afterBytes": "0fae95b00000007430e817d03400488d0d18d3350041b9d401000048894c24204c8d05decf3500488bc8ba02000000e8"
+  },
+  {
+    "rva": "0xfd893",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0xb0]",
+    "beforeBytes": "3400488bd7488bc84c8b0041ff5010488bbc247801000083e3c0899db0000000",
+    "afterBytes": "0fae95b00000000f28b424600100004881c480010000415f415e415d5b5dc3cccccccccccccccccccccccccccc488954"
+  },
+  {
+    "rva": "0xfe678",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "ccccccccccccccccf30f114c241053555641564883ec38498be94d8bf0488bf1",
+    "afterBytes": "0fae5c246083b96c1d0000008b5c2460c7442460c09f00000fae5424607431e894bd3400488b8c24900000004c8d0565"
+  },
+  {
+    "rva": "0xfe690",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "8be94d8bf0488bf10fae5c246083b96c1d0000008b5c2460c7442460c09f0000",
+    "afterBytes": "0fae5424607431e894bd3400488b8c24900000004c8d0565bd350048894c242041b943070000488bc8ba08000000e8bd"
+  },
+  {
+    "rva": "0xfe8e8",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "8ee8240000ff5020488b8678250000488d8e78250000ff502083e3c0895c2460",
+    "afterBytes": "0fae5424604883c438415e5e5d5bc3cccccccccccccccccc48895c241048896c241856574154415641574881ec100100"
+  },
+  {
+    "rva": "0x105fa6",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "000000488b5c24304883c4205fc3cccccccccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c24308b5c2430488b01c7442430c09f00000fae542430ff503883e3c0895c24300fae5424304883c4205bc3cccc"
+  },
+  {
+    "rva": "0x105fba",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccccccccccc40534883ec200fae5c24308b5c2430488b01c7442430c09f0000",
+    "afterBytes": "0fae542430ff503883e3c0895c24300fae5424304883c4205bc3cccccccccccccccccccccccc488b41284c8b4118f30f"
+  },
+  {
+    "rva": "0x105fc9",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "24308b5c2430488b01c7442430c09f00000fae542430ff503883e3c0895c2430",
+    "afterBytes": "0fae5424304883c4205bc3cccccccccccccccccccccccc488b41284c8b4118f30f1088c0240000488d4810e9172e0c00"
+  },
+  {
+    "rva": "0x182f0e",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "cccc48895c2420555657415641574883ec304c89642470498bf8488bf2488be9",
+    "afterBytes": "0fae5c246048837910004c8d35712633008b5c24604c8d25768f2d00c7442460c09f00000fae54246074244c8b491045"
+  },
+  {
+    "rva": "0x182f32",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "6048837910004c8d35712633008b5c24604c8d25768f2d00c7442460c09f0000",
+    "afterBytes": "0fae54246074244c8b49104533c0488b55104c89642420410fb74108498b0cc64903c94c8bcde853f7030048837d1800"
+  },
+  {
+    "rva": "0x183154",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "85f6750433d2eb080fb74608488d5660488d4d20e81307000083e3c0895c2460",
+    "afterBytes": "0fae542460488b5c24784883c430415f415e5f5e5dc3cccccccccccc41b8fefb000066440b81a8000000f64128047413"
+  },
+  {
+    "rva": "0x1831b6",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "c36644234138488bc266448902c3cccccccccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c24308b5c24304883c1200fb702488d542430c7442430c09f00000fae5424306689442430e86e07000083e3c089"
+  },
+  {
+    "rva": "0x1831d3",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "83ec200fae5c24308b5c24304883c1200fb702488d542430c7442430c09f0000",
+    "afterBytes": "0fae5424306689442430e86e07000083e3c0895c24300fae5424304883c4205bc3cccccccccccccccccccccccc405348"
+  },
+  {
+    "rva": "0x1831e9",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "2430c7442430c09f00000fae5424306689442430e86e07000083e3c0895c2430",
+    "afterBytes": "0fae5424304883c4205bc3cccccccccccccccccccccccc40534883ec20450fb6d04c8bc90fae5c2440f64128048b5c24"
+  },
+  {
+    "rva": "0x18320d",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "304883c4205bc3cccccccccccccccccccccccc40534883ec20450fb6d04c8bc9",
+    "afterBytes": "0fae5c2440f64128048b5c2440c7442440c09f00000fae542440741c488b413041b8fefb000066440b81a80000000fb7"
+  },
+  {
+    "rva": "0x183222",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "4883ec20450fb6d04c8bc90fae5c2440f64128048b5c2440c7442440c09f0000",
+    "afterBytes": "0fae542440741c488b413041b8fefb000066440b81a80000000fb74818664123c8eb12b9fefb000066410b89a8000000"
+  },
+  {
+    "rva": "0x183281",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "66f7d26623d16689542440498d4920488d542440e8d606000083e3c0895c2440",
+    "afterBytes": "0fae5424404883c4205bc3cccccccccccccccccccccccccccccccccccccccc8b819000000089028b8194000000894204"
+  },
+  {
+    "rva": "0x183306",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "01c3cccccccccccccccc48895c2420f30f11542418f30f114c2410574883ec20",
+    "afterBytes": "0fae5c24308b5c2430488d79208b4708c1e81ec7442430c09f00000fae54243083f803742883f802750c488b0780b829"
+  },
+  {
+    "rva": "0x183321",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "574883ec200fae5c24308b5c2430488d79208b4708c1e81ec7442430c09f0000",
+    "afterBytes": "0fae54243083f803742883f802750c488b0780b8291e0000007517f30f10542440488d4f18f30f104c2438e8afb90800"
+  },
+  {
+    "rva": "0x18339f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "442440f30f114810f30f114014488b0fe8bc1d0600834f080283e3c0895c2430",
+    "afterBytes": "0fae542430488b5c24484883c4205fc3cccccccccccccccccccccccccccccccccc40534883ec200fae5c2430f6412802"
+  },
+  {
+    "rva": "0x1833c6",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "5c24484883c4205fc3cccccccccccccccccccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c2430f64128028b5c2430c7442430c09f00000fae5424307421488b493083e3c08b411089028b4114418900895c"
+  },
+  {
+    "rva": "0x1833db",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccccccccc40534883ec200fae5c2430f64128028b5c2430c7442430c09f0000",
+    "afterBytes": "0fae5424307421488b493083e3c08b411089028b4114418900895c24300fae5424304883c4205bc34883c138e814b908"
+  },
+  {
+    "rva": "0x1833f8",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "9f00000fae5424307421488b493083e3c08b411089028b4114418900895c2430",
+    "afterBytes": "0fae5424304883c4205bc34883c138e814b9080083e3c0895c24300fae5424304883c4205bc3cccccccccccccccccccc"
+  },
+  {
+    "rva": "0x183413",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "00895c24300fae5424304883c4205bc34883c138e814b9080083e3c0895c2430",
+    "afterBytes": "0fae5424304883c4205bc3cccccccccccccccccccccccccccccccccccc48895c2418f30f114c2410574883ec200fae5c"
+  },
+  {
+    "rva": "0x183440",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "cccccccccccccccccccccccccccccccc48895c2418f30f114c2410574883ec20",
+    "afterBytes": "0fae5c24308b5c2430488d79208b4708c1e81ec7442430c09f00000fae54243083f803742283f802750c488b0780b829"
+  },
+  {
+    "rva": "0x18345b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "574883ec200fae5c24308b5c2430488d79208b4708c1e81ec7442430c09f0000",
+    "afterBytes": "0fae54243083f803742283f802750c488b0780b8291e0000007511f30f104c2438488d4f18e8bbb80800eb3a48837f10"
+  },
+  {
+    "rva": "0x1834c8",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x30]",
+    "beforeBytes": "0f10442438488bd7f30f11401c488b0fe8931c0600834f080883e3c0895c2430",
+    "afterBytes": "0fae542430488b5c24404883c4205fc3cccccccccccccccc0fae5c2408f64128088b442408c7442408c09f00000fae54"
+  },
+  {
+    "rva": "0x1834e0",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 8]",
+    "beforeBytes": "0883e3c0895c24300fae542430488b5c24404883c4205fc3cccccccccccccccc",
+    "afterBytes": "0fae5c2408f64128088b442408c7442408c09f00000fae542408740b488b4930f30f10411ceb08f30f108184000000f3"
+  },
+  {
+    "rva": "0x1834f5",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 8]",
+    "beforeBytes": "205fc3cccccccccccccccc0fae5c2408f64128088b442408c7442408c09f0000",
+    "afterBytes": "0fae542408740b488b4930f30f10411ceb08f30f108184000000f30f1144240883e0c0894424100fae542410f30f1044"
+  },
+  {
+    "rva": "0x18351c",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x10]",
+    "beforeBytes": "488b4930f30f10411ceb08f30f108184000000f30f1144240883e0c089442410",
+    "afterBytes": "0fae542410f30f10442408c3cccccccccccccccc488b51104885d2741433c066837a0806480f44c24885c07504b201eb"
+  },
+  {
+    "rva": "0x1aa8ef",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "cc8b8198000000c3cccccccccccccccccc40535541564883ec404c8bf2488be9",
+    "afterBytes": "0fae5c24608b5c24608b8198000000c7442460c09f00000fae54246039027430e81cfb2900488d0d45282b0041b90201"
+  },
+  {
+    "rva": "0x1aa906",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "83ec404c8bf2488be90fae5c24608b5c24608b8198000000c7442460c09f0000",
+    "afterBytes": "0fae54246039027430e81cfb2900488d0d45282b0041b90201000048894c24204c8d05f3272b00488bc8ba04000000e8"
+  },
+  {
+    "rva": "0x1aaa94",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "09488d4808e8a2312a00488d153b272b00488bcde81317000083e3c0895c2460",
+    "afterBytes": "0fae5424604883c440415e5d5bc3ccccccccccccccccccccccccccccf6413801740a488b41404883c040eb07488d8198"
+  },
+  {
+    "rva": "0x1ab916",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "81f8000000c3cccccccccccccccccccccccccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c2440f64138408b5c2440c7442440c09f00000fae542440740a488b41400fb64034eb070fb681900000004584c0"
+  },
+  {
+    "rva": "0x1ab92b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "cccccccccc40534883ec200fae5c2440f64138408b5c2440c7442440c09f0000",
+    "afterBytes": "0fae542440740a488b41400fb64034eb070fb681900000004584c074040ad0eb04f6d222d088542440488d542440e802"
+  },
+  {
+    "rva": "0x1ab965",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "c074040ad0eb04f6d222d088542440488d542440e80201000083e3c0895c2440",
+    "afterBytes": "0fae5424404883c4205bc3cccccccccccccccccccccccccccccccc40534883ec200fae5c24388b5c24380fb602488d54"
+  },
+  {
+    "rva": "0x1ab986",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x38]",
+    "beforeBytes": "ae5424404883c4205bc3cccccccccccccccccccccccccccccccc40534883ec20",
+    "afterBytes": "0fae5c24388b5c24380fb602488d542438c7442438c09f00000fae54243888442438e8b300000083e3c0895c24380fae"
+  },
+  {
+    "rva": "0x1ab99f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x38]",
+    "beforeBytes": "cc40534883ec200fae5c24388b5c24380fb602488d542438c7442438c09f0000",
+    "afterBytes": "0fae54243888442438e8b300000083e3c0895c24380fae5424384883c4205bc3cccccccccccccccccccccccccccccccc"
+  },
+  {
+    "rva": "0x1ab9b4",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x38]",
+    "beforeBytes": "542438c7442438c09f00000fae54243888442438e8b300000083e3c0895c2438",
+    "afterBytes": "0fae5424384883c4205bc3ccccccccccccccccccccccccccccccccccf6413840740e488b41400fb64834488bc2880ac3"
+  },
+  {
+    "rva": "0x1af805",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "c3cccccccccccccccccccc48895c24104889742418574883ec30488bf2488bf9",
+    "afterBytes": "0fae5c244048837950008b5c2440c7442440c09f00000fae5424407437e809ac2900488d0d02ec2a0041b9e900000048"
+  },
+  {
+    "rva": "0x1af81b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "4883ec30488bf2488bf90fae5c244048837950008b5c2440c7442440c09f0000",
+    "afterBytes": "0fae5424407437e809ac2900488d0d02ec2a0041b9e900000048894c24204c8d05c0bd2a00488bc8ba08000000e833ae"
+  },
+  {
+    "rva": "0x1af876",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "8ff4ff488d4f284c8bc7488bd6e898e00300488b74245083e3c0895c2440b001",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccc48895c24084889742410574883ec20410fb6f1410fb6"
+  },
+  {
+    "rva": "0x1b055c",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x90]",
+    "beforeBytes": "574881ec800000000f2970e8488bfa0f2978d84c8bc1440f2940c8440f2948b8",
+    "afterBytes": "0fae9c24900000008b9c2490000000488d5098c7842490000000c09f00004883c1280fae942490000000e8b5dc030083"
+  },
+  {
+    "rva": "0x1b057e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x90]",
+    "beforeBytes": "9c24900000008b9c2490000000488d5098c7842490000000c09f00004883c128",
+    "afterBytes": "0fae942490000000e8b5dc030083e3c0488bc7f30f101dd3422c00f30f104c2420f30f1064242c0f28e9f30f10542428"
+  },
+  {
+    "rva": "0x1b065b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xa0]",
+    "beforeBytes": "410f5cc0f30f11670cf3450f58c1f30f114708f3440f114714899c24a0000000",
+    "afterBytes": "0fae9424a0000000488b9c24980000000f287424700f287c2460440f28442450440f284c24404881c4800000005fc3cc"
+  },
+  {
+    "rva": "0x1b85c5",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "cccccccccccccccccccccc405356574883ec2048896c2448488bf94c89742450",
+    "afterBytes": "0fae5c24408b5c2440488bd1488b0d7033300041b901000000c7442440c09f00004533c00fae542440e8ed0df2ff4533"
+  },
+  {
+    "rva": "0x1b85e9",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "408b5c2440488bd1488b0d7033300041b901000000c7442440c09f00004533c0",
+    "afterBytes": "0fae542440e8ed0df2ff4533f6418bee443977400f86990000004c897c24584c8d3d81cf2f0090488b47488bcd488b0c"
+  },
+  {
+    "rva": "0x1b8712",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "0048897c2440488d542440e83ec9f3ff488d4f10e86566050083e3c0895c2440",
+    "afterBytes": "0fae5424404883c4205f5e5bc3cccccccccccccccccccccccccccccccccc48895c24205556574883ec30498be8488bfa"
+  },
+  {
+    "rva": "0x1b8745",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "cccccccccccccccccccccc48895c24205556574883ec30498be8488bfa488bf1",
+    "afterBytes": "0fae5c24508b5c24508b4134c7442450c09f00000fae5424503941407514e8c81c2900488d0db1722a0041b992000000"
+  },
+  {
+    "rva": "0x1b8759",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "83ec30498be8488bfa488bf10fae5c24508b5c24508b4134c7442450c09f0000",
+    "afterBytes": "0fae5424503941407514e8c81c2900488d0db1722a0041b992000000eb67488b02488bcfff90880000004885c07414e8"
+  },
+  {
+    "rva": "0x1b893b",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "00498b0cc74803cfe8289c00004c8b7c2460b0014c8b74245883e3c0895c2450",
+    "afterBytes": "0fae542450488b5c24684883c4305f5e5dc3cccccccccccccccccccccccccccccccccccccc40535641564883ec404c8b"
+  },
+  {
+    "rva": "0x1b896f",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "cccccccccccccccccccccccccccccccccc40535641564883ec404c8bf2488bf1",
+    "afterBytes": "0fae5c24688b5c2468488bca488b02c7442468c09f00000fae542468ff502883f8027532e8981a2900488d0d61722a00"
+  },
+  {
+    "rva": "0x1b8986",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "83ec404c8bf2488bf10fae5c24688b5c2468488bca488b02c7442468c09f0000",
+    "afterBytes": "0fae542468ff502883f8027532e8981a2900488d0d61722a0041b9d700000048894c24204c8d051f702a00488bc8ba02"
+  },
+  {
+    "rva": "0x1b8b1d",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x68]",
+    "beforeBytes": "488bc8ba02000000e8761b290032c0488b7c24384c8b7c243083e3c0895c2468",
+    "afterBytes": "0fae5424684883c440415e5e5bc38b46404d8bc6ffc88bd7894640488b04c1488904d133d2410fb74608498b0cc7410f"
+  },
+  {
+    "rva": "0x1b8b91",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "00b001eb96cccccccccccccccccccc405355565741564883ec304c8bf2488be9",
+    "afterBytes": "0fae5c24608b5c24608b71348b7940488bca488b02c7442460c09f00000fae542460ff909000000003c73bc67614e86c"
+  },
+  {
+    "rva": "0x1b8bae",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "488be90fae5c24608b5c24608b71348b7940488bca488b02c7442460c09f0000",
+    "afterBytes": "0fae542460ff909000000003c73bc67614e86c182900488d0d95702a0041b9f9000000eb45498b06498bceff90b80000"
+  },
+  {
+    "rva": "0x1b8d21",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "a80200eb0233c04885c0740b498bd6488bc8e8a84bf4ffb00183e3c0895c2460",
+    "afterBytes": "0fae5424604883c430415e5f5e5d5bc3cccccccccccccccccccccccccccccc4053564883ec3848896c2458488be94889"
+  },
+  {
+    "rva": "0x1b8d5c",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "cccccccc4053564883ec3848896c2458488be948897c24604c897424684c8bf2",
+    "afterBytes": "0fae5c24508b5c24504032f633ffc7442450c09f00000fae5424503979400f869c0000004c897c24304c8d3d04c82f00"
+  },
+  {
+    "rva": "0x1b8d72",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "24604c897424684c8bf20fae5c24508b5c24504032f633ffc7442450c09f0000",
+    "afterBytes": "0fae5424503979400f869c0000004c897c24304c8d3d04c82f000f1f4000488b4548488b0cf8488b11ff522883f80275"
+  },
+  {
+    "rva": "0x1b8e7d",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "204c8d056b6b2a00488bc8ba02000000e80e18290083e3c0400fb6c6895c2450",
+    "afterBytes": "0fae5424504883c4385e5bc3cccccccccccccc8b4140c3cccccccccccccccccccccccc8b4134c3cccccccccccccccccc"
+  },
+  {
+    "rva": "0x1eadb1",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x88]",
+    "beforeBytes": "5c5f5e5bc3ccccccccccccccccccccf30f115c24204c8bdc534883ec704c8bd1",
+    "afterBytes": "0fae9c24880000008b9c2488000000c7842488000000c09f00000fae9424880000000f1802410f1800f3410f1043204d"
+  },
+  {
+    "rva": "0x1eadcb",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x88]",
+    "beforeBytes": "83ec704c8bd10fae9c24880000008b9c2488000000c7842488000000c09f0000",
+    "afterBytes": "0fae9424880000000f1802410f1800f3410f1043204d8d4b20488b8424a8000000498953c8498d53c84d8943d04c8b84"
+  },
+  {
+    "rva": "0x1eae5d",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x98]",
+    "beforeBytes": "8943a8f30f7f442458c744246800000000e82d09000083e3c0899c2498000000",
+    "afterBytes": "0fae9424980000004883c4705bc3cccccccccccccccccccccccccccccccccccccccccc4053555657415641574881ec88"
+  },
+  {
+    "rva": "0x1eaea1",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0xc8]",
+    "beforeBytes": "53555657415641574881ec880000000f29742470498bf1498be84c8bf24c8bf9",
+    "afterBytes": "0fae9c24c80000008b9c24c8000000488bbc24f0000000c78424c8000000c09f00000fae9424c8000000f6470101743e"
+  },
+  {
+    "rva": "0x1eaec3",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xc8]",
+    "beforeBytes": "9c24c80000008b9c24c8000000488bbc24f0000000c78424c8000000c09f0000",
+    "afterBytes": "0fae9424c8000000f6470101743e0fb70766c1e809a8017433e84ff52500488d0d287a270041b98200000048894c2420"
+  },
+  {
+    "rva": "0x1eb030",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x110]",
+    "beforeBytes": "246848897424484c8974245848896c2460e8ea09000083e3c0899c2410010000",
+    "afterBytes": "0fae9424100100000f287424704881c488000000415f415e5f5e5d5bc3cccccccccccccccccccccccccccccccccccccc"
+  },
+  {
+    "rva": "0x1eb06b",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x88]",
+    "beforeBytes": "5bc3cccccccccccccccccccccccccccccccccccccc4c8bdc534883ec704d8bd1",
+    "afterBytes": "0fae9c24880000008b9c2488000000c7842488000000c09f00000fae9424880000000f1802410f1800488b8424a80000"
+  },
+  {
+    "rva": "0x1eb085",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x88]",
+    "beforeBytes": "83ec704d8bd10fae9c24880000008b9c2488000000c7842488000000c09f0000",
+    "afterBytes": "0fae9424880000000f1802410f1800488b8424a80000004d8d4b10498953e033d2498953c0498943b8488b8424a00000"
+  },
+  {
+    "rva": "0x1eb0ed",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x88]",
+    "beforeBytes": "498953d0498953c86641895310498d53c8e8ed03000083e3c0899c2488000000",
+    "afterBytes": "0fae9424880000004883c4705bc3cccccccccccccccccccccccccccccccccccccccccc4881c1e021000033d2e90272ff"
+  },
+  {
+    "rva": "0x1f3c1e",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0xc0]",
+    "beforeBytes": "cccc40555356488dac2460ffffff4881eca00100000f29b42460010000488bf1",
+    "afterBytes": "0fae9dc00000008b9dc00000004883c13cc785c0000000c09f00004533c00fae95c0000000ba01000000895d10e8b09f"
+  },
+  {
+    "rva": "0x1f3c3c",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0xc0]",
+    "beforeBytes": "8bf10fae9dc00000008b9dc00000004883c13cc785c0000000c09f00004533c0",
+    "afterBytes": "0fae95c0000000ba01000000895d10e8b09f250083f8017530e8d6672500488d0d47f1260041b93801000048894c2420"
+  },
+  {
+    "rva": "0x1f44aa",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0xc0]",
+    "beforeBytes": "8bac2488010000488bbc24980100004c8bbc247801000083e3c0899dc0000000",
+    "afterBytes": "0fae95c00000000f28b424600100004881c4a00100005e5b5dc3cccccccccccccccccccccccc40534883ec30488bd945"
+  },
+  {
+    "rva": "0x28c416",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x68]",
+    "beforeBytes": "a058ffffff440f29a848ffffff440f29b038ffffff440f29b828ffffff448bea",
+    "afterBytes": "0fae5d688b5d684e8d146d000000004d03d5c74568c09f00000fae55684a8d0c6d00000000c744244c000000004903cd"
+  },
+  {
+    "rva": "0x28c42f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x68]",
+    "beforeBytes": "28ffffff448bea0fae5d688b5d684e8d146d000000004d03d5c74568c09f0000",
+    "afterBytes": "0fae55684a8d0c6d00000000c744244c000000004903cdc744247c000000004983bf7004000000f3470f1064d008450f"
+  },
+  {
+    "rva": "0x28ce72",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x68]",
+    "beforeBytes": "9a2200004533f64c8ba424200100004c8d9c242801000083e3c0895d68498bc6",
+    "afterBytes": "0fae5568410f2873e8410f287bd8450f2843c8450f284bb8450f2853a8450f285b98450f286388450f28ab78ffffff45"
+  },
+  {
+    "rva": "0x28cee4",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x20]",
+    "beforeBytes": "cccccccccccccccccccccccc405355565741564883ec30498bf1418be84c8bf1",
+    "afterBytes": "0fae5c24208b5c2420c7442420c09f00000fae542420e861060000488bbc2480000000488bd048894424204885c0742f"
+  },
+  {
+    "rva": "0x28cef5",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x20]",
+    "beforeBytes": "41564883ec30498bf1418be84c8bf10fae5c24208b5c2420c7442420c09f0000",
+    "afterBytes": "0fae542420e861060000488bbc2480000000488bd048894424204885c0742f488378300075288b4f0c0fbaf11f3b4f08"
+  },
+  {
+    "rva": "0x28cf5a",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x20]",
+    "beforeBytes": "8b07488914c8ff47084c8bcf4c8bc68bd5498bcee85df4ffff83e3c0895c2420",
+    "afterBytes": "0fae5424204883c430415e5f5e5d5bc3cccccccccccc488bc44889580848896820565741564881ec900000000f2970d8"
+  },
+  {
+    "rva": "0x28cfae",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0xc0]",
+    "beforeBytes": "2978c84c8bd2440f2940b84c8bf1440f2948a8440f295098440f295888418be8",
+    "afterBytes": "0fae9c24c00000008b9c24c0000000488d0c6d000000004803cdc78424c0000000c09f00000fae9424c0000000488d14"
+  },
+  {
+    "rva": "0x28cfd3",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xc0]",
+    "beforeBytes": "0000008b9c24c0000000488d0c6d000000004803cdc78424c0000000c09f0000",
+    "afterBytes": "0fae9424c0000000488d146d000000004803d5f3410f104204f3410f1054c914f3410f104cc910f3410f105cc90c33c9"
+  },
+  {
+    "rva": "0x28d51f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xc0]",
+    "beforeBytes": "adeeffff4c8bd04c8d9c249000000083e3c0498b6b38498bc2899c24c0000000",
+    "afterBytes": "0fae9424c0000000498b5b20410f2873f00f287c2470450f2843d0450f284bc0450f2853b0450f285ba0498be3415e5f"
+  },
+  {
+    "rva": "0x28d596",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0xa8]",
+    "beforeBytes": "2450488bfa440f294424404c8bf1440f294c2430440f29542420440f295c2410",
+    "afterBytes": "0fae9c24a80000008b8424a80000004c8b5228c78424a8000000c09f00000fae9424a800000041833a010f8664040000"
+  },
+  {
+    "rva": "0x28d5b4",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xa8]",
+    "beforeBytes": "24100fae9c24a80000008b8424a80000004c8b5228c78424a8000000c09f0000",
+    "afterBytes": "0fae9424a800000041833a010f8664040000418b1285d2742c0f1f00ffca4539449204740685d275f3eb1a41ff0a488b"
+  },
+  {
+    "rva": "0x28df5c",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0xa8]",
+    "beforeBytes": "084d898668040000498bdf4c8bbc24b800000083e0c0898424a8000000488bc3",
+    "afterBytes": "0fae9424a80000000f287424600f287c2450440f28442440440f284c2430440f28542420440f285c24104883c470415e"
+  },
+  {
+    "rva": "0x2a0b58",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x80]",
+    "beforeBytes": "0f2940c8440f2948b8440f2950a8440f295898440f296088440f29a878ffffff",
+    "afterBytes": "0fae9d800000008b9d80000000488d3df4502100418b10c78580000000c09f00000fae958000000085d20f8444030000"
+  },
+  {
+    "rva": "0x2a0b79",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x80]",
+    "beforeBytes": "ae9d800000008b9d80000000488d3df4502100418b10c78580000000c09f0000",
+    "afterBytes": "0fae958000000085d20f844403000083ea020f840602000083ea01747183fa01740732c0e90a040000f30f1085b00000"
+  },
+  {
+    "rva": "0x2a0fc1",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x80]",
+    "beforeBytes": "5c2428488944242041ffd24c8d9c246001000083e3c0498b7b28899d80000000",
+    "afterBytes": "0fae9580000000498b5b10410f2873f0410f287be0450f2843d0450f284bc0450f2853b0450f285ba0450f286390450f"
+  },
+  {
+    "rva": "0x2a1010",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "0f286b80498be35dc3cccccccccccccc48895c2410574883ec30498bf94d8bd8",
+    "afterBytes": "0fae5c24408b5c2440418b00c7442440c09f00000fae54244048c74424200000000039017e1748984c8bca4c6bd00748"
+  },
+  {
+    "rva": "0x2a1024",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "10574883ec30498bf94d8bd80fae5c24408b5c2440418b00c7442440c09f0000",
+    "afterBytes": "0fae54244048c74424200000000039017e1748984c8bca4c6bd0074863014c8bc1498bcb488bd7eb0a4863014c6bd007"
+  },
+  {
+    "rva": "0x2a106c",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "0a4863014c6bd0074963004c03d0488d053f4a210042ff14d083e3c0895c2440",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccccccccccccccccccccccc48895c240848897424105748"
+  },
+  {
+    "rva": "0x2a10a5",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "cccccccccccccccccccccc48895c24084889742410574883ec404d8bd9498bf8",
+    "afterBytes": "0fae5c24608b5c2460488d35734b2100488b4424784c8bcac7442460c09f0000498bd30fae542460440fb710488b8424"
+  },
+  {
+    "rva": "0x2a10c8",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "24608b5c2460488d35734b2100488b4424784c8bcac7442460c09f0000498bd3",
+    "afterBytes": "0fae542460440fb710488b842488000000f30f1044247048894424388b84248000000089442430488d44246066448954"
+  },
+  {
+    "rva": "0x2a111e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x78]",
+    "beforeBytes": "8bc14889442428488bcff30f1144242042ff14d6488b74245883e3c0895c2478",
+    "afterBytes": "0fae542478488b5c24504883c4405fc3cccccccccccccccccccccccccccccccccccc48895c2408574883ec30488bf90f"
+  },
+  {
+    "rva": "0x2a114d",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "c3cccccccccccccccccccccccccccccccccccc48895c2408574883ec30488bf9",
+    "afterBytes": "0fae5c24508b5c24504c8d1de34d2100488b4c2460c7442450c09f00000fae5424508b014139007e5a48984c6bd00749"
+  },
+  {
+    "rva": "0x2a116a",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x50]",
+    "beforeBytes": "488bf90fae5c24508b5c24504c8d1de34d2100488b4c2460c7442450c09f0000",
+    "afterBytes": "0fae5424508b014139007e5a48984c6bd0074963004c894c24284c03d04c8b4c24684c894424204c8bc1488bcf43ff14"
+  },
+  {
+    "rva": "0x2a11fa",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x60]",
+    "beforeBytes": "4c03d0488b442468488944242848894c2420488bcf43ff14d383e3c0895c2460",
+    "afterBytes": "0fae542460488b5c24404883c4305fc3cccccccccccc488bc4488958084889701855574156488d6c24904881ec700100"
+  },
+  {
+    "rva": "0x2a1270",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x98]",
+    "beforeBytes": "440f29a078ffffff440f29a868ffffff440f29b058ffffff440f29b848ffffff",
+    "afterBytes": "0fae9d980000008b9d98000000448b02c78598000000c09f00000fae95980000004585c00f847e0500004183e8020f84"
+  },
+  {
+    "rva": "0x2a128a",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x98]",
+    "beforeBytes": "29b848ffffff0fae9d980000008b9d98000000448b02c78598000000c09f0000",
+    "afterBytes": "0fae95980000004585c00f847e0500004183e8020f84900200004183e80174774183f8017415f30f1005cc361d00f30f"
+  },
+  {
+    "rva": "0x2a1906",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "def30f59dbf30f119d980000004c8d9c247001000083e3c0498b7330895c2440",
+    "afterBytes": "0fae542440498b5b20f30f108598000000410f2873f0410f287be0450f2843d0450f284bc0450f2853b0450f285ba045"
+  },
+  {
+    "rva": "0x2a1973",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "5e5f5dc3cccccccccccccccccc48895c2410f30f115c2420574883ec30488bf9",
+    "afterBytes": "0fae5c24408b5c2440c7442440c09f00000fae542440f30f104424580f57dbf30f1144242848c744242000000000e89a"
+  },
+  {
+    "rva": "0x2a1984",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "10f30f115c2420574883ec30488bf90fae5c24408b5c2440c7442440c09f0000",
+    "afterBytes": "0fae542440f30f104424580f57dbf30f1144242848c744242000000000e89a43090083e3c0488bc7895c24400fae5424"
+  },
+  {
+    "rva": "0x2a19b0",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rsp + 0x40]",
+    "beforeBytes": "57dbf30f1144242848c744242000000000e89a43090083e3c0488bc7895c2440",
+    "afterBytes": "0fae542440488b5c24484883c4305fc3cccccccccccccccccccccccccccccccc48895c2408574883ec20488bd98b0985"
+  },
+  {
+    "rva": "0x34e5f6",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x40]",
+    "beforeBytes": "0f2940c8440f2948b8440f2950a8440f295898440f296088440f29a878ffffff",
+    "afterBytes": "0fae5d40488b45608b5d408b094d8b582848894424508b45688944245c8b45708944246033c0c74540c09f0000894424"
+  },
+  {
+    "rva": "0x34e62f",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x40]",
+    "beforeBytes": "8944245c8b45708944246033c0c74540c09f0000894424588944246488442468",
+    "afterBytes": "0fae554085c90f847402000083e9020f846d01000083f9010f85c0020000f30f104a08488d4c2450f30f1042044d8d48"
+  },
+  {
+    "rva": "0x34e92e",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x68]",
+    "beforeBytes": "b64424684c8d9c2430010000488b4d7883e3c0498b7b2088018b442458895d68",
+    "afterBytes": "0fae5568498b5b18410f2873f0410f287be0450f2843d0450f284bc0450f2853b0450f285ba0450f286390450f286b80"
+  },
+  {
+    "rva": "0x34e9d4",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x130]",
+    "beforeBytes": "440f29a058ffffff440f29a848ffffff440f29b038ffffff440f29b828ffffff",
+    "afterBytes": "0fae9d300100008b9d30010000488d4c2430c78530010000c09f00004c8bc20fae9530010000f3450f10490cf30f106a"
+  },
+  {
+    "rva": "0x34e9f3",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x130]",
+    "beforeBytes": "ff0fae9d300100008b9d30010000488d4c2430c78530010000c09f00004c8bc2",
+    "afterBytes": "0fae9530010000f3450f10490cf30f106a10410f28d9f30f106214f3410f5c6910f3410f5c6114f30f10050e601200f3"
+  },
+  {
+    "rva": "0x34f035",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x158]",
+    "beforeBytes": "e806e905000fb645d04c8d9c24f801000041880783e3c08b45c0899d58010000",
+    "afterBytes": "0fae9558010000410f2873e8410f287bd8450f2843c8450f284bb8450f2853a8450f285b98450f286388450f28ab78ff"
+  },
+  {
+    "rva": "0x34f0c6",
+    "mnemonic": "stmxcsr",
+    "operand": "dword ptr [rbp + 0x20]",
+    "beforeBytes": "3400cccccccccccccccc48895c2408f30f114c241055488bec4883ec704c8bd1",
+    "afterBytes": "0fae5d208b5d20418b10c74520c09f00000fae5520f30f104d18f30f5d0d303a110085d20f84bd00000083ea02747683"
+  },
+  {
+    "rva": "0x34f0d7",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x20]",
+    "beforeBytes": "114c241055488bec4883ec704c8bd10fae5d208b5d20418b10c74520c09f0000",
+    "afterBytes": "0fae5520f30f104d18f30f5d0d303a110085d20f84bd00000083ea02747683fa01740732c0e91b010000488b4d48f30f"
+  },
+  {
+    "rva": "0x34f222",
+    "mnemonic": "ldmxcsr",
+    "operand": "dword ptr [rbp + 0x18]",
+    "beforeBytes": "f800000000440fb64560488b553866894d188b4d30e8f4dd070083e3c0895d18",
+    "afterBytes": "0fae5518488b9c24800000004883c4705dc3cccccccccccccccccccccccc4c8bdc4883ec7848895108488d05167e1100"
+  }
+]

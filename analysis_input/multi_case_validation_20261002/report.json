@@ -1,0 +1,339 @@
+{
+  "cases": [
+    {
+      "label": "local11009",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 11009,
+        "label": "fresh_11009_curl_right_20261002",
+        "category": "collision_glancing",
+        "v0": 3.4,
+        "h0": 0.2,
+        "w0": 1.57,
+        "sweep": 0.0,
+        "active_index": 0,
+        "stones": [
+          {
+            "index": 11,
+            "x": 2.6550000000000002,
+            "y": 6.8
+          }
+        ],
+        "notes": "Fresh Unity page; same shot parameters as historical11009; no previous shots, pose injection or RNG override."
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 3000,
+      "stateBytesCompared": 312104,
+      "stateBytesExact": 312104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1383,
+      "firstNativeContactTick": 1383,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\unity_new_sample_11009_capture_20261002\\logs\\unity_runtime_probe_20261002_190058\\events.jsonl": "4ff2e4d4a1ba3758fcdd98724340cfb31154f3588fea012527e4db3389b8911a",
+        "analysis_input\\multi_case_validation_20261002\\local11009_native.json": "29f9e7e1670bcf38e77481e652337b4b8a51c249ff3bfaf094ef78dcaeb95a63"
+      }
+    },
+    {
+      "label": "local11000",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 11000,
+        "label": "fresh_11000_straight_regression_20261002",
+        "category": "collision_straight",
+        "v0": 3.4,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "active_index": 0,
+        "stones": [
+          {
+            "index": 2,
+            "x": 2.375,
+            "y": 5.2
+          }
+        ],
+        "notes": "Fresh Reset and straight BESTSHOT replay using the captured11000 friction stream; compare all3362 steps to the previous production baseline."
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 2000,
+      "stateBytesCompared": 208104,
+      "stateBytesExact": 208104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1562,
+      "firstNativeContactTick": 1562,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\unity_release_both_complete_activation_v2_20261002\\logs\\unity_runtime_probe_20261002_182449\\events.jsonl": "afdd4b9d5f4bd89d35dc0ca1d9f3d5eed1c802b1f00a0f170230d303cbaef57f",
+        "analysis_input\\multi_case_validation_20261002\\local11000_native.json": "5e6ec13282104d35a4976db2d188fcb82607307c72bf5cfd0b76f68e6daef130"
+      }
+    },
+    {
+      "label": "full12004_run1",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12004,
+        "label": "full12004_run1",
+        "category": "collision_short_range",
+        "v0": 3.0,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.025,
+            "y": 4.2,
+            "index": 6
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12004,
+        "batch_repeat_index": 3,
+        "batch_case_index": 4,
+        "assigned_target_index": 6,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 415307,
+      "differingBoundaries": 40,
+      "firstDifference": {
+        "physicsTick": 3169,
+        "stoneIndex": 0,
+        "field": "vx",
+        "byteOffsetWithinTwoStoneState": 28,
+        "unityBits": "0x2a542811",
+        "nativeBits": "0xa829844d"
+      },
+      "frictionDraws": 3168,
+      "firstNativeContactTick": null,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12004_run1_unity\\logs\\unity_runtime_probe_20261002_202549\\events.jsonl": "541408ef489203523aea8cf0bcb95e12d5fd8a81bfb5b5b9be461b04a858d27a",
+        "analysis_input\\multi_case_validation_20261002\\full12004_run1_native.json": "1e0a7d08607742ff0876e524000fab1adf3854cf6ec5a0ed056535cee432fcc8"
+      },
+      "observer": {
+        "originalCalculationBodiesByteIdentical": true,
+        "unpatchedWasmControl": true,
+        "setterGetterPosePairsByteIdentical": 3169,
+        "frictionInputsByteIdentical": 3168,
+        "protocolResultUnchanged": true,
+        "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+        "evidence": {
+          "analysis_input\\multi_case_validation_20261002\\full12004_run1_original_control\\logs\\unity_runtime_probe_20261002_202823\\events.jsonl": "2d255478796ae905fecbe15b1c719ed1c71c2d51ad05125fcd92e9054433bee4",
+          "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+          "analysis_input\\unity_release_1022_1025_chain_20261002_wake_internal_v3.wasm": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f"
+        }
+      }
+    },
+    {
+      "label": "full12008_run2",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12008,
+        "label": "full12008_run2",
+        "category": "collision_high_curl",
+        "v0": 3.7,
+        "h0": -0.25,
+        "w0": 3.14,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.775,
+            "y": 6.4,
+            "index": 10
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12008,
+        "batch_repeat_index": 3,
+        "batch_case_index": 8,
+        "assigned_target_index": 10,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1281,
+      "firstNativeContactTick": 1281,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12008_run2_unity\\logs\\unity_runtime_probe_20261002_202930\\events.jsonl": "c3ab6e55b0bc3ef0740e6abb3935167fe94405200f296f1585a7c33f45f4640b",
+        "analysis_input\\multi_case_validation_20261002\\full12008_run2_native.json": "35b8a1ee34bf077195444c3de1ac5b67d354d1fcecf8bb59bd48a5d4b036e9a2"
+      },
+      "observer": {
+        "originalCalculationBodiesByteIdentical": true,
+        "unpatchedWasmControl": true,
+        "setterGetterPosePairsByteIdentical": 1282,
+        "frictionInputsByteIdentical": 1281,
+        "protocolResultUnchanged": true,
+        "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+        "evidence": {
+          "analysis_input\\multi_case_validation_20261002\\full12008_run2_original_control\\logs\\unity_runtime_probe_20261002_203113\\events.jsonl": "cc78c22de4b47a6a01cc72bc7e35e4bef73135aea680c2ebd1a54ea64ff05190",
+          "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+          "analysis_input\\unity_release_1022_1025_chain_20261002_wake_internal_v3.wasm": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f"
+        }
+      }
+    },
+    {
+      "label": "full12011_run3",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12011,
+        "label": "full12011_run3",
+        "category": "collision_long_range",
+        "v0": 4.2,
+        "h0": 0.0,
+        "w0": 0.0,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.625,
+            "y": 9.0,
+            "index": 13
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12011,
+        "batch_repeat_index": 3,
+        "batch_case_index": 11,
+        "assigned_target_index": 13,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 910,
+      "firstNativeContactTick": 910,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12011_run3_unity\\logs\\unity_runtime_probe_20261002_203206\\events.jsonl": "4f67402521e25be34b6be4704875d2b098b77962b2e1cd8cc7266a2b61d3c3a9",
+        "analysis_input\\multi_case_validation_20261002\\full12011_run3_native.json": "07034252269dbb8aa1e2a5e1e2d2eb81e52de917984dac3149342070a2ca41da"
+      },
+      "observer": {
+        "originalCalculationBodiesByteIdentical": true,
+        "unpatchedWasmControl": true,
+        "setterGetterPosePairsByteIdentical": 911,
+        "frictionInputsByteIdentical": 910,
+        "protocolResultUnchanged": true,
+        "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+        "evidence": {
+          "analysis_input\\multi_case_validation_20261002\\full12011_run3_original_control\\logs\\unity_runtime_probe_20261002_203342\\events.jsonl": "b8db828c36433c217adaa3fc2d998e432aa3704fd0892a952b03f2b64e5da15b",
+          "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+          "analysis_input\\unity_release_1022_1025_chain_20261002_wake_internal_v3.wasm": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f"
+        }
+      }
+    },
+    {
+      "label": "full12008_run4",
+      "validStrictReplay": true,
+      "plan": {
+        "sample_id": 12008,
+        "label": "full12008_run4",
+        "category": "collision_high_curl",
+        "v0": 3.7,
+        "h0": -0.25,
+        "w0": 3.14,
+        "sweep": 0.0,
+        "stones": [
+          {
+            "x": 2.775,
+            "y": 6.4,
+            "index": 10
+          }
+        ],
+        "notes": "Archived shot parameters, fresh page, natural Unity friction, no state injection.",
+        "source_sample_id": 12008,
+        "batch_repeat_index": 3,
+        "batch_case_index": 8,
+        "assigned_target_index": 10,
+        "active_index": 0
+      },
+      "releaseCaptured": true,
+      "completedStepsCompared": 4000,
+      "stateBytesCompared": 416104,
+      "stateBytesExact": 416104,
+      "differingBoundaries": 0,
+      "firstDifference": null,
+      "frictionDraws": 1281,
+      "firstNativeContactTick": 1281,
+      "nativeBothSleepingAtLastComparedStep": true,
+      "unityBothMotionlessAtLastComparedStep": true,
+      "unityLastTwentyCompletedStatesUnchanged": true,
+      "productionSourceSha256": "6bf63f0556d94da5e6b70813ee18e9be263650a5ffd218df3cc3973e9ac1945a",
+      "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+      "evidence": {
+        "analysis_input\\multi_case_validation_20261002\\full12008_run4_unity\\logs\\unity_runtime_probe_20261002_203435\\events.jsonl": "d0687b7f5f3ed766c1a7402ec85e2ad6e950c06a95e3daffbba8cccf9043a39a",
+        "analysis_input\\multi_case_validation_20261002\\full12008_run4_native.json": "e95e8c730136a06732a41c2ce1dc8498fd8a303c5d8c623316282d7ee97f8a93"
+      },
+      "observer": {
+        "originalCalculationBodiesByteIdentical": true,
+        "unpatchedWasmControl": true,
+        "setterGetterPosePairsByteIdentical": 1282,
+        "frictionInputsByteIdentical": 1281,
+        "protocolResultUnchanged": true,
+        "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+        "evidence": {
+          "analysis_input\\multi_case_validation_20261002\\full12008_run4_original_control\\logs\\unity_runtime_probe_20261002_203616\\events.jsonl": "23bbdc74487c4052a5171fc6c3ca273057f66f8a4cd408bc056aa911ab2cfa13",
+          "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+          "analysis_input\\unity_release_1022_1025_chain_20261002_wake_internal_v3.wasm": "f533ab8c60d68c8bca56e4b6faf7c7224cb4b0ea5992513903fa52fd23e7ba6f"
+        }
+      }
+    }
+  ],
+  "runs": 6,
+  "distinctShotConditions": 5,
+  "completedStepsCompared": 21000,
+  "stateBytesCompared": 2184624,
+  "allComparedBytesExact": false,
+  "scope": "Actual Unity raw P/Q/v/w of both stones at release and completed simulation steps. Identical captured friction inputs; no post-release state injection.",
+  "localInventory": "analysis_input/local_unity_capture_inventory_20261002.json",
+  "passedRuns": 5,
+  "failedRuns": 1,
+  "allCasesObservedThroughRest": true,
+  "repeatedStrongCurl": {
+    "runs": [
+      "full12008_run2",
+      "full12008_run4"
+    ],
+    "frictionDrawsPerRun": 1281,
+    "differingFrictionDraws": 1281,
+    "bothCompleteTrajectoriesExact": true,
+    "frictionStreamSha256": [
+      "b4875ede5af662f1a996189bcd61c17777b25fd3e3adaa90ead4879e68d48c7b",
+      "87156ffcd9d8ed4ca53ffeb56868a69f921a9c9b8baf53521da036070fae2e9c"
+    ]
+  },
+  "excludedInvalidReplay": "fresh12004_run1: truncated dense inputs; apparent tick 2000 difference invalidated.",
+  "firstDivergenceEvidence": "analysis_input/multi_case_validation_20261002/case12004_first_divergence_verified.json",
+  "productionCodeChanged": false
+}

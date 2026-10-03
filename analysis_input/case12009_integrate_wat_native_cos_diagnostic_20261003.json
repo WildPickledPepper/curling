@@ -1,0 +1,726 @@
+{
+  "outputHex": "fb5c2340000080326780143d4473563d66e6c7295fe3a6bf686a3ab4ffff7f7f17365214f0dc2faad170c49ef0dc2faa93201340b057a434d170c49eb057a4347a923729000020c10f000000aec59d7404d58eb3487f383d30154e317cbd7fbf8f88aec270b766411800584200000000",
+  "stages": [
+    {
+      "originalWatLine": 150,
+      "instruction": "f32.add",
+      "offset": 16384,
+      "resultBits": "0x40235cfb"
+    },
+    {
+      "originalWatLine": 153,
+      "instruction": "f32.mul",
+      "offset": 16388,
+      "resultBits": "0x3cd11adb"
+    },
+    {
+      "originalWatLine": 156,
+      "instruction": "f32.add",
+      "offset": 16392,
+      "resultBits": "0xc2ae888f"
+    },
+    {
+      "originalWatLine": 164,
+      "instruction": "f32.add",
+      "offset": 16396,
+      "resultBits": "0x37973000"
+    },
+    {
+      "originalWatLine": 167,
+      "instruction": "f32.mul",
+      "offset": 16400,
+      "resultBits": "0x3441851e"
+    },
+    {
+      "originalWatLine": 170,
+      "instruction": "f32.add",
+      "offset": 16404,
+      "resultBits": "0x4166b770"
+    },
+    {
+      "originalWatLine": 178,
+      "instruction": "f32.add",
+      "offset": 16408,
+      "resultBits": "0x3d148067"
+    },
+    {
+      "originalWatLine": 181,
+      "instruction": "f32.mul",
+      "offset": 16412,
+      "resultBits": "0x39be14fe"
+    },
+    {
+      "originalWatLine": 184,
+      "instruction": "f32.add",
+      "offset": 16416,
+      "resultBits": "0x42580018"
+    },
+    {
+      "originalWatLine": 190,
+      "instruction": "f32.add",
+      "offset": 16420,
+      "resultBits": "0x40235cfb"
+    },
+    {
+      "originalWatLine": 196,
+      "instruction": "f32.add",
+      "offset": 16424,
+      "resultBits": "0x32800000"
+    },
+    {
+      "originalWatLine": 202,
+      "instruction": "f32.add",
+      "offset": 16428,
+      "resultBits": "0x3d148067"
+    },
+    {
+      "originalWatLine": 210,
+      "instruction": "f32.mul",
+      "offset": 16432,
+      "resultBits": "0x000006c8"
+    },
+    {
+      "originalWatLine": 215,
+      "instruction": "f32.mul",
+      "offset": 16436,
+      "resultBits": "0x2617ebdc"
+    },
+    {
+      "originalWatLine": 216,
+      "instruction": "f32.add",
+      "offset": 16440,
+      "resultBits": "0x2617ebdc"
+    },
+    {
+      "originalWatLine": 221,
+      "instruction": "f32.mul",
+      "offset": 16444,
+      "resultBits": "0x0f3d8dc8"
+    },
+    {
+      "originalWatLine": 222,
+      "instruction": "f32.add",
+      "offset": 16448,
+      "resultBits": "0x2617ebdc"
+    },
+    {
+      "originalWatLine": 223,
+      "instruction": "f32.add",
+      "offset": 16452,
+      "resultBits": "0xb43a6a68"
+    },
+    {
+      "originalWatLine": 229,
+      "instruction": "f32.mul",
+      "offset": 16456,
+      "resultBits": "0x05c252c5"
+    },
+    {
+      "originalWatLine": 232,
+      "instruction": "f32.mul",
+      "offset": 16460,
+      "resultBits": "0x318801d7"
+    },
+    {
+      "originalWatLine": 233,
+      "instruction": "f32.add",
+      "offset": 16464,
+      "resultBits": "0x318801d7"
+    },
+    {
+      "originalWatLine": 236,
+      "instruction": "f32.mul",
+      "offset": 16468,
+      "resultBits": "0x1aa9b296"
+    },
+    {
+      "originalWatLine": 237,
+      "instruction": "f32.add",
+      "offset": 16472,
+      "resultBits": "0x318801d7"
+    },
+    {
+      "originalWatLine": 238,
+      "instruction": "f32.add",
+      "offset": 16476,
+      "resultBits": "0xbfa6e35f"
+    },
+    {
+      "originalWatLine": 244,
+      "instruction": "f32.mul",
+      "offset": 16480,
+      "resultBits": "0x80000000"
+    },
+    {
+      "originalWatLine": 247,
+      "instruction": "f32.mul",
+      "offset": 16484,
+      "resultBits": "0x9ba29234"
+    },
+    {
+      "originalWatLine": 248,
+      "instruction": "f32.add",
+      "offset": 16488,
+      "resultBits": "0x9ba29234"
+    },
+    {
+      "originalWatLine": 251,
+      "instruction": "f32.mul",
+      "offset": 16492,
+      "resultBits": "0x84cad777"
+    },
+    {
+      "originalWatLine": 252,
+      "instruction": "f32.add",
+      "offset": 16496,
+      "resultBits": "0x9ba29234"
+    },
+    {
+      "originalWatLine": 253,
+      "instruction": "f32.add",
+      "offset": 16500,
+      "resultBits": "0x29c7e666"
+    },
+    {
+      "originalWatLine": 259,
+      "instruction": "f32.mul",
+      "offset": 16504,
+      "resultBits": "0x80000000"
+    },
+    {
+      "originalWatLine": 262,
+      "instruction": "f32.mul",
+      "offset": 16508,
+      "resultBits": "0x9ba299bd"
+    },
+    {
+      "originalWatLine": 263,
+      "instruction": "f32.add",
+      "offset": 16512,
+      "resultBits": "0x9ba299bd"
+    },
+    {
+      "originalWatLine": 266,
+      "instruction": "f32.mul",
+      "offset": 16516,
+      "resultBits": "0x84cae0de"
+    },
+    {
+      "originalWatLine": 267,
+      "instruction": "f32.add",
+      "offset": 16520,
+      "resultBits": "0x9ba299bd"
+    },
+    {
+      "originalWatLine": 268,
+      "instruction": "f32.add",
+      "offset": 16524,
+      "resultBits": "0x29c7e666"
+    },
+    {
+      "originalWatLine": 271,
+      "instruction": "f32.mul",
+      "offset": 16528,
+      "resultBits": "0x141c1802"
+    },
+    {
+      "originalWatLine": 275,
+      "instruction": "f32.mul",
+      "offset": 16532,
+      "resultBits": "0x05c25bc6"
+    },
+    {
+      "originalWatLine": 278,
+      "instruction": "f32.mul",
+      "offset": 16536,
+      "resultBits": "0x31880825"
+    },
+    {
+      "originalWatLine": 279,
+      "instruction": "f32.add",
+      "offset": 16540,
+      "resultBits": "0x31880825"
+    },
+    {
+      "originalWatLine": 282,
+      "instruction": "f32.mul",
+      "offset": 16544,
+      "resultBits": "0x1aa9ba73"
+    },
+    {
+      "originalWatLine": 283,
+      "instruction": "f32.add",
+      "offset": 16548,
+      "resultBits": "0x31880825"
+    },
+    {
+      "originalWatLine": 284,
+      "instruction": "f32.add",
+      "offset": 16552,
+      "resultBits": "0xbfa6e35f"
+    },
+    {
+      "originalWatLine": 287,
+      "instruction": "f32.mul",
+      "offset": 16556,
+      "resultBits": "0x3fd99752"
+    },
+    {
+      "originalWatLine": 288,
+      "instruction": "f32.add",
+      "offset": 16560,
+      "resultBits": "0x3fd99752"
+    },
+    {
+      "originalWatLine": 292,
+      "instruction": "f32.mul",
+      "offset": 16564,
+      "resultBits": "0x000006c9"
+    },
+    {
+      "originalWatLine": 295,
+      "instruction": "f32.mul",
+      "offset": 16568,
+      "resultBits": "0x2617f2e7"
+    },
+    {
+      "originalWatLine": 296,
+      "instruction": "f32.add",
+      "offset": 16572,
+      "resultBits": "0x2617f2e7"
+    },
+    {
+      "originalWatLine": 299,
+      "instruction": "f32.mul",
+      "offset": 16576,
+      "resultBits": "0x0f3d9691"
+    },
+    {
+      "originalWatLine": 300,
+      "instruction": "f32.add",
+      "offset": 16580,
+      "resultBits": "0x2617f2e7"
+    },
+    {
+      "originalWatLine": 301,
+      "instruction": "f32.add",
+      "offset": 16584,
+      "resultBits": "0xb43a6a68"
+    },
+    {
+      "originalWatLine": 304,
+      "instruction": "f32.mul",
+      "offset": 16588,
+      "resultBits": "0x2907becb"
+    },
+    {
+      "originalWatLine": 305,
+      "instruction": "f32.add",
+      "offset": 16592,
+      "resultBits": "0x3fd99752"
+    },
+    {
+      "originalWatLine": 322,
+      "instruction": "f32.sqrt",
+      "offset": 16596,
+      "resultBits": "0x3fa6e35f"
+    },
+    {
+      "originalWatLine": 351,
+      "instruction": "f32.div",
+      "offset": 16600,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 353,
+      "instruction": "f32.mul",
+      "offset": 16604,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 355,
+      "instruction": "f32.mul",
+      "offset": 16608,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 359,
+      "instruction": "f32.mul",
+      "offset": 16612,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 361,
+      "instruction": "f32.mul",
+      "offset": 16616,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 365,
+      "instruction": "f32.mul",
+      "offset": 16620,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 367,
+      "instruction": "f32.mul",
+      "offset": 16624,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 372,
+      "instruction": "f32.mul",
+      "offset": 16628,
+      "resultBits": "0x3c559dea"
+    },
+    {
+      "originalWatLine": 374,
+      "instruction": "f32.mul",
+      "offset": 16632,
+      "resultBits": "0x3bd59dea"
+    },
+    {
+      "originalWatLine": 376,
+      "instruction": "call $f18890",
+      "offset": 16636,
+      "resultBits": "0x3bd59d87"
+    },
+    {
+      "originalWatLine": 401,
+      "instruction": "call $f33062",
+      "offset": 16640,
+      "resultBits": "0x3f7ffe9b"
+    },
+    {
+      "originalWatLine": 403,
+      "instruction": "f32.mul",
+      "offset": 16644,
+      "resultBits": "0xbf7fcdf2"
+    },
+    {
+      "originalWatLine": 406,
+      "instruction": "f32.mul",
+      "offset": 16648,
+      "resultBits": "0x80000000"
+    },
+    {
+      "originalWatLine": 411,
+      "instruction": "f32.div",
+      "offset": 16652,
+      "resultBits": "0x3ba3d6be"
+    },
+    {
+      "originalWatLine": 413,
+      "instruction": "f32.mul",
+      "offset": 16656,
+      "resultBits": "0x25ffdec4"
+    },
+    {
+      "originalWatLine": 415,
+      "instruction": "f32.mul",
+      "offset": 16660,
+      "resultBits": "0x9a0ecc71"
+    },
+    {
+      "originalWatLine": 416,
+      "instruction": "f32.sub",
+      "offset": 16664,
+      "resultBits": "0x1a0ecc71"
+    },
+    {
+      "originalWatLine": 420,
+      "instruction": "f32.mul",
+      "offset": 16668,
+      "resultBits": "0xbbd59d87"
+    },
+    {
+      "originalWatLine": 422,
+      "instruction": "f32.mul",
+      "offset": 16672,
+      "resultBits": "0xb983b072"
+    },
+    {
+      "originalWatLine": 423,
+      "instruction": "f32.sub",
+      "offset": 16676,
+      "resultBits": "0x3983b072"
+    },
+    {
+      "originalWatLine": 427,
+      "instruction": "f32.mul",
+      "offset": 16680,
+      "resultBits": "0xb06e9c3f"
+    },
+    {
+      "originalWatLine": 429,
+      "instruction": "f32.mul",
+      "offset": 16684,
+      "resultBits": "0xa2244ecc"
+    },
+    {
+      "originalWatLine": 430,
+      "instruction": "f32.sub",
+      "offset": 16688,
+      "resultBits": "0x3983b072"
+    },
+    {
+      "originalWatLine": 431,
+      "instruction": "f32.add",
+      "offset": 16692,
+      "resultBits": "0xbf7fbd7c"
+    },
+    {
+      "originalWatLine": 436,
+      "instruction": "f32.mul",
+      "offset": 16696,
+      "resultBits": "0x3f7f7b09"
+    },
+    {
+      "originalWatLine": 439,
+      "instruction": "f32.mul",
+      "offset": 16700,
+      "resultBits": "0x31304754"
+    },
+    {
+      "originalWatLine": 442,
+      "instruction": "f32.mul",
+      "offset": 16704,
+      "resultBits": "0x239dbd0a"
+    },
+    {
+      "originalWatLine": 445,
+      "instruction": "f32.mul",
+      "offset": 16708,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 448,
+      "instruction": "f32.mul",
+      "offset": 16712,
+      "resultBits": "0x306e6ee4"
+    },
+    {
+      "originalWatLine": 449,
+      "instruction": "f32.add",
+      "offset": 16716,
+      "resultBits": "0x306e6ee4"
+    },
+    {
+      "originalWatLine": 450,
+      "instruction": "f32.add",
+      "offset": 16720,
+      "resultBits": "0x306e6ee4"
+    },
+    {
+      "originalWatLine": 453,
+      "instruction": "f32.mul",
+      "offset": 16724,
+      "resultBits": "0x2fee6ee5"
+    },
+    {
+      "originalWatLine": 454,
+      "instruction": "f32.sub",
+      "offset": 16728,
+      "resultBits": "0x2fee6ee3"
+    },
+    {
+      "originalWatLine": 455,
+      "instruction": "f32.add",
+      "offset": 16732,
+      "resultBits": "0x314e1530"
+    },
+    {
+      "originalWatLine": 458,
+      "instruction": "f32.mul",
+      "offset": 16736,
+      "resultBits": "0x2325e61b"
+    },
+    {
+      "originalWatLine": 461,
+      "instruction": "f32.mul",
+      "offset": 16740,
+      "resultBits": "0xb38ede36"
+    },
+    {
+      "originalWatLine": 464,
+      "instruction": "f32.mul",
+      "offset": 16744,
+      "resultBits": "0xad93189f"
+    },
+    {
+      "originalWatLine": 467,
+      "instruction": "f32.mul",
+      "offset": 16748,
+      "resultBits": "0x80000000"
+    },
+    {
+      "originalWatLine": 470,
+      "instruction": "f32.mul",
+      "offset": 16752,
+      "resultBits": "0xa5ffae21"
+    },
+    {
+      "originalWatLine": 471,
+      "instruction": "f32.add",
+      "offset": 16756,
+      "resultBits": "0xa5ffae21"
+    },
+    {
+      "originalWatLine": 472,
+      "instruction": "f32.add",
+      "offset": 16760,
+      "resultBits": "0xad93199f"
+    },
+    {
+      "originalWatLine": 475,
+      "instruction": "f32.mul",
+      "offset": 16764,
+      "resultBits": "0xae13191e"
+    },
+    {
+      "originalWatLine": 476,
+      "instruction": "f32.sub",
+      "offset": 16768,
+      "resultBits": "0x2d93189d"
+    },
+    {
+      "originalWatLine": 477,
+      "instruction": "f32.add",
+      "offset": 16772,
+      "resultBits": "0xb38ed504"
+    },
+    {
+      "originalWatLine": 480,
+      "instruction": "f32.mul",
+      "offset": 16776,
+      "resultBits": "0x279f6203"
+    },
+    {
+      "originalWatLine": 483,
+      "instruction": "f32.mul",
+      "offset": 16780,
+      "resultBits": "0x3d1dd0ab"
+    },
+    {
+      "originalWatLine": 486,
+      "instruction": "f32.mul",
+      "offset": 16784,
+      "resultBits": "0x24852a82"
+    },
+    {
+      "originalWatLine": 489,
+      "instruction": "f32.mul",
+      "offset": 16788,
+      "resultBits": "0x00000000"
+    },
+    {
+      "originalWatLine": 492,
+      "instruction": "f32.mul",
+      "offset": 16792,
+      "resultBits": "0x3bd574ec"
+    },
+    {
+      "originalWatLine": 493,
+      "instruction": "f32.add",
+      "offset": 16796,
+      "resultBits": "0x3bd574ec"
+    },
+    {
+      "originalWatLine": 494,
+      "instruction": "f32.add",
+      "offset": 16800,
+      "resultBits": "0x3bd574ec"
+    },
+    {
+      "originalWatLine": 497,
+      "instruction": "f32.mul",
+      "offset": 16804,
+      "resultBits": "0x17b03167"
+    },
+    {
+      "originalWatLine": 498,
+      "instruction": "f32.sub",
+      "offset": 16808,
+      "resultBits": "0x3bd574ec"
+    },
+    {
+      "originalWatLine": 499,
+      "instruction": "f32.add",
+      "offset": 16812,
+      "resultBits": "0x3d387f48"
+    },
+    {
+      "originalWatLine": 502,
+      "instruction": "f32.mul",
+      "offset": 16816,
+      "resultBits": "0x3b04f737"
+    },
+    {
+      "originalWatLine": 503,
+      "instruction": "f32.add",
+      "offset": 16820,
+      "resultBits": "0x3b04f737"
+    },
+    {
+      "originalWatLine": 504,
+      "instruction": "f32.add",
+      "offset": 16824,
+      "resultBits": "0x3b04f737"
+    },
+    {
+      "originalWatLine": 505,
+      "instruction": "f32.add",
+      "offset": 16828,
+      "resultBits": "0x3f800000"
+    },
+    {
+      "originalWatLine": 506,
+      "instruction": "f32.sqrt",
+      "offset": 16832,
+      "resultBits": "0x3f800000"
+    },
+    {
+      "originalWatLine": 507,
+      "instruction": "f32.div",
+      "offset": 16836,
+      "resultBits": "0x3f800000"
+    },
+    {
+      "originalWatLine": 509,
+      "instruction": "f32.mul",
+      "offset": 16840,
+      "resultBits": "0xbf7fbd7c"
+    },
+    {
+      "originalWatLine": 514,
+      "instruction": "f32.mul",
+      "offset": 16844,
+      "resultBits": "0x314e1530"
+    },
+    {
+      "originalWatLine": 519,
+      "instruction": "f32.mul",
+      "offset": 16848,
+      "resultBits": "0x3d387f48"
+    },
+    {
+      "originalWatLine": 524,
+      "instruction": "f32.mul",
+      "offset": 16852,
+      "resultBits": "0xb38ed504"
+    }
+  ],
+  "trigCalls": [
+    {
+      "name": "sin",
+      "inputBits": 1003855338,
+      "resultBits": 1003855239
+    },
+    {
+      "name": "cos",
+      "inputBits": 1003855338,
+      "resultBits": 1065352859
+    }
+  ],
+  "originalBodyOutputUnchanged": true
+}

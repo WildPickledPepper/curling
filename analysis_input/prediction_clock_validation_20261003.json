@@ -1,0 +1,35 @@
+{
+  "sourceWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "functions": [
+    {
+      "index": 79750,
+      "sha256": "c8e4fceced59f51045322e51a683e7d9d8b5118cb91fc01186ca418442c4c3c3"
+    },
+    {
+      "index": 77913,
+      "sha256": "e6cffb687e080b85b43cf258e55baff17e7fb109b8eece23a9c30336bd8d4fcf"
+    },
+    {
+      "index": 80140,
+      "sha256": "dc8b4cefaeafde637d8a11ca1a68f72a9cb7bfb234254cc31e7baf78f305a354"
+    }
+  ],
+  "framesCompared": 2580,
+  "fieldsComparedBitwise": [
+    "frameTime@80",
+    "fixedTime@32",
+    "timeOffset@208"
+  ],
+  "fixedCountsMatched": true,
+  "initialSaturatedFrameCounts": [
+    3168,
+    3168,
+    3168,
+    3168,
+    3168,
+    3168,
+    3168,
+    3168
+  ],
+  "scope": "Same initial running/unpaused clock inputs; original WAT arithmetic executed by wasmtime. No assertion about unsampled browser wall-clock history."
+}

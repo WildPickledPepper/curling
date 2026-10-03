@@ -1,0 +1,419 @@
+{
+  "source": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\local_simulator\\runtime\\pyphysx\\_pyphysx.cp39-win_amd64.pyd",
+  "originalBackup": "D:\\Desktop\\\u51b0\u58f6\\DCCourse\\analysis_input\\native_kernel_before_gradual_underflow_20261002.pyd",
+  "originalSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df",
+  "patchedSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "oldMxcsr": "0x9fc0",
+  "newMxcsr": "0x1f80",
+  "patches": [
+    {
+      "instructionRva": "0xd8cc3",
+      "immediateRva": "0xd8cc7",
+      "fileOffset": 884935,
+      "oldInstructionBytes": "c7442458c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x58], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xf9165",
+      "immediateRva": "0xf9169",
+      "fileOffset": 1017193,
+      "oldInstructionBytes": "c7442468c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x68], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xf9506",
+      "immediateRva": "0xf950a",
+      "fileOffset": 1018122,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xf97a6",
+      "immediateRva": "0xf97aa",
+      "fileOffset": 1018794,
+      "oldInstructionBytes": "c7442478c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x78], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfa58a",
+      "immediateRva": "0xfa58e",
+      "fileOffset": 1022350,
+      "oldInstructionBytes": "c7442448c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x48], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfa926",
+      "immediateRva": "0xfa92a",
+      "fileOffset": 1023274,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfaa06",
+      "immediateRva": "0xfaa0a",
+      "fileOffset": 1023498,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfac96",
+      "immediateRva": "0xfac9a",
+      "fileOffset": 1024154,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfad00",
+      "immediateRva": "0xfad04",
+      "fileOffset": 1024260,
+      "oldInstructionBytes": "c7442450c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x50], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfae26",
+      "immediateRva": "0xfae2a",
+      "fileOffset": 1024554,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfb056",
+      "immediateRva": "0xfb05a",
+      "fileOffset": 1025114,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfb0a7",
+      "immediateRva": "0xfb0ab",
+      "fileOffset": 1025195,
+      "oldInstructionBytes": "c7442450c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x50], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfb2de",
+      "immediateRva": "0xfb2e2",
+      "fileOffset": 1025762,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfc002",
+      "immediateRva": "0xfc009",
+      "fileOffset": 1029129,
+      "oldInstructionBytes": "c7842490000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x90], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfd401",
+      "immediateRva": "0xfd407",
+      "fileOffset": 1034247,
+      "oldInstructionBytes": "c785b0000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xb0], 0x9fc0"
+    },
+    {
+      "instructionRva": "0xfe688",
+      "immediateRva": "0xfe68c",
+      "fileOffset": 1038988,
+      "oldInstructionBytes": "c7442460c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x60], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x105fb2",
+      "immediateRva": "0x105fb6",
+      "fileOffset": 1070006,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x182f2a",
+      "immediateRva": "0x182f2e",
+      "fileOffset": 1581870,
+      "oldInstructionBytes": "c7442460c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x60], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1831cb",
+      "immediateRva": "0x1831cf",
+      "fileOffset": 1582543,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x18321a",
+      "immediateRva": "0x18321e",
+      "fileOffset": 1582622,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x183319",
+      "immediateRva": "0x18331d",
+      "fileOffset": 1582877,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1833d3",
+      "immediateRva": "0x1833d7",
+      "fileOffset": 1583063,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x183453",
+      "immediateRva": "0x183457",
+      "fileOffset": 1583191,
+      "oldInstructionBytes": "c7442430c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x30], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1834ed",
+      "immediateRva": "0x1834f1",
+      "fileOffset": 1583345,
+      "oldInstructionBytes": "c7442408c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 8], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1aa8fe",
+      "immediateRva": "0x1aa902",
+      "fileOffset": 1744130,
+      "oldInstructionBytes": "c7442460c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x60], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1ab923",
+      "immediateRva": "0x1ab927",
+      "fileOffset": 1748263,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1ab997",
+      "immediateRva": "0x1ab99b",
+      "fileOffset": 1748379,
+      "oldInstructionBytes": "c7442438c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x38], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1af813",
+      "immediateRva": "0x1af817",
+      "fileOffset": 1764375,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b056f",
+      "immediateRva": "0x1b0576",
+      "fileOffset": 1767798,
+      "oldInstructionBytes": "c7842490000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x90], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b85de",
+      "immediateRva": "0x1b85e2",
+      "fileOffset": 1800674,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b8751",
+      "immediateRva": "0x1b8755",
+      "fileOffset": 1801045,
+      "oldInstructionBytes": "c7442450c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x50], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b897e",
+      "immediateRva": "0x1b8982",
+      "fileOffset": 1801602,
+      "oldInstructionBytes": "c7442468c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x68], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b8ba6",
+      "immediateRva": "0x1b8baa",
+      "fileOffset": 1802154,
+      "oldInstructionBytes": "c7442460c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x60], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1b8d6a",
+      "immediateRva": "0x1b8d6e",
+      "fileOffset": 1802606,
+      "oldInstructionBytes": "c7442450c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x50], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1eadc0",
+      "immediateRva": "0x1eadc7",
+      "fileOffset": 2007495,
+      "oldInstructionBytes": "c7842488000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x88], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1eaeb8",
+      "immediateRva": "0x1eaebf",
+      "fileOffset": 2007743,
+      "oldInstructionBytes": "c78424c8000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0xc8], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1eb07a",
+      "immediateRva": "0x1eb081",
+      "fileOffset": 2008193,
+      "oldInstructionBytes": "c7842488000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x88], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x1f3c2f",
+      "immediateRva": "0x1f3c35",
+      "fileOffset": 2043957,
+      "oldInstructionBytes": "c785c0000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0xc0], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x28c428",
+      "immediateRva": "0x28c42b",
+      "fileOffset": 2668587,
+      "oldInstructionBytes": "c74568c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x68], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x28ceed",
+      "immediateRva": "0x28cef1",
+      "fileOffset": 2671345,
+      "oldInstructionBytes": "c7442420c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x20], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x28cfc8",
+      "immediateRva": "0x28cfcf",
+      "fileOffset": 2671567,
+      "oldInstructionBytes": "c78424c0000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0xc0], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x28d5a9",
+      "immediateRva": "0x28d5b0",
+      "fileOffset": 2673072,
+      "oldInstructionBytes": "c78424a8000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0xa8], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a0b6f",
+      "immediateRva": "0x2a0b75",
+      "fileOffset": 2752373,
+      "oldInstructionBytes": "c78580000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x80], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a101c",
+      "immediateRva": "0x2a1020",
+      "fileOffset": 2753568,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a10bd",
+      "immediateRva": "0x2a10c1",
+      "fileOffset": 2753729,
+      "oldInstructionBytes": "c7442460c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x60], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a1162",
+      "immediateRva": "0x2a1166",
+      "fileOffset": 2753894,
+      "oldInstructionBytes": "c7442450c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x50], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a1280",
+      "immediateRva": "0x2a1286",
+      "fileOffset": 2754182,
+      "oldInstructionBytes": "c78598000000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x98], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x2a197c",
+      "immediateRva": "0x2a1980",
+      "fileOffset": 2755968,
+      "oldInstructionBytes": "c7442440c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rsp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x34e61c",
+      "immediateRva": "0x34e61f",
+      "fileOffset": 3463711,
+      "oldInstructionBytes": "c74540c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x40], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x34e9e6",
+      "immediateRva": "0x34e9ec",
+      "fileOffset": 3464684,
+      "oldInstructionBytes": "c78530010000c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x130], 0x9fc0"
+    },
+    {
+      "instructionRva": "0x34f0d0",
+      "immediateRva": "0x34f0d3",
+      "fileOffset": 3466451,
+      "oldInstructionBytes": "c74520c09f0000",
+      "mnemonic": "mov",
+      "operands": "dword ptr [rbp + 0x20], 0x9fc0"
+    }
+  ],
+  "basis": "Actual entry MXCSR plus exact captured matrix operands, step 7 angular X 0x8001b2e2"
+}

@@ -2,6 +2,36 @@
 
 ## 快速开始
 
+2026-10-03 预测加速：默认 `training_fast=True` 在原固定步/Update 调度上省去中间审计快照，并使用随包 `runtime/unity_angular_projection.dll` 执行同顺序 float32 投影。五个场景加速前后逐步比较的16135300字节完全一致；49项测试全部通过。实测同轮交替执行原路径与新路径，约加速1.6–2.1倍；[计时结果](../analysis_input/prediction_acceleration_timing_20261003.json)、[逐步一致性报告](../analysis_input/prediction_optimization_comparison_20261003.json)。每个物理步、随机抽取、投影归一化、姿态写回和碰撞回调均保留。原生批量循环仍不替代这条路径。
+
+随包新增 `native_angular_projection.py`、`runtime/unity_angular_projection.dll`、C源和构建脚本；没有该DLL时会使用原Python投影，结果精度不变。`training_fast=False` 保留完整中间快照；`PersistentPhysxFrontHalfScene(native_angular_projection=False)` 可单独关闭原生投影用于对照。复测命令：`python local_simulator/examples/benchmark_prediction_acceleration.py --repeats 10`，已实际验收Windows CP39。
+
+2026-10-03 最新：[自主预测的摩擦消费与时钟驱动修复](../analysis_input/prediction_driver_repair_20261003.md)。`StrictCurlingEnd.play`（含反推求解入口）自行惰性生成摩擦，只在实际控制器门通过的固定步抽取；碰撞/停用后不再抽取，自然停止在 Update 边界处理。时钟计算与原始 Unity WAT 的2580帧逐位一致；12004全部4000步、首碰和墙碰采样回归通过，48项测试通过。独立预测默认固定饱和帧时钟（timeScale=96、帧间隔=.33）；可通过构造参数 `prediction_frame_elapsed`、`prediction_time_scale` 设置。逐位复现实机运行需要随机输入及帧时钟/释放时累计余量均一致。结果提供 `frictionDraws`、`fixedSteps`、`updates`、`rngState`、`clock` 供审计。
+
+2026-10-03 本地局部采样验收：[批量报告](../analysis_input/local_partial_validation_20261003.md)。352份日志中，81份日志的已有数值窗口接入核对：45份局部轨迹的169220个P/Q/v/w状态、108186次滑行计算角速度输出、105112次实测四元数投影、8960个Reset核心状态全部逐位一致。报告分别记录函数同输入验算、实际场景回放及待接入的现成内部窗口；本轮未修改生产物理，尚未宣称全部本地数据通过。
+
+2026-10-03 最新：[12000 墙碰撞及停用已修复](../analysis_input/case12000_wall_repair_20261003.md)。默认 Unity 场景加入原始 `GameSceneNoLimit` 的四块静态墙，通过原生真实进入事件恢复摩擦、清零速度并停用壶；保留碰撞姿态供后续 Reset 使用。10次完整回放共37000步、3738696个比较字节全部一致，已有42项及新增2项测试通过。随包需包含 `native_wall_contact.py` 和 `assets/unity_wall_colliders.json`。Windows CP39 已实际验收，结论限于已采样轨迹和内部窗口；下文保留此前阶段结果。
+
+2026-10-02 新增验收：[12004 自然停止分支正式修复](../analysis_input/case12004_stop_material_repair_20261002.md)。按 `DCP.Update` 的真实 f32 停止条件，在自定义 setter 批次与普通物理尾段之间恢复摩擦，保留批次内已有调用。12004 出手及全部 4000 步、两只冰壶的状态字节一致；第 3169 步五轮求解计算字段及输入输出一致。六次完整回放共 21,000 步全部通过，其余五次状态不变；41 项测试通过。结论限于已比较的物理轨迹及内部窗口。
+
+随后[新增四组完整采样](../analysis_input/additional_cases_validation_20261002.md)：12007、12005 各 4000 步逐字节一致；12009 在第 313 步的 `solverSetupSolve` 出口首次出现四元数差异；12000 的第 1879 步物理解算一致，之后的外部清理尚未纳入纯物理回放。四组未插桩原始 Wasm 对照均通过。本轮只改验收脚本，不改生产物理。
+
+2026-10-03：[12009 余弦分叉正式修复](../analysis_input/case12009_cos_repair_20261003.md)。默认 Unity 场景在 Reset 前将两处积分余弦调用接入随包 `runtime/unity_integrate_cos.dll`，按原始 Unity WAT 的常数、顺序和舍入计算。Windows CP39 验收 9 次完整轨迹共 33000 步、3432936 字节全部一致；原有 41 项及新增完整轨迹测试通过。12000 的外部清理缺口仍未修复。随包时需包含 DLL、C 源及 `native_integrate_cos.py`，不能只复制 pyphysx。
+
+同日补采确认：[12000 第1879步之后是 Wall 碰撞回调](../analysis_input/case12000_wall_cleanup_cause_20261003.md)，按实际 `OnCollisionEnter` 路径清零速度并停用壶。当前回放尚未重现这条路径。
+
+2026-10-02 最新：[第 1383 步缓存修复](../analysis_input/sample11009_cache_repair_20261002.md)。默认停用旧 multi-cache 无条件清空逻辑，保留 Unity 实际更新的睡眠目标接触缓存。新样例 11009 从出手到 3000 个完成步，两只冰壶的 P/Q/v/w 全部逐位一致；第 1383 步接触更新与五轮静态求解的有效计算字段也一致。旧 11000 的 3362 步原生回归未变、2000 步 Unity 状态仍一致。39 项测试通过；结论限于这些样例及采样窗口。
+
+2026-10-02 初始化：[凸包输入修复](../analysis_input/stone_cooking_input_repair_20261002.md)。默认采用 Unity `f72908` 实际输入的固定碰撞网格，512 个顶点的 1,536 个字全部一致。本地自然烹饪、尚未导入凸包资产时，4,008 字节公共几何字段、13 个头部浮点字及 BigConvex 数组已一致，原先 4 个头部差异消除。双方 2,000 个 Unity 完成帧、52,000 个状态字保持一致；35 项测试通过。烹饪的全部中间计算及本地额外 GPU 边数据分支仍未审计，不能宣称全内部链闭合。旧 [从头审查](../analysis_input/startup_geometry_audit_20261002.md)保留修复前证据。
+
+2026-10-02 物理状态验证：[目标自然激活修复](../analysis_input/target_natural_wake_repair_20261002.md)。依据 Unity 实际岛激活调用，删除默认预测唤醒；第 1561 帧目标冰壶分歧已消除。Windows CP39 样本 11000 的双冰壶完成帧位姿/速度状态，从第 1 帧至第 2000 帧共 52,000 个 float32 字逐位一致，覆盖首次接触、碰撞回调、普通物理推进及双方最终休眠。34 项测试通过。后续仍需直接核对协议转换、格式化和游戏状态切换；其他样本不能由此推广。此前 [BVH34 修复](../analysis_input/release_bvh34_repair_20261002.md) 与 [Reset 42 步及自然休眠修复](../analysis_input/reset_complete_alignment_20261002.md)保留为历史证据。
+
+历史阶段记录：[登记与 Reset 逐位修复](../analysis_input/activation_and_reset_alignment_20261002.md)恢复了默认登记输入、壶号/登记映射、启用时更换刚体及 Reset 放置流程。该页的第 6 步分歧已由最新修复推进；此前 11005 的活动壶局部验证仍不能推广为全场景前缀一致。
+
+2026-10-02 后续：[首碰生命周期修复](../analysis_input/11005_lifecycle_fix_20261002.md)已默认启用 actor 的 no-sim 启停，并载入实测的固定场景初始编号池历史。12 枪实际首碰角色顺序一致；11005 的两个首碰接触几何逐位一致，原 1,023 次写入回归保持通过。碰后求解约束仍有差异，尚未完成整段轨迹对齐。复现 Unity 的连续局面历史时，应在出手结束后执行 `clear_out_of_play_stones()`，让出界 actor 正常停用；训练样例已执行此步骤。
+
+2026-10-02：原生 Y-up 路径已默认接入激活时的碰撞体缩放计算，以及每次物理步后的 Unity `f72606` 姿态写回。相同初始条件的 11005 回归中，原第 488 次 native setter 分叉已消除，P/Q 与角速度输出一致到第 1,023 次。需要姿态写回的路径暂不使用旧原生批量模拟循环；端到端碰后精度与更新后的性能仍需继续验收。详见[修复记录](../analysis_input/simulator_alignment_20261002_FIX.md)。
+
 随包严格 PhysX 支持 **64 位 CPython 3.8** 与 **64 位 CPython 3.13**（均为 Windows x64）。它会按当前解释器自动选择对应的 `.pyd`。以下命令都在仓库根目录执行。
 
 ### 1. 安装并自检
@@ -53,6 +83,8 @@ python local_simulator\examples\inverse_spin_shot.py `
 ## 这是什么
 
 `local_simulator/` 是数字冰壶项目的严格本地物理模拟器，只保留 Unity 对齐的 PhysX 回放路径。
+
+角速度写入现默认采用 Unity `func[73035]` 的 float32 锁轴投影与 Transform 姿态同步规则；旧 tilt-only 近似仅供显式对照。该精确路径目前不能使用旧的原生逐帧快循环，改走 Python 逐帧调用 PhysX。单次无目标高旋出手的本机测量约 `0.366s`，旧快循环约 `0.072s`；这是速度代价，不代表整条轨迹已与 Unity 完全一致。密集 setter 回归见 `analysis_input/verify_unity_angular_setter_projection.py`，高旋 1283/1283、低旋 911/911 次 native 三轴角速度逐位相同。
 
 旋球公式、逐 tick 更新和可运行的检查样例见 [SPIN_AND_CURLING_FORMULA.md](SPIN_AND_CURLING_FORMULA.md)。
 

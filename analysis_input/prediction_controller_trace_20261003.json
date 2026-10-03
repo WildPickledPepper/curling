@@ -1,0 +1,196 @@
+{
+  "path": "analysis_input\\prediction_schedule_unity_v4_20261003\\logs\\unity_runtime_probe_20261003_201831\\events.jsonl",
+  "sha256": "36a9eb25c4e1fcf0866a763d6b844d66eabdb9c0817af1280fc47c576d922c2f",
+  "timeScaleCalls": [
+    {
+      "line": 148,
+      "t": 31332.5,
+      "value": 16,
+      "fixedCount": 0
+    },
+    {
+      "line": 149,
+      "t": 31353,
+      "value": 4,
+      "fixedCount": 0
+    },
+    {
+      "line": 150,
+      "t": 31353.099999999627,
+      "value": 96,
+      "fixedCount": 0
+    }
+  ],
+  "activeControllerUpdates": [
+    {
+      "line": 418,
+      "t": 52390.39999999851,
+      "edge": "before",
+      "fixedCount": 160346,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 419,
+      "t": 52390.5,
+      "edge": "after",
+      "fixedCount": 160346,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 423,
+      "t": 53029.09999999963,
+      "edge": "before",
+      "fixedCount": 163514,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 424,
+      "t": 53032.89999999851,
+      "edge": "after",
+      "fixedCount": 163514,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 428,
+      "t": 53499.5,
+      "edge": "before",
+      "fixedCount": 166682,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 429,
+      "t": 53500.59999999963,
+      "edge": "after",
+      "fixedCount": 166682,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 432,
+      "t": 53893.5,
+      "edge": "before",
+      "fixedCount": 169850,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 433,
+      "t": 53893.5,
+      "edge": "after",
+      "fixedCount": 169850,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 436,
+      "t": 54286.89999999851,
+      "edge": "before",
+      "fixedCount": 173018,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 437,
+      "t": 54286.89999999851,
+      "edge": "after",
+      "fixedCount": 173018,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 441,
+      "t": 54628.89999999851,
+      "edge": "before",
+      "fixedCount": 176186,
+      "frictionCount": 0,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 446,
+      "t": 54637.59999999963,
+      "edge": "after",
+      "fixedCount": 176186,
+      "frictionCount": 0,
+      "shotInProgress": 1,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 19612,
+      "t": 56586.5,
+      "edge": "before",
+      "fixedCount": 179354,
+      "frictionCount": 3168,
+      "shotInProgress": 1,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 19621,
+      "t": 56589.199999999255,
+      "edge": "after",
+      "fixedCount": 179354,
+      "frictionCount": 3168,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 19666,
+      "t": 57058.89999999851,
+      "edge": "before",
+      "fixedCount": 182522,
+      "frictionCount": 3168,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    },
+    {
+      "line": 19667,
+      "t": 57059,
+      "edge": "after",
+      "fixedCount": 182522,
+      "frictionCount": 3168,
+      "shotInProgress": 0,
+      "controllerPtr": 29926480
+    }
+  ],
+  "eventCounts": {
+    "probe.installed": 1,
+    "fs.scan": 1,
+    "wasm.instantiateStreaming.call": 1,
+    "wasm.instance": 1,
+    "table_hook.installed": 33,
+    "sliding.hooks_installed": 1,
+    "a0.fixed_tick_resolver.installed": 2,
+    "wasm.import.call": 135,
+    "controller.time_scale.direct": 3,
+    "websocket.opening": 2,
+    "controller.update.schedule": 128,
+    "controller.update.direct": 128,
+    "websocket.open": 2,
+    "websocket.recv": 9,
+    "websocket.send": 17,
+    "a10.release_reset_orientation": 1,
+    "a12.dense_pre_angular_setter": 3169,
+    "a12.dense_post_angular_setter": 3169,
+    "a12.angular_setter_two_pose_inputs": 6382,
+    "sliding.random_range.friction": 3168,
+    "controller.friction.direct": 3168,
+    "a12.early_phase_core": 147
+  },
+  "sourceManifest": "analysis_input/prediction_schedule_unity_v4_20261003/observer_manifest.json",
+  "timingPassivityVerified": false
+}

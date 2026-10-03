@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
@@ -142,6 +143,7 @@ def main() -> int:
     parser.add_argument("--interval", type=float, default=2.0)
     parser.add_argument("--width", type=int, default=1500)
     parser.add_argument("--height", type=int, default=950)
+    parser.add_argument("--headless", action="store_true", help="Run a diagnostic capture without a visible browser window.")
     parser.add_argument("--no-known-hooks", action="store_true")
     parser.add_argument(
         "--a0-fixed-tick-resolver-hook",
@@ -191,6 +193,19 @@ def main() -> int:
             "of every BESTSHOT; use this as strict persistent-scene reset-yaw truth."
         ),
     )
+    parser.add_argument(
+        "--a12-dense-release-serial",
+        type=int,
+        default=None,
+        help="Read-only per-setter native pose/getter trace for this controlled BESTSHOT protocol serial.",
+    )
+    parser.add_argument("--a12-dense-write-limit", type=int, default=2000,
+                        help="Maximum dense setter ordinals retained by the passive A12 observer.")
+    parser.add_argument("--a12-phase-ordinal-min", type=int, default=2)
+    parser.add_argument("--a12-phase-ordinal-max", type=int, default=22)
+    parser.add_argument("--a12-static-phase-trace", action="store_true")
+    parser.add_argument("--pcm-call-trace-manifest", type=Path)
+    parser.add_argument("--pcm-geometry-scale-trace", action="store_true")
     parser.add_argument(
         "--reset-all-stone-rotations",
         action="store_true",
@@ -578,11 +593,25 @@ def main() -> int:
     ]
     if (args.c108_static_target_native_x is None) != (args.c108_static_target_native_z is None):
         raise ValueError("C108 static selector requires both --c108-static-target-native-x and --c108-static-target-native-z")
+    pcm_call_trace_manifest = None
+    if args.pcm_call_trace_manifest is not None:
+        pcm_call_trace_manifest = json.loads(args.pcm_call_trace_manifest.read_text(encoding="utf-8"))
+        patched_path = Path(pcm_call_trace_manifest["patched"])
+        patched_bytes = patched_path.read_bytes()
+        if hashlib.sha256(patched_bytes).hexdigest() != pcm_call_trace_manifest["patchedSha256"]:
+            raise ValueError("PCM trace patched Wasm hash mismatch")
     a2_static_trace_options = json.dumps({
         "a2StaticTrace": bool(args.a2_static_trace),
         "a8StaticWindow": bool(args.a8_static_window),
         "a9SnapshotWindow": bool(args.a9_snapshot_window),
         "a10ReleaseOrientation": bool(args.a10_release_orientation),
+        "a12DenseReleaseSerial": args.a12_dense_release_serial,
+        "a12DenseWriteLimit": args.a12_dense_write_limit,
+        "a12PhaseOrdinalMin": args.a12_phase_ordinal_min,
+        "a12PhaseOrdinalMax": args.a12_phase_ordinal_max,
+        "a12StaticPhaseTrace": args.a12_static_phase_trace,
+        "pcmCallTraceManifest": pcm_call_trace_manifest,
+        "pcmGeometryScaleTrace": args.pcm_geometry_scale_trace,
         "resetAllStoneRotations": bool(args.reset_all_stone_rotations),
         "rngSeedOnFirstFriction": args.rng_seed_on_first_friction,
         "rngFrictionManifest": rng_friction_manifest,
@@ -625,6 +654,7 @@ def main() -> int:
     meta = {
         "url": args.url,
         "probe": str(args.probe),
+        "pcm_call_trace_manifest": pcm_call_trace_manifest,
         "output_dir": str(output_dir),
         "events_jsonl": str(events_jsonl_path),
         "started_at": datetime.now().isoformat(timespec="seconds"),
@@ -695,7 +725,7 @@ def main() -> int:
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
-            headless=False,
+            headless=args.headless,
             args=[
                 f"--window-size={args.width},{args.height}",
                 "--disable-web-security",
@@ -706,6 +736,31 @@ def main() -> int:
             viewport={"width": args.width, "height": args.height},
             ignore_https_errors=True,
         )
+        if pcm_call_trace_manifest is not None:
+            def serve_pcm_trace_wasm(route: Any) -> None:
+                response = route.fetch()
+                body = response.body()
+                raw_is_gzip = body[:2] == b"\x1f\x8b"
+                source_bytes = gzip.decompress(body) if raw_is_gzip else body
+                source_hash = hashlib.sha256(source_bytes).hexdigest()
+                if source_hash != pcm_call_trace_manifest["sourceSha256"]:
+                    print("[pcm-trace] refusing unexpected Wasm " + source_hash, flush=True)
+                    route.abort()
+                    return
+                headers = dict(response.headers)
+                headers.pop("content-length", None)
+                headers.pop("content-encoding", None)
+                headers.pop("etag", None)
+                headers["content-type"] = "application/wasm"
+                routed_bytes = gzip.compress(patched_bytes) if raw_is_gzip else patched_bytes
+                route.fulfill(status=response.status, headers=headers, body=routed_bytes)
+                _write_json_atomic(output_dir / "pcm_call_trace_wasm.json", {
+                    "url": route.request.url, "sourceSha256": source_hash,
+                    "patchedSha256": pcm_call_trace_manifest["patchedSha256"],
+                    "responseBodyWasGzip": raw_is_gzip,
+                    "manifest": str(args.pcm_call_trace_manifest.resolve()),
+                })
+            context.route("**/*.wasm*", serve_pcm_trace_wasm)
         probe_config: dict[str, Any] = {}
         if args.cooked_hull_hook:
             probe_config["autoCookedHullHook"] = True
@@ -1155,6 +1210,17 @@ def main() -> int:
                         instanceCount: (p.instances || []).length,
                         memoryCount: (p.memories || []).length,
                         tableCount: (p.tables || []).length
+                        ,bindingDiagnostics: {{
+                          protocolMessageSerial:p.protocolMessageSerial,
+                          pendingReleaseProtocol:p.pendingReleaseProtocol,
+                          lastResetProtocol:p.lastResetProtocol,
+                          angularWriteCount:p.a0FixedTickResolver && p.a0FixedTickResolver.a12DenseWriteCount,
+                          websocketWrapperCurrent:window.WebSocket===p.webSocketWrapper,
+                          changedTableHooks:(p.hooks || []).filter(h =>
+                            h.installedFunction && h.tableRecord.table.get(h.index)!==h.installedFunction)
+                            .map(h => ({{index:h.index,name:h.name,
+                              currentFunctionName:h.tableRecord.table.get(h.index).name}}))
+                        }}
                       }};
                     }}""",
                     )
@@ -1165,6 +1231,8 @@ def main() -> int:
                                 handle.write(json.dumps(event, ensure_ascii=False) + "\n")
                         exported_event_count += len(new_events)
                     latest_summary = dict(payload) if isinstance(payload, dict) else {"payload": payload}
+                    latest_summary["frameUrls"] = [frame.url for frame in page.frames]
+                    latest_summary["pageUrls"] = [item.url for item in context.pages]
                     latest_summary["eventsJsonl"] = str(events_jsonl_path)
                     latest_summary["newEventCount"] = len(new_events) if isinstance(new_events, list) else 0
                     # Keep latest lightweight; all raw events are in events.jsonl.

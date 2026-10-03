@@ -1,0 +1,10 @@
+{"case": "free", "before_ms": {"mean": 1089.2872400000006, "median": 1316.6124999999997, "p95": 1505.6287500000017, "min": 346.0991, "max": 1524.6849000000022}, "after_ms": {"mean": 702.8884900000004, "median": 821.4765500000008, "p95": 1151.0381499999999, "min": 181.99050000000017, "max": 1158.1107999999992}, "median_speedup": 1.6027389948014932}
+{"case": "hit", "before_ms": {"mean": 962.6900299999995, "median": 946.6809999999998, "p95": 1059.3893750000002, "min": 887.9345000000001, "max": 1095.5444000000014}, "after_ms": {"mean": 540.8715199999999, "median": 522.1984000000007, "p95": 650.7579749999976, "min": 463.5333000000017, "max": 671.061299999998}, "median_speedup": 1.8128761022630453}
+{"case": "wall", "before_ms": {"mean": 1144.2335099999987, "median": 1094.977199999999, "p95": 1318.085754999998, "min": 942.245100000001, "max": 1328.6085999999955}, "after_ms": {"mean": 631.0807999999987, "median": 611.7711499999991, "p95": 742.4564999999965, "min": 544.2152999999976, "max": 779.9297999999978}, "median_speedup": 1.7898477232867234}
+{"case": "spin", "before_ms": {"mean": 1858.2955099999979, "median": 1835.55355, "p95": 2006.935589999999, "min": 1768.247500000001, "max": 2044.8138}, "after_ms": {"mean": 1015.3588600000021, "median": 969.5656000000029, "p95": 1203.3687800000073, "min": 943.4935000000024, "max": 1226.2916000000105}, "median_speedup": 1.893171075788987}
+{"case": "dense", "before_ms": {"mean": 1240.9313099999977, "median": 1201.6960999999994, "p95": 1467.8888749999944, "min": 1111.4600000000082, "max": 1629.1987999999974}, "after_ms": {"mean": 583.8695800000025, "median": 565.5974499999985, "p95": 678.2637050000004, "min": 525.5748999999952, "max": 725.6239999999963}, "median_speedup": 2.1246490768301776}
+D:\Desktop\冰壶\DCCourse\analysis_input\prediction_acceleration_timing_20261003.json
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+
+D:\esp\tmp\physx_scalar_bvh4_src\source\physxcooking\src\mesh\TriangleMeshBuilder.cpp (140) : warning : TriangleMesh: Enable mesh welding with 0 weld tolerance!
+

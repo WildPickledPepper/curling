@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Persistent PhysX backend for Unity's MOTIONINFO -> first-contact path.
 
-The backend keeps one Scene and stable actor/shape identities.  It applies the
+The backend keeps one Scene and recreates rigid actors and collider shapes
+at Unity activation boundaries. It applies the
 recovered CurlingMotion velocity update before every 0.01 second Scene step and
 lets PhysX create the stone-stone PCM pair naturally.  The production path
 runs in Unity's native Y-up frame so the cooked hull topology is never reflected
@@ -34,18 +35,30 @@ from tools.reverse.recovered_curling_motion import (
     unity_friction,
 )
 from tools.reverse.front_half_pcm_replay import FIRST_PCM_CENTER_DISTANCE, local_initial_state
+from tools.reverse.recovered_transform_scale import recovered_stone_geometry_scale
+from tools.reverse.recovered_stone_mass import recovered_stone_inertia
 
 
 SIMULATOR_ROOT = Path(__file__).resolve().parent
 DEFAULT_RUNTIME_HULL_ASSET = SIMULATOR_ROOT / "assets" / "unity_runtime_hull.json"
 DEFAULT_RUNTIME_ICE_MESH = SIMULATOR_ROOT / "assets" / "unity_runtime_ice_triangle_mesh.json"
-DEFAULT_FORMAL_STONE_MESH = SIMULATOR_ROOT / "assets" / "stone_extendedcollider_mesh_256.json"
+# f72908 actual PxConvexMeshDesc: preserve the fixed collider's vertex order
+# and binary32 coordinates. The older reconstructed cylinder differs at input.
+DEFAULT_FORMAL_STONE_MESH = SIMULATOR_ROOT / "assets" / "unity_stone_convex_input_512.json"
 COORDINATE_MODES = ("unity-native-yup", "legacy-zup")
 ICE_MESH_MODES = (
     "reconstructed",
     "unity-runtime-postcook",
     "unity-source-once",
 )
+
+# Runtime-hull BigConvex reconstruction is pure, deterministic preprocessing
+# of the fixed stone asset.  Keep immutable bytes here and hand each scene
+# fresh Python lists, because every scene owns and patches its own PxShape.
+_RUNTIME_FEATURE_CACHE: dict[
+    tuple[str, int, int, str],
+    tuple[tuple[int, ...], dict[str, tuple[int, ...]], dict[str, Any]],
+] = {}
 
 # Recovered from the native target pose in the first controlled PCM capture.
 # Keeping Unity's world translation also preserves the float32 phase seen by PCM.
@@ -60,10 +73,24 @@ UNITY_NATIVE_ORIGIN_Z = 56.525001525878906
 # endpoint (C107 showed that a global +1 ULP shift is wrong).
 UNITY_NATIVE_POSITION_X_BASE = -64.377398
 UNITY_NATIVE_ICE_Y = 14.304784545898437
+# A10 captured the same native BESTSHOT release height in all 12 ordered
+# samples.  It is not the stone's settled centre height on the ice.
+UNITY_NATIVE_BESTSHOT_RELEASE_Y = 14.43239974975586
+# Actual zero-offset release Z (0x4258b296). Protocol f61066 reads this
+# Rigidbody coordinate and subtracts the parsed f32 offset with f32.sub.
+UNITY_NATIVE_BESTSHOT_RELEASE_Z = 54.174400329589844
+# RESETPOSITION writes this captured Transform position for an empty slot.
+UNITY_NATIVE_RESET_INACTIVE_POSITION = (-96.85420227050781, 14.43239974975586, 54.174400329589844)
 UNITY_STONE_BASE_X = float.fromhex("0x1.1df46ap-24")
 UNITY_STONE_SCALE_XZ = 0.11270000785589218
 UNITY_STONE_SCALE_Y = 0.11500000208616257
-UNITY_STONE_VERTICAL_INERTIA = 0.18922292609173136
+# f78119/f78120/f78121 hierarchy sampled during MeshCollider construction.
+UNITY_STONE_LOCAL_SCALE = (0.11500000208616257,) * 3
+UNITY_STONE_PARENT_SCALE = (0.9800000190734863, 1.0, 0.9800000190734863)
+# f71726 startup input uses the serialized PhysicsManager default (3.14).
+# Subsequent stone creation/solver captures use 20**2 = 0x43c80000.
+UNITY_DEFAULT_MAX_ANGULAR_SPEED = 3.14
+UNITY_STONE_MAX_ANGULAR_SPEED = 20.0
 # `DCP.UpdateState` applies its ordinary retained-area test in body-space.
 # POSITION/reset coordinates carry the fixed (+2.375, +4.88) presentation
 # offset, so these are the equivalent bounds in this backend's public state.
@@ -87,6 +114,8 @@ class PhysxStoneSlot:
     material: Any
     enabled: bool = False
     in_scene: bool = True
+    geometry_scale: Optional[tuple[float, float, float]] = None
+    unity_constraints: int = 0
 
 
 class NativePyphysxMotionStepper:
@@ -260,9 +289,9 @@ class PersistentPhysxFrontHalfScene:
         formal_stone_mesh: Optional[Path] = None,
         runtime_hull_asset: Optional[Path] = DEFAULT_RUNTIME_HULL_ASSET,
         patch_runtime_features: bool = True,
-        ice_use_fast_midphase: bool = False,
-        # Unity's source, scale, cooked triangle ordering and BVH34 data are verified.
-        # Keep the scalar fallback on BVH33 without returning to a hand-built plane.
+        ice_use_fast_midphase: bool = True,
+        # Unity uses BVH34. The bundled kernel includes its scalar query path;
+        # BVH33 visits triangles in a different order and changes PCM normals.
         ice_mesh_mode: str = "unity-source-once",
         coordinate_mode: str = "unity-native-yup",
         require_p4_contact_hooks: bool = True,
@@ -273,15 +302,19 @@ class PersistentPhysxFrontHalfScene:
         stone_stone_contact_dynamic_friction: float = 0.36,
         emulate_unity_first_pair_zero_friction: bool = True,
         enable_unity_pcm_task_cache_lifecycle: bool = True,
-        enable_unity_pcm_multi_cache_lifecycle: bool = True,
+        enable_unity_pcm_multi_cache_lifecycle: bool = False,
         repeat_pose_after_shape_activation: bool = True,
+        emulate_unity_transform_scale_refresh: bool = True,
+        emulate_unity_body_pose_writeback: bool = True,
         emulate_unity_setactive_refilter: bool = True,
-        emulate_unity_setactive_no_sim: bool = False,
-        emulate_unity_native_angular_setter_rotation: bool = False,
+        emulate_unity_setactive_no_sim: bool = True,
+        emulate_unity_native_angular_setter_rotation: bool = True,
+        native_angular_projection: bool = True,
         emulate_unity_native_angular_setter_residual_z: bool = False,
-        emulate_unity_native_angular_setter_tilt_only: bool = True,
+        emulate_unity_native_angular_setter_tilt_only: bool = False,
         wake_target_at_current_pcm_shell: bool = False,
-        custom_sliding_zero_vertical_setter: bool = False,
+        custom_sliding_zero_vertical_setter: bool = True,
+        emulate_unity_bestshot_release_pose: bool = True,
     ) -> None:
         if stone_count <= 0:
             raise ValueError("stone_count must be positive")
@@ -323,6 +356,12 @@ class PersistentPhysxFrontHalfScene:
         self.enable_unity_pcm_task_cache_lifecycle = bool(
             enable_unity_pcm_task_cache_lifecycle
         )
+        # Historical C19/C20 diagnostic clears every multi-cache at narrowphase
+        # entry. Unity f70030 instead preserves the sleeping target's 304-byte
+        # cache on its first solver step (sample11009 tick1383) and calls f69978
+        # to refresh it. The normal pose-writeback/interaction path below owns
+        # cache invalidation; forcing an empty cache here selects the wrong PCM
+        # branch. Keep this switch only for explicit historical replay.
         self.enable_unity_pcm_multi_cache_lifecycle = bool(
             enable_unity_pcm_multi_cache_lifecycle
         )
@@ -330,17 +369,17 @@ class PersistentPhysxFrontHalfScene:
         # Unity executes transform/shape refresh before the collider runtime
         # refresh; the legacy local path writes the pose once more afterwards.
         self.repeat_pose_after_shape_activation = bool(repeat_pose_after_shape_activation)
+        self.emulate_unity_transform_scale_refresh = bool(emulate_unity_transform_scale_refresh)
+        self.emulate_unity_body_pose_writeback = bool(emulate_unity_body_pose_writeback)
         # Unity refreshes the interaction graph after its SetActive shape
         # transition.  Leaving the local pair stale produces centimetre-scale
         # glancing endpoint errors; therefore refilter is now the production
         # default.  It remains switchable for historical A/B audits.
         self.emulate_unity_setactive_refilter = bool(emulate_unity_setactive_refilter)
-        # Diagnostic timing switch. The legacy local bridge wakes a stationary
-        # target when the *predicted next* active pose enters the PCM shell.
-        # Unity C05 shows the target core remains unchanged until the current
-        # pose is in the shell, so this is kept opt-in until 14000 closes.
+        # Explicit manual-wake diagnostic. The default leaves target
+        # activation to the PhysX island manager, as observed in f71529.
         self.wake_target_at_current_pcm_shell = bool(wake_target_at_current_pcm_shell)
-        # Source-backed B-chain candidate: PxActorFlag::eDISABLE_SIMULATION
+        # Unity SetActive lifecycle: PxActorFlag::eDISABLE_SIMULATION
         # preserves the PxActor/PxShape objects while removing the internal
         # RigidSim. Re-enabling creates a new RigidSim and therefore a new
         # RigidID, which is the value PhysX uses to order a new ShapeInteraction.
@@ -350,12 +389,16 @@ class PersistentPhysxFrontHalfScene:
                 "eDISABLE_SIMULATION SetActive emulation cannot be combined with "
                 "Scene.remove_actor/add_actor"
             )
-        # Unity's native angular-velocity setter rotates the script-space vector
-        # through the current body quaternion before writing its internal target.
-        # This is source-backed and required by the production no-oracle path.
+        # Unity's native setter projects the script-space vector through its
+        # scene Transform quaternion, then locks local X/Z.  This is the
+        # verified default; tilt-only remains an explicit legacy fast mode.
         self.emulate_unity_native_angular_setter_rotation = bool(
             emulate_unity_native_angular_setter_rotation
         )
+        self._native_angular_projection = None
+        if native_angular_projection:
+            from .native_angular_projection import load_angular_projection
+            self._native_angular_projection = load_angular_projection()
         self.emulate_unity_native_angular_setter_residual_z = bool(
             emulate_unity_native_angular_setter_residual_z
         )
@@ -367,8 +410,23 @@ class PersistentPhysxFrontHalfScene:
         # Diagnostic-only until an end-to-end R0 fixture proves that DCP writes
         # Rigidbody.linearVelocity with a literal zero Y component throughout
         # the release-to-contact airborne interval.
+        # f60124 FixedUpdate constructs world velocity with literal +0 for Y
+        # before f32521 -> f82501 -> f73034, even after gravity changed it.
+        # Retaining the prior vertical speed first diverges on sliding tick 2.
         self.custom_sliding_zero_vertical_setter = bool(custom_sliding_zero_vertical_setter)
+        self.emulate_unity_bestshot_release_pose = bool(emulate_unity_bestshot_release_pose)
+        # Reset setter and first sliding setter see the release Transform as-is.
+        # After the first physics step Unity syncs Transform from PhysX and
+        # normalizes its quaternion in float32 (A12: 1281/1281 exact matches).
+        self._unity_angular_setter_calls: dict[int, int] = {}
         self.dt = UNITY_FIXED_TIMESTEP
+        self.integration_cosine_metadata = None
+        if self.coordinate_mode == "unity-native-yup":
+            # Unity f71198 calls f33062. The Windows CRT's small-angle cosf
+            # rounds differently (12009 step313); preserve Unity's arithmetic
+            # at both native integrateCore copies before Reset simulation.
+            from .native_integrate_cos import install_unity_integration_cosine
+            self.integration_cosine_metadata = install_unity_integration_cosine()
         self.center_height = probe.HEIGHT / 2.0
         self.combine_mode = probe._combine_mode_from_name("multiply")
         self.scene = self.pyphysx.Scene(
@@ -418,6 +476,8 @@ class PersistentPhysxFrontHalfScene:
         if self.coordinate_mode == "unity-native-yup":
             self.scene.set_gravity([0.0, -9.81, 0.0])
         self._custom_sliding_index: Optional[int] = None
+        self._custom_sliding_release_origin: Optional[tuple[float, float, float]] = None
+        self._in_custom_sliding_step = False
 
         ice_material = probe._make_material(
             0.02,
@@ -506,10 +566,9 @@ class PersistentPhysxFrontHalfScene:
                 "disable_clean_mesh": False,
                 "disable_active_edges_precompute": False,
                 "force_32bit_indices": False,
-                # Unity uses BVH34, but the local scalar PhysX backend cannot
-                # execute BV4 (the upstream implementation excludes it when
-                # PX_SIMD_DISABLED is set). Keep BVH33 as the executable
-                # fallback until a scalar BV4 path is available.
+                # The bundled scalar BV4 implementation is executable (CP39
+                # intersectOBB_BV4 RVA 0x347650 -> BV4_OverlapBoxCB 0x3f69b0).
+                # Preserve Unity's traversal before contact patch reduction.
                 "use_fast_midphase": ice_use_fast_midphase,
                 "build_gpu_data": False,
             }
@@ -529,10 +588,8 @@ class PersistentPhysxFrontHalfScene:
                     scale=ice_mesh_scale,
                     **mesh_kwargs,
                 )
-                # The captured remap belongs to Unity's BVH34 mesh. Do not put
-                # it on the scalar backend's different BVH33 fallback: face
-                # IDs do not affect support physics, but this pyphysx fallback
-                # expects its own remap ordering during mesh-pair reporting.
+                # The captured remap belongs to Unity's BVH34 cooked ordering.
+                # An explicitly selected BVH33 mesh must retain its own remap.
                 if ice_use_fast_midphase:
                     face_remap = load_unity_runtime_ice_face_remap(DEFAULT_RUNTIME_ICE_MESH)
                     remap_patch = ice_shape.patch_triangle_mesh_face_remap_for_unity(face_remap)
@@ -559,7 +616,33 @@ class PersistentPhysxFrontHalfScene:
         for shape in self.ice.get_atached_shapes():
             shape.set_contact_offset(0.01)
             shape.set_rest_offset(0.0)
-        self.scene.add_actor(self.ice)
+        if not self.emulate_unity_setactive_no_sim:
+            self.scene.add_actor(self.ice)
+
+        self.walls: list[Any] = []
+        self._wall_addresses: dict[int, str] = {}
+        self._last_wall_reports: list[dict[str, Any]] = []
+        self.wall_contact_metadata = None
+        if self.coordinate_mode == "unity-native-yup":
+            from .native_wall_contact import install_wall_contact_notifications, mark_wall_shape
+            self.wall_contact_metadata = {
+                k: v for k, v in install_wall_contact_notifications().items() if k != 'base'
+            }
+            asset = json.loads((SIMULATOR_ROOT/'assets/unity_wall_colliders.json').read_text())
+            # Collider material=None follows original f73733's default
+            # material branch: static/dynamic 0.6, restitution 0.
+            self._wall_material = self.pyphysx.Material(0.6, 0.6, 0.0)
+            for collider in asset['walls']:
+                wall = self.pyphysx.RigidStatic()
+                shape = self.pyphysx.Shape.create_box(collider['size'], self._wall_material)
+                shape.set_contact_offset(asset['physics']['contactOffset'])
+                shape.set_rest_offset(0.0)
+                wall.attach_shape(shape)
+                wall.set_global_pose((collider['position'], collider['quaternionWxyz']))
+                mark_wall_shape(wall)
+                self.scene.add_actor(wall)
+                self.walls.append(wall)
+                self._wall_addresses[int(wall.get_physx_address())] = collider['name']
 
         mesh_path = Path(formal_stone_mesh or DEFAULT_FORMAL_STONE_MESH)
         stone_points = probe._formal_stone_points(mesh_path)
@@ -569,11 +652,29 @@ class PersistentPhysxFrontHalfScene:
             Path(runtime_hull_asset) if runtime_hull_asset is not None else None,
             patch_runtime_features,
         )
+        self._stone_shape_points = stone_points
+        self._stone_runtime_hull = runtime_hull
+        self._stone_runtime_bigconvex = runtime_bigconvex
         self.runtime_feature_meta = runtime_meta
 
         self.slots: list[PhysxStoneSlot] = []
         self._address_to_index: dict[int, int] = {}
-        for index in range(stone_count):
+        # Every curling stone has the same immutable convex mesh.  Newer native
+        # bindings can share its cooked geometry; older deployed bindings retain
+        # the exact one-cook-per-stone construction below.
+        shared_stone_source = None
+        can_share_stone_mesh = hasattr(
+            self.pyphysx.Shape, "create_convex_mesh_from_existing"
+        )
+        roster = json.loads((SIMULATOR_ROOT / 'assets' /
+                             'unity_startup_body_roster.json').read_text(encoding='utf-8'))
+        self._unity_registration_protocol_order = None
+        if self.coordinate_mode == "unity-native-yup" and stone_count == roster['stoneCount']:
+            self._unity_registration_protocol_order = roster['protocolIndicesInRegistrationOrder']
+        creation_order = self._unity_registration_protocol_order or list(range(stone_count))
+        for index in creation_order:
+            in_scene = not self.set_active_scene_membership
+            defer_initial_state = self.coordinate_mode == "unity-native-yup" and in_scene
             body, shape, material, _patch = probe._make_stone(
                 0.0,
                 0.0,
@@ -591,7 +692,12 @@ class PersistentPhysxFrontHalfScene:
                 center_height=self.center_height,
                 stone_friction=0.6,
                 static_friction=0.6,
-                dynamic_friction=0.6,
+                # f61028 Start -> f32511 sets only dynamicFriction to zero.
+                # The recovered startup roster identifies components whose
+                # Start has already executed before the first Reset.
+                dynamic_friction=(0.0 if self.coordinate_mode == "unity-native-yup"
+                                  and index < roster['stoneCount']
+                                  and roster['constraintsBeforeFirstReset'][index] == 80 else 0.6),
                 stone_restitution=1.0,
                 combine_mode=self.combine_mode,
                 contact_offset=0.01,
@@ -618,34 +724,53 @@ class PersistentPhysxFrontHalfScene:
                 disable_stone_gravity=False,
                 disable_strong_friction=False,
                 improved_patch_friction=False,
+                shared_convex_source=(
+                    shared_stone_source if can_share_stone_mesh else None
+                ),
+                defer_body_pose_and_inertia=defer_initial_state,
             )
+            if defer_initial_state:
+                # f71726 observes identity body2World and unit inverse inertia.
+                # Transform and mass-property synchronization follows registration.
+                body.set_max_angular_velocity(UNITY_DEFAULT_MAX_ANGULAR_SPEED)
+                self.scene.add_actor(body)
+                body.attach_shape(shape)
+            if shared_stone_source is None:
+                shared_stone_source = shape
+                self._stone_mass_information = shape.get_convex_mesh_data()["mass_information"]
             if self.coordinate_mode == "unity-native-yup":
+                inertia = recovered_stone_inertia(
+                    self._stone_mass_information,
+                    (UNITY_STONE_SCALE_XZ, UNITY_STONE_SCALE_Y, UNITY_STONE_SCALE_XZ),
+                    body.get_mass(),
+                )
                 body.set_mass_space_inertia_tensor(
                     # Unity's first stone-stone PxSolverBodyData has zero X/Z
                     # inverse inertia and the recovered yaw-axis inertia below.
                     # PhysX lock flags alone retain X/Z solver inertia, so they
                     # cannot reproduce Unity's normal-contact rows by themselves.
-                    [0.0, UNITY_STONE_VERTICAL_INERTIA, 0.0]
+                    [0.0, inertia[1], 0.0]
+                )
+                # Unity f73070 freezes through inverse inertia, while its
+                # PxsBodyCore/PxSolverBodyData lockFlags remain zero. Setting
+                # native X/Z flags would erase actual solver angular deltas.
+                body.set_rigid_dynamic_lock_flag(
+                    self.pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_X, False
                 )
                 body.set_rigid_dynamic_lock_flag(
-                    self.pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_X, True
-                )
-                body.set_rigid_dynamic_lock_flag(
-                    self.pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_Z, True
+                    self.pyphysx.RigidDynamicLockFlag.LOCK_ANGULAR_Z, False
                 )
                 body.set_global_pose(
                     (self._horizontal_position(0.0, 0.0), self._yaw_quaternion(0.0))
                 )
+                body.set_max_angular_velocity(UNITY_STONE_MAX_ANGULAR_SPEED)
             shape.set_flag(self.pyphysx.ShapeFlag.SIMULATION_SHAPE, False)
             body.disable_gravity()
-            if self.emulate_unity_setactive_no_sim:
-                body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, True)
             # Unity's active stone is enabled after the already-placed target.
             # In PhysX this also gives it the later RigidID used by
             # createShapeInteraction's dynamic-dynamic sorting rule. The
             # membership diagnostic must therefore not pre-add every actor.
-            in_scene = not self.set_active_scene_membership
-            if in_scene:
+            if in_scene and not defer_initial_state:
                 self.scene.add_actor(body)
             slot = PhysxStoneSlot(
                 index=index,
@@ -653,9 +778,50 @@ class PersistentPhysxFrontHalfScene:
                 shape=shape,
                 material=material,
                 in_scene=in_scene,
+                unity_constraints=(roster['constraintsBeforeFirstReset'][index]
+                                   if index < roster['stoneCount'] else 0),
+                geometry_scale=(
+                    (UNITY_STONE_SCALE_XZ, UNITY_STONE_SCALE_Y, UNITY_STONE_SCALE_XZ)
+                    if self.coordinate_mode == "unity-native-yup"
+                    else (UNITY_STONE_SCALE_XZ, UNITY_STONE_SCALE_XZ, UNITY_STONE_SCALE_Y)
+                ),
             )
             self.slots.append(slot)
             self._address_to_index[int(body.get_physx_address())] = index
+        self.slots.sort(key=lambda slot: slot.index)
+
+        if self.emulate_unity_setactive_no_sim:
+            # The runtime f71726 capture registers the ice after the stones.
+            # Its surviving higher ID prevents retirement from trimming the
+            # top stone IDs out of the reusable pool.
+            self.scene.add_actor(self.ice)
+            self._initialize_unity_rigid_id_pool()
+
+    def _initialize_unity_rigid_id_pool(self) -> None:
+        """Restore the captured startup allocator state through normal APIs.
+
+        Unity f71726 registers the initial actors before f71727 retires the
+        stones. f71674 queues retired IDs; a scene step makes them reusable.
+        Starting with no-sim actors skips this history and changes subsequent
+        LIFO allocations and createShapeInteraction's ordering. The fixed
+        scene's observed release permutation is an input asset, like its hull.
+        Native IDs are never read, assigned, or rewritten here.
+        """
+        asset = json.loads((SIMULATOR_ROOT / 'assets' /
+                            'unity_startup_rigid_id_pool.json').read_text(encoding='utf-8'))
+        order = asset['registrationRankReleaseOrder']
+        if sorted(order) != list(range(asset['stoneCount'])):
+            raise ValueError('invalid captured startup RigidID release permutation')
+        # Smaller diagnostic rosters project the captured order; extra actors
+        # are retired first. Exact scene equivalence is scoped to 16 stones.
+        indices = list(range(asset['stoneCount'], len(self.slots)))
+        indices.extend(range(len(self.slots)) if self._unity_registration_protocol_order is not None
+                       else (i for i in order if i < len(self.slots)))
+        for index in indices:
+            self.slots[index].body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, True)
+        # All shapes are disabled and all slots inactive: this flush only
+        # retires simulations, without advancing a stone's motion or pose.
+        self.scene.simulate(self.dt)
 
     def _runtime_features(
         self,
@@ -666,6 +832,22 @@ class PersistentPhysxFrontHalfScene:
             return None, None, {"enabled": False}
         if hull_asset_path is None or not hull_asset_path.exists():
             raise FileNotFoundError(f"runtime hull asset not found: {hull_asset_path}")
+
+        asset_stat = hull_asset_path.stat()
+        cache_key = (
+            str(hull_asset_path.resolve()),
+            int(asset_stat.st_mtime_ns),
+            int(asset_stat.st_size),
+            self.coordinate_mode,
+        )
+        cached = _RUNTIME_FEATURE_CACHE.get(cache_key)
+        if cached is not None:
+            cached_hull, cached_bigconvex, cached_meta = cached
+            return (
+                list(cached_hull),
+                {name: list(values) for name, values in cached_bigconvex.items()},
+                dict(cached_meta),
+            )
 
         from tools.reverse.rebuild_bigconvex_from_runtime_hull import (
             _rebuild_from_runtime_hull,
@@ -691,7 +873,7 @@ class PersistentPhysxFrontHalfScene:
             bigconvex_source = "rebuilt_from_transformed_runtime_hull_subdiv16"
         rebuilt = _rebuild_from_runtime_hull(rebuild_source, 16)
         bigconvex = self.probe._bigconvex_arrays_from_rebuild(rebuilt)
-        return runtime_hull, bigconvex, {
+        meta = {
             "enabled": True,
             "hullAsset": str(hull_asset_path),
             "coordinateMode": self.coordinate_mode,
@@ -699,6 +881,12 @@ class PersistentPhysxFrontHalfScene:
             "hullSha16": self.probe._sha16_bytes(runtime_hull),
             "bigConvexSource": bigconvex_source,
         }
+        _RUNTIME_FEATURE_CACHE[cache_key] = (
+            tuple(runtime_hull),
+            {name: tuple(values) for name, values in bigconvex.items()},
+            dict(meta),
+        )
+        return runtime_hull, bigconvex, meta
 
     def _horizontal_position(self, x: float, y: float) -> list[float]:
         if self.coordinate_mode == "unity-native-yup":
@@ -739,9 +927,23 @@ class PersistentPhysxFrontHalfScene:
             ],
         )
 
-    def state(self, index: int) -> dict[str, Any]:
+    def raw_native_state(self, index: int) -> dict[str, Any]:
+        """Read the actual body pose without cast_transformation normalization.
+
+        Use this for float-level Unity/PhysX comparisons. The legacy state()
+        reader normalizes a copied quaternion and can hide a missing native
+        pose writeback (11005, physics step 4). Neither reader mutates the body.
+        """
+        return self.state(index, raw_pose=True)
+
+    def state(self, index: int, *, raw_pose: bool = False) -> dict[str, Any]:
         slot = self.slots[index]
-        position, quaternion = self._pose(index)
+        if raw_pose:
+            native_position, native_q = slot.body.get_global_pose()
+            position = [float(v) for v in native_position]
+            quaternion = [float(getattr(native_q, k)) for k in ("w", "x", "y", "z")]
+        else:
+            position, quaternion = self._pose(index)
         linear = [float(value) for value in slot.body.get_linear_velocity()]
         angular = [float(value) for value in slot.body.get_angular_velocity()]
         if self.coordinate_mode == "unity-native-yup":
@@ -856,39 +1058,238 @@ class PersistentPhysxFrontHalfScene:
             },
         }
 
-    def _set_pose(self, index: int, x: float, y: float, yaw: float) -> None:
+    def _set_pose(self, index: int, x: float, y: float, yaw: float,
+                  *, native_position_override: Optional[Sequence[float]] = None) -> None:
         self.slots[index].body.set_global_pose(
-            (self._horizontal_position(x, y), self._yaw_quaternion(yaw))
+            (self._horizontal_position(x, y) if native_position_override is None
+             else list(native_position_override), self._yaw_quaternion(yaw))
         )
 
-    def _set_position_preserve_orientation(self, index: int, x: float, y: float) -> None:
+    def _set_position_preserve_orientation(self, index: int, x: float, y: float,
+                                          *, native_position_override: Optional[Sequence[float]] = None) -> None:
         _position, quaternion = self._pose(index)
         self.slots[index].body.set_global_pose(
-            (self._horizontal_position(x, y), quaternion)
+            (self._horizontal_position(x, y) if native_position_override is None
+             else list(native_position_override), quaternion)
         )
 
     def _refresh_unity_setactive_interactions(self, slot: PhysxStoneSlot) -> None:
         if self.emulate_unity_setactive_refilter:
             self.scene.reset_filtering(slot.body)
 
-    def deactivate(self, index: int, x: float = 0.0, y: float = 0.0) -> None:
+    def _simulate_unity_step(self) -> Any:
+        """Run PhysX then perform the captured f72606 raw-pose writeback."""
+        if (not getattr(self, "_in_custom_sliding_step", False)
+                and getattr(self, "_custom_sliding_index", None) is not None):
+            # This API's ordinary-physics tail starts after the caller's
+            # custom setter batch. Update runs between batches, not after
+            # every FixedUpdate: 12004 remains below the stop threshold for
+            # hundreds of custom steps before the observed Update boundary.
+            self._restore_unity_natural_stop_material()
+        result = self.scene.simulate(self.dt)
+        self._last_wall_reports = []
+        if self.coordinate_mode == "unity-native-yup" and self.emulate_unity_setactive_no_sim:
+            contact_reports = self.scene.get_contact_reports()
+            collision_friction = float(self.probe.np.float32(0.6))
+            # f61030 OnCollisionEnter(Stone) runs on both stone components.
+            # Former callers restored only the released stone, which masked
+            # the missing target callback while Reset incorrectly restored all
+            # materials to 0.6. Apply the observed write to actual participants.
+            for report in self._stone_reports(contact_reports):
+                if int(report.get("contact_count") or 0) <= 0:
+                    continue
+                for index in (report["stoneIndex0"], report["stoneIndex1"]):
+                    material = self.slots[index].material
+                    if (material.get_static_friction() != collision_friction
+                            or material.get_dynamic_friction() != collision_friction):
+                        material.set_static_friction(0.6)
+                        material.set_dynamic_friction(0.6)
+            for report in self._wall_reports(contact_reports):
+                # OnCollisionEnter belongs to eNOTIFY_TOUCH_FOUND, not a
+                # distance cutoff or a persistent contact on later steps.
+                if (int(report.get('events') or 0) & 4
+                        and self.slots[report['stoneIndex']].enabled):
+                    self._deactivate_wall_collision(report['stoneIndex'])
+                    self._last_wall_reports.append(report)
+        if not self.emulate_unity_body_pose_writeback or self.coordinate_mode != "unity-native-yup":
+            return result
+        from .native_pose_writeback import writeback_pose_without_autowake
+        for slot in self.slots:
+            if not slot.enabled or slot.body.is_sleeping():
+                continue
+            # f73070 -> f72606(rawPose, autowake=0) runs even when the
+            # quaternion is already unit length. Its body/interaction update
+            # clears friction caches (f71596 -> f71729 -> f71632). Skipping
+            # equal poses omitted that side effect from Reset step 2 onward.
+            writeback_pose_without_autowake(slot.body, slot.body.get_global_pose())
+        return result
+
+    def _wall_reports(self, reports: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+        result = []
+        for report in reports:
+            a, b = (int(report.get(name) or 0) for name in ('actor0', 'actor1'))
+            if a in self._address_to_index and b in self._wall_addresses:
+                index, wall = self._address_to_index[a], self._wall_addresses[b]
+            elif b in self._address_to_index and a in self._wall_addresses:
+                index, wall = self._address_to_index[b], self._wall_addresses[a]
+            else:
+                continue
+            if self.slots[index].enabled:
+                result.append(dict(report, stoneIndex=index, wall=wall))
+        return result
+
+    def _deactivate_wall_collision(self, index: int) -> None:
+        """f61030 Wall -> zero setters -> f54405(false), preserving the pose."""
+        slot = self.slots[index]
+        slot.material.set_static_friction(0.6)
+        slot.material.set_dynamic_friction(0.6)
+        slot.body.set_linear_velocity([0.0, 0.0, 0.0])
+        slot.body.set_angular_velocity([0.0, 0.0, 0.0])
+        # The observed SetActive chain contains f73070 -> f72606 before
+        # f71727. Reset's deactivate() also relocates the stone; this callback
+        # retains its collision pose and only removes its RigidSim.
+        from .native_pose_writeback import writeback_pose_without_autowake
+        writeback_pose_without_autowake(slot.body, slot.body.get_global_pose())
+        slot.body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, True)
+        slot.enabled = False
+        if self._custom_sliding_index == index:
+            self._custom_sliding_index = None
+            self._custom_sliding_release_origin = None
+
+    def _simulate_custom_sliding_step(self) -> Any:
+        """Keep a FixedUpdate setter batch separate from the Update boundary."""
+        previous = self._in_custom_sliding_step
+        self._in_custom_sliding_step = True
+        try:
+            return self._simulate_unity_step()
+        finally:
+            self._in_custom_sliding_step = previous
+
+    def _restore_unity_natural_stop_material(self) -> bool:
+        """Apply the original controller Update's stopped-shot material write.
+
+        f61097/f60201 require displacement > 1 and velocity squared < 1e-6.
+        Both expressions round at each f32 operation. Captured f32511/32512
+        then restore dynamic/static friction before the next physics step.
+        This is evaluated at an Update/handoff boundary, never inferred from
+        a frame number, an exhausted RNG stream, or the motion solver cutoff.
+        """
+        index = self._custom_sliding_index
+        origin = self._custom_sliding_release_origin
+        if (index is None or origin is None or self.coordinate_mode != "unity-native-yup"
+                or not self.emulate_unity_setactive_no_sim):
+            return False
+        slot = self.slots[index]
+        if not slot.enabled:
+            return False
+        if not self._unity_active_stop_condition(index, origin):
+            return False
+        slot.material.set_dynamic_friction(0.6)
+        slot.material.set_static_friction(0.6)
+        self._custom_sliding_index = None
+        self._custom_sliding_release_origin = None
+        return True
+
+    def _unity_active_stop_condition(self, index: int, origin: Any) -> bool:
+        """f61097's two f32 expressions, also valid for a retained disabled body."""
+        if origin is None:
+            return False
+        slot = self.slots[index]
+        f32 = self.probe.np.float32
+        position, _ = slot.body.get_global_pose()
+        dx, dy, dz = (f32(f32(p) - f32(o)) for p, o in zip(position, origin))
+        distance_sq = f32(f32(f32(dx * dx) + f32(dy * dy)) + f32(dz * dz))
+        if not f32(self.probe.np.sqrt(distance_sq)) > f32(1.0):
+            return False
+        vx, vy, vz = (f32(v) for v in slot.body.get_linear_velocity())
+        speed_sq = f32(f32(f32(vx * vx) + f32(vy * vy)) + f32(vz * vz))
+        return bool(speed_sq < f32(1e-6))
+
+    def _unity_all_stones_stopped(self) -> bool:
+        """f61089: active GameObjects, velocity dot product > f32(1e-6)."""
+        f32 = self.probe.np.float32
+        for slot in self.slots:
+            if not slot.enabled:
+                continue
+            x, y, z = (f32(v) for v in slot.body.get_linear_velocity())
+            speed_sq = f32(f32(f32(x*x) + f32(y*y)) + f32(z*z))
+            if speed_sq > f32(1e-6):
+                return False
+        return True
+
+    def _refresh_unity_stone_geometry(self, slot: PhysxStoneSlot) -> None:
+        """Rebuild the MeshCollider shape from local state at activation.
+
+        Captured f72951 -> f72950 computes scale before f72573 creates a new
+        shape. With the observed identity parent rotation, the local Transform
+        quaternion equals the placed native quaternion at this boundary.
+        Do not use cast_transformation: it would normalize another copy.
+        """
+        if not self.emulate_unity_transform_scale_refresh or self.coordinate_mode != "unity-native-yup":
+            return
+        q = slot.body.get_global_pose()[1]
+        scale = recovered_stone_geometry_scale(
+            (q.x, q.y, q.z, q.w), UNITY_STONE_LOCAL_SCALE, UNITY_STONE_PARENT_SCALE
+        )
+        previous = slot.shape
+        if scale == slot.geometry_scale and hasattr(self.pyphysx.Shape, "create_convex_mesh_from_existing"):
+            shape = self.pyphysx.Shape.create_convex_mesh_from_existing(previous, slot.material, True)
+        else:
+            shape = self.pyphysx.Shape.create_convex_mesh_from_points_with_scale(
+                self._stone_shape_points, slot.material, True, scale, 255, 255, False, False
+            )
+            self.probe._patch_runtime_stone_shape(
+                shape, runtime_hull_raw_bytes=self._stone_runtime_hull,
+                runtime_big_convex_arrays=self._stone_runtime_bigconvex,
+            )
+        shape.set_local_pose(previous.get_local_pose())
+        shape.set_contact_offset(previous.get_contact_offset())
+        shape.set_rest_offset(previous.get_rest_offset())
+        for flag in (self.pyphysx.ShapeFlag.SIMULATION_SHAPE,
+                     self.pyphysx.ShapeFlag.SCENE_QUERY_SHAPE,
+                     self.pyphysx.ShapeFlag.TRIGGER_SHAPE,
+                     self.pyphysx.ShapeFlag.VISUALIZATION):
+            shape.set_flag(flag, previous.get_flag_value(flag))
+        slot.body.detach_shape(previous)
+        slot.body.attach_shape(shape)
+        slot.shape = shape
+        slot.geometry_scale = scale
+        # f72951 -> f73283 -> f73060 -> f72778 recomputes mass properties after
+        # attachShape. Use this shape's actual scale, then apply f73070's freeze.
+        inertia = recovered_stone_inertia(
+            self._stone_mass_information, scale, slot.body.get_mass(),
+        )
+        slot.body.set_mass_space_inertia_tensor([0.0, inertia[1], 0.0])
+
+    def deactivate(self, index: int, x: float = 0.0, y: float = 0.0,
+                   *, native_position_override: Optional[Sequence[float]] = None) -> None:
         slot = self.slots[index]
         if self.set_active_scene_membership and slot.in_scene:
             self.scene.remove_actor(slot.body)
             slot.in_scene = False
         slot.shape.set_flag(self.pyphysx.ShapeFlag.SIMULATION_SHAPE, False)
         slot.body.disable_gravity()
-        slot.body.set_linear_velocity([0.0, 0.0, 0.0])
-        slot.body.set_angular_velocity([0.0, 0.0, 0.0])
-        self._set_position_preserve_orientation(index, x, y)
-        slot.material.set_static_friction(0.6)
-        slot.material.set_dynamic_friction(0.6)
-        slot.body.put_to_sleep()
+        # Repeated Reset calls also visit already inactive slots. Their
+        # RigidSim is absent, so velocity and sleep APIs must be skipped.
+        # Enabling temporarily would itself rebuild the RigidID lifecycle.
+        if slot.enabled or not self.emulate_unity_setactive_no_sim:
+            slot.body.set_linear_velocity([0.0, 0.0, 0.0])
+            slot.body.set_angular_velocity([0.0, 0.0, 0.0])
+        if native_position_override is None:
+            self._set_position_preserve_orientation(index, x, y)
+        else:
+            self._set_position_preserve_orientation(index, x, y, native_position_override=native_position_override)
+        if not (self.coordinate_mode == "unity-native-yup" and self.emulate_unity_setactive_no_sim):
+            slot.material.set_static_friction(0.6)
+            slot.material.set_dynamic_friction(0.6)
+        if slot.enabled or not self.emulate_unity_setactive_no_sim:
+            slot.body.put_to_sleep()
         if self.emulate_unity_setactive_no_sim:
             slot.body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, True)
         slot.enabled = False
         if self._custom_sliding_index == index:
             self._custom_sliding_index = None
+            self._custom_sliding_release_origin = None
 
     def clear_out_of_play_stones(self) -> list[int]:
         """Apply Unity `UpdateState`'s normal out-of-play lifecycle pass.
@@ -911,32 +1312,79 @@ class PersistentPhysxFrontHalfScene:
             cleared.append(slot.index)
         return cleared
 
-    def activate_stationary(self, index: int, x: float, y: float, yaw: Optional[float] = None) -> None:
+    def _recreate_unity_activation_body(self, slot: PhysxStoneSlot) -> None:
+        """Replay observed f73018 replacement, retaining the component's Transform.
+
+        f73018 creates an identity-pose actor and restores serialized mass and
+        manual tensor before scene registration. Start's constraints survive
+        in the Unity component after its first invocation; they are not the
+        calculated inertia of the actor being destroyed.
+        """
+        if (slot.enabled or not self.emulate_unity_setactive_no_sim
+                or self.coordinate_mode != "unity-native-yup"):
+            return
+        old_body = slot.body
+        pose = old_body.get_global_pose()
+        self._address_to_index.pop(int(old_body.get_physx_address()), None)
+        old_body.detach_shape(slot.shape)
+        if slot.in_scene:
+            self.scene.remove_actor(old_body)
+        body = self.pyphysx.RigidDynamic()
+        body.attach_shape(slot.shape)
+        body.set_mass(19.1)
+        body.set_center_of_mass_local_pose(([0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0]))
+        body.set_mass_space_inertia_tensor(
+            [0.0, 1.0, 0.0] if slot.unity_constraints == 80 else [1.0, 1.0, 1.0]
+        )
+        body.set_linear_damping(0.0)
+        body.set_angular_damping(0.05)
+        body.set_solver_iteration_counts(6, 1)
+        body.set_max_depenetration_velocity(10.0)
+        body.set_max_angular_velocity(UNITY_STONE_MAX_ANGULAR_SPEED)
+        if slot.in_scene:
+            self.scene.add_actor(body)
+        slot.body = body
+        self._address_to_index[int(body.get_physx_address())] = slot.index
+        body.set_global_pose(pose)
+        # CurlingStoneNew.Start has run by the end of the first activation.
+        if slot.unity_constraints != 80:
+            slot.material.set_dynamic_friction(0.0)
+        slot.unity_constraints = 80
+
+    def activate_stationary(self, index: int, x: float, y: float, yaw: Optional[float] = None,
+                            *, native_position_override: Optional[Sequence[float]] = None) -> None:
         slot = self.slots[index]
         if self.emulate_unity_setactive_no_sim:
+            self._recreate_unity_activation_body(slot)
             # PxRigidDynamic velocity/sleep APIs are invalid while no-sim is
             # raised. Restore the internal RigidSim before rebuilding state.
             slot.body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, False)
         if yaw is None:
-            self._set_position_preserve_orientation(index, x, y)
+            self._set_position_preserve_orientation(index, x, y, native_position_override=native_position_override)
         else:
-            self._set_pose(index, x, y, yaw)
+            self._set_pose(index, x, y, yaw, native_position_override=native_position_override)
+        self._refresh_unity_stone_geometry(slot)
         slot.body.set_linear_velocity([0.0, 0.0, 0.0])
         slot.body.set_angular_velocity([0.0, 0.0, 0.0])
-        slot.material.set_static_friction(0.6)
-        slot.material.set_dynamic_friction(0.6)
+        # RESETPOSITION changes activation and pose, preserving this material.
+        # Start's first dynamic-friction write and OnCollisionEnter's later
+        # restoration belong to their actual component lifecycle boundaries.
+        if not (self.coordinate_mode == "unity-native-yup" and self.emulate_unity_setactive_no_sim):
+            slot.material.set_static_friction(0.6)
+            slot.material.set_dynamic_friction(0.6)
         slot.body.enable_gravity()
         slot.shape.set_flag(self.pyphysx.ShapeFlag.SIMULATION_SHAPE, True)
         if self.repeat_pose_after_shape_activation:
             if yaw is None:
-                self._set_position_preserve_orientation(index, x, y)
+                self._set_position_preserve_orientation(index, x, y, native_position_override=native_position_override)
             else:
-                self._set_pose(index, x, y, yaw)
+                self._set_pose(index, x, y, yaw, native_position_override=native_position_override)
         self._refresh_unity_setactive_interactions(slot)
         if self.set_active_scene_membership and not slot.in_scene:
             self.scene.add_actor(slot.body)
             slot.in_scene = True
-        slot.body.put_to_sleep()
+        if native_position_override is None:
+            slot.body.put_to_sleep()
         slot.enabled = True
 
     def reset_positions(
@@ -949,18 +1397,37 @@ class PersistentPhysxFrontHalfScene:
     ) -> None:
         if len(position) < 2 * len(self.slots):
             raise ValueError(f"position must contain at least {2 * len(self.slots)} values")
+        self._custom_sliding_index = None
+        self._custom_sliding_release_origin = None
         yaw_overrides = yaw_overrides or {}
+        native_reset = self.coordinate_mode == "unity-native-yup" and self.emulate_unity_setactive_no_sim
         for index in range(len(self.slots)):
             x = float(position[2 * index])
             y = float(position[2 * index + 1])
+            native_position = None
+            if native_reset:
+                native_position = self._horizontal_position(x, y)
+                native_position[1] = UNITY_NATIVE_BESTSHOT_RELEASE_Y
+                if x == 0.0 and y == 0.0:
+                    native_position = UNITY_NATIVE_RESET_INACTIVE_POSITION
             if x != 0.0 or y != 0.0:
-                self.activate_stationary(index, x, y, yaw_overrides.get(index))
+                self.activate_stationary(index, x, y, yaw_overrides.get(index), native_position_override=native_position)
             else:
-                self.deactivate(index)
+                self.deactivate(index, native_position_override=native_position)
         for _ in range(max(0, int(settle_steps))):
-            self.scene.simulate(self.dt)
+            self._simulate_unity_step()
             self.scene.get_contact_reports()
-        if force_sleep_after_reset:
+        if force_sleep_after_reset and native_reset:
+            # The captured reset window falls onto the ice and reaches PhysX's
+            # own sleep boundary. Forcing sleep would skip its contact history.
+            for _ in range(1000):
+                if all(not slot.enabled or slot.body.is_sleeping() for slot in self.slots):
+                    break
+                self._simulate_unity_step()
+                self.scene.get_contact_reports()
+            else:
+                raise RuntimeError("Reset bodies did not reach the native sleep boundary")
+        elif force_sleep_after_reset:
             for slot in self.slots:
                 if slot.enabled:
                     slot.body.set_linear_velocity([0.0, 0.0, 0.0])
@@ -973,22 +1440,44 @@ class PersistentPhysxFrontHalfScene:
         motioninfo: Sequence[float],
         *,
         yaw: Optional[float] = None,
+        native_position_override: Optional[Sequence[float]] = None,
     ) -> None:
         if len(motioninfo) < 5:
             raise ValueError("motioninfo must contain x, y, vx, vy, w")
         x, y, vx, vy, w = [float(value) for value in motioninfo[:5]]
         slot = self.slots[active_index]
+        self._unity_angular_setter_calls[active_index] = 0
         if self.emulate_unity_setactive_no_sim:
+            self._recreate_unity_activation_body(slot)
             # See activate_stationary(): make the body live before touching
             # its dynamic state, while its collision shape remains disabled.
             slot.body.set_actor_flag(self.pyphysx.ActorFlag.DISABLE_SIMULATION, False)
-        if yaw is None:
-            self._set_position_preserve_orientation(active_index, x, y)
-        else:
-            self._set_pose(active_index, x, y, yaw)
+        def place_active_stone() -> None:
+            if native_position_override is None:
+                if yaw is None:
+                    self._set_position_preserve_orientation(active_index, x, y)
+                else:
+                    self._set_pose(active_index, x, y, yaw)
+                return
+            # BESTSHOT's release pose is already present at Unity's first
+            # Rigidbody setter.  Do not activate the collision shape at the
+            # settled height and teleport the actor after all setters.
+            quaternion = self._pose(active_index)[1] if yaw is None else self._yaw_quaternion(yaw)
+            slot.body.set_global_pose((list(native_position_override), quaternion))
+
+        place_active_stone()
+        self._refresh_unity_stone_geometry(slot)
         slot.body.set_linear_velocity(self._horizontal_velocity(vx, vy, 0.0))
         if self.coordinate_mode == "unity-native-yup":
-            slot.body.set_angular_velocity([0.0, w, 0.0])
+            # BESTSHOT/MOTIONINFO reset passes through the same locked-axis
+            # Rigidbody setter as every subsequent sliding update.  The
+            # difference is visible immediately for a high-curl release.
+            angular = (
+                self._unity_native_angular_setter_vector(slot, w)
+                if self.emulate_unity_native_angular_setter_rotation
+                else [0.0, w, 0.0]
+            )
+            slot.body.set_angular_velocity(angular)
         else:
             slot.body.set_angular_velocity([0.0, 0.0, w])
         slot.material.set_static_friction(0.0)
@@ -996,10 +1485,7 @@ class PersistentPhysxFrontHalfScene:
         slot.body.enable_gravity()
         slot.shape.set_flag(self.pyphysx.ShapeFlag.SIMULATION_SHAPE, True)
         if self.repeat_pose_after_shape_activation:
-            if yaw is None:
-                self._set_position_preserve_orientation(active_index, x, y)
-            else:
-                self._set_pose(active_index, x, y, yaw)
+            place_active_stone()
         self._refresh_unity_setactive_interactions(slot)
         if self.set_active_scene_membership and not slot.in_scene:
             self.scene.add_actor(slot.body)
@@ -1007,6 +1493,11 @@ class PersistentPhysxFrontHalfScene:
         slot.body.wake_up()
         slot.enabled = True
         self._custom_sliding_index = active_index
+        # f61095 Start caches blue0's startup Transform as origin_postion;
+        # f61097 reads those same fields220/224/228. BESTSHOT's horizontal
+        # offset changes the release body, not this controller origin.
+        # Direct Update capture: (-96.8542022705,14.4323997498,54.1744003296).
+        self._custom_sliding_release_origin = UNITY_NATIVE_RESET_INACTIVE_POSITION
 
     def start_bestshot(
         self,
@@ -1018,11 +1509,29 @@ class PersistentPhysxFrontHalfScene:
         if len(shot) < 3:
             raise ValueError("shot must contain velocity, horizontal offset, rotation")
         release = local_initial_state(*[float(value) for value in shot[:3]])
-        self.start_motioninfo(
-            active_index,
-            [release.x, release.y, release.vx, release.vy, release.w],
-            yaw=yaw,
-        )
+        native_position_override = None
+        if self.emulate_unity_bestshot_release_pose and self.coordinate_mode == "unity-native-yup":
+            f32 = self.probe.np.float32
+            offset = f32(max(f32(-2.23), min(f32(2.23), f32(shot[1]))))
+            native_position_override = [
+                float(self.probe.np.float32(UNITY_NATIVE_ORIGIN_X - release.y)),
+                UNITY_NATIVE_BESTSHOT_RELEASE_Y,
+                # f61066 -> f32544 -> f32.sub -> f32546. Converting
+                # through protocol X first changes a nonzero release by an ULP.
+                float(f32(f32(UNITY_NATIVE_BESTSHOT_RELEASE_Z) - offset)),
+            ]
+        # BESTSHOT constructs native (speed,+0,+0): f60092/f60705 write
+        # literal zero bits to Y/Z before f32521 -> f82501 -> f73034.
+        # Preserve that Z sign through the protocol-to-native negation below.
+        release_vx = -0.0 if self.coordinate_mode == "unity-native-yup" else release.vx
+        motioninfo = [release.x, release.y, release_vx, release.vy, release.w]
+        if native_position_override is None:
+            self.start_motioninfo(active_index, motioninfo, yaw=yaw)
+        else:
+            self.start_motioninfo(
+                active_index, motioninfo, yaw=yaw,
+                native_position_override=native_position_override,
+            )
 
     def _stone_reports(self, reports: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
         result: list[dict[str, Any]] = []
@@ -1052,10 +1561,8 @@ class PersistentPhysxFrontHalfScene:
     def _is_inside_pcm_shell(active: dict[str, Any], targets: dict[str, dict[str, Any]]) -> bool:
         """Return whether the current actor poses are already in the PCM shell.
 
-        Target wake-up may be predictive so the next narrowphase task sees an
-        awake body. Material restoration is different: doing it one physics
-        tick early creates an extra stone-ice friction step before the first
-        stone-stone PCM call.
+        This shell scopes the contact-friction override. Default target
+        activation belongs to PhysX; it must not use a predicted position.
         """
         for target in targets.values():
             if math.hypot(
@@ -1068,33 +1575,74 @@ class PersistentPhysxFrontHalfScene:
     def _unity_native_angular_setter_vector(
         self, slot: PhysxStoneSlot, angular_y: float
     ) -> list[float]:
-        """Legacy diagnostic model of a projected angular-velocity setter.
+        """Project script spin using the float32 operation order of wasm f73035.
 
-        This was inferred from an earlier native bridge experiment. A later
-        live capture of the DCP setter shows it writes the requested world
-        vector directly (``[0, wy, 0]``), so production replay leaves this
-        disabled. Keep it only for historical A/B reports.
+        The native setter reads a Unity Transform quaternion, which can differ
+        by an ULP from the PhysX body pose.  The local body pose is the closest
+        available runtime source; the projection arithmetic itself is exact.
         """
         _position, q_wxyz = slot.body.get_global_pose()
+        q = (q_wxyz.x, q_wxyz.y, q_wxyz.z, q_wxyz.w)
+        calls = getattr(self, "_unity_angular_setter_calls", None)
+        count = 0
+        if calls is not None:
+            count = calls.get(slot.index, 0)
+            calls[slot.index] = count + 1
+        native = getattr(self, '_native_angular_projection', None)
+        if native is not None:
+            return native(q, angular_y, normalize=count >= 2)
+        if calls is not None:
+            if count >= 2:
+                f32 = self.probe.np.float32
+                q_array = self.probe.np.asarray(q, dtype=self.probe.np.float32)
+                norm = self.probe.np.sqrt(self.probe.np.sum(q_array * q_array, dtype=f32))
+                q = tuple(q_array / norm)
+        return PersistentPhysxFrontHalfScene._unity_project_locked_angular_velocity(
+            self, q, angular_y
+        )
+
+    def _unity_project_locked_angular_velocity(
+        self, transform_q: tuple[float, float, float, float], angular_y: float
+    ) -> list[float]:
+        """Unity/PhysX locked-XZ angular setter, including wasm f32 grouping.
+
+        The second (relative) quaternion in f73035 is identity for the curling
+        stones, as verified by the A12 pose-getter capture.  The first is the
+        scene Transform's world quaternion in native Y-up coordinates.
+        """
         f32 = self.probe.np.float32
-
-        def rotate(q: tuple[Any, Any, Any, Any], v: tuple[Any, Any, Any]) -> tuple[Any, Any, Any]:
-            x, y, z, w = q
-            vx, vy, vz = (f32(f32(2.0) * component) for component in v)
-            w2 = f32(f32(w * w) - f32(0.5))
-            dot2 = f32(f32(f32(x * vx) + f32(y * vy)) + f32(z * vz))
-            return (
-                f32(f32(f32(vx * w2) + f32(f32(y * vz) - f32(z * vy)) * w) + f32(x * dot2)),
-                f32(f32(f32(vy * w2) + f32(f32(z * vx) - f32(x * vz)) * w) + f32(y * dot2)),
-                f32(f32(f32(vz * w2) + f32(f32(x * vy) - f32(y * vx)) * w) + f32(z * dot2)),
-            )
-
-        # pyphysx exposes the local Z quaternion component with the opposite
-        # sign to Unity's native-Y-up wrapper coordinate convention.
-        q = (f32(q_wxyz.x), f32(q_wxyz.y), f32(-q_wxyz.z), f32(q_wxyz.w))
-        local = rotate((f32(-q[0]), f32(-q[1]), f32(-q[2]), q[3]), (f32(0.0), f32(angular_y), f32(0.0)))
-        projected = rotate(q, (f32(0.0), local[1], f32(0.0)))
-        return [float(component) for component in projected]
+        add = lambda a, b: f32(a + b)
+        sub = lambda a, b: f32(a - b)
+        mul = lambda a, b: f32(a * b)
+        x, y, z, w = (f32(component) for component in transform_q)
+        vy = f32(angular_y)
+        # f73035 first rotates the input by conjugate(q), locks local X/Z,
+        # then rotates the surviving vector back by q.  Retain its addition
+        # tree: regrouping mathematically equivalent terms changes float32 ULPs.
+        vx2, vy2, vz2 = f32(0.0), add(vy, vy), f32(0.0)
+        dot = add(mul(z, vz2), add(mul(x, vx2), mul(y, vy2)))
+        half = add(mul(w, w), f32(-0.5))
+        local_y = add(
+            mul(y, dot),
+            sub(mul(vy2, half), mul(w, sub(mul(z, vx2), mul(vz2, x)))),
+        )
+        local_y = add(local_y, local_y)
+        # Curling stone constraints lock the native local X and Z axes.
+        local_x = local_z = f32(0.0)
+        dot = add(mul(z, local_z), add(mul(x, local_x), mul(y, local_y)))
+        world_x = add(
+            mul(x, dot),
+            add(mul(local_x, half), mul(w, sub(mul(y, local_z), mul(local_y, z)))),
+        )
+        world_y = add(
+            mul(y, dot),
+            add(mul(local_y, half), mul(w, sub(mul(z, local_x), mul(local_z, x)))),
+        )
+        world_z = add(
+            mul(z, dot),
+            add(mul(local_z, half), mul(w, sub(mul(x, local_y), mul(local_x, y)))),
+        )
+        return [float(world_x), float(world_y), float(world_z)]
 
     def _unity_native_angular_setter_tilt_vector(
         self,
@@ -1165,9 +1713,10 @@ class PersistentPhysxFrontHalfScene:
     def _run_to_first_contact_training(
         self,
         active_index: int,
-        friction_noises: Iterable[float],
+        friction_noises: Optional[Iterable[float]],
         *,
         target_indices: Optional[Sequence[int]] = None,
+        friction_seed: Optional[int] = None,
         max_steps: int = 5000,
         motion_stepper: Any | None = None,
     ) -> dict[str, Any]:
@@ -1194,8 +1743,18 @@ class PersistentPhysxFrontHalfScene:
         # boundary for every target both before and after every tick.
         static_targets: list[tuple[int, float, float]] = []
         for index in sorted(targets):
-            x, y, vx, vy, _vz, w = self._training_motion_state(index)
-            if math.hypot(vx, vy) > 0.01 or abs(w) > 0.01:
+            x, y, vx, vy, _vz, _w = self._training_motion_state(index)
+            # A residual spin does not move a round stone's centre.  The
+            # native loop keeps the live target body in the same Scene, so
+            # PhysX still applies that spin at contact; only a translating
+            # target invalidates its fixed centre-position shell test.
+            if math.hypot(vx, vy) > 0.01:
+                if friction_noises is None:
+                    if friction_seed is None:
+                        raise ValueError("friction_seed is required when no noise stream is supplied")
+                    from tools.reverse.front_half_pcm_replay import unity_seed_friction_noises
+
+                    friction_noises = unity_seed_friction_noises(int(friction_seed), int(max_steps))
                 return self._run_to_first_contact(
                     active_index,
                     friction_noises,
@@ -1210,6 +1769,9 @@ class PersistentPhysxFrontHalfScene:
         # It still executes every 0.01 s PhysX step and the exact recovered
         # f64 friction update.  Keep unusual diagnostic angular modes and
         # custom motion steppers on the transparent Python path below.
+        native_seeded_front_half = getattr(
+            self.scene, "simulate_curling_until_first_contact_seeded", None
+        )
         native_front_half = getattr(self.scene, "simulate_curling_until_first_contact", None)
         native_angular_mode_supported = (
             not self.emulate_unity_native_angular_setter_rotation
@@ -1224,12 +1786,15 @@ class PersistentPhysxFrontHalfScene:
             and isinstance(motion_stepper, NativePyphysxMotionStepper)
             and self.coordinate_mode == "unity-native-yup"
             and native_angular_mode_supported
+            and not self.emulate_unity_body_pose_writeback
+            and not self.walls  # Bulk binding cannot dispatch the Wall callback per step.
+            # The bundled bulk loop always wakes targets from a distance
+            # test. Use it only for the explicit manual-wake diagnostic mode.
+            and self.wake_target_at_current_pcm_shell
         ):
-            noises = [float(noise) for noise in friction_noises]
-            reached_first_contact, steps_used = native_front_half(
+            native_args = (
                 self.slots[active_index].body,
                 [self.slots[index].body for index, _x, _y in static_targets],
-                noises,
                 self.dt,
                 UNITY_FIXED_TIMESTEP,
                 UNITY_NATIVE_ORIGIN_Z,
@@ -1243,6 +1808,15 @@ class PersistentPhysxFrontHalfScene:
                 self.stone_stone_contact_static_friction,
                 self.stone_stone_contact_dynamic_friction,
             )
+            if native_seeded_front_half is not None and friction_seed is not None:
+                reached_first_contact, steps_used = native_seeded_front_half(
+                    native_args[0], native_args[1], int(friction_seed), *native_args[2:]
+                )
+            else:
+                noises = [float(noise) for noise in friction_noises]
+                reached_first_contact, steps_used = native_front_half(
+                    native_args[0], native_args[1], noises, *native_args[2:]
+                )
             if reached_first_contact:
                 slot = self.slots[active_index]
                 slot.material.set_static_friction(0.6)
@@ -1263,6 +1837,13 @@ class PersistentPhysxFrontHalfScene:
                 "trainingFastPath": True,
                 "nativeLoop": True,
             }
+
+        if friction_noises is None:
+            if friction_seed is None:
+                raise ValueError("friction_seed is required when no noise stream is supplied")
+            from tools.reverse.front_half_pcm_replay import unity_seed_friction_noises
+
+            friction_noises = unity_seed_friction_noises(int(friction_seed), int(max_steps))
 
         steps_used = 0
         for step_index, noise in enumerate(friction_noises, 1):
@@ -1309,23 +1890,14 @@ class PersistentPhysxFrontHalfScene:
                 math.hypot(x - target_x, y - target_y) <= FIRST_PCM_CENTER_DISTANCE
                 for _index, target_x, target_y in static_targets
             )
-            reaches_pcm_shell = any(
-                math.hypot(
-                    x + motion_vx * UNITY_FIXED_TIMESTEP - target_x,
-                    y + motion_vy * UNITY_FIXED_TIMESTEP - target_y,
-                ) <= FIRST_PCM_CENTER_DISTANCE
-                for _index, target_x, target_y in static_targets
-            )
-            if self.wake_target_at_current_pcm_shell:
-                reaches_pcm_shell = inside_pcm_shell
-            if reaches_pcm_shell:
+            if self.wake_target_at_current_pcm_shell and inside_pcm_shell:
                 for target_index, _target_x, _target_y in static_targets:
                     self.slots[target_index].body.wake_up()
             pair_zero_friction = self._first_pair_zero_friction_for_step(inside_pcm_shell)
             if pair_zero_friction:
                 self._set_stone_stone_contact_friction(0.0, 0.0)
             try:
-                self.scene.simulate(self.dt)
+                self._simulate_custom_sliding_step()
             finally:
                 if pair_zero_friction:
                     self._set_stone_stone_contact_friction(
@@ -1333,6 +1905,10 @@ class PersistentPhysxFrontHalfScene:
                         self.stone_stone_contact_dynamic_friction,
                     )
             hit_targets: set[int] = set()
+            if not self.slots[active_index].enabled:
+                return {'reachedFirstContact': False, 'removedByWall': True,
+                        'steps': step_index, 'trainingFastPath': True,
+                        'wallReports': self._last_wall_reports}
             for report in self._stone_reports(self.scene.get_contact_reports()):
                 pair = {int(report["stoneIndex0"]), int(report["stoneIndex1"])}
                 if active_index not in pair or int(report.get("contact_count") or 0) <= 0:
@@ -1356,9 +1932,10 @@ class PersistentPhysxFrontHalfScene:
         self,
         active_index: int,
         shot: Sequence[float],
-        friction_noises: Iterable[float],
+        friction_noises: Optional[Iterable[float]],
         *,
         target_indices: Optional[Sequence[int]] = None,
+        friction_seed: Optional[int] = None,
         yaw: Optional[float] = None,
         max_steps: int = 5000,
         motion_stepper: Any | None = None,
@@ -1370,6 +1947,7 @@ class PersistentPhysxFrontHalfScene:
             active_index,
             friction_noises,
             target_indices=target_indices,
+            friction_seed=friction_seed,
             max_steps=max_steps,
             motion_stepper=motion_stepper,
         )
@@ -1391,11 +1969,22 @@ class PersistentPhysxFrontHalfScene:
         *,
         motion_override: Optional[Sequence[float]] = None,
         motion_stepper: Any | None = None,
+        audit_payload: bool = True,
     ) -> dict[str, Any]:
         if self._custom_sliding_index != active_index:
             raise RuntimeError(f"stone {active_index} is not in custom sliding mode")
         slot = self.slots[active_index]
-        current = self.state(active_index)
+        if audit_payload:
+            current = self.state(active_index)
+        else:
+            linear = slot.body.get_linear_velocity()
+            angular = slot.body.get_angular_velocity()
+            if self.coordinate_mode == 'unity-native-yup':
+                vx, vy, vz, w = -float(linear[2]), -float(linear[0]), float(linear[1]), float(angular[1])
+            else:
+                vx, vy = self.probe._from_physx_xy(float(linear[0]),float(linear[1]),True)
+                vz, w = float(linear[2]), float(angular[2])
+            current = dict(vx=vx,vy=vy,vz=vz,w=w,physxAngularVelocity=angular)
         if motion_override is None:
             friction = unity_friction(False, noise=float(friction_noise))
             if motion_stepper is None:
@@ -1425,10 +2014,9 @@ class PersistentPhysxFrontHalfScene:
             )
         )
         if self.coordinate_mode == "unity-native-yup":
-            # C122 directly captures Unity writing a pure world-Y vector.
-            # Re-projecting it through the current quaternion drains spin too
-            # quickly after yaw accumulates and creates a false high-curl
-            # branch.
+            # C122 captures a pure world-Y *script input*.  When enabled, the
+            # native bridge setter projects it through the synchronized scene
+            # Transform and locks local X/Z before storing angular velocity.
             if self.emulate_unity_native_angular_setter_rotation:
                 angular_setter = self._unity_native_angular_setter_vector(slot, motion_angle)
             elif self.emulate_unity_native_angular_setter_tilt_only:
@@ -1449,18 +2037,19 @@ class PersistentPhysxFrontHalfScene:
             slot.body.set_angular_velocity(angular_setter)
         else:
             slot.body.set_angular_velocity([0.0, 0.0, motion_angle])
-        before_scene = self.state(active_index)
+        before_scene = self.state(active_index) if audit_payload else self._sliding_protocol_position(active_index)
         targets_before_scene = {
-            str(other.index): self.state(other.index)
+            str(other.index): (self.state(other.index) if audit_payload
+                              else self._sliding_protocol_position(other.index))
             for other in self.slots
             if other.enabled and other.index != active_index
         }
         inside_pcm_shell = self._is_inside_pcm_shell(before_scene, targets_before_scene)
-        wakes_targets_for_pcm = (
-            inside_pcm_shell
-            if self.wake_target_at_current_pcm_shell
-            else self._reaches_pcm_shell_this_tick(before_scene, targets_before_scene)
-        )
+        # Unity's target core remains asleep at tick 1561. Its island is
+        # activated by PhysX on the following contact step. A predicted
+        # position must not add an earlier explicit wake_up call.
+        # The existing current-shell switch remains an opt-in diagnostic.
+        wakes_targets_for_pcm = self.wake_target_at_current_pcm_shell and inside_pcm_shell
         if wakes_targets_for_pcm:
             for target_index in targets_before_scene:
                 self.slots[int(target_index)].body.wake_up()
@@ -1474,7 +2063,7 @@ class PersistentPhysxFrontHalfScene:
         if pair_zero_friction:
             self._set_stone_stone_contact_friction(0.0, 0.0)
         try:
-            self.scene.simulate(self.dt)
+            self._simulate_custom_sliding_step()
         finally:
             if pair_zero_friction:
                 self._set_stone_stone_contact_friction(
@@ -1483,12 +2072,14 @@ class PersistentPhysxFrontHalfScene:
                 )
         reports = self._stone_reports(self.scene.get_contact_reports())
 
-        after_scene = self.state(active_index)
+        after_scene = self.state(active_index) if audit_payload else None
         targets_after_scene = {
             str(other.index): self.state(other.index)
             for other in self.slots
-            if other.enabled and other.index != active_index
+            if audit_payload and other.enabled and other.index != active_index
         }
+        if not audit_payload:
+            return {'stoneReports': reports, 'wallReports': self._last_wall_reports}
         return {
             "frictionNoise": float(friction_noise),
             "friction": unity_friction(False, noise=float(friction_noise)),
@@ -1497,11 +2088,27 @@ class PersistentPhysxFrontHalfScene:
             "afterScene": after_scene,
             "targetsAfterScene": targets_after_scene,
             "stoneReports": reports,
+            "wallReports": self._last_wall_reports,
             "wakesTargetsForPcm": wakes_targets_for_pcm,
             "insidePcmShell": inside_pcm_shell,
             "restoresActiveFriction": False,
             "pairZeroFrictionForStep": pair_zero_friction,
         }
+
+    def _sliding_protocol_position(self, index: int) -> dict[str, float]:
+        """Only coordinates used by the unchanged current-pair scope test."""
+        position, _q = self.slots[index].body.get_global_pose()
+        if self.coordinate_mode == 'unity-native-yup':
+            return {'x': UNITY_NATIVE_ORIGIN_Z-float(position[2]),
+                    'y': UNITY_NATIVE_POSITION_X_BASE-float(position[0])}
+        x,y = self.probe._from_physx_xy(float(position[0]),float(position[1]),True)
+        return {'x': x, 'y': y}
+
+    def step_custom_sliding_lean(self, active_index: int, friction_noise: float,
+                                 *, motion_stepper: Any = None) -> dict[str, Any]:
+        """Same setters, simulation and callbacks, without audit snapshots."""
+        return self.step_custom_sliding(active_index,friction_noise,
+                                        motion_stepper=motion_stepper,audit_payload=False)
 
     def _run_to_first_contact(
         self,
@@ -1539,6 +2146,9 @@ class PersistentPhysxFrontHalfScene:
                 motion_override=override,
                 motion_stepper=motion_stepper,
             )
+            if not self.slots[active_index].enabled:
+                step.update(reachedFirstContact=False, removedByWall=True, steps=step_index)
+                return step
             matching_reports = []
             hit_targets: set[int] = set()
             for report in step["stoneReports"]:
@@ -1591,7 +2201,7 @@ class PersistentPhysxFrontHalfScene:
                 if pair_zero_friction:
                     self._set_stone_stone_contact_friction(0.0, 0.0)
                 try:
-                    self.scene.simulate(self.dt)
+                    self._simulate_unity_step()
                 finally:
                     if pair_zero_friction:
                         self._set_stone_stone_contact_friction(
@@ -1599,6 +2209,10 @@ class PersistentPhysxFrontHalfScene:
                             self.stone_stone_contact_dynamic_friction,
                         )
                 reports = self._stone_reports(self.scene.get_contact_reports())
+                if not self.slots[active_index].enabled:
+                    return {'reachedFirstContact': False, 'removedByWall': True,
+                            'steps': steps_used, 'physicsOnlyTailSteps': tail_step,
+                            'wallReports': self._last_wall_reports}
                 after_scene = self.state(active_index)
                 targets_after_scene = {
                     str(other.index): self.state(other.index)
@@ -1723,15 +2337,19 @@ class PersistentPhysxFrontHalfScene:
                 break
             steps_used = step_index
             step = self.step_custom_sliding(active_index, float(noise))
+            if not self.slots[active_index].enabled:
+                step.update(reachedPcmShell=False, removedByWall=True, steps=step_index)
+                return step
             active = step["afterScene"]
             distances = {
                 str(index): math.hypot(
                     float(active["x"]) - float(step["targetsAfterScene"][str(index)]["x"]),
                     float(active["y"]) - float(step["targetsAfterScene"][str(index)]["y"]),
                 )
-                for index in sorted(targets)
+                for index in sorted(targets) if str(index) in step['targetsAfterScene']
             }
-            hit_targets = [index for index in sorted(targets) if distances[str(index)] <= threshold]
+            hit_targets = [index for index in sorted(targets)
+                           if str(index) in distances and distances[str(index)] <= threshold]
             if hit_targets:
                 step.update(
                     {

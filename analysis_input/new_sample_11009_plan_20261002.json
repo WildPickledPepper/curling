@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": 11009,
+    "label": "fresh_11009_curl_right_20261002",
+    "category": "collision_glancing",
+    "v0": 3.4,
+    "h0": 0.2,
+    "w0": 1.57,
+    "sweep": 0.0,
+    "active_index": 0,
+    "stones": [
+      {
+        "index": 11,
+        "x": 2.6550000000000002,
+        "y": 6.8
+      }
+    ],
+    "notes": "Fresh Unity page; same shot parameters as historical11009; no previous shots, pose injection or RNG override."
+  }
+]

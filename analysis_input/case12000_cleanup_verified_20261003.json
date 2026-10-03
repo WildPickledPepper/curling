@@ -1,0 +1,154 @@
+{
+  "sampleId": 12000,
+  "completedStep": 1879,
+  "actualRemovalCallerChain": [
+    {
+      "callId": 175,
+      "parentCallId": null,
+      "functionIndex": 61030,
+      "ordinal": 1880,
+      "args": [
+        279453104,
+        29740568,
+        41221632
+      ]
+    },
+    {
+      "callId": 185,
+      "parentCallId": 175,
+      "functionIndex": 54405,
+      "ordinal": 1880,
+      "args": [
+        290544464,
+        0,
+        0
+      ]
+    },
+    {
+      "callId": 196,
+      "parentCallId": 185,
+      "functionIndex": 71727,
+      "ordinal": 1880,
+      "args": [
+        38147936
+      ]
+    }
+  ],
+  "observedCollisionRoot": {
+    "callId": 175,
+    "ordinal": 1880,
+    "functionIndex": 61030,
+    "args": [
+      279453104,
+      29740568,
+      41221632
+    ],
+    "collisionTagConstants": [
+      {
+        "globalAddress": 3837100,
+        "stringPtr": 279397568,
+        "length": 5,
+        "text": "Stone"
+      },
+      {
+        "globalAddress": 3843892,
+        "stringPtr": 279431112,
+        "length": 4,
+        "text": "Wall"
+      }
+    ]
+  },
+  "branch": "f61030 second tag-comparison branch: Wall. The observed zero setters and SetActive(false) are exclusive to this branch in the original WAT.",
+  "callbackFunctions": [
+    {
+      "callId": 176,
+      "parentCallId": 175,
+      "functionIndex": 32511,
+      "args": [
+        29709104,
+        0.6000000238418579,
+        0
+      ]
+    },
+    {
+      "callId": 177,
+      "parentCallId": 175,
+      "functionIndex": 32512,
+      "args": [
+        29709104,
+        0.6000000238418579,
+        0
+      ]
+    },
+    {
+      "callId": 178,
+      "parentCallId": 175,
+      "functionIndex": 32521,
+      "args": [
+        29710880,
+        10206848,
+        0
+      ]
+    },
+    {
+      "callId": 183,
+      "parentCallId": 175,
+      "functionIndex": 32524,
+      "args": [
+        29710880,
+        10206832,
+        0
+      ]
+    },
+    {
+      "callId": 185,
+      "parentCallId": 175,
+      "functionIndex": 54405,
+      "args": [
+        290544464,
+        0,
+        0
+      ]
+    },
+    {
+      "callId": 196,
+      "parentCallId": 185,
+      "functionIndex": 71727,
+      "args": [
+        38147936
+      ]
+    }
+  ],
+  "collisionFlagBeforeAndAfter": [
+    0,
+    1
+  ],
+  "observer": {
+    "originalCalculationBodiesByteIdentical": true,
+    "unpatchedWasmControl": true,
+    "setterGetterPosePairsByteIdentical": 1881,
+    "frictionInputsByteIdentical": 1879,
+    "protocolResultUnchanged": true,
+    "evidence": {
+      "analysis_input\\additional_case_validation_20261002\\additional12000_original_control\\logs\\unity_runtime_probe_20261002_232515\\events.jsonl": "9ee9d6b681e043b3a2bd99537eaeaf7d3957de8210739ea0263aa5d0d77f6a23",
+      "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+      "analysis_input\\unity_case12000_cleanup_v4_20261003.wasm": "92a1017a330bb2cde72a2ea5dee3727838636aa9ee0f4ec2b9f657757c3778f9"
+    },
+    "completedBoundarySetsAndStateWordsUnchanged": 1901
+  },
+  "productionChanged": false,
+  "invalidEarlierCaptures": {
+    "case12000_cleanup_unity_20261003": "No release/Reset physics window captured.",
+    "case12000_cleanup_unity_v2_20261003": "Event export timed out at step1643; missing cleanup window, not used as cause proof.",
+    "case12000_cleanup_unity_v3_20261003": "Polling stalled before release; stopped this capture tree, not used as cause proof."
+  },
+  "evidence": {
+    "analysis_input\\case12000_cleanup_unity_v4_20261003\\logs\\unity_runtime_probe_20261003_131830\\events.jsonl": "af039a336e6982049febc49494a294ba0395763fcb726915e62c550aa89f2ef6",
+    "analysis_input\\case12000_cleanup_unity_v4_20261003\\capture_manifest.json": "053e4442d19b5be73c94edc85f1122764f0155e02472a6d6bbe21436273910b0",
+    "analysis_input\\case12000_cleanup_unity_v4_20261003\\observer_source.js": "03354a00ddada33b626f9415e1c7d324b0b985275e0ce5baf52bba7c4ce9d0f6",
+    "analysis_input\\pcm_functions_20261001\\f61030.wat": "bd94ec2abc605a2e915838dc6a516280204e1d8d6dc37d12bf9718a90029846a",
+    "analysis_input\\pcm_functions_20261001\\f54405.wat": "c092cbf36519f034ce957c98c7446e2ca704d15e04e26e9c155e928a5c8dde7c",
+    "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "analysis_input\\verify_case12000_cleanup_20261003.py": "519f2e61648d9058d1a7b5cb5aaa9f334ce4f32a8c634b927ab186f0d7572608"
+  }
+}

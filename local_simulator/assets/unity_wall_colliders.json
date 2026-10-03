@@ -1,0 +1,111 @@
+{
+  "schema": "unity-gamescene-wall-colliders-v1",
+  "scene": "level4 / GameSceneNoLimit",
+  "walls": [
+    {
+      "name": "bound3",
+      "gameObjectPathId": 6,
+      "colliderPathId": 458,
+      "position": [
+        -108.05000305175781,
+        14.390000343322754,
+        54.150001525878906
+      ],
+      "quaternionWxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.10000000149011612,
+        0.10000000149011612,
+        4.75
+      ],
+      "layer": 0,
+      "tag": "Wall",
+      "materialPathId": 0
+    },
+    {
+      "name": "bound4",
+      "gameObjectPathId": 10,
+      "colliderPathId": 459,
+      "position": [
+        -85.62999725341797,
+        14.390000343322754,
+        56.63999938964844
+      ],
+      "quaternionWxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        44.5,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "layer": 0,
+      "tag": "Wall",
+      "materialPathId": 0
+    },
+    {
+      "name": "bound1",
+      "gameObjectPathId": 58,
+      "colliderPathId": 462,
+      "position": [
+        -63.25,
+        14.390000343322754,
+        54.150001525878906
+      ],
+      "quaternionWxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.10000000149011612,
+        0.10000000149011612,
+        4.75
+      ],
+      "layer": 0,
+      "tag": "Wall",
+      "materialPathId": 0
+    },
+    {
+      "name": "bound2",
+      "gameObjectPathId": 61,
+      "colliderPathId": 463,
+      "position": [
+        -85.62999725341797,
+        14.390000343322754,
+        51.70000076293945
+      ],
+      "quaternionWxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        44.5,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "layer": 0,
+      "tag": "Wall",
+      "materialPathId": 0
+    }
+  ],
+  "physics": {
+    "contactOffset": 0.009999999776482582,
+    "defaultMaterialPathId": 0
+  },
+  "source": {
+    "path": "analysis_input\\unity_data_20261002.unity3d",
+    "sha256": "1c33fae1f3279bcdc42e4567a395fbc39100ba2059fedb16fa0fb2289171caeb",
+    "extractor": "analysis_input\\extract_unity_walls_20261003.py"
+  }
+}

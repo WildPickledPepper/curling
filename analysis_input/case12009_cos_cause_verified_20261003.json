@@ -1,0 +1,184 @@
+{
+  "sampleId": 12009,
+  "physicsTick": 313,
+  "integrateSetterOrdinal": 314,
+  "firstConfirmedInternalDifference": {
+    "stage": "integrateCore -> cosine return",
+    "unityFunctionIndex": 33062,
+    "unityCosKernelFunctionIndex": 18889,
+    "unityIntegrateFunctionIndex": 71198,
+    "unityCallId": 89,
+    "unityIntegrateCallId": 87,
+    "nativeIntegrateCosCallRva": "0x204d16",
+    "nativeCosImportThunkRva": "0x450480",
+    "nativeCosImplementation": "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "nativeCosEntryRva": "0xa77e0",
+    "observedNativeBranchRvas": [
+      "0xa7840",
+      "0xa7848",
+      "0xa7851",
+      "0xa7855"
+    ],
+    "inputBits": "0x3bd59dea",
+    "unityResultBits": "0x3f7ffe9c",
+    "nativeResultBits": "0x3f7ffe9b",
+    "nativeObservedCalculation": "f64 promotion; multiply by 0.5; fused 1 - (x/2)*x; demote to f32",
+    "unityObservedCalculation": "f33062 small-angle branch -> original f18889 double polynomial -> f32 demotion"
+  },
+  "sineInputAndReturnByteIdentical": true,
+  "integrateBodyDataWordsExactExcludingRosterInteger": 27,
+  "solverDeltaAndMotionDeltaFloatWordsExact": 12,
+  "rounding": {
+    "nativePreDemoteDouble": 0.9999787508699225,
+    "unityPreDemoteDouble": 0.9999787509452933,
+    "float32Midpoint": 0.9999787509441376,
+    "nativeMinusMidpoint": -7.421507852711784e-11,
+    "unityMinusMidpoint": 1.155742168634788e-12
+  },
+  "actualUnityIntegrateOutputBytesReproduced": 112,
+  "nativeCosDiagnosticReproducesAllNativeIntegrateOutputExceptRosterInteger": true,
+  "differingWatStages": [
+    {
+      "watLine": 401,
+      "instruction": "call $f33062",
+      "unityBits": "0x3f7ffe9c",
+      "nativeCosReplayBits": "0x3f7ffe9b"
+    },
+    {
+      "watLine": 403,
+      "instruction": "f32.mul",
+      "unityBits": "0xbf7fcdf3",
+      "nativeCosReplayBits": "0xbf7fcdf2"
+    },
+    {
+      "watLine": 431,
+      "instruction": "f32.add",
+      "unityBits": "0xbf7fbd7d",
+      "nativeCosReplayBits": "0xbf7fbd7c"
+    },
+    {
+      "watLine": 436,
+      "instruction": "f32.mul",
+      "unityBits": "0x3f7f7b0b",
+      "nativeCosReplayBits": "0x3f7f7b09"
+    },
+    {
+      "watLine": 439,
+      "instruction": "f32.mul",
+      "unityBits": "0x31304755",
+      "nativeCosReplayBits": "0x31304754"
+    },
+    {
+      "watLine": 455,
+      "instruction": "f32.add",
+      "unityBits": "0x314e1531",
+      "nativeCosReplayBits": "0x314e1530"
+    },
+    {
+      "watLine": 458,
+      "instruction": "f32.mul",
+      "unityBits": "0x2325e61d",
+      "nativeCosReplayBits": "0x2325e61b"
+    },
+    {
+      "watLine": 483,
+      "instruction": "f32.mul",
+      "unityBits": "0x3d1dd0ac",
+      "nativeCosReplayBits": "0x3d1dd0ab"
+    },
+    {
+      "watLine": 499,
+      "instruction": "f32.add",
+      "unityBits": "0x3d387f4a",
+      "nativeCosReplayBits": "0x3d387f48"
+    },
+    {
+      "watLine": 502,
+      "instruction": "f32.mul",
+      "unityBits": "0x3b04f73a",
+      "nativeCosReplayBits": "0x3b04f737"
+    },
+    {
+      "watLine": 503,
+      "instruction": "f32.add",
+      "unityBits": "0x3b04f73a",
+      "nativeCosReplayBits": "0x3b04f737"
+    },
+    {
+      "watLine": 504,
+      "instruction": "f32.add",
+      "unityBits": "0x3b04f73a",
+      "nativeCosReplayBits": "0x3b04f737"
+    },
+    {
+      "watLine": 505,
+      "instruction": "f32.add",
+      "unityBits": "0x3f800001",
+      "nativeCosReplayBits": "0x3f800000"
+    },
+    {
+      "watLine": 509,
+      "instruction": "f32.mul",
+      "unityBits": "0xbf7fbd7d",
+      "nativeCosReplayBits": "0xbf7fbd7c"
+    },
+    {
+      "watLine": 514,
+      "instruction": "f32.mul",
+      "unityBits": "0x314e1531",
+      "nativeCosReplayBits": "0x314e1530"
+    },
+    {
+      "watLine": 519,
+      "instruction": "f32.mul",
+      "unityBits": "0x3d387f4a",
+      "nativeCosReplayBits": "0x3d387f48"
+    }
+  ],
+  "observer": {
+    "originalCalculationBodiesByteIdentical": true,
+    "unpatchedWasmControl": true,
+    "setterGetterPosePairsByteIdentical": 1276,
+    "frictionInputsByteIdentical": 1275,
+    "protocolResultUnchanged": true,
+    "scope": "Original-Wasm control covers the complete recorded custom sliding window and final protocol result.",
+    "evidence": {
+      "analysis_input\\additional_case_validation_20261002\\additional12009_original_control\\logs\\unity_runtime_probe_20261002_232652\\events.jsonl": "1aab51e8d468548d67f7cc0acf8342ca2524f659645c1d29309bcd3a47c7ca62",
+      "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+      "analysis_input\\unity_case12009_integrate_20261003.wasm": "b89a73fb17bd076d03f3077c2d25479e468dc7d07eb92a5d94ca5161ea42cdfa"
+    },
+    "completedBoundaryBytesUnchanged": 416104,
+    "nativeObservedStepsUnchanged": 3000,
+    "nativeInstructionSnapshots": 18
+  },
+  "productionCodeChanged": false,
+  "nativeModuleChanged": false,
+  "productionSourceSha256": "4073a71114da9f877784df5704a1e66e855b6119bace9eae239147c72ff52b83",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "originalWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "ucrtBaseSha256": "f7d8e245f35e8c595ac1cbb712b66e6ce4a304653e80a3ac5037ff8784e5803f",
+  "limits": [
+    "Diagnosis uses the exact observed small-angle path on this Windows runtime.",
+    "No production cosine replacement or full-trajectory repair has been made.",
+    "The separate 12000 external cleanup boundary is not diagnosed by this report."
+  ],
+  "evidenceSha256": {
+    "analysis_input\\case12009_step313_unity_integrate_20261003\\logs\\unity_runtime_probe_20261003_112740\\events.jsonl": "786dc9b1d50318936645a03a78de0fb908788be40356a719dfa6c825e009737e",
+    "analysis_input\\additional_case_validation_20261002\\additional12009_unity\\logs\\unity_runtime_probe_20261002_232107\\events.jsonl": "0393dca235b02b1ac53ce1ca3834e440f2f9608d567f4f7701641f775737cf85",
+    "analysis_input\\case12009_step313_native_registers_v5_20261003\\calls.json": "3df9d766938255087c5df96b1778192a5b058f574ce3776961da28e77bcf0118",
+    "analysis_input\\case12009_step313_native_registers_v5_20261003\\alignment.json": "e8b2ff2e2ee7979cfbe37e9bfbc9640a996e16e993d4cef1ad5d053a4546b9dc",
+    "analysis_input\\case12009_step313_unity_integrate_20261003\\capture_manifest.json": "3bfcfad10ae54f32b271951e9b385c6c769d431f29153ecc27c6bd70717d7af2",
+    "analysis_input\\unity_20260930.wasm": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "local_simulator\\runtime\\pyphysx\\_pyphysx.cp39-win_amd64.pyd": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll": "f7d8e245f35e8c595ac1cbb712b66e6ce4a304653e80a3ac5037ff8784e5803f",
+    "analysis_input\\pcm_functions_20261001\\f18889.wat": "47c9afc5a3f91d8c29e9f42275467d60587a01cc09c522c10b94e79f1eafe6cd",
+    "analysis_input\\pcm_functions_20261001\\f33062.wat": "30686fa492d2ccf47a691ce2a30b7b7b1b5931f15d7ea3d5471e52248b4f7d1c",
+    "analysis_input\\pcm_functions_20261001\\f71198.wat": "b1718d97809f5bfa688f753aad4ad8b9abb633d8eb90bb42487e6775f39113d9",
+    "analysis_input\\case12009_ucrt_cosf_small_disassembly_20261003.txt": "d963dc91ee2a06e0b9fb24d31ffcdd3fb57ebb68fd5eaded958d3c23de008bad",
+    "analysis_input\\case12009_integrate_disassembly_20261003.txt": "319f6d903b4c140154f099d5369cc5d6cb6809a8432df4642b49e88474c5fda7",
+    "analysis_input\\case12009_cos_causal_stages_20261003.json": "a6554d4e89dac5abed6acede608a3f75c15ed7cd37363ce17d076cd447d3e156",
+    "analysis_input\\verify_case12009_cos_cause_20261003.py": "4fb30d2ec9a7a457bb3161f6573b93ff7d197affe1a2dec885b5ce1b40ca560e",
+    "analysis_input\\trace_native_integrate_registers_20261003.js": "6ae4ef47930f687615ae754ff7df7980eb52cce1d9ed90c7ff2f05cdeb934c27",
+    "analysis_input\\capture_case12009_integrate_20261003.py": "8117cd07a6e28a6a82051b7d2f2c85e6a26791ecc68b8e84770727e11f686391"
+  }
+}

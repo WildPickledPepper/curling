@@ -1,0 +1,85 @@
+{
+  "unityWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+  "nativeModuleSha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "productionCodeSha256": "e59872f4b2719e2d65ea4f32411a0f7fecdea7467c544f8fd397907c26e41878",
+  "repair": "default custom_sliding_zero_vertical_setter=True, actual f60124 literal world-Y +0",
+  "oldSecondTickDivergenceResolved": true,
+  "releaseAndFirstThreeTicksSetterBeforeAfterStateWordsExact": true,
+  "explicitSolverExitTicksExact": 3,
+  "continuousPostReleaseStateTicksExact": 525,
+  "continuousPostReleaseStateWordsExact": 6825,
+  "nextConfirmedDivergence": {
+    "slidingTick": 526,
+    "denseOrdinal": 527,
+    "boundary": "physics/fetch/pose-writeback output, sampled at next tick getter",
+    "stateFields": [
+      "positionXYZ",
+      "quaternionXYZW",
+      "linearVelocityXYZ",
+      "angularVelocityXYZ"
+    ],
+    "changedWordIndices": [
+      10
+    ],
+    "unityWords": [
+      3265703347,
+      1097250672,
+      1113109142,
+      865007271,
+      1013312659,
+      813722110,
+      1065351564,
+      1073373236,
+      0,
+      3102572464,
+      2587368390,
+      993214271,
+      801650846
+    ],
+    "nativeWords": [
+      3265703347,
+      1097250672,
+      1113109142,
+      865007271,
+      1013312659,
+      813722110,
+      1065351564,
+      1073373236,
+      0,
+      3102572464,
+      2587368389,
+      993214271,
+      801650846
+    ],
+    "angularSetterOutputWordsExact": 3,
+    "entryStateWordsExact": 13,
+    "unityAngularX": -3.807274338158376e-23,
+    "nativeAngularX": -3.807274022614014e-23,
+    "unityAngularXHex": "0x9a381bc6",
+    "nativeAngularXHex": "0x9a381bc5"
+  },
+  "observer": {
+    "frictionRecordsExact": 1562,
+    "resetCoreFramesExact": 256,
+    "endpointUnchanged": true,
+    "nativeFirstFourFramesAndSettersUnchanged": true,
+    "fullRunFirstFourFramesExactToObservedBaseline": true
+  },
+  "tests": "31 unittest tests passed including actual Unity release + first four ticks",
+  "scope": "sample 11000, fresh default Windows CP39, fixed recorded friction input stream",
+  "limitations": [
+    "Comparison advances discrete P/Q/velocity state boundaries; not every f64 arithmetic intermediate is audited.",
+    "Exact instruction causing tick 526 angular X difference is not located; Unity solver internals at that ordinal need targeted sampling.",
+    "Recorded friction inputs do not close Unity RNG state generation.",
+    "Do not propagate this result to later collision stages, other samples, or other ABI builds."
+  ],
+  "evidence": {
+    "analysis_input\\unity_first_release_chain_complete_capture_20261002\\logs\\unity_runtime_probe_20261002_162622\\events.jsonl": "407d5ae1e84198db5f7e1589e201aaf5f8210ef61f3b61733a2a39037232f72e",
+    "analysis_input\\native_first_release_vertical_fixed_traced_20261002.json": "7a3fd69b8859b7b2484ee28bec8830e5fe149c081b3d179477200164cda9014c",
+    "analysis_input\\native_first_release_vertical_fixed_untraced_20261002.json": "f475f95a0dcff0243462f026a49940f23855b8240fc385c56e2e63396ce007ed",
+    "analysis_input\\native_first_release_vertical_fixed_full_20261002.json": "61c8da89971f6344533b8a9163f4f70ac97fd799dedd89faa29572fb741fd5f4",
+    "local_simulator\\unity_physx.py": "e59872f4b2719e2d65ea4f32411a0f7fecdea7467c544f8fd397907c26e41878",
+    "local_simulator\\tests\\fixtures\\unity_first_release_four_steps_20261002.json": "0456d5f3afd007b47502df94e100511c9ebe0398a3de9cd04f2c1e28de8d2a91",
+    "analysis_input\\first_release_chain_verified_20261002.json": "047c8c9ab1f311cfcac5955dd822b351b3c07725ca71538ea445bb46d0ff774a"
+  }
+}

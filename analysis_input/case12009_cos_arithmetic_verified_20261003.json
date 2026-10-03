@@ -1,0 +1,23 @@
+{
+  "comparedFiniteInputs": 100188,
+  "allResultsBitIdentical": true,
+  "failingAngleBits": "0x3bd59dea",
+  "repairedCosBits": "0x3f7ffe9c",
+  "repairedNativeReturnObserved": true,
+  "integrateOutputBytesExactExcludingRosterInteger": 108,
+  "passiveRegisterSnapshots": 13,
+  "observerCompletedStatesUnchanged": 3000,
+  "scope": "Verbatim Unity WAT moderate reduction; samples across all branches, signs and integration domain. Large finite f5976 is outside the integration contract.",
+  "evidence": {
+    "analysis_input\\pcm_functions_20261001\\f33062.wat": "30686fa492d2ccf47a691ce2a30b7b7b1b5931f15d7ea3d5471e52248b4f7d1c",
+    "analysis_input\\pcm_functions_20261001\\f18889.wat": "47c9afc5a3f91d8c29e9f42275467d60587a01cc09c522c10b94e79f1eafe6cd",
+    "analysis_input\\pcm_functions_20261001\\f18888.wat": "babc20896fb0b8024fdad9014edffd90fd892f26b94aeca266dea7c10d5a74e8",
+    "analysis_input\\pcm_functions_20261001\\f18176.wat": "651675252da75ef9955fba0a4a4d33549a5c97b4b8e0e85563d27e9827c97a19",
+    "local_simulator\\runtime\\unity_integrate_cos.dll": "06324049c4151ac4f85a3484796f05df76bc73696e76fe85c56fec3a69953564",
+    "local_simulator\\runtime\\unity_integrate_cos.c": "77030fb6271333fbc113419f3bf9fa6a34ab9c8e997b0c9661e4c18ae3e7ea6b",
+    "analysis_input\\verify_case12009_cos_repair_20261003.py": "b1c7b1f53dda9b16dde36cdb357b65010c98bcb40089ef23cd273045d7c219cc",
+    "analysis_input\\case12009_cos_fixed_registers_20261003\\calls.json": "b4f3613eb0e16de7dd606a03205e1dcdec31908a7228d78532173e3fc492d196",
+    "analysis_input\\case12009_cos_fixed_registers_20261003\\alignment.json": "e4432b7b6ab424517a6c97044b2b77c28d72470988d4e59486536be5fcc0f21c",
+    "analysis_input\\case12009_step313_unity_integrate_20261003\\logs\\unity_runtime_probe_20261003_112740\\events.jsonl": "786dc9b1d50318936645a03a78de0fb908788be40356a719dfa6c825e009737e"
+  }
+}

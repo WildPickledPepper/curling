@@ -24,3 +24,6 @@
 *.so binary
 *.wasm binary
 *.npz binary
+
+# Captured stdout is evidence; preserve original whitespace.
+/analysis_input/*.stdout.txt -whitespace

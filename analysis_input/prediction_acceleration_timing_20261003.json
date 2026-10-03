@@ -1,0 +1,889 @@
+{
+  "python": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python39_64\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 20261003,
+  "repeats": 10,
+  "scope": "Reference: audit snapshots and Python float32 projection. Optimized: lean snapshots and exact native projection. Identical clock, native PhysX, reset and request serialization; modes alternate sequentially, no profiler or concurrent workers.",
+  "source_sha256": {
+    "local_simulator\\unity_physx.py": "8874345b7bc5dd709a5ce9f3800827117c9e0166d666b50ebcc8847eff10baa0",
+    "local_simulator\\unity_prediction.py": "e91a6fd5e0c803e59b329359370f629a4bf02aecae25fb4aec7769cb92ed4cf4",
+    "local_simulator\\runtime\\unity_angular_projection.dll": "8c64e77c9c58a037c1231ac4e2ddf63a0a36bcb2d8f7e2e39727ed0b95470848"
+  },
+  "rows": [
+    {
+      "case": "free",
+      "shot": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "stones": [],
+      "samples": [
+        {
+          "before": {
+            "ms": 346.0991,
+            "cpu_ms": 343.75,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 181.99050000000017,
+            "cpu_ms": 187.5,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.9017426733813012
+        },
+        {
+          "before": {
+            "ms": 360.1694999999998,
+            "cpu_ms": 359.375,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 185.7953000000001,
+            "cpu_ms": 187.5,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.9385285849534384
+        },
+        {
+          "before": {
+            "ms": 479.03180000000003,
+            "cpu_ms": 453.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 191.82189999999989,
+            "cpu_ms": 171.875,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 2.4972737732240184
+        },
+        {
+          "before": {
+            "ms": 1412.4237000000003,
+            "cpu_ms": 1312.5,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 830.2019000000005,
+            "cpu_ms": 671.875,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.7013014545016092
+        },
+        {
+          "before": {
+            "ms": 1281.9527999999991,
+            "cpu_ms": 1203.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 869.0224999999998,
+            "cpu_ms": 828.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.4751664082345386
+        },
+        {
+          "before": {
+            "ms": 1351.2722000000003,
+            "cpu_ms": 1296.875,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 844.7389000000012,
+            "cpu_ms": 734.375,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.599632975348949
+        },
+        {
+          "before": {
+            "ms": 1413.0786000000005,
+            "cpu_ms": 1203.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 812.7512000000011,
+            "cpu_ms": 781.25,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.7386361287439485
+        },
+        {
+          "before": {
+            "ms": 1482.337900000001,
+            "cpu_ms": 1328.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 1158.1107999999992,
+            "cpu_ms": 968.75,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.279962072713597
+        },
+        {
+          "before": {
+            "ms": 1524.6849000000022,
+            "cpu_ms": 1265.625,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 1142.3938000000007,
+            "cpu_ms": 953.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.334640384077716
+        },
+        {
+          "before": {
+            "ms": 1241.8219000000015,
+            "cpu_ms": 1062.5,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "after": {
+            "ms": 812.0581000000016,
+            "cpu_ms": 703.125,
+            "sha256": "94cd1d8ab966937b646d3ef23ddbf2e05b2212d7cdfcc5c30c586ba42ef184de"
+          },
+          "speedup": 1.5292278963783492
+        }
+      ],
+      "before_ms": {
+        "mean": 1089.2872400000006,
+        "median": 1316.6124999999997,
+        "p95": 1505.6287500000017,
+        "min": 346.0991,
+        "max": 1524.6849000000022
+      },
+      "after_ms": {
+        "mean": 702.8884900000004,
+        "median": 821.4765500000008,
+        "p95": 1151.0381499999999,
+        "min": 181.99050000000017,
+        "max": 1158.1107999999992
+      },
+      "median_speedup": 1.6027389948014932,
+      "paired_speedup": {
+        "mean": 1.6996112351557466,
+        "median": 1.6504672149252793,
+        "p95": 2.2458384385022567,
+        "min": 1.279962072713597,
+        "max": 2.4972737732240184
+      },
+      "final_results_identical": true,
+      "fixedSteps": 3168,
+      "frictionDraws": 3168,
+      "updates": 1
+    },
+    {
+      "case": "hit",
+      "shot": [
+        3.4,
+        0.0,
+        0.0
+      ],
+      "stones": [
+        [
+          2,
+          2.375,
+          5.2
+        ]
+      ],
+      "samples": [
+        {
+          "before": {
+            "ms": 887.9345000000001,
+            "cpu_ms": 859.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 514.2732999999993,
+            "cpu_ms": 500.0,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.7265809833020718
+        },
+        {
+          "before": {
+            "ms": 932.5669999999989,
+            "cpu_ms": 890.625,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 524.8831000000002,
+            "cpu_ms": 437.5,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.776713710157554
+        },
+        {
+          "before": {
+            "ms": 946.5950999999997,
+            "cpu_ms": 875.0,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 514.4160000000006,
+            "cpu_ms": 468.75,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.8401354156946879
+        },
+        {
+          "before": {
+            "ms": 946.7669000000001,
+            "cpu_ms": 859.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 531.1585000000001,
+            "cpu_ms": 484.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.782456460736296
+        },
+        {
+          "before": {
+            "ms": 938.6571999999979,
+            "cpu_ms": 765.625,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 500.93259999999873,
+            "cpu_ms": 468.75,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.873819352144381
+        },
+        {
+          "before": {
+            "ms": 964.9107999999984,
+            "cpu_ms": 890.625,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 519.513700000001,
+            "cpu_ms": 484.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.857334657392089
+        },
+        {
+          "before": {
+            "ms": 931.2936999999977,
+            "cpu_ms": 843.75,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 543.0006000000027,
+            "cpu_ms": 500.0,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.715087791799849
+        },
+        {
+          "before": {
+            "ms": 1095.5444000000014,
+            "cpu_ms": 984.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 625.9427999999971,
+            "cpu_ms": 593.75,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.7502308517647402
+        },
+        {
+          "before": {
+            "ms": 967.4308000000025,
+            "cpu_ms": 921.875,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 671.061299999998,
+            "cpu_ms": 656.25,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 1.4416429616787696
+        },
+        {
+          "before": {
+            "ms": 1015.1998999999989,
+            "cpu_ms": 984.375,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "after": {
+            "ms": 463.5333000000017,
+            "cpu_ms": 468.75,
+            "sha256": "5f0a578b623204cefa388aed52094ab42b7cf01bc587c12ea8d914ea36d07e46"
+          },
+          "speedup": 2.1901336969749425
+        }
+      ],
+      "before_ms": {
+        "mean": 962.6900299999995,
+        "median": 946.6809999999998,
+        "p95": 1059.3893750000002,
+        "min": 887.9345000000001,
+        "max": 1095.5444000000014
+      },
+      "after_ms": {
+        "mean": 540.8715199999999,
+        "median": 522.1984000000007,
+        "p95": 650.7579749999976,
+        "min": 463.5333000000017,
+        "max": 671.061299999998
+      },
+      "median_speedup": 1.8128761022630453,
+      "paired_speedup": {
+        "mean": 1.795413588164538,
+        "median": 1.779585085446925,
+        "p95": 2.0477922418011896,
+        "min": 1.4416429616787696,
+        "max": 2.1901336969749425
+      },
+      "final_results_identical": true,
+      "fixedSteps": 3168,
+      "frictionDraws": 1561,
+      "updates": 1
+    },
+    {
+      "case": "wall",
+      "shot": [
+        4.1,
+        0.0,
+        0.0
+      ],
+      "stones": [
+        [
+          2,
+          1.875,
+          5.6
+        ]
+      ],
+      "samples": [
+        {
+          "before": {
+            "ms": 1084.9481999999994,
+            "cpu_ms": 968.75,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 551.6044999999963,
+            "cpu_ms": 531.25,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.9668951214139963
+        },
+        {
+          "before": {
+            "ms": 942.245100000001,
+            "cpu_ms": 859.375,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 609.0227999999981,
+            "cpu_ms": 562.5,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.5471425700318673
+        },
+        {
+          "before": {
+            "ms": 1088.8646000000008,
+            "cpu_ms": 1015.625,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 556.7554000000001,
+            "cpu_ms": 500.0,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.9557324455227565
+        },
+        {
+          "before": {
+            "ms": 1305.2245000000014,
+            "cpu_ms": 1203.125,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 779.9297999999978,
+            "cpu_ms": 671.875,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.6735153599721475
+        },
+        {
+          "before": {
+            "ms": 1168.0899999999995,
+            "cpu_ms": 1109.375,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 692.0924,
+            "cpu_ms": 609.375,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.6877659688215034
+        },
+        {
+          "before": {
+            "ms": 1074.1231999999954,
+            "cpu_ms": 1000.0,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 595.3019000000027,
+            "cpu_ms": 562.5,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.8043335658763908
+        },
+        {
+          "before": {
+            "ms": 1101.089799999997,
+            "cpu_ms": 968.75,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 614.5195000000001,
+            "cpu_ms": 578.125,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.7917898455622594
+        },
+        {
+          "before": {
+            "ms": 1059.2235000000016,
+            "cpu_ms": 921.875,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 544.2152999999976,
+            "cpu_ms": 484.375,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.9463317183475113
+        },
+        {
+          "before": {
+            "ms": 1328.6085999999955,
+            "cpu_ms": 1156.25,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 696.655799999995,
+            "cpu_ms": 593.75,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.9071234316860708
+        },
+        {
+          "before": {
+            "ms": 1289.9175999999954,
+            "cpu_ms": 1109.375,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "after": {
+            "ms": 670.7105999999997,
+            "cpu_ms": 593.75,
+            "sha256": "6081e1367a6210eecf0dc6a16a0ea8fefbd87f5e5fd81170aba4feb6a75dbbd7"
+          },
+          "speedup": 1.923210398046484
+        }
+      ],
+      "before_ms": {
+        "mean": 1144.2335099999987,
+        "median": 1094.977199999999,
+        "p95": 1318.085754999998,
+        "min": 942.245100000001,
+        "max": 1328.6085999999955
+      },
+      "after_ms": {
+        "mean": 631.0807999999987,
+        "median": 611.7711499999991,
+        "p95": 742.4564999999965,
+        "min": 544.2152999999976,
+        "max": 779.9297999999978
+      },
+      "median_speedup": 1.7898477232867234,
+      "paired_speedup": {
+        "mean": 1.8203840425280988,
+        "median": 1.8557284987812308,
+        "p95": 1.9618719172629384,
+        "min": 1.5471425700318673,
+        "max": 1.9668951214139963
+      },
+      "final_results_identical": true,
+      "fixedSteps": 3168,
+      "frictionDraws": 1881,
+      "updates": 1
+    },
+    {
+      "case": "spin",
+      "shot": [
+        3.35,
+        0.18,
+        9.42
+      ],
+      "stones": [
+        [
+          2,
+          2.375,
+          6.7
+        ]
+      ],
+      "samples": [
+        {
+          "before": {
+            "ms": 1854.5763000000052,
+            "cpu_ms": 1765.625,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 1021.6032000000013,
+            "cpu_ms": 890.625,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.8153587420243034
+        },
+        {
+          "before": {
+            "ms": 1960.639999999998,
+            "cpu_ms": 1906.25,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 996.035500000005,
+            "cpu_ms": 859.375,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.9684438958249864
+        },
+        {
+          "before": {
+            "ms": 1883.8937999999957,
+            "cpu_ms": 1593.75,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 951.7809999999969,
+            "cpu_ms": 906.25,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.9793353723177936
+        },
+        {
+          "before": {
+            "ms": 2044.8138,
+            "cpu_ms": 1687.5,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 1175.3520000000037,
+            "cpu_ms": 1093.75,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.7397458803830625
+        },
+        {
+          "before": {
+            "ms": 1840.3282000000017,
+            "cpu_ms": 1734.375,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 1226.2916000000105,
+            "cpu_ms": 1015.625,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.5007264177622892
+        },
+        {
+          "before": {
+            "ms": 1810.2828999999901,
+            "cpu_ms": 1671.875,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 943.4935000000024,
+            "cpu_ms": 796.875,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.9187020366329874
+        },
+        {
+          "before": {
+            "ms": 1769.7153000000014,
+            "cpu_ms": 1578.125,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 955.6887999999901,
+            "cpu_ms": 890.625,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.8517694253610797
+        },
+        {
+          "before": {
+            "ms": 1819.6783999999866,
+            "cpu_ms": 1750.0,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 963.6408000000074,
+            "cpu_ms": 859.375,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.8883368159587812
+        },
+        {
+          "before": {
+            "ms": 1768.247500000001,
+            "cpu_ms": 1671.875,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 944.211800000005,
+            "cpu_ms": 843.75,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.8727233656685838
+        },
+        {
+          "before": {
+            "ms": 1830.7788999999984,
+            "cpu_ms": 1687.5,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "after": {
+            "ms": 975.4903999999982,
+            "cpu_ms": 953.125,
+            "sha256": "ae1d7f91551f176b3b0be29efa5863bf8deb0eb6edf3cc85015a80c71ab95701"
+          },
+          "speedup": 1.8767779775177713
+        }
+      ],
+      "before_ms": {
+        "mean": 1858.2955099999979,
+        "median": 1835.55355,
+        "p95": 2006.935589999999,
+        "min": 1768.247500000001,
+        "max": 2044.8138
+      },
+      "after_ms": {
+        "mean": 1015.3588600000021,
+        "median": 969.5656000000029,
+        "p95": 1203.3687800000073,
+        "min": 943.4935000000024,
+        "max": 1226.2916000000105
+      },
+      "median_speedup": 1.893171075788987,
+      "paired_speedup": {
+        "mean": 1.841191992945164,
+        "median": 1.8747506715931777,
+        "p95": 1.9744342078960302,
+        "min": 1.5007264177622892,
+        "max": 1.9793353723177936
+      },
+      "final_results_identical": true,
+      "fixedSteps": 3168,
+      "frictionDraws": 3168,
+      "updates": 1
+    },
+    {
+      "case": "dense",
+      "shot": [
+        3.35,
+        0.0,
+        0.0
+      ],
+      "stones": [
+        [
+          1,
+          2.375,
+          7.15
+        ],
+        [
+          3,
+          2.375,
+          4.88
+        ],
+        [
+          5,
+          1.92,
+          6.12
+        ],
+        [
+          7,
+          2.83,
+          6.12
+        ]
+      ],
+      "samples": [
+        {
+          "before": {
+            "ms": 1629.1987999999974,
+            "cpu_ms": 1421.875,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 725.6239999999963,
+            "cpu_ms": 687.5,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.2452383052379825
+        },
+        {
+          "before": {
+            "ms": 1229.617999999988,
+            "cpu_ms": 1093.75,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 560.2520999999996,
+            "cpu_ms": 406.25,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.194758395372349
+        },
+        {
+          "before": {
+            "ms": 1270.7322999999917,
+            "cpu_ms": 1156.25,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 525.5748999999952,
+            "cpu_ms": 421.875,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.417794875668536
+        },
+        {
+          "before": {
+            "ms": 1111.4600000000082,
+            "cpu_ms": 1000.0,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 588.5820000000024,
+            "cpu_ms": 546.875,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 1.8883689953141682
+        },
+        {
+          "before": {
+            "ms": 1205.0459999999957,
+            "cpu_ms": 1062.5,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 620.3789000000057,
+            "cpu_ms": 562.5,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 1.9424355019166264
+        },
+        {
+          "before": {
+            "ms": 1184.7517999999866,
+            "cpu_ms": 1140.625,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 549.8649000000029,
+            "cpu_ms": 515.625,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.1546234356838934
+        },
+        {
+          "before": {
+            "ms": 1157.5023000000044,
+            "cpu_ms": 1093.75,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 570.9427999999974,
+            "cpu_ms": 484.375,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.0273524773410045
+        },
+        {
+          "before": {
+            "ms": 1198.3462000000031,
+            "cpu_ms": 1078.125,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 540.2369000000107,
+            "cpu_ms": 546.875,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.218186502995222
+        },
+        {
+          "before": {
+            "ms": 1196.8421999999919,
+            "cpu_ms": 1093.75,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 606.3589000000036,
+            "cpu_ms": 562.5,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 1.9738181463156306
+        },
+        {
+          "before": {
+            "ms": 1225.8155000000102,
+            "cpu_ms": 1156.25,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "after": {
+            "ms": 550.8804000000112,
+            "cpu_ms": 531.25,
+            "sha256": "7be8bd73b6ba9fd3158d685c7f7e11ce5c9c1a7862355e3cdcd09ffdbea7eba5"
+          },
+          "speedup": 2.2251935265803344
+        }
+      ],
+      "before_ms": {
+        "mean": 1240.9313099999977,
+        "median": 1201.6960999999994,
+        "p95": 1467.8888749999944,
+        "min": 1111.4600000000082,
+        "max": 1629.1987999999974
+      },
+      "after_ms": {
+        "mean": 583.8695800000025,
+        "median": 565.5974499999985,
+        "p95": 678.2637050000004,
+        "min": 525.5748999999952,
+        "max": 725.6239999999963
+      },
+      "median_speedup": 2.1246490768301776,
+      "paired_speedup": {
+        "mean": 2.1287770162425748,
+        "median": 2.174690915528121,
+        "p95": 2.340144418974787,
+        "min": 1.8883689953141682,
+        "max": 2.417794875668536
+      },
+      "final_results_identical": true,
+      "fixedSteps": 3168,
+      "frictionDraws": 1371,
+      "updates": 1
+    }
+  ]
+}

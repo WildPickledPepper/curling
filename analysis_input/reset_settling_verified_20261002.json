@@ -1,0 +1,73 @@
+{
+  "sampleId": 11000,
+  "oracleStateInjected": false,
+  "programIdentity": {
+    "unityOriginalWasmSha256": "cbbd1ad26631837ae41df05311a87d0d9aa0a5e178a68d397046c2fa595bca81",
+    "nativeModuleSha256": "2564abec4fa3f358e67259b105c4b88d49eae28510611c8a0e2f11b7671888df"
+  },
+  "resetPositionWordsExact": 48,
+  "firstFiveStepsPQLinearAngularWordsExact": 65,
+  "firstObservedResetOutputDifference": {
+    "resetPhysicsStep": 6,
+    "boundary": "Unity solverSetupSolve exit / native Scene output plus f72606 writeback",
+    "differences": {
+      "Q": {
+        "unityBits": [
+          865008181,
+          2861379585,
+          2661135678,
+          1065353216
+        ],
+        "nativeBits": [
+          865008181,
+          688256832,
+          487957544,
+          1065353216
+        ]
+      },
+      "linearVelocity": {
+        "unityBits": [
+          705470064,
+          3174542184,
+          781339260
+        ],
+        "nativeBits": [
+          775164037,
+          3174542184,
+          793001552
+        ]
+      },
+      "angularVelocity": {
+        "unityBits": [
+          0,
+          2887578392,
+          2695843960
+        ],
+        "nativeBits": [
+          0,
+          2951480897,
+          2760102439
+        ]
+      }
+    }
+  },
+  "nativeReachedSleepAfterSteps": 42,
+  "observerVerification": {
+    "frictionRecordsExact": 1562,
+    "endpointFieldsUnchanged": true
+  },
+  "wholeScenePrefixAligned": false,
+  "limits": [
+    "This compares all P/Q/v/w output words of the target, not every internal contact/cache value.",
+    "Mass/cooking intermediates and every startup attribute write are not fully closed.",
+    "Sleep boundary and later reset frames are not yet bitwise aligned."
+  ],
+  "nextTrace": "Step 6 target/ice PCM cache, contact/friction constraints, solver inputs and first differing intermediate.",
+  "evidenceSha256": {
+    "analysis_input\\unity_reset_roster_first_case_20261002\\logs\\unity_runtime_probe_20261002_145055\\events.jsonl": "11e59e969837c62d4e361a43f448e90625a089cff4654b7925570e50f4e87d3d",
+    "analysis_input\\native_reset_settling_fixed_20261002.json": "ed25ba00fbd494f54fef312fd3df1b3c71def200997959d9c00a1ac3ce7a6b4c"
+  },
+  "sourceSha256": {
+    "local_simulator\\unity_physx.py": "b1b123464f65932b5e1fab8a414ba68f965b48369a54e3637324b25232837517"
+  }
+}
