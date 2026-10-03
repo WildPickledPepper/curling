@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-03",
+  "scope": "Existing relocations; no new move or deletion. Modified documents retain local edits; original remains in Git history.",
+  "files": [
+    {
+      "original_path": "deployment_probe/README.md",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/README.md",
+      "original_sha256": "254617a950335c6193367ff9327748af9293608b415fba1d60709a7a9e783c6e",
+      "retained_sha256": "254617a950335c6193367ff9327748af9293608b415fba1d60709a7a9e783c6e",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/README.md"
+    },
+    {
+      "original_path": "deployment_probe/local_protocol_smoke_test.py",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/local_protocol_smoke_test.py",
+      "original_sha256": "55d0bbdb35ddaaf832ae1e89c9958bdf2ac2a17b39c0de5a0412cbf8c8d348f9",
+      "retained_sha256": "55d0bbdb35ddaaf832ae1e89c9958bdf2ac2a17b39c0de5a0412cbf8c8d348f9",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/local_protocol_smoke_test.py"
+    },
+    {
+      "original_path": "deployment_probe/probe_submission.py",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/probe_submission.py",
+      "original_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/probe_submission.py"
+    },
+    {
+      "original_path": "deployment_probe/probeext.c",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/probeext.c",
+      "original_sha256": "350ed9674b2fb96a21eacb6e78851e4fa48e8667030fbc3c973367a4cf78f13f",
+      "retained_sha256": "350ed9674b2fb96a21eacb6e78851e4fa48e8667030fbc3c973367a4cf78f13f",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/probeext.c"
+    },
+    {
+      "original_path": "deployment_probe/probeext.cp313-win_amd64.pyd",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/probeext.cp313-win_amd64.pyd",
+      "original_sha256": "12c302d69e1b542ac753b0433301932b699be3f9586d4f20f79dd9fb41572e6c",
+      "retained_sha256": "12c302d69e1b542ac753b0433301932b699be3f9586d4f20f79dd9fb41572e6c",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/probeext.cp313-win_amd64.pyd"
+    },
+    {
+      "original_path": "deployment_probe/quaternion.py",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/quaternion.py",
+      "original_sha256": "342e20d0b733a724c31099c9b9ba8d5132508dba02cd1246ea61c636ed9a6e95",
+      "retained_sha256": "342e20d0b733a724c31099c9b9ba8d5132508dba02cd1246ea61c636ed9a6e95",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/quaternion.py"
+    },
+    {
+      "original_path": "deployment_probe/run_probe.py",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/run_probe.py",
+      "original_sha256": "af1594ef2bae4419199127de8a6f675ca18e4a60d5248e15e10f386b99f26538",
+      "retained_sha256": "af1594ef2bae4419199127de8a6f675ca18e4a60d5248e15e10f386b99f26538",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/run_probe.py"
+    },
+    {
+      "original_path": "deployment_probe/setup.py",
+      "retained_path": "archive/platform_probe_20260724/deployment_probe/setup.py",
+      "original_sha256": "0684e10503b608512126cf86e0e29a7f7557018de57320d7c08791331ccc6555",
+      "retained_sha256": "0684e10503b608512126cf86e0e29a7f7557018de57320d7c08791331ccc6555",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:deployment_probe/setup.py"
+    },
+    {
+      "original_path": "planning_proxy/01_白盒规划代理实施方案.md",
+      "retained_path": "planning_proxy/docs/strategy/01_白盒规划代理实施方案.md",
+      "original_sha256": "db265f5b6dc89aa9a5d4abbfef07463b124435e7dad5cff752aaf80c8b50284f",
+      "retained_sha256": "db265f5b6dc89aa9a5d4abbfef07463b124435e7dad5cff752aaf80c8b50284f",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:planning_proxy/01_白盒规划代理实施方案.md"
+    },
+    {
+      "original_path": "planning_proxy/02_中线残局球形研究.md",
+      "retained_path": "planning_proxy/docs/strategy/02_中线残局球形研究.md",
+      "original_sha256": "21bb4e6a8c8397751fe91c125cf553f279fd898965b77ba9c4cc8ac9c43fdd2c",
+      "retained_sha256": "21bb4e6a8c8397751fe91c125cf553f279fd898965b77ba9c4cc8ac9c43fdd2c",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:planning_proxy/02_中线残局球形研究.md"
+    },
+    {
+      "original_path": "planning_proxy/03_中线控场与残局防御策略.md",
+      "retained_path": "planning_proxy/docs/strategy/03_中线控场与残局防御策略.md",
+      "original_sha256": "389b21aed129f855c30878e3d953839d397379a746fc61a2d4b3aecca12455f2",
+      "retained_sha256": "389b21aed129f855c30878e3d953839d397379a746fc61a2d4b3aecca12455f2",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:planning_proxy/03_中线控场与残局防御策略.md"
+    },
+    {
+      "original_path": "planning_proxy/04_防御形搜索与验收规则.md",
+      "retained_path": "planning_proxy/docs/strategy/04_防御形搜索与验收规则.md",
+      "original_sha256": "69c3f3acd3956a40d36c0cb1b059cf2f6c8bc0802531fab25d5d06ade8125dbd",
+      "retained_sha256": "0ac15d7e91f31c5edd7e20b21a4c0051af41da02bfe64cc0276d5c16a0650d83",
+      "byte_identical": false,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:planning_proxy/04_防御形搜索与验收规则.md"
+    },
+    {
+      "original_path": "planning_proxy/05_Team_Gushue公开战术树_证据版.md",
+      "retained_path": "planning_proxy/docs/strategy/05_Team_Gushue公开战术树_证据版.md",
+      "original_sha256": "ec04506fcc97455b8f02760bc2177ce7d0bd2f66ab2ebd1297e14ae575ddbb0c",
+      "retained_sha256": "b1363846acec1379d5c9c0e4a8b99b2e49a6315723a9ce3b45ba6080e24551e6",
+      "byte_identical": false,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:planning_proxy/05_Team_Gushue公开战术树_证据版.md"
+    },
+    {
+      "original_path": "probe_submission.py",
+      "retained_path": "archive/platform_probe_20260724/probe_submission.py",
+      "original_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "retained_sha256": "445333a5373c8d97c55a0d00aa893da13b075a098457d9fbb0f85f9b86e517c7",
+      "byte_identical": true,
+      "reason": "Existing relocation audited; documentation edits retained",
+      "restore_original": "git show 1696841:probe_submission.py"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "dccourse_project_index_v1",
+  "generatedOn": "2026-10-03",
+  "policy": "索引只分类；任何 archive_candidate 在人工确认、哈希记录和备份前均不得移动或删除。",
+  "categories": [
+    {
+      "id": "runtime_source",
+      "label": "当前运行源码",
+      "paths": [
+        "planning_proxy",
+        "local_simulator",
+        "AIRobot.py",
+        "tools/protocol"
+      ],
+      "editPolicy": "日常开发只在主源码中修改；先完成严格 PhysX、测试和完整回放验证。"
+    },
+    {
+      "id": "verification_assets",
+      "label": "当前研究与验证资产",
+      "paths": [
+        "planning_proxy/diagnostics",
+        "planning_proxy/solver_benchmark",
+        "planning_proxy/fixtures",
+        "planning_proxy/docs/strategy",
+        "planning_proxy/goal_state_tactics",
+        "planning_proxy/tactical_library_strategy",
+        "planning_proxy/runs",
+        "planning_proxy/STATE_MACHINE_ITERATION_LOG.md",
+        "unity_planner.jsonl",
+        "training_research",
+        "training_data"
+      ],
+      "editPolicy": "诊断与报告不直接改变生产策略；报告不得覆盖已有文件。"
+    },
+    {
+      "id": "deployment_snapshots",
+      "label": "发布和平台副本",
+      "paths": [
+        "planning_proxy/submission",
+        "planning_proxy/submission_direct",
+        "planning_proxy/archive/deployment_directories/server_py313_physx_state_machine_20260721",
+        "planning_proxy/server_linux_cp39_physx_state_machine_20260721_direct",
+        "planning_proxy/archive/deployment_directories/server_linux_cp39_physx_state_machine_20260721_backhand_draw",
+        "planning_proxy/archive/deployment_directories/teammate_state_machine_package_20260721",
+        "planning_proxy/archive/deployment_directories/teammate_opponent_package_20260719"
+      ],
+      "editPolicy": "只在打包/平台发布时更新；禁止作为日常主源码修改点。"
+    },
+    {
+      "id": "reference_archive",
+      "label": "资料和历史归档",
+      "paths": [
+        "research_archive",
+        "references",
+        "external_research",
+        "images",
+        "notebooks",
+        "tacticslib",
+        "数字冰壶单机版_win"
+      ],
+      "editPolicy": "保留为资料和对照，不属于当前运行路径。"
+    },
+    {
+      "id": "archive_candidates",
+      "label": "可归档候选",
+      "paths": [
+        "archive/platform_probe_20260724",
+        "archive/third_party_and_model_snapshots",
+        "archive/generated_cache",
+        "planning_proxy/archive/deployment_snapshots_20260721"
+      ],
+      "patterns": [
+        "**/__pycache__/**",
+        "**/*.pyc",
+        "archive/**/*.zip",
+        "archive/**/probeext.*",
+        "planning_proxy/archive/**/*.zip"
+      ],
+      "editPolicy": "当前不删除；需要清理时先写入归档清单、记录哈希和恢复位置。"
+    }
+  ],
+  "humanIndexes": [
+    "PROJECT_INDEX.md",
+    "planning_proxy/RUNS_INDEX.md",
+    "planning_proxy/DEVELOPMENT_RUNBOOK.md"
+  ],
+  "gitPolicy": {
+    "versioned": [
+      "Primary source",
+      "Required native runtime",
+      "Small fixtures",
+      "Analysis tools and derived reports"
+    ],
+    "localOnly": [
+      "Raw Unity captures",
+      "Full Wasm/WAT",
+      "Generated training artifacts",
+      "Delivery copies and compressed snapshots"
+    ],
+    "relocationAudit": "archive/manifest.json",
+    "untrackedInventory": "analysis_input/repository_inventory_20261003.json"
+  }
+}

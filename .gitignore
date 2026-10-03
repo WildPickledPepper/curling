@@ -1,5 +1,7 @@
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
+# Native .pyd runtime modules are required dependencies, not Python caches.
 *$py.class
 
 .ipynb_checkpoints/
@@ -69,3 +71,26 @@ training_data/gushue_shotbook/coordinates/
 /probeext.cp313-win_amd64.pyd
 /run_probe.py
 deployment_probe/build/
+
+# Historical generated delivery copies; edit and package from the main source.
+/handoff_*/
+/ppo_stagec_physx_teammate_*/
+/ppo_teaching_handoff_*/
+/solver_patch_main_physx_*/
+/unity_planner.jsonl
+/planning_proxy/submission/
+/planning_proxy/submission_direct/
+/planning_proxy/server_linux_cp39_physx_state_machine_20260721_direct/
+/planning_proxy/linux_cp39_physx_build/
+/planning_proxy/archive/deployment_directories/
+/planning_proxy/archive/deployment_snapshots_*/
+/archive/third_party_and_model_snapshots/
+/archive/generated_cache/
+/archive/pyd_backups/**/*.pyd
+/archive/platform_probe_20260724/**/*.zip
+/archive/platform_probe_20260724/**/*.so
+/external_research/
+/training_data/nwnht_curling/**/artifacts/
+
+/archive/platform_probe_20260724/**/build/
+/archive/platform_probe_20260724/**/.native_probe/

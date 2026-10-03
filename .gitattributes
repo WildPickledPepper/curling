@@ -15,3 +15,12 @@
 *.jpeg binary
 *.gif binary
 *.rar binary
+
+*.js text eol=lf
+*.c text eol=lf
+*.wat text eol=lf
+*.pyd binary
+*.dll binary
+*.so binary
+*.wasm binary
+*.npz binary
