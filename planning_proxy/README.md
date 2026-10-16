@@ -1,5 +1,7 @@
 # 白盒规划代理
 
+队友先从 [上手指南](../docs/TEAM_GUIDE.md) 和 [战术库导航](../docs/TACTICS_GUIDE.md) 开始。新采样终态求解入口为 `training_research.shot_solver`；本目录保留旧正式状态机、历史语义合同及其桥接器，不由此次整理自动替换。下面的绝对解释器路径和计时属于对应历史环境，不能作为新机器安装前提。
+
 > 先看 [../PROJECT_INDEX.md](../PROJECT_INDEX.md) 定位目录，再看 [RUNS_INDEX.md](RUNS_INDEX.md) 查报告；开发环境、Python ABI 和平台入口见 [DEVELOPMENT_RUNBOOK.md](DEVELOPMENT_RUNBOOK.md)。
 
 这个目录用于开发“**快速筛路线，严格 PhysX 定最终球**”的战术规划代理。

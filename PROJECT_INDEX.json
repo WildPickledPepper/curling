@@ -1,6 +1,6 @@
 {
   "schema": "dccourse_project_index_v1",
-  "generatedOn": "2026-10-03",
+  "generatedOn": "2026-10-16",
   "policy": "索引只分类；任何 archive_candidate 在人工确认、哈希记录和备份前均不得移动或删除。",
   "categories": [
     {
@@ -80,6 +80,9 @@
     }
   ],
   "humanIndexes": [
+    "docs/TEAM_GUIDE.md",
+    "training_research/SOLVER_GUIDE.md",
+    "docs/TACTICS_GUIDE.md",
     "PROJECT_INDEX.md",
     "planning_proxy/RUNS_INDEX.md",
     "planning_proxy/DEVELOPMENT_RUNBOOK.md"
@@ -99,5 +102,6 @@
     ],
     "relocationAudit": "archive/manifest.json",
     "untrackedInventory": "analysis_input/repository_inventory_20261003.json"
-  }
+  },
+  "applicationEntry": "training_research.shot_solver:BudgetedShotSolver"
 }

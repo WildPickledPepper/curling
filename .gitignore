@@ -1,4 +1,5 @@
 __pycache__/
+.venv/
 *.pyc
 *.pyo
 # Native .pyd runtime modules are required dependencies, not Python caches.

@@ -1,0 +1,67 @@
+{
+  "scene_id": "sampled-00a0a914bba5120b",
+  "family": "historical",
+  "active_index": 11,
+  "stones": [
+    {
+      "index": 6,
+      "x": 2.2222,
+      "y": 4.7753,
+      "yaw": 0.0,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 9,
+      "x": 3.4227,
+      "y": 6.6219,
+      "yaw": 0.0,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 10,
+      "x": 2.214,
+      "y": 7.1669,
+      "yaw": 0.0,
+      "yaw_source": "supplied"
+    }
+  ],
+  "group_id": "00a0a914bba5120bcc96a58a706c2e20c373376cd36392ff654c8b6c31ea26e0",
+  "scene_key": "00a0a914bba5120bcc96a58a706c2e20c373376cd36392ff654c8b6c31ea26e0",
+  "selection": {
+    "tactic": "default_draw",
+    "goal": {
+      "stones": {
+        "6": {
+          "type": "IN_REGION",
+          "x": 2.222198486328125,
+          "y": 4.775296702148438,
+          "radius": 0.15,
+          "required": true
+        },
+        "9": {
+          "type": "IN_REGION",
+          "x": 3.422698974609375,
+          "y": 6.6219000957031255,
+          "radius": 0.15,
+          "required": true
+        },
+        "10": {
+          "type": "IN_REGION",
+          "x": 2.214000701904297,
+          "y": 7.166898264648438,
+          "radius": 0.15,
+          "required": true
+        },
+        "11": {
+          "type": "IN_REGION",
+          "x": 2.7838172912597656,
+          "y": 7.075589670898438,
+          "radius": 0.15,
+          "required": true
+        }
+      }
+    },
+    "require_no_contact": true
+  },
+  "task_key": "627fb55b485526bb56fd6cbf94dcc105127db5522fb26fa8663e1a026f863c2e"
+}

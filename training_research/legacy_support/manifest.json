@@ -1,0 +1,46 @@
+{
+  "source": "ppo_stagec_physx_teammate_training_cp38_20260724",
+  "scope": "Unmodified mathematical proposal helpers and their data; not the old physical simulator or PPO weights. Copied byte-for-byte on 2026-10-16 to remove an ignored-directory runtime dependency.",
+  "files": [
+    {
+      "path": "local_simulator/double_geometry.py",
+      "sha256": "ce0493b3d7ed90123eac4eec9d6da59b1a0504c8563e8e4b37491a6e851c373b",
+      "bytes": 6642
+    },
+    {
+      "path": "local_simulator/curling_tactic_search.py",
+      "sha256": "360abbab1fa4d42b7ecf6a8ea45d079c8d34f284894ca1eed61afd75dbe82448",
+      "bytes": 26224
+    },
+    {
+      "path": "local_simulator/curling_solver/seeds.py",
+      "sha256": "ab38446b2830e27a152cd96449e167b3723b9f41e5fa5d8cbc2d1c1ae3bd15d2",
+      "bytes": 18400
+    },
+    {
+      "path": "local_simulator/curling_solver/search.py",
+      "sha256": "e39367385ed3df21caaafcc587eb80a025b09248d6d4e94693aeedf80223b45b",
+      "bytes": 21487
+    },
+    {
+      "path": "ppo_framework/tactic_targets.py",
+      "sha256": "247e50f5277757907075e4c4b6f57cf1bc5235fcd6ce327f42eaf039306d4286",
+      "bytes": 58728
+    },
+    {
+      "path": "tacticslib/base_library.py",
+      "sha256": "ff873d490a80846ca415e42b04860d2f7879f83169f6913654ee6f5f3bc1345a",
+      "bytes": 25700
+    },
+    {
+      "path": "tacticslib/strategy_library.py",
+      "sha256": "2166cb523bc91041eb3dda5f0617dbfd7feef58a5e154968cbf6441ccf5d2c17",
+      "bytes": 103323
+    },
+    {
+      "path": "tacticslib/data/data.json",
+      "sha256": "59444b2296724bdd68ed4dc824a49f9eb6444fe6d48ac0b83ab7a1abec095afb",
+      "bytes": 13856
+    }
+  ]
+}

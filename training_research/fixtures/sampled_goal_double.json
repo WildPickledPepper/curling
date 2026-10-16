@@ -1,0 +1,95 @@
+{
+  "scene_id": "sampled-179263f347152b15",
+  "family": "hit_and_stay",
+  "active_index": 14,
+  "stones": [
+    {
+      "index": 3,
+      "x": 3.3128511649035053,
+      "y": 5.368502881615971,
+      "yaw": -2.498636041915731,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 4,
+      "x": 0.8715413419109161,
+      "y": 2.2829413418222995,
+      "yaw": 0.3713200938802599,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 11,
+      "x": 4.096710586887423,
+      "y": 5.23630416851975,
+      "yaw": 0.3937785835181806,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 13,
+      "x": 2.604705310270549,
+      "y": 2.9724394129451635,
+      "yaw": -1.163181287574107,
+      "yaw_source": "supplied"
+    }
+  ],
+  "layout": {
+    "generator": "task_boards_v1",
+    "family": "hit_and_stay",
+    "layout_index": 8,
+    "seed": 195664828063275,
+    "background_stones": 3,
+    "variant_index": 0,
+    "translation": [
+      0.0,
+      0.0
+    ],
+    "request_seed": 20261004
+  },
+  "group_id": "179263f347152b153bd618840f1749c72539538b8cecca54a21c74c0779bdcd0",
+  "scene_key": "179263f347152b153bd618840f1749c72539538b8cecca54a21c74c0779bdcd0",
+  "selection": {
+    "tactic": "double_hit",
+    "goal": {
+      "stones": {
+        "3": {
+          "type": "OUT_OF_PLAY",
+          "required": true
+        },
+        "4": {
+          "type": "OUT_OF_PLAY",
+          "required": true
+        },
+        "11": {
+          "type": "IN_REGION",
+          "x": 4.150295257568359,
+          "y": 5.186635508300782,
+          "radius": 0.15,
+          "required": true
+        },
+        "13": {
+          "type": "OUT_OF_PLAY",
+          "required": true
+        },
+        "14": {
+          "type": "IN_REGION",
+          "x": 3.9131622314453125,
+          "y": 5.449437632324219,
+          "radius": 0.15,
+          "required": true
+        }
+      }
+    },
+    "first_contact_any": [
+      3,
+      13
+    ],
+    "require_single_first_contact": true,
+    "required_collision_pairs": [
+      [
+        3,
+        13
+      ]
+    ]
+  },
+  "task_key": "5c86fbb6c283dd550d2ac090e5eba496047f93fc6158be278f385644bd29eb9f"
+}

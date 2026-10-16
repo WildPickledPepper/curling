@@ -1,0 +1,3 @@
+# Recommended application ABI: Windows x64 / CPython 3.9.
+# The bundled extension provides its own quaternion compatibility module.
+numpy==1.23.5

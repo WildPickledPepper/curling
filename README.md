@@ -1,45 +1,51 @@
-# Curling AI Workspace
+# Curling AI：战术目标与出手求解
 
-> 项目入口请先看 [PROJECT_INDEX.md](PROJECT_INDEX.md)。它区分当前源码、研究资产、部署副本、历史资料和可归档候选；状态机的当前证据见 `planning_proxy/STATE_MACHINE_ITERATION_LOG.md`。
+面向队友的主线是：**当前壶面 → 战术目标 → 出手参数搜索 → 完整物理终态验收**。队友 PPO 可以提供战术选择，历史战术库可以提供目标候选，求解器负责搜索 `BESTSHOT(v, h, w)`。
 
-逆向与模拟器对齐遵循 [项目协作规则](AGENTS.md)：通过反编译及实际运行时调用、计算数据确认内部机制，现象与实验只用于定位和验证。
+先看 [队友上手指南](docs/TEAM_GUIDE.md)，再按需要进入 [求解器应用](training_research/SOLVER_GUIDE.md) 或 [战术库导航](docs/TACTICS_GUIDE.md)。完整目录分类见 [PROJECT_INDEX.md](PROJECT_INDEX.md)。
 
-2026-10-03 当前模拟器支持“场景 + 出手参数 → 最终停止场景”。入口、运行依赖及验证范围见 [模拟器说明](local_simulator/README.md)，分析材料见 [证据索引](analysis_input/README.md)。预测加速的五组场景逐步比较共 16,135,300 字节一致，同进程十轮计时的中位加速为 1.60–2.12 倍；这证明优化路径保持已测场景精度，不能替代未采样条件的 Unity 验证。
+## 当前能用到哪一步
 
-此前各阶段记录按当时的采样范围保留如下，最新结论请以对应报告及证据索引为准。
-
-2026-10-03 本地证据批量验收：[局部 Unity 采样报告](analysis_input/local_partial_validation_20261003.md)。盘点352份日志、约8.08GB，将81份日志的已有数值窗口接入核对：45份局部轨迹的169220个状态、108186次滑行计算角速度输出、105112次实测四元数投影、8960个Reset求解器核心状态均逐位一致。其余现成碰撞/PCM/缓存等内部窗口保留在逐份待核对清单，未宣称全部本地数据已对齐；本轮未修改生产物理。
-
-2026-10-03 最新：[12000 墙碰撞及停用路径已补齐](analysis_input/case12000_wall_repair_20261003.md)。加入原始资源中的静态墙和真实接触事件回调，12000 第1879步停用时机、保留姿态及后续存活对象状态一致。10次完整回放共37000步、3738696个所比较状态字节全部一致，已有42项及新增2项测试通过；这些轨迹中没有剩余完成状态分叉。下方保留此前各阶段结果。
-
-2026-10-02 新增多样例验收：[自然停止分支正式修复](analysis_input/case12004_stop_material_repair_20261002.md)。已依据 `DCP.Update` 实际调用和原始 f32 停止条件恢复冰壶材质摩擦，12004 原第 3169–3208 步的差异消除。六次完整回放、五种出手条件共 21,000 步，两只冰壶的全部所比较 P/Q/v/w 字节一致，均覆盖休眠；其余五次回放保持不变。41 项测试通过。[本地数据检查](analysis_input/local_unity_data_audit_20261002.md)保留修复前发现与最新报告入口。
-
-随后[扩展四组新样例](analysis_input/additional_cases_validation_20261002.md)：12007、12005 各 4000 步全程逐字节一致；12009 首次数值分叉在第 313 步，解算入口 P/Q/v/w 一致、出口四元数不同；12000 第 1879 步解算后暴露外部清理调用的回放缺口。四组原始 Wasm 对照均通过，本轮未修改生产物理。当前不能将既有通过样例推广为所有条件全链路对齐。
-
-2026-10-03：[12009 第 313 步已修复并回归](analysis_input/case12009_cos_repair_20261003.md)。按 Unity 实际余弦分支和 WAT 算术替换两处积分余弦调用，12009 的释放及完整 4000 步全部逐字节一致；9 次完整回放共 33000 步、3432936 字节一致，原有 41 项测试及新增完整轨迹测试通过。12000 第 1879 步求解之后的外部移除调用仍待闭合。
-
-同日后续：[12000 的触发者已定位为 Wall 碰撞回调](analysis_input/case12000_wall_cleanup_cause_20261003.md)。实际 `OnCollisionEnter → SetActive(false) → rigidSim 移除`，并在回调中恢复摩擦、清零两种速度。补采0–1900边界与原记录一致；本轮只定位，尚未修复墙碰撞处理路径。
-
-当前对齐进展见 [第 1383 步缓存修复](analysis_input/sample11009_cache_repair_20261002.md)：根据 Unity 实际保留并更新 304 字节目标冰面缓存的调用，停用本地每次窄相入口强制清空缓存的旧逻辑。接触更新、五轮目标静态求解及第 1383 步七个状态字已逐位闭合。新样例 11009 从出手到第 3000 个完成步，两只冰壶的 P/Q/v/w 共 78,000 个状态字全部逐位一致，没有发现下一处完成状态分叉。旧样例 11000 的 3362 步原生回归未变，2000 步 Unity 完成状态仍一致；39 项检查通过。结论限于已验证样例和采样范围，没有宣称全样例、所有未采样内部计算对齐。
-
-此前 [BESTSHOT 偏移修复](analysis_input/bestshot_offset_repair_20261002.md)与 [1383 步缓存分支定位](analysis_input/sample11009_step1383_internals_20261002.md)保留修复前证据及原始版本哈希。
-
-当前可交付的本地物理模拟器在 [local_simulator/README.md](local_simulator/README.md)。它包含严格 PhysX 后端、固定局面策略树自对弈样例、已锁定的运行时依赖，以及复现验证所需的关键物理资产。
-
-## 目录说明
-
-| 目录 | 是否当前使用 | 用途 |
+| 部分 | 入口 | 当前边界 |
 | --- | --- | --- |
-| `local_simulator/` | 是 | 当前交付：严格本地模拟器、运行时、样例与测试。 |
-| `tools/protocol/`、`AIRobot.py` | 是 | 与数字冰壶服务通信的课程机器人基类。 |
-| `tacticslib/`、`notebooks/` | 是 | 后续研究训练策略时要参考的课程战术与教学实现。 |
-| `数字冰壶单机版_win/` | 按需 | Unity 单机版；仅在需要重新采样或对照时使用。 |
-| `references/`、`images/` | 保留 | 课程资料与图像资产。 |
-| `research_archive/` | 否（研究留档） | 历史代码、模型、反推证据与文档；不属于当前运行路径。 |
+| 完整终态目标反推出手 | [shot_solver.py](training_research/shot_solver.py) | 可直接调用 Python API 或 CLI；10 秒默认预算，未找到则返回空动作。 |
+| 历史语义战术库 | [tactical_library_strategy](planning_proxy/tactical_library_strategy/README.md) | 读取当前状态，给出目标和回退；目标还要经过当前壶面绑定和物理验收。 |
+| GoalState 合同与回退 | [goal_state_tactics](planning_proxy/goal_state_tactics/README.md) | 有角色绑定、终态门和末壶反击检查；复杂合同使用其原有桥接器。 |
+| 因果策略研究 | [因果路线结论](training_data/nwnht_curling/causal_state_machine/CAUSAL_ROUTE_STOP_REPORT.md) | 保留集未证明优势，不能把历史目标候选称为已认证的因果制胜策略。 |
+| PPO 对接与造数据 | [数据契约](training_research/inverse_dataset/README.md) | 局面/目标共用编码器；当前不要求先训练反推网络。 |
+| 完整正向预测 | [local_simulator](local_simulator/README.md) | 给起始壶面和出手，完整推演至停止；当前应用范围为不扫冰。 |
 
-## 归档内容
+2026-10-04 的本地原始采样测试：**292/306（95.4%）** 在单导航种子下找到解，14 个双飞构型全部通过；每局 10 秒预算，成功耗时中位数 **2.806 秒**。仍有 14 局未解出；找到的解在额外五种子全部通过为 **237/292**。这是指定采样集的搜索成绩，不是实战胜率或任意局面保证。见 [结果与范围](training_research/inverse_solver_optimization_20261004.md)。2026-10-16 的维护只整理入口与随包依赖，没有重新生成这一成绩。
 
-- [research_archive/unity_reverse/](research_archive/unity_reverse/README.md)：反推严格本地模拟器时的源码、采样计划、原始 Unity 数据/日志、实验文档和测试。约 10 GB，仅在需要重新审计或继续反推时使用。
-- [research_archive/legacy_proxy_training/](research_archive/legacy_proxy_training/README.md)：严格模拟器出现前的粗糙代理训练代码、旧模型与旧报告。代码依赖已移除的旧代理，不能直接运行；其中的训练思路可作为重建 PPO/MCTS 训练管线的参考。
+## Windows 快速开始
 
-根目录不再提供旧训练脚本或旧物理代理的运行入口。新训练应直接基于 `local_simulator/` 进行。
+推荐 **64 位 CPython 3.9**；在仓库根目录运行。若 `py -3.9` 不可用，请替换为自己的 Python 3.9 解释器。
+
+```powershell
+py -3.9 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-app.txt
+.\.venv\Scripts\python.exe local_simulator/runtime/verify_native_runtime.py
+.\.venv\Scripts\python.exe -m training_research.shot_solver --scene training_research/fixtures/sampled_goal_draw.json
+```
+
+原生扩展和应用需要的小型经验库已随仓库保留，运行上述样例不需要本机旧交接包、Unity 安装、PPO 权重或完整采样目录。`success=true` 时 `shot` 才是可提交的出手；`success=false` 表示当前预算内没找到，不等于物理无解。
+
+只看历史语义目标可运行以下代码，不会做 PhysX 搜索：
+
+```python
+from planning_proxy.tactical_library_strategy import load_semantic_goal_mdp
+result = load_semantic_goal_mdp().recommend(k=1, board=[])
+print(result["state_id"], result["primary_goal"])
+```
+
+## 协作与文件保存
+
+日常修改主源码，不修改历史发布副本；改动要保留对应的目标、验收范围和回归结果。规则见 [AGENTS.md](AGENTS.md)。
+
+- `training_research/`：新出手求解、样本构造、编码和搜索验收。
+- `planning_proxy/`：策略、战术合同、既有 PhysX 桥接和完整对局评测。
+- `training_data/nwnht_curling/`：历史壶谱分析和默认语义资产。
+- `local_simulator/`：运行所需的模拟器与原生依赖。
+- `runs/`、原始 Unity 采样、第三方数据库、训练权重、历史打包副本：本地证据或按需另行准备，不能把本地报告路径当成克隆后即有的文件。
+
+当前维护不新增提交 Unity/PhysX 逆向分析过程资料。原有历史说明和逆向记录可从 Git 历史及已有证据索引追溯。

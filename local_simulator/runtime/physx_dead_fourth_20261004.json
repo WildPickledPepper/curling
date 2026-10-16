@@ -1,0 +1,360 @@
+{
+  "kernel_sha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "function_rva": "0x335d40",
+  "patch_start_rva": "0x33642f",
+  "patch_end_rva": "0x33643e",
+  "original_hex": "f3440f105c2460488d04904883c00c",
+  "assembly": ".text\n.intel_syntax noprefix\nmovss xmm11, dword ptr [rsp + 0x60]\nlea rax, [rax + rdx*4]\nadd rax, 0xc\nstmxcsr [rsp+0x20]\nmov edx, [rsp+0x20]\nand edx, 0x1fb2\ncmp edx, 0x1fb2\njne fallback\nmovd edx, xmm11\nor edx, [rsp+0x38]\nor edx, [rbp-0x64]\nand edx, 0x7fffffff\ncmp edx, 0x43000000\nja fallback\nmovd edx, xmm8\nor edx, [rsp+0x30]\nand edx, 0x7fffffff\ncmp edx, 0x47800000\nja fallback\nfast_loop:\nmovss xmm4, dword ptr [rax]\nmovss xmm7, dword ptr [rax+4]\nmovss xmm3, dword ptr [rax+8]\nmovd edx, xmm4\nmovd r9d, xmm7\nor edx, r9d\nmovd r9d, xmm3\nor edx, r9d\nand edx, 0x7fffffff\ncmp edx, 0x43000000\nja fallback\nmovaps xmm0, xmm7\nmovss xmm6, dword ptr [rsp + 0x64]\nmovaps xmm1, xmm3\nmulss xmm1, dword ptr [rsp + 0x38]\nadd rax, 0xc\nmovss xmm2, dword ptr [rsp + 0x6c]\nmulss xmm0, xmm11\nmulss xmm5, xmm7\nmulss xmm6, xmm4\nmulss xmm2, xmm7\naddss xmm6, xmm0\nmovss xmm0, dword ptr [rbp + 0x58]\nmulss xmm0, xmm4\naddss xmm6, xmm1\nmovss xmm1, dword ptr [rsp + 0x68]\nmulss xmm1, xmm3\naddss xmm5, xmm0\nmovss xmm0, dword ptr [rsp + 0x34]\nmulss xmm0, xmm4\nminss xmm9, xmm6\nmaxss xmm13, xmm6\naddss xmm5, xmm1\nmovss xmm1, dword ptr [rsp + 0x70]\nmulss xmm1, xmm3\naddss xmm2, xmm0\nminss xmm10, xmm5\naddss xmm2, xmm1\nmaxss xmm14, xmm5\nmovss xmm5, dword ptr [rsp + 0x3c]\nminss xmm12, xmm2\nmaxss xmm15, xmm2\nadd ecx, -1\njne fast_loop\ncmp edx, edx\nje original_epilogue\n.rept 6\nnop\n.endr\nfallback:\ncmp edx, edx\nje original_loop\n.rept 6\nnop\n.endr\n",
+  "scope": "Experimental guarded dead fourth-channel deletion. Fast only with all exception masks and existing DE/UE/PE sticky flags, bounded finite fourth coefficients and initial fourth extrema, and each finite XYZ vertex abs<=128. Deleted fourth operations can then only raise already-set DE/UE/PE, never IE/ZE/OE. Original XYZ operation order and live outputs retained. Any failed guard resumes untouched original scalar loop, even after a fast prefix. Fourth extrema are private dead temporaries; no final box field uses them. RDX/R9 integer scratch dead before original output code overwrites them. Guarded native implementation. Register chained original unwind information for all new executable instructions.",
+  "simd_hex": "f3440f105c2460488d04904883c00c0fae5c24208b54242081e2b21f000081fab21f00000f851401000066440f7eda0b5424380b559c81e2ffffff7f81fa000000430f87f600000066440f7ec20b54243081e2ffffff7f81fa000080470f87db000000f30f1020f30f107804f30f105808660f7ee266410f7ef94409ca66410f7ed94409ca81e2ffffff7f81fa000000430f87a70000000f28c7f30f107424640f28cbf30f594c24384883c00cf30f1054246cf3410f59c3f30f59eff30f59f4f30f59d7f30f58f0f30f104558f30f59c4f30f58f1f30f104c2468f30f59cbf30f58e8f30f10442434f30f59c4f3440f5dcef3440f5feef30f58e9f30f104c2470f30f59cbf30f58d0f3440f5dd5f30f58d1f3440f5ff5f30f106c243cf3440f5de2f3440f5ffa83c1ff0f8533ffffff39d20f840000000090909090909039d20f840000000090909090909090909090",
+  "relative_targets": [
+    {
+      "offset": 308,
+      "target_rva": "0x336518"
+    },
+    {
+      "offset": 322,
+      "target_rva": "0x336440"
+    }
+  ],
+  "unwind_chain_hex": "2100000090613300c266330000794a00",
+  "enclosing_function_entry": {
+    "begin_rva": "0x336190",
+    "end_rva": "0x3366c2",
+    "unwind_rva": "0x4a7900"
+  },
+  "instructions": [
+    {
+      "offset": 0,
+      "instruction": "movss xmm11, dword ptr [rsp + 0x60]"
+    },
+    {
+      "offset": 7,
+      "instruction": "lea rax, [rax + rdx*4]"
+    },
+    {
+      "offset": 11,
+      "instruction": "add rax, 0xc"
+    },
+    {
+      "offset": 15,
+      "instruction": "stmxcsr dword ptr [rsp + 0x20]"
+    },
+    {
+      "offset": 20,
+      "instruction": "mov edx, dword ptr [rsp + 0x20]"
+    },
+    {
+      "offset": 24,
+      "instruction": "and edx, 0x1fb2"
+    },
+    {
+      "offset": 30,
+      "instruction": "cmp edx, 0x1fb2"
+    },
+    {
+      "offset": 36,
+      "instruction": "jne 0x13e"
+    },
+    {
+      "offset": 42,
+      "instruction": "movd edx, xmm11"
+    },
+    {
+      "offset": 47,
+      "instruction": "or edx, dword ptr [rsp + 0x38]"
+    },
+    {
+      "offset": 51,
+      "instruction": "or edx, dword ptr [rbp - 0x64]"
+    },
+    {
+      "offset": 54,
+      "instruction": "and edx, 0x7fffffff"
+    },
+    {
+      "offset": 60,
+      "instruction": "cmp edx, 0x43000000"
+    },
+    {
+      "offset": 66,
+      "instruction": "ja 0x13e"
+    },
+    {
+      "offset": 72,
+      "instruction": "movd edx, xmm8"
+    },
+    {
+      "offset": 77,
+      "instruction": "or edx, dword ptr [rsp + 0x30]"
+    },
+    {
+      "offset": 81,
+      "instruction": "and edx, 0x7fffffff"
+    },
+    {
+      "offset": 87,
+      "instruction": "cmp edx, 0x47800000"
+    },
+    {
+      "offset": 93,
+      "instruction": "ja 0x13e"
+    },
+    {
+      "offset": 99,
+      "instruction": "movss xmm4, dword ptr [rax]"
+    },
+    {
+      "offset": 103,
+      "instruction": "movss xmm7, dword ptr [rax + 4]"
+    },
+    {
+      "offset": 108,
+      "instruction": "movss xmm3, dword ptr [rax + 8]"
+    },
+    {
+      "offset": 113,
+      "instruction": "movd edx, xmm4"
+    },
+    {
+      "offset": 117,
+      "instruction": "movd r9d, xmm7"
+    },
+    {
+      "offset": 122,
+      "instruction": "or edx, r9d"
+    },
+    {
+      "offset": 125,
+      "instruction": "movd r9d, xmm3"
+    },
+    {
+      "offset": 130,
+      "instruction": "or edx, r9d"
+    },
+    {
+      "offset": 133,
+      "instruction": "and edx, 0x7fffffff"
+    },
+    {
+      "offset": 139,
+      "instruction": "cmp edx, 0x43000000"
+    },
+    {
+      "offset": 145,
+      "instruction": "ja 0x13e"
+    },
+    {
+      "offset": 151,
+      "instruction": "movaps xmm0, xmm7"
+    },
+    {
+      "offset": 154,
+      "instruction": "movss xmm6, dword ptr [rsp + 0x64]"
+    },
+    {
+      "offset": 160,
+      "instruction": "movaps xmm1, xmm3"
+    },
+    {
+      "offset": 163,
+      "instruction": "mulss xmm1, dword ptr [rsp + 0x38]"
+    },
+    {
+      "offset": 169,
+      "instruction": "add rax, 0xc"
+    },
+    {
+      "offset": 173,
+      "instruction": "movss xmm2, dword ptr [rsp + 0x6c]"
+    },
+    {
+      "offset": 179,
+      "instruction": "mulss xmm0, xmm11"
+    },
+    {
+      "offset": 184,
+      "instruction": "mulss xmm5, xmm7"
+    },
+    {
+      "offset": 188,
+      "instruction": "mulss xmm6, xmm4"
+    },
+    {
+      "offset": 192,
+      "instruction": "mulss xmm2, xmm7"
+    },
+    {
+      "offset": 196,
+      "instruction": "addss xmm6, xmm0"
+    },
+    {
+      "offset": 200,
+      "instruction": "movss xmm0, dword ptr [rbp + 0x58]"
+    },
+    {
+      "offset": 205,
+      "instruction": "mulss xmm0, xmm4"
+    },
+    {
+      "offset": 209,
+      "instruction": "addss xmm6, xmm1"
+    },
+    {
+      "offset": 213,
+      "instruction": "movss xmm1, dword ptr [rsp + 0x68]"
+    },
+    {
+      "offset": 219,
+      "instruction": "mulss xmm1, xmm3"
+    },
+    {
+      "offset": 223,
+      "instruction": "addss xmm5, xmm0"
+    },
+    {
+      "offset": 227,
+      "instruction": "movss xmm0, dword ptr [rsp + 0x34]"
+    },
+    {
+      "offset": 233,
+      "instruction": "mulss xmm0, xmm4"
+    },
+    {
+      "offset": 237,
+      "instruction": "minss xmm9, xmm6"
+    },
+    {
+      "offset": 242,
+      "instruction": "maxss xmm13, xmm6"
+    },
+    {
+      "offset": 247,
+      "instruction": "addss xmm5, xmm1"
+    },
+    {
+      "offset": 251,
+      "instruction": "movss xmm1, dword ptr [rsp + 0x70]"
+    },
+    {
+      "offset": 257,
+      "instruction": "mulss xmm1, xmm3"
+    },
+    {
+      "offset": 261,
+      "instruction": "addss xmm2, xmm0"
+    },
+    {
+      "offset": 265,
+      "instruction": "minss xmm10, xmm5"
+    },
+    {
+      "offset": 270,
+      "instruction": "addss xmm2, xmm1"
+    },
+    {
+      "offset": 274,
+      "instruction": "maxss xmm14, xmm5"
+    },
+    {
+      "offset": 279,
+      "instruction": "movss xmm5, dword ptr [rsp + 0x3c]"
+    },
+    {
+      "offset": 285,
+      "instruction": "minss xmm12, xmm2"
+    },
+    {
+      "offset": 290,
+      "instruction": "maxss xmm15, xmm2"
+    },
+    {
+      "offset": 295,
+      "instruction": "add ecx, -1"
+    },
+    {
+      "offset": 298,
+      "instruction": "jne 0x63"
+    },
+    {
+      "offset": 304,
+      "instruction": "cmp edx, edx"
+    },
+    {
+      "offset": 306,
+      "instruction": "je 0x138"
+    },
+    {
+      "offset": 312,
+      "instruction": "nop "
+    },
+    {
+      "offset": 313,
+      "instruction": "nop "
+    },
+    {
+      "offset": 314,
+      "instruction": "nop "
+    },
+    {
+      "offset": 315,
+      "instruction": "nop "
+    },
+    {
+      "offset": 316,
+      "instruction": "nop "
+    },
+    {
+      "offset": 317,
+      "instruction": "nop "
+    },
+    {
+      "offset": 318,
+      "instruction": "cmp edx, edx"
+    },
+    {
+      "offset": 320,
+      "instruction": "je 0x146"
+    },
+    {
+      "offset": 326,
+      "instruction": "nop "
+    },
+    {
+      "offset": 327,
+      "instruction": "nop "
+    },
+    {
+      "offset": 328,
+      "instruction": "nop "
+    },
+    {
+      "offset": 329,
+      "instruction": "nop "
+    },
+    {
+      "offset": 330,
+      "instruction": "nop "
+    },
+    {
+      "offset": 331,
+      "instruction": "nop "
+    },
+    {
+      "offset": 332,
+      "instruction": "nop "
+    },
+    {
+      "offset": 333,
+      "instruction": "nop "
+    },
+    {
+      "offset": 334,
+      "instruction": "nop "
+    },
+    {
+      "offset": 335,
+      "instruction": "nop "
+    }
+  ]
+}

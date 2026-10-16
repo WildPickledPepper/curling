@@ -1,0 +1,482 @@
+{
+  "active_version": "inverse_all_306_atlas_v6_20261004",
+  "tested": 306,
+  "baseline_solved": 267,
+  "solved": 292,
+  "original_39_now_solved": 26,
+  "original_39_still_missed": 13,
+  "regressions": [
+    "sampled-aa19303f6aa14a57"
+  ],
+  "missed": 14,
+  "budget_seconds": 10,
+  "physical_call_cap": 256,
+  "successful_ms": {
+    "min": 50.81699999999856,
+    "median": 2805.6377500000167,
+    "max": 9738.4669
+  },
+  "newly_solved_ms": {
+    "min": 343.69970000000194,
+    "median": 2013.19685,
+    "max": 9738.4669
+  },
+  "summary": {
+    "all": {
+      "tested": 306,
+      "solved": 292,
+      "initial_solved": 252,
+      "iterated_solved": 40,
+      "five_extra_seeds_all_pass": 237,
+      "successful_ms": {
+        "min": 50.81699999999856,
+        "median": 2805.6377500000167,
+        "max": 9738.4669
+      },
+      "missed": 14,
+      "physics_calls": 4284,
+      "reference_source_seed_pass": 305,
+      "reference_navigation_seed_pass": 266
+    },
+    "by_tactic": {
+      "double_hit": {
+        "tested": 14,
+        "solved": 14,
+        "initial_solved": 8,
+        "iterated_solved": 6,
+        "five_extra_seeds_all_pass": 10,
+        "successful_ms": {
+          "min": 50.81699999999856,
+          "median": 1005.846149999999,
+          "max": 7553.729
+        },
+        "missed": 0,
+        "physics_calls": 400,
+        "reference_source_seed_pass": 13,
+        "reference_navigation_seed_pass": 10
+      },
+      "achieved_goal": {
+        "tested": 69,
+        "solved": 59,
+        "initial_solved": 39,
+        "iterated_solved": 20,
+        "five_extra_seeds_all_pass": 35,
+        "successful_ms": {
+          "min": 54.36790000000258,
+          "median": 516.2507000000005,
+          "max": 9738.4669
+        },
+        "missed": 10,
+        "physics_calls": 2491,
+        "reference_source_seed_pass": 69,
+        "reference_navigation_seed_pass": 52
+      },
+      "around_guard_draw_left": {
+        "tested": 1,
+        "solved": 1,
+        "initial_solved": 1,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 1,
+        "successful_ms": {
+          "min": 2700.8834000000093,
+          "median": 2700.8834000000093,
+          "max": 2700.8834000000093
+        },
+        "missed": 0,
+        "physics_calls": 1,
+        "reference_source_seed_pass": 1,
+        "reference_navigation_seed_pass": 1
+      },
+      "center_guard_high": {
+        "tested": 10,
+        "solved": 10,
+        "initial_solved": 10,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 10,
+        "successful_ms": {
+          "min": 2835.595899999987,
+          "median": 2898.9518000000203,
+          "max": 2998.292499999991
+        },
+        "missed": 0,
+        "physics_calls": 10,
+        "reference_source_seed_pass": 10,
+        "reference_navigation_seed_pass": 10
+      },
+      "center_guard_low": {
+        "tested": 5,
+        "solved": 5,
+        "initial_solved": 5,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 5,
+        "successful_ms": {
+          "min": 2717.285400000037,
+          "median": 2793.1052000000136,
+          "max": 2927.7931999999964
+        },
+        "missed": 0,
+        "physics_calls": 5,
+        "reference_source_seed_pass": 5,
+        "reference_navigation_seed_pass": 5
+      },
+      "corner_guard_left": {
+        "tested": 3,
+        "solved": 3,
+        "initial_solved": 3,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 3,
+        "successful_ms": {
+          "min": 2813.12029999998,
+          "median": 2816.8122000000153,
+          "max": 2860.346600000014
+        },
+        "missed": 0,
+        "physics_calls": 3,
+        "reference_source_seed_pass": 3,
+        "reference_navigation_seed_pass": 3
+      },
+      "corner_guard_right": {
+        "tested": 4,
+        "solved": 4,
+        "initial_solved": 4,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 4,
+        "successful_ms": {
+          "min": 2803.4165999999914,
+          "median": 2844.3898000000163,
+          "max": 2867.838000000006
+        },
+        "missed": 0,
+        "physics_calls": 4,
+        "reference_source_seed_pass": 4,
+        "reference_navigation_seed_pass": 4
+      },
+      "default_draw": {
+        "tested": 118,
+        "solved": 118,
+        "initial_solved": 117,
+        "iterated_solved": 1,
+        "five_extra_seeds_all_pass": 116,
+        "successful_ms": {
+          "min": 2618.0795000000217,
+          "median": 2856.849000000011,
+          "max": 4207.44719999999
+        },
+        "missed": 0,
+        "physics_calls": 136,
+        "reference_source_seed_pass": 118,
+        "reference_navigation_seed_pass": 117
+      },
+      "draw_button": {
+        "tested": 10,
+        "solved": 10,
+        "initial_solved": 10,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 10,
+        "successful_ms": {
+          "min": 2706.1604000000443,
+          "median": 2837.0318999999427,
+          "max": 3065.613899999903
+        },
+        "missed": 0,
+        "physics_calls": 10,
+        "reference_source_seed_pass": 10,
+        "reference_navigation_seed_pass": 10
+      },
+      "draw_top4": {
+        "tested": 12,
+        "solved": 12,
+        "initial_solved": 12,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 12,
+        "successful_ms": {
+          "min": 2761.38119999996,
+          "median": 2837.931900000001,
+          "max": 2928.833499999996
+        },
+        "missed": 0,
+        "physics_calls": 12,
+        "reference_source_seed_pass": 12,
+        "reference_navigation_seed_pass": 12
+      },
+      "freeze": {
+        "tested": 2,
+        "solved": 2,
+        "initial_solved": 2,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 2,
+        "successful_ms": {
+          "min": 2805.000800000016,
+          "median": 2904.4062500000223,
+          "max": 3003.8117000000284
+        },
+        "missed": 0,
+        "physics_calls": 3,
+        "reference_source_seed_pass": 2,
+        "reference_navigation_seed_pass": 2
+      },
+      "hit_and_stay": {
+        "tested": 4,
+        "solved": 4,
+        "initial_solved": 3,
+        "iterated_solved": 1,
+        "five_extra_seeds_all_pass": 4,
+        "successful_ms": {
+          "min": 340.4047999999875,
+          "median": 1206.884049999985,
+          "max": 3304.199799999992
+        },
+        "missed": 0,
+        "physics_calls": 24,
+        "reference_source_seed_pass": 4,
+        "reference_navigation_seed_pass": 3
+      },
+      "hit_roll_left": {
+        "tested": 5,
+        "solved": 5,
+        "initial_solved": 3,
+        "iterated_solved": 2,
+        "five_extra_seeds_all_pass": 3,
+        "successful_ms": {
+          "min": 360.67000000002736,
+          "median": 652.0239999999831,
+          "max": 1002.258500000039
+        },
+        "missed": 0,
+        "physics_calls": 43,
+        "reference_source_seed_pass": 5,
+        "reference_navigation_seed_pass": 3
+      },
+      "hit_roll_right": {
+        "tested": 4,
+        "solved": 4,
+        "initial_solved": 1,
+        "iterated_solved": 3,
+        "five_extra_seeds_all_pass": 1,
+        "successful_ms": {
+          "min": 416.2433000000192,
+          "median": 2107.8847499999824,
+          "max": 3503.8395000000264
+        },
+        "missed": 0,
+        "physics_calls": 124,
+        "reference_source_seed_pass": 4,
+        "reference_navigation_seed_pass": 4
+      },
+      "peel_guard": {
+        "tested": 14,
+        "solved": 13,
+        "initial_solved": 13,
+        "iterated_solved": 0,
+        "five_extra_seeds_all_pass": 6,
+        "successful_ms": {
+          "min": 304.8840999999811,
+          "median": 391.3121000000501,
+          "max": 700.1341999999795
+        },
+        "missed": 1,
+        "physics_calls": 235,
+        "reference_source_seed_pass": 14,
+        "reference_navigation_seed_pass": 12
+      },
+      "raise_takeout": {
+        "tested": 17,
+        "solved": 15,
+        "initial_solved": 9,
+        "iterated_solved": 6,
+        "five_extra_seeds_all_pass": 6,
+        "successful_ms": {
+          "min": 79.76259999998092,
+          "median": 444.5081000000073,
+          "max": 5755.257400000005
+        },
+        "missed": 2,
+        "physics_calls": 532,
+        "reference_source_seed_pass": 17,
+        "reference_navigation_seed_pass": 10
+      },
+      "take_out_house": {
+        "tested": 14,
+        "solved": 13,
+        "initial_solved": 12,
+        "iterated_solved": 1,
+        "five_extra_seeds_all_pass": 9,
+        "successful_ms": {
+          "min": 153.5977000000912,
+          "median": 408.24509999993097,
+          "max": 2771.6600999999628
+        },
+        "missed": 1,
+        "physics_calls": 251,
+        "reference_source_seed_pass": 14,
+        "reference_navigation_seed_pass": 8
+      }
+    }
+  },
+  "audit_counts": {
+    "checked_records": 6356,
+    "checked_other_board_atlas_seeds": 836
+  },
+  "scope": "Same original forward-sampled physical boards, exact terminal goals and navigation seeds; full single-version rerun. Other-board proposal library excludes the current scene across all six batches. Leave-one-physical-board-out, not held-out layout families. Historical baseline contains verified earlier versions. Single-seed solving and five disjoint robustness seeds reported separately; robustness did not improve. No physics or acceptance changes. No reference actions initialise the query.",
+  "historical_test_date": "2026-10-04",
+  "packaged_on": "2026-10-16",
+  "packaging_scope": "Application entrypoints and self-contained dependencies; no new 306-case success-rate claim. Full raw/search evidence remains local.",
+  "original_manifest_sha256": "47661437c3de8eba55b520b55e2fe142692c56cfea8253e1b5f50ce2ae3d37f1",
+  "remaining": [
+    {
+      "scene_id": "sampled-0230d25d4f2dea48",
+      "tactic": "achieved_goal",
+      "best_loss": 3.704360233033822,
+      "best_effort_shot": [
+        5.36716,
+        0.44449,
+        2.80679
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-04340bda753ff7c0",
+      "tactic": "achieved_goal",
+      "best_loss": 9.071726647735725,
+      "best_effort_shot": [
+        4.71436,
+        -1.04091,
+        3.58903
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-72547a477e42d1e1",
+      "tactic": "achieved_goal",
+      "best_loss": 0.48517711676110026,
+      "best_effort_shot": [
+        4.4902,
+        0.40773,
+        -1.04653
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-a3d454add9dffa62",
+      "tactic": "achieved_goal",
+      "best_loss": 12.107944946289063,
+      "best_effort_shot": [
+        2.88788,
+        -0.75637,
+        7.18383
+      ],
+      "navigation_reference_passed": true
+    },
+    {
+      "scene_id": "sampled-aa19303f6aa14a57",
+      "tactic": "achieved_goal",
+      "best_loss": 10.842285614013674,
+      "best_effort_shot": [
+        4.71924,
+        -0.16676,
+        12.37194
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-ab1163291ba71e00",
+      "tactic": "achieved_goal",
+      "best_loss": 0.01816718315658663,
+      "best_effort_shot": [
+        4.20062,
+        1.11118,
+        0.36805
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-b752a23cdc53b87c",
+      "tactic": "achieved_goal",
+      "best_loss": 0.2138043875394867,
+      "best_effort_shot": [
+        5.37191,
+        0.72381,
+        -0.5283
+      ],
+      "navigation_reference_passed": true
+    },
+    {
+      "scene_id": "sampled-bad38ec6e7ea019f",
+      "tactic": "achieved_goal",
+      "best_loss": 22.54405501414498,
+      "best_effort_shot": [
+        4.2641,
+        0.83621,
+        -1.28542
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-d13a24f78b27c69f",
+      "tactic": "achieved_goal",
+      "best_loss": 0.29629045130443316,
+      "best_effort_shot": [
+        3.95137,
+        0.01128,
+        0.52774
+      ],
+      "navigation_reference_passed": true
+    },
+    {
+      "scene_id": "sampled-dfec9106576ab995",
+      "tactic": "achieved_goal",
+      "best_loss": 0.022870599359693346,
+      "best_effort_shot": [
+        5.43428,
+        0.44386,
+        0.9209
+      ],
+      "navigation_reference_passed": true
+    },
+    {
+      "scene_id": "sampled-f96b5178d1e4e29f",
+      "tactic": "peel_guard",
+      "best_loss": 7.224802068954209,
+      "best_effort_shot": [
+        5.22787,
+        0.13667,
+        0.45327
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-01e3908423c6255d",
+      "tactic": "raise_takeout",
+      "best_loss": 0.015536541301015483,
+      "best_effort_shot": [
+        5.18462,
+        -0.41707,
+        5.17095
+      ],
+      "navigation_reference_passed": true
+    },
+    {
+      "scene_id": "sampled-df35e6ec93a22d72",
+      "tactic": "raise_takeout",
+      "best_loss": 1.3191329705186825,
+      "best_effort_shot": [
+        5.9952,
+        1.25318,
+        0.64977
+      ],
+      "navigation_reference_passed": false
+    },
+    {
+      "scene_id": "sampled-507a5f67ed4585f8",
+      "tactic": "take_out_house",
+      "best_loss": 0.3804801290092025,
+      "best_effort_shot": [
+        4.84797,
+        -0.13566,
+        -0.6971
+      ],
+      "navigation_reference_passed": false
+    }
+  ],
+  "report_sha256": "26b42fe90eb20c7c285b1bffdd259864b8475ae167413125d074a457388e4171"
+}

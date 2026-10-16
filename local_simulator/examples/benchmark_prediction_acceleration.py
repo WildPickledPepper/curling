@@ -15,7 +15,9 @@ def main():
     install_bundled_pyphysx()
     before=StrictCurlingEnd(seed=20261003,training_fast=False)
     before.scene._native_angular_projection=None
-    after=StrictCurlingEnd(seed=20261003,training_fast=True)
+    # Preserve the original phase-one scope independently of later RNG work.
+    after=StrictCurlingEnd(seed=20261003,training_fast=True,prediction_native_random=False,
+                           prediction_native_steps=False,prediction_merged_steps=False)
     if after.scene._native_angular_projection is None:
         raise RuntimeError('native projection must be installed to measure both optimizations')
     cases=[('free',[3.,0.,0.],[]),('hit',[3.4,0.,0.],[(2,2.375,5.2)]),

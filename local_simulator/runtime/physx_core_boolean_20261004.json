@@ -1,0 +1,10 @@
+{
+  "kernel_sha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "function_rva": "0x42c280",
+  "patch_start_rva": "0x42c8d6",
+  "patch_end_rva": "0x42c9d2",
+  "original_hex": "7a0675048bcbeb0233c90f2ef37a1e751c85c9741141bfffffffff458bd7458be7458befeb384533d28bd3eb054533d233d24533ff85d2740f85c9740b41bcffffffff458beceb164533e485d2740c85c9740841bdffffffffeb034533ed0f2eea7a0675048bcbeb0233c90f2ef17a1e751c85c9741141b9ffffffff458bc1458bd9418bd9eb364533c08bd3eb054533c033d24533c985d2740f85c9740b41bbffffffff418bdbeb144533db85d2740b85c97407bbffffffffeb0233db4585d275054585c0740641b8ffffffff4585ff75094585c9750433d2eb05baffffffff4585e475094585db750433c9eb05b9ffffffff4585ed750485db7418",
+  "assembly": ".text\n.globl physx_boolean\nphysx_boolean:\n    setnp %cl\n    sete %dl\n    and %dl, %cl\n    movzbl %cl, %r10d\n    ucomiss %xmm3, %xmm6\n    setnp %cl\n    sete %dl\n    and %dl, %cl\n    movzbl %cl, %ecx\n    and %ecx, %r10d\n    neg %r10d\n    mov %r10d, %r15d\n    mov %r10d, %r12d\n    mov %r10d, %r13d\n    ucomiss %xmm2, %xmm5\n    setnp %cl\n    sete %dl\n    and %dl, %cl\n    movzbl %cl, %r9d\n    ucomiss %xmm1, %xmm6\n    setnp %cl\n    sete %dl\n    and %dl, %cl\n    movzbl %cl, %ecx\n    and %ecx, %r9d\n    neg %r9d\n    mov %r9d, %r11d\n    mov %r10d, %r8d\n    or %r9d, %r8d\n    mov %r8d, %edx\n    mov %r8d, %ecx\n",
+  "replacement_hex": "0f9bc10f94c220d1440fb6d10f2ef30f9bc10f94c220d10fb6c94121ca41f7da4589d74589d44589d50f2eea0f9bc10f94c220d1440fb6c90f2ef10f9bc10f94c220d10fb6c94121c941f7d94589cb4589d04509c84489c24489c19090909090e99700000090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090",
+  "scope": "Same original comparison instructions/order and register results; remove redundant boolean propagation. Inline replacement stays in original function body and retains original unwind metadata. No disk extension mutation."
+}

@@ -205,7 +205,11 @@ class StrictCurlingEnd:
 
     def __init__(self, *, seed: int, training_fast: bool = True,
                  prediction_frame_elapsed: float = 0.33,
-                 prediction_time_scale: float = 96.) -> None:
+                 prediction_time_scale: float = 96.,
+                 prediction_native_random: bool = True,
+                 prediction_native_steps: bool = True,
+                 prediction_merged_steps: bool = True,
+                 prediction_native_scene_steps: bool = False) -> None:
         from local_simulator.unity_physx import NativePyphysxMotionStepper, PersistentPhysxFrontHalfScene
 
         self.seed = int(seed)
@@ -214,8 +218,13 @@ class StrictCurlingEnd:
         self.shot_number = 0
         self.prediction_frame_elapsed = float(prediction_frame_elapsed)
         self.prediction_time_scale = float(prediction_time_scale)
-        # Both modes retain the scheduled driver. Fast mode omits only audit
-        # snapshots; legacy native bulk loops cannot replace Update boundaries.
+        self.prediction_native_random = bool(prediction_native_random)
+        self.prediction_native_steps = bool(prediction_native_steps)
+        self.prediction_merged_steps = bool(prediction_merged_steps)
+        self.prediction_native_scene_steps = bool(prediction_native_scene_steps)
+        # Both modes retain the scheduled driver. Fast mode omits audit
+        # snapshots and can use the exact native lazy RNG/noise mapping;
+        # legacy bulk loops cannot replace Update boundaries.
         self.training_fast = bool(training_fast)
 
     def reset(self) -> list[dict[str, Any]]:
@@ -312,6 +321,10 @@ class StrictCurlingEnd:
             self.scene, active_index, seed=0 if friction_seed is None else friction_seed,
             noises=noises, motion_stepper=self.motion_stepper,
             use_lean_steps=self.training_fast,
+            native_random=self.prediction_native_random,
+            native_steps=self.prediction_native_steps,
+            merge_steps=self.prediction_merged_steps,
+            native_scene_steps=self.prediction_native_scene_steps,
             clock=UnityPredictionClock(fixed_dt=self.scene.dt,
                                       time_scale=self.prediction_time_scale),
         )

@@ -1,0 +1,37 @@
+{
+  "description": "Hand-authored task boards. Bounds are sampling proposals; only observed terminal states determine successes. Double geometry uses target coordinates from historical_verify/000003.raw.jsonl; other stones are deliberately omitted and results must be simulated afresh.",
+  "scenes": [
+    {
+      "scene_id": "manual_draw_button", "active_index": 6, "stones": [],
+      "shot_bounds": {"v": [2.6, 3.4], "h": [-0.25, 0.25], "w": [-0.5, 0.5]},
+      "selection": {"tactic": "draw_button", "require_no_contact": true,
+        "goal": {"stones": {"6": {"type": "IN_REGION", "x": 2.375, "y": 4.88, "radius": 0.5}}}}
+    },
+    {
+      "scene_id": "manual_single_takeout", "active_index": 7,
+      "stones": [{"index": 6, "x": 2.2222, "y": 4.7753, "yaw": 0.0}],
+      "shot_bounds": {"v": [4.5, 6.0], "h": [-0.28, -0.02], "w": [-0.5, 0.5]},
+      "selection": {"tactic": "take_out_house", "first_contact_any": [6], "require_single_first_contact": true,
+        "goal": {"stones": {"6": {"type": "OUT_OF_PLAY"}}}}
+    },
+    {
+      "scene_id": "manual_double_offset", "active_index": 13,
+      "stones": [
+        {"index": 6, "x": 2.222198486328125, "y": 4.775296702148438, "yaw": 0.0},
+        {"index": 10, "x": 2.3162994384765625, "y": 6.740697397949219, "yaw": 0.0}
+      ],
+      "shot_bounds": {"v": [5.2, 6.0], "h": [-0.14, 0.02], "w": [-0.4, 0.4]},
+      "selection": {"tactic": "double_hit", "first_contact_any": [6, 10], "require_single_first_contact": true,
+        "required_collision_pairs": [[6, 10]],
+        "goal": {"stones": {"6": {"type": "OUT_OF_PLAY"}, "10": {"type": "OUT_OF_PLAY"}}}}
+    },
+    {
+      "scene_id": "manual_hit_and_stay", "active_index": 9,
+      "stones": [{"index": 8, "x": 2.375, "y": 4.88, "yaw": 0.0}],
+      "shot_bounds": {"v": [3.2, 6.0], "h": [-0.2, 0.2], "w": [-0.5, 0.5]},
+      "selection": {"tactic": "hit_and_stay", "first_contact_any": [8], "require_single_first_contact": true,
+        "goal": {"stones": {"8": {"type": "OUT_OF_HOUSE"},
+          "9": {"type": "IN_REGION", "x": 2.375, "y": 4.88, "radius": 0.5}}}}
+    }
+  ]
+}

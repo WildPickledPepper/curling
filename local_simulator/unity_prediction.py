@@ -10,6 +10,7 @@ from dataclasses import dataclass
 import math
 import struct
 from typing import Any, Iterable
+from .native_random import NativeUnityRandom
 
 
 def f32(value: float) -> float:
@@ -76,7 +77,9 @@ class UnityPredictionDriver:
     """
     def __init__(self, scene: Any, active_index: int, *, seed: int = 0,
                  noises: Iterable[float] | None = None, motion_stepper: Any = None,
-                 clock: UnityPredictionClock | None = None, use_lean_steps: bool = False) -> None:
+                 clock: UnityPredictionClock | None = None, use_lean_steps: bool = False,
+                 native_random: bool = True, native_steps: bool = True,
+                 merge_steps: bool = True, native_scene_steps: bool = False) -> None:
         from tools.reverse.recovered_unity_random import RecoveredUnityRandom
         from tools.reverse.front_half_pcm_replay import iter_unity_friction_noises
         self.scene = scene
@@ -91,8 +94,30 @@ class UnityPredictionDriver:
             raise ValueError('clock and PhysX fixed timesteps must agree')
         self.rng = RecoveredUnityRandom.from_seed(seed) if noises is None else None
         self.noises = iter(noises) if noises is not None else iter_unity_friction_noises(self.rng)
+        if noises is None and use_lean_steps and native_random:
+            from .native_random import NativeUnityRandom, load_random_kernel
+            if load_random_kernel() is not None:
+                self.rng = NativeUnityRandom.from_seed(seed)
+                self.noises = self.rng.friction_noises()
         self.motion_stepper = motion_stepper
         self.use_lean_steps = bool(use_lean_steps)
+        self.merge_steps = bool(use_lean_steps and merge_steps)
+        scene._merge_step_work = self.merge_steps
+        scene._merge_native_scene_work = bool(self.merge_steps and native_scene_steps)
+        scene._native_step_bridge = None
+        if use_lean_steps and native_steps:
+            from .native_step_bridge import create_step_bridge
+            scene._native_step_bridge = create_step_bridge(scene, motion_stepper)
+        self._fused_native_dispatch = False
+        if self.merge_steps and scene._native_step_bridge is not None:
+            from .unity_physx import PersistentPhysxFrontHalfScene
+            # Preserve per-step instrumentation or explicit overrides. The
+            # combined dispatch only replaces the unchanged standard methods.
+            self._fused_native_dispatch = (
+                getattr(scene.step_custom_sliding, '__func__', None)
+                is PersistentPhysxFrontHalfScene.step_custom_sliding
+                and getattr(scene.step_custom_sliding_lean, '__func__', None)
+                is PersistentPhysxFrontHalfScene.step_custom_sliding_lean)
         self.ongoing = True
         self.collided = False
         self.draw_count = 0
@@ -104,21 +129,34 @@ class UnityPredictionDriver:
     def fixed_update(self) -> dict[str, Any]:
         slot = self.scene.slots[self.active_index]
         if self.ongoing and not self.collided and slot.enabled:
-            try:
-                noise = next(self.noises)
-            except StopIteration as error:
-                raise RuntimeError('friction input exhausted before controller stopped') from error
+            random_state = None
+            if self.scene._native_step_bridge is not None and isinstance(self.rng, NativeUnityRandom):
+                noise, random_state = 0., self.rng._state
+            else:
+                try:
+                    noise = next(self.noises)
+                except StopIteration as error:
+                    raise RuntimeError('friction input exhausted before controller stopped') from error
             self.draw_count += 1
             step = self.scene.step_custom_sliding_lean if self.use_lean_steps else self.scene.step_custom_sliding
-            result = step(
-                self.active_index, noise, motion_stepper=self.motion_stepper)
+            if (self._fused_native_dispatch and self.scene._native_step_bridge is not None
+                    and self.motion_stepper is self.scene._native_step_bridge.motion_stepper):
+                result = self.scene._prediction_native_step(self.active_index, noise, random_state)
+            elif random_state is None:
+                result = step(self.active_index, noise, motion_stepper=self.motion_stepper)
+            else:
+                result = step(self.active_index, noise, motion_stepper=self.motion_stepper,
+                              random_state=random_state)
             reports = result['stoneReports']
         else:
             # Suppress the recorded-replay API's implicit Update handoff here.
             self.scene._simulate_custom_sliding_step()
-            reports = self.scene._stone_reports(self.scene.scene.get_contact_reports())
+            reports = (self.scene._last_step_stone_reports if self.merge_steps
+                       else self.scene._stone_reports(self.scene.scene.get_contact_reports()))
             result = {'stoneReports': reports, 'wallReports': self.scene._last_wall_reports}
         self.fixed_count += 1
+        if self.merge_steps and not reports:
+            return result
         targets = set()
         for report in reports:
             pair = {int(report['stoneIndex0']), int(report['stoneIndex1'])}
@@ -160,11 +198,25 @@ class UnityPredictionDriver:
                 except StopIteration as error:
                     raise RuntimeError('frame schedule exhausted before controller stopped') from error
             self.clock.begin_frame(elapsed)
-            while self.clock.fixed_time + self.clock.fixed_dt <= self.clock.frame_time:
-                if self.fixed_count >= max_steps:
-                    return self.result()
-                self.clock.take_fixed_step()
-                self.fixed_update()
+            if (self.merge_steps and type(self.clock) is UnityPredictionClock
+                    and getattr(self.clock.take_fixed_step, '__func__', None)
+                    is UnityPredictionClock.take_fixed_step):
+                # Preserve f77913 repeated f64 addition. No multiplied step
+                # count and no Update within a fixed-step batch.
+                clock = self.clock
+                next_time = clock.fixed_time+clock.fixed_dt
+                while next_time <= clock.frame_time:
+                    if self.fixed_count >= max_steps:
+                        return self.result()
+                    clock.fixed_time = next_time
+                    self.fixed_update()
+                    next_time = clock.fixed_time+clock.fixed_dt
+            else:
+                while self.clock.fixed_time + self.clock.fixed_dt <= self.clock.frame_time:
+                    if self.fixed_count >= max_steps:
+                        return self.result()
+                    self.clock.take_fixed_step()
+                    self.fixed_update()
             if self.update():
                 break
         return self.result()

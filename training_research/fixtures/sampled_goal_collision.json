@@ -1,0 +1,91 @@
+{
+  "scene_id": "sampled-5f6c6b60084eec86",
+  "family": "hit_and_stay",
+  "active_index": 14,
+  "stones": [
+    {
+      "index": 3,
+      "x": 3.277713353365138,
+      "y": 5.445803420499705,
+      "yaw": -2.498636041915731,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 4,
+      "x": 0.8364035303725486,
+      "y": 2.360241880706034,
+      "yaw": 0.3713200938802599,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 11,
+      "x": 4.061572775349055,
+      "y": 5.313604707403484,
+      "yaw": 0.3937785835181806,
+      "yaw_source": "supplied"
+    },
+    {
+      "index": 13,
+      "x": 2.5695674987321815,
+      "y": 3.049739951828898,
+      "yaw": -1.163181287574107,
+      "yaw_source": "supplied"
+    }
+  ],
+  "layout": {
+    "generator": "task_boards_v1",
+    "family": "hit_and_stay",
+    "layout_index": 8,
+    "seed": 195664828063275,
+    "background_stones": 3,
+    "variant_index": 1,
+    "translation": [
+      -0.03513781153836755,
+      0.07730053888373452
+    ],
+    "request_seed": 20261004
+  },
+  "group_id": "5f6c6b60084eec868839b0809c465b86a9c6490ed29239139df5f7e3204969f9",
+  "scene_key": "5f6c6b60084eec868839b0809c465b86a9c6490ed29239139df5f7e3204969f9",
+  "selection": {
+    "tactic": "hit_and_stay",
+    "goal": {
+      "stones": {
+        "3": {
+          "type": "OUT_OF_PLAY",
+          "required": true
+        },
+        "4": {
+          "type": "OUT_OF_PLAY",
+          "required": true
+        },
+        "11": {
+          "type": "IN_REGION",
+          "x": 4.061573028564453,
+          "y": 5.313603892089844,
+          "radius": 0.15,
+          "required": true
+        },
+        "13": {
+          "type": "IN_REGION",
+          "x": 2.569568634033203,
+          "y": 3.049741282226563,
+          "radius": 0.15,
+          "required": true
+        },
+        "14": {
+          "type": "IN_REGION",
+          "x": 3.2750625610351562,
+          "y": 5.735990061523438,
+          "radius": 0.15,
+          "required": true
+        }
+      }
+    },
+    "first_contact_any": [
+      3
+    ],
+    "require_single_first_contact": true
+  },
+  "task_key": "70b79a434bfad02217882163a11828d2df689c17261f3b5c621f7d9e06163ae4"
+}

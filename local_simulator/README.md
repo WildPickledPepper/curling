@@ -1,227 +1,59 @@
-# 本地模拟器：团队使用指南
+# 本地完整物理模拟器
 
-## 快速开始
+应用入口与安装步骤见 [队友上手指南](../docs/TEAM_GUIDE.md)。目前使用场景是：给定静止起始壶面和 `BESTSHOT(v,h,w)`，推演完整终态，包含活动壶和其他壶的落点、失活、碰撞、随机消费与调度摘要；当前应用不扫冰。
 
-2026-10-03 预测加速：默认 `training_fast=True` 在原固定步/Update 调度上省去中间审计快照，并使用随包 `runtime/unity_angular_projection.dll` 执行同顺序 float32 投影。五个场景加速前后逐步比较的16135300字节完全一致；49项测试全部通过。实测同轮交替执行原路径与新路径，约加速1.6–2.1倍；[计时结果](../analysis_input/prediction_acceleration_timing_20261003.json)、[逐步一致性报告](../analysis_input/prediction_optimization_comparison_20261003.json)。每个物理步、随机抽取、投影归一化、姿态写回和碰撞回调均保留。原生批量循环仍不替代这条路径。
+## 安装与自检
 
-随包新增 `native_angular_projection.py`、`runtime/unity_angular_projection.dll`、C源和构建脚本；没有该DLL时会使用原Python投影，结果精度不变。`training_fast=False` 保留完整中间快照；`PersistentPhysxFrontHalfScene(native_angular_projection=False)` 可单独关闭原生投影用于对照。复测命令：`python local_simulator/examples/benchmark_prediction_acceleration.py --repeats 10`，已实际验收Windows CP39。
-
-2026-10-03 最新：[自主预测的摩擦消费与时钟驱动修复](../analysis_input/prediction_driver_repair_20261003.md)。`StrictCurlingEnd.play`（含反推求解入口）自行惰性生成摩擦，只在实际控制器门通过的固定步抽取；碰撞/停用后不再抽取，自然停止在 Update 边界处理。时钟计算与原始 Unity WAT 的2580帧逐位一致；12004全部4000步、首碰和墙碰采样回归通过，48项测试通过。独立预测默认固定饱和帧时钟（timeScale=96、帧间隔=.33）；可通过构造参数 `prediction_frame_elapsed`、`prediction_time_scale` 设置。逐位复现实机运行需要随机输入及帧时钟/释放时累计余量均一致。结果提供 `frictionDraws`、`fixedSteps`、`updates`、`rngState`、`clock` 供审计。
-
-2026-10-03 本地局部采样验收：[批量报告](../analysis_input/local_partial_validation_20261003.md)。352份日志中，81份日志的已有数值窗口接入核对：45份局部轨迹的169220个P/Q/v/w状态、108186次滑行计算角速度输出、105112次实测四元数投影、8960个Reset核心状态全部逐位一致。报告分别记录函数同输入验算、实际场景回放及待接入的现成内部窗口；本轮未修改生产物理，尚未宣称全部本地数据通过。
-
-2026-10-03 最新：[12000 墙碰撞及停用已修复](../analysis_input/case12000_wall_repair_20261003.md)。默认 Unity 场景加入原始 `GameSceneNoLimit` 的四块静态墙，通过原生真实进入事件恢复摩擦、清零速度并停用壶；保留碰撞姿态供后续 Reset 使用。10次完整回放共37000步、3738696个比较字节全部一致，已有42项及新增2项测试通过。随包需包含 `native_wall_contact.py` 和 `assets/unity_wall_colliders.json`。Windows CP39 已实际验收，结论限于已采样轨迹和内部窗口；下文保留此前阶段结果。
-
-2026-10-02 新增验收：[12004 自然停止分支正式修复](../analysis_input/case12004_stop_material_repair_20261002.md)。按 `DCP.Update` 的真实 f32 停止条件，在自定义 setter 批次与普通物理尾段之间恢复摩擦，保留批次内已有调用。12004 出手及全部 4000 步、两只冰壶的状态字节一致；第 3169 步五轮求解计算字段及输入输出一致。六次完整回放共 21,000 步全部通过，其余五次状态不变；41 项测试通过。结论限于已比较的物理轨迹及内部窗口。
-
-随后[新增四组完整采样](../analysis_input/additional_cases_validation_20261002.md)：12007、12005 各 4000 步逐字节一致；12009 在第 313 步的 `solverSetupSolve` 出口首次出现四元数差异；12000 的第 1879 步物理解算一致，之后的外部清理尚未纳入纯物理回放。四组未插桩原始 Wasm 对照均通过。本轮只改验收脚本，不改生产物理。
-
-2026-10-03：[12009 余弦分叉正式修复](../analysis_input/case12009_cos_repair_20261003.md)。默认 Unity 场景在 Reset 前将两处积分余弦调用接入随包 `runtime/unity_integrate_cos.dll`，按原始 Unity WAT 的常数、顺序和舍入计算。Windows CP39 验收 9 次完整轨迹共 33000 步、3432936 字节全部一致；原有 41 项及新增完整轨迹测试通过。12000 的外部清理缺口仍未修复。随包时需包含 DLL、C 源及 `native_integrate_cos.py`，不能只复制 pyphysx。
-
-同日补采确认：[12000 第1879步之后是 Wall 碰撞回调](../analysis_input/case12000_wall_cleanup_cause_20261003.md)，按实际 `OnCollisionEnter` 路径清零速度并停用壶。当前回放尚未重现这条路径。
-
-2026-10-02 最新：[第 1383 步缓存修复](../analysis_input/sample11009_cache_repair_20261002.md)。默认停用旧 multi-cache 无条件清空逻辑，保留 Unity 实际更新的睡眠目标接触缓存。新样例 11009 从出手到 3000 个完成步，两只冰壶的 P/Q/v/w 全部逐位一致；第 1383 步接触更新与五轮静态求解的有效计算字段也一致。旧 11000 的 3362 步原生回归未变、2000 步 Unity 状态仍一致。39 项测试通过；结论限于这些样例及采样窗口。
-
-2026-10-02 初始化：[凸包输入修复](../analysis_input/stone_cooking_input_repair_20261002.md)。默认采用 Unity `f72908` 实际输入的固定碰撞网格，512 个顶点的 1,536 个字全部一致。本地自然烹饪、尚未导入凸包资产时，4,008 字节公共几何字段、13 个头部浮点字及 BigConvex 数组已一致，原先 4 个头部差异消除。双方 2,000 个 Unity 完成帧、52,000 个状态字保持一致；35 项测试通过。烹饪的全部中间计算及本地额外 GPU 边数据分支仍未审计，不能宣称全内部链闭合。旧 [从头审查](../analysis_input/startup_geometry_audit_20261002.md)保留修复前证据。
-
-2026-10-02 物理状态验证：[目标自然激活修复](../analysis_input/target_natural_wake_repair_20261002.md)。依据 Unity 实际岛激活调用，删除默认预测唤醒；第 1561 帧目标冰壶分歧已消除。Windows CP39 样本 11000 的双冰壶完成帧位姿/速度状态，从第 1 帧至第 2000 帧共 52,000 个 float32 字逐位一致，覆盖首次接触、碰撞回调、普通物理推进及双方最终休眠。34 项测试通过。后续仍需直接核对协议转换、格式化和游戏状态切换；其他样本不能由此推广。此前 [BVH34 修复](../analysis_input/release_bvh34_repair_20261002.md) 与 [Reset 42 步及自然休眠修复](../analysis_input/reset_complete_alignment_20261002.md)保留为历史证据。
-
-历史阶段记录：[登记与 Reset 逐位修复](../analysis_input/activation_and_reset_alignment_20261002.md)恢复了默认登记输入、壶号/登记映射、启用时更换刚体及 Reset 放置流程。该页的第 6 步分歧已由最新修复推进；此前 11005 的活动壶局部验证仍不能推广为全场景前缀一致。
-
-2026-10-02 后续：[首碰生命周期修复](../analysis_input/11005_lifecycle_fix_20261002.md)已默认启用 actor 的 no-sim 启停，并载入实测的固定场景初始编号池历史。12 枪实际首碰角色顺序一致；11005 的两个首碰接触几何逐位一致，原 1,023 次写入回归保持通过。碰后求解约束仍有差异，尚未完成整段轨迹对齐。复现 Unity 的连续局面历史时，应在出手结束后执行 `clear_out_of_play_stones()`，让出界 actor 正常停用；训练样例已执行此步骤。
-
-2026-10-02：原生 Y-up 路径已默认接入激活时的碰撞体缩放计算，以及每次物理步后的 Unity `f72606` 姿态写回。相同初始条件的 11005 回归中，原第 488 次 native setter 分叉已消除，P/Q 与角速度输出一致到第 1,023 次。需要姿态写回的路径暂不使用旧原生批量模拟循环；端到端碰后精度与更新后的性能仍需继续验收。详见[修复记录](../analysis_input/simulator_alignment_20261002_FIX.md)。
-
-随包严格 PhysX 支持 **64 位 CPython 3.8** 与 **64 位 CPython 3.13**（均为 Windows x64）。它会按当前解释器自动选择对应的 `.pyd`。以下命令都在仓库根目录执行。
-
-### 1. 安装并自检
+推荐 Windows x64 / CPython 3.9，在仓库根目录执行：
 
 ```powershell
-python -m pip install -r local_simulator\runtime\requirements-physx.txt  # 仅 CPython 3.8 需要
-python local_simulator\runtime\verify_native_runtime.py
+python -m pip install -r requirements-app.txt
+python local_simulator/runtime/verify_native_runtime.py
 ```
 
-看到下面这一行就说明环境可用：
+CPython ABI 必须匹配随包 `.pyd`。Windows 随包包含 3.8、3.9、3.13；当前加速与求解成绩实际使用的是 Windows CP39。CP38 的历史环境依赖另见 `runtime/requirements-physx.txt`，不要把 CP38 的 wheel 安装到 CP39。Linux 加载器保留兼容分支，但当前 Git 交付未包含对应 `.so`，不能承诺克隆后在 Linux 直接运行。
 
-```text
-OK: bundled pyphysx native kernel is ready
+## 在代码中使用
+
+```python
+from local_simulator.runtime_loader import install_bundled_pyphysx
+install_bundled_pyphysx()
+from local_simulator.examples.train_policy_tree_selfplay import StrictCurlingEnd
+
+env = StrictCurlingEnd(seed=20261004)   # 长期复用实例
+positions = [0.0] * 32                 # 16 个原始 slot，x/y 交替
+positions[4:6] = [2.375, 5.2]         # 已有壶 index=2
+before = env.scene.reset_positions(positions, yaw_overrides={i: 0.0 for i in range(16)})
+env.shot_number = 3                   # 本次新壶 index=3
+result = env.play((3.4, 0.0, 0.0))
+assert result["settled"]
+print(result["states"], result["contact"])
 ```
 
-离线机器使用随包 wheel：
+真实连续对局要保留旧壶 slot 和 yaw；本次新壶使用自己的投壶编号。每个实例串行使用。球场按钮中心坐标为 `(2.375, 4.88)` 米，战术库以按钮为原点的 `x_m/y_m` 不能直接混入这里。
+
+反推出手请直接使用 [BudgetedShotSolver](../training_research/SOLVER_GUIDE.md)，该入口负责完整场景重置、规则和碰撞验收，不必自己拼接搜索回调。
+
+## 默认运行路径
+
+`training_fast=True` 使用已验证的精简分派和可用的原生辅助模块，同时保留完整物理推进和停止/碰撞规则。Windows CP39 随包加载随机、步进和受保护的内核优化资产。未知 ABI/内核按加载器的保护条件保留支持的基线路径；缺少必要 PhysX 扩展会报错。
+
+完整请求实测随机器负载、CPU 核型和频率变化。历史较平稳的大核测量约 54–89 ms/手，属于当次五类正向场景；不能和包含多次模拟的反求耗时混为一谈，也不是跨机器承诺。`prediction_native_scene_steps` 仍默认关闭。
+
+相同完整起始状态、逐次随机输入和真实调度是条件逐位对齐的前提。已有采样验证不构成未知输入下的全覆盖证明。逆向过程及大采样不属于本次应用交付的新增内容。
+
+## 目录与验证
+
+- `runtime_loader.py`、`runtime/pyphysx/`：按 ABI 加载随包扩展。
+- `unity_physx.py`、`unity_prediction.py`：持久场景、调度与完整预测。
+- `runtime_support/`、`assets/`：运行必需的公式辅助和几何资产。
+- `native_*.py`、`runtime/*.dll`、`runtime/*.json`：加速所需的随包模块与保护清单。
+- `examples/`、`tests/`：应用演示及本地小夹具回归。
+
+在受支持的 Windows CP39 环境中运行：
 
 ```powershell
-python -m pip install --no-index --find-links local_simulator\runtime\wheels -r local_simulator\runtime\requirements-physx.txt
+python -m unittest discover -s local_simulator/tests -p "test_*.py"
 ```
 
-### 2. 跑一局策略树自对弈训练
-
-```powershell
-python local_simulator\examples\train_policy_tree_selfplay.py --games 3
-```
-
-这会在严格本地 PhysX 中连续执行一局 16 手；每手从守壶、进营、清壶、出界等基础策略中选择，终局后按得分更新策略树。输出文件为：
-
-```text
-model/strict_policy_tree.json              # 学到的策略树权重
-log/strict_policy_tree_training.json       # 每局 16 手的策略、出手参数和得分轨迹
-```
-
-这是一个简单的策略树训练样例，不是现成的比赛模型；它不启动 Unity，也不注入 Unity 的碰撞后信息。当前只支持非扫冰。
-
-### 3. 已知守壶位置，反推一颗绕壶旋球
-
-```powershell
-python local_simulator\examples\inverse_spin_shot.py `
-    --guard 2.375,6.7 `
-    --target 2.375,4.88 `
-    --candidate-count 96 `
-    --output log\inverse_spin_result.json
-```
-
-`--guard` 可重复传入多颗守壶。工具会搜索 `BESTSHOT(v0, h0, w0)`，优先剔除碰撞或推走守壶的候选，再按离目标点距离排序；终端会直接打印可发送的 `BESTSHOT` 命令。每次搜索固定一条摩擦随机序列以便公平比较，正式使用前应对前几名参数换多个 `--physics-seed` 比较落点分布。
-
-## 这是什么
-
-`local_simulator/` 是数字冰壶项目的严格本地物理模拟器，只保留 Unity 对齐的 PhysX 回放路径。
-
-角速度写入现默认采用 Unity `func[73035]` 的 float32 锁轴投影与 Transform 姿态同步规则；旧 tilt-only 近似仅供显式对照。该精确路径目前不能使用旧的原生逐帧快循环，改走 Python 逐帧调用 PhysX。单次无目标高旋出手的本机测量约 `0.366s`，旧快循环约 `0.072s`；这是速度代价，不代表整条轨迹已与 Unity 完全一致。密集 setter 回归见 `analysis_input/verify_unity_angular_setter_projection.py`，高旋 1283/1283、低旋 911/911 次 native 三轴角速度逐位相同。
-
-旋球公式、逐 tick 更新和可运行的检查样例见 [SPIN_AND_CURLING_FORMULA.md](SPIN_AND_CURLING_FORMULA.md)。
-
-| 需要做什么 | 应使用的模块 | 可以回答的问题 | 不应拿它回答的问题 |
-| --- | --- | --- | --- |
-| 严格回放、训练与验收 | `unity_front_half.py` + `unity_physx.py` | 给定初始姿态和摩擦随机性后，复现 Unity 的逐 tick 滑行、碰撞与终局 | 未采样的 Unity 随机数、扫冰效果 |
-
-Unity 仍是物理真值。本地模拟器的职责是为训练提供速度、为验证提供可复现的对照，不能用局部结果替代 Unity 的真实分布。
-
-## 当前交付范围
-
-- 已严格验证：**非扫冰**、单场景连续构型、逐 tick 摩擦序列、石头碰撞。
-- 最近一次 12 构型严格回放：出手壶 RMSE **7.74 mm**，被撞壶 RMSE **2.50 mm**；12/12 均具备可比较终局。
-- 未纳入交付：扫冰物理、未记录 RNG 的精确复刻。
-
-原理、数据流和严格回放边界见 [模拟器原理](SIMULATOR_PRINCIPLES.md)。
-
-## 验证结果：已验证构型与严格误差
-
-下表来自同一 fresh Unity 场景内连续执行的 12 个非扫冰构型。每行都使用 Unity A10 记录的出手前真实朝向和逐 tick 摩擦序列；本地**没有**注入 Unity 的碰撞后位置、速度、缓存或求解器状态。误差为 Unity 与本地最终位置的二维距离，单位为 mm。
-
-| 构型 | 实际接触 | 出手壶误差 | 被撞壶误差 |
-| --- | :---: | ---: | ---: |
-| 切线左（y=5.6，v=4.1） | 否 | — | 0.004 |
-| 切线右（y=5.6，v=4.1） | 否 | — | 0.004 |
-| 深擦左（y=7.4，v=3.6） | 是 | 0.379 | 0.701 |
-| 深擦右（y=7.4，v=3.6） | 否 | — | 0.001 |
-| 短程左（y=4.2，v=3.0） | 否 | 0.021 | 0.003 |
-| 短程右（y=4.2，v=3.0） | 否 | 0.045 | 0.003 |
-| 反旋左→右（y=6.8，v=3.5） | 是 | 1.046 | 1.007 |
-| 反旋右→左（y=6.8，v=3.5） | 是 | 0.342 | 1.101 |
-| 高旋左→右（y=6.4，v=3.7） | 是 | 9.523 | 0.354 |
-| 高旋右→左（y=6.4，v=3.7） | 是 | 4.438 | 1.144 |
-| 长距离偏左（y=9.0，v=4.2） | 是 | 5.312 | 8.278 |
-| 长距离偏右（y=9.0，v=4.2） | 是 | 19.976 | 1.495 |
-
-汇总：出手壶 `9` 个可比较终局的 RMSE 为 **7.739 mm**、均值 **4.565 mm**、最大 **19.976 mm**；被撞壶 `12` 个终局的 RMSE 为 **2.499 mm**、均值 **1.174 mm**、最大 **8.278 mm**。
-
-`—` 表示 Unity 在终局将出手壶清出可记录区域，因此没有可定义的出手壶终局距离；这不是本地失败。`实际接触=否` 表示该几何在这次真实摩擦序列下未进入石头-石头接触，不能将其计为碰撞模型误差。
-
-原始严格报告：
-
-```text
-data/calibration/extended_collision_validation_20260715_ordered/
-  collision_unique_targets_batch_r03_endpoint_strict.json
-```
-
-## 已采样构型与分布对比
-
-上一表回答的是“给同一条逐 tick 摩擦序列时，本地能否逐手复现 Unity”；本表回答的是“不给本地注入 Unity 当次随机信息时，两边反复运行后，落点云的中心是否接近”。两张表不能互相替代。
-
-这批实际完成的是 **20 个构型**，不是 24 个：16 个非扫冰构型和 4 个扫冰构型。本地每个构型 100 次；Unity 因采样过程中断，实际每个构型保留 60–62 次有效记录。用户此前提出的 24 构型是扩展覆盖目标，但额外 4 个没有对应的成对分布数据，不能写成“已验证”。
-
-“均值中心差”是 Unity 落点云中心与本地落点云中心的二维距离，越小越好；它不是单次误差。双壶构型的被撞壶按碰撞链顺序以 `目标1/目标2` 列出。`—` 表示该壶在两边都始终被清出，因而没有留在场内的落点中心可比较。
-
-| 构型 | 类别 | Unity / 本地样本 | 出手壶均值中心差 (mm) | 被撞壶均值中心差 (mm) | 被撞壶清出率 Unity / 本地 |
-| --- | --- | ---: | ---: | ---: | ---: |
-| 正碰近，y=5.2，v=3.4 | 非扫冰·正碰 | 61 / 100 | 1.0 | 11.5 | 0% / 0% |
-| 正碰近，y=5.2，v=4.0 | 非扫冰·正碰 | 62 / 100 | 6.4 | — | 100% / 100% |
-| 正碰中，y=6.2，v=3.4 | 非扫冰·正碰 | 60 / 100 | 1.8 | 24.8 | 0% / 0% |
-| 正碰中，y=6.2，v=4.0 | 非扫冰·正碰 | 62 / 100 | 6.3 | 27.9 | 44% / 34% |
-| 正碰远，y=8.0，v=3.4 | 非扫冰·正碰 | 62 / 100 | 1.8 | 6.8 | 0% / 0% |
-| 正碰远，y=8.0，v=4.0 | 非扫冰·正碰 | 60 / 100 | 4.2 | 25.9 | 0% / 0% |
-| 擦碰左 | 非扫冰·擦碰 | 62 / 100 | 2.3 | 8.6 | 0% / 0% |
-| 擦碰右 | 非扫冰·擦碰 | 62 / 100 | 1.0 | 4.2 | 0% / 0% |
-| 内旋擦左 | 非扫冰·擦碰 | 62 / 100 | 5.5 | 18.6 | 0% / 0% |
-| 内旋擦右 | 非扫冰·擦碰 | 62 / 100 | 2.1 | 9.5 | 0% / 0% |
-| 宽擦左 | 非扫冰·擦碰 | 62 / 100 | 2.0 | 12.5 | 56% / 47% |
-| 宽擦右 | 非扫冰·擦碰 | 62 / 100 | 12.6 | 22.1 | 0% / 0% |
-| 双壶直线 | 非扫冰·双壶 | 62 / 100 | 1.2 | 12.4 / 23.3 | 0% / 0% / 66% / 67% |
-| 双壶左分裂 | 非扫冰·双壶 | 62 / 100 | 22.8 | 24.2 / 0.0 | 0% / 0% / 0% / 0% |
-| 双壶右分裂 | 非扫冰·双壶 | 62 / 100 | 30.1 | 21.7 / 0.0 | 0% / 0% / 0% / 0% |
-| 双壶内旋 | 非扫冰·双壶 | 61 / 100 | 11.5 | 15.8 / 0.0 | 0% / 0% / 0% / 0% |
-| 轻扫守壶，s=2 | 扫冰·守壶 | 61 / 100 | 0.2 | 104.4 | 0% / 0% |
-| 重扫守壶，s=6 | 扫冰·守壶 | 61 / 100 | 4.8 | 293.2 | 0% / 0% |
-| 扫冰擦碰，s=4 | 扫冰·擦碰 | 61 / 100 | 57.5 | 108.4 | 0% / 0% |
-| 扫冰擦碰，s=8 | 扫冰·擦碰 | 61 / 100 | 135.5 | 196.3 | 0% / 0% |
-
-结论要分开读：非扫冰的单壶/擦碰多数中心差在 0–28 mm；双壶分裂仍有 23–30 mm 的出手壶偏置，是后续优先改进项；4 个扫冰构型误差显著更大，因扫冰物理尚未严格闭环，均不属于当前可交付范围。
-
-原始分布报告：
-
-```text
-data/calibration/collision_distribution_lifecycle_compare_20260714.json
-config/unity_collision_distribution_20x100_20260714.json
-```
-
-## 速度基准（当前开发机）
-
-下表使用上述同一批 12 构型。数字用于选择工具，不是跨机器的性能承诺。
-
-| 路径 | 测量方式 | 单手平均耗时 | 相对 Unity |
-| --- | --- | ---: | ---: |
-| Unity | 从第一手发出到第 12 手终局记录，共 64.0 s | 5.33 s | 1× |
-| 严格本地 PhysX（原生摩擦内核） | 完整读取输入、逐 tick 回放、碰撞、终局审计；首批 7.77 s，连续批次 4.57–4.79 s | 0.38–0.65 s | **8.2–13.9× 更快** |
-
-高保真 PhysX 路径默认且必须使用随包附带的新版原生摩擦内核；缺少或加载到旧扩展会直接报错，不会悄悄回退。上表的首批/连续批次差异来自模块载入和冰面 cook 的一次性成本，不是跳步。
-
-### 训练热路径复测（2026-07-15）
-
-为避免拿不同局面比较，另对同一单壶正碰构型逐手实测：目标壶 `(2.375, 5.2)`，出手 `BESTSHOT 3.4 0 0`，不扫冰，均从 `BESTSHOT` 发出后开始计时，终点均为两壶静止。Unity 为该次真实运行；本地重复 5 次取中位数。
-
-| 路径 | 单手耗时 | 相对该 Unity 实测 |
-| --- | ---: | ---: |
-| Unity | 1.422 s | 1× |
-| 严格本地 PhysX·审计路径 | 0.235 s | 6.1× 更快 |
-| 严格本地 PhysX·训练热路径 | 0.122 s | **11.7× 更快** |
-
-训练热路径不改变逐 tick 摩擦、原生 PhysX、接触报告或碰撞后 settle；它只不再为每个 tick 构造供人工审计的完整状态字典。它要求一手开始时目标壶已静止（正常比赛回合的条件）；检测到移动目标会自动回落到完整审计路径。碰撞后等待静止时，也只读取速度与转速，不再读取无关的位置和朝向。
-
-2026-07-15 又将两段**已逐项对照**的固定步循环放进随包原生扩展：
-
-| 同一 16 手、13 次碰撞局面 | 用时 | 相对最初 Python 循环 |
-| --- | ---: | ---: |
-| 首碰撞前与碰撞后等停都由 Python 驱动 | 5.225 s | 1× |
-| 仅碰撞后等停改为原生循环 | 3.325 s | 1.57× |
-| 首碰撞前与碰撞后等停均为原生循环（当前默认） | 1.955 s | **2.67×** |
-
-三次都保留 `0.01 s` 物理步、同一 PhysX solver、同一逐 tick 摩擦、首碰撞零摩擦交接和同一静止判据。当前版本与基线逐手比较，13 次接触判断、清场结果、每颗壶的 `x/y/yaw/vx/vy/w` 均完全相同（最大差异 `0`）。
-
-## 目录说明
-
-| 文件 | 职责 |
-| --- | --- |
-| `unity_front_half.py` | 从 BESTSHOT/MOTIONINFO 推进到第一处石头-石头 PCM 接触；维护“位置 reset 不清 yaw”的 Unity 语义。 |
-| `unity_physx.py` | 持久 `pyphysx` Scene、Unity 原生坐标、冰面网格和碰撞后的继续推进。 |
-| `runtime/` | 交接所需的新版 Windows x64 / CPython 3.8 与 3.13 `pyphysx` 扩展、最小依赖清单与自检脚本。 |
-| `runtime_support/` | 严格回放所需的 6 个最小方程/PhysX 辅助模块；运行时自动优先使用这份内置副本。 |
-| `assets/` | Unity 冰面网格、壶碰撞网格和 12.8 KB runtime hull 数据；不包含原始 Unity 事件日志。 |
-
-## 开发约定
-
-1. 新代码只使用严格 PhysX 路径；不要重新引入简化代理、降阶尾段或扫冰启发式作为模拟器。
-2. 修改 `unity_physx.py` 后，至少运行：
-
-   ```powershell
-   python -m unittest tests.test_unity_front_half_sim -v
-   ```
-
-3. 扫冰尚未完成同等严格验证；训练或评估若关闭扫冰，不会受这部分限制影响。
+物理改动应遵循 [项目协作规则](../AGENTS.md)；应用维护不根据终点误差反推或补偿内部机制。

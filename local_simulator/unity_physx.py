@@ -91,6 +91,7 @@ UNITY_STONE_PARENT_SCALE = (0.9800000190734863, 1.0, 0.9800000190734863)
 # Subsequent stone creation/solver captures use 20**2 = 0x43c80000.
 UNITY_DEFAULT_MAX_ANGULAR_SPEED = 3.14
 UNITY_STONE_MAX_ANGULAR_SPEED = 20.0
+UNITY_COLLISION_FRICTION = float.fromhex('0x1.333334p-1')  # float32(0.6)
 # `DCP.UpdateState` applies its ordinary retained-area test in body-space.
 # POSITION/reset coordinates carry the fixed (+2.375, +4.88) presentation
 # offset, so these are the equivalent bounds in this backend's public state.
@@ -419,6 +420,10 @@ class PersistentPhysxFrontHalfScene:
         # After the first physics step Unity syncs Transform from PhysX and
         # normalizes its quaternion in float32 (A12: 1281/1281 exact matches).
         self._unity_angular_setter_calls: dict[int, int] = {}
+        self._native_step_bridge = None
+        self._merge_step_work = False
+        self._merge_native_scene_work = False
+        self._last_step_stone_reports = []
         self.dt = UNITY_FIXED_TIMESTEP
         self.integration_cosine_metadata = None
         if self.coordinate_mode == "unity-native-yup":
@@ -1077,7 +1082,7 @@ class PersistentPhysxFrontHalfScene:
         if self.emulate_unity_setactive_refilter:
             self.scene.reset_filtering(slot.body)
 
-    def _simulate_unity_step(self) -> Any:
+    def _simulate_unity_step(self, *, enabled_mask=None) -> Any:
         """Run PhysX then perform the captured f72606 raw-pose writeback."""
         if (not getattr(self, "_in_custom_sliding_step", False)
                 and getattr(self, "_custom_sliding_index", None) is not None):
@@ -1086,16 +1091,38 @@ class PersistentPhysxFrontHalfScene:
             # every FixedUpdate: 12004 remains below the stop threshold for
             # hundreds of custom steps before the observed Update boundary.
             self._restore_unity_natural_stop_material()
-        result = self.scene.simulate(self.dt)
+        bridge = getattr(self, '_native_step_bridge', None)
+        native_simulation = (bridge is not None and bridge.native_scene
+            and bridge.scene_object is self.scene
+            and self.emulate_unity_body_pose_writeback
+            and self.coordinate_mode == 'unity-native-yup'
+            and self.emulate_unity_setactive_no_sim
+            and 'writeback' not in bridge.__dict__
+            and '_stone_reports' not in self.__dict__
+            and '_wall_reports' not in self.__dict__)
+        empty_handled = False
+        if native_simulation:
+            empty_handled = bridge.simulate_writeback(self.dt, enabled_mask)
+            result = None
+        else:
+            result = self.scene.simulate(self.dt)
         self._last_wall_reports = []
+        if empty_handled:
+            self._last_step_stone_reports = []
+            return result
         if self.coordinate_mode == "unity-native-yup" and self.emulate_unity_setactive_no_sim:
             contact_reports = self.scene.get_contact_reports()
-            collision_friction = float(self.probe.np.float32(0.6))
+            merged = getattr(self, '_merge_step_work', False)
+            collision_friction = (UNITY_COLLISION_FRICTION if merged
+                                  else float(self.probe.np.float32(0.6)))
             # f61030 OnCollisionEnter(Stone) runs on both stone components.
             # Former callers restored only the released stone, which masked
             # the missing target callback while Reset incorrectly restored all
             # materials to 0.6. Apply the observed write to actual participants.
-            for report in self._stone_reports(contact_reports):
+            stone_reports = self._stone_reports(contact_reports)
+            if merged:
+                self._last_step_stone_reports = stone_reports
+            for report in stone_reports:
                 if int(report.get("contact_count") or 0) <= 0:
                     continue
                 for index in (report["stoneIndex0"], report["stoneIndex1"]):
@@ -1111,7 +1138,15 @@ class PersistentPhysxFrontHalfScene:
                         and self.slots[report['stoneIndex']].enabled):
                     self._deactivate_wall_collision(report['stoneIndex'])
                     self._last_wall_reports.append(report)
+                    if enabled_mask is not None:
+                        enabled_mask &= ~(1 << report['stoneIndex'])
         if not self.emulate_unity_body_pose_writeback or self.coordinate_mode != "unity-native-yup":
+            return result
+        if bridge is not None:
+            if enabled_mask is None:
+                bridge.writeback()
+            else:
+                bridge.writeback(enabled_mask)
             return result
         from .native_pose_writeback import writeback_pose_without_autowake
         for slot in self.slots:
@@ -1123,6 +1158,28 @@ class PersistentPhysxFrontHalfScene:
             # equal poses omitted that side effect from Reset step 2 onward.
             writeback_pose_without_autowake(slot.body, slot.body.get_global_pose())
         return result
+
+    def _prediction_native_step(self, active_index, friction_noise, random_state):
+        """One fused dispatch; original setters/simulate/callback/writeback order."""
+        if self._custom_sliding_index != active_index:
+            raise RuntimeError(f"stone {active_index} is not in custom sliding mode")
+        bridge = self._native_step_bridge
+        inside = bridge.prepare(active_index, friction_noise, random_state)
+        pair_zero = self._first_pair_zero_friction_for_step(inside)
+        if pair_zero:
+            self._set_stone_stone_contact_friction(0.0, 0.0)
+        previous = self._in_custom_sliding_step
+        self._in_custom_sliding_step = True
+        try:
+            self._simulate_unity_step(enabled_mask=bridge.prepared_mask)
+        finally:
+            self._in_custom_sliding_step = previous
+            if pair_zero:
+                self._set_stone_stone_contact_friction(
+                    self.stone_stone_contact_static_friction,
+                    self.stone_stone_contact_dynamic_friction)
+        return {'stoneReports': self._last_step_stone_reports,
+                'wallReports': self._last_wall_reports}
 
     def _wall_reports(self, reports: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
         result = []
@@ -1324,6 +1381,7 @@ class PersistentPhysxFrontHalfScene:
                 or self.coordinate_mode != "unity-native-yup"):
             return
         old_body = slot.body
+        self._native_step_bridge = None
         pose = old_body.get_global_pose()
         self._address_to_index.pop(int(old_body.get_physx_address()), None)
         old_body.detach_shape(slot.shape)
@@ -1970,10 +2028,21 @@ class PersistentPhysxFrontHalfScene:
         motion_override: Optional[Sequence[float]] = None,
         motion_stepper: Any | None = None,
         audit_payload: bool = True,
+        random_state: Any = None,
     ) -> dict[str, Any]:
         if self._custom_sliding_index != active_index:
             raise RuntimeError(f"stone {active_index} is not in custom sliding mode")
         slot = self.slots[active_index]
+        bridge = getattr(self, '_native_step_bridge', None)
+        if (not audit_payload and motion_override is None and bridge is not None
+                and motion_stepper is bridge.motion_stepper):
+            inside_pcm_shell = bridge.prepare(active_index, friction_noise, random_state)
+            self._simulate_sliding_pcm_scope(inside_pcm_shell)
+            return {'stoneReports': (self._last_step_stone_reports if self._merge_step_work
+                                     else self._stone_reports(self.scene.get_contact_reports())),
+                    'wallReports': self._last_wall_reports}
+        if random_state is not None:
+            raise RuntimeError('Native random state requires the fused step bridge')
         if audit_payload:
             current = self.state(active_index)
         else:
@@ -2049,28 +2118,16 @@ class PersistentPhysxFrontHalfScene:
         # activated by PhysX on the following contact step. A predicted
         # position must not add an earlier explicit wake_up call.
         # The existing current-shell switch remains an opt-in diagnostic.
-        wakes_targets_for_pcm = self.wake_target_at_current_pcm_shell and inside_pcm_shell
-        if wakes_targets_for_pcm:
-            for target_index in targets_before_scene:
-                self.slots[int(target_index)].body.wake_up()
         # Unity keeps the sliding stone's ice material at zero for the Scene
         # step that first produces the dynamic-dynamic pair.  Restoring 0.6
         # merely because the pre-sim pose is inside the PCM shell makes the
         # stone-ice solver apply one premature angular-friction impulse.  The
         # matching-contact branch in _run_to_first_contact restores it after
         # this step, ready for subsequent collision steps.
-        pair_zero_friction = self._first_pair_zero_friction_for_step(inside_pcm_shell)
-        if pair_zero_friction:
-            self._set_stone_stone_contact_friction(0.0, 0.0)
-        try:
-            self._simulate_custom_sliding_step()
-        finally:
-            if pair_zero_friction:
-                self._set_stone_stone_contact_friction(
-                    self.stone_stone_contact_static_friction,
-                    self.stone_stone_contact_dynamic_friction,
-                )
-        reports = self._stone_reports(self.scene.get_contact_reports())
+        wakes_targets_for_pcm, pair_zero_friction = self._simulate_sliding_pcm_scope(
+            inside_pcm_shell, targets_before_scene)
+        reports = (self._last_step_stone_reports if self._merge_step_work
+                   else self._stone_reports(self.scene.get_contact_reports()))
 
         after_scene = self.state(active_index) if audit_payload else None
         targets_after_scene = {
@@ -2104,11 +2161,31 @@ class PersistentPhysxFrontHalfScene:
         x,y = self.probe._from_physx_xy(float(position[0]),float(position[1]),True)
         return {'x': x, 'y': y}
 
+    def _simulate_sliding_pcm_scope(self, inside_pcm_shell, targets=()):
+        """Shared pair override, simulation and restoration for both paths."""
+        wakes = self.wake_target_at_current_pcm_shell and inside_pcm_shell
+        if wakes:
+            for target_index in targets:
+                self.slots[int(target_index)].body.wake_up()
+        pair_zero = self._first_pair_zero_friction_for_step(inside_pcm_shell)
+        if pair_zero:
+            self._set_stone_stone_contact_friction(0.0, 0.0)
+        try:
+            self._simulate_custom_sliding_step()
+        finally:
+            if pair_zero:
+                self._set_stone_stone_contact_friction(
+                    self.stone_stone_contact_static_friction,
+                    self.stone_stone_contact_dynamic_friction)
+        return wakes, pair_zero
+
     def step_custom_sliding_lean(self, active_index: int, friction_noise: float,
-                                 *, motion_stepper: Any = None) -> dict[str, Any]:
+                                 *, motion_stepper: Any = None,
+                                 random_state: Any = None) -> dict[str, Any]:
         """Same setters, simulation and callbacks, without audit snapshots."""
         return self.step_custom_sliding(active_index,friction_noise,
-                                        motion_stepper=motion_stepper,audit_payload=False)
+                                        motion_stepper=motion_stepper,audit_payload=False,
+                                        random_state=random_state)
 
     def _run_to_first_contact(
         self,

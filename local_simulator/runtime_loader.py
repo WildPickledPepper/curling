@@ -57,11 +57,19 @@ def _resolve_bundled_extension() -> Path:
     return extension
 
 
-def install_bundled_pyphysx() -> Any:
+def install_bundled_pyphysx(*, optimize_physx: bool = True,
+                          optimize_vertex_bounds: bool | None = None,
+                          optimize_solver_product: bool | None = None) -> Any:
     """Install and return the bundled native binding for this Python ABI.
 
     This installs only into the current Python process; it neither modifies
     site-packages nor reads a pyphysx extension from another machine path.
+    The first call selects native core optimization for this process; later
+    calls reuse that choice. Pass optimize_physx=False before the first import
+    to retain original instructions for comparison.
+    optimize_vertex_bounds=False keeps the earlier boolean optimization while
+    disabling the guarded vertex-loop optimization for an incremental baseline.
+    optimize_solver_product=False disables only the guarded solver identity.
     """
 
     extension_path = _resolve_bundled_extension()
@@ -94,4 +102,18 @@ def install_bundled_pyphysx() -> Any:
     for name in dir(extension):
         if not name.startswith("_"):
             setattr(package, name, getattr(extension, name))
+    package._native_core_optimization = None
+    if optimize_physx:
+        from .native_core_optimization import install_core_optimization
+        package._native_core_optimization = install_core_optimization(extension_path)
+    package._native_vertex_bounds_optimization = None
+    vertex_enabled = optimize_physx if optimize_vertex_bounds is None else optimize_vertex_bounds
+    if vertex_enabled:
+        from .native_vertex_bounds import install_vertex_bounds_optimization
+        package._native_vertex_bounds_optimization = install_vertex_bounds_optimization(extension_path)
+    package._native_solver_product_optimization = None
+    solver_enabled = optimize_physx if optimize_solver_product is None else optimize_solver_product
+    if solver_enabled:
+        from .native_solver_product import install_solver_product_optimization
+        package._native_solver_product_optimization = install_solver_product_optimization(extension_path)
     return package

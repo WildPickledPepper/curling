@@ -46,8 +46,8 @@ def main():
         parser.error('--repeats must be positive')
 
     started=time.perf_counter()
-    from local_simulator.runtime_loader import install_bundled_pyphysx
-    install_bundled_pyphysx()
+    from local_simulator.runtime_loader import install_bundled_pyphysx,_resolve_bundled_extension
+    binding=install_bundled_pyphysx()
     from local_simulator.examples.train_policy_tree_selfplay import StrictCurlingEnd
     imports_ms=(time.perf_counter()-started)*1000
     started=time.perf_counter()
@@ -114,6 +114,8 @@ def main():
     report=dict(timestamp_utc=datetime.now(timezone.utc).isoformat(),
                 environment=dict(python=sys.version,executable=sys.executable,platform=platform.platform(),cpu=args.cpu),
                 seed=args.seed,repeats=args.repeats,
+                native_optimizations={name:bool(getattr(binding,name,None) is not None and getattr(binding,name).enabled)
+                    for name in ('_native_core_optimization','_native_vertex_bounds_optimization','_native_solver_product_optimization')},
                 scope='Current exact scheduled non-sweep prediction; warm request includes scene reset, complete play, 16-stone state extraction and JSON serialization; file/network output excluded. No concurrent benchmark workers.',
                 clock=dict(frame_elapsed=env.prediction_frame_elapsed,time_scale=env.prediction_time_scale),
                 cold=dict(from_script_entry_to_first_response_ms=cold_ready_ms,
@@ -122,7 +124,10 @@ def main():
                 implementation_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in
                   (ROOT/'local_simulator/unity_prediction.py',ROOT/'local_simulator/unity_physx.py',
                    ROOT/'local_simulator/examples/train_policy_tree_selfplay.py',
-                   ROOT/'local_simulator/runtime/pyphysx/_pyphysx.cp39-win_amd64.pyd')},cases=rows)
+                   _resolve_bundled_extension(),ROOT/'local_simulator/runtime_loader.py',
+                   ROOT/'local_simulator/native_core_optimization.py',ROOT/'local_simulator/native_vertex_bounds.py',
+                   ROOT/'local_simulator/native_solver_product.py',ROOT/'local_simulator/runtime/physx_core_boolean_20261004.json',
+                   ROOT/'local_simulator/runtime/physx_dead_fourth_20261004.json',ROOT/'local_simulator/runtime/physx_solver_product_20261004.json')},cases=rows)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
     print(json.dumps(dict(cold_ms=cold_ready_ms,output=str(args.output)),ensure_ascii=False),flush=True)

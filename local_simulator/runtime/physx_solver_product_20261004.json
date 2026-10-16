@@ -1,0 +1,160 @@
+{
+  "kernel_sha256": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+  "function_rva": "0x136c60",
+  "patch_start_rva": "0x136e1f",
+  "patch_end_rva": "0x136e3a",
+  "original_hex": "410f28c6f3410f59c0f30f58c8f30f10842400010000f3410f59c2",
+  "assembly": ".text\n.intel_syntax noprefix\nmovd r13d, xmm14\nshr r13d, 23\nand r13d, 255\nmovd r14d, xmm8\nshr r14d, 23\nand r14d, 255\nadd r13d, r14d\ncmp r13d, 125\nja fallback\nmovd r14d, xmm1\nand r14d, 0x7fffffff\ncmp r14d, 0x0d000000\njb fallback\ncmp r14d, 0x7f800000\njae fallback\nstmxcsr [rsp+0x104]\nmov r14d, [rsp+0x104]\nand r14d, 0xfff2\ncmp r14d, 0x1fb2\njne fallback\nfast:\nmov r13d, -1\nmov r14d, -4\njmp complete\nfallback:\nmov r13d, -1\nmov r14d, -4\nmovaps xmm0, xmm14\nmulss xmm0, xmm8\naddss xmm1, xmm0\ncomplete:\nmovss xmm0, dword ptr [rsp + 0x100]\nmulss xmm0, xmm10\ncmp ecx, ecx\nje original_tail\n",
+  "simd_hex": "66450f7ef541c1ed174181e5ff00000066450f7ec641c1ee174181e6ff0000004501f54183fd7d774c66410f7ece4181e6ffffff7f4181fe0000000d72374181fe0000807f732e0fae9c2404010000448bb424040100004181e6f2ff00004181feb21f0000750e41bdffffffff41befcffffffeb1941bdffffffff41befcffffff410f28c6f3410f59c0f30f58c89090f30f10842400010000f3410f59c239c90f8400000000",
+  "relative_targets": [
+    {
+      "offset": 162,
+      "target_rva": "0x136e3a"
+    }
+  ],
+  "unwind_chain_hex": "21000000da6c130092711300c0c14800",
+  "enclosing_function_entry": {
+    "begin_rva": "0x136cda",
+    "end_rva": "0x137192",
+    "unwind_rva": "0x48c1c0"
+  },
+  "instructions": [
+    {
+      "offset": 0,
+      "instruction": "movd r13d, xmm14"
+    },
+    {
+      "offset": 5,
+      "instruction": "shr r13d, 0x17"
+    },
+    {
+      "offset": 9,
+      "instruction": "and r13d, 0xff"
+    },
+    {
+      "offset": 16,
+      "instruction": "movd r14d, xmm8"
+    },
+    {
+      "offset": 21,
+      "instruction": "shr r14d, 0x17"
+    },
+    {
+      "offset": 25,
+      "instruction": "and r14d, 0xff"
+    },
+    {
+      "offset": 32,
+      "instruction": "add r13d, r14d"
+    },
+    {
+      "offset": 35,
+      "instruction": "cmp r13d, 0x7d"
+    },
+    {
+      "offset": 39,
+      "instruction": "ja 0x75"
+    },
+    {
+      "offset": 41,
+      "instruction": "movd r14d, xmm1"
+    },
+    {
+      "offset": 46,
+      "instruction": "and r14d, 0x7fffffff"
+    },
+    {
+      "offset": 53,
+      "instruction": "cmp r14d, 0xd000000"
+    },
+    {
+      "offset": 60,
+      "instruction": "jb 0x75"
+    },
+    {
+      "offset": 62,
+      "instruction": "cmp r14d, 0x7f800000"
+    },
+    {
+      "offset": 69,
+      "instruction": "jae 0x75"
+    },
+    {
+      "offset": 71,
+      "instruction": "stmxcsr dword ptr [rsp + 0x104]"
+    },
+    {
+      "offset": 79,
+      "instruction": "mov r14d, dword ptr [rsp + 0x104]"
+    },
+    {
+      "offset": 87,
+      "instruction": "and r14d, 0xfff2"
+    },
+    {
+      "offset": 94,
+      "instruction": "cmp r14d, 0x1fb2"
+    },
+    {
+      "offset": 101,
+      "instruction": "jne 0x75"
+    },
+    {
+      "offset": 103,
+      "instruction": "mov r13d, 0xffffffff"
+    },
+    {
+      "offset": 109,
+      "instruction": "mov r14d, 0xfffffffc"
+    },
+    {
+      "offset": 115,
+      "instruction": "jmp 0x8e"
+    },
+    {
+      "offset": 117,
+      "instruction": "mov r13d, 0xffffffff"
+    },
+    {
+      "offset": 123,
+      "instruction": "mov r14d, 0xfffffffc"
+    },
+    {
+      "offset": 129,
+      "instruction": "movaps xmm0, xmm14"
+    },
+    {
+      "offset": 133,
+      "instruction": "mulss xmm0, xmm8"
+    },
+    {
+      "offset": 138,
+      "instruction": "addss xmm1, xmm0"
+    },
+    {
+      "offset": 142,
+      "instruction": "nop "
+    },
+    {
+      "offset": 143,
+      "instruction": "nop "
+    },
+    {
+      "offset": 144,
+      "instruction": "movss xmm0, dword ptr [rsp + 0x100]"
+    },
+    {
+      "offset": 153,
+      "instruction": "mulss xmm0, xmm10"
+    },
+    {
+      "offset": 158,
+      "instruction": "cmp ecx, ecx"
+    },
+    {
+      "offset": 160,
+      "instruction": "je 0xa6"
+    }
+  ],
+  "scope": "Experimental identity of MOVAPS/MULSS/ADDSS at 0x136e1f..0x136e2c. XMM0 immediately overwritten by original MOVSS then MULSS. Fast if exponent-field sum of XMM14/XMM8 <=125 (finite product strictly less than 2^-127), finite |XMM1|>=2^-101, masked nearest gradual-underflow mode with DE/UE/PE already set. Full live XMM1 and MXCSR unchanged; dead XMM0 is overwritten by original tail. R13D=-1/R14D=-4 proven constant throughout loop and restored after scratch. RSP+104 is unused upper half of original scalar spill/shadow slot. EFLAGS dead until COMISS 0x136e56. Original fallback for all other inputs. Production candidate has chained original unwind information and forced conditional near entry/return. Default enablement requires separate validation and timing."
+}

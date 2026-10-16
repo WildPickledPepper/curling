@@ -30,3 +30,10 @@
 
 # Historical opponent archive retains original source bytes.
 /research_archive/ppo_stage_s_u6_flat/AIRobot.py -whitespace
+
+# Preserve byte-identical mathematical helper provenance across platforms.
+/training_research/legacy_support/**/*.py -text -whitespace
+/training_research/legacy_support/tacticslib/data/data.json -text -whitespace
+
+# Runtime loaders verify these exact bytes; line-ending conversion breaks loading.
+/local_simulator/runtime/physx_*_20261004.json -text -whitespace
