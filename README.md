@@ -30,6 +30,8 @@ py -3.9 -m venv .venv
 
 原生扩展和应用需要的小型经验库已随仓库保留，运行上述样例不需要本机旧交接包、Unity 安装、PPO 权重或完整采样目录。`success=true` 时 `shot` 才是可提交的出手；`success=false` 表示当前预算内没找到，不等于物理无解。
 
+批量测试可用随仓库保存的 [精简正向采样](training_research/datasets/forward_samples_20261004/README.md)：37,061 条、306 个构型，压缩约 4.03 MiB；求解输入与参照答案分别保存。
+
 只看历史语义目标可运行以下代码，不会做 PhysX 搜索：
 
 ```python

@@ -56,6 +56,7 @@ if result["success"]:
 
 ## 随包依赖与历史成绩
 
+- [精简采样测试数据](datasets/forward_samples_20261004/README.md)：37,061 条原始正向采样的可直接调用请求，压缩约 4.03 MiB，参照答案单独保存。
 - `legacy_support/`：原样保留的旧数学提案代码和标定表，有逐文件哈希；不再依赖本机旧交接目录。
 - `assets/inverse_contact_atlas_v6_20261004.npz`：小型经验初值库。查询前排除当前 `scene_key` 的所有采样，不使用当前局的参照出手作为初值。NPZ 字节与 2026-10-04 测试版本相同。
 - `inverse_dataset/`：输入检查、规则/终态验收、批量正向采集与训练编码。

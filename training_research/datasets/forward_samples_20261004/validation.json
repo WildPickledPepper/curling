@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checked_records": 37061,
+  "checked_source_files": 104,
+  "original_306_requests_identical": 306,
+  "manifest_sha256": "f7e71187b37fcd6777bda2512aa0cee5cd6217e250b91a668aa04e0641eca615",
+  "checks": "Every compressed input and reference compared to its source extraction; source and output SHA-256; original 306 selected requests match complete goals, original reset states, active index and board identity; reference shots/seeds unchanged; input/reference separation. No new physics or success-rate measurement.",
+  "packaging_note": "Manifest JSON values unchanged; only line endings normalized to LF for Git before refreshing its validation hash."
+}
