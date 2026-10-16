@@ -1,0 +1,6 @@
+# Optional numerical search experiments. Default application uses requirements-app.txt.
+-r requirements-app.txt
+scipy==1.11.4
+pandas==1.5.3
+DFO-LS==1.6.3
+cobyqa==1.1.1

@@ -1,0 +1,50 @@
+[
+  {
+    "TimeCreated": "2026-10-16T14:13:38.8360857+08:00",
+    "ProviderName": "Microsoft-Windows-Power-Troubleshooter",
+    "Id": 1,
+    "Message": "系统已从低功耗状态中恢复。\r\n\r\n睡眠时间:  ‎2026‎-‎10‎-‎16T04:17:17.303364500Z\r\n唤醒时间: ‎2026‎-‎10‎-‎16T06:13:37.805874600Z\r\n\r\n唤醒源: Device -Intel(R) Ethernet Connection (17) I219-LM"
+  },
+  {
+    "TimeCreated": "2026-10-16T14:13:37.5003697+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-General",
+    "Id": 1,
+    "Message": "系统时间已从 ‎2026‎-‎10‎-‎16T04:17:24.029399800Z.\r\n时间增量更改为 ‎2026‎-‎10‎-‎16T06:13:37.500000000Z： 6973470 ms\r\n\r\n更改原因： System time synchronized with the hardware clock.\r\n进程： '' (PID 4).\r\n\r\nRTC 时间： ‎2026‎-‎10‎-‎16T14:13:37.500000000Z\r\n当前时区偏差 -480\r\nRTC 时间以 UTC： false\r\n系统时间基于 RTC 时间： false"
+  },
+  {
+    "TimeCreated": "2026-10-16T12:17:24.02922+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 107,
+    "Message": "系统已从睡眠状态恢复。"
+  },
+  {
+    "TimeCreated": "2026-10-16T12:17:22.6648952+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 42,
+    "Message": "系统正在进入睡眠状态。\r\n\r\n睡眠原因: System Idle"
+  },
+  {
+    "TimeCreated": "2026-10-16T11:02:14.8565244+08:00",
+    "ProviderName": "Microsoft-Windows-Power-Troubleshooter",
+    "Id": 1,
+    "Message": "系统已从低功耗状态中恢复。\r\n\r\n睡眠时间:  ‎2026‎-‎10‎-‎16T02:25:41.303146000Z\r\n唤醒时间: ‎2026‎-‎10‎-‎16T03:02:13.829439900Z\r\n\r\n唤醒源: Device -Intel(R) Ethernet Connection (17) I219-LM"
+  },
+  {
+    "TimeCreated": "2026-10-16T11:02:13.5003144+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-General",
+    "Id": 1,
+    "Message": "系统时间已从 ‎2026‎-‎10‎-‎16T02:25:43.507107700Z.\r\n时间增量更改为 ‎2026‎-‎10‎-‎16T03:02:13.500000000Z： 2189992 ms\r\n\r\n更改原因： System time synchronized with the hardware clock.\r\n进程： '' (PID 4).\r\n\r\nRTC 时间： ‎2026‎-‎10‎-‎16T11:02:13.500000000Z\r\n当前时区偏差 -480\r\nRTC 时间以 UTC： false\r\n系统时间基于 RTC 时间： false"
+  },
+  {
+    "TimeCreated": "2026-10-16T10:25:43.5068862+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 107,
+    "Message": "系统已从睡眠状态恢复。"
+  },
+  {
+    "TimeCreated": "2026-10-16T10:25:42.1604227+08:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 42,
+    "Message": "系统正在进入睡眠状态。\r\n\r\n睡眠原因: System Idle"
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "scope": "One complete warm persistent navigation run on the frozen 704-task development catalogue, with current-board folds excluded. Candidate was fixed before its full-model pilot outcomes. All 684 returned actions rechecked using actual complete forward records. Not validation on new physical-board families; the 1024 extra-goal comparison is still running.",
+  "run": "training_research/runs/compact_full_augmented704_paired_nav_p4_20261016",
+  "profile": "full_augmented",
+  "metrics": {
+    "tasks": 704,
+    "physical_boards": 306,
+    "solved": 684,
+    "solve_rate": 0.9715909090909091,
+    "within_10s": 684,
+    "within_10_1s": 684,
+    "initial_solved": 594,
+    "refinement_solved": 90,
+    "median_solved_ms": 205.414600000001,
+    "p95_solved_ms": 2765.09089999999,
+    "max_solved_ms": 9474.000699999977,
+    "max_request_ms": 10044.825699999932,
+    "physics_calls": 12485,
+    "reference_source_pass": 701,
+    "reference_navigation_pass": 611,
+    "reference_replays_available": 704,
+    "robustness_results_available": 0,
+    "three_extra_seeds_all_pass": 0
+  },
+  "returned_shots_rechecked": 684,
+  "catalog_sha256": "4effc811126da2dbed067b22e591bffda95750cb54d153d2017b26598beb4a8f",
+  "report_sha256": "0b1c11c351c5f57ad5446e4aee73111eb1bb5979018699922a2645a18a05132c",
+  "comparison_to_historical_wide": {
+    "scope": "Same full requests, different order/process partition/history: historical wide used 306+398 warm processes and one audited sleep repair; augmented used one 704 process. Descriptive matched-request comparison, not a controlled optimizer-only ablation.",
+    "wide_solved": 681,
+    "augmented_solved": 684,
+    "improvements": [
+      {
+        "request_fingerprint": "79c2dfacfc5efc7644b7a39906e4ae5ac683bc332a70f4e54498039de6027302",
+        "record_id": "66651fa54fc6d23c6cb6dcb7350d34c4f896ca7db7f0480756db49448b4c9ff8:5:2",
+        "scene_key": "01e3908423c6255d141f97d1d3a08b71a745307388bb797af656c0280debfc65",
+        "tactic": "raise_takeout",
+        "candidate_index": 124
+      },
+      {
+        "request_fingerprint": "81d7b9f16d6a76a528a3b85441a62dfaab69c71a9667eadcdc741046f2fb0e52",
+        "record_id": "f146eb16f2c8a8674e4a356278c8262058df09068420d6eb3467d054351f3599:47:0",
+        "scene_key": "c35f21cdbef89dcc36e0f50ef8db0a90dfd02ee056b9cbab6477b88dec251ace",
+        "tactic": "take_out_house",
+        "candidate_index": 273
+      },
+      {
+        "request_fingerprint": "f0d46f369416e0884765c5ea40dbf646a260d5fe97f33415cd24a691852441df",
+        "record_id": "919b2d68a55d4c808fe747ee506180f6f5f015a0a814eba2ca0ceba4c3ee309a:38:2",
+        "scene_key": "06b26c71457a49c61b96763666ad130acbdb6ad04ae1dce62a63025ecb7278f0",
+        "tactic": "take_out_house",
+        "candidate_index": 393
+      },
+      {
+        "request_fingerprint": "7c98cd49045990370ab70c7a53481c0e69946c7b73749843529a9d41333f39d3",
+        "record_id": "12b0d018ccd53ec5ff947ba0223215cc847cba91eed1d60e9a44e2a7b4fb326a:10:2",
+        "scene_key": "750001707f7db6219d859d91f0026970ee59db5b01331cee78b975b47062c83f",
+        "tactic": "take_out_house",
+        "candidate_index": 426
+      },
+      {
+        "request_fingerprint": "78fb038d6192d493b66796d7fce135ab24d82b68d5e49a43bc8b90a9cf409045",
+        "record_id": "7552a0bbaa337e1eadaa6e67919294c30bad83357b1383d4d8bde7b238f181f6:40:2",
+        "scene_key": "8404772682309651a179d3c2ee00ce855c7b3968d2b7eb362294e2cb4df20986",
+        "tactic": "achieved_goal",
+        "candidate_index": 475
+      },
+      {
+        "request_fingerprint": "0ff49d11ac7d6773fc25e5502c8b4d3cb89333f05ca2da04914b170cfe368290",
+        "record_id": "65d9ccd3a1cdac6ed07591fb5a7c6670ba0ec8af2295133003e2580e13345c07:13:2",
+        "scene_key": "0230d25d4f2dea486f88cd0f9cbac39e3fb130780303c594b2846bce6a1671aa",
+        "tactic": "achieved_goal",
+        "candidate_index": 509
+      }
+    ],
+    "regressions": [
+      {
+        "request_fingerprint": "181b6ad8b9dc0a51dc3029c1d51f4331773e1fdd6941bc0216b2f550340b77a9",
+        "record_id": "26f73ef8d206d52f1f92b80c76c2b9f5cfe8d08cc39c22a6c865feac61148704:6:2",
+        "scene_key": "dfdaf0fded6739e3cc1f147a41804f7dc901d56e18dac7668a54f120b0973c86",
+        "tactic": "achieved_goal",
+        "candidate_index": 211
+      },
+      {
+        "request_fingerprint": "ce8cb767223aa8cc2b74da0d01a0d51d9c5e88488a96248dd09a7c4c52d53f5f",
+        "record_id": "332bf55c56c671c53db546ddeba997a309c9b6a3bd0ee3036bd81d092d50d93c:18:1",
+        "scene_key": "20f5f30c1cfef7f5c49f208c94805ff5a02dcc5aa54cfc308bf71bd7fa3e0b9e",
+        "tactic": "take_out_house",
+        "candidate_index": 282
+      },
+      {
+        "request_fingerprint": "ce062a7a24305eb2005e1e1cb1e69773eddd669c1f2bfaa6e488e015bdd06c4e",
+        "record_id": "35c221b9b734d676f495fe9c0d29f1c102cd7081ef42141773a76e1027c62b90:44:0",
+        "scene_key": "7d82b2137d8459103fe49e80dae7d20541a7c990e62b7dd19ad6f4c60225f2a3",
+        "tactic": "achieved_goal",
+        "candidate_index": 617
+      }
+    ]
+  },
+  "world_mode": "navigation",
+  "scene_mode": "persistent",
+  "reference_pairing": "matching gzip stem and row; external requests resolved by full request fingerprint",
+  "affinity": {
+    "id": 260,
+    "group": 0,
+    "logical": 4,
+    "core": 4,
+    "cache": 0,
+    "numa": 0,
+    "efficiency": 1,
+    "flags": 0,
+    "scheduling": 1
+  },
+  "source_sha256": {
+    "training_research\\benchmark_compact_solver.py": "b1157a360466a6f49b1d1993bf8f47bfbe73295ff5dee5b851cc35d9305f3d42",
+    "training_research\\compact_pairs.py": "400b91fdd6d6be5dc4110db8b2ac2daba682f6de2e46bb345a78c110872d1582",
+    "training_research\\constrained_refine.py": "a8f3a0df30399e7298560f72148e9716834a31b302db1be4236bfddcf356ffd1",
+    "training_research\\contact_distribution_prior.py": "669d9b2b7c8afdb5012e5fa99c01398dce69e99fa1ff5bf67da8feb506fea6de",
+    "training_research\\contact_modes.py": "2a69964209577d7986641d0329c21d0efd8a5c92564e08973d4994193baf6326",
+    "training_research\\contact_seed_forest.py": "3ff85f592dd865c48a4ca9b70b1203f1ed1dfac61c23b99eb85e482dbb6258a2",
+    "training_research\\full_contact_prior.py": "c5b9c798d43c42b5f997fe4a5a0acca4951c7da98fc02a3e1e74be372bc69cd0",
+    "training_research\\goal_geometry_initials.py": "987129614901cd7b8ed107ea71d52afb7f7bb33a65ae3c1dc7596de656bda83e",
+    "training_research\\inverse_contact_atlas.py": "7117529c2cb6b80a368b290274c66a13e831c835e46eac189654dbf63821a0e4",
+    "training_research\\inverse_contact_initials.py": "08bbc33c874945ec6904097a69f4cc1e5f1c8370abc45e0384bff402debaed49",
+    "training_research\\inverse_goal_fallback.py": "5887e0d242acd268cef9926559750a6a67619fa57614033baa579b659cbda2f4",
+    "training_research\\inverse_goal_search.py": "f2aaeb3f33fbb568e4e554a37e04a367dbb12376ce1d67b3a0c382508591d107",
+    "training_research\\inverse_initials.py": "cb0dc636bd9e64e2ebec40226fc5e1dfcba305cf2ac23cbce2fe0d57ad6d8a3f",
+    "training_research\\inverse_terminal_refine.py": "bf7337d5a91450a0d5c6779f037374b7f719e774fa5a037b5cb4a75fe559df43",
+    "training_research\\isolated_evaluation.py": "328856991863e5cc86230bf71616d25509e70ac2b1606467b12f2677156b4d33",
+    "training_research\\legacy_inverse.py": "3ca0f7bbb7389d4e40bf89e23b49efa6607e550d6aea64545d5107c5920b4a99",
+    "training_research\\micro_terminal_refine.py": "cef8a5c7e4d24b1765dbec7d3847cb6281da7b30b0a47c10c631a344c213ee92",
+    "training_research\\population_search.py": "bf388909105ac644493af40fed951cc4e55979d4b5d8ca3a31111efb027191dc",
+    "training_research\\region_feasible_refine.py": "b83b97abf633f72d849e6669773e3ff500ae99e578ad6936c343700feb7edf13",
+    "training_research\\shot_solver.py": "27e1808e028bed46122ff85a3711c346a185f96ca39002500066864679dd91af",
+    "training_research\\solver_experiments.py": "6c64c00466e226e500057c22a3ab956c65b7a07a8778c22fca7a39ab6275cd62"
+  },
+  "runtime_sha256": {
+    "local_simulator\\runtime\\pyphysx\\_pyphysx.cp39-win_amd64.pyd": "7c31ced1773023e552391645e42040c9f3694d513805bc8b95ef0f8bc737bd38",
+    "training_research\\assets\\inverse_contact_atlas_v6_20261004.npz": "a088766cc59cb5190d2816c0ecfce01e8ca903482eec4265ee3ed0949e3e41a0",
+    "local_simulator\\runtime\\physx_core_boolean_20261004.json": "2df8260eda2850145cc71798166d77f4b9dd630b8669cd26838173371d5280bf",
+    "local_simulator\\runtime\\physx_dead_fourth_20261004.json": "5579131a622e0eb6437ef9af261d4372b6f375cd79729e5923fee1d3e1bf1da4",
+    "local_simulator\\runtime\\physx_solver_product_20261004.json": "c860b2865cd668546847f21a29cc4a50f24a991e41e4c12eb10d8a717da3e5f5"
+  },
+  "data_sha256": {
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_grid_verify_20261004.inputs.jsonl.gz": "48bb59eab8c579aa22f904fd3585ac34556ba3bc5e86bc8af28d67f819c441d0",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_grid_verify_20261004.references.jsonl.gz": "1b24bf137753130b744ecdf363b7c3e67dc36f77ec2b668c7ffd3acc5f95a124",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_historical_verify_20261004.inputs.jsonl.gz": "4fc94cf412b1a388d3ffa4e9543d58e35191cbd65e4e5bf8601c5d12bf202cdd",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_historical_verify_20261004.references.jsonl.gz": "d66a0c425da873a21199d81b1ec3c0f393c1db171982ab54b43f2b152a29c457",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_pilot_20261004.inputs.jsonl.gz": "13a8b55fe3e6300b5d855aaf42218104f9d235f4962ccd3a7f726c8cc40758c8",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_pilot_20261004.references.jsonl.gz": "f67fdace3b0a5768c16edb81f49bf1d33ebba60c8f580ec85b051b85033356e1",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_smoke_20261004.inputs.jsonl.gz": "92d3de1f7c7d8bd2ab9f186444a1ed12c0432e71ccf87210ad82f94e287c6499",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_dataset_smoke_20261004.references.jsonl.gz": "69ab762e01a5cf383d6ca3e4422d02b3f08e3835d6c3caa08b2f803516f4b4b6",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_expanded_batch1_20261004.inputs.jsonl.gz": "42693bece965bc128665a5d8f358c955e07ac2f09afcf0a5366953698fa8bccc",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_expanded_batch1_20261004.references.jsonl.gz": "e8408f151974523b797c35e6d6b27a6b0d650698091e0802348d3f12c5686c9f",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_manual_boards_20261004.inputs.jsonl.gz": "13f616ad17c10f9c44bc14381e7c76d90ab84ba6767a43f3fc0a06661f1134a7",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\datasets\\forward_samples_20261004\\inverse_manual_boards_20261004.references.jsonl.gz": "87588b222f8c63c38b6f7ad4dfa859ed020eec13b78baad4a8b469bafe36545f"
+  },
+  "numerical_versions": {
+    "numpy": "1.23.5",
+    "scipy": "1.11.4",
+    "dfols": "1.6.3",
+    "pandas": "1.5.3"
+  },
+  "learned_model_sha256": {
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\fold0.npz": "82b4d54639383613e9634ae79c95fbe50cd7826bd5cc5a29da506e1b5506c2a5",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\fold1.npz": "86d7ed17597f4b2902e156699cd06ec570df28e347cfa3cb4b21efd72c3765a7",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\fold2.npz": "34100552705779f9ceb381d4e6a4fa66761a539bd900fa7ac88823e276b7fd77",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\fold3.npz": "48702d01b38de4ffed104e5cd971dc6689169689648f781433e2be997fc02571",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\fold4.npz": "ec057b9a38109843df6ec3f0a2f35e552de23c6eb8e2b9653a2dbd9f6ebcc15f",
+    "C:\\Users\\admin\\Desktop\\冰壶\\curling\\training_research\\runs\\contact_distribution_full_v4_paired_20261016\\manifest.json": "3a8e400960fea3c8822b8dd582ca45f4eb2dc928358910e7f305e3b990e5f68d"
+  }
+}

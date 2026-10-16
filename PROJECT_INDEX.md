@@ -9,6 +9,7 @@
 
 | 目的 | 打开位置 | 说明 |
 |---|---|---|
+| 使用出手求解器 / 看最新搜索研究 | `training_research/SOLVER_GUIDE.md`、`training_research/solver_strategy_research_20261016.md` | 默认应用与可选实验分别记录；固定目录和验收证据在 `training_research/benchmarks/`。 |
 | 模拟器、预测计时与精度证据 | `local_simulator/README.md`、`analysis_input/README.md` | 当前物理主线及验证范围；原始采样留在本地。 |
 | 看策略状态机与当前结论 | `planning_proxy/STATE_MACHINE_ITERATION_LOG.md` | 状态机、求解器、失败反例与撤回记录的唯一连续日志。 |
 | 本地开发/解释器/平台入口 | `planning_proxy/DEVELOPMENT_RUNBOOK.md` | Python ABI、PhysX 扩展、PowerShell、课程平台与对战平台边界。 |

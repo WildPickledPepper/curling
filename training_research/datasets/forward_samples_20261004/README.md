@@ -17,12 +17,14 @@
 
 起始壶面沿用采样时传入的原始 reset 坐标和 yaw，以保持原构型身份；目标由实际 `physical_final` 构造。落点圆半径为 0.15 米，双飞沿用已有目标定义与实际碰撞要求。
 
-对应的 `*.references.jsonl.gz` 与输入逐行对应，通过 `record_id` 关联，只供搜索之后复验：
+对应的 `*.references.jsonl.gz` 与输入按**同名文件、同行**配对，`record_id` 只用于核对这一行。它不是全目录唯一键：37,061 行共有 36,933 个不同 ID，96 个 ID 跨文件重复，不能先把全部参照读进一个以 ID 为键的字典。只供搜索之后复验的字段为：
 
 - `shot`：采样时的已知成功出手，不能作为在线初值。
 - `physics_seed`：采样时种子，只用于诊断；未知比赛世界的种子仍未知。
 - `physical_final`：出手壶与原在场壶的实际终态，只保留 `index/enabled/x/y/yaw`。
 - `source_shard/source_line`：原始数据来源行号。
+
+离线训练和复验统一使用 `training_research.compact_pairs.iter_pairs()`；外部任务目录通过 `references_for_requests()` 的完整请求指纹解析。它们检查文件行数与每行 ID 一致，避免跨文件覆盖。此前研究代码的错误及影响范围见 [配对审计](../../results/compact_pairing_audit_20261016.json)；原始压缩数据未改变。在线求解不调用这些参照解析器。
 
 无需 PhysX 的位置、四元数、速度重复表示或时钟/RNG 内部状态即可使用此测试接口。这份数据用于出手搜索测试，不能替代 Unity 逐位物理对齐采样。
 

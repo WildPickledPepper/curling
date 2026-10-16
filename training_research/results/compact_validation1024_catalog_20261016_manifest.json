@@ -1,0 +1,34 @@
+{
+  "scope": "Frozen new source-forward validation goals, disjoint from the 704 development goals even across equivalent general-branch tactic names. Same existing physical-board domain, not a new board family. Reference files never opened during selection. Do not tune on these outcomes before a candidate is fixed.",
+  "tasks": 1024,
+  "physical_boards": 294,
+  "by_tactic": {
+    "take_out_house": 179,
+    "achieved_goal": 453,
+    "double_hit": 17,
+    "default_draw": 249,
+    "raise_takeout": 27,
+    "hit_and_stay": 7,
+    "center_guard_low": 8,
+    "draw_top4": 21,
+    "freeze": 4,
+    "hit_roll_right": 4,
+    "hit_roll_left": 9,
+    "corner_guard_right": 6,
+    "center_guard_high": 16,
+    "corner_guard_left": 4,
+    "draw_button": 16,
+    "peel_guard": 2,
+    "around_guard_draw_left": 2
+  },
+  "catalog_sha256": "028f6dc7503f27fa08643d11407c859b1207e0fd2bd58cb4cde0ff566d111904",
+  "source_sha256": {
+    "inverse_dataset_grid_verify_20261004.inputs.jsonl.gz": "48bb59eab8c579aa22f904fd3585ac34556ba3bc5e86bc8af28d67f819c441d0",
+    "inverse_dataset_historical_verify_20261004.inputs.jsonl.gz": "4fc94cf412b1a388d3ffa4e9543d58e35191cbd65e4e5bf8601c5d12bf202cdd",
+    "inverse_dataset_pilot_20261004.inputs.jsonl.gz": "13a8b55fe3e6300b5d855aaf42218104f9d235f4962ccd3a7f726c8cc40758c8",
+    "inverse_dataset_smoke_20261004.inputs.jsonl.gz": "92d3de1f7c7d8bd2ab9f186444a1ed12c0432e71ccf87210ad82f94e287c6499",
+    "inverse_expanded_batch1_20261004.inputs.jsonl.gz": "42693bece965bc128665a5d8f358c955e07ac2f09afcf0a5366953698fa8bccc",
+    "inverse_manual_boards_20261004.inputs.jsonl.gz": "13f616ad17c10f9c44bc14381e7c76d90ab84ba6767a43f3fc0a06661f1134a7"
+  },
+  "selection": "round-robin sorted board/tactic groups, stable hashed record ordering within each group, unique complete-goal key; excludes 704 development goal keys"
+}

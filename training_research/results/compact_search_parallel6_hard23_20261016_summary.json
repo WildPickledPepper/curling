@@ -1,0 +1,63 @@
+{
+  "scope": "Actual simultaneous searches, one distinct P-core per worker, under one common request deadline. Warm processes. All source tasks retained. Original actions and seeds never opened. Exact goal/contact/rule/settled certification. Evidence transfers/writes after timed solve returns; dispatch and stopping other workers included. Different tasks on one board are not independent boards.",
+  "worker_profiles": [
+    "wide_dfols",
+    "tangent_micro",
+    "contact_de",
+    "impact_learned",
+    "learned_dfols",
+    "chain_dfols"
+  ],
+  "worker_cpus": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "metrics": {
+    "tasks": 23,
+    "physical_boards": 21,
+    "solved": 10,
+    "solve_rate": 0.43478260869565216,
+    "within_10s": 10,
+    "within_10_1s": 10,
+    "initial_solved": 2,
+    "refinement_solved": 8,
+    "median_solved_ms": 2506.737800000007,
+    "p95_solved_ms": 9451.521499999984,
+    "max_solved_ms": 9451.521499999984,
+    "max_request_ms": 10189.053299999998,
+    "physics_calls": 12120,
+    "reference_source_pass": 0,
+    "reference_navigation_pass": 0,
+    "reference_replays_available": 0,
+    "robustness_results_available": 0,
+    "three_extra_seeds_all_pass": 0
+  },
+  "source_sha256": {
+    "training_research\\benchmark_compact_solver.py": "417bca23290917bebabc0e86b5a6711f3656e344edd20658476ed65493479751",
+    "training_research\\benchmark_inverse_batch.py": "61822083886d629dec35154dac4a59428c7f1afbbf7f8117ad98420e2b789b42",
+    "training_research\\benchmark_inverse_compare.py": "e5d3ea70bb7992021e7ff9a4329698d3c3587ec7dfc0555bb3f248ab0e40f2de",
+    "training_research\\benchmark_inverse_sampled_suite.py": "24b42bd41fc3f5f8df105a5432de4c60fdb73146896b3b1741ef8f8f9a5ac586",
+    "training_research\\benchmark_inverse_solver.py": "094774a1cdd3da0edbe50205b42fea5c05238dea1a8b7a22686781bab0284c8a",
+    "training_research\\benchmark_parallel_solver.py": "d7b21de970902291e8ba6b0dfab064d573d0be4fc96be947a95f9b0658cb0294",
+    "training_research\\contact_seed_forest.py": "aadf2c780be64d62ffadd96baa02424d9e96865eb44fee4a34c51338819fcb99",
+    "training_research\\goal_geometry_initials.py": "987129614901cd7b8ed107ea71d52afb7f7bb33a65ae3c1dc7596de656bda83e",
+    "training_research\\inverse_contact_atlas.py": "7117529c2cb6b80a368b290274c66a13e831c835e46eac189654dbf63821a0e4",
+    "training_research\\inverse_contact_initials.py": "08bbc33c874945ec6904097a69f4cc1e5f1c8370abc45e0384bff402debaed49",
+    "training_research\\inverse_goal_fallback.py": "5887e0d242acd268cef9926559750a6a67619fa57614033baa579b659cbda2f4",
+    "training_research\\inverse_goal_search.py": "098d5b68ecd32db44dc531d310a814d9e1c90593e4f85662b88692a3a7202269",
+    "training_research\\inverse_initials.py": "cb0dc636bd9e64e2ebec40226fc5e1dfcba305cf2ac23cbce2fe0d57ad6d8a3f",
+    "training_research\\inverse_terminal_refine.py": "bf7337d5a91450a0d5c6779f037374b7f719e774fa5a037b5cb4a75fe559df43",
+    "training_research\\legacy_inverse.py": "3ca0f7bbb7389d4e40bf89e23b49efa6607e550d6aea64545d5107c5920b4a99",
+    "training_research\\micro_terminal_refine.py": "cef8a5c7e4d24b1765dbec7d3847cb6281da7b30b0a47c10c631a344c213ee92",
+    "training_research\\parallel_shot_solver.py": "e1f74ae9d7511482a7f50790b0846980d91f736e239e0cc8aaef35e97f537d83",
+    "training_research\\population_search.py": "bf388909105ac644493af40fed951cc4e55979d4b5d8ca3a31111efb027191dc",
+    "training_research\\shot_solver.py": "27e1808e028bed46122ff85a3711c346a185f96ca39002500066864679dd91af",
+    "training_research\\solver_experiments.py": "079c67a1d29bac5f3b116e447b0648f257c4d7c69113f4374feae0d6787024a1"
+  },
+  "catalog_sha256": "afffda44193e7edd267ad23ae07da9d0b300ba8aaac1d0782739f25fa7486b70",
+  "returned_shots_rechecked": 10
+}

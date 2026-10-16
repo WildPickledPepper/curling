@@ -15,7 +15,11 @@
 | PPO 对接与造数据 | [数据契约](training_research/inverse_dataset/README.md) | 局面/目标共用编码器；当前不要求先训练反推网络。 |
 | 完整正向预测 | [local_simulator](local_simulator/README.md) | 给起始壶面和出手，完整推演至停止；当前应用范围为不扫冰。 |
 
-2026-10-04 的本地原始采样测试：**292/306（95.4%）** 在单导航种子下找到解，14 个双飞构型全部通过；每局 10 秒预算，成功耗时中位数 **2.806 秒**。仍有 14 局未解出；找到的解在额外五种子全部通过为 **237/292**。这是指定采样集的搜索成绩，不是实战胜率或任意局面保证。见 [结果与范围](training_research/inverse_solver_optimization_20261004.md)。2026-10-16 的维护只整理入口与随包依赖，没有重新生成这一成绩。
+2026-10-16 最新完成的可选研究方案 `full_augmented`：在 **704 个任务 / 306 个起始构型 / 17 类战术**中找到 **684 个合格解（97.16%）**，成功项全部严格不超过 10 秒，中位数约 **0.205 秒**；仍有 20 个漏解。这是一个完整预热进程批次，依赖按构型排除当前局面的离线学习模型；额外 1024 个目标的对照仍在运行。见 [完整批次摘要](training_research/results/compact_search_full_augmented704_paired_20261016_summary.json)。
+
+不依赖学习权重的 `wide_dfols` 已审计为 **681/704（96.73%）**，其中 680 项严格不超过 10 秒、成功中位数约 0.225 秒。它来自两个预热分区和一次已核实系统睡眠中断重跑，原始分区为 680/704。两种结果的进程分区与顺序不同，不能只用总数断言算法因果提升。详见 [研究记录](training_research/solver_strategy_research_20261016.md)、[完整请求审计](training_research/results/compact_search_20261016_fullrequest_audit_summary.json) 和 [固定目录与验收证据](training_research/benchmarks/README.md)。这些是指定采样集的搜索成绩，不是实战胜率或任意局面保证。
+
+公开默认仍为 `baseline`。其 [2026-10-04 历史成绩](training_research/inverse_solver_optimization_20261004.md) 为 292/306、成功中位数 2.806 秒，额外五种子全通过 237/292；与上述目录、配置和鲁棒性口径分别记录。新的学习方案尚未升为默认。
 
 ## Windows 快速开始
 

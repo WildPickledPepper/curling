@@ -1,0 +1,19 @@
+{
+  "chosen_before_full_model_search": "2026-10-16T08:48:06.540802+00:00",
+  "candidate": "full_augmented",
+  "reason": "Preserve the first 24 wide_dfols candidates and clipping/order, then lazily add at most 6 complete-board joint action examples. Keep the same 48-call DFO-LS refiner and 10s/256-call query bounds. All old direct-initial successes can return before new proposal generation; actual regressions must still be checked.",
+  "training_policy": "corrected same-stem, same-line labels; five full-board folds; current board excluded; no inverse-found labels",
+  "pilot": "23 existing development misses; full_distribution diagnostic only, not an outcome-dependent candidate switch",
+  "planned_primary_catalog": "compact_704_tactic_catalog_20261016.json",
+  "planned_validation_catalog": "compact_validation1024_catalog_20261016.json",
+  "validation_policy": "frozen disjoint goal catalogue; no tuning on validation outcomes before this candidate is fixed",
+  "implementation_sha256": {
+    "training_research\\solver_experiments.py": "6c64c00466e226e500057c22a3ab956c65b7a07a8778c22fca7a39ab6275cd62",
+    "training_research\\full_contact_prior.py": "c5b9c798d43c42b5f997fe4a5a0acca4951c7da98fc02a3e1e74be372bc69cd0",
+    "training_research\\contact_distribution_prior.py": "669d9b2b7c8afdb5012e5fa99c01398dce69e99fa1ff5bf67da8feb506fea6de",
+    "training_research\\compact_pairs.py": "400b91fdd6d6be5dc4110db8b2ac2daba682f6de2e46bb345a78c110872d1582"
+  },
+  "model_manifest_sha256": "3a8e400960fea3c8822b8dd582ca45f4eb2dc928358910e7f305e3b990e5f68d",
+  "validation_comparator": "wide_dfols",
+  "validation_order": "After the fixed candidate primary 704 run completes, run independent warm wide_dfols then full_augmented on the same frozen 1024 catalogue, sequentially on P-core 4."
+}

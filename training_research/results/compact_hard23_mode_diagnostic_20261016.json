@@ -1,0 +1,243 @@
+{
+  "scope": "Post-search diagnostic only: source actions/replayed routes not passed to online search. Reference-action mode is an observed replay, not asserted to match omitted original native history.",
+  "report_sha256": {
+    "training_research\\runs\\compact_candidate306_p4_20261016\\report.json": "4f2d0c827cf789acfc132e5a954e00fd0baac7d520739fe92f26e4f77f404f7b",
+    "training_research\\runs\\compact_extra398_p4_20261016\\report.json": "e4d1dd758ca48bc10d2320b0d82d591b4a633401c049ce3a390993f308889883"
+  },
+  "rows": [
+    {
+      "index": 0,
+      "record_id": "a92ecfc29fac8c690fffe23e051237b1fa5d619c7e11a51f19757302c980d0d1:17:0",
+      "observed_modes": 11,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 0,
+      "best_loss": 6.886755889170955,
+      "reference_replay_mode_best_loss": null
+    },
+    {
+      "index": 1,
+      "record_id": "54b976f26790735907be240f0cbc8d7cebdf5876d53387dcb76a764df955afac:44:0",
+      "observed_modes": 15,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 100,
+      "best_loss": 5.993692786321258,
+      "reference_replay_mode_best_loss": 5.993692786321258
+    },
+    {
+      "index": 2,
+      "record_id": "7552a0bbaa337e1eadaa6e67919294c30bad83357b1383d4d8bde7b238f181f6:40:2",
+      "observed_modes": 7,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 43,
+      "best_loss": 51.7805184168103,
+      "reference_replay_mode_best_loss": 209.13687133868765
+    },
+    {
+      "index": 3,
+      "record_id": "0652da9531abef448213f5e2343bb9fe988d657bc856ce343190a8a544fb72a8:16:2",
+      "observed_modes": 6,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 188,
+      "best_loss": 0.3280936868184209,
+      "reference_replay_mode_best_loss": 0.3280936868184209
+    },
+    {
+      "index": 4,
+      "record_id": "6ee759303a16d80b6094f40b3aef32ad13232c307d6db8a9f18fb87ecc09d422:25:0",
+      "observed_modes": 13,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 85,
+      "best_loss": 41.48043918794198,
+      "reference_replay_mode_best_loss": 41.48043918794198
+    },
+    {
+      "index": 5,
+      "record_id": "e76440b2e21e1a846817325bad016b7bc1e517bf5ccfc7f8a47e39d0f6a3b956:11:0",
+      "observed_modes": 5,
+      "top10_modes": 1,
+      "reference_replay_pass": false,
+      "reference_replay_mode_calls": 114,
+      "best_loss": 12.033787854567738,
+      "reference_replay_mode_best_loss": 12.033787854567738
+    },
+    {
+      "index": 6,
+      "record_id": "ebcdd9d959911e51fd64a64c05a186739cc4cdec7fc76247167e8bd948f6ef6b:29:0",
+      "observed_modes": 8,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 128,
+      "best_loss": 0.16564450334673653,
+      "reference_replay_mode_best_loss": 0.16564450334673653
+    },
+    {
+      "index": 7,
+      "record_id": "f146eb16f2c8a8674e4a356278c8262058df09068420d6eb3467d054351f3599:47:0",
+      "observed_modes": 11,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 40,
+      "best_loss": 0.9668700130797725,
+      "reference_replay_mode_best_loss": 10.150720792424119
+    },
+    {
+      "index": 8,
+      "record_id": "23c463995eadf1635e6aba0b0346d13967bf94377bc07923914142fe74f58bcc:24:1",
+      "observed_modes": 10,
+      "top10_modes": 2,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 10,
+      "best_loss": 30.11220678820841,
+      "reference_replay_mode_best_loss": 45.42922217541507
+    },
+    {
+      "index": 9,
+      "record_id": "b765ef2fbf3217e152b194434da4891c6e8e2697f4d6340efcce16d296eeddf8:5:2",
+      "observed_modes": 14,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 123,
+      "best_loss": 0.8790855777250358,
+      "reference_replay_mode_best_loss": 0.8790855777250358
+    },
+    {
+      "index": 10,
+      "record_id": "919b2d68a55d4c808fe747ee506180f6f5f015a0a814eba2ca0ceba4c3ee309a:38:2",
+      "observed_modes": 17,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 120,
+      "best_loss": 0.07283058970749749,
+      "reference_replay_mode_best_loss": 0.07283058970749749
+    },
+    {
+      "index": 11,
+      "record_id": "8b63a97893bf1a29b54dec733927dd20d52316375d722f228149f984c9bb1825:43:0",
+      "observed_modes": 15,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 110,
+      "best_loss": 0.25186291406303757,
+      "reference_replay_mode_best_loss": 0.25186291406303757
+    },
+    {
+      "index": 12,
+      "record_id": "72560ad677664adeeee3defbb2885f7a03d4da9434ef1b7541b18c61525024ce:36:0",
+      "observed_modes": 15,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 5,
+      "best_loss": 99.88212553016717,
+      "reference_replay_mode_best_loss": 179.56179036567409
+    },
+    {
+      "index": 13,
+      "record_id": "66651fa54fc6d23c6cb6dcb7350d34c4f896ca7db7f0480756db49448b4c9ff8:5:2",
+      "observed_modes": 17,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 140,
+      "best_loss": 0.007952462924158157,
+      "reference_replay_mode_best_loss": 0.007952462924158157
+    },
+    {
+      "index": 14,
+      "record_id": "d3dfdca55d57d38b9d0834a60a956e7b9ce7fe7badea8938fafc5d826cf23bed:24:0",
+      "observed_modes": 13,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 180,
+      "best_loss": 0.1384792483075178,
+      "reference_replay_mode_best_loss": 0.1384792483075178
+    },
+    {
+      "index": 15,
+      "record_id": "30695863721d71a37c685486035e84f19e6914433dda680739ad9c2943034237:20:0",
+      "observed_modes": 9,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 0,
+      "best_loss": 16.856220981179966,
+      "reference_replay_mode_best_loss": null
+    },
+    {
+      "index": 16,
+      "record_id": "12b0d018ccd53ec5ff947ba0223215cc847cba91eed1d60e9a44e2a7b4fb326a:10:2",
+      "observed_modes": 11,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 142,
+      "best_loss": 0.027933266289336192,
+      "reference_replay_mode_best_loss": 0.027933266289336192
+    },
+    {
+      "index": 17,
+      "record_id": "65d9ccd3a1cdac6ed07591fb5a7c6670ba0ec8af2295133003e2580e13345c07:13:2",
+      "observed_modes": 18,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 97,
+      "best_loss": 0.5568425081977327,
+      "reference_replay_mode_best_loss": 0.5568425081977327
+    },
+    {
+      "index": 18,
+      "record_id": "a92ecfc29fac8c690fffe23e051237b1fa5d619c7e11a51f19757302c980d0d1:6:0",
+      "observed_modes": 10,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 57,
+      "best_loss": 0.14139816397723998,
+      "reference_replay_mode_best_loss": 0.14139816397723998
+    },
+    {
+      "index": 19,
+      "record_id": "69774efd62f95698ac85a8f66975ba268cdfe7b090b634ebf63404623640daf6:18:1",
+      "observed_modes": 18,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 31,
+      "best_loss": 49.89287704736016,
+      "reference_replay_mode_best_loss": 49.89287704736016
+    },
+    {
+      "index": 20,
+      "record_id": "eb30e4053eed3a32d0f49db2269afd7f41241b86207be19fe44466d60251155b:6:2",
+      "observed_modes": 9,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 3,
+      "best_loss": 11.023685913085938,
+      "reference_replay_mode_best_loss": 11.688710558282361
+    },
+    {
+      "index": 21,
+      "record_id": "25dc8af961121daf8305bffeefe3154f767c12c67d93c3ea6dc9a54be0d8bad2:39:2",
+      "observed_modes": 5,
+      "top10_modes": 2,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 17,
+      "best_loss": 45.098063885801416,
+      "reference_replay_mode_best_loss": 45.098063885801416
+    },
+    {
+      "index": 22,
+      "record_id": "8b63a97893bf1a29b54dec733927dd20d52316375d722f228149f984c9bb1825:34:0",
+      "observed_modes": 10,
+      "top10_modes": 1,
+      "reference_replay_pass": true,
+      "reference_replay_mode_calls": 130,
+      "best_loss": 1.1807835124064436,
+      "reference_replay_mode_best_loss": 1.1807835124064436
+    }
+  ],
+  "nearby_loss_below_1": 11,
+  "top10_single_mode": 21,
+  "successful_reference_replay_modes_seen": 20,
+  "successful_reference_replays": 22
+}

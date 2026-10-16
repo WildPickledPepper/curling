@@ -1,0 +1,45 @@
+{
+  "scope": "Original forward-derived solver requests only; no reference actions or seeds. Frozen development partitions and validation catalogue.",
+  "catalogs": {
+    "development306_20261016": {
+      "file": "catalogs/development306_20261016.json.gz",
+      "source": "training_research/runs/compact_candidate306_p4_20261016/catalog.json",
+      "tasks": 306,
+      "physical_boards": 306,
+      "uncompressed_sha256": "b0eefda333006ef25ad98829310d9c80bf3ac1ec29114ad2d33c1443c8b79821",
+      "gzip_sha256": "8d84c365c3134af5c9b0f2a36854ad11c05fa1899ffb23d89969dbb2dca016de"
+    },
+    "additional398_20261016": {
+      "file": "catalogs/additional398_20261016.json.gz",
+      "source": "training_research/runs/compact_extra398_p4_20261016/catalog.json",
+      "tasks": 398,
+      "physical_boards": 268,
+      "uncompressed_sha256": "29633a01d8bd7fbdae1dec0f04ebd1140959f666d082a23fb1007db9ff00baad",
+      "gzip_sha256": "0c98f53bedb6ef1e46479a132ff8c766b71b249e659aceb899717dad4a9f65b6"
+    },
+    "development704_20261016": {
+      "file": "catalogs/development704_20261016.json.gz",
+      "source": "training_research/runs/compact_704_tactic_catalog_20261016.json",
+      "tasks": 704,
+      "physical_boards": 306,
+      "uncompressed_sha256": "4effc811126da2dbed067b22e591bffda95750cb54d153d2017b26598beb4a8f",
+      "gzip_sha256": "c827d2720b52e07d8e6dd45d357281326ce9145cc5a21bb993a3bb1177658fa0"
+    },
+    "hard23_20261016": {
+      "file": "catalogs/hard23_20261016.json.gz",
+      "source": "training_research/runs/compact_wide23_misses_20261016.json",
+      "tasks": 23,
+      "physical_boards": 21,
+      "uncompressed_sha256": "afffda44193e7edd267ad23ae07da9d0b300ba8aaac1d0782739f25fa7486b70",
+      "gzip_sha256": "e107a2dec7b8d0149b60fed7494566918ab29286986a616af2bdf7ccfbd7b645"
+    },
+    "validation1024_20261016": {
+      "file": "catalogs/validation1024_20261016.json.gz",
+      "source": "training_research/runs/compact_validation1024_catalog_20261016.json",
+      "tasks": 1024,
+      "physical_boards": 294,
+      "uncompressed_sha256": "028f6dc7503f27fa08643d11407c859b1207e0fd2bd58cb4cde0ff566d111904",
+      "gzip_sha256": "ffef2dc1ffdd5d198ecd91aff4d40ae4e876f28d4d4be96f8f79986583ddfccc"
+    }
+  }
+}

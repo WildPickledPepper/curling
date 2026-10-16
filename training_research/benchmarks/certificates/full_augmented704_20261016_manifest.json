@@ -1,0 +1,10 @@
+{
+  "scope": "Inverse-found results of one full_augmented warm 704-task run, separate from original forward source references. No sleep repair or union with other methods. Certificates revalidate recorded outcomes, not new physics replays.",
+  "file": "certificates/full_augmented704_20261016.jsonl.gz",
+  "gzip_sha256": "9ef3debf5d0a9ae378c982206b4b39b32c32752eb4b27ca497cd7b5913561d71",
+  "tasks": 704,
+  "solved": 684,
+  "within_10s": 684,
+  "report_sha256": "0b1c11c351c5f57ad5446e4aee73111eb1bb5979018699922a2645a18a05132c",
+  "audit_summary": "../results/compact_search_full_augmented704_paired_20261016_summary.json"
+}

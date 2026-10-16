@@ -1,0 +1,15 @@
+{
+  "scope": "Inverse-found results, separate from original forward source references. Two warm process partitions plus one externally interrupted task rerun; no ordinary failure replaced. All 681 successful outputs have an actual recorded terminal/contact/rule certificate. Certificates revalidate recorded outcomes; they do not rerun physics or guarantee additional seeds.",
+  "file": "certificates/wide_dfols704_20261016.jsonl.gz",
+  "gzip_sha256": "653ae1fb6b0d2baa6f8bcd9b36b7180693a1f15b094602e292935f5736009658",
+  "tasks": 704,
+  "solved": 681,
+  "within_10s": 680,
+  "report_sha256": {
+    "compact_candidate306_p4_20261016": "4f2d0c827cf789acfc132e5a954e00fd0baac7d520739fe92f26e4f77f404f7b",
+    "compact_extra398_p4_20261016": "e4d1dd758ca48bc10d2320b0d82d591b4a633401c049ce3a390993f308889883",
+    "compact_interrupted_replay_p4_20261016": "494535e9429aed3f8c394a8024042f59a9675c09a8059a3a22d75a3cf4855691"
+  },
+  "sleep_repair_request": "960f603f8d67948740cfeb5d7dd59f852891b3e85ab08bc4d8922ff69f46299f",
+  "audit_summary": "../results/compact_search_20261016_fullrequest_audit_summary.json"
+}

@@ -1,0 +1,168 @@
+{
+  "scope": "Source-forward tasks, one per board or per (board,tactic), depending on selection_mode; stable record hash tie-break. Round-robin tactic subset if limited. Atlas excludes entire tested physical board. Multiple goals on one board are not independent boards. Warm persistent process, request proposals included in timing. Reference actions used only after all timed searches; source_seed mode extracts world seeds beforehand only in the opaque forward backend. No new forward samples mixed with source data.",
+  "world_mode": "source_seed",
+  "scene_mode": "fresh_mature",
+  "profile": "tangent_micro",
+  "metrics": {
+    "tasks": 23,
+    "physical_boards": 21,
+    "solved": 5,
+    "solve_rate": 0.21739130434782608,
+    "within_10s": 5,
+    "within_10_1s": 5,
+    "initial_solved": 1,
+    "refinement_solved": 4,
+    "median_solved_ms": 3839.2370999999985,
+    "p95_solved_ms": 5565.135999999999,
+    "max_solved_ms": 5565.135999999999,
+    "max_request_ms": 10111.418799999996,
+    "physics_calls": 2361,
+    "reference_source_pass": 22,
+    "reference_navigation_pass": 7,
+    "reference_replays_available": 23,
+    "robustness_results_available": 0,
+    "three_extra_seeds_all_pass": 0
+  },
+  "observed_activation_context": {
+    "slots": [
+      {
+        "index": 0,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 1,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 2,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 3,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 4,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 5,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 6,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 7,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 8,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 9,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 10,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 11,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 12,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 13,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 14,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      },
+      {
+        "index": 15,
+        "unity_constraints": 80,
+        "static_friction": 0.6000000238418579,
+        "dynamic_friction": 0.6000000238418579,
+        "restitution": 1.0
+      }
+    ],
+    "setup_seconds": 0.8515925999999999,
+    "provenance": "16 normal empty-board release/stop lifecycles at program startup; original simulator code and read-back native materials/component flags. Not an added benchmark test set."
+  },
+  "observed_activation_context_sha256": "a6e2ed814976abeace48d06ff11ba65c156bedcdaca356033d48de0360db2ecb",
+  "same_input_replay_pass": 5,
+  "same_input_bitwise": 5,
+  "returned_shots_rechecked": 5,
+  "source_sha256": {
+    "training_research\\benchmark_compact_solver.py": "ea42f2f7c0f271e40e3536e6905eeab3d4c625e7c8e94f9f8176bc987176ce99",
+    "training_research\\constrained_refine.py": "a8f3a0df30399e7298560f72148e9716834a31b302db1be4236bfddcf356ffd1",
+    "training_research\\contact_seed_forest.py": "aadf2c780be64d62ffadd96baa02424d9e96865eb44fee4a34c51338819fcb99",
+    "training_research\\goal_geometry_initials.py": "987129614901cd7b8ed107ea71d52afb7f7bb33a65ae3c1dc7596de656bda83e",
+    "training_research\\inverse_contact_atlas.py": "7117529c2cb6b80a368b290274c66a13e831c835e46eac189654dbf63821a0e4",
+    "training_research\\inverse_contact_initials.py": "08bbc33c874945ec6904097a69f4cc1e5f1c8370abc45e0384bff402debaed49",
+    "training_research\\inverse_goal_fallback.py": "5887e0d242acd268cef9926559750a6a67619fa57614033baa579b659cbda2f4",
+    "training_research\\inverse_goal_search.py": "098d5b68ecd32db44dc531d310a814d9e1c90593e4f85662b88692a3a7202269",
+    "training_research\\inverse_initials.py": "cb0dc636bd9e64e2ebec40226fc5e1dfcba305cf2ac23cbce2fe0d57ad6d8a3f",
+    "training_research\\inverse_terminal_refine.py": "bf7337d5a91450a0d5c6779f037374b7f719e774fa5a037b5cb4a75fe559df43",
+    "training_research\\isolated_evaluation.py": "328856991863e5cc86230bf71616d25509e70ac2b1606467b12f2677156b4d33",
+    "training_research\\legacy_inverse.py": "3ca0f7bbb7389d4e40bf89e23b49efa6607e550d6aea64545d5107c5920b4a99",
+    "training_research\\micro_terminal_refine.py": "cef8a5c7e4d24b1765dbec7d3847cb6281da7b30b0a47c10c631a344c213ee92",
+    "training_research\\population_search.py": "bf388909105ac644493af40fed951cc4e55979d4b5d8ca3a31111efb027191dc",
+    "training_research\\shot_solver.py": "27e1808e028bed46122ff85a3711c346a185f96ca39002500066864679dd91af",
+    "training_research\\solver_experiments.py": "079c67a1d29bac5f3b116e447b0648f257c4d7c69113f4374feae0d6787024a1"
+  },
+  "catalog_sha256": "afffda44193e7edd267ad23ae07da9d0b300ba8aaac1d0782739f25fa7486b70",
+  "report_sha256": "24dbe7226f5746e648da88209f13e96adb6a24c3e22421b2fec7a4e924295410"
+}

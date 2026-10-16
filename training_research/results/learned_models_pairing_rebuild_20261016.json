@@ -1,0 +1,49 @@
+{
+  "scope": "Four newly rebuilt models, old directories preserved and no longer loaded by current defaults. All original input/reference gzip bytes unchanged. No current-board examples in its selected fold.",
+  "models": {
+    "contact_seed_forest_v1_paired_20261016": {
+      "manifest_sha256": "17711e6f88c7195d91c1d7d1c38738bf465c296c434c54903be5446924979212",
+      "records": 19772,
+      "physical_boards": 293,
+      "features": 88,
+      "reference_pairing": "matching gzip stem and one-based row; record_id is not globally unique",
+      "exclusion_verified": true,
+      "model_payloads_verified": true,
+      "leaf_mean_checks": 0,
+      "export_checks": 320
+    },
+    "contact_seed_forest_impact_v2_paired_20261016": {
+      "manifest_sha256": "38c29111303aa418d26f7331acdcc6557cde087faf5043a9f73a0058dcc54043",
+      "records": 19756,
+      "physical_boards": 293,
+      "features": 94,
+      "reference_pairing": "matching gzip stem and one-based row; record_id is not globally unique",
+      "exclusion_verified": true,
+      "model_payloads_verified": true,
+      "leaf_mean_checks": 0,
+      "export_checks": 320
+    },
+    "contact_distribution_v3_paired_20261016": {
+      "manifest_sha256": "de2eb7b72f86241ed5fbceec1da283add25017c4342eba0c86d62c87dff65032",
+      "records": 19756,
+      "physical_boards": 293,
+      "features": 94,
+      "reference_pairing": "matching gzip stem and one-based row; record_id is not globally unique",
+      "exclusion_verified": true,
+      "model_payloads_verified": true,
+      "leaf_mean_checks": 3840,
+      "export_checks": 320
+    },
+    "contact_distribution_full_v4_paired_20261016": {
+      "manifest_sha256": "3a8e400960fea3c8822b8dd582ca45f4eb2dc928358910e7f305e3b990e5f68d",
+      "records": 19756,
+      "physical_boards": 293,
+      "features": 319,
+      "reference_pairing": "matching gzip stem and one-based row; record_id is not globally unique",
+      "exclusion_verified": true,
+      "model_payloads_verified": true,
+      "leaf_mean_checks": 3840,
+      "export_checks": 320
+    }
+  }
+}

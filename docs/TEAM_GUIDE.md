@@ -38,6 +38,8 @@ python -m training_research.shot_solver --scene training_research/fixtures/sampl
 
 输出中 `success=true` 才读取 `shot=[v,h,w]`；失败时不能提交诊断里的 `best_effort_shot`。增加 `--required-seed-successes 3` 会要求三个搜索种子同时通过，耗时也计入同一预算；这与额外种子的独立测试应分开记录。
 
+可选研究方案先安装 `requirements-solver-research.txt`，再传 `--search-profile wide_dfols`。其 704 题成绩为 681 个找到解、680 个严格不超过 10 秒；包括一次经核实的系统睡眠中断重跑，仍有 23 个漏解。默认方案没有切换，完整范围见 [研究记录](../training_research/solver_strategy_research_20261016.md)。输入与参照的 `record_id` 会跨文件重复，数据关联使用 [同名文件同行配对](../training_research/datasets/forward_samples_20261004/README.md)。
+
 ## 3. 看战术目标如何产生
 
 先读 [战术库导航](TACTICS_GUIDE.md)。最快的纯 Python 示例：

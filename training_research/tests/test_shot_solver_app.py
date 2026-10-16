@@ -45,6 +45,28 @@ class ShotSolverApplicationTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "forward simulation failed"):
             self.run_solver({"status": "error", "error": "unavailable kernel"})
 
+    def test_cancellation_does_not_start_forward_work_or_return_a_shot(self):
+        result, simulate = self.run_solver(self.record, cancelled=lambda: True)
+        self.assertFalse(result["success"])
+        self.assertIsNone(result["shot"])
+        simulate.assert_not_called()
+
+    def test_search_profiles_are_per_instance_and_keep_full_certification(self):
+        def prefix(*args):
+            yield (3.1, .01, 0.)
+        with patch("training_research.solver_experiments.fast_first_initials", new=prefix), \
+             patch("training_research.shot_solver.simulate_record", return_value=copy.deepcopy(self.record)), \
+             patch("training_research.inverse_goal_search.proposals", return_value=[(0., (3., 0., 0.), "draw")]):
+            fast = BudgetedShotSolver(environment=object(), search_profile="safe_stream")
+            baseline = BudgetedShotSolver(environment=object())
+            first = fast.solve(self.scene)
+            second = baseline.solve(self.scene)
+        self.assertTrue(first["success"] and second["success"])
+        self.assertEqual(first["shot"], [3.1, .01, 0.])
+        self.assertEqual(second["shot"], [3., 0., 0.])
+        self.assertEqual(first["search_profile"], "safe_stream")
+        self.assertEqual(second["search_profile"], "baseline")
+
 
 if __name__ == "__main__":
     unittest.main()

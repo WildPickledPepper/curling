@@ -29,6 +29,12 @@ class TerminalFitTests(unittest.TestCase):
         self.assertTrue(success)
         self.assertIsNone(failure_reason(success["record"],selection))
         self.assertLessEqual(len(calls),24)
+        from training_research.micro_terminal_refine import fit as micro_fit
+        start=trial((3.05,.01,.2),"initial");calls.clear()
+        current,success=micro_fit(start,trial,selection,allowance=24)
+        self.assertTrue(success)
+        self.assertIsNone(failure_reason(success["record"],selection))
+        self.assertLessEqual(len(calls),24)
 
     def test_required_collision_is_still_penalised_when_positions_are_met(self):
         states=[{"index":i,"enabled":True,"x":2.375,"y":4.88} for i in range(16)]
